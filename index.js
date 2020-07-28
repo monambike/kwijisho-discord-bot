@@ -2,22 +2,43 @@
 // Tradução
 var translationJSON = `{
 	"pt":{
-		"now-i-talk": "Eu agora falo português!"
+		"lang": "[pt]Eu agora falo português!",
+		"site": "[pt]Conheça o meu desenvolvedor: https://github.com/monambike",
+		"hey":{
+			"1": "[pt]eai! Espera.. você disse '",
+			"2": "', agora pouco?"
+		}
 	},
 
 	"en":{
-		"now-i-talk": "Now I speak english!"
+		"lang": "[en]Now I speak english!",
+		"site": "[en]Conheça o meu desenvolvedor: https://github.com/monambike",
+		"hey":{
+			"1": "[en]eai! Espera.. você disse '",
+			"2": "', agora pouco?"
+		}
 	},
 
 	"es":{
-		"now-i-talk": "Yo ahora hablo español!"
+		"lang": "[es]Yo ahora hablo español!",
+		"site": "[es]Conheça o meu desenvolvedor: https://github.com/monambike",
+		"hey":{
+			"1": "[es]eai! Espera.. você disse '",
+			"2": "', agora pouco?"
+		}
 	},
 
 	"jp":{
-		"now-i-talk": "今日本語を話せる！"
+		"lang": "今日本語を話せる！",
+		"site": "Conheça o meu desenvolvedor: https://github.com/monambike",
+		"hey":{
+			"1": "eai! Espera.. você disse '",
+			"2": "', agora pouco?"
+		}
 	}
 }`;
 translationJS = JSON.parse(translationJSON);
+botLang = "pt";
 // Contador
 var i = 0;
 // BOT
@@ -60,22 +81,24 @@ const commands = new Discord.MessageEmbed()
 
 bot.on("message", function(msg){
 	let args = msg.content.substring(PREFIX.length).split(" ");
-	
+	var validLanguage = args[1] === "pt" || args[1] === "en" || args[1] === "es" || args[1] === "jp";
+
 	if(msg.content.startsWith("!")){
 		switch(args[0]){
 			case "lang":
-				if(args[1] === "pt" || args[1] === "en" || args[1] === "es" || args[1] === "jp"){
-					msg.channel.send(translationJS[args[1]]["now-i-talk"]);
+				if(validLanguage){
+					msg.channel.send(translationJS[args[1]]["lang"]);
+					botLang = args[1];
 					return;
 				}else{
 					msg.channel.send("Poxa... eu ainda não sei falar '" + msg.content.substring(6) + "' ainda...");
 				}
 				break;
 			case "site":
-				msg.channel.send("Conheça o meu desenvolvedor: https://github.com/monambike");
+				msg.channel.send(translationJS[botLang]["site"]);
 				break;
 			case "hey":
-				msg.reply("eai! Espera.. você disse '" + msg.content.substring(5) + "', agora pouco?");
+				msg.reply(translationJS[botLang]["hey"][1] + msg.content + translationJS[botLang]["hey"][2]);
 				break;
 			case "info":
 				msg.channel.send(info);
