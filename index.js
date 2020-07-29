@@ -148,7 +148,7 @@ const token = "NzM3NTM1ODQ4MTAyMzYzMjU5.Xx-xyA.ALivCZ6TyjvekWlZ5tSoLzlFW2o";
 var PREFIX = "!";
 // Storing Data
 var fs = require("fs");
-var dictionaryFile = require("./dictionaryFile.json");
+var dictionaryFile = require("./storage/dictionaryFile.json");
 // Layout
 var name = "Vinícius Gabriel";
 var fullName = "Vinícius Gabriel Marques de Melo";
@@ -220,6 +220,7 @@ bot.on("message", function(msg){
 				}
 
 				fs.writeFile("dictionaryFile.json", JSON.stringify(dictionaryFile), function(err){
+				fs.writeFile("./storage/dictionaryFile.json", JSON.stringify(dictionaryFile, null, 4), function(err){
 					if(err){
 						console.error(err);
 						msg.reply("Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)");
@@ -241,6 +242,7 @@ bot.on("message", function(msg){
 				}
 				break;
 			case "editw":
+					fs.writeFile("./storage/dictionaryFile.json", JSON.stringify(dictionaryFile, null, 4), function(err){
 				break;
 			case "remw":
 				break;
