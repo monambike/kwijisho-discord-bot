@@ -19,6 +19,7 @@
   "author": "Monambike",
   "license": "CC0-1.0",
   "dependencies": {
-    "discord.js": "^12.2.0"
+    "discord.js": "^12.2.0",
+    "keyv": "^4.0.1"
   }
 }
