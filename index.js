@@ -137,8 +137,8 @@ var translationJSON = `{
 		"default": "残念。。。 ;~; 恥ずかしいね。。。 ごめんけど、　これをどうするのを分からない。。。どうするのを分かりたい、　「！commands」 をタイプしてください。"
 	}
 }`;
-translationJS = JSON.parse(translationJSON);
-botLang = "pt";
+var translationJS = JSON.parse(translationJSON);
+var botLang = "pt";
 // Contador
 var i = 0;
 // BOT
@@ -146,11 +146,14 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const token = "NzM3NTM1ODQ4MTAyMzYzMjU5.Xx-xyA.ALivCZ6TyjvekWlZ5tSoLzlFW2o";
 var PREFIX = "!";
+// Storing Data
+var fs = require("fs");
+var dictionaryFile = require("./dictionaryFile.json");
 // Layout
 var name = "Vinícius Gabriel";
 var fullName = "Vinícius Gabriel Marques de Melo";
 var GitHub = "https://github.com/monambike";
-var purple = "#8C1EFF";
+var color = "#8C1EFF";
 
 bot.on("ready", function(name){
 	console.log("Obrigada! Agora estou viva e atualizadaa turururu");
@@ -162,7 +165,7 @@ bot.on("message", function(msg){
 
 
 	const info = new Discord.MessageEmbed()
-		.setColor(purple)
+		.setColor(color)
 		.setTitle(translationJS[botLang]["info"]["title"])
 		.setURL(GitHub)
 		.setAuthor(name, 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
@@ -173,7 +176,7 @@ bot.on("message", function(msg){
 		.setFooter(fullName + ' ('+ name +')');
 
 	const commands = new Discord.MessageEmbed()
-		.setColor(purple)
+		.setColor(color)
 		.setTitle(translationJS[botLang]["commands"]["title"])
 		.setDescription("Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!")
 		.addFields(
@@ -207,10 +210,34 @@ bot.on("message", function(msg){
 			case "commands":
 				msg.channel.send(commands);
 				break;
+			// DICTIONARY
+			case "dictionary":
+				break;
+			case "addw":
+				dictionaryFile[args[1]] = {
+					word: args[1],
+					description: msg.content.substring(6 + args[1].length + 1)
+				}
+
+				fs.writeFile("dictionaryFile.json", JSON.stringify(dictionaryFile), function(err){
+					if(err){
+						console.error(err);
+						msg.reply("Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)");
+					}else{
+						msg.reply("valeu, tá anotado! 📝 Gostei dessa palavra... " + JSON.stringify(args[1]) + "...");
+					}
+				});
+				break;
+			case "seew":
+				break;
+			case "editw":
+				break;
+			case "remw":
+				break;
 			default:
 				msg.channel.send(translationJS[botLang]["default"]);
 				break;
-		}		
+		}
 	}
 })
 
