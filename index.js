@@ -18,6 +18,29 @@ var name = "Vinícius Gabriel";
 var fullName = "Vinícius Gabriel Marques de Melo";
 var GitHub = "https://github.com/monambike";
 var color = "#8C1EFF";
+// Info
+const info = new Discord.MessageEmbed()
+	.setColor(color)
+	.setTitle(translationJS[botLang]["info"]["title"])
+	.setURL(GitHub)
+	.setAuthor(name, 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
+	.setDescription(translationJS[botLang]["info"]["description"])
+	.attachFiles(['resources/v-icon.png'])
+	.setThumbnail('attachment://resources/v-icon.png')
+	.setTimestamp()
+	.setFooter(fullName + ' ('+ name +')');
+// Commands
+const commands = new Discord.MessageEmbed()
+	.setColor(color)
+	.setTitle(translationJS[botLang]["commands"]["title"])
+	.setDescription("Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!")
+	.addFields(
+		{ name: translationJS[botLang]["commands"]["fields"]["nameLang"], value: translationJS[botLang]["commands"]["fields"]["valueLang"] },
+		{ name: translationJS[botLang]["commands"]["fields"]["nameSite"], value: translationJS[botLang]["commands"]["fields"]["valueSite"] },
+		{ name: translationJS[botLang]["commands"]["fields"]["nameHey"], value: translationJS[botLang]["commands"]["fields"]["valueHey"] },
+		{ name: translationJS[botLang]["commands"]["fields"]["nameInfo"], value: translationJS[botLang]["commands"]["fields"]["valueInfo"] },
+		{ name: translationJS[botLang]["commands"]["fields"]["nameCommands"], value: translationJS[botLang]["commands"]["fields"]["valueCommands"] },
+	);
 
 bot.on("ready", function(name){
 	console.log("Obrigada! Agora estou viva e atualizadaa turururu");
@@ -30,28 +53,6 @@ bot.on("message", function(msg){
 	var validLanguage = args[1] === "pt" || args[1] === "en" || args[1] === "es" || args[1] === "jp";
 
 
-	const info = new Discord.MessageEmbed()
-		.setColor(color)
-		.setTitle(translationJS[botLang]["info"]["title"])
-		.setURL(GitHub)
-		.setAuthor(name, 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
-		.setDescription(translationJS[botLang]["info"]["description"])
-		.attachFiles(['resources/v-icon.png'])
-		.setThumbnail('attachment://resources/v-icon.png')
-		.setTimestamp()
-		.setFooter(fullName + ' ('+ name +')');
-
-	const commands = new Discord.MessageEmbed()
-		.setColor(color)
-		.setTitle(translationJS[botLang]["commands"]["title"])
-		.setDescription("Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!")
-		.addFields(
-			{ name: translationJS[botLang]["commands"]["fields"]["nameLang"], value: translationJS[botLang]["commands"]["fields"]["valueLang"] },
-			{ name: translationJS[botLang]["commands"]["fields"]["nameSite"], value: translationJS[botLang]["commands"]["fields"]["valueSite"] },
-			{ name: translationJS[botLang]["commands"]["fields"]["nameHey"], value: translationJS[botLang]["commands"]["fields"]["valueHey"] },
-			{ name: translationJS[botLang]["commands"]["fields"]["nameInfo"], value: translationJS[botLang]["commands"]["fields"]["valueInfo"] },
-			{ name: translationJS[botLang]["commands"]["fields"]["nameCommands"], value: translationJS[botLang]["commands"]["fields"]["valueCommands"] },
-		);
 
 	if(msg.content.startsWith("!")){
 		switch(args[0]){
