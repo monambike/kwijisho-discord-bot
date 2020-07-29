@@ -223,12 +223,23 @@ bot.on("message", function(msg){
 					if(err){
 						console.error(err);
 						msg.reply("Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)");
+						return;
 					}else{
 						msg.reply("valeu, tá anotado! 📝 Gostei dessa palavra... " + JSON.stringify(args[1]) + "...");
 					}
 				});
 				break;
 			case "seew":
+				if(dictionaryFile[args[1]].word === args[1]){
+					const showWord = new Discord.MessageEmbed()
+						.setColor(color)
+						.setTitle(dictionaryFile[args[1]].word.toUpperCase())
+						.setDescription(dictionaryFile[args[1]].description.toLowerCase());
+					msg.channel.send(showWord);
+					return;
+				}else{
+					msg.channel.send("Putz... Desculpa mas não consegui achar essa palavra, que tal criar ela? Digite !addw (palavra)");
+				}
 				break;
 			case "editw":
 				break;
