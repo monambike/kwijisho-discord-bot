@@ -149,6 +149,7 @@ var PREFIX = "!";
 // Storing Data
 var fs = require("fs");
 var dictionaryFile = require("./storage/dictionaryFile.json");
+var substringFiltering = 0;
 // Layout
 var name = "Vinícius Gabriel";
 var fullName = "Vinícius Gabriel Marques de Melo";
@@ -214,12 +215,14 @@ bot.on("message", function(msg){
 			case "dictionary":
 				break;
 			case "addw":
+				// Removing !addw, title and spaces, just letting the description;
+				substringFiltering = 6 + args[1].length + 1;
+
 				dictionaryFile[args[1]] = {
 					word: args[1],
-					description: msg.content.substring(6 + args[1].length + 1) // Remove !addw, title and spaces, just letting the description
+					description: msg.content.substring(substringFiltering)
 				}
 
-				fs.writeFile("dictionaryFile.json", JSON.stringify(dictionaryFile), function(err){
 				fs.writeFile("./storage/dictionaryFile.json", JSON.stringify(dictionaryFile, null, 4), function(err){
 					if(err){
 						console.error(err);
@@ -242,9 +245,35 @@ bot.on("message", function(msg){
 				}
 				break;
 			case "editw":
+				// Removing !editw, previous word, new word and spaces
+				substringFiltering = 7 + args[1].length + 1 + args[2].length + 1;
+
+				try{
+					// Deleting old word
+					delete dictionaryFile[args[1]];
+
+					dictionaryFile[args[2]] = {
+						word: args[2],
+						description: msg.content.substring(substringFiltering)
+					}
+
 					fs.writeFile("./storage/dictionaryFile.json", JSON.stringify(dictionaryFile, null, 4), function(err){
+						if(err){
+							console.error(err);
+							msg.reply("Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)");
+							return;
+						}else{
+							msg.channel.send("A palavra '" + JSON.stringify(args[1]) + "' foi atualizada!");
+						}
+					});
+				}catch(e){
+					msg.channel.send("Eh... Então, não achei essa palvra que você quer editar, que tal criar ela? Digite !addw (palavra) (descrição)");					
+					console.log(e);
+				}
 				break;
 			case "remw":
+				delete dictionaryFile[args[1]];
+				message.channel.send("A palavra '" + args[1] + "' foi apagada com sucesso!");
 				break;
 			default:
 				msg.channel.send(translationJS[botLang]["default"]);
