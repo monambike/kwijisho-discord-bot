@@ -216,7 +216,7 @@ bot.on("message", function(msg){
 			case "addw":
 				dictionaryFile[args[1]] = {
 					word: args[1],
-					description: msg.content.substring(6 + args[1].length + 1)
+					description: msg.content.substring(6 + args[1].length + 1) // Remove !addw, title and spaces, just letting the description
 				}
 
 				fs.writeFile("dictionaryFile.json", JSON.stringify(dictionaryFile), function(err){
@@ -230,15 +230,14 @@ bot.on("message", function(msg){
 				});
 				break;
 			case "seew":
-				if(dictionaryFile[args[1]].word === args[1]){
+				try{
 					const showWord = new Discord.MessageEmbed()
 						.setColor(color)
 						.setTitle(dictionaryFile[args[1]].word.toUpperCase())
 						.setDescription(dictionaryFile[args[1]].description.toLowerCase());
 					msg.channel.send(showWord);
-					return;
-				}else{
-					msg.channel.send("Putz... Desculpa mas não consegui achar essa palavra, que tal criar ela? Digite !addw (palavra)");
+				}catch(e){
+					msg.channel.send("Putz... Desculpa mas não consegui achar essa palavra, que tal criar ela? Digite !addw (palavra) (descrição)");
 				}
 				break;
 			case "editw":
