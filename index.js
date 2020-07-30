@@ -66,9 +66,9 @@ const commands = new Discord.MessageEmbed()
 	);
 
 bot.on("ready", function(name){
-	console.log("Obrigada! Agora estou viva e atualizadaa turururu");
+	bot.user.setActivity("Ayaya!! Digite '!' para me chamar :D");
 
-	bot.user.setActivity("Ayaya!! Digite '!' para me chamar :D"); 
+	console.log("Obrigada! Agora estou viva e atualizadaa turururu");
 });
 
 bot.on("message", function(msg){
