@@ -11,7 +11,8 @@ var i = 0;
 // BOT
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const token = "NzM3NTM1ODQ4MTAyMzYzMjU5.Xx-xyA.ALivCZ6TyjvekWlZ5tSoLzlFW2o";
+config = require("./config.json");
+token = config.token;
 var PREFIX = "!";
 // Storing Data
 var fs = require("fs");
