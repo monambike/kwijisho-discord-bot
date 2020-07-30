@@ -18,8 +18,18 @@ var fs = require("fs");
 var dictionaryFile = require(dictionaryFilePath);
 var substringFiltering = 0;
 var pageDictionary = 0;
+var  deletedWord = 0;
 // Counting Words
-var metaData = require(metaDataPath)
+var metaData = require(metaDataPath);
+function countWordsUpdate(){
+	fs.writeFile(metaDataPath, JSON.stringify(metaData, null, 4), function(err){
+		if(err){
+			console.error(err);
+			msg.reply("Ops... Houve um problema na contagem...");
+			return;
+		}
+	});
+}
 // Layout
 var name = "Vinícius Gabriel";
 var fullName = "Vinícius Gabriel Marques de Melo";
@@ -98,8 +108,7 @@ bot.on("message", function(msg){
 
 				// }
 				// index = Object.keys(dictionaryFile[args[1]]).indexOf();
-				console.log("Antes: " + metaData.countWords);
-				console.log("Depois: " + metaData.countWords);
+				console.log(metaData.countWords);
 				break;
 			case "addw":
 				// Removing !addw, title and spaces, just letting the description;
@@ -116,15 +125,10 @@ bot.on("message", function(msg){
 						msg.reply("Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)");
 						return;
 					}else{
-						msg.reply("valeu, tá anotado! 📝 Gostei dessa palavra... " + JSON.stringify(args[1]) + "...");
+						msg.reply("valeu, tá anotado! 📝 Gostei dessa palavra... '" + args[1] + "'...");
 						//Adiciona +1 para contador de palavras
-						fs.writeFile(dictionaryFilePath, JSON.stringify(metaData.countWords++), function(err){
-							if(err){
-								console.error(err);
-								msg.reply("Ops... Houve um problema na contagem...");
-								return;
-							}
-						});
+						metaData.countWords++;
+						countWordsUpdate();
 					}
 				});
 				break;
@@ -158,7 +162,7 @@ bot.on("message", function(msg){
 							msg.reply("Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)");
 							return;
 						}else{
-							msg.channel.send("A palavra " + JSON.stringify(args[1]) + " foi atualizada!");
+							msg.channel.send("A palavra '" + args[1] + "' foi mudada para '" + args[2] + "' com sucesso!");
 						}
 					});
 				}catch(e){
@@ -168,13 +172,23 @@ bot.on("message", function(msg){
 				break;
 			case "remw":
 				try{
-					var palavra = dictionaryFile[args[1]].word;
 					delete dictionaryFile[args[1]];
 
-					msg.channel.send("A palavra " + palavra + " foi apagada com sucesso!");
-					metaData.countWords--;
+					fs.writeFile(dictionaryFilePath, JSON.stringify(dictionaryFile, null, 4), function(err){
+						if(err){
+							console.error(err);
+							msg.reply("Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)");
+							return;
+						}else{
+							msg.channel.send("A palavra '" + args[1] + "' foi apagada com sucesso!");
+							//Adiciona +1 para contador de palavras
+							metaData.countWords--;
+							countWordsUpdate();
+						}
+					});
 				}catch(e){
 					msg.channel.send("Eh... Então, não achei essa palavra que você quer apagar...");
+					console.log(e);
 				}
 				break;
 			default:

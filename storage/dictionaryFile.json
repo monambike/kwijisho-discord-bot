@@ -55,16 +55,12 @@
         "word": "Requenguela",
         "desc": "Sem valor, desprezada"
     },
-    "bater": {
-        "word": "bater",
-        "desc": "de volta, dar o troco, imitar"
+    "Remedar": {
+        "word": "Remedar",
+        "desc": "bater de volta, dar o troco, imitar"
     },
     "Pusilânime": {
         "word": "Pusilânime",
         "desc": "Que revela pusilanimidade, fraqueza moral; covarde, medroso, fraco."
-    },
-    "Palavra": {
-        "word": "Palavra",
-        "desc": ""
     }
 }
