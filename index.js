@@ -11,10 +11,7 @@ var i = 0;
 // BOT
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-config = require("./config.json");
-token = config.token;
-botActivity = config.activity;
-var PREFIX = "!";
+const { prefix, token, activity } = require("./config.json");
 // Storing Data
 var fs = require("fs");
 var dictionaryFile = require(dictionaryFilePath);
@@ -67,13 +64,13 @@ const commands = new Discord.MessageEmbed()
 	);
 
 bot.on("ready", function(name){
-	bot.user.setActivity(botActivity);
+	bot.user.setActivity(activity);
 
 	console.log("Obrigada! Agora estou viva e atualizadaa turururu");
 });
 
 bot.on("message", function(msg){
-	let args = msg.content.substring(PREFIX.length).split(" ");
+	let args = msg.content.substring(prefix.length).split(" ");
 	var validLanguage = args[1] === "pt" || args[1] === "en" || args[1] === "es" || args[1] === "jp";
 
 	if(msg.content.startsWith("!")){
