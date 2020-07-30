@@ -1,6 +1,10 @@
 // VARIÁVEIS
+// Caminhos
+var dictionaryFilePath = "./storage/dictionaryFile.json";
+var translationJSPath = "./storage/translationFile.json";
+var metaDataPath = "./storage/metaData.json";
 // Tradução
-var translationJS = require("./storage/translationFile.json");
+var translationJS = require(translationJSPath);
 var botLang = "pt";
 // Contador
 var i = 0;
@@ -11,8 +15,11 @@ const token = "NzM3NTM1ODQ4MTAyMzYzMjU5.Xx-xyA.ALivCZ6TyjvekWlZ5tSoLzlFW2o";
 var PREFIX = "!";
 // Storing Data
 var fs = require("fs");
-var dictionaryFile = require("./storage/dictionaryFile.json");
+var dictionaryFile = require(dictionaryFilePath);
 var substringFiltering = 0;
+var pageDictionary = 0;
+// Counting Words
+var metaData = require(metaDataPath)
 // Layout
 var name = "Vinícius Gabriel";
 var fullName = "Vinícius Gabriel Marques de Melo";
@@ -40,6 +47,11 @@ const commands = new Discord.MessageEmbed()
 		{ name: translationJS[botLang]["commands"]["fields"]["nameHey"], value: translationJS[botLang]["commands"]["fields"]["valueHey"] },
 		{ name: translationJS[botLang]["commands"]["fields"]["nameInfo"], value: translationJS[botLang]["commands"]["fields"]["valueInfo"] },
 		{ name: translationJS[botLang]["commands"]["fields"]["nameCommands"], value: translationJS[botLang]["commands"]["fields"]["valueCommands"] },
+		{ name: translationJS[botLang]["commands"]["fields"]["nameDictionary"], value: translationJS[botLang]["commands"]["fields"]["valueDictionary"] },
+		{ name: translationJS[botLang]["commands"]["fields"]["nameAddw"], value: translationJS[botLang]["commands"]["fields"]["valueAddw"] },
+		{ name: translationJS[botLang]["commands"]["fields"]["nameSeew"], value: translationJS[botLang]["commands"]["fields"]["valueSeew"] },
+		{ name: translationJS[botLang]["commands"]["fields"]["nameEditw"], value: translationJS[botLang]["commands"]["fields"]["valueEditw"] },
+		{ name: translationJS[botLang]["commands"]["fields"]["nameRemw"], value: translationJS[botLang]["commands"]["fields"]["valueRemw"] },
 	);
 
 bot.on("ready", function(name){
@@ -51,8 +63,6 @@ bot.on("ready", function(name){
 bot.on("message", function(msg){
 	let args = msg.content.substring(PREFIX.length).split(" ");
 	var validLanguage = args[1] === "pt" || args[1] === "en" || args[1] === "es" || args[1] === "jp";
-
-
 
 	if(msg.content.startsWith("!")){
 		switch(args[0]){
@@ -82,6 +92,14 @@ bot.on("message", function(msg){
 				break;
 			// DICTIONARY
 			case "dictionary":
+				// limitOfWords = pageDictionary + 5;
+
+				// for(i = 0; i < limitOfWords; i++){
+
+				// }
+				// index = Object.keys(dictionaryFile[args[1]]).indexOf();
+				console.log("Antes: " + metaData.countWords);
+				console.log("Depois: " + metaData.countWords);
 				break;
 			case "addw":
 				// Removing !addw, title and spaces, just letting the description;
@@ -89,16 +107,24 @@ bot.on("message", function(msg){
 
 				dictionaryFile[args[1]] = {
 					word: args[1],
-					description: msg.content.substring(substringFiltering)
+					desc: msg.content.substring(substringFiltering)
 				}
 
-				fs.writeFile("./storage/dictionaryFile.json", JSON.stringify(dictionaryFile, null, 4), function(err){
+				fs.writeFile(dictionaryFilePath, JSON.stringify(dictionaryFile, null, 4), function(err){
 					if(err){
 						console.error(err);
 						msg.reply("Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)");
 						return;
 					}else{
 						msg.reply("valeu, tá anotado! 📝 Gostei dessa palavra... " + JSON.stringify(args[1]) + "...");
+						//Adiciona +1 para contador de palavras
+						fs.writeFile(dictionaryFilePath, JSON.stringify(metaData.countWords++), function(err){
+							if(err){
+								console.error(err);
+								msg.reply("Ops... Houve um problema na contagem...");
+								return;
+							}
+						});
 					}
 				});
 				break;
@@ -107,42 +133,49 @@ bot.on("message", function(msg){
 					const showWord = new Discord.MessageEmbed()
 						.setColor(color)
 						.setTitle(dictionaryFile[args[1]].word.toUpperCase())
-						.setDescription(dictionaryFile[args[1]].description.toLowerCase());
+						.setDescription(dictionaryFile[args[1]].desc.toLowerCase());
 					msg.channel.send(showWord);
 				}catch(e){
 					msg.channel.send("Putz... Desculpa mas não consegui achar essa palavra, que tal criar ela? Digite !addw (palavra) (descrição)");
 				}
 				break;
 			case "editw":
-				// Removing !editw, previous word, new word and spaces
-				substringFiltering = 7 + args[1].length + 1 + args[2].length + 1;
-
 				try{
+					// Removing !editw, previous word, new word and spaces
+					substringFiltering = 7 + args[1].length + 1 + args[2].length + 1;
+
 					// Deleting old word
 					delete dictionaryFile[args[1]];
 
 					dictionaryFile[args[2]] = {
 						word: args[2],
-						description: msg.content.substring(substringFiltering)
+						desc: msg.content.substring(substringFiltering)
 					}
 
-					fs.writeFile("./storage/dictionaryFile.json", JSON.stringify(dictionaryFile, null, 4), function(err){
+					fs.writeFile(dictionaryFilePath, JSON.stringify(dictionaryFile, null, 4), function(err){
 						if(err){
 							console.error(err);
 							msg.reply("Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)");
 							return;
 						}else{
-							msg.channel.send("A palavra '" + JSON.stringify(args[1]) + "' foi atualizada!");
+							msg.channel.send("A palavra " + JSON.stringify(args[1]) + " foi atualizada!");
 						}
 					});
 				}catch(e){
-					msg.channel.send("Eh... Então, não achei essa palvra que você quer editar, que tal criar ela? Digite !addw (palavra) (descrição)");					
+					msg.channel.send("Eh... Então, não achei essa palavra que você quer editar, que tal criar ela? Digite !addw (palavra) (descrição)");					
 					console.log(e);
 				}
 				break;
 			case "remw":
-				delete dictionaryFile[args[1]];
-				message.channel.send("A palavra '" + args[1] + "' foi apagada com sucesso!");
+				try{
+					var palavra = dictionaryFile[args[1]].word;
+					delete dictionaryFile[args[1]];
+
+					msg.channel.send("A palavra " + palavra + " foi apagada com sucesso!");
+					metaData.countWords--;
+				}catch(e){
+					msg.channel.send("Eh... Então, não achei essa palavra que você quer apagar...");
+				}
 				break;
 			default:
 				msg.channel.send(translationJS[botLang]["default"]);

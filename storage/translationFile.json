@@ -1,5 +1,6 @@
 {
 	"pt":{
+		"nothing": "",
 		"lang": "Eu agora falo português!",
 		"site": "Conheça o meu desenvolvedor: https://github.com/monambike",
 		"hey":{
@@ -10,6 +11,7 @@
 			"title": "Meu Github!",
 			"description": "Visite meu GitHub para ver mais projetos como esse!"
 		},
+		"default": "Putz cara... ;~; que vergonha... Desculpa mas não sei fazer isso... Se quiser saber o que eu sei fazer digite '!commands'.",
 		"commands":{
 			"title": "COMANDOS",
 			"description": "Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!",
@@ -24,114 +26,26 @@
 				"valueHey": "Teste e descubra! C:",
 
 				"nameInfo": "info",
-				"valueInfo": "Mostro algumas informações.",
+				"valueInfo": "Mostro algumas informações sobre o meu desenvolvedor.",
 
 				"nameCommands": "commands",
-				"valueCommands": "Abro a lista de comandos."
+				"valueCommands": "Abre a lista de comandos.",
+
+				"nameDictionary": "dictionary",
+				"valueDictionary": "Mostra o dicionário de palvras.",
+
+				"nameAddw": "addw",
+				"valueAddw": "Adiciona uma nova palavra. Digite: !add nova 'palavra'. Caso queira 'espaços' use '_'.",
+
+				"nameSeew": "seew",
+				"valueSeew": "Mostra informações sobre alguma palavra. Digite: !seew 'palavra'.",
+
+				"nameEditw": "editw",
+				"valueEditw": "Edita uma palavra do dicionário. Digite: !editw 'palavra antiga' 'palavra nova' 'descrição nova (opcional)'. Caso queira 'espaços' use '_'.",
+
+				"nameRemw": "remw",
+				"valueRemw": "Remove uma palavra do dicionário. Digite: !remw 'palavra'."
 			}
-		},
-		"default": "Putz cara... ;~; que vergonha... Desculpa mas não sei fazer isso... Se quiser saber o que eu sei fazer digite '!commands'."
-	},
-
-	"en":{
-		"lang": "Now I speak english!",
-		"site": "Know my developer: https://github.com/monambike",
-		"hey":{
-			"1": "hey! Hold a second... you just said '",
-			"2": "', right now?"
-		},
-		"info":{
-			"title": "Meu Github!",
-			"description": "Visite meu GitHub para ver mais projetos como esse!"
-		},
-		"commands":{
-			"title": "COMANDOS",
-			"description": "Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!",
-			"fields":{
-				"nameLang": "lang (idioma)",
-				"valueLang": "Escolhe um idioma. Os idiomas que eu sei falar são português (pt), inglês (en), espanhol (es) e japonês (jp).",
-
-				"nameSite": "site",
-				"valueSite": "Mostro o meu site.",
-
-				"nameHey": "hey (mensagem)",
-				"valueHey": "Teste e descubra! C:",
-
-				"nameInfo": "info",
-				"valueInfo": "Mostro algumas informações.",
-
-				"nameCommands": "commands",
-				"valueCommands": "Abro a lista de comandos."
-			}
-		},
-		"default": "Damn bro... ;~; that's embarrassing... Sorry but I can't do this... If you want to know what I can do type '!commands'."
-	},
-
-	"es":{
-		"lang": "Yo ahora hablo español!",
-		"site": "Conozca mi desarrollador: https://github.com/monambike",
-		"hey":{
-			"1": "Oye! Un momento... dihiste '",
-			"2": "', ahora mismo?"
-		},
-		"info":{
-			"title": "Meu Github!",
-			"description": "Visite meu GitHub para ver mais projetos como esse!"
-		},
-		"commands":{
-			"title": "COMANDOS",
-			"description": "Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!",
-			"fields":{
-				"nameLang": "lang (idioma)",
-				"valueLang": "Escolhe um idioma. Os idiomas que eu sei falar são português (pt), inglês (en), espanhol (es) e japonês (jp).",
-
-				"nameSite": "site",
-				"valueSite": "Mostro o meu site.",
-
-				"nameHey": "hey (mensagem)",
-				"valueHey": "Teste e descubra! C:",
-
-				"nameInfo": "info",
-				"valueInfo": "Mostro algumas informações.",
-
-				"nameCommands": "commands",
-				"valueCommands": "Abro a lista de comandos."
-			}
-		},
-		"default": "Ay... ;~; que vergüenza... Disculpa pero no se como hacerlo... Se quieres saber lo que se hacer escribe '!commands'."
-	},
-
-	"jp":{
-		"lang": "今日本語を話せる！",
-		"site": "開発者： https://github.com/monambike",
-		"hey":{
-			"1": "よ! ちょっと。。。 ちょうど今 「",
-			"2": "」を言ったですか?"
-		},
-		"info":{
-			"title": "Meu Github!",
-			"description": "Visite meu GitHub para ver mais projetos como esse!"
-		},
-		"commands":{
-			"title": "COMANDOS",
-			"description": "Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!",
-			"fields":{
-				"nameLang": "lang (idioma)",
-				"valueLang": "Escolhe um idioma. Os idiomas que eu sei falar são português (pt), inglês (en), espanhol (es) e japonês (jp).",
-
-				"nameSite": "site",
-				"valueSite": "Mostro o meu site.",
-
-				"nameHey": "hey (mensagem)",
-				"valueHey": "Teste e descubra! C:",
-
-				"nameInfo": "info",
-				"valueInfo": "Mostro algumas informações.",
-
-				"nameCommands": "commands",
-				"valueCommands": "Abro a lista de comandos."
-			}
-		},
-		"default": "残念。。。 ;~; 恥ずかしいね。。。 ごめんけど、　これをどうするのを分からない。。。どうするのを分かりたい、　「！commands」 をタイプしてください。"
+		}
 	}
 }
