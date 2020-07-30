@@ -13,6 +13,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 config = require("./config.json");
 token = config.token;
+botActivity = config.activity;
 var PREFIX = "!";
 // Storing Data
 var fs = require("fs");
@@ -66,7 +67,7 @@ const commands = new Discord.MessageEmbed()
 	);
 
 bot.on("ready", function(name){
-	bot.user.setActivity("Ayaya!! Digite '!' para me chamar :D");
+	bot.user.setActivity(botActivity);
 
 	console.log("Obrigada! Agora estou viva e atualizadaa turururu");
 });
