@@ -1,10 +1,10 @@
 // VARIÁVEIS
 // Caminhos
-var dictionaryFilePath = "./storage/dictionaryFile.json";
-var translationJSPath = "./storage/translationFile.json";
-var metaDataPath = "./storage/metaData.json";
+const dictionaryFilePath = "./storage/dictionaryFile.json";
+const translationJSPath = "./storage/translationFile.json";
+const metaDataPath = "./storage/metaData.json";
 // Tradução
-var translationJS = require(translationJSPath);
+const translationJS = require(translationJSPath);
 var botLang = "pt";
 // Contador
 var i = 0;
@@ -13,15 +13,15 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const { prefix, token, activity } = require("./config.json");
 // Storing Data
-var fs = require("fs");
-var dictionaryFile = require(dictionaryFilePath);
+const fs = require("fs");
+const dictionaryFile = require(dictionaryFilePath);
+const { countOfWords } = require(metaDataPath);
 var substringFiltering = 0;
-var pageDictionary = 0;
-var  deletedWord = 0;
+var deletedWord = 0;
+var page = 0;
 // Counting Words
-var metaData = require(metaDataPath);
-function countWordsUpdate(){
-	fs.writeFile(metaDataPath, JSON.stringify(metaData, null, 4), function(err){
+function countOfWordsUpdate(){
+	fs.writeFile(metaDataPath, JSON.stringify(countOfWords, null, 4), function(err){
 		if(err){
 			console.error(err);
 			msg.reply("Ops... Houve um problema na contagem...");
@@ -35,7 +35,7 @@ var fullName = "Vinícius Gabriel Marques de Melo";
 var GitHub = "https://github.com/monambike";
 var color = "#8C1EFF";
 // Info
-const info = new Discord.MessageEmbed()
+const infoLayout = new Discord.MessageEmbed()
 	.setColor(color)
 	.setTitle(translationJS[botLang]["info"]["title"])
 	.setURL(GitHub)
@@ -45,22 +45,22 @@ const info = new Discord.MessageEmbed()
 	.setThumbnail('attachment://resources/v-icon.png')
 	.setTimestamp()
 	.setFooter(fullName + ' ('+ name +')');
-// Commands
-const commands = new Discord.MessageEmbed()
+// Help
+const helpLayout = new Discord.MessageEmbed()
 	.setColor(color)
-	.setTitle(translationJS[botLang]["commands"]["title"])
+	.setTitle(translationJS[botLang]["help"]["title"])
 	.setDescription("Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!")
 	.addFields(
-		{ name: translationJS[botLang]["commands"]["fields"]["nameLang"], value: translationJS[botLang]["commands"]["fields"]["valueLang"] },
-		{ name: translationJS[botLang]["commands"]["fields"]["nameSite"], value: translationJS[botLang]["commands"]["fields"]["valueSite"] },
-		{ name: translationJS[botLang]["commands"]["fields"]["nameHey"], value: translationJS[botLang]["commands"]["fields"]["valueHey"] },
-		{ name: translationJS[botLang]["commands"]["fields"]["nameInfo"], value: translationJS[botLang]["commands"]["fields"]["valueInfo"] },
-		{ name: translationJS[botLang]["commands"]["fields"]["nameCommands"], value: translationJS[botLang]["commands"]["fields"]["valueCommands"] },
-		{ name: translationJS[botLang]["commands"]["fields"]["nameDictionary"], value: translationJS[botLang]["commands"]["fields"]["valueDictionary"] },
-		{ name: translationJS[botLang]["commands"]["fields"]["nameAddw"], value: translationJS[botLang]["commands"]["fields"]["valueAddw"] },
-		{ name: translationJS[botLang]["commands"]["fields"]["nameSeew"], value: translationJS[botLang]["commands"]["fields"]["valueSeew"] },
-		{ name: translationJS[botLang]["commands"]["fields"]["nameEditw"], value: translationJS[botLang]["commands"]["fields"]["valueEditw"] },
-		{ name: translationJS[botLang]["commands"]["fields"]["nameRemw"], value: translationJS[botLang]["commands"]["fields"]["valueRemw"] },
+		{ name: translationJS[botLang]["help"]["fields"]["nameLang"], value: translationJS[botLang]["help"]["fields"]["valueLang"] },
+		{ name: translationJS[botLang]["help"]["fields"]["nameSite"], value: translationJS[botLang]["help"]["fields"]["valueSite"] },
+		{ name: translationJS[botLang]["help"]["fields"]["nameHey"], value: translationJS[botLang]["help"]["fields"]["valueHey"] },
+		{ name: translationJS[botLang]["help"]["fields"]["nameInfo"], value: translationJS[botLang]["help"]["fields"]["valueInfo"] },
+		{ name: translationJS[botLang]["help"]["fields"]["nameHelp"], value: translationJS[botLang]["help"]["fields"]["valueHelp"] },
+		{ name: translationJS[botLang]["help"]["fields"]["nameDictionary"], value: translationJS[botLang]["help"]["fields"]["valueDictionary"] },
+		{ name: translationJS[botLang]["help"]["fields"]["nameAddw"], value: translationJS[botLang]["help"]["fields"]["valueAddw"] },
+		{ name: translationJS[botLang]["help"]["fields"]["nameSeew"], value: translationJS[botLang]["help"]["fields"]["valueSeew"] },
+		{ name: translationJS[botLang]["help"]["fields"]["nameEditw"], value: translationJS[botLang]["help"]["fields"]["valueEditw"] },
+		{ name: translationJS[botLang]["help"]["fields"]["nameRemw"], value: translationJS[botLang]["help"]["fields"]["valueRemw"] },
 	);
 
 bot.on("ready", function(name){
@@ -71,21 +71,20 @@ bot.on("ready", function(name){
 
 bot.on("message", function(msg){
 	let args = msg.content.substring(prefix.length).split(" ");
-	var validLanguage = args[1] === "pt" || args[1] === "en" || args[1] === "es" || args[1] === "jp";
 
 	if(msg.content.startsWith("!")){
 		switch(args[0]){
 			case "":
-				msg.channel.send("Oii " + msg.author.username + "! Tudo bem?  Eu sou a KWiJisho (KawaiiJisho). Se quiser saber o que eu sei fazer, digite !commands.");
+				msg.channel.send("Oii " + msg.author.username + "! Tudo bem?  Eu sou a KWiJisho (KawaiiJisho). Se quiser saber o que eu sei fazer, digite !help.");
 				break;
 			case "lang":
-				if(validLanguage){
+				try{
 					msg.channel.send(translationJS[args[1]]["lang"]);
 					botLang = args[1];
-					return;
-				}else{
-					msg.channel.send("Poxa... eu ainda não sei falar '" + msg.content.substring(6) + "' ainda...");
+				}catch(e){
+					msg.channel.send("Poxa... eu ainda não sei falar '" + msg.content.substring(6) + "' ainda, talvez um dia eu aprenda huhu.");
 				}
+
 				break;
 			case "site":
 				msg.channel.send(translationJS[botLang]["site"]);
@@ -94,50 +93,66 @@ bot.on("message", function(msg){
 				msg.reply(translationJS[botLang]["hey"][1] + msg.content.substring(5) + translationJS[botLang]["hey"][2]);
 				break;
 			case "info":
-				msg.channel.send(info);
+				msg.channel.send(infoLayout);
 				break;
-			case "commands":
-				msg.channel.send(commands);
+			case "help":
+				msg.channel.send(helpLayout);
 				break;
 			// DICTIONARY
 			case "dictionary":
-				// limitOfWords = pageDictionary + 5;
+				// limitOfPage = page * 10;
 
-				// for(i = 0; i < limitOfWords; i++){
+				// // Dictionary
+				// const dictionaryLayout = new Discord.MessageEmbed()
+				// 	.setColor(color)
+				// 	.setTitle(translationJS[botLang]["help"]["title"])
+				// 	.setDescription("Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!")
+				// 	.addFields(
+				// 		{ name: translationJS[botLang]["help"]["fields"]["nameSite"], value: translationJS[botLang]["help"]["fields"]["valueLang"] },
+				// 		{ id: id},
+				// 	);
+				// // for(i = 0; getWordById < countOfWords; i++){
 
-				// }
-				// index = Object.keys(dictionaryFile[args[1]]).indexOf();
-				console.log(metaData.countWords);
+				// // }
+
+				// msg.channel.send(dictionaryLayout);
+				msg.channel.send("Tá bem difícil fazer essa função viu " + msg.author.username + " :/, mas ja ja sai...");
 				break;
 			case "addw":
-				// Removing !addw, title and spaces, just letting the description;
-				substringFiltering = 6 + args[1].length + 1;
+				try{
+					// Removing !addw, title and spaces, just letting the description;
+					substringFiltering = 6 + args[1].length + 1;
 
-				dictionaryFile[args[1]] = {
-					word: args[1],
-					desc: msg.content.substring(substringFiltering)
-				}
+					countOfWords++;
+					countOfWordsUpdate();
 
-				fs.writeFile(dictionaryFilePath, JSON.stringify(dictionaryFile, null, 4), function(err){
-					if(err){
-						console.error(err);
-						msg.reply("Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)");
-						return;
-					}else{
-						msg.reply("valeu, tá anotado! 📝 Gostei dessa palavra... '" + args[1] + "'...");
-						//Adiciona +1 para contador de palavras
-						metaData.countWords++;
-						countWordsUpdate();
+					dictionaryFile[args[1]] = {
+						id: countOfWords,
+						word: args[1],
+						desc: msg.content.substring(substringFiltering)
 					}
-				});
+
+					fs.writeFile(dictionaryFilePath, JSON.stringify(dictionaryFile, null, 4), function(err){
+						if(err){
+							console.error(err);
+							msg.reply("Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)");
+							return;
+						}else{
+							msg.reply("valeu, tá anotado! 📝 Gostei dessa palavra... '" + args[1] + "'...");
+							//Adiciona +1 para contador de palavras
+						}
+					});
+				}catch(e){
+					msg.channel.send("Essa palavra já existe! hehe. Digite !seew '" + args[1] + "' para ver ela, você pode editar e remover ela se quiser também! :D");
+				}
 				break;
 			case "seew":
 				try{
-					const showWord = new Discord.MessageEmbed()
+					const wordLayout = new Discord.MessageEmbed()
 						.setColor(color)
 						.setTitle(dictionaryFile[args[1]].word.toUpperCase())
 						.setDescription(dictionaryFile[args[1]].desc.toLowerCase());
-					msg.channel.send(showWord);
+					msg.channel.send(wordLayout);
 				}catch(e){
 					msg.channel.send("Putz... Desculpa mas não consegui achar essa palavra, que tal criar ela? Digite !addw (palavra) (descrição)");
 				}
@@ -181,8 +196,8 @@ bot.on("message", function(msg){
 						}else{
 							msg.channel.send("A palavra '" + args[1] + "' foi apagada com sucesso!");
 							//Adiciona +1 para contador de palavras
-							metaData.countWords--;
-							countWordsUpdate();
+							countOfWords--;
+							countOfWordsUpdate();
 						}
 					});
 				}catch(e){

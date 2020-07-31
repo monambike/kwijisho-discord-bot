@@ -12,7 +12,8 @@
 			"description": "Visite meu GitHub para ver mais projetos como esse!"
 		},
 		"default": "Putz cara... ;~; que vergonha... Desculpa mas não sei fazer isso... Se quiser saber o que eu sei fazer digite '!commands'.",
-		"commands":{
+		
+		"help":{
 			"title": "COMANDOS",
 			"description": "Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!",
 			"fields":{
@@ -28,8 +29,8 @@
 				"nameInfo": "info",
 				"valueInfo": "Mostro algumas informações sobre o meu desenvolvedor.",
 
-				"nameCommands": "commands",
-				"valueCommands": "Abre a lista de comandos.",
+				"nameHelp": "help",
+				"valueHelp": "Abre a lista de comandos.",
 
 				"nameDictionary": "dictionary",
 				"valueDictionary": "Mostra o dicionário de palvras.",
