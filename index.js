@@ -4,24 +4,24 @@ const dictionaryFilePath = "./storage/dictionaryFile.json";
 const translationJSPath = "./storage/translationFile.json";
 const metaDataPath = "./storage/metaData.json";
 // Tradução
-const translationJS = require(translationJSPath);
+var translationJS = require(translationJSPath);
 var botLang = "pt";
 // Contador
 var i = 0;
 // BOT
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const { prefix, token, activity } = require("./config.json");
+var { prefix, token, activity } = require("./config.json");
 // Storing Data
 const fs = require("fs");
-const dictionaryFile = require(dictionaryFilePath);
-const { countOfWords } = require(metaDataPath);
+var metaData = require(metaDataPath);
+var dictionaryFile = require(dictionaryFilePath);
 var substringFiltering = 0;
 var deletedWord = 0;
 var page = 0;
 // Counting Words
 function countOfWordsUpdate(){
-	fs.writeFile(metaDataPath, JSON.stringify(countOfWords, null, 4), function(err){
+	fs.writeFile(metaDataPath, JSON.stringify(metaData, null, 4), function(err){
 		if(err){
 			console.error(err);
 			msg.reply("Ops... Houve um problema na contagem...");
@@ -123,14 +123,16 @@ bot.on("message", function(msg){
 					// Removing !addw, title and spaces, just letting the description;
 					substringFiltering = 6 + args[1].length + 1;
 
-					countOfWords++;
-					countOfWordsUpdate();
+					var number = metaData.countOfWords;
 
-					dictionaryFile[args[1]] = {
-						id: countOfWords,
+					// In the last position add a word
+					dictionaryFile["Words"][number] = {
 						word: args[1],
 						desc: msg.content.substring(substringFiltering)
 					}
+
+					metaData.countOfWords++;
+					countOfWordsUpdate();
 
 					fs.writeFile(dictionaryFilePath, JSON.stringify(dictionaryFile, null, 4), function(err){
 						if(err){
@@ -144,17 +146,23 @@ bot.on("message", function(msg){
 					});
 				}catch(e){
 					msg.channel.send("Essa palavra já existe! hehe. Digite !seew '" + args[1] + "' para ver ela, você pode editar e remover ela se quiser também! :D");
+					console.log(e);
 				}
 				break;
 			case "seew":
-				try{
-					const wordLayout = new Discord.MessageEmbed()
-						.setColor(color)
-						.setTitle(dictionaryFile[args[1]].word.toUpperCase())
-						.setDescription(dictionaryFile[args[1]].desc.toLowerCase());
-					msg.channel.send(wordLayout);
-				}catch(e){
-					msg.channel.send("Putz... Desculpa mas não consegui achar essa palavra, que tal criar ela? Digite !addw (palavra) (descrição)");
+				for(i=0;i<metaData.countOfWords;i++){
+					if(args[1] === dictionaryFile["Words"][i].word){
+						const wordLayout = new Discord.MessageEmbed()
+							.setColor(color)
+							.setTitle(dictionaryFile["Words"][i].word.toUpperCase())
+							.setDescription(dictionaryFile["Words"][i].desc.toLowerCase());
+						msg.channel.send(wordLayout);
+						return;
+					}else if(args[1] === dictionaryFile["Words"][i].word && i === metaData.countOfWords){
+						msg.channel.send("Putz... Desculpa mas não consegui achar essa palavra, que tal criar ela? Digite !addw (palavra) (descrição)");
+					}else{
+						console.log("Não achei pela " + i + " vez.");
+					}
 				}
 				break;
 			case "editw":
@@ -196,7 +204,7 @@ bot.on("message", function(msg){
 						}else{
 							msg.channel.send("A palavra '" + args[1] + "' foi apagada com sucesso!");
 							//Adiciona +1 para contador de palavras
-							countOfWords--;
+							metaData.countOfWords--;
 							countOfWordsUpdate();
 						}
 					});
