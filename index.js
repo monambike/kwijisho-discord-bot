@@ -123,10 +123,8 @@ bot.on("message", function(msg){
 					// Removing !addw, title and spaces, just letting the description;
 					substringFiltering = 6 + args[1].length + 1;
 
-					var number = metaData.countOfWords;
-
 					// In the last position add a word
-					dictionaryFile["Words"][number] = {
+					dictionaryFile["Words"][metaData.countOfWords] = {
 						word: args[1],
 						desc: msg.content.substring(substringFiltering)
 					}
@@ -150,7 +148,7 @@ bot.on("message", function(msg){
 				}
 				break;
 			case "seew":
-				for(i=0;i<metaData.countOfWords;i++){
+				for(i = 0; i < metaData.countOfWords; i++){
 					if(args[1] === dictionaryFile["Words"][i].word){
 						const wordLayout = new Discord.MessageEmbed()
 							.setColor(color)
@@ -160,57 +158,60 @@ bot.on("message", function(msg){
 						return;
 					}else if(args[1] === dictionaryFile["Words"][i].word && i === metaData.countOfWords){
 						msg.channel.send("Putz... Desculpa mas não consegui achar essa palavra, que tal criar ela? Digite !addw (palavra) (descrição)");
-					}else{
-						console.log("Não achei pela " + i + " vez.");
 					}
 				}
 				break;
 			case "editw":
-				try{
-					// Removing !editw, previous word, new word and spaces
-					substringFiltering = 7 + args[1].length + 1 + args[2].length + 1;
+				for(i = 0; i < metaData.countOfWords; i++){
+					if(args[1] === dictionaryFile["Words"][i].word){
+						// Removing !editw, previous word, new word and spaces
+						substringFiltering = 7 + args[1].length + 1 + args[2].length + 1;
 
-					// Deleting old word
-					delete dictionaryFile[args[1]];
+						// Deleting old word
+						delete dictionaryFile["Words"][i];
 
-					dictionaryFile[args[2]] = {
-						word: args[2],
-						desc: msg.content.substring(substringFiltering)
-					}
-
-					fs.writeFile(dictionaryFilePath, JSON.stringify(dictionaryFile, null, 4), function(err){
-						if(err){
-							console.error(err);
-							msg.reply("Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)");
-							return;
-						}else{
-							msg.channel.send("A palavra '" + args[1] + "' foi mudada para '" + args[2] + "' com sucesso!");
+						dictionaryFile["Words"][i] = {
+							word: args[2],
+							desc: msg.content.substring(substringFiltering)
 						}
-					});
-				}catch(e){
-					msg.channel.send("Eh... Então, não achei essa palavra que você quer editar, que tal criar ela? Digite !addw (palavra) (descrição)");					
-					console.log(e);
+
+						fs.writeFile(dictionaryFilePath, JSON.stringify(dictionaryFile, null, 4), function(err){
+							if(err){
+								console.error(err);
+								msg.reply("Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)");
+								return;
+							}else{
+								msg.channel.send("A palavra '" + args[1] + "' foi mudada para '" + args[2] + "' com sucesso!");
+							}
+						});
+						return;
+					}else if(args[1] === dictionaryFile["Words"][i].word && i === metaData.countOfWords){
+						msg.channel.send("Eh... Então, não achei essa palavra que você quer editar, que tal criar ela? Digite !addw (palavra) (descrição)");
+					}
 				}
 				break;
 			case "remw":
-				try{
-					delete dictionaryFile[args[1]];
+				for(i = 0; i < metaData.countOfWords; i++){
+					if(args[1] === dictionaryFile["Words"][i].word){
+						// delete dictionaryFile["Words"][i];
+						dictionaryFile["Words"].splice(i,1);
 
-					fs.writeFile(dictionaryFilePath, JSON.stringify(dictionaryFile, null, 4), function(err){
-						if(err){
-							console.error(err);
-							msg.reply("Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)");
-							return;
-						}else{
-							msg.channel.send("A palavra '" + args[1] + "' foi apagada com sucesso!");
-							//Adiciona +1 para contador de palavras
-							metaData.countOfWords--;
-							countOfWordsUpdate();
-						}
-					});
-				}catch(e){
-					msg.channel.send("Eh... Então, não achei essa palavra que você quer apagar...");
-					console.log(e);
+						fs.writeFile(dictionaryFilePath, JSON.stringify(dictionaryFile, null, 4), function(err){
+							if(err){
+								console.error(err);
+								msg.reply("Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)");
+								return;
+							}else{
+								msg.channel.send("A palavra '" + args[1] + "' foi apagada com sucesso!");
+								//Adiciona +1 para contador de palavras
+								metaData.countOfWords--;
+								countOfWordsUpdate();
+							}
+						});
+						return;
+					}else if(args[1] === dictionaryFile["Words"][i].word && i === metaData.countOfWords){
+						msg.channel.send("Eh... Então, não achei essa palavra que você quer editar, que tal criar ela? Digite !addw (palavra) (descrição)");
+					}
 				}
 				break;
 			default:
