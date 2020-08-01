@@ -100,23 +100,37 @@ bot.on("message", function(msg){
 				break;
 			// DICTIONARY
 			case "dictionary":
-				// limitOfPage = page * 10;
+				limitOfPage = page * 10;
 
-				// // Dictionary
-				// const dictionaryLayout = new Discord.MessageEmbed()
-				// 	.setColor(color)
-				// 	.setTitle(translationJS[botLang]["help"]["title"])
-				// 	.setDescription("Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!")
-				// 	.addFields(
-				// 		{ name: translationJS[botLang]["help"]["fields"]["nameSite"], value: translationJS[botLang]["help"]["fields"]["valueLang"] },
-				// 		{ id: id},
-				// 	);
-				// // for(i = 0; getWordById < countOfWords; i++){
+				/*
+				0 1 2 3 4 5 6 7 8 9
+				10 11 12 13 14 15 16 17 18 19
+				*/
 
-				// // }
+				// Dictionary
+				const dictionaryLayout = new Discord.MessageEmbed()
+					.setColor(color)
+					.setTitle(translationJS[botLang]["help"]["title"])
+					.setDescription("Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!")
+					.addFields(
+						{ name: dictionaryFile["Words"][limitOfPage + 0].word, value: dictionaryFile["Words"][0].desc },
+						{ name: dictionaryFile["Words"][limitOfPage + 1].word, value: dictionaryFile["Words"][0].desc },
+						{ name: dictionaryFile["Words"][limitOfPage + 2].word, value: dictionaryFile["Words"][0].desc },
+						{ name: dictionaryFile["Words"][limitOfPage + 3].word, value: dictionaryFile["Words"][0].desc },
+						{ name: dictionaryFile["Words"][limitOfPage + 4].word, value: dictionaryFile["Words"][0].desc },
+						{ name: dictionaryFile["Words"][limitOfPage + 5].word, value: dictionaryFile["Words"][0].desc },
+						{ name: dictionaryFile["Words"][limitOfPage + 6].word, value: dictionaryFile["Words"][0].desc },
+						{ name: dictionaryFile["Words"][limitOfPage + 7].word, value: dictionaryFile["Words"][0].desc },
+						{ name: dictionaryFile["Words"][limitOfPage + 8].word, value: dictionaryFile["Words"][0].desc },
+						{ name: dictionaryFile["Words"][limitOfPage + 9].word, value: dictionaryFile["Words"][0].desc },
+					);
 
-				// msg.channel.send(dictionaryLayout);
-				msg.channel.send("Tá bem difícil fazer essa função viu " + msg.author.username + " :/, mas ja ja sai...");
+
+				msg.react('738985211013890119')
+						.then(() => message.react('738985228261130250'))
+						.catch(() => console.error('Ih... Aconteceu um erro ao carregar os emojis do dicionário.'));
+
+				msg.channel.send(dictionaryLayout);
 				break;
 			case "addw":
 				try{
