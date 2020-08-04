@@ -70,13 +70,16 @@ bot.on("ready", function(name){
 });
 
 bot.on("message", function(msg){
+	// Formats prefix
 	let args = msg.content.substring(prefix.length).split(" ");
 
 	if(msg.content.startsWith("!")){
 		switch(args[0]){
+			// If user doesn't insert message
 			case "":
 				msg.channel.send("Oii " + msg.author.username + "! Tudo bem?  Eu sou a KWiJisho (KawaiiJisho). Se quiser saber o que eu sei fazer, digite !help.");
 				break;
+			// Command for switch language
 			case "lang":
 				try{
 					msg.channel.send(translationJS[args[1]]["lang"]);
@@ -86,19 +89,24 @@ bot.on("message", function(msg){
 				}
 
 				break;
+			// Command to see my site
 			case "site":
 				msg.channel.send(translationJS[botLang]["site"]);
 				break;
+			// Funny command to talk with bot
 			case "hey":
 				msg.reply(translationJS[botLang]["hey"][1] + msg.content.substring(5) + translationJS[botLang]["hey"][2]);
 				break;
+			// Command to see further information
 			case "info":
 				msg.channel.send(infoLayout);
 				break;
+			// Command for askin for help
 			case "help":
 				msg.channel.send(helpLayout);
 				break;
 			// DICTIONARY
+			// Command to see the dictionary
 			case "dictionary":
 				limitOfPage = page * 10;
 
@@ -132,6 +140,7 @@ bot.on("message", function(msg){
 
 				msg.channel.send(dictionaryLayout);
 				break;
+			// Command for add a word to the dictionary
 			case "addw":
 				try{
 					// Removing !addw, title and spaces, just letting the description;
@@ -161,6 +170,7 @@ bot.on("message", function(msg){
 					console.log(e);
 				}
 				break;
+			// Command to see a word from dictionary
 			case "seew":
 				for(i = 0; i < metaData.countOfWords; i++){
 					if(args[1] === dictionaryFile["Words"][i].word){
@@ -175,6 +185,7 @@ bot.on("message", function(msg){
 					}
 				}
 				break;
+			// Command to edit a word from dictionary
 			case "editw":
 				for(i = 0; i < metaData.countOfWords; i++){
 					if(args[1] === dictionaryFile["Words"][i].word){
@@ -204,6 +215,7 @@ bot.on("message", function(msg){
 					}
 				}
 				break;
+			// Command for remove a word from dictionary
 			case "remw":
 				for(i = 0; i < metaData.countOfWords; i++){
 					if(args[1] === dictionaryFile["Words"][i].word){
@@ -228,6 +240,7 @@ bot.on("message", function(msg){
 					}
 				}
 				break;
+			// If command doesn't exist
 			default:
 				msg.channel.send(translationJS[botLang]["default"]);
 				break;
