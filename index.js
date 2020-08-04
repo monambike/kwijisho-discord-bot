@@ -1,25 +1,28 @@
-// VARIÁVEIS
-// Caminhos
+// COUNTER
+var i = 0;
+// PATHS
 const dictionaryFilePath = "./storage/dictionaryFile.json";
 const translationJSPath = "./storage/translationFile.json";
 const metaDataPath = "./storage/metaData.json";
-// Tradução
+// TRANSLATION
 var translationJS = require(translationJSPath);
 var botLang = "pt";
-// Contador
-var i = 0;
 // BOT
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 var { prefix, token, activity } = require("./config.json");
+// DICTIONARY
 // Storing Data
 const fs = require("fs");
 var metaData = require(metaDataPath);
 var dictionaryFile = require(dictionaryFilePath);
 var substringFiltering = 0;
 var deletedWord = 0;
+// Page
 var page = 0;
-// Counting Words
+var limitOfPage = 0;
+var initialPageValue = 0;
+// Count of Words
 function countOfWordsUpdate(){
 	fs.writeFile(metaDataPath, JSON.stringify(metaData, null, 4), function(err){
 		if(err){
@@ -29,7 +32,7 @@ function countOfWordsUpdate(){
 		}
 	});
 }
-// Layout
+// LAYOUT
 var name = "Vinícius Gabriel";
 var fullName = "Vinícius Gabriel Marques de Melo";
 var GitHub = "https://github.com/monambike";
@@ -87,7 +90,6 @@ bot.on("message", function(msg){
 				}catch(e){
 					msg.channel.send("Poxa... eu ainda não sei falar '" + msg.content.substring(6) + "' ainda, talvez um dia eu aprenda huhu.");
 				}
-
 				break;
 			// Command to see my site
 			case "site":
@@ -108,37 +110,39 @@ bot.on("message", function(msg){
 			// DICTIONARY
 			// Command to see the dictionary
 			case "dictionary":
-				limitOfPage = page * 10;
+					page = 1;
+					initialPageValue = page * 10;
+					limitPageValue = initialPageValue + 9;
+				try{
 
-				/*
-				0 1 2 3 4 5 6 7 8 9
-				10 11 12 13 14 15 16 17 18 19
-				*/
-
-				// Dictionary
-				const dictionaryLayout = new Discord.MessageEmbed()
-					.setColor(color)
-					.setTitle(translationJS[botLang]["help"]["title"])
-					.setDescription("Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!")
-					.addFields(
-						{ name: dictionaryFile["Words"][limitOfPage + 0].word, value: dictionaryFile["Words"][0].desc },
-						{ name: dictionaryFile["Words"][limitOfPage + 1].word, value: dictionaryFile["Words"][0].desc },
-						{ name: dictionaryFile["Words"][limitOfPage + 2].word, value: dictionaryFile["Words"][0].desc },
-						{ name: dictionaryFile["Words"][limitOfPage + 3].word, value: dictionaryFile["Words"][0].desc },
-						{ name: dictionaryFile["Words"][limitOfPage + 4].word, value: dictionaryFile["Words"][0].desc },
-						{ name: dictionaryFile["Words"][limitOfPage + 5].word, value: dictionaryFile["Words"][0].desc },
-						{ name: dictionaryFile["Words"][limitOfPage + 6].word, value: dictionaryFile["Words"][0].desc },
-						{ name: dictionaryFile["Words"][limitOfPage + 7].word, value: dictionaryFile["Words"][0].desc },
-						{ name: dictionaryFile["Words"][limitOfPage + 8].word, value: dictionaryFile["Words"][0].desc },
-						{ name: dictionaryFile["Words"][limitOfPage + 9].word, value: dictionaryFile["Words"][0].desc },
-					);
+					// Dictionary
+					const dictionaryLayout = new Discord.MessageEmbed()
+						.setColor(color)
+						.setTitle(translationJS[botLang]["help"]["title"])
+						.setDescription(
+							"Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!\n\n" +
+							 ((initialPageValue + 0) + 1) + " - " + dictionaryFile["Words"][initialPageValue + 0].word + "\n" +
+							 ((initialPageValue + 1) + 1) + " - " + dictionaryFile["Words"][initialPageValue + 1].word + "\n" +
+							 ((initialPageValue + 2) + 1) + " - " + dictionaryFile["Words"][initialPageValue + 2].word + "\n" +
+							 ((initialPageValue + 3) + 1) + " - " + dictionaryFile["Words"][initialPageValue + 3].word + "\n" +
+							 ((initialPageValue + 4) + 1) + " - " + dictionaryFile["Words"][initialPageValue + 4].word + "\n" +
+							 ((initialPageValue + 5) + 1) + " - " + dictionaryFile["Words"][initialPageValue + 5].word + "\n" +
+							 ((initialPageValue + 6) + 1) + " - " + dictionaryFile["Words"][initialPageValue + 6].word + "\n" +
+							 ((initialPageValue + 7) + 1) + " - " + dictionaryFile["Words"][initialPageValue + 7].word + "\n" +
+							 ((initialPageValue + 8) + 1) + " - " + dictionaryFile["Words"][initialPageValue + 8].word + "\n" +
+							 ((initialPageValue + 9) + 1) + " - " + dictionaryFile["Words"][initialPageValue + 9].word + "\n"
+						);
 
 
-				msg.react('738985211013890119')
-						.then(() => message.react('738985228261130250'))
-						.catch(() => console.error('Ih... Aconteceu um erro ao carregar os emojis do dicionário.'));
+					msg.react('738985211013890119')
+							.then(() => message.react('738985228261130250'))
+							.catch(() => console.error('Ih... Aconteceu um erro ao carregar os emojis do dicionário, olha aqui: ' + e));
 
-				msg.channel.send(dictionaryLayout);
+					msg.channel.send(dictionaryLayout);
+				}catch(e){
+					msg.channel.send("Eh... Não cosegui carregar o dicionário :/, tenta depois ok?");
+					console.log("Houve um problema ao carregar o dicionário, e esse aqui é o erro patrão: \n" + e);
+				}
 				break;
 			// Command for add a word to the dictionary
 			case "addw":
@@ -167,7 +171,6 @@ bot.on("message", function(msg){
 					});
 				}catch(e){
 					msg.channel.send("Essa palavra já existe! hehe. Digite !seew '" + args[1] + "' para ver ela, você pode editar e remover ela se quiser também! :D");
-					console.log(e);
 				}
 				break;
 			// Command to see a word from dictionary
