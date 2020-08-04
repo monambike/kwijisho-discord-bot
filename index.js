@@ -1,27 +1,40 @@
 // COUNTER
-var i = 0;
+var
+	i = 0;
 // PATHS
-const dictionaryFilePath = "./storage/dictionaryFile.json";
-const translationJSPath = "./storage/translationFile.json";
-const metaDataPath = "./storage/metaData.json";
+const
+	dictionaryFilePath = "./storage/dictionaryFile.json",
+	translationJSPath = "./storage/translationFile.json",
+	metaDataPath = "./storage/metaData.json";
 // TRANSLATION
-var translationJS = require(translationJSPath);
-var botLang = "pt";
+var
+	translationJS = require(translationJSPath),
+	botLang = "pt";
 // BOT
-const Discord = require("discord.js");
-const bot = new Discord.Client();
-var { prefix, token, activity } = require("./config.json");
+const
+	Discord = require("discord.js"),
+	bot = new Discord.Client();
+var
+	{ prefix, token, activity } = require("./config.json");
 // DICTIONARY
 // Storing Data
-const fs = require("fs");
-var metaData = require(metaDataPath);
-var dictionaryFile = require(dictionaryFilePath);
-var substringFiltering = 0;
-var deletedWord = 0;
-// Page
-var page = 0;
-var limitOfPage = 0;
-var initialPageValue = 0;
+const
+	fs = require("fs");
+var
+	metaData = require(metaDataPath),
+	dictionaryFile = require(dictionaryFilePath),
+	substringFiltering = 0,
+	deletedWord = 0;
+// Page min and max value
+var initialPage = 0,
+	lastPage = 0,
+	// Word min and max value
+	initialPageValue = 0,
+	limitOfPage = 0,
+	// Counter but specific for word
+	actualWordValue = 0,
+	// Show word in dictionary
+	showWord = [];
 // Count of Words
 function countOfWordsUpdate(){
 	fs.writeFile(metaDataPath, JSON.stringify(metaData, null, 4), function(err){
@@ -33,11 +46,11 @@ function countOfWordsUpdate(){
 	});
 }
 // LAYOUT
-var name = "Vinícius Gabriel";
-var fullName = "Vinícius Gabriel Marques de Melo";
-var GitHub = "https://github.com/monambike";
-var color = "#8C1EFF";
-// Info
+var name = "Vinícius Gabriel",
+	fullName = "Vinícius Gabriel Marques de Melo",
+	GitHub = "https://github.com/monambike",
+	color = "#8C1EFF";
+// Info embed message layout
 const infoLayout = new Discord.MessageEmbed()
 	.setColor(color)
 	.setTitle(translationJS[botLang]["info"]["title"])
@@ -48,7 +61,7 @@ const infoLayout = new Discord.MessageEmbed()
 	.setThumbnail('attachment://resources/v-icon.png')
 	.setTimestamp()
 	.setFooter(fullName + ' ('+ name +')');
-// Help
+// Help embed message layout
 const helpLayout = new Discord.MessageEmbed()
 	.setColor(color)
 	.setTitle(translationJS[botLang]["help"]["title"])
@@ -110,33 +123,56 @@ bot.on("message", function(msg){
 			// DICTIONARY
 			// Command to see the dictionary
 			case "dictionary":
-					page = 1;
-					initialPageValue = page * 10;
-					limitPageValue = initialPageValue + 9;
-				try{
+				// Adding values to variables
+				initialPage = 1;
+				initialPageValue = initialPage * 10;
+				limitPageValue = initialPageValue + 9;
 
-					// Dictionary
+				actualWordValue = limitPageValue;
+
+				console.log("Actual word value: " + actualWordValue);
+				console.log("Limit: " + limitPageValue);
+
+				// Inserting values from JSON file to array to better edit and avoid errors
+				for(actualWordValue; actualWordValue < metaData.countOfWords; actualWordValue++){
+					if(actualWordValue < limitPageValue){
+						console.log("aw" + actualWordValue);
+						showWord[actualWordValue] = dictionaryFile["Words"][actualWordValue].word;
+					}else{
+						showWord[actualWordValue] = "no word";
+						console.log("aw" + actualWordValue);
+					}
+				}
+				// Pega o número de páginas
+				lastPage =  Math.trunc((metaData.countOfWords / 10));
+
+				for(i = 0; i < showWord.length; i++){
+					console.log(showWord[i]);
+				}
+
+				try{
+					// Dictionary embed message layout
 					const dictionaryLayout = new Discord.MessageEmbed()
 						.setColor(color)
 						.setTitle(translationJS[botLang]["help"]["title"])
 						.setDescription(
 							"Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!\n\n" +
-							 ((initialPageValue + 0) + 1) + " - " + dictionaryFile["Words"][initialPageValue + 0].word + "\n" +
-							 ((initialPageValue + 1) + 1) + " - " + dictionaryFile["Words"][initialPageValue + 1].word + "\n" +
-							 ((initialPageValue + 2) + 1) + " - " + dictionaryFile["Words"][initialPageValue + 2].word + "\n" +
-							 ((initialPageValue + 3) + 1) + " - " + dictionaryFile["Words"][initialPageValue + 3].word + "\n" +
-							 ((initialPageValue + 4) + 1) + " - " + dictionaryFile["Words"][initialPageValue + 4].word + "\n" +
-							 ((initialPageValue + 5) + 1) + " - " + dictionaryFile["Words"][initialPageValue + 5].word + "\n" +
-							 ((initialPageValue + 6) + 1) + " - " + dictionaryFile["Words"][initialPageValue + 6].word + "\n" +
-							 ((initialPageValue + 7) + 1) + " - " + dictionaryFile["Words"][initialPageValue + 7].word + "\n" +
-							 ((initialPageValue + 8) + 1) + " - " + dictionaryFile["Words"][initialPageValue + 8].word + "\n" +
-							 ((initialPageValue + 9) + 1) + " - " + dictionaryFile["Words"][initialPageValue + 9].word + "\n"
-						);
+							 ((initialPageValue + 0) + 1) + " - " + showWord[0] + "\n" +
+							 ((initialPageValue + 1) + 1) + " - " + showWord[1] + "\n" +
+							 ((initialPageValue + 2) + 1) + " - " + showWord[2] + "\n" +
+							 ((initialPageValue + 3) + 1) + " - " + showWord[3] + "\n" +
+							 ((initialPageValue + 4) + 1) + " - " + showWord[4]
+							 // ((initialPageValue + 5) + 1) + " - " + showWord[5] + "\n" +
+							 // ((initialPageValue + 6) + 1) + " - " + showWord[6] + "\n" +
+							 // ((initialPageValue + 7) + 1) + " - " + showWord[7] + "\n" +
+							 // ((initialPageValue + 8) + 1) + " - " + showWord[8] + "\n" +
+							 // ((initialPageValue + 9) + 1) + " - " + showWord[9]
+						)
+						.setFooter("Page: " + (initialPage + 1) + " / " + (lastPage + 1) );
 
-
-					msg.react('738985211013890119')
-							.then(() => message.react('738985228261130250'))
-							.catch(() => console.error('Ih... Aconteceu um erro ao carregar os emojis do dicionário, olha aqui: ' + e));
+					// msg.react("738985211013890119")
+					// 		.then(() => message.react("738985228261130250"))
+					// 		.catch(() => console.error("Ih... Aconteceu um erro ao carregar os emojis do dicionário, olha aqui: " + e));
 
 					msg.channel.send(dictionaryLayout);
 				}catch(e){
@@ -177,6 +213,7 @@ bot.on("message", function(msg){
 			case "seew":
 				for(i = 0; i < metaData.countOfWords; i++){
 					if(args[1] === dictionaryFile["Words"][i].word){
+						// See word embed message layout
 						const wordLayout = new Discord.MessageEmbed()
 							.setColor(color)
 							.setTitle(dictionaryFile["Words"][i].word.toUpperCase())
