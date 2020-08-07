@@ -26,13 +26,13 @@ var
 	substringFiltering = 0,
 	deletedWord = 0;
 // Page min and max value
-var initialPage = 0,
+var actualPage = 0,
 	lastPage = 0,
 	// Word min and max value
-	initialPageValue = 0,
+	firstWordId = 0,
 	limitOfPage = 0,
 	// Counter but specific for word
-	actualWordValue = 0,
+	wordCounter = 0,
 	// Show word in dictionary
 	showWord = [];
 // Count of Words
@@ -123,61 +123,80 @@ bot.on("message", function(msg){
 			// DICTIONARY
 			// Command to see the dictionary
 			case "dictionary":
-				// Adding values to variables
-				initialPage = 1;
-				initialPageValue = initialPage * 10;
-				limitPageValue = initialPageValue + 9;
+				// Number made by user less 1, to match with code
+				actualPage = args[1] - 1;
+				// Defining were the words counting will start and end according page number
+				firstWordId = actualPage * 10;
+				lastWordId = firstWordId + 9;
+				// Gets number of pages
+				lastPage = 1 + Math.trunc((metaData.countOfWords / 10));
+				// A counter but specific for words
+				wordCounter = firstWordId;
 
-				actualWordValue = limitPageValue;
+				// If the value be more or equal to 0, or be more than number of pages, then stop code 
+				if(args[1] <= 0 || args[1] > lastPage){
+					msg.channel.send("O número de páginas deve ser maior que 0 e menor ou igual a " + lastPage + ".");
+					return;
+				}
+				// If the value is valid, execute code
+				else{
+					console.log(
+						"LOG" + "\n" +
+						"+ ------------------- +" + "\n" +
+						" - STATS -" + "\n\n" +
+						"Initial Word Id: " + firstWordId + "\n" +
+						"Last Word Id: " + lastWordId + "\n" +
+						"Actual page: " + actualPage + "\n" +
+						"Number of pages: " + lastPage + "\n" +
+						"Word counter (Initial value): " + wordCounter + "\n" +
+						"+ ------------------- +" + "\n" +
+						" - FOR -" + "\n\n"
+					);
 
-				console.log("Actual word value: " + actualWordValue);
-				console.log("Limit: " + limitPageValue);
-
-				// Inserting values from JSON file to array to better edit and avoid errors
-				for(actualWordValue; actualWordValue < metaData.countOfWords; actualWordValue++){
-					if(actualWordValue < limitPageValue){
-						console.log("aw" + actualWordValue);
-						showWord[actualWordValue] = dictionaryFile["Words"][actualWordValue].word;
-					}else{
-						showWord[actualWordValue] = "no word";
-						console.log("aw" + actualWordValue);
+					// Reseting counter and array
+					i = 0;
+					showWord = [];
+					// Inserting values from JSON file to array to better manipulate and avoid errors
+					for(wordCounter; wordCounter < metaData.countOfWords; wordCounter++){
+						// It won't insert more words in the array than allowed
+						if(wordCounter <= lastWordId){
+							showWord[i] = dictionaryFile["Words"][wordCounter].word;
+							console.log("if: " + " Found in position " + wordCounter + " the word: '" + showWord[i] + "'");
+							i++;
+						}
+						// If it does, breaks the loop
+						else{
+							console.log("else: Stopped in position: " + wordCounter);
+							break;
+						}
 					}
-				}
-				// Pega o número de páginas
-				lastPage =  Math.trunc((metaData.countOfWords / 10));
 
-				for(i = 0; i < showWord.length; i++){
-					console.log(showWord[i]);
-				}
-
-				try{
-					// Dictionary embed message layout
-					const dictionaryLayout = new Discord.MessageEmbed()
-						.setColor(color)
-						.setTitle(translationJS[botLang]["help"]["title"])
-						.setDescription(
-							"Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!\n\n" +
-							 ((initialPageValue + 0) + 1) + " - " + showWord[0] + "\n" +
-							 ((initialPageValue + 1) + 1) + " - " + showWord[1] + "\n" +
-							 ((initialPageValue + 2) + 1) + " - " + showWord[2] + "\n" +
-							 ((initialPageValue + 3) + 1) + " - " + showWord[3] + "\n" +
-							 ((initialPageValue + 4) + 1) + " - " + showWord[4]
-							 // ((initialPageValue + 5) + 1) + " - " + showWord[5] + "\n" +
-							 // ((initialPageValue + 6) + 1) + " - " + showWord[6] + "\n" +
-							 // ((initialPageValue + 7) + 1) + " - " + showWord[7] + "\n" +
-							 // ((initialPageValue + 8) + 1) + " - " + showWord[8] + "\n" +
-							 // ((initialPageValue + 9) + 1) + " - " + showWord[9]
-						)
-						.setFooter("Page: " + (initialPage + 1) + " / " + (lastPage + 1) );
-
-					// msg.react("738985211013890119")
-					// 		.then(() => message.react("738985228261130250"))
-					// 		.catch(() => console.error("Ih... Aconteceu um erro ao carregar os emojis do dicionário, olha aqui: " + e));
-
-					msg.channel.send(dictionaryLayout);
-				}catch(e){
-					msg.channel.send("Eh... Não cosegui carregar o dicionário :/, tenta depois ok?");
-					console.log("Houve um problema ao carregar o dicionário, e esse aqui é o erro patrão: \n" + e);
+					try{
+						// Dictionary embed message layout
+						const dictionaryLayout = new Discord.MessageEmbed()
+							.setColor(color)
+							.setTitle(translationJS[botLang]["help"]["title"])
+							.setDescription(
+								"Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!\n\n" +
+								 ((firstWordId + 0) + 1) + " - " + showWord[0] + "\n" +
+								 ((firstWordId + 1) + 1) + " - " + showWord[1] + "\n" +
+								 ((firstWordId + 2) + 1) + " - " + showWord[2] + "\n" +
+								 ((firstWordId + 3) + 1) + " - " + showWord[3] + "\n" +
+								 ((firstWordId + 4) + 1) + " - " + showWord[4] + "\n" +
+								 ((firstWordId + 5) + 1) + " - " + showWord[5] + "\n" +
+								 ((firstWordId + 6) + 1) + " - " + showWord[6] + "\n" +
+								 ((firstWordId + 7) + 1) + " - " + showWord[7] + "\n" +
+								 ((firstWordId + 8) + 1) + " - " + showWord[8] + "\n" +
+								 ((firstWordId + 9) + 1) + " - " + showWord[9]
+							)
+							.setFooter("Page: " + args[1] + " / " + lastPage );
+							
+						msg.channel.send(dictionaryLayout);
+					}
+					catch(e){
+						msg.channel.send("Eh... Não cosegui carregar o dicionário :/, tenta depois ok?");
+						console.log("Houve um problema ao carregar o dicionário, e esse aqui é o erro patrão: \n" + e);
+					}
 				}
 				break;
 			// Command for add a word to the dictionary
@@ -200,12 +219,14 @@ bot.on("message", function(msg){
 							console.error(err);
 							msg.reply("Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)");
 							return;
-						}else{
+						}
+						else{
 							msg.reply("valeu, tá anotado! 📝 Gostei dessa palavra... '" + args[1] + "'...");
 							//Adiciona +1 para contador de palavras
 						}
 					});
-				}catch(e){
+				}
+				catch(e){
 					msg.channel.send("Essa palavra já existe! hehe. Digite !seew '" + args[1] + "' para ver ela, você pode editar e remover ela se quiser também! :D");
 				}
 				break;
@@ -220,7 +241,8 @@ bot.on("message", function(msg){
 							.setDescription(dictionaryFile["Words"][i].desc.toLowerCase());
 						msg.channel.send(wordLayout);
 						return;
-					}else if(args[1] === dictionaryFile["Words"][i].word && i === metaData.countOfWords){
+					}
+					else if(args[1] === dictionaryFile["Words"][i].word && i === metaData.countOfWords){
 						msg.channel.send("Putz... Desculpa mas não consegui achar essa palavra, que tal criar ela? Digite !addw (palavra) (descrição)");
 					}
 				}
@@ -245,12 +267,14 @@ bot.on("message", function(msg){
 								console.error(err);
 								msg.reply("Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)");
 								return;
-							}else{
+							}
+							else{
 								msg.channel.send("A palavra '" + args[1] + "' foi mudada para '" + args[2] + "' com sucesso!");
 							}
 						});
 						return;
-					}else if(args[1] === dictionaryFile["Words"][i].word && i === metaData.countOfWords){
+					}
+					else if(args[1] === dictionaryFile["Words"][i].word && i === metaData.countOfWords){
 						msg.channel.send("Eh... Então, não achei essa palavra que você quer editar, que tal criar ela? Digite !addw (palavra) (descrição)");
 					}
 				}
@@ -267,7 +291,8 @@ bot.on("message", function(msg){
 								console.error(err);
 								msg.reply("Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)");
 								return;
-							}else{
+							}
+							else{
 								msg.channel.send("A palavra '" + args[1] + "' foi apagada com sucesso!");
 								//Adiciona +1 para contador de palavras
 								metaData.countOfWords--;
@@ -275,7 +300,8 @@ bot.on("message", function(msg){
 							}
 						});
 						return;
-					}else if(args[1] === dictionaryFile["Words"][i].word && i === metaData.countOfWords){
+					}
+					else if(args[1] === dictionaryFile["Words"][i].word && i === metaData.countOfWords){
 						msg.channel.send("Eh... Então, não achei essa palavra que você quer editar, que tal criar ela? Digite !addw (palavra) (descrição)");
 					}
 				}
