@@ -9,7 +9,13 @@ const
 // TRANSLATION
 var
 	translationJS = require(translationJSPath),
-	botLang = "pt";
+	botLang = "pt",
+	supportedLangs = [
+		"pt",
+		"en",
+		"es",
+		"ja"
+	];
 // BOT
 const
 	Discord = require("discord.js"),
@@ -93,15 +99,16 @@ bot.on("message", function(msg){
 		switch(args[0]){
 			// If user doesn't insert message
 			case "":
-				msg.channel.send("Oii " + msg.author.username + "! Tudo bem?  Eu sou a KWiJisho (KawaiiJisho). Se quiser saber o que eu sei fazer, digite !help.");
+				msg.channel.send(translationJS[botLang]["nothing"][1] + msg.author.username + translationJS[botLang]["nothing"][2]);
 				break;
 			// Command for switch language
 			case "lang":
 				try{
-					msg.channel.send(translationJS[args[1]]["lang"]);
 					botLang = args[1];
-				}catch(e){
-					msg.channel.send("Poxa... eu ainda não sei falar '" + msg.content.substring(6) + "' ainda, talvez um dia eu aprenda huhu.");
+					msg.channel.send(translationJS[botLang]["lang"]["try"]);
+				}
+				catch(e){
+					msg.channel.send(translationJS[botLang]["lang"]["catch"][1] + msg.content.substring(6) + translationJS[botLang]["lang"]["catch"][2]);
 				}
 				break;
 			// Command to see my site
@@ -133,13 +140,8 @@ bot.on("message", function(msg){
 				// A counter but specific for words
 				wordCounter = firstWordId;
 
-				// If the value be more or equal to 0, or be more than number of pages, then stop code 
-				if(args[1] <= 0 || args[1] > lastPage){
-					msg.channel.send("O número de páginas deve ser maior que 0 e menor ou igual a " + lastPage + ".");
-					return;
-				}
 				// If the value is valid, execute code
-				else{
+				if(args[1] > 0 && args[1] <= lastPage){
 					console.log(
 						"LOG" + "\n" +
 						"+ ------------------- +" + "\n" +
@@ -177,7 +179,7 @@ bot.on("message", function(msg){
 							.setColor(color)
 							.setTitle(translationJS[botLang]["help"]["title"])
 							.setDescription(
-								"Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!\n\n" +
+								translationJS[botLang]["dictionary"]["try"] + "\n\n" +
 								 ((firstWordId + 0) + 1) + " - " + showWord[0] + "\n" +
 								 ((firstWordId + 1) + 1) + " - " + showWord[1] + "\n" +
 								 ((firstWordId + 2) + 1) + " - " + showWord[2] + "\n" +
@@ -190,13 +192,18 @@ bot.on("message", function(msg){
 								 ((firstWordId + 9) + 1) + " - " + showWord[9]
 							)
 							.setFooter("Page: " + args[1] + " / " + lastPage );
-							
+
 						msg.channel.send(dictionaryLayout);
 					}
 					catch(e){
-						msg.channel.send("Eh... Não cosegui carregar o dicionário :/, tenta depois ok?");
+						msg.channel.send(translationJS[botLang]["dictionary"]["catch"]);
 						console.log("Houve um problema ao carregar o dicionário, e esse aqui é o erro patrão: \n" + e);
 					}
+				}
+				// If the value is invalid
+				else{
+					msg.channel.send(translationJS[botLang]["dictionary"]["if"][1] + lastPage + translationJS[botLang]["dictionary"]["if"][2]);
+					return;
 				}
 				break;
 			// Command for add a word to the dictionary
@@ -217,17 +224,17 @@ bot.on("message", function(msg){
 					fs.writeFile(dictionaryFilePath, JSON.stringify(dictionaryFile, null, 4), function(err){
 						if(err){
 							console.error(err);
-							msg.reply("Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)");
+							msg.reply(translationJS[botLang]["addw"]["if"]);
 							return;
 						}
 						else{
-							msg.reply("valeu, tá anotado! 📝 Gostei dessa palavra... '" + args[1] + "'...");
+							msg.reply(translationJS[botLang]["addw"]["else"][1] + args[1] + translationJS[botLang]["addw"]["else"][2]);
 							//Adiciona +1 para contador de palavras
 						}
 					});
 				}
 				catch(e){
-					msg.channel.send("Essa palavra já existe! hehe. Digite !seew '" + args[1] + "' para ver ela, você pode editar e remover ela se quiser também! :D");
+					msg.channel.send(translationJS[botLang]["addw"]["catch"][1] + args[1] + translationJS[botLang]["addw"]["catch"][2]);
 				}
 				break;
 			// Command to see a word from dictionary
@@ -243,7 +250,7 @@ bot.on("message", function(msg){
 						return;
 					}
 					else if(args[1] === dictionaryFile["Words"][i].word && i === metaData.countOfWords){
-						msg.channel.send("Putz... Desculpa mas não consegui achar essa palavra, que tal criar ela? Digite !addw (palavra) (descrição)");
+						msg.channel.send(translationJS[botLang]["seew"]["else"]);
 					}
 				}
 				break;
@@ -265,17 +272,23 @@ bot.on("message", function(msg){
 						fs.writeFile(dictionaryFilePath, JSON.stringify(dictionaryFile, null, 4), function(err){
 							if(err){
 								console.error(err);
-								msg.reply("Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)");
+								msg.reply(translationJS[botLang]["editw"]["if"]);
 								return;
 							}
 							else{
-								msg.channel.send("A palavra '" + args[1] + "' foi mudada para '" + args[2] + "' com sucesso!");
+								msg.channel.send(
+									translationJS[botLang]["editw"]["else"][1] +
+									args[1] +
+									translationJS[botLang]["editw"]["else"][2] +
+									args[2] +
+									translationJS[botLang]["editw"]["else"][3]
+								);
 							}
 						});
 						return;
 					}
 					else if(args[1] === dictionaryFile["Words"][i].word && i === metaData.countOfWords){
-						msg.channel.send("Eh... Então, não achei essa palavra que você quer editar, que tal criar ela? Digite !addw (palavra) (descrição)");
+						msg.channel.send(translationJS[botLang]["editw"]["elseif"]);
 					}
 				}
 				break;
@@ -289,11 +302,11 @@ bot.on("message", function(msg){
 						fs.writeFile(dictionaryFilePath, JSON.stringify(dictionaryFile, null, 4), function(err){
 							if(err){
 								console.error(err);
-								msg.reply("Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)");
+								msg.reply(translationJS[botLang]["remw"]["if"]);
 								return;
 							}
 							else{
-								msg.channel.send("A palavra '" + args[1] + "' foi apagada com sucesso!");
+								msg.channel.send(translationJS[botLang]["remw"]["else"][1] + args[1] + translationJS[botLang]["remw"]["else"][2]);
 								//Adiciona +1 para contador de palavras
 								metaData.countOfWords--;
 								countOfWordsUpdate();
@@ -302,7 +315,7 @@ bot.on("message", function(msg){
 						return;
 					}
 					else if(args[1] === dictionaryFile["Words"][i].word && i === metaData.countOfWords){
-						msg.channel.send("Eh... Então, não achei essa palavra que você quer editar, que tal criar ela? Digite !addw (palavra) (descrição)");
+						msg.channel.send(translationJS[botLang]["remw"]["elseif"]);
 					}
 				}
 				break;

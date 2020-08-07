@@ -1,17 +1,29 @@
 {
 	"pt":{
-		"nothing": "",
-		"lang": "Eu agora falo português!",
+		"nothing":{
+			"1": "Oii ",
+			"2": "! Tudo bem?  Eu sou a KWiJisho (KawaiiJisho). Se quiser saber o que eu sei fazer, digite !help."
+		},
+		
+		"lang":{
+			"try": "Eu agora falo português!",
+			"catch":{
+				"1": "Poxa... eu ainda não sei falar '",
+				"2": "' ainda, talvez um dia eu aprenda huhu."
+			}
+		},
+
 		"site": "Conheça o meu desenvolvedor: https://github.com/monambike",
+
 		"hey":{
 			"1": "eai! Espera... você disse '",
 			"2": "', agora pouco?"
 		},
+
 		"info":{
 			"title": "Meu Github!",
 			"description": "Visite meu GitHub para ver mais projetos como esse!"
 		},
-		"default": "Putz cara... ;~; que vergonha... Desculpa mas não sei fazer isso... Se quiser saber o que eu sei fazer digite '!commands'.",
 		
 		"help":{
 			"title": "COMANDOS",
@@ -36,7 +48,7 @@
 				"valueDictionary": "Mostra o dicionário de palvras.",
 
 				"nameAddw": "addw",
-				"valueAddw": "Adiciona uma nova palavra. Digite: !add nova 'palavra'. Caso queira 'espaços' use '_'.",
+				"valueAddw": "Adiciona uma nova palavra. Digite: !add nova 'palavra'. Caso queira 'espaços' use '_' ou '-'.",
 
 				"nameSeew": "seew",
 				"valueSeew": "Mostra informações sobre alguma palavra. Digite: !seew 'palavra'.",
@@ -47,6 +59,48 @@
 				"nameRemw": "remw",
 				"valueRemw": "Remove uma palavra do dicionário. Digite: !remw 'palavra'."
 			}
-		}
+		},
+
+		"dictionary":{
+			"if":{
+				"1": "O número de páginas deve ser maior que 0 e menor ou igual a ",
+				"2": "."
+			},
+			"try": "Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!",
+			"catch": "Eh... Não cosegui carregar o dicionário :/, tenta depois ok?"
+		},
+		"addw":{
+			"if": "Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)",
+			"else":{
+				"1": "valeu, tá anotado! 📝 Gostei dessa palavra... '",
+				"2": "'..."
+			},
+			"catch":{
+				"1": "Essa palavra já existe! hehe. Digite !seew '",
+				"2": "' para ver ela, você pode editar e remover ela se quiser também! :D"
+			}
+		},
+		"seew":{
+			"else": "Putz... Desculpa mas não consegui achar essa palavra, que tal criar ela? Digite !addw (palavra) (descrição)"
+		},
+		"editw":{
+			"if": "Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)",
+			"else":{
+				"1": "A palavra '",
+				"2": "' foi mudada para '",
+				"3": "' com sucesso!"
+			},
+			"elseif": "Eh... Então, não achei essa palavra que você quer editar, que tal criar ela? Digite !addw (palavra) (descrição)"
+		},
+		"remw":{
+			"if": "Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)",
+			"else":{
+				"1": "A palavra '",
+				"2": "' foi apagada com sucesso!"
+			},
+			"elseif": "Eh... Então, não achei essa palavra que você quer editar, que tal criar ela? Digite !addw (palavra) (descrição)"
+		},
+
+		"default": "Putz cara... ;~; que vergonha... Desculpa mas não sei fazer isso... Se quiser saber o que eu sei fazer digite '!commands'."
 	}
 }
