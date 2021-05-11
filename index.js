@@ -1,27 +1,43 @@
-// COUNTER
-var
-	i = 0;
+// >>>>>>>>>>   START -  VARIABLES      <<<<<<<<<<
+// Desc:
+// Region containing some project variables.
+// #region - variables
+
 // PATHS
 const
 	dictionaryFilePath = "./storage/dictionaryFile.json",
 	translationJSPath = "./storage/translationFile.json",
 	metaDataPath = "./storage/metaData.json";
+
+// COUNTERS
+var
+	i = 0;
+
 // TRANSLATION
 var
+	// Getting translation file
 	translationJS = require(translationJSPath),
+
+	// Default bot language
 	botLang = "pt",
+
+	// Linguagens suportadas pelo bot
 	supportedLangs = [
 		"pt",
 		"en",
 		"es",
 		"ja"
 	];
+
 // BOT
+// Bot settings
 const
 	Discord = require("discord.js"),
 	bot = new Discord.Client();
 var
 	{ prefix, token, activity } = require("./config.json");
+
+	
 // DICTIONARY
 // Storing Data
 const
@@ -51,11 +67,20 @@ function countOfWordsUpdate(){
 		}
 	});
 }
-// LAYOUT
+//#endregion
+// >>>>>>>>>>   END   -  VARIABLES      <<<<<<<<<<
+
+// >>>>>>>>>>   START - LAYOUT          <<<<<<<<<<
+// Desc:
+// Region containing all items for layout constru-
+// ction. 
+// #region - layout
+
 var name = "Vinícius Gabriel",
 	fullName = "Vinícius Gabriel Marques de Melo",
 	GitHub = "https://github.com/monambike",
 	color = "#8C1EFF";
+
 // Info embed message layout
 const infoLayout = new Discord.MessageEmbed()
 	.setColor(color)
@@ -67,6 +92,7 @@ const infoLayout = new Discord.MessageEmbed()
 	.setThumbnail('attachment://resources/v-icon.png')
 	.setTimestamp()
 	.setFooter(fullName + ' ('+ name +')');
+
 // Help embed message layout
 const helpLayout = new Discord.MessageEmbed()
 	.setColor(color)
@@ -85,11 +111,11 @@ const helpLayout = new Discord.MessageEmbed()
 		{ name: translationJS[botLang]["help"]["fields"]["nameRemw"], value: translationJS[botLang]["help"]["fields"]["valueRemw"] },
 	);
 
-bot.on("ready", function(name){
-	bot.user.setActivity(activity);
+//#endregion
+// >>>>>>>>>>   END   - LAYOUT          <<<<<<<<<<
 
-	console.log("Obrigada! Agora estou viva e atualizadaa turururu");
-});
+// >>>>>>>>>>   START -  USER MESSAGE   <<<<<<<<<<
+// #region - userMessage
 
 bot.on("message", function(msg){
 	// Formats prefix
@@ -125,6 +151,7 @@ bot.on("message", function(msg){
 				break;
 			// Command for askin for help
 			case "help":
+				// It shows help page
 				msg.channel.send(helpLayout);
 				break;
 			// DICTIONARY
@@ -139,6 +166,12 @@ bot.on("message", function(msg){
 				lastPage = 1 + Math.trunc((metaData.countOfWords / 10));
 				// A counter but specific for words
 				wordCounter = firstWordId;
+
+				// Verifica se o dicionário tá vazio
+				if (isNaN(lastPage)){
+					msg.channel.send("Ow " + msg.author.username + ", o dicionário tá vazio cara. Tenta adicionar uma palavra antes com '!addw'.")
+					break;
+				}
 
 				// If the value is valid, execute code
 				if(args[1] > 0 && args[1] <= lastPage){
@@ -326,5 +359,16 @@ bot.on("message", function(msg){
 		}
 	}
 })
+//#endregion
+// >>>>>>>>>>   END   -  USER MESSAGE   <<<<<<<<<<
 
+// >>>>>>>>>>   START - STARTING BOT    <<<<<<<<<<
+// #region - startingBot
+bot.on("ready", function(name){
+	bot.user.setActivity(activity);
+
+	console.log("Obrigada! Agora estou viva e atualizadaa turururu");
+});
 bot.login(token);
+//#endregion
+// >>>>>>>>>>   END - STARTING BOT      <<<<<<<<<<
