@@ -30,13 +30,13 @@ var
 	];
 
 // BOT
-// Bot settings
+// Calling 'discord.js' file
 const
 	Discord = require("discord.js"),
 	bot = new Discord.Client();
+// Settings from 'config.json'
 var
 	{ prefix, token, activity } = require("./config.json");
-
 	
 // DICTIONARY
 // Storing Data
@@ -50,11 +50,14 @@ var
 // Page min and max value
 var actualPage = 0,
 	lastPage = 0,
+	
 	// Word min and max value
 	firstWordId = 0,
 	limitOfPage = 0,
+
 	// Counter but specific for word
 	wordCounter = 0,
+	
 	// Show word in dictionary
 	showWord = [];
 // Count of Words
