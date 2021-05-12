@@ -3,15 +3,31 @@
 // Region containing some project variables.
 // #region - variables
 
+// BOT
+const
+	// Calling 'discord.js' file
+	Discord = require("discord.js"),
+	bot = new Discord.Client();
+var
+	// Settings from 'config.json'
+	{ prefix, token, activity } = require("./config.json");
+
+
+
 // PATHS
 const
 	dictionaryFilePath = "./storage/dictionaryFile.json",
 	translationJSPath = "./storage/translationFile.json",
 	metaDataPath = "./storage/metaData.json";
 
+
+
 // COUNTERS
 var
+	// Main counter
 	i = 0;
+
+
 
 // TRANSLATION
 var
@@ -29,38 +45,33 @@ var
 		"ja"
 	];
 
-// BOT
-// Calling 'discord.js' file
-const
-	Discord = require("discord.js"),
-	bot = new Discord.Client();
-// Settings from 'config.json'
-var
-	{ prefix, token, activity } = require("./config.json");
-	
+
+
 // DICTIONARY
-// Storing Data
 const
+	// File System Module (Node.js)
 	fs = require("fs");
+
 var
 	metaData = require(metaDataPath),
 	dictionaryFile = require(dictionaryFilePath),
-	substringFiltering = 0,
-	deletedWord = 0;
-// Page min and max value
-var actualPage = 0,
+	substringToGetActualWord = 0;
+
+var
+	// Page min and max value
+	actualPage = 0,
 	lastPage = 0,
 	
 	// Word min and max value
 	firstWordId = 0,
-	limitOfPage = 0,
 
 	// Counter but specific for word
 	wordCounter = 0,
 	
 	// Show word in dictionary
 	showWord = [];
-// Count of Words
+
+// Update Counting of Words
 function countOfWordsUpdate(){
 	fs.writeFile(metaDataPath, JSON.stringify(metaData, null, 4), function(err){
 		if(err){
@@ -70,6 +81,7 @@ function countOfWordsUpdate(){
 		}
 	});
 }
+
 //#endregion
 // >>>>>>>>>>   END   -  VARIABLES      <<<<<<<<<<
 
@@ -79,7 +91,9 @@ function countOfWordsUpdate(){
 // ction. 
 // #region - layout
 
-var name = "Vinícius Gabriel",
+var
+	// MetaData
+	name = "Vinícius Gabriel",
 	fullName = "Vinícius Gabriel Marques de Melo",
 	GitHub = "https://github.com/monambike",
 	color = "#8C1EFF";
@@ -125,52 +139,110 @@ bot.on("message", function(msg){
 	let args = msg.content.substring(prefix.length).split(" ");
 
 	if(msg.content.startsWith("!")){
-		switch(args[0]){
-			// If user doesn't insert message
-			case "":
-				msg.channel.send(translationJS[botLang]["nothing"][1] + msg.author.username + translationJS[botLang]["nothing"][2]);
-				break;
-			// Command for switch language
+		switch(args[0]){			
+			// CUSTOMIZE BOT
+			// # ---------- + ---------- + ---------- #
+
+			// CHANGE BOT LANGUAGE
+			// Command to switch bot language
 			case "lang":
+				// If language is supported by the bot
 				try{
+					// Pass typed language to the variable
 					botLang = args[1];
+
+					// Sucess message
 					msg.channel.send(translationJS[botLang]["lang"]["try"]);
 				}
+				// If language is not supported by the bot
 				catch(e){
-					msg.channel.send(translationJS[botLang]["lang"]["catch"][1] + msg.content.substring(6) + translationJS[botLang]["lang"]["catch"][2]);
+					// Error message
+					msg.channel.send(
+						translationJS[botLang]["lang"]["catch"][1] +
+						msg.content.substring(6) + // Idioma
+						translationJS[botLang]["lang"]["catch"][2]
+					);
 				}
+
 				break;
-			// Command to see my site
-			case "site":
-				msg.channel.send(translationJS[botLang]["site"]);
-				break;
-			// Funny command to talk with bot
+
+			// # ---------- + ---------- + ---------- #
+			
+
+
+			// COMANDOS GERAIS
+			// Desc: comandos mais simples como piadas, interações e outros
+			// # ---------- + ---------- + ---------- #
+
+			// CONVERSAS COM O BOT
+			// Comando de interação com o bot
 			case "hey":
-				msg.reply(translationJS[botLang]["hey"][1] + msg.content.substring(5) + translationJS[botLang]["hey"][2]);
+				msg.reply(
+					translationJS[botLang]["hey"][1] +
+					msg.content.substring(5) + // Said message by user
+					translationJS[botLang]["hey"][2]
+				);
+
 				break;
-			// Command to see further information
+
+			// # ---------- + ---------- + ---------- #
+			
+
+
+			// INFO PAGES
+			// # ---------- + ---------- + ---------- #
+
+			// MEU SITE NO GITHUB
+			// Comando para ver o meu site
+			case "site":
+				// Mostra por mensagem meu site do GitHub
+				msg.channel.send(translationJS[botLang]["site"] + "https://github.com/monambike");
+				break;
+			
+			// PÁGINA DE INFORMAÇÕES
+			// Comando para ver mais informações sobre mim
 			case "info":
+				// Mostra o layout da página de informações
 				msg.channel.send(infoLayout);
 				break;
-			// Command for askin for help
+
+			// PÁGINA DE AJUDA
+			// Comandos de ajuda
 			case "help":
-				// It shows help page
+				// Mostra o layout da página de ajuda
 				msg.channel.send(helpLayout);
 				break;
-			// DICTIONARY
-			// Command to see the dictionary
+
+			// # ---------- + ---------- + ---------- #
+			
+
+
+			// DICIONÁRIO
+			// Desc: comandos relacionados com o dicionário,
+			// bem como adicionar palavras ao dicionário,
+			// deletar, visualizar dicionário ou visualizar
+			// palavra e coisas relacionadas.
+			// # ---------- + ---------- + ---------- #
+
+			// MOSTRA O DICIONÁRIO
+			// Comando para visualizar o dicionário
 			case "dictionary":
-				// Number made by user less 1, to match with code
+				// Number made by user less 1, to match with current code
 				actualPage = args[1] - 1;
-				// Defining were the words counting will start and end according page number
+
+				// - Defining were the words counting will start and end according page number
+				// 10 Words per page
 				firstWordId = actualPage * 10;
+				// Get the last word
 				lastWordId = firstWordId + 9;
+
 				// Gets number of pages
 				lastPage = 1 + Math.trunc((metaData.countOfWords / 10));
-				// A counter but specific for words
+				
+				// A counter specific for words
 				wordCounter = firstWordId;
 
-				// Verifica se o dicionário tá vazio
+				// Exceção para caso o dicionário esteja vazio
 				if (isNaN(lastPage)){
 					msg.channel.send("Ow " + msg.author.username + ", o dicionário tá vazio cara. Tenta adicionar uma palavra antes com '!addw'.")
 					break;
@@ -242,16 +314,17 @@ bot.on("message", function(msg){
 					return;
 				}
 				break;
+			// ADD WORD FOR DICTIONARY
 			// Command for add a word to the dictionary
 			case "addw":
 				try{
 					// Removing !addw, title and spaces, just letting the description;
-					substringFiltering = 6 + args[1].length + 1;
+					substringToGetActualWord = 6 + args[1].length + 1;
 
 					// In the last position add a word
 					dictionaryFile["Words"][metaData.countOfWords] = {
 						word: args[1],
-						desc: msg.content.substring(substringFiltering)
+						desc: msg.content.substring(substringToGetActualWord)
 					}
 
 					metaData.countOfWords++;
@@ -273,6 +346,7 @@ bot.on("message", function(msg){
 					msg.channel.send(translationJS[botLang]["addw"]["catch"][1] + args[1] + translationJS[botLang]["addw"]["catch"][2]);
 				}
 				break;
+			// SEE SPECIFIC WORD FROM DICTIONARY
 			// Command to see a word from dictionary
 			case "seew":
 				for(i = 0; i < metaData.countOfWords; i++){
@@ -290,19 +364,20 @@ bot.on("message", function(msg){
 					}
 				}
 				break;
-			// Command to edit a word from dictionary
+			// EDIT WORD FROM DICTIONARY
+			// Desc: command to edit a word from dictionary
 			case "editw":
 				for(i = 0; i < metaData.countOfWords; i++){
 					if(args[1] === dictionaryFile["Words"][i].word){
 						// Removing !editw, previous word, new word and spaces
-						substringFiltering = 7 + args[1].length + 1 + args[2].length + 1;
+						substringToGetActualWord = 7 + args[1].length + 1 + args[2].length + 1;
 
 						// Deleting old word
 						delete dictionaryFile["Words"][i];
 
 						dictionaryFile["Words"][i] = {
 							word: args[2],
-							desc: msg.content.substring(substringFiltering)
+							desc: msg.content.substring(substringToGetActualWord)
 						}
 
 						fs.writeFile(dictionaryFilePath, JSON.stringify(dictionaryFile, null, 4), function(err){
@@ -328,7 +403,8 @@ bot.on("message", function(msg){
 					}
 				}
 				break;
-			// Command for remove a word from dictionary
+			// REMOVE WORD FROM DICTIONARY
+			// Desc: command for remove a word from dictionary
 			case "remw":
 				for(i = 0; i < metaData.countOfWords; i++){
 					if(args[1] === dictionaryFile["Words"][i].word){
@@ -355,23 +431,42 @@ bot.on("message", function(msg){
 					}
 				}
 				break;
-			// If command doesn't exist
+
+			// # ---------- + ---------- + ---------- #
+
+			// EXCEPTIONS
+			// # ---------- + ---------- + ---------- #
+
+			// EMPTY MESSAGE
+			// Desc: if user doesn't insert message
+			case "":
+				msg.channel.send(translationJS[botLang]["nothing"][1] + msg.author.username + translationJS[botLang]["nothing"][2]);
+				break;
+			// INEXISTENT COMMAND
+			// Desc: if command doesn't exist
 			default:
 				msg.channel.send(translationJS[botLang]["default"]);
 				break;
+				
+			// # ---------- + ---------- + ---------- #
 		}
 	}
 })
+
 //#endregion
 // >>>>>>>>>>   END   -  USER MESSAGE   <<<<<<<<<<
 
 // >>>>>>>>>>   START - STARTING BOT    <<<<<<<<<<
 // #region - startingBot
+
 bot.on("ready", function(name){
+	// Set bot's activity
 	bot.user.setActivity(activity);
 
+	// Start's bot
 	console.log("Obrigada! Agora estou viva e atualizadaa turururu");
 });
 bot.login(token);
+
 //#endregion
 // >>>>>>>>>>   END - STARTING BOT      <<<<<<<<<<
