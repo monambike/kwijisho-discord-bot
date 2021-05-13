@@ -13,6 +13,16 @@ var
 	{ prefix, token, activity } = require("./config.json");
 
 
+// METADATA
+var
+	// DEV INFO
+	// Basic Info
+	metadataName = "Vinícius Gabriel",
+	metadataFullName = "Vinícius Gabriel Marques de Melo",
+	// Links
+	metadataLinkGithub = "https://github.com/monambike",
+	// LAYOUT
+	metadataLayoutColor = "#8C1EFF";
 
 // PATHS
 const
@@ -83,36 +93,30 @@ function countOfWordsUpdate(){
 }
 
 //#endregion
-// >>>>>>>>>>   END   -  VARIABLES      <<<<<<<<<<
 
 // >>>>>>>>>>   START - LAYOUT          <<<<<<<<<<
 // Desc:
 // Region containing all items for layout constru-
 // ction. 
-// #region - layout
+// #region - LAYOUTS
 
-var
-	// MetaData
-	name = "Vinícius Gabriel",
-	fullName = "Vinícius Gabriel Marques de Melo",
-	GitHub = "https://github.com/monambike",
-	color = "#8C1EFF";
-
+// INFO LAYOUT
 // Info embed message layout
 const infoLayout = new Discord.MessageEmbed()
-	.setColor(color)
+	.setColor(metadataLayoutColor)
 	.setTitle(translationJS[botLang]["info"]["title"])
-	.setURL(GitHub)
-	.setAuthor(name, 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
+	.setURL(metadataLinkGithub)
+	.setAuthor(metadataName, 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
 	.setDescription(translationJS[botLang]["info"]["description"])
 	.attachFiles(['resources/v-icon.png'])
 	.setThumbnail('attachment://resources/v-icon.png')
 	.setTimestamp()
-	.setFooter(fullName + ' ('+ name +')');
+	.setFooter(metadataFullName + ' ('+ metadataName +')');
 
+// HELP LAYOUT
 // Help embed message layout
 const helpLayout = new Discord.MessageEmbed()
-	.setColor(color)
+	.setColor(metadataLayoutColor)
 	.setTitle(translationJS[botLang]["help"]["title"])
 	.setDescription("Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!")
 	.addFields(
@@ -129,7 +133,6 @@ const helpLayout = new Discord.MessageEmbed()
 	);
 
 //#endregion
-// >>>>>>>>>>   END   - LAYOUT          <<<<<<<<<<
 
 // >>>>>>>>>>   START -  USER MESSAGE   <<<<<<<<<<
 // #region - userMessage
@@ -147,7 +150,7 @@ bot.on("message", function(msg){
 			// Command to switch bot language
 			case "lang":
 				// If language is supported by the bot
-				try{
+				if(supportedLangs.includes(args[1])){
 					// Pass typed language to the variable
 					botLang = args[1];
 
@@ -155,11 +158,11 @@ bot.on("message", function(msg){
 					msg.channel.send(translationJS[botLang]["lang"]["try"]);
 				}
 				// If language is not supported by the bot
-				catch(e){
+				else{
 					// Error message
 					msg.channel.send(
 						translationJS[botLang]["lang"]["catch"][1] +
-						msg.content.substring(6) + // Idioma
+						msg.content.substring(6) +
 						translationJS[botLang]["lang"]["catch"][2]
 					);
 				}
@@ -171,11 +174,11 @@ bot.on("message", function(msg){
 
 
 			// COMANDOS GERAIS
-			// Desc: comandos mais simples como piadas, interações e outros
+			// Desc: simple commands like jokes, interactions and others
 			// # ---------- + ---------- + ---------- #
 
 			// CONVERSAS COM O BOT
-			// Comando de interação com o bot
+			// Funny talking with bot
 			case "hey":
 				msg.reply(
 					translationJS[botLang]["hey"][1] +
@@ -193,10 +196,10 @@ bot.on("message", function(msg){
 			// # ---------- + ---------- + ---------- #
 
 			// MEU SITE NO GITHUB
-			// Comando para ver o meu site
+			// Command to see my site
 			case "site":
-				// Mostra por mensagem meu site do GitHub
-				msg.channel.send(translationJS[botLang]["site"] + "https://github.com/monambike");
+				// Show's my Github link
+				msg.channel.send(translationJS[botLang]["site"] + metadataLinkGithub);
 				break;
 			
 			// PÁGINA DE INFORMAÇÕES
@@ -284,7 +287,7 @@ bot.on("message", function(msg){
 					try{
 						// Dictionary embed message layout
 						const dictionaryLayout = new Discord.MessageEmbed()
-							.setColor(color)
+							.setColor(metadataLayoutColor)
 							.setTitle(translationJS[botLang]["help"]["title"])
 							.setDescription(
 								translationJS[botLang]["dictionary"]["try"] + "\n\n" +
@@ -353,7 +356,7 @@ bot.on("message", function(msg){
 					if(args[1] === dictionaryFile["Words"][i].word){
 						// See word embed message layout
 						const wordLayout = new Discord.MessageEmbed()
-							.setColor(color)
+							.setColor(metadataLayoutColor)
 							.setTitle(dictionaryFile["Words"][i].word.toUpperCase())
 							.setDescription(dictionaryFile["Words"][i].desc.toLowerCase());
 						msg.channel.send(wordLayout);
@@ -454,12 +457,11 @@ bot.on("message", function(msg){
 })
 
 //#endregion
-// >>>>>>>>>>   END   -  USER MESSAGE   <<<<<<<<<<
 
 // >>>>>>>>>>   START - STARTING BOT    <<<<<<<<<<
 // #region - startingBot
 
-bot.on("ready", function(name){
+bot.on("ready", function(metadataName){
 	// Set bot's activity
 	bot.user.setActivity(activity);
 
@@ -469,4 +471,3 @@ bot.on("ready", function(name){
 bot.login(token);
 
 //#endregion
-// >>>>>>>>>>   END - STARTING BOT      <<<<<<<<<<

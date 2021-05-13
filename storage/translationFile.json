@@ -102,5 +102,35 @@
 		},
 
 		"default": "Putz cara... ;~; que vergonha... Desculpa mas não sei fazer isso... Se quiser saber o que eu sei fazer digite '!commands'."
+	},
+
+	"en":{
+		"lang":{
+			"try": "Eu agora falo português!",
+			"catch":{
+				"1": "Poxa... eu ainda não sei falar '",
+				"2": "' ainda, talvez um dia eu aprenda huhu."
+			}
+		}		
+	},
+
+	"es":{		
+		"lang":{
+			"try": "Ahora puedo hablar español!",
+			"catch":{
+				"1": "Lo siento... yo no sé como hablar '",
+				"2": "' todavia, tal vez pueda aprenderlo algun dia huhu."
+			}
+		}
+	},
+	
+	"ja":{		
+		"lang":{
+			"try": "日本語で話すできるよ!",
+			"catch":{
+				"1": "残念。。。　まだ「",
+				"2": "」を分かんないよ。。。けど、たぶんいつか習えます、ふふふ。。。"
+			}
+		}
 	}
 }
