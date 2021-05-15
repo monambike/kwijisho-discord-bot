@@ -354,7 +354,9 @@ bot.on("message", function(msg){
 						// If word already exists in dictionary
 						if(err){
 							console.error(err);
+							
 							msg.reply(translationJS[botLang]["addw"]["if"]);
+
 							return;
 						}
 						// If the word doesn't exist in the dictionary
