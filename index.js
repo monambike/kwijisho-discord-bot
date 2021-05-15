@@ -26,7 +26,7 @@ var
 	// Links
 	metadataLinkGithub = "https://github.com/monambike",
 	// LAYOUT
-	metadataLayoutColor = "#8C1EFF";
+	metadataLayoutColor = "#9638ff";
 
 
 
