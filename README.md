@@ -1,5 +1,5 @@
 # KWiJisho
-(última atualização: 22/07/2020)
+(última atualização: 15/05/2021)
 
 ## Como Editar o Bot
 
@@ -11,7 +11,24 @@ Após realizar download dos arquivos realize os seguintes passos:
 
 2. Dentro dessa pasta crie dois arquivos com os nomes `dictionaryFile.json` e `metaData.json` e coloque **dentro dos dois arquivos** o seguinte código:
 
-`{}`
+`storage\dictionaryFile.json`
+```
+{
+    "Words": {
+        "0": {
+            "word": "",
+            "desc": ""
+        }
+    }
+}
+```
+
+`storage\metaData.json`
+```
+{
+    "countOfWords": 0
+}
+```
 
 3. Fora dessa pasta, na raiz, inclua um arquivo com o nome `config.json` com o seguinte código:
 ```
