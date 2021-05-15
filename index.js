@@ -72,7 +72,7 @@ var
 	// Getting dictionary file
 	dictionaryFile = require(dictionaryFilePath),
 	// Substring actual word
-	substringToGetActualWord = 0;
+	substringToGetOnlyDescription = 0;
 
 var
 	// Page min and max value
@@ -338,13 +338,15 @@ bot.on("message", function(msg){
 			// Command for add a word to the dictionary
 			case "addw":
 				try{
-					// Removing !addw, title and spaces, just letting the description;
-					substringToGetActualWord = 6 + args[1].length + 1;
+					// Variable that contains the amount of characters to substring, it's
+					// removing "!addw", the title and spaces, just letting the description
+					// out the counting
+					substringToGetOnlyDescription = 6 + args[1].length + 1;
 
 					// In the last position add a word
 					dictionaryFile["Words"][metaData.countOfWords] = {
 						word: args[1],
-						desc: msg.content.substring(substringToGetActualWord)
+						desc: msg.content.substring(substringToGetOnlyDescription)
 					}
 
 					metaData.countOfWords++;
@@ -403,7 +405,7 @@ bot.on("message", function(msg){
 				for(i = 0; i < metaData.countOfWords; i++){
 					if(args[1] === dictionaryFile["Words"][i].word){
 						// Removing !editw, previous word, new word and spaces
-						substringToGetActualWord = (
+						substringToGetOnlyDescription = (
 								7 +
 								args[1].length +
 								1 +
@@ -416,7 +418,7 @@ bot.on("message", function(msg){
 
 						dictionaryFile["Words"][i] = {
 							word: args[2],
-							desc: msg.content.substring(substringToGetActualWord)
+							desc: msg.content.substring(substringToGetOnlyDescription)
 						}
 
 						fs.writeFile(dictionaryFilePath, JSON.stringify(dictionaryFile, null, 4), function(err){
