@@ -5,7 +5,7 @@
 
 // BOT
 const
-	// Calling 'discord.js' file
+	// Calling 'discord.js' client
 	Discord = require("discord.js"),
 	bot = new Discord.Client();
 var
@@ -65,7 +65,7 @@ var
 
 // DICTIONARY
 const
-	// File System Module (Node.js)
+	// File System Module from Node.js
 	fs = require("fs");
 
 var
@@ -110,13 +110,6 @@ function countOfWordsUpdate(){
 	});
 }
 
-function writeInTerminal(content){
-	fs.writeFile("output.txt", content, (err) => { 
-		// In case of a error throw err. 
-		if (err) throw err; 
-	});
-}
-
 // #endregion
 
 // >>>>>>>>>>   START - LAYOUT          <<<<<<<<<<
@@ -134,7 +127,9 @@ bot.on("message", function(msg){
 	// Formats prefix
 	let args = msg.content.substring(prefix.length).split(" ");
 
+	// Prefix
 	if(msg.content.startsWith("!")){
+		// First argument
 		switch(args[0]){			
 			// CUSTOMIZE BOT
 			// # ---------- + ---------- + ---------- #
@@ -159,7 +154,6 @@ bot.on("message", function(msg){
 						translationJS[botLang]["lang"]["catch"][2]
 					);
 				}
-
 				break;
 
 			// # ---------- + ---------- + ---------- #
@@ -178,7 +172,6 @@ bot.on("message", function(msg){
 					msg.content.substring(5) + // Said message by user
 					translationJS[botLang]["hey"][2]
 				);
-
 				break;
 
 			// # ---------- + ---------- + ---------- #
@@ -198,6 +191,7 @@ bot.on("message", function(msg){
 			// INFO PAGE
 			// Command to see more info about me
 			case "info":
+				// Display info layout
 				msg.channel.send(
 					new Discord.MessageEmbed()
 						.setColor(metadataLayoutColor)
@@ -217,10 +211,7 @@ bot.on("message", function(msg){
 			// HELP PAGE
 			// Help layout
 			case "help":
-				// Create help layout
-				const helpLayout = 
-
-				// Show help layout
+				// Display help layout
 				msg.channel.send(
 					new Discord.MessageEmbed()
 						.setColor(metadataLayoutColor)
@@ -280,19 +271,6 @@ bot.on("message", function(msg){
 
 				// If the value is valid, execute code
 				if(args[1] > 0 && args[1] <= lastPage){
-					writeInTerminal(
-						"LOG" + "\n" +
-						"+ ------------------- +" + "\n" +
-						" - STATS -" + "\n\n" +
-						"Initial Word Id: " + firstWordId + "\n" +
-						"Last Word Id: " + lastWordId + "\n" +
-						"Actual page: " + actualPage + "\n" +
-						"Number of pages: " + lastPage + "\n" +
-						"Word counter (Initial value): " + wordCounter + "\n" +
-						"+ ------------------- +" + "\n" +
-						" - FOR -" + "\n\n"
-					);
-
 					// Reseting counter and array
 					i = 0;
 					showWord = [];
@@ -302,28 +280,19 @@ bot.on("message", function(msg){
 						if(wordCounter <= lastWordId){
 							showWord[i] = dictionaryFile["Words"][wordCounter].word;
 
-							writeInTerminal(
-								"if: " +
-								" Found in position " +
-								wordCounter +
-								" the word: '" +
-								showWord[i] +
-								"'"
-							);
-							
 							// Add one more to the counter
 							i++;
 						}
 						// If it does, breaks the loop
 						else{
-							writeInTerminal("else: Stopped in position: " + wordCounter);
 							break;
 						}
 					}
 
 					try{
-						// Create dictionary layout
-						const dictionaryLayout = new Discord.MessageEmbed()
+						// Display dictionary layout
+						msg.channel.send(
+							new Discord.MessageEmbed()
 							.setColor(metadataLayoutColor)
 							.setTitle(translationJS[botLang]["help"]["title"])
 							.setDescription(
@@ -339,9 +308,8 @@ bot.on("message", function(msg){
 								 ((firstWordId + 8) + 1) + " - " + showWord[8] + "\n" +
 								 ((firstWordId + 9) + 1) + " - " + showWord[9]
 							)
-							.setFooter("Page: " + args[1] + " / " + lastPage );
-						// Show dictionary layout
-						msg.channel.send(dictionaryLayout);
+								.setFooter("Page: " + args[1] + " / " + lastPage )
+						);
 					}
 					catch(e){
 						// If there's an error at loading the dictionary
@@ -414,13 +382,13 @@ bot.on("message", function(msg){
 			case "seew":
 				for(i = 0; i < metaData.countOfWords; i++){
 					if(args[1] === dictionaryFile["Words"][i].word){
-						// Creates word embed message layout
-						const wordLayout = new Discord.MessageEmbed()
+						// Display word layout
+						msg.channel.send(
+							new Discord.MessageEmbed()
 							.setColor(metadataLayoutColor)
 							.setTitle(dictionaryFile["Words"][i].word.toUpperCase())
-							.setDescription(dictionaryFile["Words"][i].desc.toLowerCase());
-						// Shows created word embed message layout
-						msg.channel.send(wordLayout);
+								.setDescription(dictionaryFile["Words"][i].desc.toLowerCase())
+						);
 
 						return;
 					}
@@ -544,7 +512,7 @@ bot.on("ready", function(){
 	// Set bot's activity
 	bot.user.setActivity(activity);
 
-	// Start's bot
+	// Start bot
 	console.log("Obrigada! Agora estou viva e atualizadaa turururu");
 });
 bot.login(token);
