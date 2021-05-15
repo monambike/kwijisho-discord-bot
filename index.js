@@ -222,9 +222,9 @@ bot.on("message", function(msg){
 
 			// MEU SITE NO GITHUB
 			// Command to see my site
-			case "site":
+			case "github":
 				// Show's my Github link
-				msg.channel.send(translationJS[botLang]["site"] + metadataLinkGithub);
+				msg.channel.send(translationJS[botLang]["github"] + metadataLinkGithub);
 				break;
 			
 			// PÁGINA DE INFORMAÇÕES
