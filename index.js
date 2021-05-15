@@ -227,11 +227,23 @@ bot.on("message", function(msg){
 				msg.channel.send(translationJS[botLang]["github"] + metadataLinkGithub);
 				break;
 			
-			// PÁGINA DE INFORMAÇÕES
-			// Comando para ver mais informações sobre mim
+			// INFO PAGE
+			// Command to see more info about me
 			case "info":
-				// Show's info layout
-				msg.channel.send(infoLayout);
+				msg.channel.send(
+					new Discord.MessageEmbed()
+						.setColor(metadataLayoutColor)
+
+						
+						.setURL(metadataLinkGithub)
+						.setTitle(translationJS[botLang]["info"]["title"])
+						
+						.setDescription(translationJS[botLang]["info"]["description"])
+						.setThumbnail("https://avatars.githubusercontent.com/u/35270174?v=4")
+						.addField("\u200b", "\u200b")
+
+						.setFooter("Discord: " + metadataDiscord + "", msg.author.displayAvatarURL({format: "png"}))
+				);
 				break;
 
 			// PÁGINA DE AJUDA
