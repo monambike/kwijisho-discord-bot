@@ -74,7 +74,7 @@ var
 	// Getting dictionary file
 	dictionaryFile = require(dictionaryFilePath),
 	// Substring actual word
-	substringToGetOnlyDescription = 0;
+	substringToGetRestantDescription = 0;
 
 var
 	// Page min and max value
