@@ -21,6 +21,8 @@ var
 	// Basic Info
 	metadataName = "Vinícius Gabriel",
 	metadataFullName = "Vinícius Gabriel Marques de Melo",
+	metadataNickname = "Monambike",
+	metadataDiscord = "@Monambike#1728",
 	// Links
 	metadataLinkGithub = "https://github.com/monambike",
 	// LAYOUT
