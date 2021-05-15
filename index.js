@@ -125,38 +125,6 @@ function writeInTerminal(content){
 // ction. 
 // #region - LAYOUTS
 
-// INFO LAYOUT
-// Info embed message layout
-const infoLayout = new Discord.MessageEmbed()
-	.setColor(metadataLayoutColor)
-	.setTitle(translationJS[botLang]["info"]["title"])
-	.setURL(metadataLinkGithub)
-	.setAuthor(metadataName, 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
-	.setDescription(translationJS[botLang]["info"]["description"])
-	.attachFiles(['resources/v-icon.png'])
-	.setThumbnail('attachment://resources/v-icon.png')
-	.setTimestamp()
-	.setFooter(metadataFullName + ' ('+ metadataName +')');
-
-// HELP LAYOUT
-// Help embed message layout
-const helpLayout = new Discord.MessageEmbed()
-	.setColor(metadataLayoutColor)
-	.setTitle(translationJS[botLang]["help"]["title"])
-	.setDescription("Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!")
-	.addFields(
-		{ name: translationJS[botLang]["help"]["fields"]["nameLang"], value: translationJS[botLang]["help"]["fields"]["valueLang"] },
-		{ name: translationJS[botLang]["help"]["fields"]["nameSite"], value: translationJS[botLang]["help"]["fields"]["valueSite"] },
-		{ name: translationJS[botLang]["help"]["fields"]["nameHey"], value: translationJS[botLang]["help"]["fields"]["valueHey"] },
-		{ name: translationJS[botLang]["help"]["fields"]["nameInfo"], value: translationJS[botLang]["help"]["fields"]["valueInfo"] },
-		{ name: translationJS[botLang]["help"]["fields"]["nameHelp"], value: translationJS[botLang]["help"]["fields"]["valueHelp"] },
-		{ name: translationJS[botLang]["help"]["fields"]["nameDictionary"], value: translationJS[botLang]["help"]["fields"]["valueDictionary"] },
-		{ name: translationJS[botLang]["help"]["fields"]["nameAddw"], value: translationJS[botLang]["help"]["fields"]["valueAddw"] },
-		{ name: translationJS[botLang]["help"]["fields"]["nameSeew"], value: translationJS[botLang]["help"]["fields"]["valueSeew"] },
-		{ name: translationJS[botLang]["help"]["fields"]["nameEditw"], value: translationJS[botLang]["help"]["fields"]["valueEditw"] },
-		{ name: translationJS[botLang]["help"]["fields"]["nameRemw"], value: translationJS[botLang]["help"]["fields"]["valueRemw"] },
-	);
-
 //#endregion
 
 // >>>>>>>>>>   START -  USER MESSAGE   <<<<<<<<<<
@@ -277,11 +245,9 @@ bot.on("message", function(msg){
 			
 
 
-			// DICIONÁRIO
-			// Desc: comandos relacionados com o dicionário,
-			// bem como adicionar palavras ao dicionário,
-			// deletar, visualizar dicionário ou visualizar
-			// palavra e coisas relacionadas.
+			// DICTIONARY
+			// Desc: commands related to dictioary such as
+			// add words, delete, view, edit and such
 			// # ---------- + ---------- + ---------- #
 
 			// MOSTRA O DICIONÁRIO
@@ -302,15 +268,19 @@ bot.on("message", function(msg){
 				// A counter specific for words
 				wordCounter = firstWordId;
 
-				// Exceção para caso o dicionário esteja vazio
+				// Exception case dictionary is empty
 				if (isNaN(lastPage)){
-					msg.channel.send("Ow " + msg.author.username + ", o dicionário tá vazio cara. Tenta adicionar uma palavra antes com '!addw'.")
+					msg.channel.send(
+						"Ow " +
+						msg.author.username +
+						", o dicionário tá vazio cara. Tenta adicionar uma palavra antes com '!addw'."
+					)
 					break;
 				}
 
 				// If the value is valid, execute code
 				if(args[1] > 0 && args[1] <= lastPage){
-					console.log(
+					writeInTerminal(
 						"LOG" + "\n" +
 						"+ ------------------- +" + "\n" +
 						" - STATS -" + "\n\n" +
@@ -331,18 +301,28 @@ bot.on("message", function(msg){
 						// It won't insert more words in the array than allowed
 						if(wordCounter <= lastWordId){
 							showWord[i] = dictionaryFile["Words"][wordCounter].word;
-							console.log("if: " + " Found in position " + wordCounter + " the word: '" + showWord[i] + "'");
+
+							writeInTerminal(
+								"if: " +
+								" Found in position " +
+								wordCounter +
+								" the word: '" +
+								showWord[i] +
+								"'"
+							);
+							
+							// Add one more to the counter
 							i++;
 						}
 						// If it does, breaks the loop
 						else{
-							console.log("else: Stopped in position: " + wordCounter);
+							writeInTerminal("else: Stopped in position: " + wordCounter);
 							break;
 						}
 					}
 
 					try{
-						// Dictionary showing words
+						// Create dictionary layout
 						const dictionaryLayout = new Discord.MessageEmbed()
 							.setColor(metadataLayoutColor)
 							.setTitle(translationJS[botLang]["help"]["title"])
@@ -360,37 +340,43 @@ bot.on("message", function(msg){
 								 ((firstWordId + 9) + 1) + " - " + showWord[9]
 							)
 							.setFooter("Page: " + args[1] + " / " + lastPage );
-
+						// Show dictionary layout
 						msg.channel.send(dictionaryLayout);
 					}
 					catch(e){
+						// If there's an error at loading the dictionary
 						msg.channel.send(translationJS[botLang]["dictionary"]["catch"]);
-						console.log("Houve um problema ao carregar o dicionário, e esse aqui é o erro patrão: \n" + e);
 					}
 				}
 				// If the value is invalid
 				else{
-					msg.channel.send(translationJS[botLang]["dictionary"]["if"][1] + lastPage + translationJS[botLang]["dictionary"]["if"][2]);
+					msg.channel.send(
+						translationJS[botLang]["dictionary"]["if"][1] +
+						lastPage +
+						translationJS[botLang]["dictionary"]["if"][2]
+					);
+
 					return;
 				}
 				break;
 
 			// ADD WORD FOR DICTIONARY
-			// Command for add a word to the dictionary
+			// Command to add a word in the dictionary
 			case "addw":
 				try{
-					// Variable that contains the amount of characters to substring, it's
-					// removing "!addw", the title and spaces, just letting the description
-					// out the counting
-					substringToGetOnlyDescription = 6 + args[1].length + 1;
+					wordName = args[1]
+					// Removing the comand and all other things that doesnt make part
+					// of the description
+					wordDescription = msg.content.substring(6 + args[1].length + 1);
 
 					// In the last position add a word
 					dictionaryFile["Words"][metaData.countOfWords] = {
-						word: args[1],
-						desc: msg.content.substring(substringToGetOnlyDescription)
+						word: wordName,
+						desc: wordDescription
 					}
 
 					metaData.countOfWords++;
+
 					countOfWordsUpdate();
 
 					fs.writeFile(dictionaryFilePath, JSON.stringify(dictionaryFile, null, 4), function(err){
@@ -418,6 +404,8 @@ bot.on("message", function(msg){
 						args[1] +
 						translationJS[botLang]["addw"]["catch"][2]
 					);
+
+					console.log(e.toString());
 				}
 				break;
 
@@ -426,12 +414,14 @@ bot.on("message", function(msg){
 			case "seew":
 				for(i = 0; i < metaData.countOfWords; i++){
 					if(args[1] === dictionaryFile["Words"][i].word){
-						// See word embed message layout
+						// Creates word embed message layout
 						const wordLayout = new Discord.MessageEmbed()
 							.setColor(metadataLayoutColor)
 							.setTitle(dictionaryFile["Words"][i].word.toUpperCase())
 							.setDescription(dictionaryFile["Words"][i].desc.toLowerCase());
+						// Shows created word embed message layout
 						msg.channel.send(wordLayout);
+
 						return;
 					}
 					else if(args[1] === dictionaryFile["Words"][i].word && i === metaData.countOfWords){
@@ -446,7 +436,7 @@ bot.on("message", function(msg){
 				for(i = 0; i < metaData.countOfWords; i++){
 					if(args[1] === dictionaryFile["Words"][i].word){
 						// Removing !editw, previous word, new word and spaces
-						substringToGetOnlyDescription = (
+						substringToGetRestantDescription = (
 								7 +
 								args[1].length +
 								1 +
@@ -459,7 +449,7 @@ bot.on("message", function(msg){
 
 						dictionaryFile["Words"][i] = {
 							word: args[2],
-							desc: msg.content.substring(substringToGetOnlyDescription)
+							desc: msg.content.substring(substringToGetRestantDescription)
 						}
 
 						fs.writeFile(dictionaryFilePath, JSON.stringify(dictionaryFile, null, 4), function(err){
