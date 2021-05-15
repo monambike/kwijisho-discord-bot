@@ -246,11 +246,31 @@ bot.on("message", function(msg){
 				);
 				break;
 
-			// PÁGINA DE AJUDA
-			// Comandos de ajuda
+			// HELP PAGE
+			// Help layout
 			case "help":
-				// Mostra o layout da página de ajuda
-				msg.channel.send(helpLayout);
+				// Create help layout
+				const helpLayout = 
+
+				// Show help layout
+				msg.channel.send(
+					new Discord.MessageEmbed()
+						.setColor(metadataLayoutColor)
+						.setTitle(translationJS[botLang]["help"]["title"])
+						.setDescription("Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!")
+						.addFields(
+							{ name: translationJS[botLang]["help"]["fields"]["nameLang"], value: translationJS[botLang]["help"]["fields"]["valueLang"] },
+							{ name: translationJS[botLang]["help"]["fields"]["nameSite"], value: translationJS[botLang]["help"]["fields"]["valueSite"] },
+							{ name: translationJS[botLang]["help"]["fields"]["nameHey"], value: translationJS[botLang]["help"]["fields"]["valueHey"] },
+							{ name: translationJS[botLang]["help"]["fields"]["nameInfo"], value: translationJS[botLang]["help"]["fields"]["valueInfo"] },
+							{ name: translationJS[botLang]["help"]["fields"]["nameHelp"], value: translationJS[botLang]["help"]["fields"]["valueHelp"] },
+							{ name: translationJS[botLang]["help"]["fields"]["nameDictionary"], value: translationJS[botLang]["help"]["fields"]["valueDictionary"] },
+							{ name: translationJS[botLang]["help"]["fields"]["nameAddw"], value: translationJS[botLang]["help"]["fields"]["valueAddw"] },
+							{ name: translationJS[botLang]["help"]["fields"]["nameSeew"], value: translationJS[botLang]["help"]["fields"]["valueSeew"] },
+							{ name: translationJS[botLang]["help"]["fields"]["nameEditw"], value: translationJS[botLang]["help"]["fields"]["valueEditw"] },
+							{ name: translationJS[botLang]["help"]["fields"]["nameRemw"], value: translationJS[botLang]["help"]["fields"]["valueRemw"] },
+						)
+				);
 				break;
 
 			// # ---------- + ---------- + ---------- #
