@@ -110,6 +110,13 @@ function countOfWordsUpdate(){
 	});
 }
 
+function writeInTerminal(content){
+	fs.writeFile("output.txt", content, (err) => { 
+		// In case of a error throw err. 
+		if (err) throw err; 
+	});
+}
+
 // #endregion
 
 // >>>>>>>>>>   START - LAYOUT          <<<<<<<<<<
