@@ -540,7 +540,7 @@ bot.on("message", function(msg){
 // >>>>>>>>>>   START - STARTING BOT    <<<<<<<<<<
 // #region - startingBot
 
-bot.on("ready", function(metadataName){
+bot.on("ready", function(){
 	// Set bot's activity
 	bot.user.setActivity(activity);
 
