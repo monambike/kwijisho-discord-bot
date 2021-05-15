@@ -5,6 +5,8 @@
 			"2": "! Tudo bem?  Eu sou a KWiJisho (KawaiiJisho). Se quiser saber o que eu sei fazer, digite !help."
 		},
 		
+
+
 		"lang":{
 			"try": "Eu agora falo português!",
 			"catch":{
@@ -13,6 +15,8 @@
 			}
 		},
 
+
+
 		"site": "Conheça o meu desenvolvedor: ",
 
 		"hey":{
@@ -20,11 +24,15 @@
 			"2": "', agora pouco?"
 		},
 
+
+
 		"info":{
 			"title": "Meu Github!",
 			"description": "Visite meu GitHub para ver mais projetos como esse!"
 		},
 		
+
+
 		"help":{
 			"title": "COMANDOS",
 			"description": "Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!",
@@ -61,6 +69,8 @@
 			}
 		},
 
+
+
 		"dictionary":{
 			"if":{
 				"1": "O número de páginas deve ser maior que 0 e menor ou igual a ",
@@ -69,6 +79,7 @@
 			"try": "Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!",
 			"catch": "Eh... Não cosegui carregar o dicionário :/, tenta depois ok?"
 		},
+
 		"addw":{
 			"if": "Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)",
 			"else":{
@@ -80,9 +91,11 @@
 				"2": "' para ver ela, você pode editar e remover ela se quiser também! :D"
 			}
 		},
+
 		"seew":{
 			"else": "Putz... Desculpa mas não consegui achar essa palavra, que tal criar ela? Digite !addw (palavra) (descrição)"
 		},
+
 		"editw":{
 			"if": "Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)",
 			"else":{
@@ -92,6 +105,7 @@
 			},
 			"elseif": "Eh... Então, não achei essa palavra que você quer editar, que tal criar ela? Digite !addw (palavra) (descrição)"
 		},
+		
 		"remw":{
 			"if": "Ops... Não consegui enviar a mensagem, tenta de novo depois, oukai? ;)",
 			"else":{
