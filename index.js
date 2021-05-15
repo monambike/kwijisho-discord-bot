@@ -13,6 +13,8 @@ var
 	{ prefix, token, activity } = require("./config.json");
 
 
+
+
 // METADATA
 var
 	// DEV INFO
@@ -23,6 +25,8 @@ var
 	metadataLinkGithub = "https://github.com/monambike",
 	// LAYOUT
 	metadataLayoutColor = "#8C1EFF";
+
+
 
 // PATHS
 const
@@ -63,8 +67,11 @@ const
 	fs = require("fs");
 
 var
+	// Getting metadata settings file
 	metaData = require(metaDataPath),
+	// Getting dictionary file
 	dictionaryFile = require(dictionaryFilePath),
+	// Substring actual word
 	substringToGetActualWord = 0;
 
 var
@@ -81,6 +88,15 @@ var
 	// Show word in dictionary
 	showWord = [];
 
+
+
+//#endregion
+
+// >>>>>>>>>>     START - FUNCTIONS     <<<<<<<<<<
+// Desc:
+// Region containing project functions.
+// #region
+
 // Update Counting of Words
 function countOfWordsUpdate(){
 	fs.writeFile(metaDataPath, JSON.stringify(metaData, null, 4), function(err){
@@ -92,7 +108,7 @@ function countOfWordsUpdate(){
 	});
 }
 
-//#endregion
+// #endregion
 
 // >>>>>>>>>>   START - LAYOUT          <<<<<<<<<<
 // Desc:
@@ -205,7 +221,7 @@ bot.on("message", function(msg){
 			// PÁGINA DE INFORMAÇÕES
 			// Comando para ver mais informações sobre mim
 			case "info":
-				// Mostra o layout da página de informações
+				// Show's info layout
 				msg.channel.send(infoLayout);
 				break;
 
@@ -285,7 +301,7 @@ bot.on("message", function(msg){
 					}
 
 					try{
-						// Dictionary embed message layout
+						// Dictionary showing words
 						const dictionaryLayout = new Discord.MessageEmbed()
 							.setColor(metadataLayoutColor)
 							.setTitle(translationJS[botLang]["help"]["title"])
@@ -317,6 +333,7 @@ bot.on("message", function(msg){
 					return;
 				}
 				break;
+
 			// ADD WORD FOR DICTIONARY
 			// Command for add a word to the dictionary
 			case "addw":
@@ -334,21 +351,31 @@ bot.on("message", function(msg){
 					countOfWordsUpdate();
 
 					fs.writeFile(dictionaryFilePath, JSON.stringify(dictionaryFile, null, 4), function(err){
+						// If word already exists in dictionary
 						if(err){
 							console.error(err);
 							msg.reply(translationJS[botLang]["addw"]["if"]);
 							return;
 						}
+						// If the word doesn't exist in the dictionary
 						else{
-							msg.reply(translationJS[botLang]["addw"]["else"][1] + args[1] + translationJS[botLang]["addw"]["else"][2]);
-							//Adiciona +1 para contador de palavras
+							msg.reply(
+								translationJS[botLang]["addw"]["else"][1] +
+								args[1] +
+								translationJS[botLang]["addw"]["else"][2]
+							);
 						}
 					});
 				}
 				catch(e){
-					msg.channel.send(translationJS[botLang]["addw"]["catch"][1] + args[1] + translationJS[botLang]["addw"]["catch"][2]);
+					msg.channel.send(
+						translationJS[botLang]["addw"]["catch"][1] +
+						args[1] +
+						translationJS[botLang]["addw"]["catch"][2]
+					);
 				}
 				break;
+
 			// SEE SPECIFIC WORD FROM DICTIONARY
 			// Command to see a word from dictionary
 			case "seew":
@@ -367,13 +394,20 @@ bot.on("message", function(msg){
 					}
 				}
 				break;
+
 			// EDIT WORD FROM DICTIONARY
 			// Desc: command to edit a word from dictionary
 			case "editw":
 				for(i = 0; i < metaData.countOfWords; i++){
 					if(args[1] === dictionaryFile["Words"][i].word){
 						// Removing !editw, previous word, new word and spaces
-						substringToGetActualWord = 7 + args[1].length + 1 + args[2].length + 1;
+						substringToGetActualWord = (
+								7 +
+								args[1].length +
+								1 +
+								args[2].length +
+								1
+							);
 
 						// Deleting old word
 						delete dictionaryFile["Words"][i];
@@ -387,6 +421,7 @@ bot.on("message", function(msg){
 							if(err){
 								console.error(err);
 								msg.reply(translationJS[botLang]["editw"]["if"]);
+
 								return;
 							}
 							else{
@@ -406,6 +441,7 @@ bot.on("message", function(msg){
 					}
 				}
 				break;
+
 			// REMOVE WORD FROM DICTIONARY
 			// Desc: command for remove a word from dictionary
 			case "remw":
@@ -421,7 +457,11 @@ bot.on("message", function(msg){
 								return;
 							}
 							else{
-								msg.channel.send(translationJS[botLang]["remw"]["else"][1] + args[1] + translationJS[botLang]["remw"]["else"][2]);
+								msg.channel.send(
+									translationJS[botLang]["remw"]["else"][1] +
+									args[1] +
+									translationJS[botLang]["remw"]["else"][2]
+								);
 								//Adiciona +1 para contador de palavras
 								metaData.countOfWords--;
 								countOfWordsUpdate();
@@ -443,7 +483,11 @@ bot.on("message", function(msg){
 			// EMPTY MESSAGE
 			// Desc: if user doesn't insert message
 			case "":
-				msg.channel.send(translationJS[botLang]["nothing"][1] + msg.author.username + translationJS[botLang]["nothing"][2]);
+				msg.channel.send(
+					translationJS[botLang]["nothing"][1] +
+					msg.author.username +
+					translationJS[botLang]["nothing"][2]
+				);
 				break;
 			// INEXISTENT COMMAND
 			// Desc: if command doesn't exist
