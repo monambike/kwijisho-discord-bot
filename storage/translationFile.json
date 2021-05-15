@@ -17,7 +17,7 @@
 
 
 
-		"site": "Conheça o meu desenvolvedor: ",
+		"github": "Conheça o meu desenvolvedor: ",
 
 		"hey":{
 			"1": "eai! Espera... você disse '",
@@ -28,7 +28,7 @@
 
 		"info":{
 			"title": "Meu Github!",
-			"description": "Visite meu GitHub para ver mais projetos como esse!"
+			"description": "Visite meu **GitHub** para ver mais projetos como esse!"
 		},
 		
 
@@ -40,23 +40,23 @@
 				"nameLang": "lang (idioma)",
 				"valueLang": "Escolhe um idioma. Os idiomas que eu sei falar são português (pt), inglês (en), espanhol (es) e japonês (jp).",
 
-				"nameSite": "site",
-				"valueSite": "Mostro o meu site.",
-
 				"nameHey": "hey (mensagem)",
 				"valueHey": "Teste e descubra! C:",
 
 				"nameInfo": "info",
 				"valueInfo": "Mostro algumas informações sobre o meu desenvolvedor.",
 
+				"nameSite": "github",
+				"valueSite": "Mostro o Github do meu desenvolvedor.",
+
 				"nameHelp": "help",
-				"valueHelp": "Abre a lista de comandos.",
+				"valueHelp": "Abro a lista de comandos pra você! Uma outra igualzinha essa aqui. Posso fazer isso o dia todo ;)",
 
 				"nameDictionary": "dictionary",
-				"valueDictionary": "Mostra o dicionário de palvras.",
+				"valueDictionary": "Mostro o dicionário de palavras.",
 
 				"nameAddw": "addw",
-				"valueAddw": "Adiciona uma nova palavra. Digite: !add nova 'palavra'. Caso queira 'espaços' use '_' ou '-'.",
+				"valueAddw": "Adiciona uma nova palavra ao dicionário. Digite: `!addw <nova_palavra> [descrição]`. Caso queira espaços no título use '_' ou '-'.",
 
 				"nameSeew": "seew",
 				"valueSeew": "Mostra informações sobre alguma palavra. Digite: !seew 'palavra'.",
@@ -73,8 +73,8 @@
 
 		"dictionary":{
 			"if":{
-				"1": "O número de páginas deve ser maior que 0 e menor ou igual a ",
-				"2": "."
+				"1": "O comando para ver o dicionário é **!dictionary [páginas]**. E o número de páginas deve ser maior que **zero** e menor ou igual a **",
+				"2": "**, que é o número de páginas que o dicionário possui atualmente."
 			},
 			"try": "Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!",
 			"catch": "Eh... Não cosegui carregar o dicionário :/, tenta depois ok?"
