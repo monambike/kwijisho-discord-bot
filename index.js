@@ -130,7 +130,7 @@ bot.on("message", function(msg){
 	// Prefix
 	if(msg.content.startsWith("!")){
 		// First argument
-		switch(args[0]){			
+		switch(args[0]){
 			// CUSTOMIZE BOT
 			// # ---------- + ---------- + ---------- #
 
@@ -215,8 +215,11 @@ bot.on("message", function(msg){
 				msg.channel.send(
 					new Discord.MessageEmbed()
 						.setColor(metadataLayoutColor)
+
 						.setTitle(translationJS[botLang]["help"]["title"])
+
 						.setDescription("Essa são as coisinhas que sei fazer! Não esqueça de colocar '!' antes de comando hein!")
+						
 						.addFields(
 							{ name: translationJS[botLang]["help"]["fields"]["nameLang"], value: translationJS[botLang]["help"]["fields"]["valueLang"] },
 							{ name: translationJS[botLang]["help"]["fields"]["nameSite"], value: translationJS[botLang]["help"]["fields"]["valueSite"] },
@@ -279,7 +282,7 @@ bot.on("message", function(msg){
 						// It won't insert more words in the array than allowed
 						if(wordCounter <= lastWordId){
 							showWord[i] = dictionaryFile["Words"][wordCounter].word;
-
+							
 							// Add one more to the counter
 							i++;
 						}
@@ -293,21 +296,21 @@ bot.on("message", function(msg){
 						// Display dictionary layout
 						msg.channel.send(
 							new Discord.MessageEmbed()
-							.setColor(metadataLayoutColor)
-							.setTitle(translationJS[botLang]["help"]["title"])
-							.setDescription(
-								translationJS[botLang]["dictionary"]["try"] + "\n\n" +
-								 ((firstWordId + 0) + 1) + " - " + showWord[0] + "\n" +
-								 ((firstWordId + 1) + 1) + " - " + showWord[1] + "\n" +
-								 ((firstWordId + 2) + 1) + " - " + showWord[2] + "\n" +
-								 ((firstWordId + 3) + 1) + " - " + showWord[3] + "\n" +
-								 ((firstWordId + 4) + 1) + " - " + showWord[4] + "\n" +
-								 ((firstWordId + 5) + 1) + " - " + showWord[5] + "\n" +
-								 ((firstWordId + 6) + 1) + " - " + showWord[6] + "\n" +
-								 ((firstWordId + 7) + 1) + " - " + showWord[7] + "\n" +
-								 ((firstWordId + 8) + 1) + " - " + showWord[8] + "\n" +
-								 ((firstWordId + 9) + 1) + " - " + showWord[9]
-							)
+								.setColor(metadataLayoutColor)
+								.setTitle(translationJS[botLang]["help"]["title"])
+								.setDescription(
+									translationJS[botLang]["dictionary"]["try"] + "\n\n" +
+									((firstWordId + 0) + 1) + " - " + showWord[0] + "\n" +
+									((firstWordId + 1) + 1) + " - " + showWord[1] + "\n" +
+									((firstWordId + 2) + 1) + " - " + showWord[2] + "\n" +
+									((firstWordId + 3) + 1) + " - " + showWord[3] + "\n" +
+									((firstWordId + 4) + 1) + " - " + showWord[4] + "\n" +
+									((firstWordId + 5) + 1) + " - " + showWord[5] + "\n" +
+									((firstWordId + 6) + 1) + " - " + showWord[6] + "\n" +
+									((firstWordId + 7) + 1) + " - " + showWord[7] + "\n" +
+									((firstWordId + 8) + 1) + " - " + showWord[8] + "\n" +
+									((firstWordId + 9) + 1) + " - " + showWord[9]
+								)
 								.setFooter("Page: " + args[1] + " / " + lastPage )
 						);
 					}
@@ -385,8 +388,8 @@ bot.on("message", function(msg){
 						// Display word layout
 						msg.channel.send(
 							new Discord.MessageEmbed()
-							.setColor(metadataLayoutColor)
-							.setTitle(dictionaryFile["Words"][i].word.toUpperCase())
+								.setColor(metadataLayoutColor)
+								.setTitle(dictionaryFile["Words"][i].word.toUpperCase())
 								.setDescription(dictionaryFile["Words"][i].desc.toLowerCase())
 						);
 
