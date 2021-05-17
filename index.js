@@ -32,9 +32,9 @@ var
 
 // PATHS
 const
-	dictionaryFilePath = "./storage/dictionaryFile.json",
-	translationJSPath = "./storage/translationFile.json",
-	metaDataPath = "./storage/metaData.json";
+	dictionaryFilePath = "./storage/dictionary.json",
+	translationJSPath = "./storage/translation.json",
+	metaDataPath = "./storage/metadata.json";
 
 
 
