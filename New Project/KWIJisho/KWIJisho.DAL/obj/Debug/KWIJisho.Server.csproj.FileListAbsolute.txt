@@ -1,0 +1,12 @@
+G:\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\bin\Debug\KWIJisho.Server.dll.config
+G:\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\bin\Debug\KWIJisho.Server.dll
+G:\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\bin\Debug\KWIJisho.Server.pdb
+G:\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\bin\Debug\EntityFramework.dll
+G:\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\bin\Debug\EntityFramework.SqlServer.dll
+G:\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\bin\Debug\EntityFramework.xml
+G:\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\bin\Debug\EntityFramework.SqlServer.xml
+G:\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.csproj.CoreCompileInputs.cache
+G:\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.csproj.CopyComplete
+G:\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.dll
+G:\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.pdb
+G:\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.csproj.AssemblyReference.cache

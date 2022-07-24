@@ -1,0 +1,19 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Copypasta] (Table)
+       [dbo].[Dictionary] (Table)
+       [dbo].[Link] (Table)
+       [dbo].[Meaning] (Table)
+       [dbo].[FK_Dictionary_Meaning] (Foreign Key)
+
+** Supporting actions

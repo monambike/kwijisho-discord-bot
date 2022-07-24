@@ -1,0 +1,29 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[Meaning].[WordId] on table [dbo].[Meaning] must be added, but the column has no default value and does
+         not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either:
+         add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a
+         deployment option.
+
+** User actions
+     Alter
+       [dbo].[Meaning] (Table)
+       [dbo].[uvw_DictionaryWords] (View)
+       [dbo].[usp_Dictionary_FilterWordsByName] (Procedure)
+     Create
+       [dbo].[Word] (Table)
+       [dbo].[FK_Meaning_Dictionary] (Foreign Key)
+       [dbo].[usp_lst_DictionaryWords] (Procedure)
+       [dbo].[usp_mng_Insert_ViewDictionaryWords] (Procedure)
+
+** Supporting actions
+
+The column [dbo].[Meaning].[WordId] on table [dbo].[Meaning] must be added, but the column has no default value and does not allow NULL values. If the table contains data, the ALTER script will not work. To avoid this issue you must either: add a default value to the column, mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+If this deployment is executed, changes to [dbo].[uvw_DictionaryWords] might introduce run-time errors in [dbo].[usp_lst_ViewDictionaryWords].
+

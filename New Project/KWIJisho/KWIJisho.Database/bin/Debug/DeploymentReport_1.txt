@@ -1,0 +1,24 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The type for column Word in table [dbo].[Dictionary] is currently  NCHAR (50) NULL but is being changed to  VARCHAR (50)
+         NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible with type  VARCHAR
+         (50) NULL.
+
+** User actions
+     Alter
+       [dbo].[Dictionary] (Table)
+     Create
+       [dbo].[uvw_DictionaryWords] (View)
+       [dbo].[usp_Dictionary_FilterWordsByName] (Procedure)
+       [dbo].[usp_lst_ViewDictionaryWords] (Procedure)
+
+** Supporting actions
+
+The type for column Word in table [dbo].[Dictionary] is currently  NCHAR (50) NULL but is being changed to  VARCHAR (50) NULL. Data loss could occur and deployment may fail if the column contains data that is incompatible with type  VARCHAR (50) NULL.
+

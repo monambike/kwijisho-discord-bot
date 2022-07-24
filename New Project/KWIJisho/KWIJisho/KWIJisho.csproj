@@ -166,14 +166,14 @@
     <Compile Include="ConfigJson.cs" />
     <Compile Include="Configuration\Color.cs" />
     <Compile Include="Configuration\Language.cs" />
-    <Compile Include="Commands\Dictionary.cs" />
+    <Compile Include="Commands\Dictionary\Dictionary.cs" />
     <Compile Include="Others\Permissions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resource.Designer.cs">
+    <Compile Include="Emojis.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Resource.resx</DependentUpon>
+      <DependentUpon>Emojis.resx</DependentUpon>
     </Compile>
     <Compile Include="Utilities\APICalls\Reddit.cs" />
   </ItemGroup>
@@ -187,9 +187,9 @@
     <Folder Include="Utilities\Messages\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resource.resx">
+    <EmbeddedResource Include="Emojis.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+      <LastGenOutput>Emojis.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -206,6 +206,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KWIJisho.DAL\KWIJisho.Server.csproj">
+      <Project>{e9cd1000-71c1-4045-8046-f8300c7c4ed4}</Project>
+      <Name>KWIJisho.Server</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
