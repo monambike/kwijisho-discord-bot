@@ -39,7 +39,6 @@ G:\KWIJisho\KWIJisho\bin\Debug\System.Threading.Channels.xml
 G:\KWIJisho\KWIJisho\bin\Debug\System.Threading.Tasks.Extensions.xml
 G:\KWIJisho\KWIJisho\bin\Debug\System.ValueTuple.xml
 G:\KWIJisho\KWIJisho\obj\Debug\KWIJisho.csproj.CopyComplete
-G:\kwijisho_bot\New Project\KWIJisho\KWIJisho\obj\Debug\KWIJisho.Resource.resources
 G:\kwijisho_bot\New Project\KWIJisho\KWIJisho\obj\Debug\KWIJisho.csproj.GenerateResource.cache
 G:\kwijisho_bot\New Project\KWIJisho\KWIJisho\obj\Debug\KWIJisho.csproj.CoreCompileInputs.cache
 G:\kwijisho_bot\New Project\KWIJisho\KWIJisho\obj\Debug\KWIJisho.exe
@@ -84,3 +83,4 @@ G:\kwijisho_bot\New Project\KWIJisho\KWIJisho\obj\Debug\KWIJisho.csproj.Assembly
 G:\kwijisho_bot\New Project\KWIJisho\KWIJisho\bin\Debug\KWIJisho.Server.dll
 G:\kwijisho_bot\New Project\KWIJisho\KWIJisho\bin\Debug\KWIJisho.Server.pdb
 G:\kwijisho_bot\New Project\KWIJisho\KWIJisho\bin\Debug\KWIJisho.Server.dll.config
+G:\kwijisho_bot\New Project\KWIJisho\KWIJisho\obj\Debug\KWIJisho.Resources.Emojis.resources

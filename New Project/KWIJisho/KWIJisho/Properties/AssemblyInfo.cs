@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // conjunto de atributos. Altere estes valores de atributo para modificar as informações
 // associadas a um assembly.
 [assembly: AssemblyTitle("KWIJisho")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Discord bot made by @monambike. https://monambike.com/")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Monambike")]
 [assembly: AssemblyProduct("KWIJisho")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]

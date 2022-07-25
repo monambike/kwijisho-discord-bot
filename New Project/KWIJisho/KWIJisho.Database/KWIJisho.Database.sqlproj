@@ -61,15 +61,17 @@
     <Folder Include="Tables" />
     <Folder Include="Tables\Dictionary" />
     <Folder Include="Stored Procedures" />
+    <Folder Include="Stored Procedures\Dictionary" />
+    <Folder Include="Stored Procedures\Dictionary\Word" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Dictionary\Meaning.sql" />
     <Build Include="Tables\Dictionary\Word.sql" />
     <Build Include="Tables\Copypasta.sql" />
     <Build Include="Views\Dictionary.sql" />
-    <Build Include="Stored Procedures\uspGetDictionary.sql" />
-    <Build Include="Stored Procedures\uspAddWord.sql" />
-    <Build Include="Stored Procedures\uspGetWord.sql" />
+    <Build Include="Stored Procedures\Dictionary\uspGetDictionary.sql" />
+    <Build Include="Stored Procedures\Dictionary\Word\uspAddWord.sql" />
+    <Build Include="Stored Procedures\Dictionary\Word\uspGetWord.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Link.sql" />

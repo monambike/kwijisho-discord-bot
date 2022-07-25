@@ -47,6 +47,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>KWIJisho.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DSharpPlus, Version=4.2.0.1091, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DSharpPlus.4.2.0-nightly-01091\lib\netstandard2.0\DSharpPlus.dll</HintPath>
@@ -82,6 +85,7 @@
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
       <Private>True</Private>
@@ -158,36 +162,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bot.cs" />
-    <Compile Include="Commands\Betting.cs" />
-    <Compile Include="Commands\Copypasta.cs" />
-    <Compile Include="Commands\Info.cs" />
-    <Compile Include="Commands\Talk.cs" />
-    <Compile Include="ConfigJson.cs" />
-    <Compile Include="Configuration\Color.cs" />
-    <Compile Include="Configuration\Language.cs" />
-    <Compile Include="Commands\Dictionary\Dictionary.cs" />
-    <Compile Include="Others\Permissions.cs" />
+    <Compile Include="Models\Bot.cs" />
+    <Compile Include="Models\Commands\Store Data\Betting.cs" />
+    <Compile Include="Models\Commands\Command.cs" />
+    <Compile Include="Models\Commands\Store Data\Copypasta.cs" />
+    <Compile Include="Models\Commands\Informational\Info.cs" />
+    <Compile Include="Models\Commands\Conversation\Greetings.cs" />
+    <Compile Include="Models\Commands\Store Data\Dictionary\Dictionary.cs" />
+    <Compile Include="Models\ConfigJson.cs" />
+    <Compile Include="Models\User Settings\Color.cs" />
+    <Compile Include="Models\User Settings\Language.cs" />
+    <Compile Include="Models\Commands\Store Data\Dictionary\Word.cs" />
+    <Compile Include="Models\User Settings\Permissions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Emojis.Designer.cs">
+    <Compile Include="Resources\Emojis.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Emojis.resx</DependentUpon>
     </Compile>
-    <Compile Include="Utilities\APICalls\Reddit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="config.json" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Utilities\Exceptions\" />
-    <Folder Include="Utilities\Messages\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Emojis.resx">
+    <EmbeddedResource Include="Resources\Emojis.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Emojis.Designer.cs</LastGenOutput>
     </EmbeddedResource>
@@ -212,6 +214,13 @@
       <Project>{e9cd1000-71c1-4045-8046-f8300c7c4ed4}</Project>
       <Name>KWIJisho.Server</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Images\Karen Kujo\480x268-sleeping.gif" />
+    <Content Include="Resources\Images\Karen Kujo\500x496-happy-looking.gif" />
+    <Content Include="Resources\Images\Karen Kujo\500x500-ayaya.gif" />
+    <Content Include="Resources\Images\Karen Kujo\500x500-mad.gif" />
+    <Content Include="Resources\Images\Karen Kujo\500x552-cat.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
