@@ -10,3 +10,15 @@ G:\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.cspr
 G:\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.dll
 G:\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.pdb
 G:\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.csproj.AssemblyReference.cache
+G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\bin\Debug\KWIJisho.Server.dll.config
+G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\bin\Debug\KWIJisho.Server.dll
+G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\bin\Debug\KWIJisho.Server.pdb
+G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\bin\Debug\EntityFramework.dll
+G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\bin\Debug\EntityFramework.SqlServer.dll
+G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\bin\Debug\EntityFramework.xml
+G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\bin\Debug\EntityFramework.SqlServer.xml
+G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.csproj.AssemblyReference.cache
+G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.csproj.CoreCompileInputs.cache
+G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.csproj.CopyComplete
+G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.dll
+G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.pdb

@@ -1,0 +1,6 @@
+G:\kwijisho_bot\New Project\KWIJisho\Common.Utilities\bin\Debug\Common.Utilities.dll
+G:\kwijisho_bot\New Project\KWIJisho\Common.Utilities\bin\Debug\Common.Utilities.pdb
+G:\kwijisho_bot\New Project\KWIJisho\Common.Utilities\obj\Debug\Common.Utilities.csproj.CoreCompileInputs.cache
+G:\kwijisho_bot\New Project\KWIJisho\Common.Utilities\obj\Debug\Common.Utilities.dll
+G:\kwijisho_bot\New Project\KWIJisho\Common.Utilities\obj\Debug\Common.Utilities.pdb
+G:\kwijisho_bot\New Project\KWIJisho\Common.Utilities\obj\Debug\Common.Utilities.csproj.AssemblyReference.cache

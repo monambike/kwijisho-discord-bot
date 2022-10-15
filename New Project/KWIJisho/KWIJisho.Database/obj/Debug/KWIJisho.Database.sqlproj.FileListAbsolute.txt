@@ -7,3 +7,9 @@ G:\kwijisho_bot\New Project\KWIJisho\KWIJisho.Database\obj\Debug\Model.xml
 G:\kwijisho_bot\New Project\KWIJisho\KWIJisho.Database\obj\Debug\refactor.xml
 G:\kwijisho_bot\New Project\KWIJisho\KWIJisho.Database\obj\Debug\postdeploy.sql
 G:\kwijisho_bot\New Project\KWIJisho\KWIJisho.Database\obj\Debug\predeploy.sql
+G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.Database\bin\Debug\KWIJisho.Database.dacpac
+G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.Database\bin\Debug\KWIJisho.Database.dll
+G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.Database\bin\Debug\KWIJisho.Database.pdb
+G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.Database\obj\Debug\KWIJisho.Database.sqlproj.AssemblyReference.cache
+G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.Database\obj\Debug\KWIJisho.Database.dll
+G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.Database\obj\Debug\KWIJisho.Database.pdb
