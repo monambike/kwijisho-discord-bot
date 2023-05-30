@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tTB7WJ4ZZWcDuc0n4uDLnT2Sol4+L2dph0XGJKcrD6gM3CfrTH06y3R4WmKi9FHPe99kNVyVQDdqJDS2I8uZ3Q==",
+  "dgSpecHash": "Bseg+SzdiylxLTiD7pa18sihQvKMmxbcmBcmxA4Xj7if7ohE1LFsdssw5T6eqZ/VFxRBXibOl3fjAyS5B7yXlg==",
   "success": true,
-  "projectFilePath": "G:\\kwijisho_bot\\New Project\\KWIJisho\\KWIJisho.WebApplication\\KWIJisho.WebApplication.csproj",
+  "projectFilePath": "G:\\kwijisho-discord-bot\\New Project\\KWIJisho\\KWIJisho.WebApplication\\KWIJisho.WebApplication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vinic\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\vinic\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

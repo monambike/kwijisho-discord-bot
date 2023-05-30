@@ -22,3 +22,15 @@ G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.S
 G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.csproj.CopyComplete
 G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.dll
 G:\Monambike\kwijisho_bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.pdb
+G:\kwijisho-discord-bot\New Project\KWIJisho\KWIJisho.DAL\bin\Debug\KWIJisho.Server.dll.config
+G:\kwijisho-discord-bot\New Project\KWIJisho\KWIJisho.DAL\bin\Debug\KWIJisho.Server.dll
+G:\kwijisho-discord-bot\New Project\KWIJisho\KWIJisho.DAL\bin\Debug\KWIJisho.Server.pdb
+G:\kwijisho-discord-bot\New Project\KWIJisho\KWIJisho.DAL\bin\Debug\EntityFramework.dll
+G:\kwijisho-discord-bot\New Project\KWIJisho\KWIJisho.DAL\bin\Debug\EntityFramework.SqlServer.dll
+G:\kwijisho-discord-bot\New Project\KWIJisho\KWIJisho.DAL\bin\Debug\EntityFramework.xml
+G:\kwijisho-discord-bot\New Project\KWIJisho\KWIJisho.DAL\bin\Debug\EntityFramework.SqlServer.xml
+G:\kwijisho-discord-bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.csproj.AssemblyReference.cache
+G:\kwijisho-discord-bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.csproj.CoreCompileInputs.cache
+G:\kwijisho-discord-bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.csproj.CopyComplete
+G:\kwijisho-discord-bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.dll
+G:\kwijisho-discord-bot\New Project\KWIJisho\KWIJisho.DAL\obj\Debug\KWIJisho.Server.pdb
