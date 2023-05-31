@@ -1,9 +1,0 @@
-#Default modules node.js
-node_modules
-
-#Bot settings
-config.json
-
-#Storage
-storage/metaData.json
-storage/dictionaryFile.json
