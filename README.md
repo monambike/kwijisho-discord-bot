@@ -1,15 +1,14 @@
 # KWiJisho
-(última atualização: 15/05/2021)
 
-## Como Editar o Bot
+## How to Edit the Bot
 
-#### Aviso: a explicação a seguir conterá explicações de como se cria um bot, simplesmente terá informações do que é necessário para pegar e editar o meu bot.
+#### Notice: The following explanation will contain instructions on how to create a bot. It will simply provide information on what is needed to fetch and edit my bot.
 
-Após realizar download dos arquivos realize os seguintes passos:
+After downloading the files, follow these steps:
 
-1. Crie uma pasta chamada `storage`.
+1. Create a folder called `storage`.
 
-2. Dentro dessa pasta crie dois arquivos com os nomes `dictionaryFile.json` e `metaData.json` e coloque **dentro dos dois arquivos** o seguinte código:
+2. Within this folder, create two files named `dictionaryFile.json` and `metaData.json`, and **place the following code inside both files**:
 
 `storage\dictionaryFile.json`
 ```
@@ -30,7 +29,7 @@ Após realizar download dos arquivos realize os seguintes passos:
 }
 ```
 
-3. Fora dessa pasta, na raiz, inclua um arquivo com o nome `config.json` com o seguinte código:
+3. Outside of this folder, at the root level, include a file named `config.json` with the following code:
 ```
 {
 	"prefix": "!",
@@ -38,4 +37,4 @@ Após realizar download dos arquivos realize os seguintes passos:
 	"activity": "Ayaya!! Digite '!' para me chamar :D"
 }
 ```
-Você vai precisar mudar o campo token com o token do bot que você criar. Você pode mudar o prefix e a activity do bot como desejar.
+You will need to change the "token" field with the token of the bot you create. You can modify the "prefix" and "activity" of the bot as desired.
