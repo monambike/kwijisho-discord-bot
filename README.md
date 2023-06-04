@@ -2,6 +2,8 @@
 
 Fun and friendly interactive Discord bot with a wide range of functions, including a custom dictionary feature. KWIJisho stands for Kawaii and Jisho (Cute and Dictionary in japanese respectively).
 
+![Captura de tela 2023-05-31 222206](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/0def11c4-8d71-4b3e-b961-b55439bfecf2)
+
 ## How to Edit the Bot
 
 #### Notice: The following explanation will contain instructions on how to create a bot. It will simply provide information on what is needed to fetch and edit my bot.
