@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="9b816bae-80fa-4805-8a30-59fb7f245242" ChangeDateTime="07/24/2022 08:07:02">
+    <Property Name="ElementName" Value="[dbo].[uvw_DictionaryWords]" />
+    <Property Name="ElementType" Value="SqlView" />
+    <Property Name="ParentElementName" Value="[dbo]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[uvw_Dictionary]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="eac5c6c4-6744-4c13-bbcd-ac8f31c1c685" ChangeDateTime="07/24/2022 08:08:33">
+    <Property Name="ElementName" Value="[dbo].[uvw_Dictionary]" />
+    <Property Name="ElementType" Value="SqlView" />
+    <Property Name="ParentElementName" Value="[dbo]" />
+    <Property Name="ParentElementType" Value="SqlSchema" />
+    <Property Name="NewName" Value="[uvwDictionary]" />
+  </Operation>
+</Operations>
