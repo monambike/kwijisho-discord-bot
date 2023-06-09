@@ -4,7 +4,7 @@ Fun and friendly interactive Discord bot with a wide range of functions, includi
 
 ![Captura de tela 2023-05-31 222206](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/0def11c4-8d71-4b3e-b961-b55439bfecf2)
 
-You can check the old version of this project [here](https://github.com/monambike/kwijisho-discord-bot-legacy).
+You can check the old version of this project written with Node.js (Javascript) [here](https://github.com/monambike/kwijisho-discord-bot-legacy).
 
 ## How to Edit the Bot
 
