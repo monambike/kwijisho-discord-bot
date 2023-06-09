@@ -1,6 +1,0 @@
-<Project InitialTargets="NETStandardCompatError_System_Collections_Immutable_net462">
-  <Target Name="NETStandardCompatError_System_Collections_Immutable_net462"
-          Condition="'$(SuppressTfmSupportBuildWarnings)' == ''">
-    <Error Text="System.Collections.Immutable doesn't support $(TargetFramework). Consider updating your TargetFramework to net462 or later." />
-  </Target>
-</Project>

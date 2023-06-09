@@ -1,6 +1,0 @@
-<Project InitialTargets="NETStandardCompatError_System_Threading_Channels_net462">
-  <Target Name="NETStandardCompatError_System_Threading_Channels_net462"
-          Condition="'$(SuppressTfmSupportBuildWarnings)' == ''">
-    <Error Text="System.Threading.Channels doesn't support $(TargetFramework). Consider updating your TargetFramework to net462 or later." />
-  </Target>
-</Project>
