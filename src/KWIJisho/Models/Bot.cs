@@ -10,7 +10,7 @@ namespace KWIJisho
 {
     internal class Bot
     {
-        internal DiscordClient Client { get; private set; }
+        internal DiscordClient DiscordClient { get; private set; }
         internal CommandsNextExtension Commands { get; private set; }
 
 
@@ -23,12 +23,14 @@ namespace KWIJisho
             {
                 Token = configJsonResult.Token,
                 TokenType = TokenType.Bot,
-                AutoReconnect = true
+                AutoReconnect = true,
+                MinimumLogLevel = Microsoft.Extensions.Logging.LogLevel.Debug,
+                Intents = DiscordIntents.All
             };
 
-            Client = new DiscordClient(discordConfiguration);
+            DiscordClient = new DiscordClient(discordConfiguration);
 
-            Client.Ready += OnClientReady;
+            DiscordClient.Ready += OnClientReady;
 
             var commandsNextConfiguration = new CommandsNextConfiguration
             {
@@ -38,17 +40,21 @@ namespace KWIJisho
                 EnableDefaultHelp = false
             };
 
-            Commands = Client.UseCommandsNext(commandsNextConfiguration);
+            Commands = DiscordClient.UseCommandsNext(commandsNextConfiguration);
             RegisterAllBotCommands();
 
-            await Client.ConnectAsync();
+            await DiscordClient.ConnectAsync();
+
+            // This code block will be executed when the bot is ready and connected to Discord.
+            var channel = await DiscordClient.GetChannelAsync(737541664775602269);
+            if (channel != null) await channel.SendMessageAsync("Olá!! Agora eu tô online e pronta para servir. 😉");
+
             await Task.Delay(-1);
         }
 
-
         private void RegisterAllBotCommands()
         {
-            Commands.RegisterCommands<Commands.Dictionary.Word>();
+            Commands.RegisterCommands<Commands.Dictionary>();
             Commands.RegisterCommands<Commands.Info>();
         }
 

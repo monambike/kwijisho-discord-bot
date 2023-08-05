@@ -1,4 +1,6 @@
-﻿namespace KWIJisho
+﻿using System;
+
+namespace KWIJisho
 {
     internal class Program
     {

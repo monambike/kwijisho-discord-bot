@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KWIJisho.WebApplication.ViewModel.Dictionary
 {
-    public class Word
+    public class Meaning
     {
         [Column("Id")]
         [Key]

@@ -12,7 +12,7 @@ namespace KWIJisho
         {
             internal class Word : BaseCommandModule
             {
-                public Command addw = new Command("addw", "Adds a word in dictionary.");
+                public Command addw = new Command("addw", "Adiciona uma palavra no dicionário.");
                 [Command(nameof(addw))]
                 internal async Task Add(CommandContext commandContext, string wordName)
                 {
@@ -28,7 +28,7 @@ namespace KWIJisho
                     _ = await commandContext.Channel.SendMessageAsync(message).ConfigureAwait(false);
                 }
 
-                public Command editw = new Command("editw", "Edits a word in dictionary.");
+                public Command editw = new Command("editw", "Edita uma palavra do dicionário.");
                 [Command(nameof(editw))]
                 internal async Task Edit(CommandContext commandContext, string wordName)
                 {
