@@ -50,6 +50,10 @@
   <PropertyGroup>
     <StartupObject>KWIJisho.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>256x256-ayaya.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="ConcurrentCollections, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ConcurrentHashSet.1.3.0\lib\net461\ConcurrentCollections.dll</HintPath>
@@ -211,6 +215,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="256x256-ayaya.ico" />
     <Content Include="Resources\Images\Karen Kujo\480x268-sleeping.gif" />
     <Content Include="Resources\Images\Karen Kujo\500x496-happy-looking.gif" />
     <Content Include="Resources\Images\Karen Kujo\500x500-ayaya.gif" />
