@@ -10,12 +10,23 @@ namespace KWIJisho
     {
         internal partial class Theme
         {
-            /// <summary>
-            /// Class that represents a group or channel inside "Tramontina" server
-            /// </summary>
-            internal class Tramontina : BaseCommandModule
+            internal partial class Tramontina : BaseCommandModule
             {
+
+                private static TramontinaChannel Geral = new TramontinaChannel(692588978959941656, "geral", "💬");
+                private static TramontinaChannel PrintsEternizados = new TramontinaChannel(841452121983418418, "prints-eternizados", "💾");
+
+                private static TramontinaChannel YouTube = new TramontinaChannel(1142723035447705600, "youtube", "📹");
+                private static TramontinaChannel Dicionario = new TramontinaChannel(1143020466190172220, "dicionario", "📖");
+
+                private static TramontinaChannel Waifu = new TramontinaChannel(692591710466998272, "waifu", "💘");
+                private static TramontinaChannel Radio = new TramontinaChannel(841136093813538827, "radio", "📻");
+                private static TramontinaChannel OutrosBots = new TramontinaChannel(693742473155182663, "outros-bots", "🤖");
+
                 private static TramontinaChannel CanalEscondidinho = new TramontinaChannel(1010349376922722436, "Canal Escondidinho", "🏃🏻💨");
+                private static TramontinaChannel CorpoDeBombeiros1 = new TramontinaChannel(929778181458767932, "Corpo de Bombeiros 1", "👨🏻🚒");
+                private static TramontinaChannel CorpoDeBombeiros2 = new TramontinaChannel(826257065303474186, "Corpo de Bombeiros 2", "👩🏻🚒");
+                private static TramontinaChannel CantinhoDaFofoca = new TramontinaChannel(692588979404669018, "Cantinho da Fofoca", "👥💅🏻");
 
 
                 public Command themeReset = new Command("themeReset", @"Define o servidor para o tema padrão. (Só pode ser definido por um administrador)", ThemeGroup);
@@ -29,26 +40,6 @@ namespace KWIJisho
                         Color = new DiscordColor(77, 18, 161),
                         Title = "Voltando ao normal!!",
                         Description = @"Voltei o servidor pro seu tema original :D"
-                    };
-                    await commandContext.Channel.SendMessageAsync(discordEmbedBuilder);
-                }
-
-                public virtual void SetEasterTheme()
-                {
-
-                }
-
-                public Command themeChristmas = new Command("themeChristmas", @"Define o servidor para o tema de natal. (Só pode ser definido por um administrador)", ThemeGroup);
-                [Command(nameof(themeChristmas))]
-                public async Task SetChristmasTheme(CommandContext commandContext)
-                {
-                    CanalEscondidinho.ChangeEmoji(commandContext, "🎁🧦");
-
-                    var discordEmbedBuilder = new DiscordEmbedBuilder
-                    {
-                        Color = new DiscordColor(77, 18, 161),
-                        Title = "🎅🏻🎁 FELIZ NATAL!!",
-                        Description = @"O servidor acabou de entrar NO CLIMA NATALINO 🥳. BOAS FESTAS À TODOS."
                     };
                     await commandContext.Channel.SendMessageAsync(discordEmbedBuilder);
                 }
