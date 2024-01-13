@@ -10,7 +10,8 @@ namespace KWIJisho
     {
         internal partial class Info : BaseCommandModule
         {
-            [Command("info")]
+            public Command info = new Command("help", @"Mostra informações básicas sobre mim e o meu criador.", InfoGroup);
+            [Command(nameof(info))]
             public async Task GetInfo(CommandContext commandContext)
             {
                 var message = @"Quem me criou foi o @monambike, você pode conferir o site dele em https://monambike.com.";

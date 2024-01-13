@@ -12,6 +12,7 @@ namespace KWIJisho
 
         internal static CommandGroup InfoGroup { get { return new CommandGroup("Informational"); } }
         internal static CommandGroup DictionaryGroup { get { return new CommandGroup("Dictionary"); } }
+        internal static CommandGroup ThemeGroup { get { return new CommandGroup("Theme"); } }
     }
 
     /// <summary>

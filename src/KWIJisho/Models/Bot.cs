@@ -58,6 +58,7 @@ namespace KWIJisho
         {
             Commands.RegisterCommands<CommandManager.Dictionary>();
             Commands.RegisterCommands<CommandManager.Info>();
+            Commands.RegisterCommands<CommandManager.Theme.Tramontina>();
         }
 
         private async Task<ConfigJson> DeserializeConfigJsonFileAsync()
