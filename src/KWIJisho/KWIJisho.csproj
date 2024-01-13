@@ -176,12 +176,10 @@
     <Compile Include="Models\CommandManager.cs" />
     <Compile Include="Models\Commands\Info.cs" />
     <Compile Include="Models\Commands\Greetings.cs" />
-    <Compile Include="Models\Commands\Dictionary.cs" />
     <Compile Include="Models\Commands\Tramontina.cs" />
     <Compile Include="Models\Commands\TramontinaChristmas.cs" />
     <Compile Include="Models\Commands\TramontinaEaster.cs" />
     <Compile Include="Models\ConfigJson.cs" />
-    <Compile Include="Models\Commands\DictionaryWord.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

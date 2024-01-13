@@ -56,7 +56,6 @@ namespace KWIJisho
 
         private void RegisterAllBotCommands()
         {
-            Commands.RegisterCommands<CommandManager.Dictionary>();
             Commands.RegisterCommands<CommandManager.Info>();
             Commands.RegisterCommands<CommandManager.Theme.Tramontina>();
         }
