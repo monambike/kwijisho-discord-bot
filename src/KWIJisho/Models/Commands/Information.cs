@@ -10,15 +10,8 @@ namespace KWIJisho
     {
         internal partial class Info : BaseCommandModule
         {
-            public Command info = new Command("help", @"Mostra informações básicas sobre mim e o meu criador.", InfoGroup);
-            [Command(nameof(info))]
-            public async Task GetInfo(CommandContext commandContext)
-            {
-                var message = @"Quem me criou foi o @monambike, você pode conferir o site dele em https://monambike.com.";
-                await commandContext.Channel.SendMessageAsync(message);
-            }
-
-            public Command help = new Command("help", @"Mostra a ajuda. Para receber detalhes sobre um comando digite ""help <nome do comando>""", InfoGroup);
+            public static string furtherHelpDetailsMessage = @" Para receber detalhes sobre um comando digite ""help <nome do comando>"".";
+            public Command help = new Command("help", $@"Mostra a ajuda.{furtherHelpDetailsMessage}", InfoGroup);
             [Command(nameof(help))]
             internal async Task GetHelp(CommandContext commandContext)
             {
@@ -26,8 +19,7 @@ namespace KWIJisho
                 {
                     Color = new DiscordColor(77, 18, 161),
                     Title = "AJUDA COM COMANDOS",
-                    Description = @"Lembre-se que pra colocar um comando você precisa colocar o ""!"" na frente!"
-                    + @"Para receber detalhes sobre um comando digite ""help <nome do comando>""",
+                    Description = $@"Lembre-se que pra colocar um comando você precisa colocar o ""!"" na frente!{furtherHelpDetailsMessage}",
                     Thumbnail = new DiscordEmbedBuilder.EmbedThumbnail
                     {
                         Url = commandContext.Client.CurrentUser.AvatarUrl
@@ -43,6 +35,14 @@ namespace KWIJisho
                 }
 
                 await commandContext.Channel.SendMessageAsync(discordEmbedBuilder);
+            }
+
+            public Command info = new Command("info", @"Mostra informações básicas sobre mim e o meu criador.", InfoGroup);
+            [Command(nameof(info))]
+            public async Task GetInfo(CommandContext commandContext)
+            {
+                var message = @"Quem me criou foi o @monambike, você pode conferir o site dele em https://monambike.com.";
+                await commandContext.Channel.SendMessageAsync(message);
             }
         }
     }
