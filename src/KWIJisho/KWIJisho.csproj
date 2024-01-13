@@ -173,20 +173,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Bot.cs" />
-    <Compile Include="Models\Commands\Store Data\Betting.cs" />
-    <Compile Include="Models\Commands\CommandManager.cs" />
-    <Compile Include="Models\Commands\Store Data\Copypasta.cs" />
-    <Compile Include="Models\Commands\Informational\Info.cs" />
-    <Compile Include="Models\Commands\Conversation\Greetings.cs" />
-    <Compile Include="Models\Commands\Store Data\Dictionary\Dictionary.cs" />
-    <Compile Include="Models\Commands\ThemesTramontina\Tramontina.cs" />
-    <Compile Include="Models\Commands\ThemesTramontina\TramontinaChristmas.cs" />
-    <Compile Include="Models\Commands\ThemesTramontina\TramontinaEaster.cs" />
+    <Compile Include="Models\CommandManager.cs" />
+    <Compile Include="Models\Commands\Info.cs" />
+    <Compile Include="Models\Commands\Greetings.cs" />
+    <Compile Include="Models\Commands\Dictionary.cs" />
+    <Compile Include="Models\Commands\Tramontina.cs" />
+    <Compile Include="Models\Commands\TramontinaChristmas.cs" />
+    <Compile Include="Models\Commands\TramontinaEaster.cs" />
     <Compile Include="Models\ConfigJson.cs" />
-    <Compile Include="Models\User Settings\Color.cs" />
-    <Compile Include="Models\User Settings\Language.cs" />
-    <Compile Include="Models\Commands\Store Data\Dictionary\Word.cs" />
-    <Compile Include="Models\User Settings\Permissions.cs" />
+    <Compile Include="Models\Commands\DictionaryWord.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
