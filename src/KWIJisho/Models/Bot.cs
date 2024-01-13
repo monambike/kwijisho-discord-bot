@@ -14,11 +14,11 @@ namespace KWIJisho
         internal DiscordClient DiscordClient { get; private set; }
         internal CommandsNextExtension Commands { get; private set; }
 
-
         internal async Task RunAsync()
         {
-            var configJson = DeserializeConfigJsonFileAsync();
-            var configJsonResult = configJson.Result;
+            Task<ConfigJson> configJson = DeserializeConfigJsonFileAsync();
+            ConfigJson configJsonResult = configJson.Result;
+            configJsonResult.SetThisToStaticProperties();
             
             var discordConfiguration = new DiscordConfiguration
             {

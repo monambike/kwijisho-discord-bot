@@ -37,7 +37,7 @@ namespace KWIJisho
                 {
                     string content = "";
                     foreach (var discordCommand in commandGroup.Commands)
-                        content += $"**{discordCommand.Name}**: {discordCommand.Description}{Environment.NewLine}";
+                        content += $"**{ConfigJson.ConfigJsonPrefix}{discordCommand.Name}:** {discordCommand.Description}{Environment.NewLine}";
                     discordEmbedBuilder.AddField(commandGroup.Name, content);
                 }
 
