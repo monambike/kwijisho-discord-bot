@@ -2,7 +2,7 @@
 
 namespace KWIJisho
 {
-    internal partial class Commands
+    internal partial class CommandsByGroup
     {
         internal partial class Greetings : BaseCommandModule
         {

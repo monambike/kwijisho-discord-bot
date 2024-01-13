@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace KWIJisho
 {
-    internal partial class Commands
+    internal partial class CommandManager
     {
         internal partial class Dictionary : BaseCommandModule
         {
             internal class Word : BaseCommandModule
             {
-                public Command addw = new Command("addw", "Adiciona uma palavra no dicionário.");
+                public Command addw = new Command("addw", "Adiciona uma palavra no dicionário.", DictionaryGroup);
                 [Command(nameof(addw))]
                 internal async Task Add(CommandContext commandContext, string wordName)
                 {
@@ -28,7 +28,7 @@ namespace KWIJisho
                     _ = await commandContext.Channel.SendMessageAsync(message).ConfigureAwait(false);
                 }
 
-                public Command editw = new Command("editw", "Edita uma palavra do dicionário.");
+                public Command editw = new Command("editw", "Edita uma palavra do dicionário.", DictionaryGroup);
                 [Command(nameof(editw))]
                 internal async Task Edit(CommandContext commandContext, string wordName)
                 {
@@ -55,16 +55,16 @@ namespace KWIJisho
                     var quotedWordName = $@"""{wordName}""";
 
                     var messages = new List<string>
-                    {
-                        $"Tá na mão colega! Botei a {quotedWordName} no dicionário pra você \u1F60E",
+                {
+                    $"Tá na mão colega! Botei a {quotedWordName} no dicionário pra você \u1F60E",
 
-                        $"A palavra {quotedWordName} foi adicionada com sucEEEEEESSO AO DICIONÁRIO!",
-                        $"É! NÓIS! TA NA MÃO PORRAAAAAAAAAAAA!! \u1F973 PRO DI-CI-O-NÁARIO \u1F483\u1F483",
+                    $"A palavra {quotedWordName} foi adicionada com sucEEEEEESSO AO DICIONÁRIO!",
+                    $"É! NÓIS! TA NA MÃO PORRAAAAAAAAAAAA!! \u1F973 PRO DI-CI-O-NÁARIO \u1F483\u1F483",
 
-                        $"Eu achei a {quotedWordName} bem merda. Mas o seu bom gosto com palavras vai bem com a sua cara \u1F60F.",
-                        $"Meu deus hein que ideia mixuruca... Pronto, botei {quotedWordName} no dicionário... \u1F644",
-                        $"Se eu não recebesse pra isso eu nem fazia questão \u1F644. Pronto, botei {wordName} pra você lá."
-                    };
+                    $"Eu achei a {quotedWordName} bem merda. Mas o seu bom gosto com palavras vai bem com a sua cara \u1F60F.",
+                    $"Meu deus hein que ideia mixuruca... Pronto, botei {quotedWordName} no dicionário... \u1F644",
+                    $"Se eu não recebesse pra isso eu nem fazia questão \u1F644. Pronto, botei {wordName} pra você lá."
+                };
 
                     int randomIndex = new Random().Next(messages.Count);
                     return messages[randomIndex];

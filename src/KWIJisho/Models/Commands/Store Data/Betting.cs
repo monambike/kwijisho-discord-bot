@@ -3,7 +3,7 @@ using System;
 
 namespace KWIJisho
 {
-    internal partial class Commands
+    internal partial class CommandsByGroup
     {
         internal class Betting : BaseCommandModule
         {

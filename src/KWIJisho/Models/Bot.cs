@@ -56,8 +56,8 @@ namespace KWIJisho
 
         private void RegisterAllBotCommands()
         {
-            Commands.RegisterCommands<Commands.Dictionary>();
-            Commands.RegisterCommands<Commands.Info>();
+            Commands.RegisterCommands<CommandManager.Dictionary>();
+            Commands.RegisterCommands<CommandManager.Info>();
         }
 
         private async Task<ConfigJson> DeserializeConfigJsonFileAsync()
@@ -81,10 +81,10 @@ namespace KWIJisho
         {
             if (e.Author.IsBot) return; // Ignore messages from other bots
 
-            await ValidateMentionedUsers(sender, e);
+            await ValidateMentionedUsers(e);
         }
 
-        private async Task ValidateMentionedUsers(DiscordClient sender, MessageCreateEventArgs e)
+        private async Task ValidateMentionedUsers(MessageCreateEventArgs e)
         {
             // Get the username of the message author
             string authorName = e.Author.Username;

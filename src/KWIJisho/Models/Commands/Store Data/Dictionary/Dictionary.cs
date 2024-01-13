@@ -1,26 +1,27 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
-using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace KWIJisho
 {
-    internal partial class Commands
+    internal static partial class CommandTypes
     {
-        internal partial class Dictionary : BaseCommandModule
+        internal partial class Commands
         {
-            [Command("seeall")]
-            internal async Task GetAll(CommandContext commandContext)
+            internal partial class Dictionary : BaseCommandModule
             {
-                Server.Dictionary.GetAllWords();
+                [Command("seeall")]
+                internal async Task GetAll(CommandContext commandContext)
+                {
+                    Server.Dictionary.GetAllWords();
 
-                var message = "Essa é a lista de palavras do dicionário.";
+                    var message = "Essa é a lista de palavras do dicionário.";
 
-                _ = await commandContext
-                    .Channel
-                    .SendMessageAsync(message)
-                    .ConfigureAwait(false);
+                    _ = await commandContext
+                        .Channel
+                        .SendMessageAsync(message)
+                        .ConfigureAwait(false);
+                }
             }
         }
     }

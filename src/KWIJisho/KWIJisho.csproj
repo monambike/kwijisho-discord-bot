@@ -174,7 +174,7 @@
   <ItemGroup>
     <Compile Include="Models\Bot.cs" />
     <Compile Include="Models\Commands\Store Data\Betting.cs" />
-    <Compile Include="Models\Commands\Command.cs" />
+    <Compile Include="Models\Commands\CommandManager.cs" />
     <Compile Include="Models\Commands\Store Data\Copypasta.cs" />
     <Compile Include="Models\Commands\Informational\Info.cs" />
     <Compile Include="Models\Commands\Conversation\Greetings.cs" />

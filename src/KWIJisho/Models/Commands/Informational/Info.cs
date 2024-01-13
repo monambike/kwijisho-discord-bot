@@ -1,11 +1,12 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
+using System;
 using System.Threading.Tasks;
 
 namespace KWIJisho
 {
-    internal partial class Commands
+    internal partial class CommandManager
     {
         internal partial class Info : BaseCommandModule
         {
@@ -13,10 +14,10 @@ namespace KWIJisho
             public async Task GetInfo(CommandContext commandContext)
             {
                 var message = @"Quem me criou foi o @monambike, você pode conferir o site dele em https://monambike.com.";
-                _ = await commandContext.Channel.SendMessageAsync(message).ConfigureAwait(false);
+                await commandContext.Channel.SendMessageAsync(message);
             }
 
-            public Command help = new Command("help", @"Mostra a ajuda. Para receber detalhes sobre um comando digite ""help <nome do comando>""");
+            public Command help = new Command("help", @"Mostra a ajuda. Para receber detalhes sobre um comando digite ""help <nome do comando>""", InfoGroup);
             [Command(nameof(help))]
             internal async Task GetHelp(CommandContext commandContext)
             {
@@ -32,10 +33,15 @@ namespace KWIJisho
                     }
                 };
 
-                foreach (var discordCommand in DiscordCommands)
-                    discordEmbedBuilder.AddField(discordCommand.Name, discordCommand.Description);
+                foreach (var commandGroup in CommandGroups)
+                {
+                    string content = "";
+                    foreach (var discordCommand in commandGroup.Commands)
+                        content += $"**{discordCommand.Name}**: {discordCommand.Description}{Environment.NewLine}";
+                    discordEmbedBuilder.AddField(commandGroup.Name, content);
+                }
 
-                _ = await commandContext.Channel.SendMessageAsync(discordEmbedBuilder).ConfigureAwait(false);
+                await commandContext.Channel.SendMessageAsync(discordEmbedBuilder);
             }
         }
     }
