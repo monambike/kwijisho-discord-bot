@@ -29,7 +29,7 @@ namespace KWIJisho
 
                     var discordEmbedBuilder = new DiscordEmbedBuilder
                     {
-                        Color = new DiscordColor(77, 18, 161),
+                        Color = ConfigJson.ConfigJsonPurpleColor.DiscordColor,
                         Title = "🎅🏻🎁 FELIZ NATAL!!",
                         Description = @"O servidor acabou de entrar NO CLIMA NATALINO 🥳. BOAS FESTAS À TODOS."
                     };

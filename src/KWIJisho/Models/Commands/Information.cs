@@ -17,7 +17,7 @@ namespace KWIJisho
             {
                 var discordEmbedBuilder = new DiscordEmbedBuilder
                 {
-                    Color = new DiscordColor(77, 18, 161),
+                    Color = ConfigJson.ConfigJsonPurpleColor.DiscordColor,
                     Title = "AJUDA COM COMANDOS",
                     Description = $@"Lembre-se que pra colocar um comando você precisa colocar o ""!"" na frente!{furtherHelpDetailsMessage}",
                     Thumbnail = new DiscordEmbedBuilder.EmbedThumbnail

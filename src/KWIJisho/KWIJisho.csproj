@@ -180,6 +180,7 @@
     <Compile Include="Models\Commands\TramontinaChristmas.cs" />
     <Compile Include="Models\Commands\TramontinaEaster.cs" />
     <Compile Include="Models\ConfigJson.cs" />
+    <Compile Include="Models\DefaultSettings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

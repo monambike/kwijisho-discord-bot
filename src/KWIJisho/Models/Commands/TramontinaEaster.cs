@@ -17,22 +17,13 @@ namespace KWIJisho
                 {
                     var discordEmbedBuilder = new DiscordEmbedBuilder
                     {
-                        Color = new DiscordColor(77, 18, 161),
                         Title = "🎅🏻🎁 FELIZ NATAL!!",
-                        Description = @"O servidor acabou de entrar NO CLIMA NATALINO 🥳. BOAS FESTAS À TODOS."
+                        Description = @"O servidor acabou de entrar NO CLIMA NATALINO 🥳. BOAS FESTAS À TODOS.",
+                        Color = ConfigJson.ConfigJsonPurpleColor.DiscordColor,
                     };
 
-                    Geral.ChangeEmoji(commandContext, "🍪");
-                    PrintsEternizados.ChangeEmoji(commandContext, "🥛");
-                    YouTube.ChangeEmoji(commandContext, "🌟");
-                    Dicionario.ChangeEmoji(commandContext, "⛄");
-                    Waifu.ChangeEmoji(commandContext, "💝");
-                    Radio.ChangeEmoji(commandContext, "🎶");
-                    OutrosBots.ChangeEmoji(commandContext, "⛄");
-                    CanalEscondidinho.ChangeEmoji(commandContext, "🎁🧦");
-                    CorpoDeBombeiros1.ChangeEmoji(commandContext, "🎅🏻🛷");
-                    CorpoDeBombeiros2.ChangeEmoji(commandContext, "🤶🏻🛷");
-                    CantinhoDaFofoca.ChangeEmoji(commandContext, "🍷🍴");
+                    foreach (var tramontinaChannel in TramontinaChannels)
+                        tramontinaChannel.ChangeEmoji(commandContext, tramontinaChannel.EmojiTheme.Christmas);
 
                     await commandContext.Channel.SendMessageAsync(discordEmbedBuilder);
                 }
