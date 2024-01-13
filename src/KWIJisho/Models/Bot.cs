@@ -2,6 +2,7 @@
 using DSharpPlus.CommandsNext;
 using DSharpPlus.EventArgs;
 using Newtonsoft.Json;
+using System;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,6 +32,7 @@ namespace KWIJisho
             DiscordClient = new DiscordClient(discordConfiguration);
 
             DiscordClient.Ready += OnClientReady;
+            DiscordClient.MessageCreated += OnMessageReceived;
 
             var commandsNextConfiguration = new CommandsNextConfiguration
             {
@@ -47,7 +49,7 @@ namespace KWIJisho
 
             // This code block will be executed when the bot is ready and connected to Discord.
             var channel = await DiscordClient.GetChannelAsync(737541664775602269);
-            if (channel != null) await channel.SendMessageAsync("Olá!! Agora eu tô online e pronta para servir. 😉");
+            if (channel != null) await channel.SendMessageAsync("Olá!! Agora eu tô online e prontíssima pra ajudar! 🥳🎉🎉");
 
             await Task.Delay(-1);
         }
@@ -74,6 +76,34 @@ namespace KWIJisho
         private Task OnClientReady(object sender, ReadyEventArgs e)
         {
             return Task.CompletedTask;
+        }
+        private async Task OnMessageReceived(DiscordClient sender, MessageCreateEventArgs e)
+        {
+            if (e.Author.IsBot) return; // Ignore messages from other bots
+
+            await ValidateMentionedUsers(sender, e);
+        }
+
+        private async Task ValidateMentionedUsers(DiscordClient sender, MessageCreateEventArgs e)
+        {
+            // Get the username of the message author
+            string authorName = e.Author.Username;
+
+            // Get mentioned user
+            if (e.MentionedUsers.Count == 1)
+            {
+                string mentionedName = e.MentionedUsers[0].Username;
+                // Someone mentioned another user
+                await e.Message.RespondAsync($"Desculpa me intrometer, eu nem ia falar nada não {authorName} mas o {mentionedName} é um tremendo de um babaca.. 😶");
+                await e.Message.RespondAsync($"A");
+                await e.Channel.SendMessageAsync($"Aah!.. Ele tá ai!.. E-eu não tinha reparado.. 😳 O-oi {mentionedName} tudo bem com você?! A gente tava falando de você agora pouco 👀🙈");
+            }
+            else if (e.MentionedUsers.Count > 1)
+            {
+                string mentionedName = e.MentionedUsers[0].Username;
+                // Someone mentioned more than a user
+                await e.Message.RespondAsync($"Desculpa me intrometer, eu nem ia falar nada não {authorName} mas o {mentionedName} é um tremendo de um babaca.. 😶");
+            }
         }
     }
 }

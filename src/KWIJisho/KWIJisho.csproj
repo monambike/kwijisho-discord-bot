@@ -179,6 +179,7 @@
     <Compile Include="Models\Commands\Informational\Info.cs" />
     <Compile Include="Models\Commands\Conversation\Greetings.cs" />
     <Compile Include="Models\Commands\Store Data\Dictionary\Dictionary.cs" />
+    <Compile Include="Models\Commands\Themes\Theme.cs" />
     <Compile Include="Models\ConfigJson.cs" />
     <Compile Include="Models\User Settings\Color.cs" />
     <Compile Include="Models\User Settings\Language.cs" />
