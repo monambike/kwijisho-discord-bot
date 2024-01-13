@@ -207,12 +207,6 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KWIJisho.DAL\KWIJisho.Server.csproj">
-      <Project>{e9cd1000-71c1-4045-8046-f8300c7c4ed4}</Project>
-      <Name>KWIJisho.Server</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="256x256-ayaya.ico" />
     <Content Include="Resources\Images\Karen Kujo\480x268-sleeping.gif" />
     <Content Include="Resources\Images\Karen Kujo\500x496-happy-looking.gif" />
