@@ -1,4 +1,4 @@
-﻿using System;
+﻿using KWIJisho.Models;
 
 namespace KWIJisho
 {

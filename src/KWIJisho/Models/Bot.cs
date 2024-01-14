@@ -1,9 +1,10 @@
 ﻿using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.EventArgs;
+using KWIJisho.Models.Commands;
 using System.Threading.Tasks;
 
-namespace KWIJisho
+namespace KWIJisho.Models
 {
     internal class Bot
     {

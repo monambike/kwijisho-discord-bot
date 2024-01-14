@@ -4,19 +4,19 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KWIJisho
+namespace KWIJisho.Models
 {
     internal struct ConfigJson
     {
         // Those properties are for easier data manipulation since instances are not necessary,
         // because there's only one config.json file.
-        public static string Token { get; set; }
+        internal static string Token { get; set; }
 
-        public static string Prefix { get; set; }
+        internal static string Prefix { get; set; }
 
-        public static string Activity { get; set; }
+        internal static string Activity { get; set; }
 
-        public static Color DefaultColor { get; set; }
+        internal static Color DefaultColor { get; set; }
 
         // Even thought we don't need instances because there's only one config.json file, deserializing
         // needs a new instance object. Those properties are for handling those deserializing values
@@ -41,7 +41,7 @@ namespace KWIJisho
         [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization, since 'DeserializeObject' needs non-static property. And it's value is being bypassed to its static property.")]
         private Color ConfigJsonPurpleColor { get => _configJsonPurpleColor; set => _configJsonPurpleColor = DefaultColor = value; }
 
-        public static async Task<ConfigJson> DeserializeConfigJsonFileAsync()
+        internal static async Task<ConfigJson> DeserializeConfigJsonFileAsync()
         {
 
             var json = string.Empty;
@@ -54,18 +54,18 @@ namespace KWIJisho
             return result;
         }
 
-        public class Color
+        internal class Color
         {
             [JsonProperty("red")]
-            public byte Red { get; set; }
+            internal byte Red { get; set; }
 
             [JsonProperty("green")]
-            public byte Green { get; set; }
+            internal byte Green { get; set; }
 
             [JsonProperty("blue")]
-            public byte Blue { get; set; }
+            internal byte Blue { get; set; }
 
-            public DiscordColor DiscordColor => new DiscordColor(Red, Green, Blue);
+            internal DiscordColor DiscordColor => new DiscordColor(Red, Green, Blue);
         }
     }
 }

@@ -173,14 +173,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Bot.cs" />
-    <Compile Include="Models\CommandManager.cs" />
-    <Compile Include="Models\Commands\Information.cs" />
-    <Compile Include="Models\Commands\Greetings.cs" />
-    <Compile Include="Models\Commands\Tramontina.cs" />
-    <Compile Include="Models\Commands\TramontinaChristmas.cs" />
-    <Compile Include="Models\Commands\TramontinaEaster.cs" />
-    <Compile Include="Models\Commands\TramontinaHalloween.cs" />
+    <Compile Include="Models\Commands\CommandManager.cs" />
+    <Compile Include="Models\Commands\Info.cs" />
+    <Compile Include="Models\Commands\ChatInteraction.cs" />
+    <Compile Include="Models\Commands\Theme.cs" />
+    <Compile Include="Models\Commands\ThemeTramontina.cs" />
     <Compile Include="Models\ConfigJson.cs" />
+    <Compile Include="Models\Utils\Channel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

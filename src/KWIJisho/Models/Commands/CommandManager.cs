@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
-namespace KWIJisho
+namespace KWIJisho.Models.Commands
 {
     /// <summary>
     /// Represent the class that manage commands.
@@ -24,6 +25,8 @@ namespace KWIJisho
 
         internal string Description { get; set; }
 
+        internal bool OwnerCommand { get; set; } = false;
+
         internal Command(string name, string description, CommandGroup group)
         {
             Name = name;
@@ -31,6 +34,12 @@ namespace KWIJisho
 
             var selectedCommandGroup = CommandManager.CommandGroups.Where(commandGroup => commandGroup.Name == group.Name).FirstOrDefault();
             selectedCommandGroup.Commands.Add(this);
+        }
+
+        internal Command(string name, string description, CommandGroup group, bool ownerCommand)
+            : this(name, $"{description}{Environment.NewLine}*Esse comando só pode ser executado pelo dono do bot*", group)
+        {
+            OwnerCommand = ownerCommand;
         }
     }
 

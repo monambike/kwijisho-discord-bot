@@ -4,14 +4,14 @@ using DSharpPlus.Entities;
 using System;
 using System.Threading.Tasks;
 
-namespace KWIJisho
+namespace KWIJisho.Models.Commands
 {
     internal partial class CommandManager
     {
         internal partial class Info : BaseCommandModule
         {
-            public static string furtherHelpDetailsMessage = @" Para receber detalhes sobre um comando digite ""help <nome do comando>"".";
-            public Command help = new Command("help", $@"Mostra a ajuda.{furtherHelpDetailsMessage}", InfoGroup);
+            internal static string furtherHelpDetailsMessage = @" Para receber detalhes sobre um comando digite ""help <nome do comando>"".";
+            internal Command help = new Command("help", $@"Mostra a ajuda.{furtherHelpDetailsMessage}", InfoGroup);
             [Command(nameof(help))]
             internal async Task GetHelp(CommandContext commandContext)
             {
@@ -37,9 +37,9 @@ namespace KWIJisho
                 await commandContext.Channel.SendMessageAsync(discordEmbedBuilder);
             }
 
-            public Command info = new Command("info", @"Mostra informações básicas sobre mim e o meu criador.", InfoGroup);
+            internal Command info = new Command("info", @"Mostra informações básicas sobre mim e o meu criador.", InfoGroup);
             [Command(nameof(info))]
-            public async Task GetInfo(CommandContext commandContext)
+            internal async Task GetInfo(CommandContext commandContext)
             {
                 var message = @"Quem me criou foi o @monambike, você pode conferir o site dele em https://monambike.com.";
                 await commandContext.Channel.SendMessageAsync(message);
