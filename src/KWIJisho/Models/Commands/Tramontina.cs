@@ -63,7 +63,7 @@ namespace KWIJisho
 
                     var discordEmbedBuilder = new DiscordEmbedBuilder
                     {
-                        Color = ConfigJson.ConfigJsonPurpleColor.DiscordColor,
+                        Color = ConfigJson.DefaultColor.DiscordColor,
                         Title = "Voltando ao normal!!",
                         Description = @"Voltei o servidor pro seu tema original :D"
                     };

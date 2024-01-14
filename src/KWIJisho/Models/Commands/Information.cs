@@ -17,7 +17,7 @@ namespace KWIJisho
             {
                 var discordEmbedBuilder = new DiscordEmbedBuilder
                 {
-                    Color = ConfigJson.ConfigJsonPurpleColor.DiscordColor,
+                    Color = ConfigJson.DefaultColor.DiscordColor,
                     Title = "AJUDA COM COMANDOS",
                     Description = $@"Lembre-se que pra colocar um comando você precisa colocar o ""!"" na frente!{furtherHelpDetailsMessage}",
                     Thumbnail = new DiscordEmbedBuilder.EmbedThumbnail
@@ -30,7 +30,7 @@ namespace KWIJisho
                 {
                     string content = "";
                     foreach (var discordCommand in commandGroup.Commands)
-                        content += $"**{ConfigJson.ConfigJsonPrefix}{discordCommand.Name}:** {discordCommand.Description}{Environment.NewLine}";
+                        content += $"**{ConfigJson.Prefix}{discordCommand.Name}:** {discordCommand.Description}{Environment.NewLine}";
                     discordEmbedBuilder.AddField(commandGroup.Name, content);
                 }
 

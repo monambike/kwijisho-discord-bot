@@ -207,11 +207,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="256x256-ayaya.ico" />
-    <Content Include="Resources\Images\Karen Kujo\480x268-sleeping.gif" />
-    <Content Include="Resources\Images\Karen Kujo\500x496-happy-looking.gif" />
-    <Content Include="Resources\Images\Karen Kujo\500x500-ayaya.gif" />
-    <Content Include="Resources\Images\Karen Kujo\500x500-mad.gif" />
-    <Content Include="Resources\Images\Karen Kujo\500x552-cat.gif" />
+    <Content Include="Resources\Images\KarenKujo\256x256-ayaya.ico" />
+    <Content Include="Resources\Images\KarenKujo\256x256-ayaya.png" />
+    <Content Include="Resources\Images\KarenKujo\480x268-sleeping.gif" />
+    <Content Include="Resources\Images\KarenKujo\500x496-happy-looking.gif" />
+    <Content Include="Resources\Images\KarenKujo\500x500-ayaya.gif" />
+    <Content Include="Resources\Images\KarenKujo\500x500-mad.gif" />
+    <Content Include="Resources\Images\KarenKujo\500x552-cat.gif" />
+    <Content Include="Resources\Images\Tramontina\128x128-mello-christmas.png" />
+    <Content Include="Resources\Images\Tramontina\128x128-mello-easter.png" />
+    <Content Include="Resources\Images\Tramontina\128x128-mello-halloween.png" />
+    <Content Include="Resources\Images\Tramontina\128x128-mello.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

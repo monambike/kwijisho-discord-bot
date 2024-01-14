@@ -22,7 +22,7 @@ namespace KWIJisho
                     {
                         Title = "🐇🥕 FELIZ PÁSCOA!! 🐣🥚",
                         Description = @"O coelhinho da páscoa deu um ""pulo"" no servidor! HAHAHA, PULO.. ESSA FOI BOA 🤭.",
-                        Color = ConfigJson.ConfigJsonPurpleColor.DiscordColor,
+                        Color = ConfigJson.DefaultColor.DiscordColor,
                     });
                 }
             }

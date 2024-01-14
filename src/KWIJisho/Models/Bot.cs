@@ -1,9 +1,6 @@
 ﻿using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.EventArgs;
-using Newtonsoft.Json;
-using System.IO;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace KWIJisho
@@ -15,13 +12,11 @@ namespace KWIJisho
 
         internal async Task RunAsync()
         {
-            Task<ConfigJson> configJson = DeserializeConfigJsonFileAsync();
-            ConfigJson configJsonResult = configJson.Result;
-            configJsonResult.SetThisToStaticProperties();
+            await ConfigJson.DeserializeConfigJsonFileAsync();
             
             var discordConfiguration = new DiscordConfiguration
             {
-                Token = configJsonResult.Token,
+                Token = ConfigJson.Token,
                 TokenType = TokenType.Bot,
                 AutoReconnect = true,
                 MinimumLogLevel = Microsoft.Extensions.Logging.LogLevel.Debug,
@@ -35,7 +30,7 @@ namespace KWIJisho
 
             var commandsNextConfiguration = new CommandsNextConfiguration
             {
-                StringPrefixes = new string[] { configJsonResult.Prefix },
+                StringPrefixes = new string[] { ConfigJson.Prefix },
                 EnableDms = false,
                 EnableMentionPrefix = true,
                 EnableDefaultHelp = false
@@ -57,19 +52,6 @@ namespace KWIJisho
         {
             Commands.RegisterCommands<CommandManager.Info>();
             Commands.RegisterCommands<CommandManager.Theme.Tramontina>();
-        }
-
-        private async Task<ConfigJson> DeserializeConfigJsonFileAsync()
-        {
-
-            var json = string.Empty;
-
-            using (var fileSteam = File.OpenRead(@"..\..\config.json"))
-                using (var streamReader = new StreamReader(fileSteam, new UTF8Encoding(false)))
-                    json = await streamReader.ReadToEndAsync().ConfigureAwait(false);
-            
-            var result = JsonConvert.DeserializeObject<ConfigJson>(json);
-            return result;
         }
 
         private Task OnClientReady(object sender, ReadyEventArgs e)

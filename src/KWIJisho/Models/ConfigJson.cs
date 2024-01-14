@@ -1,5 +1,8 @@
 ﻿using DSharpPlus.Entities;
 using Newtonsoft.Json;
+using System.IO;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace KWIJisho
 {
@@ -7,33 +10,51 @@ namespace KWIJisho
     {
         // Those properties are for easier data manipulation since instances are not necessary,
         // because there's only one config.json file.
-        internal static string ConfigJsonToken { get; set; }
-        internal static string ConfigJsonPrefix { get; set; }
-        internal static string ConfigJsonActivity { get; set; }
-        internal static RGB ConfigJsonPurpleColor { get; set; }
+        public static string Token { get; set; }
+
+        public static string Prefix { get; set; }
+
+        public static string Activity { get; set; }
+
+        public static Color DefaultColor { get; set; }
+
         // Even thought we don't need instances because there's only one config.json file, deserializing
         // needs a new instance object. Those properties are for handling those deserializing values
+        // Note: Notice that they update the internal static properties on their value set.
+        private string _configJsonToken;
         [JsonProperty("token")]
-        internal string Token { get; set; }
-        [JsonProperty("prefix")]
-        internal string Prefix { get; set; }
-        [JsonProperty("activity")]
-        internal string Activity { get; set; }
-        [JsonProperty("purpleColor")]
-        internal RGB PurpleColor { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization, since 'DeserializeObject' needs non-static property. And it's value is being bypassed to its static property.")]
+        private string ConfigJsonToken { get => _configJsonToken; set => _configJsonToken = Token = value; }
 
-        /// <summary>
-        /// Set values from current instance for static properties of the same class.
-        /// </summary>
-        internal void SetThisToStaticProperties()
+        private string _configJsonPrefix;
+        [JsonProperty("prefix")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization, since 'DeserializeObject' needs non-static property. And it's value is being bypassed to its static property.")]
+        private string CPrefix { get => _configJsonPrefix; set => _configJsonPrefix = Prefix = value; }
+
+        private string _configJsonActivity;
+        [JsonProperty("activity")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization, since 'DeserializeObject' needs non-static property. And it's value is being bypassed to its static property.")]
+        private string ConfigJsonActivity { get => _configJsonActivity; set => _configJsonActivity = Activity = value; }
+
+        private Color _configJsonPurpleColor;
+        [JsonProperty("purpleColor")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization, since 'DeserializeObject' needs non-static property. And it's value is being bypassed to its static property.")]
+        private Color ConfigJsonPurpleColor { get => _configJsonPurpleColor; set => _configJsonPurpleColor = DefaultColor = value; }
+
+        public static async Task<ConfigJson> DeserializeConfigJsonFileAsync()
         {
-            ConfigJsonToken = Token;
-            ConfigJsonPrefix = Prefix;
-            ConfigJsonActivity = Activity;
-            ConfigJsonPurpleColor = PurpleColor;
+
+            var json = string.Empty;
+
+            using (var fileSteam = File.OpenRead(@"..\..\config.json"))
+            using (var streamReader = new StreamReader(fileSteam, new UTF8Encoding(false)))
+                json = await streamReader.ReadToEndAsync().ConfigureAwait(false);
+
+            var result = JsonConvert.DeserializeObject<ConfigJson>(json);
+            return result;
         }
 
-        public class RGB
+        public class Color
         {
             [JsonProperty("red")]
             public byte Red { get; set; }
@@ -44,7 +65,7 @@ namespace KWIJisho
             [JsonProperty("blue")]
             public byte Blue { get; set; }
 
-            public DiscordColor DiscordColor => new DiscordColor(ConfigJsonPurpleColor.Red, ConfigJsonPurpleColor.Green, ConfigJsonPurpleColor.Blue);
+            public DiscordColor DiscordColor => new DiscordColor(Red, Green, Blue);
         }
     }
 }

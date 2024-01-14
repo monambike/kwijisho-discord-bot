@@ -22,7 +22,7 @@ namespace KWIJisho
                     {
                         Title = "🕷️🕸️ FELIZ HALLOWEEN!! 🧟👻",
                         Description = @"MUAHAHAHAWHWHA. O SERVIDOR ACABA DE ENTRAR EM CLIMA DE TERROR 🕷️🎃. SE PREPAREM PARA O PIOR DO **MEDO**.",
-                        Color = ConfigJson.ConfigJsonPurpleColor.DiscordColor,
+                        Color = ConfigJson.DefaultColor.DiscordColor,
                     });
                 }
             }

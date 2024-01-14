@@ -22,7 +22,7 @@ namespace KWIJisho
                     {
                         Title = "🎅🏻🎁 FELIZ NATAL!! ☃️❄️",
                         Description = @"O servidor acabou de entrar NO CLIMA NATALINO 🥳. BOAS FESTAS À TODOS.",
-                        Color = ConfigJson.ConfigJsonPurpleColor.DiscordColor,
+                        Color = ConfigJson.DefaultColor.DiscordColor,
                         ImageUrl = "Resources/Images/Tramontina/128x128-mello-christmas.png"
                     });
                 }
