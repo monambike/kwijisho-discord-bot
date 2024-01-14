@@ -15,25 +15,16 @@ namespace KWIJisho
                 [Command(nameof(themeChristmas))]
                 public async Task SetChristmasTheme(CommandContext commandContext)
                 {
-                    Geral.ChangeEmoji(commandContext, "🍪");
-                    PrintsEternizados.ChangeEmoji(commandContext, "🥛");
-                    YouTube.ChangeEmoji(commandContext, "🌟");
-                    Dicionario.ChangeEmoji(commandContext, "⛄");
-                    Waifu.ChangeEmoji(commandContext, "💝");
-                    Radio.ChangeEmoji(commandContext, "🎶");
-                    OutrosBots.ChangeEmoji(commandContext, "⛄");
-                    CanalEscondidinho.ChangeEmoji(commandContext, "🎁🧦");
-                    CorpoDeBombeiros1.ChangeEmoji(commandContext, "🎅🏻🛷");
-                    CorpoDeBombeiros2.ChangeEmoji(commandContext, "🤶🏻🛷");
-                    CantinhoDaFofoca.ChangeEmoji(commandContext, "🍷🍴");
+                    foreach (var tramontinaChannel in TramontinaChannels)
+                        tramontinaChannel.ChangeEmoji(commandContext, tramontinaChannel.EmojiTheme.Christmas);
 
-                    var discordEmbedBuilder = new DiscordEmbedBuilder
+                    await commandContext.Channel.SendMessageAsync(new DiscordEmbedBuilder
                     {
+                        Title = "🎅🏻🎁 FELIZ NATAL!! ☃️❄️",
+                        Description = @"O servidor acabou de entrar NO CLIMA NATALINO 🥳. BOAS FESTAS À TODOS.",
                         Color = ConfigJson.ConfigJsonPurpleColor.DiscordColor,
-                        Title = "🎅🏻🎁 FELIZ NATAL!!",
-                        Description = @"O servidor acabou de entrar NO CLIMA NATALINO 🥳. BOAS FESTAS À TODOS."
-                    };
-                    await commandContext.Channel.SendMessageAsync(discordEmbedBuilder);
+                        ImageUrl = "Resources/Images/Tramontina/128x128-mello-christmas.png"
+                    });
                 }
             }
         }

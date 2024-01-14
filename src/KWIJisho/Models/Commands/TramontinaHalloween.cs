@@ -11,17 +11,17 @@ namespace KWIJisho
         {
             internal partial class Tramontina : BaseCommandModule
             {
-                public Command themeEaster = new Command("themeEaster", @"Define o servidor para o tema de páscoa. (Só pode ser definido por um administrador)", ThemeGroup);
-                [Command(nameof(themeEaster))]
-                public async Task SetEasterTheme(CommandContext commandContext)
+                public Command themeHalloween = new Command("themeHalloween", @"Define o servidor para o tema de halloween. (Só pode ser definido por um administrador)", ThemeGroup);
+                [Command(nameof(themeHalloween))]
+                public async Task SetHalloweenTheme(CommandContext commandContext)
                 {
                     foreach (var tramontinaChannel in TramontinaChannels)
-                        tramontinaChannel.ChangeEmoji(commandContext, tramontinaChannel.EmojiTheme.Easter);
+                        tramontinaChannel.ChangeEmoji(commandContext, tramontinaChannel.EmojiTheme.Halloween);
 
                     await commandContext.Channel.SendMessageAsync(new DiscordEmbedBuilder
                     {
-                        Title = "🐇🥕 FELIZ PÁSCOA!! 🐣🥚",
-                        Description = @"O coelhinho da páscoa deu um ""pulo"" no servidor! HAHAHA, PULO.. ESSA FOI BOA 🤭.",
+                        Title = "🕷️🕸️ FELIZ HALLOWEEN!! 🧟👻",
+                        Description = @"MUAHAHAHAWHWHA. O SERVIDOR ACABA DE ENTRAR EM CLIMA DE TERROR 🕷️🎃. SE PREPAREM PARA O PIOR DO **MEDO**.",
                         Color = ConfigJson.ConfigJsonPurpleColor.DiscordColor,
                     });
                 }

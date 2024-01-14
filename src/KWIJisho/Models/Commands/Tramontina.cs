@@ -14,30 +14,30 @@ namespace KWIJisho
             {
                 // CANAIS DE TEXTO
                 private static readonly TramontinaChannel Geral = new TramontinaChannel(692588978959941656, "geral", "💬", new EmojiTheme(
-                    christmas: "🍪"));
+                    christmas: "🍪", easter: "🐇", halloween: "🎃"));
                 private static readonly TramontinaChannel PrintsEternizados = new TramontinaChannel(841452121983418418, "prints-eternizados", "💾", new EmojiTheme(
-                    christmas:"🥛"));
+                    christmas:"🥛", easter: "🐰", halloween: "👺"));
                 // CANAIS DE TEXTO ORGANIZADO
                 private static readonly TramontinaChannel YouTube = new TramontinaChannel(1142723035447705600, "youtube", "📹", new EmojiTheme(
-                    christmas: "🌟"));
+                    christmas: "🌟", easter: "🍫", halloween: "🍭"));
                 private static readonly TramontinaChannel Dicionario = new TramontinaChannel(1143020466190172220, "dicionario", "📖", new EmojiTheme(
-                    christmas: "⛄"));
+                    christmas: "⛄", easter: "🥕", halloween: "🔮"));
                 // CANAIS DE BOT
                 private static readonly TramontinaChannel Waifu = new TramontinaChannel(692591710466998272, "waifu", "💘", new EmojiTheme(
-                    christmas: "💝"));
+                    christmas: "💝", easter: "🌷", halloween: "🍬"));
                 private static readonly TramontinaChannel Radio = new TramontinaChannel(841136093813538827, "radio", "📻", new EmojiTheme(
-                    christmas: "🎶"));
+                    christmas: "🎶", easter: "🙏🏻", halloween: "💀"));
                 private static readonly TramontinaChannel OutrosBots = new TramontinaChannel(693742473155182663, "outros-bots", "🤖", new EmojiTheme(
-                    christmas: "⛄"));
+                    christmas: "⛄", easter: "🧺", halloween: "🧟"));
                 // CANAIS DE VOZ
                 private static readonly TramontinaChannel CanalEscondidinho = new TramontinaChannel(1010349376922722436, "Canal Escondidinho", "🏃🏻💨", new EmojiTheme(
-                    christmas: "🎁🧦"));
+                    christmas: "🎁🧦", easter: "🐣🌱", halloween: "🏰👻"));
                 private static readonly TramontinaChannel CorpoDeBombeiros1 = new TramontinaChannel(929778181458767932, "Corpo de Bombeiros 1", "👨🏻🚒", new EmojiTheme(
-                    christmas: "🤶🏻🛷"));
+                    christmas: "🎅🏻🛷", easter: "🐥🥚", halloween: "🧛🏻🩸"));
                 private static readonly TramontinaChannel CorpoDeBombeiros2 = new TramontinaChannel(826257065303474186, "Corpo de Bombeiros 2", "👩🏻🚒", new EmojiTheme(
-                    christmas: "🍪"));
+                    christmas: "🤶🏻🛷", easter: "🐤🥚", halloween: "🧛🏻🩸"));
                 private static readonly TramontinaChannel CantinhoDaFofoca = new TramontinaChannel(692588979404669018, "Cantinho da Fofoca", "👥💅🏻", new EmojiTheme(
-                    christmas: "🍷🍴"));
+                    christmas: "🍷🍴", easter: "🌸🐝", halloween: "🤡🎈"));
 
                 private static readonly List<TramontinaChannel> TramontinaChannels = new List<TramontinaChannel>
                 {
@@ -103,6 +103,7 @@ namespace KWIJisho
                 {
                     DefaultTextTitle = defaultTextTitle;
                     DefaultEmoji = defaultEmoji;
+                    EmojiTheme = emojiTheme;
                 }
 
                 internal void ResetToDefaultEmoji(CommandContext commandContext) => UpdateChannelName(commandContext, $"{DefaultEmoji}│{DefaultTextTitle}");
@@ -114,10 +115,14 @@ namespace KWIJisho
             internal class EmojiTheme
             {
                 internal string Christmas { get; set; }
+                internal string Easter { get; set; }
+                internal string Halloween { get; set; }
 
-                public EmojiTheme(string christmas)
+                public EmojiTheme(string christmas, string easter, string halloween)
                 {
                     Christmas = christmas;
+                    Easter = easter;
+                    Halloween = halloween;
                 }
             }
         }
