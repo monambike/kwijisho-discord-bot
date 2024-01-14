@@ -44,3 +44,12 @@ After downloading the files, follow these steps:
 }
 ```
 You will need to change the "token" field with the token of the bot you create. You can modify the "prefix" and "activity" of the bot as desired.
+
+# Funcionalities
+
+## Change Discord Server Theme
+
+![Captura de tela 2024-01-14 201128](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/2bc401bd-13a8-405e-bbcb-b1194d755cec)
+![Captura de tela 2024-01-14 201121](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/e955db72-3a40-4b99-bc14-cdd98a8a1a2b)
+![Captura de tela 2024-01-14 201116](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/bbe5be95-0688-439b-8ede-4d20fd7459fb)
+![Captura de tela 2024-01-14 201109](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/d5e1df56-8239-4e9a-8528-0d277891a043)
