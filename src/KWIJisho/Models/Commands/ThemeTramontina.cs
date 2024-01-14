@@ -96,7 +96,7 @@ namespace KWIJisho.Models.Commands
                     => await SetTheme(commandContext, EmojiTheme.Halloween,
                         "🕷️🕸️ FELIZ HALLOWEEN!! 🧟👻",
                         "MUAHAHAHAWHWHA. O SERVIDOR ACABA DE ENTRAR EM CLIMA DE TERROR 🕷️🎃. SE PREPAREM PARA O PIOR DO **MEDO**.",
-                        "🕷️FELIZ HALLOWEEN👻");
+                        "🎃FELIZ HALLOWEEN👻");
 
                 /// <summary>
                 /// Sets the Tramontina server to a Theme according with parameterization.
@@ -107,11 +107,11 @@ namespace KWIJisho.Models.Commands
                     await commandContext.Channel.SendMessageAsync("Só um segundinho... Vou botar as decorações então pode tomar um tempinho! ;P");
 
                     // Modifies emoji from every mentioned channel
-                    //foreach (var tramontinaChannel in TramontinaChannels)
-                    //    tramontinaChannel.ChangeEmoji(commandContext, tramontinaChannel.EmojiTheme[emojiTheme]);
+                    foreach (var tramontinaChannel in TramontinaChannels)
+                        tramontinaChannel.ChangeEmoji(commandContext, tramontinaChannel.EmojiTheme[emojiTheme]);
 
                     // Send a message to show conclusion and deliever a suggested server name and picture
-                    string nomeDoServidor = string.IsNullOrEmpty(serverNameSuggestion) ? "Tramontina│Bizarre Adventures" : $"{serverNameSuggestion} - Tramontina│Bizarre Adventures";
+                    string serverName = string.IsNullOrEmpty(serverNameSuggestion) ? "Tramontina│Bizarre Adventures" : $"{serverNameSuggestion} - Tramontina│Bizarre Adventures";
 
                     var fileName = $"128x128-mello-{emojiTheme.ToString().ToLower()}.png";
                     var imagePath = Path.GetFullPath($"Resources/Images/Tramontina/{fileName}");
@@ -122,27 +122,34 @@ namespace KWIJisho.Models.Commands
                         Description = $"{description}{Environment.NewLine}",
                         Color = ConfigJson.DefaultColor.DiscordColor
                     };
+                    // Sending the first message
+                    await commandContext.Channel.SendMessageAsync(new DiscordMessageBuilder()
+                        .AddEmbed(firstDiscordEmbedBuilder));
 
                     // Message body
                     var secondDiscordEmbedBuilder = new DiscordEmbedBuilder
                     {
                         Title = "TROQUE O NOME DO SERVER",
-                        Description = $"Que tal aproveitar e tentar **trocar o nome do servidor** pela minha sugestãozinha abaixo? ;D"
-                        + $"{Environment.NewLine}Sugestão de Nome do Servidor: `{nomeDoServidor}`",
+                        Description = $"Que tal aproveitar e tentar **trocar o nome do servidor** pela minha sugestãozinha abaixo? ;D",
                         Color = ConfigJson.DefaultColor.DiscordColor
                     }.WithImageUrl($"attachment://{imagePath}").Build();
-
-                    // Button to copy server name suggestion
-                    var button = new DiscordButtonComponent(ButtonStyle.Primary, "copy_server_name_suggestion", "Copiar Sugestão de Nome");
-
-                    // Sending the first message
-                    await commandContext.Channel.SendMessageAsync(new DiscordMessageBuilder()
-                        .AddEmbed(firstDiscordEmbedBuilder));
 
                     // Sending the second message with the image and button
                     await commandContext.Channel.SendMessageAsync(new DiscordMessageBuilder()
                         .AddEmbed(secondDiscordEmbedBuilder)
-                        .AddFile(fileName, new FileStream(imagePath, FileMode.Open))
+                        .AddFile(fileName, new FileStream(imagePath, FileMode.Open)));
+
+                    // Message body
+                    var thirdDiscordEmbedBuilder = new DiscordEmbedBuilder
+                    {
+                        Description = $"{serverName}",
+                        Color = ConfigJson.DefaultColor.DiscordColor
+                    };
+                    // Button to copy server name suggestion
+                    var button = new DiscordButtonComponent(ButtonStyle.Primary, "copy_server_name_suggestion", "Copiar Sugestão de Nome");
+                    // Sending the second message with the image and button
+                    await commandContext.Channel.SendMessageAsync(new DiscordMessageBuilder()
+                        .AddEmbed(thirdDiscordEmbedBuilder)
                         .AddComponents(button));
                 }
             }

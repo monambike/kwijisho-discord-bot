@@ -217,7 +217,7 @@
     <Content Include="Resources\Images\Tramontina\128x128-mello-christmas.png" />
     <Content Include="Resources\Images\Tramontina\128x128-mello-easter.png" />
     <Content Include="Resources\Images\Tramontina\128x128-mello-halloween.png" />
-    <Content Include="Resources\Images\Tramontina\128x128-mello.png" />
+    <Content Include="Resources\Images\Tramontina\128x128-mello-default.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

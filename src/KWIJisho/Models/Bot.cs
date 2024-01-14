@@ -4,6 +4,7 @@ using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
 using KWIJisho.Models.Commands;
 using System.IO;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -81,8 +82,10 @@ namespace KWIJisho.Models
             // Use a thread in STA mode to set the clipboard text
             Thread thread = new Thread(() =>
             {
+                // Getting the message content, in other words, the discord server name to be copied
+                var message = e.Message.Embeds.FirstOrDefault().Description;
                 // Gets text into the clipboard
-                Clipboard.SetText(e.Message.Content);
+                Clipboard.SetText(message);
             });
             // Settings thread to Single-Threaded Apartment and running code
             thread.SetApartmentState(ApartmentState.STA);
@@ -92,10 +95,6 @@ namespace KWIJisho.Models
             // Feedback message from the bot that you got the server name on clipboard
             await e.Interaction.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource,
                 new DiscordInteractionResponseBuilder().WithContent("Prontinho, o nome do servidor tá no seu Ctrl+C Ctrl+V! ;D"));
-        }
-
-        private void Test(ComponentInteractionCreateEventArgs e)
-        {
         }
 
         private async Task OnMessageReceived(DiscordClient sender, MessageCreateEventArgs e)
