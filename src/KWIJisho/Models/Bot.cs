@@ -1,8 +1,12 @@
 ﻿using DSharpPlus;
 using DSharpPlus.CommandsNext;
+using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
 using KWIJisho.Models.Commands;
+using System.IO;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace KWIJisho.Models
 {
@@ -24,10 +28,12 @@ namespace KWIJisho.Models
                 Intents = DiscordIntents.All
             };
 
+            // DiscordClients instance and events
             DiscordClient = new DiscordClient(discordConfiguration);
-
+            // Events
             DiscordClient.Ready += OnClientReady;
             DiscordClient.MessageCreated += OnMessageReceived;
+            DiscordClient.ComponentInteractionCreated += OnComponentInteractionCreatedAsync;
 
             var commandsNextConfiguration = new CommandsNextConfiguration
             {
@@ -59,6 +65,39 @@ namespace KWIJisho.Models
         {
             return Task.CompletedTask;
         }
+
+        private async Task OnComponentInteractionCreatedAsync(DiscordClient sender, ComponentInteractionCreateEventArgs e)
+        {
+            /// Handling interactions with Id incoming from <param name="e"></param>
+            switch (e.Id)
+            {
+                // Copies server name suggestion
+                case "copy_server_name_suggestion": await CopyServerName(e); break;
+            }
+        }
+
+        private async Task CopyServerName(ComponentInteractionCreateEventArgs e)
+        {
+            // Use a thread in STA mode to set the clipboard text
+            Thread thread = new Thread(() =>
+            {
+                // Gets text into the clipboard
+                Clipboard.SetText(e.Message.Content);
+            });
+            // Settings thread to Single-Threaded Apartment and running code
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            thread.Join();
+
+            // Feedback message from the bot that you got the server name on clipboard
+            await e.Interaction.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource,
+                new DiscordInteractionResponseBuilder().WithContent("Prontinho, o nome do servidor tá no seu Ctrl+C Ctrl+V! ;D"));
+        }
+
+        private void Test(ComponentInteractionCreateEventArgs e)
+        {
+        }
+
         private async Task OnMessageReceived(DiscordClient sender, MessageCreateEventArgs e)
         {
             if (e.Author.IsBot) return; // Ignore messages from other bots

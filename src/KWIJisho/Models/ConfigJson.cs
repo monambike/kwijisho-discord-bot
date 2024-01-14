@@ -46,7 +46,7 @@ namespace KWIJisho.Models
 
             var json = string.Empty;
 
-            using (var fileSteam = File.OpenRead(@"..\..\config.json"))
+            using (var fileSteam = File.OpenRead("config.json"))
             using (var streamReader = new StreamReader(fileSteam, new UTF8Encoding(false)))
                 json = await streamReader.ReadToEndAsync().ConfigureAwait(false);
 

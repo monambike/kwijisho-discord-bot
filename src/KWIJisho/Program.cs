@@ -1,4 +1,6 @@
 ﻿using KWIJisho.Models;
+using System.IO;
+using System;
 
 namespace KWIJisho
 {
@@ -6,8 +8,11 @@ namespace KWIJisho
     {
         internal static void Main()
         {
-            var bot = new Bot();
+            // Sets the default directory for being the "src/KWIJisho" folder
+            Directory.SetCurrentDirectory("../..");
 
+            // Initializing the bot application
+            var bot = new Bot();
             bot.RunAsync().GetAwaiter().GetResult();
         }
     }

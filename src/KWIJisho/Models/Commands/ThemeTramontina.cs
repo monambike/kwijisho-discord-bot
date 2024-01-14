@@ -1,8 +1,12 @@
-﻿using DSharpPlus.CommandsNext;
+﻿using DSharpPlus;
+using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
 using KWIJisho.Models.Utils;
+using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
 namespace KWIJisho.Models.Commands
@@ -69,7 +73,8 @@ namespace KWIJisho.Models.Commands
                 internal async Task SetChristmasTheme(CommandContext commandContext)
                     => await SetTheme(commandContext, EmojiTheme.Christmas,
                         "🎅🏻🎁 FELIZ NATAL!! ☃️❄️",
-                        "O servidor acabou de entrar NO CLIMA NATALINO 🥳. BOAS FESTAS À TODOS.");
+                        "O servidor acabou de entrar NO CLIMA NATALINO 🥳. BOAS FESTAS À TODOS.",
+                        "🎅🏻🎁FELIZ NATAL❄️");
 
                 /// <summary>
                 /// Sets the Tramontina server to Easter Theme.
@@ -79,7 +84,8 @@ namespace KWIJisho.Models.Commands
                 internal async Task SetEasterTheme(CommandContext commandContext)
                     => await SetTheme(commandContext, EmojiTheme.Easter,
                         "🐇🥕 FELIZ PÁSCOA!! 🐣🥚",
-                        @"O coelhinho da páscoa deu um ""pulo"" no servidor! HAHAHA, PULO.. ESSA FOI BOA 🤭.");
+                        @"O coelhinho da páscoa deu um ""pulo"" no servidor! HAHAHA, PULO.. ESSA FOI BOA 🤭.",
+                        "🐇FELIZ PÁSCOA🐣");
 
                 /// <summary>
                 /// Sets the Tramontina server to Halloween Theme.
@@ -89,22 +95,55 @@ namespace KWIJisho.Models.Commands
                 internal async Task SetHalloweenTheme(CommandContext commandContext)
                     => await SetTheme(commandContext, EmojiTheme.Halloween,
                         "🕷️🕸️ FELIZ HALLOWEEN!! 🧟👻",
-                        "MUAHAHAHAWHWHA. O SERVIDOR ACABA DE ENTRAR EM CLIMA DE TERROR 🕷️🎃. SE PREPAREM PARA O PIOR DO **MEDO**.");
+                        "MUAHAHAHAWHWHA. O SERVIDOR ACABA DE ENTRAR EM CLIMA DE TERROR 🕷️🎃. SE PREPAREM PARA O PIOR DO **MEDO**.",
+                        "🕷️FELIZ HALLOWEEN👻");
 
                 /// <summary>
                 /// Sets the Tramontina server to a Theme according with parameterization.
                 /// </summary>
-                private async Task SetTheme(CommandContext commandContext, EmojiTheme emojiTheme, string title, string description)
+                private async Task SetTheme(CommandContext commandContext, EmojiTheme emojiTheme, string title, string description, string serverNameSuggestion = null)
                 {
-                    foreach (var tramontinaChannel in TramontinaChannels)
-                        tramontinaChannel.ChangeEmoji(commandContext, tramontinaChannel.EmojiTheme[emojiTheme]);
+                    // Initial message so user can know 
+                    await commandContext.Channel.SendMessageAsync("Só um segundinho... Vou botar as decorações então pode tomar um tempinho! ;P");
 
-                    await commandContext.Channel.SendMessageAsync(new DiscordEmbedBuilder
+                    // Modifies emoji from every mentioned channel
+                    //foreach (var tramontinaChannel in TramontinaChannels)
+                    //    tramontinaChannel.ChangeEmoji(commandContext, tramontinaChannel.EmojiTheme[emojiTheme]);
+
+                    // Send a message to show conclusion and deliever a suggested server name and picture
+                    string nomeDoServidor = string.IsNullOrEmpty(serverNameSuggestion) ? "Tramontina│Bizarre Adventures" : $"{serverNameSuggestion} - Tramontina│Bizarre Adventures";
+
+                    var fileName = $"128x128-mello-{emojiTheme.ToString().ToLower()}.png";
+                    var imagePath = Path.GetFullPath($"Resources/Images/Tramontina/{fileName}");
+                    // Message body
+                    var firstDiscordEmbedBuilder = new DiscordEmbedBuilder
                     {
                         Title = title,
-                        Description = description,
-                        Color = ConfigJson.DefaultColor.DiscordColor,
-                    });
+                        Description = $"{description}{Environment.NewLine}",
+                        Color = ConfigJson.DefaultColor.DiscordColor
+                    };
+
+                    // Message body
+                    var secondDiscordEmbedBuilder = new DiscordEmbedBuilder
+                    {
+                        Title = "TROQUE O NOME DO SERVER",
+                        Description = $"Que tal aproveitar e tentar **trocar o nome do servidor** pela minha sugestãozinha abaixo? ;D"
+                        + $"{Environment.NewLine}Sugestão de Nome do Servidor: `{nomeDoServidor}`",
+                        Color = ConfigJson.DefaultColor.DiscordColor
+                    }.WithImageUrl($"attachment://{imagePath}").Build();
+
+                    // Button to copy server name suggestion
+                    var button = new DiscordButtonComponent(ButtonStyle.Primary, "copy_server_name_suggestion", "Copiar Sugestão de Nome");
+
+                    // Sending the first message
+                    await commandContext.Channel.SendMessageAsync(new DiscordMessageBuilder()
+                        .AddEmbed(firstDiscordEmbedBuilder));
+
+                    // Sending the second message with the image and button
+                    await commandContext.Channel.SendMessageAsync(new DiscordMessageBuilder()
+                        .AddEmbed(secondDiscordEmbedBuilder)
+                        .AddFile(fileName, new FileStream(imagePath, FileMode.Open))
+                        .AddComponents(button));
                 }
             }
 
