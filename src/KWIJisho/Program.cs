@@ -9,7 +9,7 @@ namespace KWIJisho
         internal static void Main()
         {
             // Sets the default directory for being the "src/KWIJisho" folder
-            Directory.SetCurrentDirectory("../..");
+            Directory.SetCurrentDirectory("../../..");
 
             // Initializing the bot application
             var bot = new Bot();
