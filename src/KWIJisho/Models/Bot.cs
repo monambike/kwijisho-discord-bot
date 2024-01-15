@@ -73,7 +73,7 @@ namespace KWIJisho.Models
             switch (e.Id)
             {
                 // Copies server name suggestion
-                case "copy_server_name_suggestion": await CopyServerName(e); break;
+                //case "copy_server_name_suggestion": await CopyServerName(e); break;
             }
         }
 
@@ -85,7 +85,7 @@ namespace KWIJisho.Models
                 // Getting the message content, in other words, the discord server name to be copied
                 var message = e.Message.Embeds.FirstOrDefault().Description;
                 // Gets text into the clipboard
-                Clipboard.SetText(message);
+                //Clipboard.SetText(message);
             });
             // Settings thread to Single-Threaded Apartment and running code
             thread.SetApartmentState(ApartmentState.STA);
