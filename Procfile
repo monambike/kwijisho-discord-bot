@@ -1,0 +1,1 @@
+Worker: src/KWIJisho/bin/Debug/net8.0-windows/KWIJisho.exe
