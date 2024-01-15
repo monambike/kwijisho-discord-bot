@@ -1,5 +1,6 @@
 ﻿using DSharpPlus.Entities;
 using Newtonsoft.Json;
+using System;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,7 +25,14 @@ namespace KWIJisho.Models
         private string _configJsonToken;
         [JsonProperty("token")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization, since 'DeserializeObject' needs non-static property. And it's value is being bypassed to its static property.")]
-        private string ConfigJsonToken { get => _configJsonToken; set => _configJsonToken = Token = value; }
+        private string ConfigJsonToken { get => _configJsonToken; set
+            {
+                _configJsonToken = value;
+
+                var token = Environment.GetEnvironmentVariable("Token");
+                Token = token ?? _configJsonToken;
+            }
+        }
 
         private string _configJsonPrefix;
         [JsonProperty("prefix")]
