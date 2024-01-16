@@ -29,7 +29,7 @@ namespace KWIJisho.Models
             {
                 _configJsonToken = value;
 
-                var token = Environment.GetEnvironmentVariable("Token");
+                var token = Environment.GetEnvironmentVariable("TOKEN");
                 Token = token ?? _configJsonToken;
             }
         }
