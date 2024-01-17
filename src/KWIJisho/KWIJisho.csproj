@@ -72,4 +72,9 @@
     <PackageReference Include="DSharpPlus.Interactivity" Version="4.4.2" />
     <PackageReference Include="Emzi0767.Common" Version="2.6.6" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
