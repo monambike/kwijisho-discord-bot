@@ -62,7 +62,6 @@ namespace KWIJisho.Models
         private DiscordClient RegisterAllBotEvents()
         {
             DiscordClient.Ready += BotStart.OnClientReady;
-            DiscordClient.MessageCreated += MessageReceived.OnMessageReceived;
             DiscordClient.ComponentInteractionCreated += Buttons.OnComponentInteractionCreatedAsync;
             DiscordClient.GuildMemberAdded += GoodbyeWelcome.OnGuildMemberAddedAsync;
             DiscordClient.GuildMemberRemoved += GoodbyeWelcome.OnGuildMemberRemovedAsync;
