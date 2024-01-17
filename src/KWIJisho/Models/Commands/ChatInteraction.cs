@@ -6,12 +6,12 @@ namespace KWIJisho.Models.Commands
     {
         internal partial class ChatInteraction : BaseCommandModule
         {
-            internal void Hello()
+            internal static void Hello()
             {
                  
             }
 
-            internal void GoodMorning()
+            internal static void GoodMorning()
             {
 
             }

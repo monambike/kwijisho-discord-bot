@@ -15,50 +15,50 @@ namespace KWIJisho.Models.Commands
     {
         internal partial class Theme
         {
-            internal partial class Tramontina : BaseCommandModule
+            internal class Tramontina : BaseCommandModule
             {
                 // Text Channels
-                internal static readonly TramontinaChannel Geral = new TramontinaChannel(692588978959941656, "geral", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel Geral = new(692588978959941656, "geral", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "💬" }, { EmojiTheme.Christmas, "🍪" }, { EmojiTheme.Easter, "🐇" }, { EmojiTheme.Halloween, "🎃" }  });
-                internal static readonly TramontinaChannel PrintsEternizados = new TramontinaChannel(841452121983418418, "prints-eternizados", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel PrintsEternizados = new(841452121983418418, "prints-eternizados", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "💾" }, { EmojiTheme.Christmas, "🥛" }, { EmojiTheme.Easter, "🐰" }, { EmojiTheme.Halloween, "👺" }  });
                 // Organized Text Channels
-                internal static readonly TramontinaChannel YouTube = new TramontinaChannel(1142723035447705600, "youtube", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel YouTube = new(1142723035447705600, "youtube", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "📹" }, { EmojiTheme.Christmas, "🌟" }, { EmojiTheme.Easter, "🍫" }, { EmojiTheme.Halloween, "🍭" } });
-                internal static readonly TramontinaChannel Dicionario = new TramontinaChannel(1143020466190172220, "dicionario", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel Dicionario = new(1143020466190172220, "dicionario", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "📖" }, { EmojiTheme.Christmas, "⛄" }, { EmojiTheme.Easter, "🥕" }, { EmojiTheme.Halloween, "🔮" } });
                 // Bot Channels
-                internal static readonly TramontinaChannel Waifu = new TramontinaChannel(692591710466998272, "waifu", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel Waifu = new(692591710466998272, "waifu", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "💘" }, { EmojiTheme.Christmas, "💝" }, { EmojiTheme.Easter, "🌷" }, { EmojiTheme.Halloween, "🍬" } });
-                internal static readonly TramontinaChannel Radio = new TramontinaChannel(841136093813538827, "radio", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel Radio = new(841136093813538827, "radio", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "📻" }, { EmojiTheme.Christmas, "🎶" }, { EmojiTheme.Easter, "🙏🏻" }, { EmojiTheme.Halloween, "💀" } });
-                internal static readonly TramontinaChannel OutrosBots = new TramontinaChannel(693742473155182663, "outros-bots", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel OutrosBots = new(693742473155182663, "outros-bots", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "🤖" }, { EmojiTheme.Christmas, "⛄" }, { EmojiTheme.Easter, "🧺" }, { EmojiTheme.Halloween, "🧟" } });
                 // Voice Channels
-                internal static readonly TramontinaChannel CanalEscondidinho = new TramontinaChannel(1010349376922722436, "Canal Escondidinho", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel CanalEscondidinho = new(1010349376922722436, "Canal Escondidinho", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "🏃🏻💨" }, { EmojiTheme.Christmas, "🎁🧦" }, { EmojiTheme.Easter, "🐣🌱" }, { EmojiTheme.Halloween, "🏰👻" } });
-                internal static readonly TramontinaChannel CorpoDeBombeiros1 = new TramontinaChannel(929778181458767932, "Corpo de Bombeiros 1", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel CorpoDeBombeiros1 = new(929778181458767932, "Corpo de Bombeiros 1", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "👨🏻🚒" }, { EmojiTheme.Christmas, "🎅🏻🛷" }, { EmojiTheme.Easter, "🐥🥚" }, { EmojiTheme.Halloween, "🧛🏻🩸" } });
-                internal static readonly TramontinaChannel CorpoDeBombeiros2 = new TramontinaChannel(826257065303474186, "Corpo de Bombeiros 2", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel CorpoDeBombeiros2 = new(826257065303474186, "Corpo de Bombeiros 2", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "👩🏻🚒" }, { EmojiTheme.Christmas, "🤶🏻🛷" }, { EmojiTheme.Easter, "🐤🥚" }, { EmojiTheme.Halloween, "🧛🏻🩸" } });
-                internal static readonly TramontinaChannel CantinhoDaFofoca = new TramontinaChannel(692588979404669018, "Cantinho da Fofoca", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel CantinhoDaFofoca = new(692588979404669018, "Cantinho da Fofoca", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "👥💅🏻" }, { EmojiTheme.Christmas, "🍷🍴" }, { EmojiTheme.Easter, "🌸🐝" }, { EmojiTheme.Halloween, "🤡🎈" } });
 
                 /// <summary>
                 /// Channels from tramontina server that can receive theme changing.
                 /// </summary>
-                private static readonly List<TramontinaChannel> TramontinaChannels = new List<TramontinaChannel>
-                {
+                private static readonly List<TramontinaChannel> TramontinaChannels =
+                [
                     Geral, PrintsEternizados, // Text Channels
                     YouTube, Dicionario, // Organized Text Channels
                     Waifu, Radio, OutrosBots, // Bot Channels
                     CanalEscondidinho, CorpoDeBombeiros1, CorpoDeBombeiros2, CantinhoDaFofoca // Voice Channels
-                };
+                ];
 
                 /// <summary>
                 /// Resets the Tramontina server emojis.
                 /// </summary>
-                internal Command themeReset = new Command("themeReset", @"Define o servidor para o tema padrão.", ThemeGroup, true);
+                internal Command themeReset = new("themeReset", @"Define o servidor para o tema padrão.", ThemeGroup, true);
                 [Command(nameof(themeReset))]
                 internal async Task ResetTheme(CommandContext commandContext)
                     => await SetTheme(commandContext, EmojiTheme.Default,
@@ -68,7 +68,7 @@ namespace KWIJisho.Models.Commands
                 /// <summary>
                 /// Sets the Tramontina server to Christmas Theme.
                 /// </summary>
-                internal Command themeChristmas = new Command("themeChristmas", @"Define o servidor para o tema de natal.", ThemeGroup, true);
+                internal Command themeChristmas = new("themeChristmas", @"Define o servidor para o tema de natal.", ThemeGroup, true);
                 [Command(nameof(themeChristmas))]
                 internal async Task SetChristmasTheme(CommandContext commandContext)
                     => await SetTheme(commandContext, EmojiTheme.Christmas,
@@ -79,7 +79,7 @@ namespace KWIJisho.Models.Commands
                 /// <summary>
                 /// Sets the Tramontina server to Easter Theme.
                 /// </summary>
-                internal Command themeEaster = new Command("themeEaster", @"Define o servidor para o tema de páscoa.", ThemeGroup, true);
+                internal Command themeEaster = new("themeEaster", @"Define o servidor para o tema de páscoa.", ThemeGroup, true);
                 [Command(nameof(themeEaster))]
                 internal async Task SetEasterTheme(CommandContext commandContext)
                     => await SetTheme(commandContext, EmojiTheme.Easter,
@@ -90,7 +90,7 @@ namespace KWIJisho.Models.Commands
                 /// <summary>
                 /// Sets the Tramontina server to Halloween Theme.
                 /// </summary>
-                internal Command themeHalloween = new Command("themeHalloween", @"Define o servidor para o tema de halloween.", ThemeGroup, true);
+                internal Command themeHalloween = new("themeHalloween", @"Define o servidor para o tema de halloween.", ThemeGroup, true);
                 [Command(nameof(themeHalloween))]
                 internal async Task SetHalloweenTheme(CommandContext commandContext)
                     => await SetTheme(commandContext, EmojiTheme.Halloween,
@@ -101,7 +101,7 @@ namespace KWIJisho.Models.Commands
                 /// <summary>
                 /// Sets the Tramontina server to a Theme according with parameterization.
                 /// </summary>
-                private async Task SetTheme(CommandContext commandContext, EmojiTheme emojiTheme, string title, string description, string serverNameSuggestion = null)
+                private static async Task SetTheme(CommandContext commandContext, EmojiTheme emojiTheme, string title, string description, string serverNameSuggestion = null)
                 {
                     // Initial message so user can know 
                     await commandContext.Channel.SendMessageAsync("Só um segundinho... Vou botar as decorações então pode tomar um tempinho! ;P");

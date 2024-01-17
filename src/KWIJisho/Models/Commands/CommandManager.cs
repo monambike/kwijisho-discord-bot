@@ -10,10 +10,10 @@ namespace KWIJisho.Models.Commands
     /// </summary>
     internal static partial class CommandManager
     {
-        internal static List<CommandGroup> CommandGroups { get; set; } = new List<CommandGroup>();
+        internal static List<CommandGroup> CommandGroups { get; set; } = [];
 
+        internal static CommandGroup ChatGptGroup { get { return new CommandGroup("ChatGpt"); } }
         internal static CommandGroup InfoGroup { get { return new CommandGroup("Informational"); } }
-        internal static CommandGroup DictionaryGroup { get { return new CommandGroup("Dictionary"); } }
         internal static CommandGroup ThemeGroup { get { return new CommandGroup("Theme"); } }
     }
 
@@ -51,7 +51,7 @@ namespace KWIJisho.Models.Commands
     {
         internal string Name { get; set; }
 
-        internal List<Command> Commands { get; set; } = new List<Command>();
+        internal List<Command> Commands { get; set; } = [];
 
         internal CommandGroup(string name)
         {

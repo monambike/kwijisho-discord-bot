@@ -1,11 +1,7 @@
 ﻿using DSharpPlus;
 using DSharpPlus.CommandsNext;
-using DSharpPlus.Entities;
-using DSharpPlus.EventArgs;
 using KWIJisho.Models.Commands;
-using System.IO;
-using System.Linq;
-using System.Threading;
+using KWIJisho.Models.Events;
 using System.Threading.Tasks;
 
 namespace KWIJisho.Models
@@ -23,7 +19,7 @@ namespace KWIJisho.Models
             // Defining initial bot settings
             var discordConfiguration = new DiscordConfiguration
             {
-                Token = ConfigJson.Token,
+                Token = ConfigJson.KWIJishoToken,
                 TokenType = TokenType.Bot,
                 AutoReconnect = true,
                 MinimumLogLevel = Microsoft.Extensions.Logging.LogLevel.Debug,
@@ -32,7 +28,7 @@ namespace KWIJisho.Models
 
             // DiscordClients instance and events
             DiscordClient = new DiscordClient(discordConfiguration);
-            DiscordClient = RegisterAllBotEvents(DiscordClient);
+            DiscordClient = RegisterAllBotEvents();
 
             // Defining bot commands settings and registering commands
             var commandsNextConfiguration = new CommandsNextConfiguration
@@ -58,67 +54,20 @@ namespace KWIJisho.Models
 
         private void RegisterAllBotCommands()
         {
+            Commands.RegisterCommands<CommandManager.KwiGpt>();
             Commands.RegisterCommands<CommandManager.Info>();
             Commands.RegisterCommands<CommandManager.Theme.Tramontina>();
         }
 
-        private DiscordClient RegisterAllBotEvents(DiscordClient discordConfiguration)
+        private DiscordClient RegisterAllBotEvents()
         {
-            // Events
-            DiscordClient.Ready += OnClientReady;
-            DiscordClient.MessageCreated += OnMessageReceived;
-            DiscordClient.ComponentInteractionCreated += OnComponentInteractionCreatedAsync;
-            DiscordClient.GuildMemberAdded += OnGuildMemberAddedAsync;
-            DiscordClient.GuildMemberRemoved += OnGuildMemberRemovedAsync;
+            DiscordClient.Ready += BotStart.OnClientReady;
+            DiscordClient.MessageCreated += MessageReceived.OnMessageReceived;
+            DiscordClient.ComponentInteractionCreated += Buttons.OnComponentInteractionCreatedAsync;
+            DiscordClient.GuildMemberAdded += GoodbyeWelcome.OnGuildMemberAddedAsync;
+            DiscordClient.GuildMemberRemoved += GoodbyeWelcome.OnGuildMemberRemovedAsync;
 
             return DiscordClient;
-        }
-
-        private Task OnClientReady(object sender, ReadyEventArgs e)
-        {
-            return Task.CompletedTask;
-        }
-
-        private async Task CopyServerName(ComponentInteractionCreateEventArgs e)
-        {
-            // Use a thread in STA mode to set the clipboard text
-            Thread thread = new Thread(() =>
-            {
-                // Getting the message content, in other words, the discord server name to be copied
-                var message = e.Message.Embeds.FirstOrDefault().Description;
-                // Gets text into the clipboard
-                //Clipboard.SetText(message);
-            });
-            // Settings thread to Single-Threaded Apartment and running code
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-            thread.Join();
-
-            // Feedback message from the bot that you got the server name on clipboard
-            await e.Interaction.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource,
-                new DiscordInteractionResponseBuilder().WithContent("Prontinho, o nome do servidor tá no seu Ctrl+C Ctrl+V! ;D"));
-        }
-
-        private async Task ValidateMentionedUsers(MessageCreateEventArgs e)
-        {
-            // Get the username of the message author
-            string authorName = e.Author.Username;
-
-            // Get mentioned user
-            if (e.MentionedUsers.Count == 1)
-            {
-                string mentionedName = e.MentionedUsers[0].Username;
-                // Someone mentioned another user
-                await e.Message.RespondAsync($"Desculpa me intrometer, eu nem ia falar nada não {authorName} mas o {mentionedName} é um tremendo de um babaca.. 😶");
-                await e.Message.RespondAsync($"A");
-                await e.Channel.SendMessageAsync($"Aah!.. Ele tá ai!.. E-eu não tinha reparado.. 😳 O-oi {mentionedName} tudo bem com você?! A gente tava falando de você agora pouco 👀🙈");
-            }
-            else if (e.MentionedUsers.Count > 1)
-            {
-                string mentionedName = e.MentionedUsers[0].Username;
-                // Someone mentioned more than a user
-                await e.Message.RespondAsync($"Desculpa me intrometer, eu nem ia falar nada não {authorName} mas o {mentionedName} é um tremendo de um babaca.. 😶");
-            }
         }
     }
 }

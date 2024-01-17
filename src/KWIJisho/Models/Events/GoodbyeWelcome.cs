@@ -1,33 +1,18 @@
 ﻿using DSharpPlus;
 using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
+using KWIJisho.Models.Utils;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace KWIJisho.Models
+namespace KWIJisho.Models.Events
 {
-    internal partial class Bot
+    internal class GoodbyeWelcome
     {
-        private async Task OnComponentInteractionCreatedAsync(DiscordClient sender, ComponentInteractionCreateEventArgs e)
+        internal static async Task OnGuildMemberAddedAsync(DiscordClient sender, GuildMemberAddEventArgs e)
         {
-            /// Handling interactions with Id incoming from <param name="e"></param>
-            switch (e.Id)
-            {
-                // Copies server name suggestion
-                //case "copy_server_name_suggestion": await CopyServerName(e); break;
-            }
-        }
-        private async Task OnMessageReceived(DiscordClient sender, MessageCreateEventArgs e)
-        {
-            if (e.Author.IsBot) return; // Ignore messages from other bots
-
-            await ValidateMentionedUsers(e);
-        }
-
-        private async Task OnGuildMemberAddedAsync(DiscordClient sender, GuildMemberAddEventArgs e)
-        {
+            ArgumentNullException.ThrowIfNull(sender);
             // Getting welcome image info
             var fileName = $"500x500-welcome.gif";
             var imagePath = Path.GetFullPath($"Resources/Images/Tramontina/{fileName}");
@@ -48,8 +33,10 @@ namespace KWIJisho.Models
             // Sending the message on welcome channel
             await e.Guild.GetChannel(842222447410544650).SendMessageAsync(discordMessageBuilder);
         }
-        private async Task OnGuildMemberRemovedAsync(DiscordClient sender, GuildMemberRemoveEventArgs e)
+
+        internal static async Task OnGuildMemberRemovedAsync(DiscordClient sender, GuildMemberRemoveEventArgs e)
         {
+            ArgumentNullException.ThrowIfNull(sender);
             var message = $"{e.Member.Username} Change Da World My Final Message...GoodBye";
 
 
@@ -82,34 +69,28 @@ namespace KWIJisho.Models
             await generalChannel.SendMessageAsync(message);
         }
 
-        private static string GetRandomWelcomeMessage(string user)
-        {
+        /// <summary>
+        /// Gets a random welcome message.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        internal static string GetRandomWelcomeMessage(string user) => List.GetRandomValueFromList([
+            $"EAEEEEEE, Bem-vindo ao servidor {user} meu consagrado! ;D",
+            $"SEJA BEM V-V-V-VIIIIIIIIIIIINDO AO TRA-MON-TINAAAA 🎉 {user}",
+            $"Como vai parceiro? 😎 Aproveite a sua estadia por aqui e se precisar de alguma titia KAWAI JISHO TÁ NA ÁAAAREA",
+            $"Bem-vindo ao servidor MAIS LEGAL DE TODOS, com o bot mais legal da face da terra hehehe 😎 (vulgo euzinha)"
+        ]);
 
-            List<string> welcomeMessages = new List<string>
-            {
-                $"EAEEEEEE, Bem-vindo ao servidor {user} meu consagrado! ;D",
-                $"SEJA BEM V-V-V-VIIIIIIIIIIIINDO AO TRA-MON-TINAAAA 🎉 {user}",
-                $"Como vai parceiro? 😎 Aproveite a sua estadia por aqui e se precisar de alguma titia KAWAI JISHO TÁ NA ÁAAAREA",
-                $"Bem-vindo ao servidor MAIS LEGAL DE TODOS, com o bot mais legal da face da terra hehehe 😎 (vulgo euzinha)"
-            };
-
-            int randomIndex = new Random().Next(welcomeMessages.Count);
-            return welcomeMessages[randomIndex];
-        }
-
-        private static string GetRandomGoodbyeMessage(string user)
-        {
-
-            List<string> welcomeMessages = new List<string>
-            {
-                $"Até logo amigo.. Foi bom te conhecer {user} :(",
-                $"Já vai tarde.. BRINCADEIRINHA HAHAHA... Ai mas não.. falando sério, vai fazer falta 🙁 {user}",
-                $"NÃAAO, partiu ainda tão tão joveeeeeeeeem 😭😭😭😭 Sentiremos sua falta {user}..",
-                $"Pera.. Essa pessoa.. Fazia parte desse servidor? 🤔 podia jurar que vi num servidor furry.. Q-Quer dizer.. 😦😶 Não que eu também esteja lá, me adicionaram contra minha vontade!"
-            };
-
-            int randomIndex = new Random().Next(welcomeMessages.Count);
-            return welcomeMessages[randomIndex];
-        }
+        /// <summary>
+        /// Gets a random goodbye message.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        internal static string GetRandomGoodbyeMessage(string user) => List.GetRandomValueFromList([
+            $"Até logo amigo.. Foi bom te conhecer {user} :(",
+            $"Já vai tarde.. BRINCADEIRINHA HAHAHA... Ai mas não.. falando sério, vai fazer falta 🙁 {user}",
+            $"NÃAAO, partiu ainda tão tão joveeeeeeeeem 😭😭😭😭 Sentiremos sua falta {user}..",
+            $"Pera.. Essa pessoa.. Fazia parte desse servidor? 🤔 podia jurar que vi num servidor furry.. Q-Quer dizer.. 😦😶 Não que eu também esteja lá, me adicionaram contra minha vontade!"
+        ]);
     }
 }
