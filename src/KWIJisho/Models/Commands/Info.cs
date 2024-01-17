@@ -1,6 +1,7 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
+using ExtensionMethods;
 using System;
 using System.Threading.Tasks;
 
@@ -30,7 +31,7 @@ namespace KWIJisho.Models.Commands
                 {
                     string content = "";
                     foreach (var discordCommand in commandGroup.Commands)
-                        content += $"**{ConfigJson.Prefix}{discordCommand.Name}:** {discordCommand.Description}{Environment.NewLine}";
+                        content += $"{ConfigJson.Prefix}{discordCommand.Name}:".ToDiscordBold() + $"{discordCommand.Description}{Environment.NewLine}";
                     discordEmbedBuilder.AddField(commandGroup.Name, content);
                 }
 

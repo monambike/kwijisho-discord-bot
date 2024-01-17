@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExtensionMethods;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -37,7 +38,7 @@ namespace KWIJisho.Models.Commands
         }
 
         internal Command(string name, string description, CommandGroup group, bool ownerCommand)
-            : this(name, $"{description}{Environment.NewLine}*Esse comando só pode ser executado pelo dono do bot*", group)
+            : this(name, $"{description}{Environment.NewLine}" + "Esse comando só pode ser executado pelo dono do bot".ToDiscordItalic(), group)
         {
             OwnerCommand = ownerCommand;
         }

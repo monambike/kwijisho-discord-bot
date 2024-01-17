@@ -7,19 +7,20 @@ using System.IO;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows;
 
 namespace KWIJisho.Models
 {
-    internal class Bot
+    internal partial class Bot
     {
         internal DiscordClient DiscordClient { get; private set; }
         internal CommandsNextExtension Commands { get; private set; }
 
         internal async Task RunAsync()
         {
+            // Getting info from Json file and setting into the ConfigJson class
             await ConfigJson.DeserializeConfigJsonFileAsync();
-            
+
+            // Defining initial bot settings
             var discordConfiguration = new DiscordConfiguration
             {
                 Token = ConfigJson.Token,
@@ -31,11 +32,9 @@ namespace KWIJisho.Models
 
             // DiscordClients instance and events
             DiscordClient = new DiscordClient(discordConfiguration);
-            // Events
-            DiscordClient.Ready += OnClientReady;
-            DiscordClient.MessageCreated += OnMessageReceived;
-            DiscordClient.ComponentInteractionCreated += OnComponentInteractionCreatedAsync;
+            DiscordClient = RegisterAllBotEvents(DiscordClient);
 
+            // Defining bot commands settings and registering commands
             var commandsNextConfiguration = new CommandsNextConfiguration
             {
                 StringPrefixes = new string[] { ConfigJson.Prefix },
@@ -43,15 +42,16 @@ namespace KWIJisho.Models
                 EnableMentionPrefix = true,
                 EnableDefaultHelp = false
             };
-
             Commands = DiscordClient.UseCommandsNext(commandsNextConfiguration);
             RegisterAllBotCommands();
 
+            // Connecting to the bot
             await DiscordClient.ConnectAsync();
 
             // This code block will be executed when the bot is ready and connected to Discord.
-            var channel = await DiscordClient.GetChannelAsync(737541664775602269);
+            var channel = await DiscordClient.GetChannelAsync(737541664775602269); // My main personal server's channel
             if (channel != null) await channel.SendMessageAsync("Olá!! Agora eu tô online e prontíssima pra ajudar! 🥳🎉🎉");
+
 
             await Task.Delay(-1);
         }
@@ -62,19 +62,21 @@ namespace KWIJisho.Models
             Commands.RegisterCommands<CommandManager.Theme.Tramontina>();
         }
 
+        private DiscordClient RegisterAllBotEvents(DiscordClient discordConfiguration)
+        {
+            // Events
+            DiscordClient.Ready += OnClientReady;
+            DiscordClient.MessageCreated += OnMessageReceived;
+            DiscordClient.ComponentInteractionCreated += OnComponentInteractionCreatedAsync;
+            DiscordClient.GuildMemberAdded += OnGuildMemberAddedAsync;
+            DiscordClient.GuildMemberRemoved += OnGuildMemberRemovedAsync;
+
+            return DiscordClient;
+        }
+
         private Task OnClientReady(object sender, ReadyEventArgs e)
         {
             return Task.CompletedTask;
-        }
-
-        private async Task OnComponentInteractionCreatedAsync(DiscordClient sender, ComponentInteractionCreateEventArgs e)
-        {
-            /// Handling interactions with Id incoming from <param name="e"></param>
-            switch (e.Id)
-            {
-                // Copies server name suggestion
-                //case "copy_server_name_suggestion": await CopyServerName(e); break;
-            }
         }
 
         private async Task CopyServerName(ComponentInteractionCreateEventArgs e)
@@ -95,13 +97,6 @@ namespace KWIJisho.Models
             // Feedback message from the bot that you got the server name on clipboard
             await e.Interaction.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource,
                 new DiscordInteractionResponseBuilder().WithContent("Prontinho, o nome do servidor tá no seu Ctrl+C Ctrl+V! ;D"));
-        }
-
-        private async Task OnMessageReceived(DiscordClient sender, MessageCreateEventArgs e)
-        {
-            if (e.Author.IsBot) return; // Ignore messages from other bots
-
-            await ValidateMentionedUsers(e);
         }
 
         private async Task ValidateMentionedUsers(MessageCreateEventArgs e)

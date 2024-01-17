@@ -2,11 +2,11 @@
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
+using ExtensionMethods;
 using KWIJisho.Models.Utils;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
 namespace KWIJisho.Models.Commands
@@ -18,30 +18,30 @@ namespace KWIJisho.Models.Commands
             internal partial class Tramontina : BaseCommandModule
             {
                 // Text Channels
-                private static readonly TramontinaChannel Geral = new TramontinaChannel(692588978959941656, "geral", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel Geral = new TramontinaChannel(692588978959941656, "geral", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "💬" }, { EmojiTheme.Christmas, "🍪" }, { EmojiTheme.Easter, "🐇" }, { EmojiTheme.Halloween, "🎃" }  });
-                private static readonly TramontinaChannel PrintsEternizados = new TramontinaChannel(841452121983418418, "prints-eternizados", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel PrintsEternizados = new TramontinaChannel(841452121983418418, "prints-eternizados", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "💾" }, { EmojiTheme.Christmas, "🥛" }, { EmojiTheme.Easter, "🐰" }, { EmojiTheme.Halloween, "👺" }  });
                 // Organized Text Channels
-                private static readonly TramontinaChannel YouTube = new TramontinaChannel(1142723035447705600, "youtube", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel YouTube = new TramontinaChannel(1142723035447705600, "youtube", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "📹" }, { EmojiTheme.Christmas, "🌟" }, { EmojiTheme.Easter, "🍫" }, { EmojiTheme.Halloween, "🍭" } });
-                private static readonly TramontinaChannel Dicionario = new TramontinaChannel(1143020466190172220, "dicionario", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel Dicionario = new TramontinaChannel(1143020466190172220, "dicionario", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "📖" }, { EmojiTheme.Christmas, "⛄" }, { EmojiTheme.Easter, "🥕" }, { EmojiTheme.Halloween, "🔮" } });
                 // Bot Channels
-                private static readonly TramontinaChannel Waifu = new TramontinaChannel(692591710466998272, "waifu", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel Waifu = new TramontinaChannel(692591710466998272, "waifu", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "💘" }, { EmojiTheme.Christmas, "💝" }, { EmojiTheme.Easter, "🌷" }, { EmojiTheme.Halloween, "🍬" } });
-                private static readonly TramontinaChannel Radio = new TramontinaChannel(841136093813538827, "radio", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel Radio = new TramontinaChannel(841136093813538827, "radio", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "📻" }, { EmojiTheme.Christmas, "🎶" }, { EmojiTheme.Easter, "🙏🏻" }, { EmojiTheme.Halloween, "💀" } });
-                private static readonly TramontinaChannel OutrosBots = new TramontinaChannel(693742473155182663, "outros-bots", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel OutrosBots = new TramontinaChannel(693742473155182663, "outros-bots", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "🤖" }, { EmojiTheme.Christmas, "⛄" }, { EmojiTheme.Easter, "🧺" }, { EmojiTheme.Halloween, "🧟" } });
                 // Voice Channels
-                private static readonly TramontinaChannel CanalEscondidinho = new TramontinaChannel(1010349376922722436, "Canal Escondidinho", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel CanalEscondidinho = new TramontinaChannel(1010349376922722436, "Canal Escondidinho", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "🏃🏻💨" }, { EmojiTheme.Christmas, "🎁🧦" }, { EmojiTheme.Easter, "🐣🌱" }, { EmojiTheme.Halloween, "🏰👻" } });
-                private static readonly TramontinaChannel CorpoDeBombeiros1 = new TramontinaChannel(929778181458767932, "Corpo de Bombeiros 1", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel CorpoDeBombeiros1 = new TramontinaChannel(929778181458767932, "Corpo de Bombeiros 1", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "👨🏻🚒" }, { EmojiTheme.Christmas, "🎅🏻🛷" }, { EmojiTheme.Easter, "🐥🥚" }, { EmojiTheme.Halloween, "🧛🏻🩸" } });
-                private static readonly TramontinaChannel CorpoDeBombeiros2 = new TramontinaChannel(826257065303474186, "Corpo de Bombeiros 2", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel CorpoDeBombeiros2 = new TramontinaChannel(826257065303474186, "Corpo de Bombeiros 2", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "👩🏻🚒" }, { EmojiTheme.Christmas, "🤶🏻🛷" }, { EmojiTheme.Easter, "🐤🥚" }, { EmojiTheme.Halloween, "🧛🏻🩸" } });
-                private static readonly TramontinaChannel CantinhoDaFofoca = new TramontinaChannel(692588979404669018, "Cantinho da Fofoca", new Dictionary<EmojiTheme, string>
+                internal static readonly TramontinaChannel CantinhoDaFofoca = new TramontinaChannel(692588979404669018, "Cantinho da Fofoca", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "👥💅🏻" }, { EmojiTheme.Christmas, "🍷🍴" }, { EmojiTheme.Easter, "🌸🐝" }, { EmojiTheme.Halloween, "🤡🎈" } });
 
                 /// <summary>
@@ -95,7 +95,7 @@ namespace KWIJisho.Models.Commands
                 internal async Task SetHalloweenTheme(CommandContext commandContext)
                     => await SetTheme(commandContext, EmojiTheme.Halloween,
                         "🕷️🕸️ FELIZ HALLOWEEN!! 🧟👻",
-                        "MUAHAHAHAWHWHA. O SERVIDOR ACABA DE ENTRAR EM CLIMA DE TERROR 🕷️🎃. SE PREPAREM PARA O PIOR DO **MEDO**.",
+                        $"MUAHAHAHAWHWHA. O SERVIDOR ACABA DE ENTRAR EM CLIMA DE TERROR 🕷️🎃. SE PREPAREM PARA O PIOR DO {"MEDO".ToDiscordBold()}.",
                         "🎃FELIZ HALLOWEEN👻");
 
                 /// <summary>
@@ -130,7 +130,7 @@ namespace KWIJisho.Models.Commands
                     var secondDiscordEmbedBuilder = new DiscordEmbedBuilder
                     {
                         Title = "TROQUE O NOME DO SERVER",
-                        Description = $"Que tal aproveitar e tentar **trocar o nome do servidor** pela minha sugestãozinha abaixo? ;D",
+                        Description = $"Que tal aproveitar e tentar {"trocar o nome do servidor".ToDiscordBold()} pela minha sugestãozinha abaixo? ;D",
                         Color = ConfigJson.DefaultColor.DiscordColor
                     }.WithImageUrl($"attachment://{imagePath}").Build();
 
