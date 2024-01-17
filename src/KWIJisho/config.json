@@ -1,7 +1,7 @@
 {
   "prefix": "!",
-  "token": "insert-your-token",
-  "activity": "Hollow Knight! Ayaya!! ^^ Manda um ponto de exclama��o '!' pra me chamar!!",
+  "kwijishoToken": "insert-your-token",
+  "chatgptToken": "insert-your-token",
   "purpleColor": {
     "red": 77,
     "green": 18,
