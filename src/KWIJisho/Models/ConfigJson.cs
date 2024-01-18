@@ -1,5 +1,6 @@
 ﻿using DSharpPlus.Entities;
 using Newtonsoft.Json;
+using OpenAI_API.Moderation;
 using System;
 using System.IO;
 using System.Text;
@@ -15,6 +16,8 @@ namespace KWIJisho.Models
 
         internal static string ChatGptToken { get; set; }
 
+        internal static string NasaToken { get; set; }
+
         internal static string Prefix { get; set; }
 
         internal static string Activity { get; set; }
@@ -26,7 +29,7 @@ namespace KWIJisho.Models
         // Note: Notice that they update the internal static properties on their value set.
         private string _configJsonKWIJishoToken;
         [JsonProperty("kwijishoToken")]
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization, since 'DeserializeObject' needs non-static property. And it's value is being bypassed to its static property.")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization.")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0251:Make member 'readonly'", Justification = "It's being set on Json file.")]
         private string ConfigJsonKWIJishoToken
         {
@@ -41,7 +44,7 @@ namespace KWIJisho.Models
 
         private string _configJsonChatGptToken;
         [JsonProperty("chatgptToken")]
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization, since 'DeserializeObject' needs non-static property. And it's value is being bypassed to its static property.")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization.")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0251:Make member 'readonly'", Justification = "It's being set on Json file.")]
         private string ConfigJsonChatGptToken
         {
@@ -51,6 +54,21 @@ namespace KWIJisho.Models
 
                 var chatgptToken = Environment.GetEnvironmentVariable("CHATGPT_TOKEN");
                 ChatGptToken = chatgptToken ?? _configJsonChatGptToken;
+            }
+        }
+
+        private string _configJsonNasaToken;
+        [JsonProperty("nasaToken")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization.")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0251:Make member 'readonly'", Justification = "It's being set on Json file.")]
+        private string ConfigJsonNasaToken
+        {
+            get => _configJsonNasaToken; set
+            {
+                _configJsonNasaToken = value;
+
+                var nasaToken = Environment.GetEnvironmentVariable("NASA_TOKEN");
+                NasaToken = nasaToken ?? _configJsonNasaToken;
             }
         }
 

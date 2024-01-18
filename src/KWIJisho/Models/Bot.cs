@@ -54,6 +54,7 @@ namespace KWIJisho.Models
 
         private void RegisterAllBotCommands()
         {
+            Commands.RegisterCommands<CommandManager.Nasa>();
             Commands.RegisterCommands<CommandManager.KwiGpt>();
             Commands.RegisterCommands<CommandManager.Info>();
             Commands.RegisterCommands<CommandManager.Theme.Tramontina>();
