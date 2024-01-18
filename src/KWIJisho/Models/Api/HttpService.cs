@@ -18,8 +18,9 @@ namespace KWIJisho.Models.Apis
         internal static async Task<string> GetAsync(HttpClient httpClient, string strRequest)
         {
             // Tries to make the request with the base address and the request
+            // for URI validation
             Uri.TryCreate($"{httpClient.BaseAddress}{strRequest}", UriKind.Absolute, out Uri request);
-
+            // If current URI is valid, makes the requisition and returns the response
             using HttpResponseMessage response = await httpClient.GetAsync(request);
             return await response.Content.ReadAsStringAsync();
         }
