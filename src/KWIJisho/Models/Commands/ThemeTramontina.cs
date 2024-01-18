@@ -58,7 +58,7 @@ namespace KWIJisho.Models.Commands
                 /// <summary>
                 /// Resets the Tramontina server emojis.
                 /// </summary>
-                internal Command themeReset = new("themeReset", @"Define o servidor para o tema padrão.", ThemeGroup, true);
+                internal Command themeReset = new(nameof(themeReset), @"Define o servidor para o tema padrão.", ThemeGroup, true);
                 [Command(nameof(themeReset))]
                 internal async Task ResetTheme(CommandContext commandContext)
                     => await SetTheme(commandContext, EmojiTheme.Default,
@@ -68,7 +68,7 @@ namespace KWIJisho.Models.Commands
                 /// <summary>
                 /// Sets the Tramontina server to Christmas Theme.
                 /// </summary>
-                internal Command themeChristmas = new("themeChristmas", @"Define o servidor para o tema de natal.", ThemeGroup, true);
+                internal Command themeChristmas = new(nameof(themeChristmas), @"Define o servidor para o tema de natal.", ThemeGroup, true);
                 [Command(nameof(themeChristmas))]
                 internal async Task SetChristmasTheme(CommandContext commandContext)
                     => await SetTheme(commandContext, EmojiTheme.Christmas,
@@ -79,7 +79,7 @@ namespace KWIJisho.Models.Commands
                 /// <summary>
                 /// Sets the Tramontina server to Easter Theme.
                 /// </summary>
-                internal Command themeEaster = new("themeEaster", @"Define o servidor para o tema de páscoa.", ThemeGroup, true);
+                internal Command themeEaster = new(nameof(themeEaster), @"Define o servidor para o tema de páscoa.", ThemeGroup, true);
                 [Command(nameof(themeEaster))]
                 internal async Task SetEasterTheme(CommandContext commandContext)
                     => await SetTheme(commandContext, EmojiTheme.Easter,
@@ -90,7 +90,7 @@ namespace KWIJisho.Models.Commands
                 /// <summary>
                 /// Sets the Tramontina server to Halloween Theme.
                 /// </summary>
-                internal Command themeHalloween = new("themeHalloween", @"Define o servidor para o tema de halloween.", ThemeGroup, true);
+                internal Command themeHalloween = new(nameof(themeHalloween), @"Define o servidor para o tema de halloween.", ThemeGroup, true);
                 [Command(nameof(themeHalloween))]
                 internal async Task SetHalloweenTheme(CommandContext commandContext)
                     => await SetTheme(commandContext, EmojiTheme.Halloween,

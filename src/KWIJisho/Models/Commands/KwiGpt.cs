@@ -1,8 +1,7 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
-using OpenAI_API;
-using System;
+using KWIJisho.Models.Apis;
 using System.Threading.Tasks;
 
 namespace KWIJisho.Models.Commands
@@ -11,7 +10,7 @@ namespace KWIJisho.Models.Commands
     {
         internal class KwiGpt : BaseCommandModule
         {
-            internal Command kwigpt = new("kwigpt", $@"Manda o comendo com o que quiser na frente que eu respondo alá chat gpt!", ChatGptGroup);
+            internal Command kwigpt = new(nameof(kwigpt), $@"Manda o comendo com o que quiser na frente que eu respondo alá chat gpt!", ChatGptGroup);
             [Command(nameof(kwigpt))]
 
             internal async Task ChatGptPrompt(CommandContext commandContext, params string[] inputs)
@@ -21,20 +20,17 @@ namespace KWIJisho.Models.Commands
                 // Show's that the bot is "typing" while it process everything
                 await commandContext.TriggerTypingAsync();
 
-                // Getting chat gpt token
-                var api = new OpenAIAPI(ConfigJson.ChatGptToken);
+                // Getting response from the prompt
+                var response = await OpenAiApi.GetPromptKWIJishoStyleAsync(userInput);
 
-                var chat = api.Chat.CreateConversation();
-                chat.AppendSystemMessage("Aja alegre e animada, falando de um jeito descontraído e se possível com emojis. Nada de formalidade, pontos finais e capitalizar o início das palavras.");
-                chat.AppendUserInput(userInput);
-
-                var response = await chat.GetResponseFromChatbotAsync();
+                // Adding the prompt into a embed builder
                 var discordEmbedBuilder = new DiscordEmbedBuilder
                 {
                     Description = response,
                     Color = ConfigJson.DefaultColor.DiscordColor
                 };
 
+                // Sending the response to the user
                 await commandContext.Channel.SendMessageAsync(discordEmbedBuilder);
             }
         }

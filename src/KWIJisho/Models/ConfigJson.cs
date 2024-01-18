@@ -74,19 +74,19 @@ namespace KWIJisho.Models
 
         private string _configJsonPrefix;
         [JsonProperty("prefix")]
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization, since 'DeserializeObject' needs non-static property. And it's value is being bypassed to its static property.")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization.")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0251:Make member 'readonly'", Justification = "It's being set on Json file.")]
-        private string CPrefix { get => _configJsonPrefix; set => _configJsonPrefix = Prefix = value; }
+        private string ConfigJsonPrefix { get => _configJsonPrefix; set => _configJsonPrefix = Prefix = value; }
 
         private string _configJsonActivity;
         [JsonProperty("activity")]
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization, since 'DeserializeObject' needs non-static property. And it's value is being bypassed to its static property.")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization.")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0251:Make member 'readonly'", Justification = "It's being set on Json file.")]
         private string ConfigJsonActivity { get => _configJsonActivity; set => _configJsonActivity = Activity = value; }
 
         private Color _configJsonPurpleColor;
         [JsonProperty("purpleColor")]
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization, since 'DeserializeObject' needs non-static property. And it's value is being bypassed to its static property.")]
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization.")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0251:Make member 'readonly'", Justification = "It's being set on Json file.")]
         private Color ConfigJsonPurpleColor { get => _configJsonPurpleColor; set => _configJsonPurpleColor = DefaultColor = value; }
 
@@ -94,13 +94,13 @@ namespace KWIJisho.Models
         {
 
             var json = string.Empty;
-
+            // Opening config.json file and reading its content
             using (var fileSteam = File.OpenRead("config.json"))
             using (var streamReader = new StreamReader(fileSteam, new UTF8Encoding(false)))
+                // Getting Json from the read and setting into the variable
                 json = await streamReader.ReadToEndAsync().ConfigureAwait(false);
-
-            var result = JsonConvert.DeserializeObject<ConfigJson>(json);
-            return result;
+            // Deserializing Json from the string and returning as result
+            return JsonConvert.DeserializeObject<ConfigJson>(json);
         }
 
         internal class Color
