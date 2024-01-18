@@ -52,7 +52,7 @@ namespace KWIJisho.Models
             {
                 _configJsonChatGptToken = value;
 
-                var chatgptToken = Environment.GetEnvironmentVariable("CHATGPT_TOKEN");
+                var chatgptToken = Environment.GetEnvironmentVariable("KWIJISHO_CHATGPT_TOKEN");
                 ChatGptToken = chatgptToken ?? _configJsonChatGptToken;
             }
         }
@@ -67,7 +67,7 @@ namespace KWIJisho.Models
             {
                 _configJsonNasaToken = value;
 
-                var nasaToken = Environment.GetEnvironmentVariable("NASA_TOKEN");
+                var nasaToken = Environment.GetEnvironmentVariable("KWIJISHO_NASA_TOKEN");
                 NasaToken = nasaToken ?? _configJsonNasaToken;
             }
         }
