@@ -73,7 +73,13 @@ namespace KWIJisho.Models.Commands
                 internal async Task SetChristmasTheme(CommandContext commandContext)
                     => await SetTheme(commandContext, EmojiTheme.Christmas,
                         "🎅🏻🎁 FELIZ NATAL!! ☃️❄️",
-                        "O servidor acabou de entrar NO CLIMA NATALINO 🥳. BOAS FESTAS À TODOS.",
+                        $"O servidor acabou de entrar NO {"CLIMA NATALINO".ToDiscordBold()} 🥳🎄✨. {"BOAS FESTAS À TODOS".ToDiscordBold()}." +
+                        $"{Environment.NewLine+Environment.NewLine}Tô passando aqui rapinho pra desejar a vocês um {"FELIZ NATAL".ToDiscordBold()}, que vocês tenham" +
+                        "um NATAL MARAVILHOSO! 🎅 🎁 Que seja cheio de amor, risadas e comidinhas deliciosas, " +
+                        "belezinha? 🥳🍗" +
+                        $"{Environment.NewLine+Environment.NewLine}Espero que aproveitem cada momento com a família e os amigos! 🤗💖 Mesmo que seja" +
+                        "em casa curtindo alguns joguinhos 🎮🎁" +
+                        "Feliz Natal, meus lindos!!!! 🌟🎉",
                         "🎅🏻🎁FELIZ NATAL❄️");
 
                 /// <summary>
@@ -106,51 +112,43 @@ namespace KWIJisho.Models.Commands
                     // Initial message so user can know 
                     await commandContext.Channel.SendMessageAsync("Só um segundinho... Vou botar as decorações então pode tomar um tempinho! ;P");
 
-                    // Modifies emoji from every mentioned channel
-                    foreach (var tramontinaChannel in TramontinaChannels)
-                        tramontinaChannel.ChangeEmoji(commandContext, tramontinaChannel.EmojiTheme[emojiTheme]);
+                    //// Modifies emoji from every mentioned channel
+                    //foreach (var tramontinaChannel in TramontinaChannels)
+                    //    tramontinaChannel.ChangeEmoji(commandContext, tramontinaChannel.EmojiTheme[emojiTheme]);
 
-                    // Send a message to show conclusion and deliever a suggested server name and picture
-                    string serverName = string.IsNullOrEmpty(serverNameSuggestion) ? "Tramontina│Bizarre Adventures" : $"{serverNameSuggestion} - Tramontina│Bizarre Adventures";
-
-                    var fileName = $"128x128-mello-{emojiTheme.ToString().ToLower()}.png";
-                    var imagePath = Path.GetFullPath($"Resources/Images/Tramontina/{fileName}");
-                    // Message body
-                    var firstDiscordEmbedBuilder = new DiscordEmbedBuilder
+                    // Presentation discord embed builder (first message)
+                    var presentationDiscordEmbedBuilder = new DiscordEmbedBuilder
                     {
                         Title = title,
                         Description = $"{description}{Environment.NewLine}",
                         Color = ConfigJson.DefaultColor.DiscordColor
-                    };
-                    // Sending the first message
-                    await commandContext.Channel.SendMessageAsync(new DiscordMessageBuilder()
-                        .AddEmbed(firstDiscordEmbedBuilder));
+                    }.AddField("HOOOOOOOOOORA DE ENTRAR NO CLIMA", $"Que tal aproveitar e tentar {"trocar o nome do servidor".ToDiscordBold()} pela minha sugestãozinha abaixo? ;D AHAHAHA");
+                    // Sending the first message (presentation)
+                    await commandContext.Channel.SendMessageAsync(new DiscordMessageBuilder().AddEmbed(presentationDiscordEmbedBuilder));
 
-                    // Message body
-                    var secondDiscordEmbedBuilder = new DiscordEmbedBuilder
+                    // Just appends the festive name suggestion if there's a suggestion, if not,
+                    // return the default server name
+                    string fullServerNameWithSuggestion = string.IsNullOrEmpty(serverNameSuggestion) ? "Tramontina│Bizarre Adventures"
+                        : $"{serverNameSuggestion} - Tramontina│Bizarre Adventures";
+
+                    // Getting image name and image's full path
+                    var fileName = $"128x128-mello-{emojiTheme.ToString().ToLower()}.png";
+                    var imagePath = Path.GetFullPath($"Resources/Images/Tramontina/{fileName}");
+
+                    // Suggestions discord embed builder (seconds message)
+                    var suggestionsDiscordEmbedBuilder = new DiscordEmbedBuilder
                     {
-                        Title = "TROQUE O NOME DO SERVER",
-                        Description = $"Que tal aproveitar e tentar {"trocar o nome do servidor".ToDiscordBold()} pela minha sugestãozinha abaixo? ;D",
+                        Description = fullServerNameWithSuggestion,
                         Color = ConfigJson.DefaultColor.DiscordColor
                     }.WithImageUrl($"attachment://{imagePath}").Build();
 
                     // Sending the second message with the image and button
                     await commandContext.Channel.SendMessageAsync(new DiscordMessageBuilder()
-                        .AddEmbed(secondDiscordEmbedBuilder)
-                        .AddFile(fileName, new FileStream(imagePath, FileMode.Open)));
-
-                    // Message body
-                    var thirdDiscordEmbedBuilder = new DiscordEmbedBuilder
-                    {
-                        Description = $"{serverName}",
-                        Color = ConfigJson.DefaultColor.DiscordColor
-                    };
-                    // Button to copy server name suggestion
-                    var button = new DiscordButtonComponent(ButtonStyle.Primary, "copy_server_name_suggestion", "Copiar Sugestão de Nome");
-                    // Sending the second message with the image and button
-                    await commandContext.Channel.SendMessageAsync(new DiscordMessageBuilder()
-                        .AddEmbed(thirdDiscordEmbedBuilder)
-                        .AddComponents(button));
+                        .AddEmbed(suggestionsDiscordEmbedBuilder)
+                        // The image suggestion for the server
+                        .AddFile(fileName, new FileStream(imagePath, FileMode.Open))
+                        // Button to copy server name suggestion
+                        .AddComponents(new DiscordButtonComponent(ButtonStyle.Primary, "copy_server_name_suggestion", "Copiar Sugestão de Nome")));
                 }
             }
 
