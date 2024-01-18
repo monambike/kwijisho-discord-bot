@@ -1,6 +1,5 @@
 ﻿using KWIJisho.Models;
 using System.IO;
-using System;
 
 namespace KWIJisho
 {
@@ -8,7 +7,7 @@ namespace KWIJisho
     {
         internal static void Main()
         {
-#if Debug
+#if DEBUG
             // Sets the default directory for being the "src/KWIJisho" folder
             Directory.SetCurrentDirectory("../../..");
 #endif
