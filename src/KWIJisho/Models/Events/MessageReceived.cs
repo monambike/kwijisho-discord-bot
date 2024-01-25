@@ -1,13 +1,11 @@
-﻿using DSharpPlus;
-using DSharpPlus.EventArgs;
-using System;
+﻿using DSharpPlus.EventArgs;
 using System.Threading.Tasks;
 
 namespace KWIJisho.Models.Events
 {
     internal class MessageReceived
     {
-        //    internal static async Task OnMessageReceived(DiscordClient sender, MessageCreateEventArgs e)
+        //    internal static async Task OnMessageReceivedAsync(DiscordClient sender, MessageCreateEventArgs e)
         //    {
         //        ArgumentNullException.ThrowIfNull(sender);
 
@@ -16,7 +14,7 @@ namespace KWIJisho.Models.Events
         //        await ValidateMentionedUsers(e);
         //    }
 
-        internal static async Task ValidateMentionedUsers(MessageCreateEventArgs e)
+        internal static async Task ValidateMentionedUsersAsync(MessageCreateEventArgs e)
         {
             // Get the username of the message author
             string authorName = e.Author.Username;

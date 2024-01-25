@@ -15,7 +15,7 @@ namespace KWIJisho.Models.Commands
             internal static string furtherHelpDetailsMessage = @" Para receber detalhes sobre um comando digite ""help <nome do comando>"".";
             internal Command help = new(nameof(help), $@"Mostra a ajuda.{furtherHelpDetailsMessage}", InfoGroup);
             [Command(nameof(help))]
-            internal async Task GetHelp(CommandContext commandContext)
+            internal async Task GetHelpAsync(CommandContext commandContext)
             {
                 var discordEmbedBuilder = new DiscordEmbedBuilder
                 {
@@ -41,7 +41,7 @@ namespace KWIJisho.Models.Commands
 
             internal Command info = new(nameof(info), @"Mostra informações básicas sobre mim e o meu criador.", InfoGroup);
             [Command(nameof(info))]
-            internal async Task GetInfo(CommandContext commandContext)
+            internal async Task GetInfoAsync(CommandContext commandContext)
             {
                 var description = $@"Que legal que você quer saber mais sobre mim AHAHAHAHA eu sou a KWIJisho 🌟 😎 o bot {"MAIS LEGAL DE TODOS!!!!!".ToDiscordBold()} criado " +
                     "pro servidor Tramontina." +

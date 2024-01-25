@@ -13,7 +13,7 @@ namespace KWIJisho.Models.Commands
             internal Command k = new(nameof(k), $@"Manda qualquer coisinha na frente que eu respondo alá ChatGPT! Conversa comigo!!", ChatGptGroup);
             [Command(nameof(k))]
 
-            internal async Task ChatGptPrompt(CommandContext commandContext, params string[] inputs)
+            internal async Task ChatGptPromptAsync(CommandContext commandContext, params string[] inputs)
             {
                 // Getting all user inputs and combining into a string
                 string userInput = string.Join(" ", inputs);

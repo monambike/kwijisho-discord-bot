@@ -60,8 +60,8 @@ namespace KWIJisho.Models.Commands
                 /// </summary>
                 internal Command themeReset = new(nameof(themeReset), @"Define o servidor para o tema padrão.", ThemeGroup, true);
                 [Command(nameof(themeReset))]
-                internal async Task ResetTheme(CommandContext commandContext)
-                    => await SetTheme(commandContext, EmojiTheme.Default,
+                internal async Task ResetThemeAsync(CommandContext commandContext)
+                    => await SetThemeAsync(commandContext, EmojiTheme.Default,
                         "Voltando ao normal!!",
                         "Voltei o servidor pro seu tema original :D");
 
@@ -70,8 +70,8 @@ namespace KWIJisho.Models.Commands
                 /// </summary>
                 internal Command themeChristmas = new(nameof(themeChristmas), @"Define o servidor para o tema de natal.", ThemeGroup, true);
                 [Command(nameof(themeChristmas))]
-                internal async Task SetChristmasTheme(CommandContext commandContext)
-                    => await SetTheme(commandContext, EmojiTheme.Christmas,
+                internal async Task SetChristmasThemeAsync(CommandContext commandContext)
+                    => await SetThemeAsync(commandContext, EmojiTheme.Christmas,
                         "🎅🏻🎁 FELIZ NATAL!! ☃️❄️",
                         $"O servidor acabou de entrar NO {"CLIMA NATALINO".ToDiscordBold()} 🥳🎄✨. {"BOAS FESTAS À TODOS".ToDiscordBold()}." +
                         $"{Environment.NewLine+Environment.NewLine}Tô passando aqui rapinho pra desejar a vocês um {"FELIZ NATAL".ToDiscordBold()}, que vocês tenham" +
@@ -87,8 +87,8 @@ namespace KWIJisho.Models.Commands
                 /// </summary>
                 internal Command themeEaster = new(nameof(themeEaster), @"Define o servidor para o tema de páscoa.", ThemeGroup, true);
                 [Command(nameof(themeEaster))]
-                internal async Task SetEasterTheme(CommandContext commandContext)
-                    => await SetTheme(commandContext, EmojiTheme.Easter,
+                internal async Task SetEasterThemeAsync(CommandContext commandContext)
+                    => await SetThemeAsync(commandContext, EmojiTheme.Easter,
                         "🐇🥕 FELIZ PÁSCOA!! 🐣🥚",
                         @"O coelhinho da páscoa deu um ""pulo"" no servidor! HAHAHA, PULO.. ESSA FOI BOA 🤭.",
                         "🐇FELIZ PÁSCOA🐣");
@@ -98,8 +98,8 @@ namespace KWIJisho.Models.Commands
                 /// </summary>
                 internal Command themeHalloween = new(nameof(themeHalloween), @"Define o servidor para o tema de halloween.", ThemeGroup, true);
                 [Command(nameof(themeHalloween))]
-                internal async Task SetHalloweenTheme(CommandContext commandContext)
-                    => await SetTheme(commandContext, EmojiTheme.Halloween,
+                internal async Task SetHalloweenThemeAsync(CommandContext commandContext)
+                    => await SetThemeAsync(commandContext, EmojiTheme.Halloween,
                         "🕷️🕸️ FELIZ HALLOWEEN!! 🧟👻",
                         $"MUAHAHAHAWHWHA. O SERVIDOR ACABA DE ENTRAR EM CLIMA DE TERROR 🕷️🎃. SE PREPAREM PARA O PIOR DO {"MEDO".ToDiscordBold()}.",
                         "🎃FELIZ HALLOWEEN👻");
@@ -107,7 +107,7 @@ namespace KWIJisho.Models.Commands
                 /// <summary>
                 /// Sets the Tramontina server to a Theme according with parameterization.
                 /// </summary>
-                private static async Task SetTheme(CommandContext commandContext, EmojiTheme emojiTheme, string title, string description, string serverNameSuggestion = null)
+                private static async Task SetThemeAsync(CommandContext commandContext, EmojiTheme emojiTheme, string title, string description, string serverNameSuggestion = null)
                 {
                     // Initial message so user can know 
                     await commandContext.Channel.SendMessageAsync("Só um segundinho... Vou botar as decorações então pode tomar um tempinho! ;P");
@@ -164,7 +164,7 @@ namespace KWIJisho.Models.Commands
                     EmojiTheme = emojiTheme;
                 }
 
-                internal void ChangeEmoji(CommandContext commandContext, string emoji) => UpdateChannelName(commandContext, $"{emoji}│{DefaultTextTitle}");
+                internal void ChangeEmoji(CommandContext commandContext, string emoji) => UpdateChannelNameAsync(commandContext, $"{emoji}│{DefaultTextTitle}");
 
             }
         }

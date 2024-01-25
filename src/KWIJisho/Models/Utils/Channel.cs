@@ -17,7 +17,7 @@ namespace KWIJisho.Models.Utils
             DefaultName = defaultName;
         }
 
-        internal async void UpdateChannelName(CommandContext commandContext, string newName)
+        internal async void UpdateChannelNameAsync(CommandContext commandContext, string newName)
         {
             var channel = commandContext.Client.GetChannelAsync(Id).Result;
             // Rename the channel

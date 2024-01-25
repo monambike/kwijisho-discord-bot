@@ -27,12 +27,12 @@
             HttpClient for making api requests.
             </summary>
         </member>
-        <member name="M:KWIJisho.Models.Apis.NasaApi.Apod.Get">
+        <member name="M:KWIJisho.Models.Apis.NasaApi.Apod.GetAsync">
             <summary>
             Makes a image request for APOD, also known as Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="M:KWIJisho.Models.Apis.NasaApi.Apod.GetUsingNasaApi(System.String)">
+        <member name="M:KWIJisho.Models.Apis.NasaApi.Apod.GetUsingNasaApiAsync(System.String)">
             <summary>
             Makes a request for the nasa API.
             </summary>

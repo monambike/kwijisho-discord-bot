@@ -13,7 +13,7 @@ namespace KWIJisho.Models.Commands
 
             internal Command nextBirthday = new(nameof(nextBirthday), $@"Mostra de quem o aniversário tá mais perto.", BirthdayGroup);
             [Command(nameof(nextBirthday))]
-            internal async Task GetNextBirthday(CommandContext commandContext)
+            internal async Task GetNextBirthdayAsync(CommandContext commandContext)
             {
                 var user = Utils.Birthday.GetUserByClosestBirthday();
                 var message = Utils.Birthday.Test();

@@ -15,11 +15,11 @@ namespace KWIJisho.Models.Events
             switch (e.Id)
             {
                 // Copies server name suggestion
-                case "copy_server_name_suggestion": await CopyServerName(e); break;
+                case "copy_server_name_suggestion": await CopyServerNameAsync(e); break;
             }
         }
 
-        internal static async Task CopyServerName(ComponentInteractionCreateEventArgs e)
+        internal static async Task CopyServerNameAsync(ComponentInteractionCreateEventArgs e)
         {
             // Getting the message content, in other words, the discord server name to be copied
             var message = e.Message.Embeds[0].Description;

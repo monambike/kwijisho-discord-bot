@@ -20,9 +20,9 @@ namespace KWIJisho.Models.Apis
             /// <summary>
             /// Makes a image request for APOD, also known as Astronomy Picture of the Day.
             /// </summary>
-            internal static async Task<ApodResponseJson> Get()
+            internal static async Task<ApodResponseJson> GetAsync()
             {
-                var response = await GetUsingNasaApi("planetary/apod");
+                var response = await GetUsingNasaApiAsync("planetary/apod");
                 return JsonConvert.DeserializeObject<ApodResponseJson>(response);
             }
 
@@ -31,7 +31,7 @@ namespace KWIJisho.Models.Apis
             /// </summary>
             /// <param name="request"></param>
             /// <returns></returns>
-            private static async Task<string> GetUsingNasaApi(string request) => await HttpService.GetAsync(HttpClient, $"{request}?api_key={ConfigJson.NasaToken}");
+            private static async Task<string> GetUsingNasaApiAsync(string request) => await HttpService.GetAsync(HttpClient, $"{request}?api_key={ConfigJson.NasaToken}");
 
             internal class ApodResponseJson
             {
