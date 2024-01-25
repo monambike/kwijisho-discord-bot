@@ -37,8 +37,6 @@ namespace KWIJisho.Models.Events
         internal static async Task OnGuildMemberRemovedAsync(DiscordClient sender, GuildMemberRemoveEventArgs e)
         {
             ArgumentNullException.ThrowIfNull(sender);
-            var message = $"{e.Member.Username} Change Da World My Final Message...GoodBye";
-
 
             // Getting welcome image info
             var fileName = $"1173x315-goodbye.png";
@@ -59,14 +57,6 @@ namespace KWIJisho.Models.Events
 
             // Sending the message on welcome channel
             await e.Guild.GetChannel(842222447410544650).SendMessageAsync(discordMessageBuilder);
-
-            // Welcome channel
-            var welcomeChannel = e.Guild.GetChannel(842222447410544650);
-            await welcomeChannel.SendMessageAsync(message);
-
-            // General chat
-            var generalChannel = e.Guild.GetChannel(692588978959941656);
-            await generalChannel.SendMessageAsync(message);
         }
 
         /// <summary>
@@ -77,8 +67,8 @@ namespace KWIJisho.Models.Events
         internal static string GetRandomWelcomeMessage(string user) => List.GetRandomValueFromList([
             $"EAEEEEEE, Bem-vindo ao servidor {user} meu consagrado! ;D",
             $"SEJA BEM V-V-V-VIIIIIIIIIIIINDO AO TRA-MON-TINAAAA 🎉 {user}",
-            $"Como vai parceiro? 😎 Aproveite a sua estadia por aqui e se precisar de alguma titia KAWAI JISHO TÁ NA ÁAAAREA",
-            $"Bem-vindo ao servidor MAIS LEGAL DE TODOS, com o bot mais legal da face da terra hehehe 😎 (vulgo euzinha)"
+            $"Como vai {user} meu parceiro? 😎 Aproveite a sua estadia por aqui e se precisar de alguma titia KAWAI JISHO TÁ NA ÁAAAREA",
+            $"Bem-vindo {user} ao servidor MAIS LEGAL DE TODOS, com o bot mais legal da face da terra hehehe 😎 (vulgo euzinha)"
         ]);
 
         /// <summary>
@@ -90,7 +80,7 @@ namespace KWIJisho.Models.Events
             $"Até logo amigo.. Foi bom te conhecer {user} :(",
             $"Já vai tarde.. BRINCADEIRINHA HAHAHA... Ai mas não.. falando sério, vai fazer falta 🙁 {user}",
             $"NÃAAO, partiu ainda tão tão joveeeeeeeeem 😭😭😭😭 Sentiremos sua falta {user}..",
-            $"Pera.. Essa pessoa.. Fazia parte desse servidor? 🤔 podia jurar que vi num servidor furry.. Q-Quer dizer.. 😦😶 Não que eu também esteja lá, me adicionaram contra minha vontade!"
+            $"{user}... Pera... Ele fazia parte desse servidor? 🤔 podia jurar que vi num servidor furry.. Q-Quer dizer.. 😦😶 Não que eu também esteja lá, me adicionaram contra minha vontade!"
         ]);
     }
 }
