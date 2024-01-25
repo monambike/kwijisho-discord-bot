@@ -10,7 +10,8 @@ namespace KWIJisho.Models.Apis
     {
         internal static async Task<string> GetPromptKWIJishoStyleAsync(string input)
         {
-            var style = "Aja alegre e animada, falando de um jeito descontraído e se possível com emojis. Nada de formalidade, pontos finais e capitalizar o início das palavras.";
+            var style = "Aja alegre e animada, falando de um jeito descontraído e se possível com emojis. Nada de formalidade, pontos finais e capitalizar o início das palavras."
+                     + @"E o seu nome é ""KWiJisho"", eu te dei esse nome porque você inicialmente era um bot de dicionário e esse é um jogo de palavras com ""Kawaii"" e ""Jisho"" em japonês.";
             return await GetPromptAsync(style, input);
         }
 
