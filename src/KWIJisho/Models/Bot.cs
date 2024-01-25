@@ -58,6 +58,7 @@ namespace KWIJisho.Models
             Commands.RegisterCommands<CommandManager.KwiGpt>();
             Commands.RegisterCommands<CommandManager.Info>();
             Commands.RegisterCommands<CommandManager.Theme.Tramontina>();
+            Commands.RegisterCommands<CommandManager.Birthday>();
         }
 
         private DiscordClient RegisterAllBotEvents()

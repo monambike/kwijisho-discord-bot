@@ -16,6 +16,7 @@ namespace KWIJisho.Models.Commands
         internal static CommandGroup ChatGptGroup { get { return new CommandGroup("ChatGpt (Estilo KWIJisho 🌟)"); } }
         internal static CommandGroup InfoGroup { get { return new CommandGroup("Informações Adicionais"); } }
         internal static CommandGroup ThemeGroup { get { return new CommandGroup("Mudar Tema do Servidor"); } }
+        internal static CommandGroup BirthdayGroup { get { return new CommandGroup("Aniversário"); } }
     }
 
     /// <summary>
