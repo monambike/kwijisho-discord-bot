@@ -1,6 +1,5 @@
 ﻿using DSharpPlus.Entities;
 using Newtonsoft.Json;
-using OpenAI_API.Moderation;
 using System;
 using System.IO;
 using System.Text;

@@ -44,7 +44,7 @@ namespace KWIJisho.Models.Commands
                 // Creating embed builder
                 var discordEmbedBuilder = new DiscordEmbedBuilder
                 {
-                    Title = translatedTitle,
+                    Title = $"(Imagem do Dia) {translatedTitle}",
                     ImageUrl = response.Url,
                     Color = ConfigJson.DefaultColor.DiscordColor,
                     Footer = new DiscordEmbedBuilder.EmbedFooter

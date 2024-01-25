@@ -5,8 +5,6 @@ using ExtensionMethods;
 using System;
 using System.IO;
 using System.Threading.Tasks;
-using System.Xml;
-using static KWIJisho.Models.Commands.CommandManager.Theme;
 
 namespace KWIJisho.Models.Commands
 {
@@ -45,7 +43,7 @@ namespace KWIJisho.Models.Commands
             [Command(nameof(info))]
             internal async Task GetInfo(CommandContext commandContext)
             {
-                var txt = $@"Que legal que você quer saber mais sobre mim AHAHAHAHA eu sou a KWIJisho 🌟 😎 o bot {"MAIS LEGAL DE TODOS!!!!!".ToDiscordBold()} criado " +
+                var description = $@"Que legal que você quer saber mais sobre mim AHAHAHAHA eu sou a KWIJisho 🌟 😎 o bot {"MAIS LEGAL DE TODOS!!!!!".ToDiscordBold()} criado " +
                     "pro servidor Tramontina." +
                     $"{Environment.NewLine + Environment.NewLine}Você não vai encontrar um bot tão simpático quanto eu AHAHAHHA." +
                     $" Mas enfim 😎 🌟 chega de tanta legalzisse e vamos direto aos detalhes." +
@@ -62,13 +60,12 @@ namespace KWIJisho.Models.Commands
                 {
                     Color = ConfigJson.DefaultColor.DiscordColor,
                     Title = "OLÁAAAAAAAA 🌟 🥳🎉",
-                    Description = txt,
+                    Description = description,
                     Thumbnail = new DiscordEmbedBuilder.EmbedThumbnail
                     {
                         Url = commandContext.Client.CurrentUser.AvatarUrl
                     }
-                }.AddField("Instagram", "Profissional: https://www.instagram.com/monambike" +
-                Environment.NewLine+"Pessoal: https://www.instagram.com/monambike_portfolio")
+                }.AddField("Instagram", $"Profissional: https://www.instagram.com/monambike{Environment.NewLine}Pessoal: https://www.instagram.com/monambike_portfolio")
                 .AddField("GitHub", "https://github.com/monambike")
                 .AddField("Site Pessoal", "https://monambike.com")
                 .WithImageUrl($"attachment://{imagePath}").Build();

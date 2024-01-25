@@ -10,7 +10,7 @@ namespace KWIJisho.Models.Commands
     {
         internal class KwiGpt : BaseCommandModule
         {
-            internal Command k = new(nameof(k), $@"Manda o comendo com o que quiser na frente que eu respondo alá chat gpt!", ChatGptGroup);
+            internal Command k = new(nameof(k), $@"Manda qualquer coisinha na frente que eu respondo alá ChatGPT! Conversa comigo!!", ChatGptGroup);
             [Command(nameof(k))]
 
             internal async Task ChatGptPrompt(CommandContext commandContext, params string[] inputs)
