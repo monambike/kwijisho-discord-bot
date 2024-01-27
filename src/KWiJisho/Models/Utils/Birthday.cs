@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace KWIJisho.Models.Utils
+namespace KWiJisho.Models.Utils
 {
     internal static class Birthday
     {
@@ -49,7 +49,7 @@ namespace KWIJisho.Models.Utils
 
         internal static User GetUserByClosestBirthday() => GetUsersByClosestBirthday().FirstOrDefault();
 
-        internal static double GetUserByClosestBirthdayRemainingDays()
+        internal static double GetDaysRemainingByClosestBirthday()
         {
             var user = GetUserByClosestBirthday();
             //var dateTimeNow = DateTime.Now.Date;
@@ -59,32 +59,32 @@ namespace KWIJisho.Models.Utils
             return (user.Birthday.Date - dateTimeNow.Date).TotalDays;
         }
 
-        internal enum BirthdayDate { Today, Tomorrow, InSomeDays }
-        internal static string Test(BirthdayDate birthdayDate)
-        {;
-            var message = daysRemaning switch
+        internal enum UpcomingBirthdayDate { Today, Tomorrow, SomeDays }
+        internal static UpcomingBirthdayDate GetUpcomingBirthdayDateByClosestBirthday()
+        {
+            var daysRemaning = GetDaysRemainingByClosestBirthday();
+
+            return daysRemaning switch
             {
-                BirthdayDate.Today => $"Hoje é seu aniversário!! 🥳🎉 {"PARABÉNSS!!!!".ToDiscordBold()} Feliz Aniversário 🎂",
-                BirthdayDate.Tomorrow => $"{"Amanhá".ToDiscordBold()} já é o aniversário. 🥳🎉",
-                BirthdayDate.InSomeDays => $"Faltam apenas {(daysRemaning + "dias").ToDiscordBold()} para o aniversário!! 👀 Tô ansiosa!!",
+                 0 => UpcomingBirthdayDate.Today,
+                 1 => UpcomingBirthdayDate.Tomorrow,
+                 > 1 => UpcomingBirthdayDate.SomeDays,
                 _ => throw new NotImplementedException()
             };
-            return message;
         }
 
-        internal static BirthdayDate GetBirthdayDate()
+        internal static string GenerateBirthdayMessage()
         {
-            var daysRemaning = GetUserByClosestBirthdayRemainingDays()
+            var daysRemaning = GetDaysRemainingByClosestBirthday();
+            var upcomingBirthdayDate = GetUpcomingBirthdayDateByClosestBirthday();
 
-
-            var message = daysRemaning switch
+            return upcomingBirthdayDate switch
             {
-                0 => $"Hoje é seu aniversário!! 🥳🎉 {"PARABÉNSS!!!!".ToDiscordBold()} Feliz Aniversário 🎂",
-                1 => $"{"Amanhá".ToDiscordBold()} já é o aniversário. 🥳🎉",
-                > 1 => $"Faltam apenas {(daysRemaning + "dias").ToDiscordBold()} para o aniversário!! 👀 Tô ansiosa!!",
+                UpcomingBirthdayDate.Today => $"Hoje é seu aniversário!! 🥳🎉 {"PARABÉNSS!!!!".ToDiscordBold()} Feliz Aniversário 🎂",
+                UpcomingBirthdayDate.Tomorrow => $"{"Amanhá".ToDiscordBold()} já é o aniversário. 🥳🎉",
+                UpcomingBirthdayDate.SomeDays => $"Faltam apenas {(daysRemaning + "dias").ToDiscordBold()} para o aniversário!! 👀 Tô ansiosa!!",
                 _ => throw new NotImplementedException()
             };
-            return message;
         }
 
         internal class User(string discordUsername, DateTime birthday)
