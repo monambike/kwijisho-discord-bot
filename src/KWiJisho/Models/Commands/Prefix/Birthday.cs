@@ -11,7 +11,7 @@ namespace KWiJisho.Models.Commands
         internal class Birthday : BaseCommandModule
         {
 
-            internal Command nextBirthday = new(nameof(nextBirthday), $@"Mostra de quem o aniversário tá mais perto.", BirthdayGroup);
+            internal PrefixCommand nextBirthday = new(nameof(nextBirthday), $@"Mostra de quem o aniversário tá mais perto.", BirthdayGroup);
             [Command(nameof(nextBirthday))]
             internal async Task GetNextBirthdayAsync(CommandContext commandContext)
             {
@@ -49,7 +49,7 @@ namespace KWiJisho.Models.Commands
                 "Dezembro"
             };
 
-            internal Command listBirthday = new(nameof(listBirthday), $@"Mostra a lista de aniversariantes.", BirthdayGroup);
+            internal PrefixCommand listBirthday = new(nameof(listBirthday), $@"Mostra a lista de aniversariantes.", BirthdayGroup);
             [Command(nameof(listBirthday))]
             internal async Task GetListBirthdayAsync(CommandContext commandContext)
             {

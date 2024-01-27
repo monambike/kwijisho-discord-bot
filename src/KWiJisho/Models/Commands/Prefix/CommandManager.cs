@@ -6,23 +6,23 @@ using System.Linq;
 namespace KWiJisho.Models.Commands
 {
     /// <summary>
-    /// Represent the class that manage commands.
+    /// Represent the class that represents commands groups and holds all Discord command classes.
     /// </summary>
     internal static partial class CommandManager
     {
-        internal static List<CommandGroup> CommandGroups { get; set; } = [];
+        internal static List<PrefixCommandGroup> CommandGroups { get; set; } = [];
 
-        internal static CommandGroup AstronomyGroup { get { return new CommandGroup("Nasa e Astronomia"); } }
-        internal static CommandGroup ChatGptGroup { get { return new CommandGroup("ChatGpt (Estilo KWiJisho 🌟)"); } }
-        internal static CommandGroup InfoGroup { get { return new CommandGroup("Informações Adicionais"); } }
-        internal static CommandGroup ThemeGroup { get { return new CommandGroup("Mudar Tema do Servidor"); } }
-        internal static CommandGroup BirthdayGroup { get { return new CommandGroup("Aniversário"); } }
+        internal static PrefixCommandGroup AstronomyGroup { get { return new PrefixCommandGroup("Nasa e Astronomia"); } }
+        internal static PrefixCommandGroup ChatGptGroup { get { return new PrefixCommandGroup("ChatGpt (Estilo KWiJisho 🌟)"); } }
+        internal static PrefixCommandGroup InfoGroup { get { return new PrefixCommandGroup("Informações Adicionais"); } }
+        internal static PrefixCommandGroup ThemeGroup { get { return new PrefixCommandGroup("Mudar Tema do Servidor"); } }
+        internal static PrefixCommandGroup BirthdayGroup { get { return new PrefixCommandGroup("Aniversário"); } }
     }
 
     /// <summary>
     /// Represents a single Discord command.
     /// </summary>
-    internal class Command
+    internal class PrefixCommand
     {
         internal string Name { get; set; }
 
@@ -30,7 +30,7 @@ namespace KWiJisho.Models.Commands
 
         internal bool OwnerCommand { get; set; } = false;
 
-        internal Command(string name, string description, CommandGroup group)
+        internal PrefixCommand(string name, string description, PrefixCommandGroup group)
         {
             Name = name;
             Description = description;
@@ -39,7 +39,7 @@ namespace KWiJisho.Models.Commands
             selectedCommandGroup.Commands.Add(this);
         }
 
-        internal Command(string name, string description, CommandGroup group, bool ownerCommand)
+        internal PrefixCommand(string name, string description, PrefixCommandGroup group, bool ownerCommand)
             : this(name, $"{description}{Environment.NewLine}" + "Esse comando só pode ser executado pelo dono do bot".ToDiscordItalic(), group)
         {
             OwnerCommand = ownerCommand;
@@ -49,13 +49,13 @@ namespace KWiJisho.Models.Commands
     /// <summary>
     /// Represents a group and holds a list with a set of Discord commands.
     /// </summary>
-    internal partial class CommandGroup
+    internal partial class PrefixCommandGroup
     {
         internal string Name { get; set; }
 
-        internal List<Command> Commands { get; set; } = [];
+        internal List<PrefixCommand> Commands { get; set; } = [];
 
-        internal CommandGroup(string name)
+        internal PrefixCommandGroup(string name)
         {
             Name = name;
             if (!CommandManager.CommandGroups.Any(commandGroup => commandGroup.Name == name))

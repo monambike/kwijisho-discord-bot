@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>KWiJisho</name>
+        <name>KWIJisho</name>
     </assembly>
     <members>
         <member name="T:KWiJisho.Models.Apis.HttpService">
@@ -71,7 +71,7 @@
         </member>
         <member name="T:KWiJisho.Models.Commands.CommandManager">
             <summary>
-            Represent the class that manage commands.
+            Represent the class that represents commands groups and holds all Discord command classes.
             </summary>
         </member>
         <member name="T:KWiJisho.Models.Commands.CommandManager.Theme.EmojiTheme">
@@ -109,12 +109,12 @@
             Sets the Tramontina server to a Theme according with parameterization.
             </summary>
         </member>
-        <member name="T:KWiJisho.Models.Commands.Command">
+        <member name="T:KWiJisho.Models.Commands.PrefixCommand">
             <summary>
             Represents a single Discord command.
             </summary>
         </member>
-        <member name="T:KWiJisho.Models.Commands.CommandGroup">
+        <member name="T:KWiJisho.Models.Commands.PrefixCommandGroup">
             <summary>
             Represents a group and holds a list with a set of Discord commands.
             </summary>

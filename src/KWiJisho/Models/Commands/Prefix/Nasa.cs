@@ -3,7 +3,6 @@ using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
 using ExtensionMethods;
 using KWiJisho.Models.Apis;
-using System;
 using System.Threading.Tasks;
 
 namespace KWiJisho.Models.Commands
@@ -12,7 +11,7 @@ namespace KWiJisho.Models.Commands
     {
         internal class Nasa : BaseCommandModule
         {
-            internal Command apod = new(nameof(apod), $"(APOD - Astronomy Picture of the Day) Te trago a imagem do dia fresquinha diretamente do site da Nasa! Com uma descrição traduzida por mim é claro uwu", AstronomyGroup);
+            internal PrefixCommand apod = new(nameof(apod), $"(APOD - Astronomy Picture of the Day) Te trago a imagem do dia fresquinha diretamente do site da Nasa! Com uma descrição traduzida por mim é claro uwu", AstronomyGroup);
             [Command(nameof(apod))]
             internal async Task ApodAsync(CommandContext commandContext)
             {
@@ -21,7 +20,7 @@ namespace KWiJisho.Models.Commands
             }
 
 
-            internal Command apodResume = new(nameof(apodResume), $"Te trago o mesmo conteúdo do comando {"!apod".ToDiscordBold()} mas mais fácil e divertido de ler! (Texto Resumido)", AstronomyGroup);
+            internal PrefixCommand apodResume = new(nameof(apodResume), $"Te trago o mesmo conteúdo do comando {"!apod".ToDiscordBold()} mas mais fácil e divertido de ler! (Texto Resumido)", AstronomyGroup);
             [Command(nameof(apodResume))]
             internal async Task ApodResumeAsync(CommandContext commandContext)
             {

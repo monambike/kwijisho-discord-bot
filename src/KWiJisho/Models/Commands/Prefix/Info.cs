@@ -14,7 +14,7 @@ namespace KWiJisho.Models.Commands
         internal class Info : BaseCommandModule
         {
             internal static string furtherHelpDetailsMessage = @" Para receber detalhes sobre um comando digite ""help <nome do comando>"".";
-            internal Command help = new(nameof(help), $@"Mostra a ajuda.{furtherHelpDetailsMessage}", InfoGroup);
+            internal PrefixCommand help = new(nameof(help), $@"Mostra a ajuda.{furtherHelpDetailsMessage}", InfoGroup);
             [Command(nameof(help))]
             internal async Task GetHelpAsync(InteractionContext commandContext)
             {
@@ -40,7 +40,7 @@ namespace KWiJisho.Models.Commands
                 await commandContext.Channel.SendMessageAsync(discordEmbedBuilder);
             }
 
-            internal Command info = new(nameof(info), @"Mostra informações básicas sobre mim e o meu criador.", InfoGroup);
+            internal PrefixCommand info = new(nameof(info), @"Mostra informações básicas sobre mim e o meu criador.", InfoGroup);
             [Command(nameof(info))]
             internal async Task GetInfoAsync(CommandContext commandContext)
             {

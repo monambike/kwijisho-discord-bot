@@ -69,7 +69,7 @@ namespace KWiJisho.Models
         }
         private void RegisterAllBotSlashCommands()
         {
-            SlashCommands.RegisterCommands<CommandManager.Info>(737541664318554143);
+            SlashCommands.RegisterCommands<Info>(737541664318554143);
         }
 
         private DiscordClient RegisterAllBotEvents()
