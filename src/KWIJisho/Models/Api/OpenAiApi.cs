@@ -1,14 +1,14 @@
 ﻿using OpenAI_API;
 using System.Threading.Tasks;
 
-namespace KWIJisho.Models.Apis
+namespace KWiJisho.Models.Apis
 {
     /// <summary>
     /// API Documentation: https://github.com/OkGoDoIt/OpenAI-API-dotnet
     /// </summary>
     internal static class OpenAiApi
     {
-        internal static async Task<string> GetPromptKWIJishoStyleAsync(string input)
+        internal static async Task<string> GetPromptKWiJishoStyleAsync(string input)
         {
             var style = "Aja alegre e animada, falando de um jeito descontraído e se possível com emojis. Nada de formalidade, pontos finais e capitalizar o início das palavras."
                      + @"E o seu nome é ""KWiJisho"", eu te dei esse nome porque você inicialmente era um bot de dicionário e esse é um jogo de palavras com ""Kawaii"" e ""Jisho"" em japonês.";

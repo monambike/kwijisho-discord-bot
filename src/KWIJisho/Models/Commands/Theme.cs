@@ -1,4 +1,4 @@
-﻿namespace KWIJisho.Models.Commands
+﻿namespace KWiJisho.Models.Commands
 {
     internal partial class CommandManager
     {

@@ -1,10 +1,12 @@
 ﻿using DSharpPlus;
 using DSharpPlus.CommandsNext;
-using KWIJisho.Models.Commands;
-using KWIJisho.Models.Events;
+using DSharpPlus.SlashCommands;
+using KWiJisho.Models.Commands;
+using KWiJisho.Models.Events;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace KWIJisho.Models
+namespace KWiJisho.Models
 {
     internal partial class Bot
     {
@@ -19,7 +21,7 @@ namespace KWIJisho.Models
             // Defining initial bot settings
             var discordConfiguration = new DiscordConfiguration
             {
-                Token = ConfigJson.KWIJishoToken,
+                Token = ConfigJson.KWiJishoToken,
                 TokenType = TokenType.Bot,
                 AutoReconnect = true,
                 MinimumLogLevel = Microsoft.Extensions.Logging.LogLevel.Debug,
@@ -40,6 +42,8 @@ namespace KWIJisho.Models
             };
             Commands = DiscordClient.UseCommandsNext(commandsNextConfiguration);
             RegisterAllBotCommands();
+            // Also using slash commands
+            DiscordClient.UseSlashCommands().RegisterCommands<SlashCommands>(737541664775602269);
 
             // Connecting to the bot
             await DiscordClient.ConnectAsync();
@@ -48,7 +52,6 @@ namespace KWIJisho.Models
             var channel = await DiscordClient.GetChannelAsync(737541664775602269); // My main personal server's channel
             if (channel != null) await channel.SendMessageAsync("Olá!! Agora eu tô online e prontíssima pra ajudar! 🥳🎉🎉");
 
-
             await Task.Delay(-1);
         }
 
@@ -56,7 +59,7 @@ namespace KWIJisho.Models
         {
             Commands.RegisterCommands<CommandManager.Nasa>();
             Commands.RegisterCommands<CommandManager.KwiGpt>();
-            Commands.RegisterCommands<CommandManager.Info>();
+            //Commands.RegisterCommands<CommandManager.Info>();
             Commands.RegisterCommands<CommandManager.Theme.Tramontina>();
             Commands.RegisterCommands<CommandManager.Birthday>();
         }

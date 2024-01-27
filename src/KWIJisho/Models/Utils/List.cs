@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace KWIJisho.Models.Utils
+namespace KWiJisho.Models.Utils
 {
     internal static class List
     {

@@ -3,13 +3,13 @@ using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
 using ExtensionMethods;
-using KWIJisho.Models.Utils;
+using KWiJisho.Models.Utils;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace KWIJisho.Models.Commands
+namespace KWiJisho.Models.Commands
 {
     internal partial class CommandManager
     {

@@ -1,21 +1,23 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
+using DSharpPlus.SlashCommands;
 using ExtensionMethods;
 using System;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace KWIJisho.Models.Commands
+namespace KWiJisho.Models.Commands
 {
     internal partial class CommandManager
     {
-        internal class Info : BaseCommandModule
+        internal class Info : ApplicationCommandModule
         {
             internal static string furtherHelpDetailsMessage = @" Para receber detalhes sobre um comando digite ""help <nome do comando>"".";
-            internal Command help = new(nameof(help), $@"Mostra a ajuda.{furtherHelpDetailsMessage}", InfoGroup);
-            [Command(nameof(help))]
-            internal async Task GetHelpAsync(CommandContext commandContext)
+            //internal Command help = new(nameof(help), $@"Mostra a ajuda.{furtherHelpDetailsMessage}", InfoGroup);
+            //[Command(nameof(help))]
+            [SlashCommand("testHelp", "testHelp description")]
+            internal async Task GetHelpAsync(InteractionContext commandContext)
             {
                 var discordEmbedBuilder = new DiscordEmbedBuilder
                 {
@@ -43,7 +45,7 @@ namespace KWIJisho.Models.Commands
             [Command(nameof(info))]
             internal async Task GetInfoAsync(CommandContext commandContext)
             {
-                var description = $@"Que legal que você quer saber mais sobre mim AHAHAHAHA eu sou a KWIJisho 🌟 😎 o bot {"MAIS LEGAL DE TODOS!!!!!".ToDiscordBold()} criado " +
+                var description = $@"Que legal que você quer saber mais sobre mim AHAHAHAHA eu sou a KWiJisho 🌟 😎 o bot {"MAIS LEGAL DE TODOS!!!!!".ToDiscordBold()} criado " +
                     "pro servidor Tramontina." +
                     $"{Environment.NewLine + Environment.NewLine}Você não vai encontrar um bot tão simpático quanto eu AHAHAHHA." +
                     $" Mas enfim 😎 🌟 chega de tanta legalzisse e vamos direto aos detalhes." +

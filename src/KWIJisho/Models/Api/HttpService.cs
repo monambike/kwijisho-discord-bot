@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace KWIJisho.Models.Apis
+namespace KWiJisho.Models.Apis
 {
     /// <summary>
     /// A simple HTTP service for making GET requests and retrieving the response content.

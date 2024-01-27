@@ -1,6 +1,6 @@
-﻿using KWIJisho.Models;
+﻿using KWiJisho.Models;
 
-namespace KWIJisho
+namespace KWiJisho
 {
     internal class Program
     {

@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace KWIJisho.Models.Events
+namespace KWiJisho.Models.Events
 {
     internal class Birthday
     {

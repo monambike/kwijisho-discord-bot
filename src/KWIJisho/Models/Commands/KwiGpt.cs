@@ -1,10 +1,10 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
-using KWIJisho.Models.Apis;
+using KWiJisho.Models.Apis;
 using System.Threading.Tasks;
 
-namespace KWIJisho.Models.Commands
+namespace KWiJisho.Models.Commands
 {
     internal partial class CommandManager
     {
@@ -21,7 +21,7 @@ namespace KWIJisho.Models.Commands
                 await commandContext.TriggerTypingAsync();
 
                 // Getting response from the prompt
-                var response = await OpenAiApi.GetPromptKWIJishoStyleAsync(userInput);
+                var response = await OpenAiApi.GetPromptKWiJishoStyleAsync(userInput);
 
                 // Adding the prompt into a embed builder
                 var discordEmbedBuilder = new DiscordEmbedBuilder

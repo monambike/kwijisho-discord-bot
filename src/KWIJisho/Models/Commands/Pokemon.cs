@@ -1,4 +1,4 @@
-﻿namespace KWIJisho.Models.Commands
+﻿namespace KWiJisho.Models.Commands
 {
     internal class Pokemon
     {

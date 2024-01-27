@@ -1,12 +1,12 @@
 ﻿using DSharpPlus;
 using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
-using KWIJisho.Models.Utils;
+using KWiJisho.Models.Utils;
 using System;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace KWIJisho.Models.Events
+namespace KWiJisho.Models.Events
 {
     internal class GoodbyeWelcome
     {

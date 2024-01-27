@@ -4,12 +4,12 @@
         <name>KWIJisho</name>
     </assembly>
     <members>
-        <member name="T:KWIJisho.Models.Apis.HttpService">
+        <member name="T:KWiJisho.Models.Apis.HttpService">
             <summary>
             A simple HTTP service for making GET requests and retrieving the response content.
             </summary>
         </member>
-        <member name="M:KWIJisho.Models.Apis.HttpService.GetAsync(System.Net.Http.HttpClient,System.String)">
+        <member name="M:KWiJisho.Models.Apis.HttpService.GetAsync(System.Net.Http.HttpClient,System.String)">
             <summary>
             Sends an asynchronous GET request to the specified URI and returns the response content as a string.
             </summary>
@@ -17,128 +17,128 @@
             <param name="strRequest">The URI of the resource to request.</param>
             <returns>A Task representing the asynchronous operation. The result contains the response content as a string.</returns>
         </member>
-        <member name="T:KWIJisho.Models.Apis.NasaApi">
+        <member name="T:KWiJisho.Models.Apis.NasaApi">
             <summary>
             API Documentation: https://api.nasa.gov/
             </summary>
         </member>
-        <member name="F:KWIJisho.Models.Apis.NasaApi.HttpClient">
+        <member name="F:KWiJisho.Models.Apis.NasaApi.HttpClient">
             <summary>
             HttpClient for making api requests.
             </summary>
         </member>
-        <member name="M:KWIJisho.Models.Apis.NasaApi.Apod.GetAsync">
+        <member name="M:KWiJisho.Models.Apis.NasaApi.Apod.GetAsync">
             <summary>
             Makes a image request for APOD, also known as Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="M:KWIJisho.Models.Apis.NasaApi.Apod.GetUsingNasaApiAsync(System.String)">
+        <member name="M:KWiJisho.Models.Apis.NasaApi.Apod.GetUsingNasaApiAsync(System.String)">
             <summary>
             Makes a request for the nasa API.
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="P:KWIJisho.Models.Apis.NasaApi.Apod.ApodResponseJson.Title">
+        <member name="P:KWiJisho.Models.Apis.NasaApi.Apod.ApodResponseJson.Title">
             <summary>
             Title of the current Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="P:KWIJisho.Models.Apis.NasaApi.Apod.ApodResponseJson.Explanation">
+        <member name="P:KWiJisho.Models.Apis.NasaApi.Apod.ApodResponseJson.Explanation">
             <summary>
             Explanation of the current Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="P:KWIJisho.Models.Apis.NasaApi.Apod.ApodResponseJson.Date">
+        <member name="P:KWiJisho.Models.Apis.NasaApi.Apod.ApodResponseJson.Date">
             <summary>
             Date of the current Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="P:KWIJisho.Models.Apis.NasaApi.Apod.ApodResponseJson.Url">
+        <member name="P:KWiJisho.Models.Apis.NasaApi.Apod.ApodResponseJson.Url">
             <summary>
             Image URL of the current Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="P:KWIJisho.Models.Apis.NasaApi.Apod.ApodResponseJson.Copyright">
+        <member name="P:KWiJisho.Models.Apis.NasaApi.Apod.ApodResponseJson.Copyright">
             <summary>
             Copyright of the current Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="T:KWIJisho.Models.Apis.OpenAiApi">
+        <member name="T:KWiJisho.Models.Apis.OpenAiApi">
             <summary>
             API Documentation: https://github.com/OkGoDoIt/OpenAI-API-dotnet
             </summary>
         </member>
-        <member name="T:KWIJisho.Models.Commands.CommandManager">
+        <member name="T:KWiJisho.Models.Commands.CommandManager">
             <summary>
             Represent the class that manage commands.
             </summary>
         </member>
-        <member name="T:KWIJisho.Models.Commands.CommandManager.Theme.EmojiTheme">
+        <member name="T:KWiJisho.Models.Commands.CommandManager.Theme.EmojiTheme">
             <summary>
             Represents seasonal themes that you can change the server into.
             </summary>
         </member>
-        <member name="F:KWIJisho.Models.Commands.CommandManager.Theme.Tramontina.TramontinaChannels">
+        <member name="F:KWiJisho.Models.Commands.CommandManager.Theme.Tramontina.TramontinaChannels">
             <summary>
             Channels from tramontina server that can receive theme changing.
             </summary>
         </member>
-        <member name="F:KWIJisho.Models.Commands.CommandManager.Theme.Tramontina.themeReset">
+        <member name="F:KWiJisho.Models.Commands.CommandManager.Theme.Tramontina.themeReset">
             <summary>
             Resets the Tramontina server emojis.
             </summary>
         </member>
-        <member name="F:KWIJisho.Models.Commands.CommandManager.Theme.Tramontina.themeChristmas">
+        <member name="F:KWiJisho.Models.Commands.CommandManager.Theme.Tramontina.themeChristmas">
             <summary>
             Sets the Tramontina server to Christmas Theme.
             </summary>
         </member>
-        <member name="F:KWIJisho.Models.Commands.CommandManager.Theme.Tramontina.themeEaster">
+        <member name="F:KWiJisho.Models.Commands.CommandManager.Theme.Tramontina.themeEaster">
             <summary>
             Sets the Tramontina server to Easter Theme.
             </summary>
         </member>
-        <member name="F:KWIJisho.Models.Commands.CommandManager.Theme.Tramontina.themeHalloween">
+        <member name="F:KWiJisho.Models.Commands.CommandManager.Theme.Tramontina.themeHalloween">
             <summary>
             Sets the Tramontina server to Halloween Theme.
             </summary>
         </member>
-        <member name="M:KWIJisho.Models.Commands.CommandManager.Theme.Tramontina.SetTheme(DSharpPlus.CommandsNext.CommandContext,KWIJisho.Models.Commands.CommandManager.Theme.EmojiTheme,System.String,System.String,System.String)">
+        <member name="M:KWiJisho.Models.Commands.CommandManager.Theme.Tramontina.SetThemeAsync(DSharpPlus.CommandsNext.CommandContext,KWiJisho.Models.Commands.CommandManager.Theme.EmojiTheme,System.String,System.String,System.String)">
             <summary>
             Sets the Tramontina server to a Theme according with parameterization.
             </summary>
         </member>
-        <member name="T:KWIJisho.Models.Commands.Command">
+        <member name="T:KWiJisho.Models.Commands.Command">
             <summary>
             Represents a single Discord command.
             </summary>
         </member>
-        <member name="T:KWIJisho.Models.Commands.CommandGroup">
+        <member name="T:KWiJisho.Models.Commands.CommandGroup">
             <summary>
             Represents a group and holds a list with a set of Discord commands.
             </summary>
         </member>
-        <member name="M:KWIJisho.Models.Events.GoodbyeWelcome.GetRandomWelcomeMessage(System.String)">
+        <member name="M:KWiJisho.Models.Events.GoodbyeWelcome.GetRandomWelcomeMessage(System.String)">
             <summary>
             Gets a random welcome message.
             </summary>
             <param name="user"></param>
             <returns></returns>
         </member>
-        <member name="M:KWIJisho.Models.Events.GoodbyeWelcome.GetRandomGoodbyeMessage(System.String)">
+        <member name="M:KWiJisho.Models.Events.GoodbyeWelcome.GetRandomGoodbyeMessage(System.String)">
             <summary>
             Gets a random goodbye message.
             </summary>
             <param name="user"></param>
             <returns></returns>
         </member>
-        <member name="T:KWIJisho.Models.Utils.Channel">
+        <member name="T:KWiJisho.Models.Utils.Channel">
             <summary>
             Class that represents a Discord Channel.
             </summary>
         </member>
-        <member name="M:KWIJisho.Models.Utils.List.GetRandomValueFromList``1(System.Collections.Generic.List{``0})">
+        <member name="M:KWiJisho.Models.Utils.List.GetRandomValueFromList``1(System.Collections.Generic.List{``0})">
             <summary>
             Returns a random value from a list.
             </summary>

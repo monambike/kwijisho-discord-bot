@@ -22,19 +22,19 @@
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>KWIJisho.Program</StartupObject>
+    <StartupObject>KWiJisho.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>256x256-ayaya.ico</ApplicationIcon>
-    <AssemblyTitle>KWIJisho</AssemblyTitle>
+    <AssemblyTitle>KWiJisho</AssemblyTitle>
     <Description>Discord bot made by monambike. https://monambike.com/</Description>
     <Company>Monambike</Company>
-    <Product>KWIJisho</Product>
+    <Product>KWiJisho</Product>
     <Copyright>Copyright ©  2022-2024</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
     <Nullable>warnings</Nullable>
-    <Title>KWIJisho</Title>
+    <Title>KWiJisho</Title>
     <PackageProjectUrl>https://github.com/monambike/kwijisho-discord-bot</PackageProjectUrl>
     <NeutralLanguage>pt-BR</NeutralLanguage>
     <RepositoryType>git</RepositoryType>
@@ -42,7 +42,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageIcon>128x128-ayaya.png</PackageIcon>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <DocumentationFile>KWIJisho-doc.xml</DocumentationFile>
+    <DocumentationFile>KWiJisho-doc.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <WarningLevel>9999</WarningLevel>
@@ -51,6 +51,8 @@
     <WarningLevel>9999</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="DSharpPlus.Lavalink" Version="4.4.6" />
+    <PackageReference Include="DSharpPlus.SlashCommands" Version="4.4.6" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="OpenAI" Version="1.10.0" />
     <PackageReference Include="System.ComponentModel.Composition" Version="8.0.0" />
@@ -113,9 +115,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ConcurrentHashSet" Version="1.3.0" />
-    <PackageReference Include="DSharpPlus" Version="4.4.2" />
-    <PackageReference Include="DSharpPlus.CommandsNext" Version="4.4.2" />
-    <PackageReference Include="DSharpPlus.Interactivity" Version="4.4.2" />
+    <PackageReference Include="DSharpPlus" Version="4.4.6" />
+    <PackageReference Include="DSharpPlus.CommandsNext" Version="4.4.6" />
+    <PackageReference Include="DSharpPlus.Interactivity" Version="4.4.6" />
     <PackageReference Include="Emzi0767.Common" Version="2.6.6" />
   </ItemGroup>
   <ItemGroup>

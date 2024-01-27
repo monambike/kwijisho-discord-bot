@@ -2,9 +2,10 @@
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 
-namespace KWIJisho.Models.Commands
+namespace KWiJisho.Models.Commands
 {
     internal partial class CommandManager
     {

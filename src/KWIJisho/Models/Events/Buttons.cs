@@ -4,7 +4,7 @@ using DSharpPlus.EventArgs;
 using System;
 using System.Threading.Tasks;
 
-namespace KWIJisho.Models.Events
+namespace KWiJisho.Models.Events
 {
     internal class Buttons
     {

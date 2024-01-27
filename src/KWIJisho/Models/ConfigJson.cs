@@ -5,13 +5,13 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KWIJisho.Models
+namespace KWiJisho.Models
 {
     internal struct ConfigJson
     {
         // Those properties are for easier data manipulation since instances are not necessary,
         // because there's only one config.json file.
-        internal static string KWIJishoToken { get; set; }
+        internal static string KWiJishoToken { get; set; }
 
         internal static string ChatGptToken { get; set; }
 
@@ -26,18 +26,18 @@ namespace KWIJisho.Models
         // Even thought we don't need instances because there's only one config.json file, deserializing
         // needs a new instance object. Those properties are for handling those deserializing values
         // Note: Notice that they update the internal static properties on their value set.
-        private string _configJsonKWIJishoToken;
+        private string _configJsonKWiJishoToken;
         [JsonProperty("kwijishoToken")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization.")]
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0251:Make member 'readonly'", Justification = "It's being set on Json file.")]
-        private string ConfigJsonKWIJishoToken
+        private string ConfigJsonKWiJishoToken
         {
-            get => _configJsonKWIJishoToken; set
+            get => _configJsonKWiJishoToken; set
             {
-                _configJsonKWIJishoToken = value;
+                _configJsonKWiJishoToken = value;
 
                 var kwijishoToken = Environment.GetEnvironmentVariable("KWIJISHO_TOKEN");
-                KWIJishoToken = kwijishoToken ?? _configJsonKWIJishoToken;
+                KWiJishoToken = kwijishoToken ?? _configJsonKWiJishoToken;
             }
         }
 

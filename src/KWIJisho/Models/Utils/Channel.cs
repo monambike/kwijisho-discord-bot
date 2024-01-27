@@ -1,6 +1,6 @@
 ﻿using DSharpPlus.CommandsNext;
 
-namespace KWIJisho.Models.Utils
+namespace KWiJisho.Models.Utils
 {
     /// <summary>
     /// Class that represents a Discord Channel.

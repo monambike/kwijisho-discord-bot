@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace KWIJisho.Models.Commands
+namespace KWiJisho.Models.Commands
 {
     /// <summary>
     /// Represent the class that manage commands.
@@ -13,7 +13,7 @@ namespace KWIJisho.Models.Commands
         internal static List<CommandGroup> CommandGroups { get; set; } = [];
 
         internal static CommandGroup AstronomyGroup { get { return new CommandGroup("Nasa e Astronomia"); } }
-        internal static CommandGroup ChatGptGroup { get { return new CommandGroup("ChatGpt (Estilo KWIJisho 🌟)"); } }
+        internal static CommandGroup ChatGptGroup { get { return new CommandGroup("ChatGpt (Estilo KWiJisho 🌟)"); } }
         internal static CommandGroup InfoGroup { get { return new CommandGroup("Informações Adicionais"); } }
         internal static CommandGroup ThemeGroup { get { return new CommandGroup("Mudar Tema do Servidor"); } }
         internal static CommandGroup BirthdayGroup { get { return new CommandGroup("Aniversário"); } }
