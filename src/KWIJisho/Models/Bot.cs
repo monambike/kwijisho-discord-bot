@@ -2,16 +2,17 @@
 using DSharpPlus.CommandsNext;
 using DSharpPlus.SlashCommands;
 using KWiJisho.Models.Commands;
+using KWiJisho.Models.Commands.Slash;
 using KWiJisho.Models.Events;
 using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace KWiJisho.Models
 {
     internal partial class Bot
     {
         internal DiscordClient DiscordClient { get; private set; }
-        internal CommandsNextExtension Commands { get; private set; }
+        internal CommandsNextExtension PrefixCommands { get; private set; }
+        internal SlashCommandsExtension SlashCommands { get; private set; }
 
         internal async Task RunAsync()
         {
@@ -32,7 +33,7 @@ namespace KWiJisho.Models
             DiscordClient = new DiscordClient(discordConfiguration);
             DiscordClient = RegisterAllBotEvents();
 
-            // Defining bot commands settings and registering commands
+            // Defining bot prefix commands settings
             var commandsNextConfiguration = new CommandsNextConfiguration
             {
                 StringPrefixes = new string[] { ConfigJson.Prefix },
@@ -40,10 +41,13 @@ namespace KWiJisho.Models
                 EnableMentionPrefix = true,
                 EnableDefaultHelp = false
             };
-            Commands = DiscordClient.UseCommandsNext(commandsNextConfiguration);
-            RegisterAllBotCommands();
-            // Also using slash commands
-            DiscordClient.UseSlashCommands().RegisterCommands<SlashCommands>(737541664775602269);
+            // Defining and registering bot prefix commands
+            PrefixCommands = DiscordClient.UseCommandsNext(commandsNextConfiguration);
+            RegisterAllBotPrefixCommands();
+
+            // Defining and registering bot slash commands
+            SlashCommands = DiscordClient.UseSlashCommands();
+            RegisterAllBotSlashCommands();
 
             // Connecting to the bot
             await DiscordClient.ConnectAsync();
@@ -55,13 +59,17 @@ namespace KWiJisho.Models
             await Task.Delay(-1);
         }
 
-        private void RegisterAllBotCommands()
+        private void RegisterAllBotPrefixCommands()
         {
-            Commands.RegisterCommands<CommandManager.Nasa>();
-            Commands.RegisterCommands<CommandManager.KwiGpt>();
-            //Commands.RegisterCommands<CommandManager.Info>();
-            Commands.RegisterCommands<CommandManager.Theme.Tramontina>();
-            Commands.RegisterCommands<CommandManager.Birthday>();
+            PrefixCommands.RegisterCommands<CommandManager.Nasa>();
+            PrefixCommands.RegisterCommands<CommandManager.KwiGpt>();
+            PrefixCommands.RegisterCommands<CommandManager.Info>();
+            PrefixCommands.RegisterCommands<CommandManager.Theme.Tramontina>();
+            PrefixCommands.RegisterCommands<CommandManager.Birthday>();
+        }
+        private void RegisterAllBotSlashCommands()
+        {
+            SlashCommands.RegisterCommands<CommandManager.Info>(737541664318554143);
         }
 
         private DiscordClient RegisterAllBotEvents()

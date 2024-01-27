@@ -11,12 +11,11 @@ namespace KWiJisho.Models.Commands
 {
     internal partial class CommandManager
     {
-        internal class Info : ApplicationCommandModule
+        internal class Info : BaseCommandModule
         {
             internal static string furtherHelpDetailsMessage = @" Para receber detalhes sobre um comando digite ""help <nome do comando>"".";
-            //internal Command help = new(nameof(help), $@"Mostra a ajuda.{furtherHelpDetailsMessage}", InfoGroup);
-            //[Command(nameof(help))]
-            [SlashCommand("testHelp", "testHelp description")]
+            internal Command help = new(nameof(help), $@"Mostra a ajuda.{furtherHelpDetailsMessage}", InfoGroup);
+            [Command(nameof(help))]
             internal async Task GetHelpAsync(InteractionContext commandContext)
             {
                 var discordEmbedBuilder = new DiscordEmbedBuilder
