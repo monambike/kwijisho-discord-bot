@@ -69,42 +69,42 @@
             API Documentation: https://github.com/OkGoDoIt/OpenAI-API-dotnet
             </summary>
         </member>
-        <member name="T:KWiJisho.Models.Commands.CommandManager">
+        <member name="T:KWiJisho.Models.Commands.PrefixCommandManager">
             <summary>
             Represent the class that represents commands groups and holds all Discord command classes.
             </summary>
         </member>
-        <member name="T:KWiJisho.Models.Commands.CommandManager.Theme.EmojiTheme">
+        <member name="T:KWiJisho.Models.Commands.PrefixCommandManager.Theme.EmojiTheme">
             <summary>
             Represents seasonal themes that you can change the server into.
             </summary>
         </member>
-        <member name="F:KWiJisho.Models.Commands.CommandManager.Theme.Tramontina.TramontinaChannels">
+        <member name="F:KWiJisho.Models.Commands.PrefixCommandManager.Theme.Tramontina.TramontinaChannels">
             <summary>
             Channels from tramontina server that can receive theme changing.
             </summary>
         </member>
-        <member name="F:KWiJisho.Models.Commands.CommandManager.Theme.Tramontina.themeReset">
+        <member name="F:KWiJisho.Models.Commands.PrefixCommandManager.Theme.Tramontina.themeReset">
             <summary>
             Resets the Tramontina server emojis.
             </summary>
         </member>
-        <member name="F:KWiJisho.Models.Commands.CommandManager.Theme.Tramontina.themeChristmas">
+        <member name="F:KWiJisho.Models.Commands.PrefixCommandManager.Theme.Tramontina.themeChristmas">
             <summary>
             Sets the Tramontina server to Christmas Theme.
             </summary>
         </member>
-        <member name="F:KWiJisho.Models.Commands.CommandManager.Theme.Tramontina.themeEaster">
+        <member name="F:KWiJisho.Models.Commands.PrefixCommandManager.Theme.Tramontina.themeEaster">
             <summary>
             Sets the Tramontina server to Easter Theme.
             </summary>
         </member>
-        <member name="F:KWiJisho.Models.Commands.CommandManager.Theme.Tramontina.themeHalloween">
+        <member name="F:KWiJisho.Models.Commands.PrefixCommandManager.Theme.Tramontina.themeHalloween">
             <summary>
             Sets the Tramontina server to Halloween Theme.
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Commands.CommandManager.Theme.Tramontina.SetThemeAsync(DSharpPlus.CommandsNext.CommandContext,KWiJisho.Models.Commands.CommandManager.Theme.EmojiTheme,System.String,System.String,System.String)">
+        <member name="M:KWiJisho.Models.Commands.PrefixCommandManager.Theme.Tramontina.SetThemeAsync(DSharpPlus.CommandsNext.CommandContext,KWiJisho.Models.Commands.PrefixCommandManager.Theme.EmojiTheme,System.String,System.String,System.String)">
             <summary>
             Sets the Tramontina server to a Theme according with parameterization.
             </summary>

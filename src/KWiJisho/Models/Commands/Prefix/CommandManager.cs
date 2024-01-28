@@ -8,7 +8,7 @@ namespace KWiJisho.Models.Commands
     /// <summary>
     /// Represent the class that represents commands groups and holds all Discord command classes.
     /// </summary>
-    internal static partial class CommandManager
+    internal static partial class PrefixCommandManager
     {
         internal static List<PrefixCommandGroup> CommandGroups { get; set; } = [];
 
@@ -35,7 +35,7 @@ namespace KWiJisho.Models.Commands
             Name = name;
             Description = description;
 
-            var selectedCommandGroup = CommandManager.CommandGroups.Where(commandGroup => commandGroup.Name == group.Name).FirstOrDefault();
+            var selectedCommandGroup = PrefixCommandManager.CommandGroups.Where(commandGroup => commandGroup.Name == group.Name).FirstOrDefault();
             selectedCommandGroup.Commands.Add(this);
         }
 
@@ -58,8 +58,8 @@ namespace KWiJisho.Models.Commands
         internal PrefixCommandGroup(string name)
         {
             Name = name;
-            if (!CommandManager.CommandGroups.Any(commandGroup => commandGroup.Name == name))
-                CommandManager.CommandGroups.Add(this);
+            if (!PrefixCommandManager.CommandGroups.Any(commandGroup => commandGroup.Name == name))
+                PrefixCommandManager.CommandGroups.Add(this);
         }
 
         public override string ToString() => Name;

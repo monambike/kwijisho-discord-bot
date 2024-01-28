@@ -1,6 +1,6 @@
 ﻿namespace KWiJisho.Models.Commands.Prefix
 {
-    internal class Pokemon
+    internal class PrefixPokemon
     {
     }
 }

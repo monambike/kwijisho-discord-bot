@@ -4,6 +4,7 @@ using DSharpPlus.SlashCommands;
 using KWiJisho.Models.Commands;
 using KWiJisho.Models.Commands.Slash;
 using KWiJisho.Models.Events;
+using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
 
 namespace KWiJisho.Models
@@ -61,15 +62,24 @@ namespace KWiJisho.Models
 
         private void RegisterAllBotPrefixCommands()
         {
-            PrefixCommands.RegisterCommands<CommandManager.Nasa>();
-            PrefixCommands.RegisterCommands<CommandManager.KwiGpt>();
-            PrefixCommands.RegisterCommands<CommandManager.Info>();
-            PrefixCommands.RegisterCommands<CommandManager.Theme.Tramontina>();
-            PrefixCommands.RegisterCommands<CommandManager.Birthday>();
+            PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixBirthday>();
+            PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixInfo>();
+            PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixKwiGpt>();
+            PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixNasa>();
+            PrefixCommands.RegisterCommands<PrefixCommandManager.Theme.Tramontina>();
         }
         private void RegisterAllBotSlashCommands()
         {
-            SlashCommands.RegisterCommands<Info>(737541664318554143);
+            // Discord Server ID. If set to null, slash commmands will register to all servers that the bot is in (changes
+            // take up to an hour to apply)
+            ulong? guildId = null;
+            #if DEBUG
+            // My personal server ID for testing
+            guildId = 737541664318554143;
+            #endif
+
+            SlashCommands.RegisterCommands<SlashInfo>(guildId);
+            SlashCommands.RegisterCommands<SlashKwiGpt>(guildId);
         }
 
         private DiscordClient RegisterAllBotEvents()

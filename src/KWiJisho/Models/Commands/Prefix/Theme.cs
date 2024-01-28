@@ -1,6 +1,6 @@
 ﻿namespace KWiJisho.Models.Commands
 {
-    internal partial class CommandManager
+    internal partial class PrefixCommandManager
     {
         internal partial class Theme
         {

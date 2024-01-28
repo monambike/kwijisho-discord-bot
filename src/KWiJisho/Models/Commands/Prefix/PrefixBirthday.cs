@@ -1,21 +1,19 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
-using DSharpPlus.SlashCommands;
 using System.IO;
 using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace KWiJisho.Models.Commands
 {
-    internal partial class CommandManager
+    internal partial class PrefixCommandManager
     {
-        internal class Birthday : BaseCommandModule
+        internal class PrefixBirthday : BaseCommandModule
         {
 
             internal PrefixCommand nextBirthday = new(nameof(nextBirthday), $@"Mostra de quem o aniversário tá mais perto.", BirthdayGroup);
             [Command(nameof(nextBirthday))]
-            internal static async Task GetNextBirthdayAsync(CommandContext commandContext)
+            internal async Task GetNextBirthdayAsync(CommandContext commandContext)
             {
                 var user = Utils.Birthday.GetUserByClosestBirthday();
                 var message = Utils.Birthday.GetUpcomingBirthdayDateByClosestBirthday();
@@ -51,9 +49,26 @@ namespace KWiJisho.Models.Commands
                 "Dezembro"
             };
 
+            enum teste
+            {
+                
+                Janeiro = 01,
+                Fevereiro = 02,
+                Março = 03,
+                Abril = 04,
+                Maio = 05,
+                Junho = 06,
+                Julho = 07,
+                Agosto = 08,
+                Setembro = 09,
+                Outubro = 10,
+                Novembro = 11,
+                Dezembro = 12,
+            }
+
             internal PrefixCommand listBirthday = new(nameof(listBirthday), $@"Mostra a lista de aniversariantes.", BirthdayGroup);
             [Command(nameof(listBirthday))]
-            internal static async Task GetListBirthdayAsync(CommandContext commandContext)
+            internal async Task GetListBirthdayAsync(CommandContext commandContext)
             {
                 var users = Utils.Birthday.GetUsersByClosestBirthday();
                 var message = Utils.Birthday.GetUpcomingBirthdayDateByClosestBirthday();

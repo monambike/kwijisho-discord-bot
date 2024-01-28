@@ -1,7 +1,7 @@
-﻿using DSharpPlus.CommandsNext;
+﻿using DSharpPlus;
+using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
-using DSharpPlus.SlashCommands;
 using ExtensionMethods;
 using System;
 using System.IO;
@@ -9,40 +9,18 @@ using System.Threading.Tasks;
 
 namespace KWiJisho.Models.Commands
 {
-    internal partial class CommandManager
+    internal partial class PrefixCommandManager
     {
-        internal class Info : BaseCommandModule
+        internal class PrefixInfo : BaseCommandModule
         {
             internal const string furtherHelpDetailsMessage = @" Para receber detalhes sobre um comando digite ""help <nome do comando>"".";
             internal PrefixCommand help = new(nameof(help), $"Mostra a ajuda.{furtherHelpDetailsMessage}", InfoGroup);
             [Command(nameof(help))]
-            internal static async Task GetHelpAsync(InteractionContext commandContext)
-            {
-                var discordEmbedBuilder = new DiscordEmbedBuilder
-                {
-                    Color = ConfigJson.DefaultColor.DiscordColor,
-                    Title = "AJUDA COM COMANDOS",
-                    Description = $@"Lembre-se que pra colocar um comando você precisa colocar o ""!"" na frente!{furtherHelpDetailsMessage}",
-                    Thumbnail = new DiscordEmbedBuilder.EmbedThumbnail
-                    {
-                        Url = commandContext.Client.CurrentUser.AvatarUrl
-                    }
-                };
-
-                foreach (var commandGroup in CommandGroups)
-                {
-                    string content = "";
-                    foreach (var discordCommand in commandGroup.Commands)
-                        content += $"{ConfigJson.Prefix}{discordCommand.Name}: ".ToDiscordBold() + $"{discordCommand.Description}{Environment.NewLine}";
-                    discordEmbedBuilder.AddField(commandGroup.Name, content);
-                }
-
-                await commandContext.Channel.SendMessageAsync(discordEmbedBuilder);
-            }
+            internal async Task GetHelpAsync(CommandContext commandContext) => await Commands.Info.GetHelpAsync(commandContext.Channel, commandContext.Client);
 
             internal PrefixCommand info = new(nameof(info), "Mostra informações básicas sobre mim e o meu criador.", InfoGroup);
             [Command(nameof(info))]
-            internal static async Task GetInfoAsync(CommandContext commandContext)
+            internal async Task GetInfoAsync(CommandContext commandContext)
             {
                 var description = $@"Que legal que você quer saber mais sobre mim AHAHAHAHA eu sou a KWiJisho 🌟 😎 o bot {"MAIS LEGAL DE TODOS!!!!!".ToDiscordBold()} criado " +
                     "pro servidor Tramontina." +
