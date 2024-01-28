@@ -1,6 +1,7 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
+using DSharpPlus.SlashCommands;
 using KWiJisho.Models.Apis;
 using System.Threading.Tasks;
 
@@ -10,10 +11,11 @@ namespace KWiJisho.Models.Commands
     {
         internal class KwiGpt : BaseCommandModule
         {
-            internal PrefixCommand k = new(nameof(k), $@"Manda qualquer coisinha na frente que eu respondo alá ChatGPT! Conversa comigo!!", ChatGptGroup);
+            const string kDescription = "Manda qualquer coisinha na frente que eu respondo alá ChatGPT! Conversa comigo!!";
+            internal PrefixCommand k = new(nameof(k), kDescription, ChatGptGroup);
             [Command(nameof(k))]
-
-            internal async Task ChatGptPromptAsync(CommandContext commandContext, params string[] inputs)
+            [SlashCommand(nameof(k), kDescription)]
+            internal static async Task ChatGptPromptAsync(CommandContext commandContext, params string[] inputs)
             {
                 // Getting all user inputs and combining into a string
                 string userInput = string.Join(" ", inputs);

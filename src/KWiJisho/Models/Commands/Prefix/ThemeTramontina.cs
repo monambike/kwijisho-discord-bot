@@ -60,7 +60,7 @@ namespace KWiJisho.Models.Commands
                 /// </summary>
                 internal PrefixCommand themeReset = new(nameof(themeReset), @"Define o servidor para o tema padrão.", ThemeGroup, true);
                 [Command(nameof(themeReset))]
-                internal async Task ResetThemeAsync(CommandContext commandContext)
+                internal static async Task ResetThemeAsync(CommandContext commandContext)
                     => await SetThemeAsync(commandContext, EmojiTheme.Default,
                         "Voltando ao normal!!",
                         "Voltei o servidor pro seu tema original :D");
@@ -70,7 +70,7 @@ namespace KWiJisho.Models.Commands
                 /// </summary>
                 internal PrefixCommand themeChristmas = new(nameof(themeChristmas), @"Define o servidor para o tema de natal.", ThemeGroup, true);
                 [Command(nameof(themeChristmas))]
-                internal async Task SetChristmasThemeAsync(CommandContext commandContext)
+                internal static async Task SetChristmasThemeAsync(CommandContext commandContext)
                     => await SetThemeAsync(commandContext, EmojiTheme.Christmas,
                         "🎅🏻🎁 FELIZ NATAL!! ☃️❄️",
                         $"O servidor acabou de entrar NO {"CLIMA NATALINO".ToDiscordBold()} 🥳🎄✨. {"BOAS FESTAS À TODOS".ToDiscordBold()}." +
@@ -87,7 +87,7 @@ namespace KWiJisho.Models.Commands
                 /// </summary>
                 internal PrefixCommand themeEaster = new(nameof(themeEaster), @"Define o servidor para o tema de páscoa.", ThemeGroup, true);
                 [Command(nameof(themeEaster))]
-                internal async Task SetEasterThemeAsync(CommandContext commandContext)
+                internal static async Task SetEasterThemeAsync(CommandContext commandContext)
                     => await SetThemeAsync(commandContext, EmojiTheme.Easter,
                         "🐇🥕 FELIZ PÁSCOA!! 🐣🥚",
                         @"O coelhinho da páscoa deu um ""pulo"" no servidor! HAHAHA, PULO.. ESSA FOI BOA 🤭.",
@@ -98,7 +98,7 @@ namespace KWiJisho.Models.Commands
                 /// </summary>
                 internal PrefixCommand themeHalloween = new(nameof(themeHalloween), @"Define o servidor para o tema de halloween.", ThemeGroup, true);
                 [Command(nameof(themeHalloween))]
-                internal async Task SetHalloweenThemeAsync(CommandContext commandContext)
+                internal static async Task SetHalloweenThemeAsync(CommandContext commandContext)
                     => await SetThemeAsync(commandContext, EmojiTheme.Halloween,
                         "🕷️🕸️ FELIZ HALLOWEEN!! 🧟👻",
                         $"MUAHAHAHAWHWHA. O SERVIDOR ACABA DE ENTRAR EM CLIMA DE TERROR 🕷️🎃. SE PREPAREM PARA O PIOR DO {"MEDO".ToDiscordBold()}.",

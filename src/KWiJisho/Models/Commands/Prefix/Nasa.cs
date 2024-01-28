@@ -13,7 +13,7 @@ namespace KWiJisho.Models.Commands
         {
             internal PrefixCommand apod = new(nameof(apod), $"(APOD - Astronomy Picture of the Day) Te trago a imagem do dia fresquinha diretamente do site da Nasa! Com uma descrição traduzida por mim é claro uwu", AstronomyGroup);
             [Command(nameof(apod))]
-            internal async Task ApodAsync(CommandContext commandContext)
+            internal static async Task ApodAsync(CommandContext commandContext)
             {
                 var message = await GenerateApodDiscordMessageBuilderAsync(commandContext, OpenAiApi.TranslationType.Translate);
                 await commandContext.Channel.SendMessageAsync(message);
@@ -22,13 +22,13 @@ namespace KWiJisho.Models.Commands
 
             internal PrefixCommand apodResume = new(nameof(apodResume), $"Te trago o mesmo conteúdo do comando {"!apod".ToDiscordBold()} mas mais fácil e divertido de ler! (Texto Resumido)", AstronomyGroup);
             [Command(nameof(apodResume))]
-            internal async Task ApodResumeAsync(CommandContext commandContext)
+            internal static async Task ApodResumeAsync(CommandContext commandContext)
             {
                 var message = await GenerateApodDiscordMessageBuilderAsync(commandContext, OpenAiApi.TranslationType.TranslateAndResume);
                 await commandContext.Channel.SendMessageAsync(message);
             }
 
-            private async Task<DiscordEmbedBuilder> GenerateApodDiscordMessageBuilderAsync(CommandContext commandContext, OpenAiApi.TranslationType translationType)
+            private static async Task<DiscordEmbedBuilder> GenerateApodDiscordMessageBuilderAsync(CommandContext commandContext, OpenAiApi.TranslationType translationType)
             {
                 // Getting the picture of the day
                 var response = await NasaApi.Apod.GetAsync();

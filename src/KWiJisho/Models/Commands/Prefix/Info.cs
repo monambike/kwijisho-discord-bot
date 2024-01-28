@@ -13,10 +13,10 @@ namespace KWiJisho.Models.Commands
     {
         internal class Info : BaseCommandModule
         {
-            internal static string furtherHelpDetailsMessage = @" Para receber detalhes sobre um comando digite ""help <nome do comando>"".";
-            internal PrefixCommand help = new(nameof(help), $@"Mostra a ajuda.{furtherHelpDetailsMessage}", InfoGroup);
+            internal const string furtherHelpDetailsMessage = @" Para receber detalhes sobre um comando digite ""help <nome do comando>"".";
+            internal PrefixCommand help = new(nameof(help), $"Mostra a ajuda.{furtherHelpDetailsMessage}", InfoGroup);
             [Command(nameof(help))]
-            internal async Task GetHelpAsync(InteractionContext commandContext)
+            internal static async Task GetHelpAsync(InteractionContext commandContext)
             {
                 var discordEmbedBuilder = new DiscordEmbedBuilder
                 {
@@ -40,9 +40,9 @@ namespace KWiJisho.Models.Commands
                 await commandContext.Channel.SendMessageAsync(discordEmbedBuilder);
             }
 
-            internal PrefixCommand info = new(nameof(info), @"Mostra informações básicas sobre mim e o meu criador.", InfoGroup);
+            internal PrefixCommand info = new(nameof(info), "Mostra informações básicas sobre mim e o meu criador.", InfoGroup);
             [Command(nameof(info))]
-            internal async Task GetInfoAsync(CommandContext commandContext)
+            internal static async Task GetInfoAsync(CommandContext commandContext)
             {
                 var description = $@"Que legal que você quer saber mais sobre mim AHAHAHAHA eu sou a KWiJisho 🌟 😎 o bot {"MAIS LEGAL DE TODOS!!!!!".ToDiscordBold()} criado " +
                     "pro servidor Tramontina." +

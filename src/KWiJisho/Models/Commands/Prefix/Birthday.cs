@@ -1,8 +1,10 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
+using DSharpPlus.SlashCommands;
 using System.IO;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace KWiJisho.Models.Commands
 {
@@ -13,7 +15,7 @@ namespace KWiJisho.Models.Commands
 
             internal PrefixCommand nextBirthday = new(nameof(nextBirthday), $@"Mostra de quem o aniversário tá mais perto.", BirthdayGroup);
             [Command(nameof(nextBirthday))]
-            internal async Task GetNextBirthdayAsync(CommandContext commandContext)
+            internal static async Task GetNextBirthdayAsync(CommandContext commandContext)
             {
                 var user = Utils.Birthday.GetUserByClosestBirthday();
                 var message = Utils.Birthday.GetUpcomingBirthdayDateByClosestBirthday();
@@ -51,7 +53,7 @@ namespace KWiJisho.Models.Commands
 
             internal PrefixCommand listBirthday = new(nameof(listBirthday), $@"Mostra a lista de aniversariantes.", BirthdayGroup);
             [Command(nameof(listBirthday))]
-            internal async Task GetListBirthdayAsync(CommandContext commandContext)
+            internal static async Task GetListBirthdayAsync(CommandContext commandContext)
             {
                 var users = Utils.Birthday.GetUsersByClosestBirthday();
                 var message = Utils.Birthday.GetUpcomingBirthdayDateByClosestBirthday();
