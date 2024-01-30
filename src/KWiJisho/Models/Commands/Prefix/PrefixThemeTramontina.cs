@@ -121,8 +121,8 @@ namespace KWiJisho.Models.Commands.Prefix
                     await commandContext.Channel.SendMessageAsync("Só um segundinho... Vou botar as decorações então pode tomar um tempinho! ;P");
 
                     // Modifies emoji from every mentioned channel
-                    //foreach (var tramontinaChannel in TramontinaChannels)
-                    //    tramontinaChannel.ChangeEmoji(commandContext, tramontinaChannel.EmojiTheme[emojiTheme]);
+                    foreach (var tramontinaChannel in TramontinaChannels)
+                        tramontinaChannel.ChangeEmoji(commandContext, tramontinaChannel.EmojiTheme[emojiTheme]);
 
                     // Presentation discord embed builder (first message)
                     var presentationDiscordEmbedBuilder = new DiscordEmbedBuilder
