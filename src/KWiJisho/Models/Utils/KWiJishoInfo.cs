@@ -7,7 +7,7 @@ namespace KWiJisho.Models.Utils
     {
         internal static string Name = Assembly.GetCallingAssembly().GetName().Name;
 
-        internal static DateTime Created => new(28, 07, 2020);
+        internal static DateTime Created => new(2020, 07, 28);
 
         // Karen Kujo has born December 1th and has 15 years. So, she will always be
         // (thisYear - 15) years old

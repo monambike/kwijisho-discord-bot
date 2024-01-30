@@ -1,5 +1,4 @@
-﻿using DSharpPlus.CommandsNext;
-using DSharpPlus.Entities;
+﻿using DSharpPlus.Entities;
 using System;
 using System.Collections.Generic;
 
@@ -18,6 +17,7 @@ namespace KWiJisho.Models.Utils
             new(331920695359569922, new DateTime(2000, 11, 08)), // p0sc4t
             new(207556639719555072, new DateTime(2002, 11, 24)), // monambike
             new(737573340851470348, new DateTime(2003, 03, 21)), // darksidevision
+            new(737535848102363259, KWiJishoInfo.Created.Date) // KWiJisho Bot
         ];
         internal class User(ulong id, DateTime born)
         {
@@ -31,12 +31,12 @@ namespace KWiJisho.Models.Utils
             /// Tries to return a user in the server. If not possible to return
             /// because the users wasn't found, return null.
             /// </summary>
-            /// <param name="commandContext"></param>
+            /// <param name="discordGuild"></param>
             /// <returns>Returns <see cref="DiscordMember"/>. If not found, returns null.</returns>
-            internal DiscordMember GetUserDiscordMember(CommandContext commandContext)
+            internal DiscordMember GetUserDiscordMember(DiscordGuild discordGuild)
             {
                 // Tries to return a user
-                try { return commandContext.Guild.GetMemberAsync(Id).Result; }
+                try { return discordGuild.GetMemberAsync(Id).Result; }
                 // If not possible because the user wasn't found, return null
                 catch { return null; }
             }

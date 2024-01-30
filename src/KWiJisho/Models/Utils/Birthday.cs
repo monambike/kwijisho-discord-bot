@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DSharpPlus.CommandsNext;
+using DSharpPlus.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,10 +11,7 @@ namespace KWiJisho.Models.Utils
         internal static List<DiscordUsers.User> GetUsersByClosestBirthday()
         {
             // Get today's date
-            //var dateTimeNow = DateTime.Now.Date;
-            var dateTimeNow = new DateTime(2024, 09, 04);
-            //var dateTimeNow = new DateTime(2024, 09, 05);
-            //var dateTimeNow = new DateTime(2024, 09, 06);
+            var dateTimeNow = DateTime.Now.Date;
             foreach (var user in DiscordUsers.Users)
             {
                 // Current month and day already passed
@@ -34,42 +33,51 @@ namespace KWiJisho.Models.Utils
             return result;
         }
 
-        internal static DiscordUsers.User GetUserByClosestBirthday() => GetUsersByClosestBirthday().FirstOrDefault();
-
-        internal static double GetDaysRemainingByClosestBirthday()
+        internal static DiscordUsers.User GetDiscordUserByClosestBirthday(DiscordGuild discordGuild)
         {
-            var user = GetUserByClosestBirthday();
-            //var dateTimeNow = DateTime.Now.Date;
-            //var dateTimeNow = new DateTime(2024, 09, 04);
-            var dateTimeNow = new DateTime(2024, 09, 05);
-            //var dateTimeNow = new DateTime(2024, 09, 06);
-            return (user.Birthday.Date - dateTimeNow.Date).TotalDays;
+            var users = GetUsersByClosestBirthday();
+            foreach (var user in users)
+            {
+                // Try to return the closest birthday person in the current discord server
+                try
+                {
+                    var tryGetUser = discordGuild.GetMemberAsync(user.Id).Result;
+                    // If possible, return user instead of member
+                    return user;
+                }
+                // If not possible, goes to the next user
+                catch { continue; }
+            }
+            return null;
         }
 
-        internal enum UpcomingBirthdayDate { Today, Tomorrow, SomeDays }
-        internal static UpcomingBirthdayDate GetUpcomingBirthdayDateByClosestBirthday()
+        internal static double GetDaysRemainingByUser(DiscordUsers.User discordUser)
         {
-            var daysRemaning = GetDaysRemainingByClosestBirthday();
+            return (discordUser.Birthday.Date - DateTime.Now.Date).TotalDays;
+        }
 
+        internal enum UpcomingBirthdayDate { Today, Tomorrow, InSomeDays }
+        internal static UpcomingBirthdayDate GetUpcomingBirthdayDate(double daysRemaning)
+        {
             return daysRemaning switch
             {
                  0 => UpcomingBirthdayDate.Today,
                  1 => UpcomingBirthdayDate.Tomorrow,
-                 > 1 => UpcomingBirthdayDate.SomeDays,
+                 > 1 => UpcomingBirthdayDate.InSomeDays,
                 _ => throw new NotImplementedException()
             };
         }
 
-        internal static string GenerateBirthdayMessage()
+        internal static string GenerateBirthdayMessage(DiscordUsers.User discordUser)
         {
-            var daysRemaning = GetDaysRemainingByClosestBirthday();
-            var upcomingBirthdayDate = GetUpcomingBirthdayDateByClosestBirthday();
+            var daysRemaning = GetDaysRemainingByUser(discordUser);
+            var upcomingBirthdayDate = GetUpcomingBirthdayDate(daysRemaning);
 
             return upcomingBirthdayDate switch
             {
                 UpcomingBirthdayDate.Today => $"Hoje é seu aniversário!! 🥳🎉 {"PARABÉNSS!!!!".ToDiscordBold()} Feliz Aniversário 🎂",
                 UpcomingBirthdayDate.Tomorrow => $"{"Amanhá".ToDiscordBold()} já é o aniversário. 🥳🎉",
-                UpcomingBirthdayDate.SomeDays => $"Faltam apenas {(daysRemaning + "dias").ToDiscordBold()} para o aniversário!! 👀 Tô ansiosa!!",
+                UpcomingBirthdayDate.InSomeDays => $"Faltam apenas {(daysRemaning + " dias").ToDiscordBold()} para o aniversário!! 👀 Tô ansiosa!!",
                 _ => throw new NotImplementedException()
             };
         }

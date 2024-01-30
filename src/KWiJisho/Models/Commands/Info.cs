@@ -62,11 +62,12 @@ namespace KWiJisho.Models.Commands
             .AddField("Site Pessoal", "https://monambike.com")
             .WithImageUrl($"attachment://{imagePath}").Build();
 
+            using var fileStream = new FileStream(imagePath, FileMode.Open);
             // Sending the second message with the image and button
             await discordChannel.SendMessageAsync(new DiscordMessageBuilder()
                 .AddEmbed(discordEmbedBuilder)
                 // The image gif of karen kujou happy talking
-                .AddFile(fileName, new FileStream(imagePath, FileMode.Open)));
+                .AddFile(fileName, fileStream));
         }
     }
 }

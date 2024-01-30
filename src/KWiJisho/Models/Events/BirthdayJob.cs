@@ -12,7 +12,6 @@ namespace KWiJisho.Models.Events
         private static async Task GiveBirthdayMessage() => await Task.Run(() => "");
     }
 
-
     internal class Scheduler
     {
         internal static async Task CreateBirthdayScheduler()

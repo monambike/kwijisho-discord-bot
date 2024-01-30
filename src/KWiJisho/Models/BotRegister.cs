@@ -27,7 +27,7 @@ namespace KWiJisho.Models
         {
             // Discord Server ID. If set to null, slash commmands will register to all servers that the bot is in (changes
             // take up to an hour to apply)
-            List<ulong?> guildIds =
+            List<ulong> guildIds =
             [
                 737541664318554143, // Personal Server
                 692588978959941653 // Tramontina
@@ -36,6 +36,7 @@ namespace KWiJisho.Models
             foreach (var guildId in guildIds)
             {
                 SlashCommands.RegisterCommands<SlashBasic>(guildId);
+                SlashCommands.RegisterCommands<SlashBirthday>(guildId);
                 SlashCommands.RegisterCommands<SlashInfo>(guildId);
                 SlashCommands.RegisterCommands<SlashKwiGpt>(guildId);
             }

@@ -51,6 +51,30 @@
     <WarningLevel>9999</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Resources\Images\Birthday\500x500-happybirthday-insomedays.png" />
+    <None Remove="Resources\Images\Birthday\500x500-happybirthday-today.png" />
+    <None Remove="Resources\Images\Birthday\500x500-happybirthday-tomorrow.png" />
+    <None Remove="Resources\Images\KarenKujo\128x128-ayaya.png" />
+    <None Remove="Resources\Images\KarenKujo\1920x1080-uwu.png" />
+    <None Remove="Resources\Images\KarenKujo\200x268-blinking.png" />
+    <None Remove="Resources\Images\KarenKujo\200x268-cat.png" />
+    <None Remove="Resources\Images\KarenKujo\300x300-uwu.png" />
+    <None Remove="Resources\Images\KarenKujo\444x250-smile.png" />
+    <None Remove="Resources\Images\KarenKujo\500x280-happy-talking.gif" />
+    <None Remove="Resources\Images\KarenKujo\500x281-laughing.gif" />
+    <None Remove="Resources\Images\KarenKujo\500x281-pontingup-transparent.png" />
+    <None Remove="Resources\Images\KarenKujo\500x281-talking.gif" />
+    <None Remove="Resources\Images\KarenKujo\547x300-what.png" />
+    <None Remove="Resources\Images\KarenKujo\557x500-smile.png" />
+    <None Remove="Resources\Images\KarenKujo\640x360-tired.png" />
+    <None Remove="Resources\Images\KarenKujo\728x477-two-fingers.png" />
+    <None Remove="Resources\Images\KarenKujo\850x982-happy-birthday.png" />
+    <None Remove="Resources\Images\Tramontina\1173x315-goodbye.png" />
+    <None Remove="Resources\Images\Tramontina\128x128-mello-festa-junina.png" />
+    <None Remove="Resources\Images\Tramontina\128x128-mello-valentines-day.png" />
+    <None Remove="Resources\Images\Tramontina\500x500-welcome.gif" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="DSharpPlus.Lavalink" Version="4.4.6" />
     <PackageReference Include="DSharpPlus.SlashCommands" Version="4.4.6" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
@@ -74,13 +98,54 @@
     <Content Include="256x256-ayaya.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Images\Birthday\500x500-happybirthday-insomedays.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Birthday\500x500-happybirthday-today.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Birthday\500x500-happybirthday-tomorrow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\KarenKujo\128x128-ayaya.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\KarenKujo\1920x1080-uwu.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\KarenKujo\200x268-blinking.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\KarenKujo\200x268-cat.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\KarenKujo\256x256-ayaya.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\KarenKujo\256x256-ayaya.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Images\KarenKujo\300x300-uwu.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\KarenKujo\444x250-smile.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\KarenKujo\480x268-sleeping.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\KarenKujo\500x280-happy-talking.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\KarenKujo\500x281-laughing.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\KarenKujo\500x281-pontingup-transparent.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\KarenKujo\500x281-talking.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\KarenKujo\500x496-happy-looking.gif">
@@ -95,16 +160,43 @@
     <Content Include="Resources\Images\KarenKujo\500x552-cat.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Images\KarenKujo\547x300-what.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\KarenKujo\557x500-smile.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\KarenKujo\640x360-tired.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\KarenKujo\728x477-two-fingers.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\KarenKujo\850x982-happy-birthday.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Tramontina\1173x315-goodbye.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\Tramontina\128x128-mello-christmas.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Tramontina\128x128-mello-easter.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Images\Tramontina\128x128-mello-festa-junina.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\Tramontina\128x128-mello-halloween.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Images\Tramontina\128x128-mello-default.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Tramontina\128x128-mello-valentines-day.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Images\Tramontina\500x500-welcome.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -131,26 +223,9 @@
     <None Update="config.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\Images\KarenKujo\128x128-ayaya.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Resources\Images\KarenKujo\256x256-ayaya.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
-    </None>
-    <None Update="Resources\Images\KarenKujo\500x281-pontingup-transparent.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Resources\Images\KarenKujo\500x281-talking.gif">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Resources\Images\Tramontina\1173x315-goodbye.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Resources\Images\Tramontina\500x500-welcome.gif">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 </Project>

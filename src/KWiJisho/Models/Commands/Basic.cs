@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace KWiJisho.Models.Commands
 {
-    internal class Basic
+    internal static class Basic
     {
         /// <summary>
         /// Sends a random animated emoji from <see cref="DiscordEmojis.AnimatedEmojis.KWiJishoEmojis"/>.

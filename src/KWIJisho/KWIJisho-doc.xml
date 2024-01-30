@@ -167,12 +167,12 @@
             Class responsible for creating and handling custom Discord emojis.
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Utils.DiscordUsers.User.GetUserDiscordMember(DSharpPlus.CommandsNext.CommandContext)">
+        <member name="M:KWiJisho.Models.Utils.DiscordUsers.User.GetUserDiscordMember(DSharpPlus.Entities.DiscordGuild)">
             <summary>
             Tries to return a user in the server. If not possible to return
             because the users wasn't found, return null.
             </summary>
-            <param name="commandContext"></param>
+            <param name="discordGuild"></param>
             <returns>Returns <see cref="T:DSharpPlus.Entities.DiscordMember"/>. If not found, returns null.</returns>
         </member>
         <member name="T:KWiJisho.Models.Utils.KWiJishoLog">
