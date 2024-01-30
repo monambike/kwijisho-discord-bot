@@ -15,30 +15,22 @@ namespace KWiJisho.Models.Apis
             return await GetPromptAsync(style, input);
         }
 
-        internal enum TranslationType { Translate, TranslateAndResume }
-        internal static async Task<string> GetPromptTranslateToPortugueseAsync(string input, TranslationType text)
-        {
-            var style = text switch
-            {
-                TranslationType.Translate => "Traduza o seguinte texto para português.",
-                TranslationType.TranslateAndResume => "Traduza esse texto para português reformulando-o. " +
-                "Quero que você o reformule pensando nas partes mais importantes e que fique fácil de entender, mesmo para quem não é muito " +
-                "chegado no assunto. Se possível deixe-o com no máximo 5 ou 6 linhas. E evite usar palavras difíceis, tente trocar palavras " +
-                "difíceis por palavras mais fáceis e comuns.",
-                _ => throw new System.NotImplementedException()
-            };
-            return await GetPromptAsync(style, input);
-        }
+        internal static async Task<string> GetPromptSummarizeTextAsync(string input)
+            => await GetPromptAsync(input, "Summarize the following text to a maximum of 5 or 6 lines.");
 
-        private static async Task<string> GetPromptAsync(string style, string input)
+        internal static async Task<string> GetPromptTranslateToPortugueseAsync(string input)
+            => await GetPromptAsync(input, "Translate the following text into Brazilian Portuguese.");
+
+        private static async Task<string> GetPromptAsync(string userInput, string promptStyle)
         {
             // Getting chat gpt token and creating conversation
             var api = new OpenAIAPI(ConfigJson.ChatGptToken);
             var chat = api.Chat.CreateConversation();
 
             // Appending texts for the prompt
-            chat.AppendSystemMessage(style);
-            chat.AppendUserInput(input);
+            chat.AppendSystemMessage(promptStyle);
+            // Appending user input
+            chat.AppendUserInput(userInput);
 
             // Returning message
             var response = await chat.GetResponseFromChatbotAsync();
