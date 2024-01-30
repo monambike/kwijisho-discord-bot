@@ -1,7 +1,5 @@
 ﻿using DSharpPlus;
-using DSharpPlus.Entities;
 using DSharpPlus.SlashCommands;
-using System;
 using System.Threading.Tasks;
 
 namespace KWiJisho.Models.Commands.Slash
