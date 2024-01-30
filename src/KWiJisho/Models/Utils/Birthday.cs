@@ -1,4 +1,6 @@
-﻿using ExtensionMethods;
+﻿using DSharpPlus.CommandsNext;
+using DSharpPlus.Entities;
+using ExtensionMethods;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +11,14 @@ namespace KWiJisho.Models.Utils
     {
         internal static List<User> Users =
         [
-            new("eita_tami", new DateTime(2002, 06, 14)),
-            new("fellippeo", new DateTime(2001, 08, 15)),
-            new("gabstend", new DateTime(2001, 03, 30)),
-            new("galo_lpc", new DateTime(2001, 05, 09)),
-            new("haruna1686", new DateTime(2004, 09, 05)),
-            new("p0sc4t", new DateTime(2000, 11, 08)),
-            new("monambike", new DateTime(2002, 11, 24)),
-            new("darksidevision", new DateTime(2003, 03, 21)),
+            new(748963722088677376, new DateTime(2002, 06, 14)), // eita_tami
+            new(256137979335016448, new DateTime(2001, 08, 15)), // fellippeo
+            new(221419309333741569, new DateTime(2001, 03, 30)), // gabstend
+            new(301152393821814794, new DateTime(2001, 05, 09)), // galo_lpc
+            new(421101332326383618, new DateTime(2004, 09, 05)), // haruna1686
+            new(331920695359569922, new DateTime(2000, 11, 08)), // p0sc4t
+            new(207556639719555072, new DateTime(2002, 11, 24)), // monambike
+            new(737573340851470348, new DateTime(2003, 03, 21)), // darksidevision
         ];
 
         internal static List<User> GetUsersByClosestBirthday()
@@ -87,13 +89,27 @@ namespace KWiJisho.Models.Utils
             };
         }
 
-        internal class User(string discordUsername, DateTime birthday)
+        internal class User(ulong id, DateTime born)
         {
-            public string Username { get; set; } = discordUsername;
+            internal ulong Id { get; set; } = id;
 
-            public DateTime Born { get; set; } = birthday;
+            internal DateTime Born { get; set; } = born;
 
-            public DateTime Birthday { get; set; }
+            internal DateTime Birthday { get; set; }
+
+            /// <summary>
+            /// Tries to return a user in the server. If not possible to return
+            /// because the users wasn't found, return null.
+            /// </summary>
+            /// <param name="commandContext"></param>
+            /// <returns>Returns <see cref="DiscordMember"/>. If not found, returns null.</returns>
+            internal DiscordMember GetUserDiscordMember(CommandContext commandContext)
+            {
+                // Tries to return a user
+                try { return commandContext.Guild.GetMemberAsync(Id).Result; }
+                // If not possible because the user wasn't found, return null
+                catch { return null; }
+            }
         }
     }
 }
