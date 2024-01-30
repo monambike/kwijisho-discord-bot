@@ -1,4 +1,4 @@
-﻿namespace ExtensionMethods
+﻿namespace KWiJisho.Models.Utils
 {
     internal static class DiscordFormat
     {

@@ -1,7 +1,7 @@
 ﻿using OpenAI_API;
 using System.Threading.Tasks;
 
-namespace KWiJisho.Models.Apis
+namespace KWiJisho.Models.Api
 {
     /// <summary>
     /// API Documentation: https://github.com/OkGoDoIt/OpenAI-API-dotnet

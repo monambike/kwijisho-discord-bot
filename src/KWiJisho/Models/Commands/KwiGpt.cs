@@ -1,5 +1,5 @@
 ﻿using DSharpPlus.Entities;
-using KWiJisho.Models.Apis;
+using KWiJisho.Models.Api;
 using System.Threading.Tasks;
 
 namespace KWiJisho.Models.Commands

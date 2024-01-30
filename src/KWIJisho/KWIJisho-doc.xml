@@ -4,12 +4,12 @@
         <name>KWiJisho</name>
     </assembly>
     <members>
-        <member name="T:KWiJisho.Models.Apis.HttpService">
+        <member name="T:KWiJisho.Models.Api.HttpService">
             <summary>
             A simple HTTP service for making GET requests and retrieving the response content.
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Apis.HttpService.GetAsync(System.Net.Http.HttpClient,System.String)">
+        <member name="M:KWiJisho.Models.Api.HttpService.GetAsync(System.Net.Http.HttpClient,System.String)">
             <summary>
             Sends an asynchronous GET request to the specified URI and returns the response content as a string.
             </summary>
@@ -17,54 +17,54 @@
             <param name="strRequest">The URI of the resource to request.</param>
             <returns>A Task representing the asynchronous operation. The result contains the response content as a string.</returns>
         </member>
-        <member name="T:KWiJisho.Models.Apis.NasaApi">
+        <member name="T:KWiJisho.Models.Api.NasaApi">
             <summary>
             API Documentation: https://api.nasa.gov/
             </summary>
         </member>
-        <member name="F:KWiJisho.Models.Apis.NasaApi.HttpClient">
+        <member name="F:KWiJisho.Models.Api.NasaApi.HttpClient">
             <summary>
             HttpClient for making api requests.
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Apis.NasaApi.Apod.GetAsync">
+        <member name="M:KWiJisho.Models.Api.NasaApi.Apod.GetAsync">
             <summary>
             Makes a image request for APOD, also known as Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Apis.NasaApi.Apod.GetUsingNasaApiAsync(System.String)">
+        <member name="M:KWiJisho.Models.Api.NasaApi.Apod.GetUsingNasaApiAsync(System.String)">
             <summary>
             Makes a request for the nasa API.
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="P:KWiJisho.Models.Apis.NasaApi.Apod.ApodResponseJson.Title">
+        <member name="P:KWiJisho.Models.Api.NasaApi.Apod.ApodResponseJson.Title">
             <summary>
             Title of the current Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Apis.NasaApi.Apod.ApodResponseJson.Explanation">
+        <member name="P:KWiJisho.Models.Api.NasaApi.Apod.ApodResponseJson.Explanation">
             <summary>
             Explanation of the current Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Apis.NasaApi.Apod.ApodResponseJson.Date">
+        <member name="P:KWiJisho.Models.Api.NasaApi.Apod.ApodResponseJson.Date">
             <summary>
             Date of the current Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Apis.NasaApi.Apod.ApodResponseJson.Url">
+        <member name="P:KWiJisho.Models.Api.NasaApi.Apod.ApodResponseJson.Url">
             <summary>
             Image URL of the current Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Apis.NasaApi.Apod.ApodResponseJson.Copyright">
+        <member name="P:KWiJisho.Models.Api.NasaApi.Apod.ApodResponseJson.Copyright">
             <summary>
             Copyright of the current Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="T:KWiJisho.Models.Apis.OpenAiApi">
+        <member name="T:KWiJisho.Models.Api.OpenAiApi">
             <summary>
             API Documentation: https://github.com/OkGoDoIt/OpenAI-API-dotnet
             </summary>

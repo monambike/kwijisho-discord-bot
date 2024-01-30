@@ -1,7 +1,7 @@
 ﻿using DSharpPlus;
 using DSharpPlus.Entities;
-using ExtensionMethods;
 using KWiJisho.Models.Commands.Prefix;
+using KWiJisho.Models.Utils;
 using System;
 using System.IO;
 using System.Threading.Tasks;

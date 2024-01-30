@@ -1,8 +1,8 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
-using ExtensionMethods;
-using KWiJisho.Models.Apis;
+using KWiJisho.Models.Api;
+using KWiJisho.Models.Utils;
 using System;
 using System.Globalization;
 using System.Threading.Tasks;

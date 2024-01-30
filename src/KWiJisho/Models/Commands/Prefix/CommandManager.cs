@@ -1,4 +1,5 @@
-﻿using ExtensionMethods;
+﻿using DSharpPlus;
+using KWiJisho.Models.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,21 +30,18 @@ namespace KWiJisho.Models.Commands.Prefix
 
         internal string Description { get; set; }
 
-        internal bool OwnerCommand { get; set; } = false;
+        internal Permissions Permissions { get; set; }
 
-        internal PrefixCommand(string name, string description, PrefixCommandGroup group)
+        internal PrefixCommand(string name, string description, PrefixCommandGroup group, Permissions permission = Permissions.None)
         {
             Name = name;
             Description = description;
+            Permissions = permission;
 
-            var selectedCommandGroup = PrefixCommandManager.CommandGroups.Where(commandGroup => commandGroup.Name == group.Name).FirstOrDefault();
-            selectedCommandGroup.Commands.Add(this);
-        }
-
-        internal PrefixCommand(string name, string description, PrefixCommandGroup group, bool ownerCommand)
-            : this(name, $"{description}{Environment.NewLine}" + "Esse comando só pode ser executado pelo dono do bot".ToDiscordItalic(), group)
-        {
-            OwnerCommand = ownerCommand;
+            // If found the command group of this command, then add current prefix to the list
+            PrefixCommandManager.CommandGroups.FirstOrDefault(commandGroup => commandGroup.Name == group.Name)?.Commands.Add(this);
+            if (permission != Permissions.None)
+                Description = $"{description}{Environment.NewLine}" + $@"[Esse comando só pode ser executado por pessoas com a permissão de ""{Permission.GetPermissionNameInPortuguese(permission)}""]".ToDiscordItalic(); ;
         }
     }
 

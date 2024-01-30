@@ -1,6 +1,5 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.Entities;
-using ExtensionMethods;
 using System;
 using System.Collections.Generic;
 using System.Linq;

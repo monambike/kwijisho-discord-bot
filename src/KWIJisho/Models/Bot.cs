@@ -1,10 +1,6 @@
 ﻿using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.SlashCommands;
-using KWiJisho.Models.Commands.Prefix;
-using KWiJisho.Models.Commands.Slash;
-using KWiJisho.Models.Events;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace KWiJisho.Models
@@ -14,7 +10,7 @@ namespace KWiJisho.Models
         internal DiscordClient DiscordClient { get; private set; }
         internal CommandsNextExtension PrefixCommands { get; private set; }
         internal SlashCommandsExtension SlashCommands { get; private set; }
-
+        
         internal async Task RunAsync()
         {
             // Getting info from Json file and setting into the ConfigJson class
@@ -32,7 +28,7 @@ namespace KWiJisho.Models
 
             // DiscordClients instance and events
             DiscordClient = new DiscordClient(discordConfiguration);
-            DiscordClient = RegisterAllBotEvents();
+            DiscordClient = RegisterBotEvents();
 
             // Defining bot prefix commands settings
             var commandsNextConfiguration = new CommandsNextConfiguration
@@ -44,11 +40,13 @@ namespace KWiJisho.Models
             };
             // Defining and registering bot prefix commands
             PrefixCommands = DiscordClient.UseCommandsNext(commandsNextConfiguration);
-            RegisterAllBotPrefixCommands();
+            RegisterPrefixCommands();
+            RegisterPrefixCommandsPermissions();
 
             // Defining and registering bot slash commands
             SlashCommands = DiscordClient.UseSlashCommands();
-            RegisterAllBotSlashCommands();
+            RegisterSlashCommands();
+            RegisterSlashCommandsPermissions();
 
             // Connecting to the bot
             await DiscordClient.ConnectAsync();
@@ -58,43 +56,6 @@ namespace KWiJisho.Models
             if (channel != null) await channel.SendMessageAsync("Olá!! Agora eu tô online e prontíssima pra ajudar! 🥳🎉🎉");
 
             await Task.Delay(-1);
-        }
-
-        private void RegisterAllBotPrefixCommands()
-        {
-            PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixBasic>();
-            PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixBirthday>();
-            PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixInfo>();
-            PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixKwiGpt>();
-            PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixNasa>();
-            PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixTheme.PrefixThemeTramontina>();
-        }
-        private void RegisterAllBotSlashCommands()
-        {
-            // Discord Server ID. If set to null, slash commmands will register to all servers that the bot is in (changes
-            // take up to an hour to apply)
-            List<ulong?> guildIds =
-            [
-                737541664318554143, // Personal Server
-                692588978959941653 // Tramontina
-            ];
-
-            foreach (var guildId in guildIds)
-            {
-                SlashCommands.RegisterCommands<SlashBasic>(guildId);
-                SlashCommands.RegisterCommands<SlashInfo>(guildId);
-                SlashCommands.RegisterCommands<SlashKwiGpt>(guildId);
-            }
-        }
-
-        private DiscordClient RegisterAllBotEvents()
-        {
-            DiscordClient.Ready += BotStart.OnClientReady;
-            DiscordClient.ComponentInteractionCreated += Buttons.OnComponentInteractionCreatedAsync;
-            DiscordClient.GuildMemberAdded += GoodbyeWelcome.OnGuildMemberAddedAsync;
-            DiscordClient.GuildMemberRemoved += GoodbyeWelcome.OnGuildMemberRemovedAsync;
-
-            return DiscordClient;
         }
     }
 }

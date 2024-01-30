@@ -2,7 +2,7 @@
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
-using ExtensionMethods;
+using KWiJisho.Models.Utils;
 using System;
 using System.IO;
 using System.Threading.Tasks;

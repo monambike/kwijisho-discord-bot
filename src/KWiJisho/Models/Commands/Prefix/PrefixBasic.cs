@@ -1,6 +1,7 @@
 ﻿using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.CommandsNext;
 using System.Threading.Tasks;
+using DSharpPlus.SlashCommands;
 
 namespace KWiJisho.Models.Commands.Prefix
 {

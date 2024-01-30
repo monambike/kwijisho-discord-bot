@@ -3,7 +3,7 @@ using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
 using DSharpPlus.SlashCommands;
-using ExtensionMethods;
+using DSharpPlus.SlashCommands.Attributes;
 using KWiJisho.Models.Utils;
 using System;
 using System.Collections.Generic;
@@ -59,7 +59,7 @@ namespace KWiJisho.Models.Commands.Prefix
                 /// <summary>
                 /// Resets the Tramontina server emojis.
                 /// </summary>
-                internal PrefixCommand themeReset = new(nameof(themeReset), @"Define o servidor para o tema padrão.", Theme, true);
+                internal PrefixCommand themeReset = new(nameof(themeReset), @"Define o servidor para o tema padrão.", Theme, Permissions.Administrator);
                 [Command(nameof(themeReset))]
                 internal async Task ResetThemeAsync(CommandContext commandContext)
                     => await SetThemeAsync(commandContext, EmojiTheme.Default,
@@ -69,8 +69,9 @@ namespace KWiJisho.Models.Commands.Prefix
                 /// <summary>
                 /// Sets the Tramontina server to Christmas Theme.
                 /// </summary>
-                internal PrefixCommand themeChristmas = new(nameof(themeChristmas), @"Define o servidor para o tema de natal.", Theme, true);
+                internal PrefixCommand themeChristmas = new(nameof(themeChristmas), @"Define o servidor para o tema de natal.", Theme, Permissions.Administrator);
                 [Command(nameof(themeChristmas))]
+                [RequireUserPermissions(Permissions.Administrator)]
                 internal async Task SetChristmasThemeAsync(CommandContext commandContext)
                     => await SetThemeAsync(commandContext, EmojiTheme.Christmas,
                         "🎅🏻🎁 FELIZ NATAL!! ☃️❄️",
@@ -86,8 +87,9 @@ namespace KWiJisho.Models.Commands.Prefix
                 /// <summary>
                 /// Sets the Tramontina server to Easter Theme.
                 /// </summary>
-                internal PrefixCommand themeEaster = new(nameof(themeEaster), @"Define o servidor para o tema de páscoa.", Theme, true);
+                internal PrefixCommand themeEaster = new(nameof(themeEaster), @"Define o servidor para o tema de páscoa.", Theme, Permissions.Administrator);
                 [Command(nameof(themeEaster))]
+                [RequireUserPermissions(Permissions.Administrator)]
                 internal async Task SetEasterThemeAsync(CommandContext commandContext)
                     => await SetThemeAsync(commandContext, EmojiTheme.Easter,
                         "🐇🥕 FELIZ PÁSCOA!! 🐣🥚",
@@ -97,8 +99,9 @@ namespace KWiJisho.Models.Commands.Prefix
                 /// <summary>
                 /// Sets the Tramontina server to Halloween Theme.
                 /// </summary>
-                internal PrefixCommand themeHalloween = new(nameof(themeHalloween), @"Define o servidor para o tema de halloween.", Theme, true);
+                internal PrefixCommand themeHalloween = new(nameof(themeHalloween), @"Define o servidor para o tema de halloween.", Theme, Permissions.Administrator);
                 [Command(nameof(themeHalloween))]
+                [RequireUserPermissions(Permissions.Administrator)]
                 internal async Task SetHalloweenThemeAsync(CommandContext commandContext)
                     => await SetThemeAsync(commandContext, EmojiTheme.Halloween,
                         "🕷️🕸️ FELIZ HALLOWEEN!! 🧟👻",
@@ -108,17 +111,18 @@ namespace KWiJisho.Models.Commands.Prefix
                 /// <summary>
                 /// Sets the Tramontina server to a Theme according with parameterization.
                 /// </summary>
+                [RequireUserPermissions(Permissions.Administrator)]
                 private static async Task SetThemeAsync(CommandContext commandContext, EmojiTheme emojiTheme, string title, string description, string serverNameSuggestion = null)
                 {
                     // Admin permission check
-                    if (!await Permission.RequireAdministratorAsync(commandContext.Channel, commandContext.Member)) return;
+                    //if (!await Permission.RequireAdministratorAsync(commandContext.Channel, commandContext.Member)) return;
 
                     // Initial message so user can know 
                     await commandContext.Channel.SendMessageAsync("Só um segundinho... Vou botar as decorações então pode tomar um tempinho! ;P");
 
                     // Modifies emoji from every mentioned channel
-                    foreach (var tramontinaChannel in TramontinaChannels)
-                        tramontinaChannel.ChangeEmoji(commandContext, tramontinaChannel.EmojiTheme[emojiTheme]);
+                    //foreach (var tramontinaChannel in TramontinaChannels)
+                    //    tramontinaChannel.ChangeEmoji(commandContext, tramontinaChannel.EmojiTheme[emojiTheme]);
 
                     // Presentation discord embed builder (first message)
                     var presentationDiscordEmbedBuilder = new DiscordEmbedBuilder

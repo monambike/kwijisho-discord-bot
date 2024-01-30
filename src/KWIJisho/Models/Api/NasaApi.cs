@@ -3,7 +3,7 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace KWiJisho.Models.Apis
+namespace KWiJisho.Models.Api
 {
     /// <summary>
     /// API Documentation: https://api.nasa.gov/
