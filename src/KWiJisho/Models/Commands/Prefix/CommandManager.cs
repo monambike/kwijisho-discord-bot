@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace KWiJisho.Models.Commands
+namespace KWiJisho.Models.Commands.Prefix
 {
     /// <summary>
     /// Represent the class that represents commands groups and holds all Discord command classes.
@@ -12,11 +12,12 @@ namespace KWiJisho.Models.Commands
     {
         internal static List<PrefixCommandGroup> CommandGroups { get; set; } = [];
 
-        internal static PrefixCommandGroup AstronomyGroup { get { return new PrefixCommandGroup("Nasa e Astronomia"); } }
-        internal static PrefixCommandGroup ChatGptGroup { get { return new PrefixCommandGroup("ChatGpt (Estilo KWiJisho 🌟)"); } }
-        internal static PrefixCommandGroup InfoGroup { get { return new PrefixCommandGroup("Informações Adicionais"); } }
-        internal static PrefixCommandGroup ThemeGroup { get { return new PrefixCommandGroup("Mudar Tema do Servidor"); } }
-        internal static PrefixCommandGroup BirthdayGroup { get { return new PrefixCommandGroup("Aniversário"); } }
+        internal static PrefixCommandGroup Astronomy => new("Nasa e Astronomia");
+        internal static PrefixCommandGroup ChatGpt => new("ChatGpt (Estilo KWiJisho 🌟)");
+        internal static PrefixCommandGroup Info => new("Informações Adicionais");
+        internal static PrefixCommandGroup Theme => new("Mudar Tema do Servidor");
+        internal static PrefixCommandGroup Birthday => new("Aniversário");
+        internal static PrefixCommandGroup Basic => new("Comandos Básicos");
     }
 
     /// <summary>

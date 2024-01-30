@@ -1,8 +1,8 @@
-﻿namespace KWiJisho.Models.Commands
+﻿namespace KWiJisho.Models.Commands.Prefix
 {
     internal partial class PrefixCommandManager
     {
-        internal partial class Theme
+        internal partial class PrefixTheme
         {
             /// <summary>
             /// Represents seasonal themes that you can change the server into.

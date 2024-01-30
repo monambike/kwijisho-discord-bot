@@ -3,14 +3,14 @@ using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.SlashCommands;
 using System.Threading.Tasks;
 
-namespace KWiJisho.Models.Commands
+namespace KWiJisho.Models.Commands.Prefix
 {
     internal partial class PrefixCommandManager
     {
         internal class PrefixKwiGpt : BaseCommandModule
         {
             const string kDescription = "Manda qualquer coisinha na frente que eu respondo alá ChatGPT! Conversa comigo!!";
-            internal PrefixCommand k = new(nameof(k), kDescription, ChatGptGroup);
+            internal PrefixCommand k = new(nameof(k), kDescription, ChatGpt);
             [Command(nameof(k))]
             [SlashCommand(nameof(k), kDescription)]
             internal async Task ChatGptPromptAsync(CommandContext commandContext, params string[] inputs)

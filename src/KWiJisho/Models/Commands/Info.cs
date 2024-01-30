@@ -1,6 +1,7 @@
 ﻿using DSharpPlus;
 using DSharpPlus.Entities;
 using ExtensionMethods;
+using KWiJisho.Models.Commands.Prefix;
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -42,7 +43,6 @@ namespace KWiJisho.Models.Commands
                 $"{Environment.NewLine + Environment.NewLine}O meu querido dono é o @monambike 💛 foi ele quem me criou e me fez ser quem eu sou hoje." +
                 $"Se quiser conversar com ele aposto que ele ficará feliz em falar com você ainda mais setindo que você é uma pessoa legal. ;D" +
                 $"Vou te mostrar {"algumas informações de contato".ToDiscordBold()}.";
-
 
             // Getting image name and image's full path
             var fileName = $"500x281-talking.gif";
