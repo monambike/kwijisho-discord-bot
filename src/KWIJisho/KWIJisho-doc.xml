@@ -69,55 +69,79 @@
             API Documentation: https://github.com/OkGoDoIt/OpenAI-API-dotnet
             </summary>
         </member>
-        <member name="T:KWiJisho.Models.Commands.PrefixCommandManager">
+        <member name="M:KWiJisho.Models.Commands.Basic.SendRandomAnimatedEmoji(DSharpPlus.Entities.DiscordChannel)">
+            <summary>
+            Sends a random animated emoji from <see cref="F:KWiJisho.Models.Utils.Emojis.AnimatedEmojis.KWiJishoEmojis"/>.
+            </summary>
+            <param name="discordChannel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KWiJisho.Models.Commands.Basic.SendRandomAnimatedMemeEmoji(DSharpPlus.Entities.DiscordChannel)">
+            <summary>
+            Sends a random animated emoji from <see cref="F:KWiJisho.Models.Utils.Emojis.AnimatedEmojis.KWiJishoMemeEmojis"/>.
+            </summary>
+            <param name="discordChannel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:KWiJisho.Models.Commands.Basic.SendRandomAnimatedPartyEmoji(DSharpPlus.Entities.DiscordChannel)">
+            <summary>
+            Sends a random animated emoji from <see cref="F:KWiJisho.Models.Utils.Emojis.AnimatedEmojis.KWiJishoPartyEmojis"/>.
+            </summary>
+            <param name="discordChannel"></param>
+            <returns></returns>
+        </member>
+        <member name="T:KWiJisho.Models.Commands.Prefix.PrefixCommandManager">
             <summary>
             Represent the class that represents commands groups and holds all Discord command classes.
             </summary>
         </member>
-        <member name="T:KWiJisho.Models.Commands.PrefixCommandManager.Theme.EmojiTheme">
+        <member name="T:KWiJisho.Models.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme">
             <summary>
             Represents seasonal themes that you can change the server into.
             </summary>
         </member>
-        <member name="F:KWiJisho.Models.Commands.PrefixCommandManager.Theme.Tramontina.TramontinaChannels">
+        <member name="F:KWiJisho.Models.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.TramontinaChannels">
             <summary>
             Channels from tramontina server that can receive theme changing.
             </summary>
         </member>
-        <member name="F:KWiJisho.Models.Commands.PrefixCommandManager.Theme.Tramontina.themeReset">
+        <member name="F:KWiJisho.Models.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeReset">
             <summary>
             Resets the Tramontina server emojis.
             </summary>
         </member>
-        <member name="F:KWiJisho.Models.Commands.PrefixCommandManager.Theme.Tramontina.themeChristmas">
+        <member name="F:KWiJisho.Models.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeChristmas">
             <summary>
             Sets the Tramontina server to Christmas Theme.
             </summary>
         </member>
-        <member name="F:KWiJisho.Models.Commands.PrefixCommandManager.Theme.Tramontina.themeEaster">
+        <member name="F:KWiJisho.Models.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeEaster">
             <summary>
             Sets the Tramontina server to Easter Theme.
             </summary>
         </member>
-        <member name="F:KWiJisho.Models.Commands.PrefixCommandManager.Theme.Tramontina.themeHalloween">
+        <member name="F:KWiJisho.Models.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeHalloween">
             <summary>
             Sets the Tramontina server to Halloween Theme.
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Commands.PrefixCommandManager.Theme.Tramontina.SetThemeAsync(DSharpPlus.CommandsNext.CommandContext,KWiJisho.Models.Commands.PrefixCommandManager.Theme.EmojiTheme,System.String,System.String,System.String)">
+        <member name="M:KWiJisho.Models.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetThemeAsync(DSharpPlus.CommandsNext.CommandContext,KWiJisho.Models.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme,System.String,System.String,System.String)">
             <summary>
             Sets the Tramontina server to a Theme according with parameterization.
             </summary>
         </member>
-        <member name="T:KWiJisho.Models.Commands.PrefixCommand">
+        <member name="T:KWiJisho.Models.Commands.Prefix.PrefixCommand">
             <summary>
             Represents a single Discord command.
             </summary>
         </member>
-        <member name="T:KWiJisho.Models.Commands.PrefixCommandGroup">
+        <member name="T:KWiJisho.Models.Commands.Prefix.PrefixCommandGroup">
             <summary>
             Represents a group and holds a list with a set of Discord commands.
             </summary>
+        </member>
+        <member name="M:KWiJisho.Models.Events.BirthdayJob.Execute(Quartz.IJobExecutionContext)">
+            <inheritdoc/>
         </member>
         <member name="M:KWiJisho.Models.Events.GoodbyeWelcome.GetRandomWelcomeMessage(System.String)">
             <summary>
@@ -133,9 +157,22 @@
             <param name="user"></param>
             <returns></returns>
         </member>
+        <member name="M:KWiJisho.Models.Utils.Birthday.User.GetUserDiscordMember(DSharpPlus.CommandsNext.CommandContext)">
+            <summary>
+            Tries to return a user in the server. If not possible to return
+            because the users wasn't found, return null.
+            </summary>
+            <param name="commandContext"></param>
+            <returns>Returns <see cref="T:DSharpPlus.Entities.DiscordMember"/>. If not found, returns null.</returns>
+        </member>
         <member name="T:KWiJisho.Models.Utils.Channel">
             <summary>
             Class that represents a Discord Channel.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Models.Utils.Emoji">
+            <summary>
+            Class responsible for creating and handling custom Discord emojis.
             </summary>
         </member>
         <member name="M:KWiJisho.Models.Utils.List.GetRandomValueFromList``1(System.Collections.Generic.List{``0})">
@@ -145,6 +182,11 @@
             <typeparam name="T"></typeparam>
             <param name="list"></param>
             <returns></returns>
+        </member>
+        <member name="T:KWiJisho.Models.Utils.Log">
+            <summary>
+            Class responsible for creating application logs for important tasks.
+            </summary>
         </member>
     </members>
 </doc>
