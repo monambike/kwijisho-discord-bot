@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace KWiJisho.Models.Utils
 {
-    internal static class Emojis
+    internal static class DiscordEmojis
     {
         internal static class AnimatedEmojis
         {
@@ -61,7 +60,7 @@ namespace KWiJisho.Models.Utils
             Id = id;
             Code = $"<a:{name}:{id}>";
 
-            Emojis.AnimatedEmojis.KWiJishoEmojis.Add(this);
+            DiscordEmojis.AnimatedEmojis.KWiJishoEmojis.Add(this);
         }
 
         public override string ToString() => Code;

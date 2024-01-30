@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace KWiJisho.Models.Utils
 {
-    internal static class List
+    internal static class UtilList
     {
         /// <summary>
         /// Returns a random value from a list.

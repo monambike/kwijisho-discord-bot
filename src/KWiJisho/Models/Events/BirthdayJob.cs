@@ -1,6 +1,5 @@
-﻿using Quartz.Impl;
-using Quartz;
-using System;
+﻿using Quartz;
+using Quartz.Impl;
 using System.Threading.Tasks;
 
 namespace KWiJisho.Models.Events

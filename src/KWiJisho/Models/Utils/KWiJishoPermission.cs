@@ -3,7 +3,7 @@ using System;
 
 namespace KWiJisho.Models.Utils
 {
-    internal static class Permission
+    internal static class KWiJishoPermission
     {
         internal static string PermissionCustomErrorMessage(Permissions permission)
             => $@"Esse comando é só para pessoas que possuem a permissão ""{GetPermissionNameInPortuguese(permission)}"".. (ᴗ_ ᴗ。) Eu sinto muito..";

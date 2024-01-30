@@ -1,12 +1,12 @@
-﻿using System.IO;
-using System;
+﻿using System;
+using System.IO;
 
 namespace KWiJisho.Models.Utils
 {
     /// <summary>
     /// Class responsible for creating application logs for important tasks.
     /// </summary>
-    internal static class Log
+    internal static class KWiJishoLog
     {
         private static string Path => "KWiJishoLog.txt";
 
@@ -20,9 +20,13 @@ namespace KWiJisho.Models.Utils
         }
 
         internal static void AddDebug(string message) => Add(LogType.Debug, message);
+
         internal static void AddInfo(string message) => Add(LogType.Info, message);
+
         internal static void AddWarning(string message) => Add(LogType.Warning, message);
+
         internal static void AddError(string message) => Add(LogType.Error, message);
+
         internal static void AddFatal(string message) => Add(LogType.Fatal, message);
 
         private static void Add(LogType logType, string message)

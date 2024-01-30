@@ -65,7 +65,7 @@ namespace KWiJisho.Models
                         if (check is RequireUserPermissionsAttribute requireUserPermissionAttribute)
                         {
                             // Send a custom error message to the user
-                            await exception.Context.RespondAsync(Permission.PermissionCustomErrorMessage(requireUserPermissionAttribute.Permissions));
+                            await exception.Context.RespondAsync(KWiJishoPermission.PermissionCustomErrorMessage(requireUserPermissionAttribute.Permissions));
                         }
                     }
                 }
@@ -87,7 +87,7 @@ namespace KWiJisho.Models
                         {
                             // Send a custom error message to the user
                             await e.Context.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource,
-                                new DiscordInteractionResponseBuilder().WithContent(Permission.PermissionCustomErrorMessage(slashRequireUserPermissionsAttribute.Permissions)));
+                                new DiscordInteractionResponseBuilder().WithContent(KWiJishoPermission.PermissionCustomErrorMessage(slashRequireUserPermissionsAttribute.Permissions)));
                         }
 
                     }

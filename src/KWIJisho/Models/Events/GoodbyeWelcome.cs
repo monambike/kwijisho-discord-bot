@@ -64,7 +64,7 @@ namespace KWiJisho.Models.Events
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        internal static string GetRandomWelcomeMessage(string user) => List.GetRandomValueFromList([
+        internal static string GetRandomWelcomeMessage(string user) => UtilList.GetRandomValueFromList([
             $"EAEEEEEE, Bem-vindo ao servidor {user} meu consagrado! ;D",
             $"SEJA BEM V-V-V-VIIIIIIIIIIIINDO AO TRA-MON-TINAAAA 🎉 {user}",
             $"Como vai {user} meu parceiro? 😎 Aproveite a sua estadia por aqui e se precisar de alguma titia KAWAI JISHO TÁ NA ÁAAAREA",
@@ -76,7 +76,7 @@ namespace KWiJisho.Models.Events
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        internal static string GetRandomGoodbyeMessage(string user) => List.GetRandomValueFromList([
+        internal static string GetRandomGoodbyeMessage(string user) => UtilList.GetRandomValueFromList([
             $"Até logo amigo.. Foi bom te conhecer {user} :(",
             $"Já vai tarde.. BRINCADEIRINHA HAHAHA... Ai mas não.. falando sério, vai fazer falta 🙁 {user}",
             $"NÃAAO, partiu ainda tão tão joveeeeeeeeem 😭😭😭😭 Sentiremos sua falta {user}..",

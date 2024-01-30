@@ -71,21 +71,21 @@
         </member>
         <member name="M:KWiJisho.Models.Commands.Basic.SendRandomAnimatedEmoji(DSharpPlus.Entities.DiscordChannel)">
             <summary>
-            Sends a random animated emoji from <see cref="F:KWiJisho.Models.Utils.Emojis.AnimatedEmojis.KWiJishoEmojis"/>.
+            Sends a random animated emoji from <see cref="F:KWiJisho.Models.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoEmojis"/>.
             </summary>
             <param name="discordChannel"></param>
             <returns></returns>
         </member>
         <member name="M:KWiJisho.Models.Commands.Basic.SendRandomAnimatedMemeEmoji(DSharpPlus.Entities.DiscordChannel)">
             <summary>
-            Sends a random animated emoji from <see cref="F:KWiJisho.Models.Utils.Emojis.AnimatedEmojis.KWiJishoMemeEmojis"/>.
+            Sends a random animated emoji from <see cref="F:KWiJisho.Models.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoMemeEmojis"/>.
             </summary>
             <param name="discordChannel"></param>
             <returns></returns>
         </member>
         <member name="M:KWiJisho.Models.Commands.Basic.SendRandomAnimatedPartyEmoji(DSharpPlus.Entities.DiscordChannel)">
             <summary>
-            Sends a random animated emoji from <see cref="F:KWiJisho.Models.Utils.Emojis.AnimatedEmojis.KWiJishoPartyEmojis"/>.
+            Sends a random animated emoji from <see cref="F:KWiJisho.Models.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoPartyEmojis"/>.
             </summary>
             <param name="discordChannel"></param>
             <returns></returns>
@@ -157,14 +157,6 @@
             <param name="user"></param>
             <returns></returns>
         </member>
-        <member name="M:KWiJisho.Models.Utils.Birthday.User.GetUserDiscordMember(DSharpPlus.CommandsNext.CommandContext)">
-            <summary>
-            Tries to return a user in the server. If not possible to return
-            because the users wasn't found, return null.
-            </summary>
-            <param name="commandContext"></param>
-            <returns>Returns <see cref="T:DSharpPlus.Entities.DiscordMember"/>. If not found, returns null.</returns>
-        </member>
         <member name="T:KWiJisho.Models.Utils.Channel">
             <summary>
             Class that represents a Discord Channel.
@@ -175,18 +167,26 @@
             Class responsible for creating and handling custom Discord emojis.
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Utils.List.GetRandomValueFromList``1(System.Collections.Generic.List{``0})">
+        <member name="M:KWiJisho.Models.Utils.DiscordUsers.User.GetUserDiscordMember(DSharpPlus.CommandsNext.CommandContext)">
+            <summary>
+            Tries to return a user in the server. If not possible to return
+            because the users wasn't found, return null.
+            </summary>
+            <param name="commandContext"></param>
+            <returns>Returns <see cref="T:DSharpPlus.Entities.DiscordMember"/>. If not found, returns null.</returns>
+        </member>
+        <member name="T:KWiJisho.Models.Utils.KWiJishoLog">
+            <summary>
+            Class responsible for creating application logs for important tasks.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Models.Utils.UtilList.GetRandomValueFromList``1(System.Collections.Generic.List{``0})">
             <summary>
             Returns a random value from a list.
             </summary>
             <typeparam name="T"></typeparam>
             <param name="list"></param>
             <returns></returns>
-        </member>
-        <member name="T:KWiJisho.Models.Utils.Log">
-            <summary>
-            Class responsible for creating application logs for important tasks.
-            </summary>
         </member>
     </members>
 </doc>

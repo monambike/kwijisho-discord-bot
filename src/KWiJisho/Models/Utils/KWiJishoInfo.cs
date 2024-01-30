@@ -3,7 +3,7 @@ using System.Reflection;
 
 namespace KWiJisho.Models.Utils
 {
-    internal class KWiJisho
+    internal class KWiJishoInfo
     {
         internal static string Name = Assembly.GetCallingAssembly().GetName().Name;
 

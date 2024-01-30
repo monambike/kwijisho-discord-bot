@@ -41,7 +41,7 @@ namespace KWiJisho.Models.Commands.Prefix
             // If found the command group of this command, then add current prefix to the list
             PrefixCommandManager.CommandGroups.FirstOrDefault(commandGroup => commandGroup.Name == group.Name)?.Commands.Add(this);
             if (permission != Permissions.None)
-                Description = $"{description}{Environment.NewLine}" + $@"[Esse comando só pode ser executado por pessoas com a permissão de ""{Permission.GetPermissionNameInPortuguese(permission)}""]".ToDiscordItalic(); ;
+                Description = $"{description}{Environment.NewLine}" + $@"[Esse comando só pode ser executado por pessoas com a permissão de ""{KWiJishoPermission.GetPermissionNameInPortuguese(permission)}""]".ToDiscordItalic(); ;
         }
     }
 
