@@ -119,7 +119,6 @@
     <PackageReference Include="DSharpPlus" Version="4.4.6" />
     <PackageReference Include="DSharpPlus.CommandsNext" Version="4.4.6" />
     <PackageReference Include="DSharpPlus.Interactivity" Version="4.4.6" />
-    <PackageReference Include="Emzi0767.Common" Version="2.6.6" />
   </ItemGroup>
   <ItemGroup>
     <None Update="256x256-ayaya-christmas.ico">
