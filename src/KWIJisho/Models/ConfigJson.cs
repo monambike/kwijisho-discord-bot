@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace KWiJisho.Models
 {
+    /// <summary>
+    /// Class that represents the ConfigJson file for configuring the discord bot.
+    /// </summary>
     internal struct ConfigJson
     {
         // Those properties are for easier data manipulation since instances are not necessary,

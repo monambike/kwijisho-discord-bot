@@ -7,12 +7,17 @@ namespace KWiJisho.Models.Commands.Prefix
 {
     internal partial class PrefixCommandManager
     {
+        /// <summary>
+        /// Represents a set of KWiGpt prefix commands. Interaction commands with ChatGpt
+        /// in KWiJisho bot style.
+        /// </summary>
         internal class PrefixKwiGpt : BaseCommandModule
         {
-            const string kDescription = "Manda qualquer coisinha na frente que eu respondo alá ChatGPT! Conversa comigo!!";
-            internal PrefixCommand k = new(nameof(k), kDescription, ChatGpt);
+            /// <summary>
+            /// Represent the command to interact with the bot with ChatGpt in KWiJisho style.
+            /// </summary>
+            internal PrefixCommand k = new(nameof(k), "Manda qualquer coisinha na frente que eu respondo alá ChatGPT! Conversa comigo!!", ChatGpt);
             [Command(nameof(k))]
-            [SlashCommand(nameof(k), kDescription)]
             internal async Task ChatGptPromptAsync(CommandContext commandContext, params string[] inputs)
             {
                 // Show's that the bot is "typing" while it process everything

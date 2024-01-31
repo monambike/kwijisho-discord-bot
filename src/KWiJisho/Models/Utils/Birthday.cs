@@ -1,5 +1,4 @@
-﻿using DSharpPlus.CommandsNext;
-using DSharpPlus.Entities;
+﻿using DSharpPlus.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +7,7 @@ namespace KWiJisho.Models.Utils
 {
     internal static class Birthday
     {
-        internal static List<DiscordUsers.User> GetUsersByClosestBirthday()
+        internal static List<User> GetUsersByClosestBirthday()
         {
             // Get today's date
             var dateTimeNow = DateTime.Now.Date;
@@ -33,7 +32,7 @@ namespace KWiJisho.Models.Utils
             return result;
         }
 
-        internal static DiscordUsers.User GetDiscordUserByClosestBirthday(DiscordGuild discordGuild)
+        internal static User GetDiscordUserByClosestBirthday(DiscordGuild discordGuild)
         {
             var users = GetUsersByClosestBirthday();
             foreach (var user in users)
@@ -51,7 +50,7 @@ namespace KWiJisho.Models.Utils
             return null;
         }
 
-        internal static double GetDaysRemainingByUser(DiscordUsers.User discordUser)
+        internal static double GetDaysRemainingByUser(User discordUser)
         {
             return (discordUser.Birthday.Date - DateTime.Now.Date).TotalDays;
         }
@@ -68,11 +67,11 @@ namespace KWiJisho.Models.Utils
             };
         }
 
-        internal static string GenerateBirthdayMessage(DiscordUsers.User discordUser)
+        internal static string GenerateBirthdayMessage(User discordUser)
         {
+            // Getting days remaining for registered user birthday
             var daysRemaning = GetDaysRemainingByUser(discordUser);
             var upcomingBirthdayDate = GetUpcomingBirthdayDate(daysRemaning);
-
             return upcomingBirthdayDate switch
             {
                 UpcomingBirthdayDate.Today => $"Hoje é seu aniversário!! 🥳🎉 {"PARABÉNSS!!!!".ToDiscordBold()} Feliz Aniversário 🎂",

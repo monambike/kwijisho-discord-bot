@@ -4,8 +4,14 @@ using System.Threading.Tasks;
 
 namespace KWiJisho.Models.Commands.Slash
 {
+    /// <summary>
+    /// Represents a set of birthday slash commands.
+    /// </summary>
     internal class SlashBirthday : ApplicationCommandModule
     {
+        /// <summary>
+        /// Represents the command to show the next person to have birthday.
+        /// </summary>
         [SlashCommand("next-birthday", "Mostra o aniversário mais próximo!")]
         internal static async Task GetNextBirthdayAsync(InteractionContext interactionContext)
         {
@@ -14,6 +20,9 @@ namespace KWiJisho.Models.Commands.Slash
             await interactionContext.DeleteResponseAsync();
         }
 
+        /// <summary>
+        /// Represents the command to list people will have birthday.
+        /// </summary>
 
         [SlashCommand("birthday-list", "Mostra a lista de aniversariantes!")]
         internal static async Task GetListBirthdayAsync(InteractionContext interactionContext)

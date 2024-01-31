@@ -3,11 +3,24 @@ using System;
 
 namespace KWiJisho.Models.Utils
 {
+    /// <summary>
+    /// Provides utility methods for handling permissions in the KWiJisho application.
+    /// </summary>
     internal static class KWiJishoPermission
     {
+        /// <summary>
+        /// Generates a custom error message for a permission check failure.
+        /// </summary>
+        /// <param name="permission">The required permission.</param>
+        /// <returns>A formatted error message indicating the required permission.</returns>
         internal static string PermissionCustomErrorMessage(Permissions permission)
             => $@"Esse comando é só para pessoas que possuem a permissão ""{GetPermissionNameInPortuguese(permission)}"".. (ᴗ_ ᴗ。) Eu sinto muito..";
-        
+
+        /// <summary>
+        /// Gets the Portuguese name of a Discord permission.
+        /// </summary>
+        /// <param name="permission">The Discord permission.</param>
+        /// <returns>The Portuguese name of the permission.</returns>
         internal static string GetPermissionNameInPortuguese(Permissions permission)
         {
             return permission switch

@@ -48,21 +48,36 @@ namespace KWiJisho.Models.Utils
     /// </summary>
     internal record Emoji
     {
-        internal string Name { get; private set; }
+        /// <summary>
+        /// The discord emoji name.
+        /// </summary>
+        internal string Name { get; init; }
 
-        internal ulong Id { get; private set; }
+        /// <summary>
+        /// The discord emoji unique identifier.
+        /// </summary>
+        internal ulong Id { get; init; }
 
-        internal string Code { get; private set; }
+        /// <summary>
+        /// The discord emoji code responsible for outputing it into the chat.
+        /// <c>&lt;a:{name}:{id}&gt;</c>
+        /// </summary>
+        internal string Code => $"<a:{Name}:{Id}>";
 
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="Emoji"/> class with the specified
+        /// name and identifier.
+        /// </summary>
+        /// <param name="name">The name of the Discord emoji.</param>
+        /// <param name="id">The unique identifier of the Discord emoji.</param>
         internal Emoji(string name, ulong id)
         {
-            Name = name;
-            Id = id;
-            Code = $"<a:{name}:{id}>";
-
+            (Name, Id) = (name, id);
             DiscordEmojis.AnimatedEmojis.KWiJishoEmojis.Add(this);
         }
 
+        /// <inheritdoc/>
         public override string ToString() => Code;
     }
 }

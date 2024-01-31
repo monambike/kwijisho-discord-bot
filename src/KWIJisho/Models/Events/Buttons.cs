@@ -6,12 +6,23 @@ using System.Threading.Tasks;
 
 namespace KWiJisho.Models.Events
 {
+    /// <summary>
+    /// Class responsible for handling button click events.
+    /// </summary>
     internal class Buttons
     {
+        /// <summary>
+        /// Handles the event when a component interaction is created, like button clicks.
+        /// </summary>
+        /// <param name="sender">The Discord client instance.</param>
+        /// <param name="e">Event arguments containing information about the component interaction.</param>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         internal static async Task OnComponentInteractionCreatedAsync(DiscordClient sender, ComponentInteractionCreateEventArgs e)
         {
+            // Throws a argument null exception if the sender is null
             ArgumentNullException.ThrowIfNull(sender);
-            /// Handling interactions with Id incoming from <param name="e"></param>
+
+            // Handling interactions with Id incoming from the event arguments
             switch (e.Id)
             {
                 // Copies server name suggestion
@@ -19,10 +30,17 @@ namespace KWiJisho.Models.Events
             }
         }
 
+        /// <summary>
+        /// Copies the server name from the interaction's message and puts it into the clipboard.
+        /// Sends a feedback message to the user.
+        /// </summary>
+        /// <param name="e">Event arguments containing information about the component interaction.</param>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         internal static async Task CopyServerNameAsync(ComponentInteractionCreateEventArgs e)
         {
             // Getting the message content, in other words, the discord server name to be copied
             var message = e.Message.Embeds[0].Description;
+
             // Gets text into the clipboard
             TextCopy.ClipboardService.SetText(message);
 

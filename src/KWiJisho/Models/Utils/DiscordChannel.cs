@@ -3,20 +3,28 @@
 namespace KWiJisho.Models.Utils
 {
     /// <summary>
-    /// Class that represents a Discord Channel.
+    /// The class that represents a new instance of a Discord channel with a
+    /// unique identifier and a default name.
+    /// <param name="id">The Discord channel unique identifier.</param>
+    /// <param name="defaultName">The Discord channel default name.</param>
     /// </summary>
-    internal class Channel
+    internal class Channel(ulong id, string defaultName)
     {
-        internal ulong Id { get; private set; }
+        /// <summary>
+        /// The Discord channel unique identifier.
+        /// </summary>
+        internal ulong Id = id;
 
-        internal string DefaultName { get; set; }
+        /// <summary>
+        /// The Discord channel default name.
+        /// </summary>
+        internal string DefaultName = defaultName;
 
-        internal Channel(ulong id, string defaultName)
-        {
-            Id = id;
-            DefaultName = defaultName;
-        }
-
+        /// <summary>
+        /// Updates the name of the Discord channel asynchronously.
+        /// </summary>
+        /// <param name="commandContext">The command context containing information about the command.</param>
+        /// <param name="newName">The new name for the Discord channel.</param>
         internal async void UpdateChannelNameAsync(CommandContext commandContext, string newName)
         {
             var channel = commandContext.Client.GetChannelAsync(Id).Result;

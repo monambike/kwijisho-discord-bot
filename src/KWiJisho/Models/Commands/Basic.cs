@@ -1,5 +1,4 @@
 ﻿using DSharpPlus.Entities;
-using DSharpPlus.SlashCommands;
 using KWiJisho.Models.Utils;
 using System.Threading.Tasks;
 

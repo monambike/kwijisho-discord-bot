@@ -4,11 +4,17 @@ using System.Threading.Tasks;
 
 namespace KWiJisho.Models.Commands.Slash
 {
+    /// <summary>
+    /// Represents a set of basic slash commands.
+    /// </summary>
     internal class SlashBasic : ApplicationCommandModule
     {
         [SlashCommandGroup("emoji", "Envia um emoji animado aleatório! hehe.")]
         public class Emoji : ApplicationCommandModule
         {
+            /// <summary>
+            /// Represents the command to send a random animated emoji.
+            /// </summary>
             [SlashCommand("any", "Envia qualquer emoji animado.")]
             internal static async Task SendRandomAnimatedEmoji(InteractionContext interactionContext)
             {
@@ -16,6 +22,9 @@ namespace KWiJisho.Models.Commands.Slash
                 await interactionContext.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource);
             }
 
+            /// <summary>
+            /// Represents the command to send a random animated meme emoji.
+            /// </summary>
             [SlashCommand("meme", "Envia um emoji de meme animado.")]
             internal static async Task SendRandomAnimatedMemeEmoji(InteractionContext interactionContext)
             {
@@ -23,6 +32,9 @@ namespace KWiJisho.Models.Commands.Slash
                 await interactionContext.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource);
             }
 
+            /// <summary>
+            /// Represents the command to send a random animated party emoji.
+            /// </summary>
             [SlashCommand("party", "Envia um emoji de festa animado.")]
             internal static async Task SendRandomAnimatedPartyEmoji(InteractionContext interactionContext)
             {

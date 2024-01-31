@@ -14,6 +14,9 @@ namespace KWiJisho.Models
 {
     internal partial class Bot
     {
+        /// <summary>
+        /// Register all the Discord bot prefix commands.
+        /// </summary>
         internal void RegisterPrefixCommands()
         {
             PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixBasic>();
@@ -23,6 +26,10 @@ namespace KWiJisho.Models
             PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixNasa>();
             PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixTheme.PrefixThemeTramontina>();
         }
+
+        /// <summary>
+        /// Register all the Discord bot slash commands.
+        /// </summary>
         internal void RegisterSlashCommands()
         {
             // Discord Server ID. If set to null, slash commmands will register to all servers that the bot is in (changes
@@ -42,14 +49,16 @@ namespace KWiJisho.Models
             }
         }
 
-        internal DiscordClient RegisterBotEvents()
+        /// <summary>
+        /// Register all the Discord bot events.
+        /// </summary>
+        /// <returns></returns>
+        internal void RegisterBotEvents()
         {
             DiscordClient.Ready += BotStart.OnClientReady;
             DiscordClient.ComponentInteractionCreated += Buttons.OnComponentInteractionCreatedAsync;
             DiscordClient.GuildMemberAdded += GoodbyeWelcome.OnGuildMemberAddedAsync;
             DiscordClient.GuildMemberRemoved += GoodbyeWelcome.OnGuildMemberRemovedAsync;
-
-            return DiscordClient;
         }
 
         internal void RegisterPrefixCommandsPermissions()

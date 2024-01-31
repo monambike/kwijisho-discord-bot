@@ -20,8 +20,11 @@ namespace KWiJisho.Models.Api
             // Tries to make the request with the base address and the request
             // for URI validation
             Uri.TryCreate($"{httpClient.BaseAddress}{strRequest}", UriKind.Absolute, out Uri request);
+
             // If current URI is valid, makes the requisition and returns the response
             using HttpResponseMessage response = await httpClient.GetAsync(request);
+
+            // Returning assynchronously the content response as string
             return await response.Content.ReadAsStringAsync();
         }
     }

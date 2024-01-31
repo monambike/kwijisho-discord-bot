@@ -4,8 +4,15 @@ using System.Threading.Tasks;
 
 namespace KWiJisho.Models.Commands.Slash
 {
+    /// <summary>
+    /// Represents a set of KWiGpt slash commands. Interaction commands with ChatGpt
+    /// in KWiJisho bot style.
+    /// </summary>
     internal class SlashKwiGpt : ApplicationCommandModule
     {
+        /// <summary>
+        /// Represent the command to interact with the bot with ChatGpt in KWiJisho style.
+        /// </summary>
         [SlashCommand("k", "Manda qualquer coisinha na frente que eu respondo alá ChatGPT! Conversa comigo!!")]
         internal static async Task ChatGptPromptAsync(InteractionContext interactionContext, [Option("seu-texto", "Qualquer coisa! Manda um textinho que você quiser que eu responda <3")] string input)
         {

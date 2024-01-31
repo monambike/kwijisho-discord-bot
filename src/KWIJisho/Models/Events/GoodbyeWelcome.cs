@@ -8,8 +8,18 @@ using System.Threading.Tasks;
 
 namespace KWiJisho.Models.Events
 {
+    /// <summary>
+    /// Class responsible for managing goodbye and welcome events and methods.
+    /// </summary>
     internal class GoodbyeWelcome
     {
+        /// <summary>
+        /// Handles the event when a new member joins the Discord server. Sends a welcome message
+        /// with a image and a random string.
+        /// </summary>
+        /// <param name="sender">The discord client instance.</param>
+        /// <param name="e">Event arguments containing information about the guild member.</param>
+        /// <returns>A <see cref="Task"/> representing the assynchronous operation.</returns>
         internal static async Task OnGuildMemberAddedAsync(DiscordClient sender, GuildMemberAddEventArgs e)
         {
             ArgumentNullException.ThrowIfNull(sender);
@@ -25,24 +35,32 @@ namespace KWiJisho.Models.Events
                 Color = ConfigJson.DefaultColor.DiscordColor
             }.WithImageUrl($"attachment://{imagePath}").Build();
 
-            // Creating message builder with message body and image file
+            using var fileStream = new FileStream(imagePath, FileMode.Open);
+            // Creating message builder and attaching the message embed builder and image file
             var discordMessageBuilder = new DiscordMessageBuilder()
-                .AddEmbed(discordEmbedBuilder)
-                .AddFile(fileName, new FileStream(imagePath, FileMode.Open));
+                .AddEmbed(discordEmbedBuilder).AddFile(fileName, fileStream);
 
             // Sending the message on welcome channel
-            await e.Guild.GetChannel(842222447410544650).SendMessageAsync(discordMessageBuilder);
+            await e.Guild.GetChannel(ServerInfos.TramontinaWelcomeChannelId).SendMessageAsync(discordMessageBuilder);
         }
 
+        /// <summary>
+        /// Handles the event when a member leaves the Discord server. Sends a goodbye message
+        /// with a image and a random string.
+        /// </summary>
+        /// <param name="sender">The discord client instance.</param>
+        /// <param name="e">Events arguments containing information about the guild member.</param>
+        /// <returns>A <see cref="Task"/> representing the assynchronous operation.</returns>
         internal static async Task OnGuildMemberRemovedAsync(DiscordClient sender, GuildMemberRemoveEventArgs e)
         {
+            // If senders is null throws an exception
             ArgumentNullException.ThrowIfNull(sender);
 
             // Getting welcome image info
             var fileName = $"1173x315-goodbye.png";
             var imagePath = Path.GetFullPath($"Resources/Images/Tramontina/{fileName}");
 
-            // Message body
+            // Making the discord embed builder with the message body content and image file
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
                 Title = @$"""ACHO QUE ISSO É UM ADEUS""",
@@ -50,20 +68,20 @@ namespace KWiJisho.Models.Events
                 Color = ConfigJson.DefaultColor.DiscordColor
             }.WithImageUrl($"attachment://{imagePath}").Build();
 
-            // Creating message builder with message body and image file
+            using var fileStream = new FileStream(imagePath, FileMode.Open);
+            // Creating message builder and attaching the message embed builder and image file
             var discordMessageBuilder = new DiscordMessageBuilder()
-                .AddEmbed(discordEmbedBuilder)
-                .AddFile(fileName, new FileStream(imagePath, FileMode.Open));
+                .AddEmbed(discordEmbedBuilder).AddFile(fileName, fileStream);
 
             // Sending the message on welcome channel
-            await e.Guild.GetChannel(842222447410544650).SendMessageAsync(discordMessageBuilder);
+            await e.Guild.GetChannel(ServerInfos.TramontinaWelcomeChannelId).SendMessageAsync(discordMessageBuilder);
         }
 
         /// <summary>
-        /// Gets a random welcome message.
+        /// Gets a random string welcome message.
         /// </summary>
-        /// <param name="user"></param>
-        /// <returns></returns>
+        /// <param name="user">The user that will receive the welcome message.</param>
+        /// <returns>The string containing the welcome message .</returns>
         internal static string GetRandomWelcomeMessage(string user) => UtilList.GetRandomValueFromList([
             $"EAEEEEEE, Bem-vindo ao servidor {user} meu consagrado! ;D",
             $"SEJA BEM V-V-V-VIIIIIIIIIIIINDO AO TRA-MON-TINAAAA 🎉 {user}",
@@ -72,10 +90,10 @@ namespace KWiJisho.Models.Events
         ]);
 
         /// <summary>
-        /// Gets a random goodbye message.
+        /// Gets a random string goodbye message.
         /// </summary>
-        /// <param name="user"></param>
-        /// <returns></returns>
+        /// <param name="user">The user that will receive the welcome message.</param>
+        /// <returns>The string containing the goodbye message .</returns>
         internal static string GetRandomGoodbyeMessage(string user) => UtilList.GetRandomValueFromList([
             $"Até logo amigo.. Foi bom te conhecer {user} :(",
             $"Já vai tarde.. BRINCADEIRINHA HAHAHA... Ai mas não.. falando sério, vai fazer falta 🙁 {user}",
