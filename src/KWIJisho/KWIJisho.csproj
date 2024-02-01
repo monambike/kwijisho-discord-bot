@@ -76,6 +76,7 @@
     <None Remove="Resources\Images\Tramontina\500x500-welcome.gif" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Cake.DocFx" Version="1.0.0" />
     <PackageReference Include="DSharpPlus.Lavalink" Version="4.4.6" />
     <PackageReference Include="DSharpPlus.SlashCommands" Version="4.4.6" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
