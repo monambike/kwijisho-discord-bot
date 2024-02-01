@@ -4,12 +4,12 @@
         <name>KWiJisho</name>
     </assembly>
     <members>
-        <member name="T:KWiJisho.Models.Api.HttpService">
+        <member name="T:KWiJisho.Modules.Api.HttpService">
             <summary>
             A simple HTTP service for making GET requests and retrieving the response content.
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Api.HttpService.GetAsync(System.Net.Http.HttpClient,System.String)">
+        <member name="M:KWiJisho.Modules.Api.HttpService.GetAsync(System.Net.Http.HttpClient,System.String)">
             <summary>
             Sends an asynchronous GET request to the specified URI and returns the response content as a string.
             </summary>
@@ -17,190 +17,465 @@
             <param name="strRequest">The URI of the resource to request.</param>
             <returns>A Task representing the asynchronous operation. The result contains the response content as a string.</returns>
         </member>
-        <member name="T:KWiJisho.Models.Api.NasaApi">
+        <member name="T:KWiJisho.Modules.Api.NasaApi">
             <summary>
             API Documentation: https://api.nasa.gov/
             </summary>
         </member>
-        <member name="F:KWiJisho.Models.Api.NasaApi.HttpClient">
+        <member name="F:KWiJisho.Modules.Api.NasaApi.HttpClient">
             <summary>
             HttpClient for making api requests.
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Api.NasaApi.Apod.GetAsync">
+        <member name="M:KWiJisho.Modules.Api.NasaApi.Apod.GetAsync">
             <summary>
             Makes a image request for APOD, also known as Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Api.NasaApi.Apod.GetUsingNasaApiAsync(System.String)">
+        <member name="M:KWiJisho.Modules.Api.NasaApi.Apod.GetUsingNasaApiAsync(System.String)">
             <summary>
             Makes a request for the nasa API.
             </summary>
             <param name="request"></param>
             <returns></returns>
         </member>
-        <member name="P:KWiJisho.Models.Api.NasaApi.Apod.ApodResponseJson.Title">
+        <member name="P:KWiJisho.Modules.Api.NasaApi.Apod.ApodResponseJson.Title">
             <summary>
             Title of the current Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Api.NasaApi.Apod.ApodResponseJson.Explanation">
+        <member name="P:KWiJisho.Modules.Api.NasaApi.Apod.ApodResponseJson.Explanation">
             <summary>
             Explanation of the current Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Api.NasaApi.Apod.ApodResponseJson.Date">
+        <member name="P:KWiJisho.Modules.Api.NasaApi.Apod.ApodResponseJson.Date">
             <summary>
             Date of the current Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Api.NasaApi.Apod.ApodResponseJson.Url">
+        <member name="P:KWiJisho.Modules.Api.NasaApi.Apod.ApodResponseJson.Url">
             <summary>
             Image URL of the current Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Api.NasaApi.Apod.ApodResponseJson.Copyright">
+        <member name="P:KWiJisho.Modules.Api.NasaApi.Apod.ApodResponseJson.Copyright">
             <summary>
             Copyright of the current Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="T:KWiJisho.Models.Api.OpenAiApi">
+        <member name="T:KWiJisho.Modules.Api.OpenAiApi">
             <summary>
-            API Documentation: https://github.com/OkGoDoIt/OpenAI-API-dotnet
+            This class provides methods for interacting with the OpenAI GPT-3.5 model
+            using the OpenAI-API-dotnet library.
+            API Documentation: <a href="https://github.com/OkGoDoIt/OpenAI-API-dotnet"/>
             </summary>
         </member>
-        <member name="T:KWiJisho.Models.Bot">
+        <member name="M:KWiJisho.Modules.Api.OpenAiApi.GetPromptKWiJishoStyleAsync(System.String)">
+            <summary>
+            Asynchronous method to generate a prompt in the style of "KWiJisho."
+            </summary>
+            <param name="input">The user input text.</param>
+            <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
+        </member>
+        <member name="M:KWiJisho.Modules.Api.OpenAiApi.GetPromptSummarizeTextAsync(System.String)">
+            <summary>
+            Asynchronous method to generate a prompt for summarizing text.
+            </summary>
+            <param name="input">The text to be summarized.</param>
+            <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
+        </member>
+        <member name="M:KWiJisho.Modules.Api.OpenAiApi.GetPromptTranslateToPortugueseAsync(System.String)">
+            <summary>
+            Asynchronous method to generate a prompt for translating text to Brazilian Portuguese.
+            </summary>
+            <param name="input">The text to be translated.</param>
+            <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
+        </member>
+        <member name="M:KWiJisho.Modules.Api.OpenAiApi.GetPromptAsync(System.String,System.String)">
+            <summary>
+            Asynchronous method to generate a prompt for the OpenAI GPT-3.5 model.
+            </summary>
+            <param name="userInput">The user input text.</param>
+            <param name="promptStyle">The style of the prompt to be added.</param>
+            <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
+        </member>
+        <member name="T:KWiJisho.Modules.Bot">
             <summary>
             Class responsible for managing the Discord bot.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Bot.DiscordClient">
+        <member name="P:KWiJisho.Modules.Bot.DiscordClient">
             <summary>
             Gets or sets the Discord client instance used by the bot.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Bot.PrefixCommands">
+        <member name="P:KWiJisho.Modules.Bot.PrefixCommands">
             <summary>
             Gets or sets the <see cref="T:DSharpPlus.CommandsNext.CommandsNextExtension"/> instance for handling bot prefix commands.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Bot.SlashCommands">
+        <member name="P:KWiJisho.Modules.Bot.SlashCommands">
             <summary>
             Gets or sets the <see cref="T:DSharpPlus.SlashCommands.SlashCommandsExtension"/> instance for handling bot slash commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Bot.RunAsync">
+        <member name="M:KWiJisho.Modules.Bot.RunAsync">
             <summary>
             Asynchronously runs the bot connecting it to the Discord and initializing
             the necessary configurations.
             </summary>
             <returns>A task representing the asynchronous operation.</returns>
         </member>
-        <member name="M:KWiJisho.Models.Bot.RegisterPrefixCommands">
+        <member name="M:KWiJisho.Modules.Bot.RegisterPrefixCommands">
             <summary>
             Register all the Discord bot prefix commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Bot.RegisterSlashCommands">
+        <member name="M:KWiJisho.Modules.Bot.RegisterSlashCommands">
             <summary>
             Register all the Discord bot slash commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Bot.RegisterBotEvents">
+        <member name="M:KWiJisho.Modules.Bot.RegisterBotEvents">
             <summary>
             Register all the Discord bot events.
             </summary>
             <returns></returns>
         </member>
-        <member name="M:KWiJisho.Models.Commands.Basic.SendRandomAnimatedEmoji(DSharpPlus.Entities.DiscordChannel)">
+        <member name="M:KWiJisho.Modules.Commands.Basic.SendRandomAnimatedEmoji(DSharpPlus.Entities.DiscordChannel)">
             <summary>
-            Sends a random animated emoji from <see cref="F:KWiJisho.Models.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoEmojis"/>.
+            Sends a random animated emoji from <see cref="F:KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoEmojis"/>.
             </summary>
             <param name="discordChannel"></param>
             <returns></returns>
         </member>
-        <member name="M:KWiJisho.Models.Commands.Basic.SendRandomAnimatedMemeEmoji(DSharpPlus.Entities.DiscordChannel)">
+        <member name="M:KWiJisho.Modules.Commands.Basic.SendRandomAnimatedMemeEmoji(DSharpPlus.Entities.DiscordChannel)">
             <summary>
-            Sends a random animated emoji from <see cref="F:KWiJisho.Models.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoMemeEmojis"/>.
+            Sends a random animated emoji from <see cref="F:KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoMemeEmojis"/>.
             </summary>
             <param name="discordChannel"></param>
             <returns></returns>
         </member>
-        <member name="M:KWiJisho.Models.Commands.Basic.SendRandomAnimatedPartyEmoji(DSharpPlus.Entities.DiscordChannel)">
+        <member name="M:KWiJisho.Modules.Commands.Basic.SendRandomAnimatedPartyEmoji(DSharpPlus.Entities.DiscordChannel)">
             <summary>
-            Sends a random animated emoji from <see cref="F:KWiJisho.Models.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoPartyEmojis"/>.
+            Sends a random animated emoji from <see cref="F:KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoPartyEmojis"/>.
             </summary>
             <param name="discordChannel"></param>
             <returns></returns>
         </member>
-        <member name="T:KWiJisho.Models.Commands.Prefix.PrefixCommandManager">
+        <member name="T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager">
             <summary>
             Represent the class that represents commands groups and holds all Discord command classes.
             </summary>
         </member>
-        <member name="T:KWiJisho.Models.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme">
+        <member name="P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.CommandGroups">
+            <summary>
+            Gets or sets the list of command groups.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Astronomy">
+            <summary>
+            Gets the command group for Astronomy commands.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.ChatGpt">
+            <summary>
+            Gets the command group for ChatGPT commands.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Info">
+            <summary>
+            Gets the command group for Information and Help commands.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Theme">
+            <summary>
+            Gets the command group for Theme commands.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Birthday">
+            <summary>
+            Gets the command group for Birthday commands.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Basic">
+            <summary>
+            Gets the command group for Basic commands.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic">
+            <summary>
+            Represents a set of basic prefix commands.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.emoji">
+            <summary>
+            Represents the command to send a random animated emoji.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.emojim">
+            <summary>
+            Represents the command to send a random animated meme emoji.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.emojip">
+            <summary>
+            Represents the command to send a random animated party emoji.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday">
+            <summary>
+            Represents a set of birthday prefix commands.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.nextBirthday">
+            <summary>
+            Represents the command to show the next person to have birthday.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.listBirthday">
+            <summary>
+            Represents the command to list people will have birthday.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo">
+            <summary>
+            Represents a set of info prefix commands.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.furtherHelpDetailsMessage">
+            <summary>
+            Represents the command to show help about the Discord bot commands.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.info">
+            <summary>
+            Represents the command to show information about the bot and the bot owner.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt">
+            <summary>
+            Represents a set of KWiGpt prefix commands. Interaction commands with ChatGpt
+            in KWiJisho bot style.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.k">
+            <summary>
+            Represent the command to interact with the bot with ChatGpt in KWiJisho style.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme">
             <summary>
             Represents seasonal themes that you can change the server into.
             </summary>
         </member>
-        <member name="F:KWiJisho.Models.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.TramontinaChannels">
+        <member name="F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.TramontinaChannels">
             <summary>
             Channels from tramontina server that can receive theme changing.
             </summary>
         </member>
-        <member name="F:KWiJisho.Models.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeReset">
+        <member name="F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeReset">
             <summary>
             Resets the Tramontina server emojis.
             </summary>
         </member>
-        <member name="F:KWiJisho.Models.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeChristmas">
+        <member name="F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeChristmas">
             <summary>
             Sets the Tramontina server to Christmas Theme.
             </summary>
         </member>
-        <member name="F:KWiJisho.Models.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeEaster">
+        <member name="F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeEaster">
             <summary>
             Sets the Tramontina server to Easter Theme.
             </summary>
         </member>
-        <member name="F:KWiJisho.Models.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeHalloween">
+        <member name="F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeHalloween">
             <summary>
             Sets the Tramontina server to Halloween Theme.
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetThemeAsync(DSharpPlus.CommandsNext.CommandContext,KWiJisho.Models.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme,System.String,System.String,System.String)">
+        <member name="M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetThemeAsync(DSharpPlus.CommandsNext.CommandContext,KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme,System.String,System.String,System.String)">
             <summary>
             Sets the Tramontina server to a Theme according with parameterization.
             </summary>
         </member>
-        <member name="T:KWiJisho.Models.Commands.Prefix.PrefixCommand">
+        <member name="T:KWiJisho.Modules.Commands.Prefix.PrefixCommand">
             <summary>
             Represents a single Discord command.
             </summary>
         </member>
-        <member name="T:KWiJisho.Models.Commands.Prefix.PrefixCommandGroup">
+        <member name="P:KWiJisho.Modules.Commands.Prefix.PrefixCommand.Name">
+            <summary>
+            Gets or sets the name of the command.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Modules.Commands.Prefix.PrefixCommand.Description">
+            <summary>
+            Gets or sets the description of the commands.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Modules.Commands.Prefix.PrefixCommand.Permissions">
+            <summary>
+            Gets or sets the required permissions for the command.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Modules.Commands.Prefix.PrefixCommand.#ctor(System.String,System.String,KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup,DSharpPlus.Permissions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:KWiJisho.Modules.Commands.Prefix.PrefixCommand"/> class.
+            </summary>
+            <param name="name">The name of the command.</param>
+            <param name="description">The description of the command.</param>
+            <param name="group">The command group to which this command belongs.</param>
+            <param name="permission">The required permissions for the command.</param>
+        </member>
+        <member name="T:KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup">
             <summary>
             Represents a group and holds a list with a set of Discord commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Events.BirthdayJob.Execute(Quartz.IJobExecutionContext)">
+        <member name="P:KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup.Name">
+            <summary>
+            Gets or sets the name of the prefix command group.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup.Commands">
+            <summary>
+            Gets or sets the list of commands in the prefix command group.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup"/> class.
+            </summary>
+            <param name="name">The name of the command group.</param>
+        </member>
+        <member name="M:KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup.ToString">
             <inheritdoc/>
         </member>
-        <member name="M:KWiJisho.Models.Events.GoodbyeWelcome.GetRandomWelcomeMessage(System.String)">
+        <member name="T:KWiJisho.Modules.Commands.Slash.SlashBasic">
             <summary>
-            Gets a random welcome message.
+            Represents a set of basic slash commands.
             </summary>
-            <param name="user"></param>
-            <returns></returns>
         </member>
-        <member name="M:KWiJisho.Models.Events.GoodbyeWelcome.GetRandomGoodbyeMessage(System.String)">
+        <member name="M:KWiJisho.Modules.Commands.Slash.SlashBasic.Emoji.SendRandomAnimatedEmoji(DSharpPlus.SlashCommands.InteractionContext)">
             <summary>
-            Gets a random goodbye message.
+            Represents the command to send a random animated emoji.
             </summary>
-            <param name="user"></param>
-            <returns></returns>
         </member>
-        <member name="T:KWiJisho.Models.Utils.Channel">
+        <member name="M:KWiJisho.Modules.Commands.Slash.SlashBasic.Emoji.SendRandomAnimatedMemeEmoji(DSharpPlus.SlashCommands.InteractionContext)">
+            <summary>
+            Represents the command to send a random animated meme emoji.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Modules.Commands.Slash.SlashBasic.Emoji.SendRandomAnimatedPartyEmoji(DSharpPlus.SlashCommands.InteractionContext)">
+            <summary>
+            Represents the command to send a random animated party emoji.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Modules.Commands.Slash.SlashBirthday">
+            <summary>
+            Represents a set of birthday slash commands.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Modules.Commands.Slash.SlashBirthday.GetNextBirthdayAsync(DSharpPlus.SlashCommands.InteractionContext)">
+            <summary>
+            Represents the command to show the next person to have birthday.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Modules.Commands.Slash.SlashBirthday.GetListBirthdayAsync(DSharpPlus.SlashCommands.InteractionContext)">
+            <summary>
+            Represents the command to list people will have birthday.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Modules.Commands.Slash.SlashInfo.GetHelpAsync(DSharpPlus.SlashCommands.InteractionContext)">
+            <summary>
+            Represents the command to show help about the Discord bot commands.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Modules.Commands.Slash.SlashInfo.GetInfoAsync(DSharpPlus.SlashCommands.InteractionContext)">
+            <summary>
+            Represents the command to show information about the bot and the bot owner.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Modules.Commands.Slash.SlashKwiGpt">
+            <summary>
+            Represents a set of KWiGpt slash commands. Interaction commands with ChatGpt
+            in KWiJisho bot style.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Modules.Commands.Slash.SlashKwiGpt.ChatGptPromptAsync(DSharpPlus.SlashCommands.InteractionContext,System.String)">
+            <summary>
+            Represent the command to interact with the bot with ChatGpt in KWiJisho style.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Modules.ConfigJson">
+            <summary>
+            Class that represents the ConfigJson file for configuring the discord bot.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Modules.Events.BirthdayJob.Execute(Quartz.IJobExecutionContext)">
+            <inheritdoc/>
+        </member>
+        <member name="T:KWiJisho.Modules.Events.Buttons">
+            <summary>
+            Class responsible for handling button click events.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Modules.Events.Buttons.OnComponentInteractionCreatedAsync(DSharpPlus.DiscordClient,DSharpPlus.EventArgs.ComponentInteractionCreateEventArgs)">
+            <summary>
+            Handles the event when a component interaction is created, like button clicks.
+            </summary>
+            <param name="sender">The Discord client instance.</param>
+            <param name="e">Event arguments containing information about the component interaction.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:KWiJisho.Modules.Events.Buttons.CopyServerNameAsync(DSharpPlus.EventArgs.ComponentInteractionCreateEventArgs)">
+            <summary>
+            Copies the server name from the interaction's message and puts it into the clipboard.
+            Sends a feedback message to the user.
+            </summary>
+            <param name="e">Event arguments containing information about the component interaction.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="T:KWiJisho.Modules.Events.GoodbyeWelcome">
+            <summary>
+            Class responsible for managing goodbye and welcome events and methods.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Modules.Events.GoodbyeWelcome.OnGuildMemberAddedAsync(DSharpPlus.DiscordClient,DSharpPlus.EventArgs.GuildMemberAddEventArgs)">
+            <summary>
+            Handles the event when a new member joins the Discord server. Sends a welcome message
+            with a image and a random string.
+            </summary>
+            <param name="sender">The discord client instance.</param>
+            <param name="e">Event arguments containing information about the guild member.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the assynchronous operation.</returns>
+        </member>
+        <member name="M:KWiJisho.Modules.Events.GoodbyeWelcome.OnGuildMemberRemovedAsync(DSharpPlus.DiscordClient,DSharpPlus.EventArgs.GuildMemberRemoveEventArgs)">
+            <summary>
+            Handles the event when a member leaves the Discord server. Sends a goodbye message
+            with a image and a random string.
+            </summary>
+            <param name="sender">The discord client instance.</param>
+            <param name="e">Events arguments containing information about the guild member.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the assynchronous operation.</returns>
+        </member>
+        <member name="M:KWiJisho.Modules.Events.GoodbyeWelcome.GetRandomWelcomeMessage(System.String)">
+            <summary>
+            Gets a random string welcome message.
+            </summary>
+            <param name="user">The user that will receive the welcome message.</param>
+            <returns>The string containing the welcome message .</returns>
+        </member>
+        <member name="M:KWiJisho.Modules.Events.GoodbyeWelcome.GetRandomGoodbyeMessage(System.String)">
+            <summary>
+            Gets a random string goodbye message.
+            </summary>
+            <param name="user">The user that will receive the welcome message.</param>
+            <returns>The string containing the goodbye message .</returns>
+        </member>
+        <member name="T:KWiJisho.Modules.Utils.Channel">
             <summary>
             The class that represents a new instance of a Discord channel with a
             unique identifier and a default name.
@@ -208,7 +483,7 @@
             <param name="defaultName">The Discord channel default name.</param>
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Utils.Channel.#ctor(System.UInt64,System.String)">
+        <member name="M:KWiJisho.Modules.Utils.Channel.#ctor(System.UInt64,System.String)">
             <summary>
             The class that represents a new instance of a Discord channel with a
             unique identifier and a default name.
@@ -216,115 +491,115 @@
             <param name="defaultName">The Discord channel default name.</param>
             </summary>
         </member>
-        <member name="F:KWiJisho.Models.Utils.Channel.Id">
+        <member name="F:KWiJisho.Modules.Utils.Channel.Id">
             <summary>
             The Discord channel unique identifier.
             </summary>
         </member>
-        <member name="F:KWiJisho.Models.Utils.Channel.DefaultName">
+        <member name="F:KWiJisho.Modules.Utils.Channel.DefaultName">
             <summary>
             The Discord channel default name.
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Utils.Channel.UpdateChannelNameAsync(DSharpPlus.CommandsNext.CommandContext,System.String)">
+        <member name="M:KWiJisho.Modules.Utils.Channel.UpdateChannelNameAsync(DSharpPlus.CommandsNext.CommandContext,System.String)">
             <summary>
             Updates the name of the Discord channel asynchronously.
             </summary>
             <param name="commandContext">The command context containing information about the command.</param>
             <param name="newName">The new name for the Discord channel.</param>
         </member>
-        <member name="T:KWiJisho.Models.Utils.Emoji">
+        <member name="T:KWiJisho.Modules.Utils.Emoji">
             <summary>
             Class responsible for creating and handling custom Discord emojis.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Utils.Emoji.Name">
+        <member name="P:KWiJisho.Modules.Utils.Emoji.Name">
             <summary>
             The discord emoji name.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Utils.Emoji.Id">
+        <member name="P:KWiJisho.Modules.Utils.Emoji.Id">
             <summary>
             The discord emoji unique identifier.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Utils.Emoji.Code">
+        <member name="P:KWiJisho.Modules.Utils.Emoji.Code">
             <summary>
             The discord emoji code responsible for outputing it into the chat.
             <c>&lt;a:{name}:{id}&gt;</c>
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Utils.Emoji.#ctor(System.String,System.UInt64)">
+        <member name="M:KWiJisho.Modules.Utils.Emoji.#ctor(System.String,System.UInt64)">
             <summary>
-            Initializes a new instance of <see cref="T:KWiJisho.Models.Utils.Emoji"/> class with the specified
+            Initializes a new instance of <see cref="T:KWiJisho.Modules.Utils.Emoji"/> class with the specified
             name and identifier.
             </summary>
             <param name="name">The name of the Discord emoji.</param>
             <param name="id">The unique identifier of the Discord emoji.</param>
         </member>
-        <member name="M:KWiJisho.Models.Utils.Emoji.ToString">
+        <member name="M:KWiJisho.Modules.Utils.Emoji.ToString">
             <inheritdoc/>
         </member>
-        <member name="T:KWiJisho.Models.Utils.DiscordFormat">
+        <member name="T:KWiJisho.Modules.Utils.DiscordFormat">
             <summary>
             Provides utility extension methods for formatting text with Discord markdown.
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Utils.DiscordFormat.ToDiscordBold(System.String)">
+        <member name="M:KWiJisho.Modules.Utils.DiscordFormat.ToDiscordBold(System.String)">
             <summary>
             Formats the specified string in bold using Discord markdown.
             </summary>
             <param name="str">The string to be formatted.</param>
             <returns>The string in bold.</returns>
         </member>
-        <member name="M:KWiJisho.Models.Utils.DiscordFormat.ToDiscordItalic(System.String)">
+        <member name="M:KWiJisho.Modules.Utils.DiscordFormat.ToDiscordItalic(System.String)">
             <summary>
             Formats the specified string in italic using Discord markdown.
             </summary>
             <param name="str">The string to be formatted.</param>
             <returns>The string in italic.</returns>
         </member>
-        <member name="T:KWiJisho.Models.Utils.DiscordUsers">
+        <member name="T:KWiJisho.Modules.Utils.DiscordUsers">
             <summary>
             Provides a static class for managing Discord users along with their identifiers.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Utils.DiscordUsers.Users">
+        <member name="P:KWiJisho.Modules.Utils.DiscordUsers.Users">
             <summary>
             The list of users along with their identifiers.
             </summary>
         </member>
-        <member name="T:KWiJisho.Models.Utils.User">
+        <member name="T:KWiJisho.Modules.Utils.User">
             <summary>
             Represents a Discord user along with their identifier and additional information.
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Utils.User.#ctor(System.UInt64,System.DateTime,System.String)">
+        <member name="M:KWiJisho.Modules.Utils.User.#ctor(System.UInt64,System.DateTime,System.String)">
             <summary>
             Represents a Discord user along with their identifier and additional information.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Utils.User.Id">
+        <member name="P:KWiJisho.Modules.Utils.User.Id">
             <summary>
             The unique identifier of the user.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Utils.User.Born">
+        <member name="P:KWiJisho.Modules.Utils.User.Born">
             <summary>
             The date when the user was born.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Utils.User.Identifier">
+        <member name="P:KWiJisho.Modules.Utils.User.Identifier">
             <summary>
             The custom identifier or nickname associated with the user.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Utils.User.Birthday">
+        <member name="P:KWiJisho.Modules.Utils.User.Birthday">
             <summary>
             Gets or sets the user's birthday (if applicable).
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Utils.User.GetUserDiscordMember(DSharpPlus.Entities.DiscordGuild)">
+        <member name="M:KWiJisho.Modules.Utils.User.GetUserDiscordMember(DSharpPlus.Entities.DiscordGuild)">
             <summary>
             Tries to return a <see cref="T:DSharpPlus.Entities.DiscordMember"/> representing the user in the specified server.
             If the user is not found, returns null.
@@ -332,122 +607,132 @@
             <param name="discordGuild">The Discord guild where the user is expected to be a member.</param>
             <returns>Returns <see cref="T:DSharpPlus.Entities.DiscordMember"/> if found; otherwise, returns null.</returns>
         </member>
-        <member name="T:KWiJisho.Models.Utils.KWiJishoInfo">
+        <member name="T:KWiJisho.Modules.Utils.KWiJishoInfo">
             <summary>
             Class that provides static basic information about KWiJisho bot.
             </summary>
         </member>
-        <member name="F:KWiJisho.Models.Utils.KWiJishoInfo.Name">
+        <member name="F:KWiJisho.Modules.Utils.KWiJishoInfo.Name">
             <summary>
             KWiJisho project name gotten directly from <see cref="T:System.Reflection.Assembly"/>.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Utils.KWiJishoInfo.Created">
+        <member name="P:KWiJisho.Modules.Utils.KWiJishoInfo.Created">
             <summary>
             The date Karen Kujo project was first commit on <a href="https://github.com/monambike/kwijisho-discord-bot">GitHub repository</a>.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Utils.KWiJishoInfo.KarenKujoBirthday">
+        <member name="P:KWiJisho.Modules.Utils.KWiJishoInfo.KarenKujoBirthday">
             <summary>
             Gets the calculated birthday for Karen Kujo. Karen Kujo was born on December 1st,
             and the age is fixed at 15 years.
             The property provides the current date with the year adjusted to maintain the age of 15.
             </summary>
         </member>
-        <member name="T:KWiJisho.Models.Utils.KWiJishoLog">
+        <member name="T:KWiJisho.Modules.Utils.KWiJishoLog">
             <summary>
             Provides methods for handling the application log for important tasks.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Utils.KWiJishoLog.Path">
+        <member name="P:KWiJisho.Modules.Utils.KWiJishoLog.Path">
             <summary>
             The log file path.
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Utils.KWiJishoLog.AddDebug(System.String)">
+        <member name="M:KWiJisho.Modules.Utils.KWiJishoLog.AddDebug(System.String)">
             <summary>
             Adds a debug log entry with the specified message.
             </summary>
             <param name="message">The debug log message.</param>
         </member>
-        <member name="M:KWiJisho.Models.Utils.KWiJishoLog.AddInfo(System.String)">
+        <member name="M:KWiJisho.Modules.Utils.KWiJishoLog.AddInfo(System.String)">
             <summary>
             Adds a info log entry with the specified message.
             </summary>
             <param name="message">The info log message.</param>
         </member>
-        <member name="M:KWiJisho.Models.Utils.KWiJishoLog.AddWarning(System.String)">
+        <member name="M:KWiJisho.Modules.Utils.KWiJishoLog.AddWarning(System.String)">
             <summary>
             Adds a warning log entry with the specified message.
             </summary>
             <param name="message">The warning log message.</param>
         </member>
-        <member name="M:KWiJisho.Models.Utils.KWiJishoLog.AddError(System.String)">
+        <member name="M:KWiJisho.Modules.Utils.KWiJishoLog.AddError(System.String)">
             <summary>
             Adds a error log entry with the specified message.
             </summary>
             <param name="message">The error log message.</param>
         </member>
-        <member name="M:KWiJisho.Models.Utils.KWiJishoLog.AddFatal(System.String)">
+        <member name="M:KWiJisho.Modules.Utils.KWiJishoLog.AddFatal(System.String)">
             <summary>
             Adds a fatal log entry with the specified message.
             </summary>
             <param name="message">The fatal log message.</param>
         </member>
-        <member name="M:KWiJisho.Models.Utils.KWiJishoLog.Add(KWiJisho.Models.Utils.KWiJishoLog.LogType,System.String)">
+        <member name="M:KWiJisho.Modules.Utils.KWiJishoLog.Add(KWiJisho.Modules.Utils.KWiJishoLog.LogType,System.String)">
             <summary>
             Adds a formatted log entry to the log file.
             </summary>
             <param name="logType">The type of log entry.</param>
             <param name="message">The log message to be added.</param>
         </member>
-        <member name="M:KWiJisho.Models.Utils.KWiJishoLog.AddLineToFile(System.String)">
+        <member name="M:KWiJisho.Modules.Utils.KWiJishoLog.AddLineToFile(System.String)">
             <summary>
             Adds a line to the log file with the specified content.
             </summary>
             <param name="line">The line to be added to the log file.</param>
         </member>
-        <member name="T:KWiJisho.Models.Utils.KWiJishoPermission">
+        <member name="T:KWiJisho.Modules.Utils.KWiJishoPermission">
             <summary>
             Provides utility methods for handling permissions in the KWiJisho application.
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Utils.KWiJishoPermission.PermissionCustomErrorMessage(DSharpPlus.Permissions)">
+        <member name="M:KWiJisho.Modules.Utils.KWiJishoPermission.PermissionCustomErrorMessage(DSharpPlus.Permissions)">
             <summary>
             Generates a custom error message for a permission check failure.
             </summary>
             <param name="permission">The required permission.</param>
             <returns>A formatted error message indicating the required permission.</returns>
         </member>
-        <member name="M:KWiJisho.Models.Utils.KWiJishoPermission.GetPermissionNameInPortuguese(DSharpPlus.Permissions)">
+        <member name="M:KWiJisho.Modules.Utils.KWiJishoPermission.GetPermissionNameInPortuguese(DSharpPlus.Permissions)">
             <summary>
             Gets the Portuguese name of a Discord permission.
             </summary>
             <param name="permission">The Discord permission.</param>
             <returns>The Portuguese name of the permission.</returns>
         </member>
-        <member name="T:KWiJisho.Models.Utils.ServerInfos">
+        <member name="T:KWiJisho.Modules.Utils.ServerInfos">
             <summary>
             Static class responsible for handling information about discord servers.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Utils.ServerInfos.PersonalDiscordServerGuildId">
+        <member name="P:KWiJisho.Modules.Utils.ServerInfos.PersonalDiscordServerGuildId">
             <summary>
-            My personal server for testing guild Id.
+            My personal Discord server guild Id.
             </summary>
         </member>
-        <member name="T:KWiJisho.Models.Utils.UtilList">
+        <member name="P:KWiJisho.Modules.Utils.ServerInfos.TramontinaDiscordServerGuildId">
+            <summary>
+            Tramontina Discord server guild Id.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Modules.Utils.UtilList">
             <summary>
             Provides utility methods for working with lists.
             </summary>
         </member>
-        <member name="M:KWiJisho.Models.Utils.UtilList.GetRandomValueFromList``1(System.Collections.Generic.List{``0})">
+        <member name="M:KWiJisho.Modules.Utils.UtilList.GetRandomValueFromList``1(System.Collections.Generic.List{``0})">
             <summary>
             Returns a random value from a given list.
             </summary>
             <typeparam name="T">The type of elements in the list.</typeparam>
             <param name="list">The list from which to retrieve a random value.</param>
             <returns>A random value from the list.</returns>
+        </member>
+        <member name="M:KWiJisho.Program.Main">
+            <summary>
+            The main entry point of the application.
+            </summary>
         </member>
     </members>
 </doc>
