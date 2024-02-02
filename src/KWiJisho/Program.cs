@@ -12,7 +12,7 @@ namespace KWiJisho
         /// </summary>
         internal static void Main()
         {
-            // Creating a new instance of the Discord bot class
+            // Creating a new instance of the Discord bot class.
             var bot = new Bot();
 
             // Initializing the Discord bot application and waiting for the inifinite task
