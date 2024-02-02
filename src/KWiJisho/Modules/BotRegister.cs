@@ -12,6 +12,9 @@ using System.Collections.Generic;
 
 namespace KWiJisho.Modules
 {
+    /// <summary>
+    /// The main entry point of the application.
+    /// </summary>
     internal partial class Bot
     {
         /// <summary>
@@ -102,7 +105,6 @@ namespace KWiJisho.Modules
                             await e.Context.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource,
                                 new DiscordInteractionResponseBuilder().WithContent(KWiJishoPermission.PermissionCustomErrorMessage(slashRequireUserPermissionsAttribute.Permissions)));
                         }
-
                     }
                 }
             };

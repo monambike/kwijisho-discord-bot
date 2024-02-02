@@ -102,7 +102,10 @@
         </member>
         <member name="T:KWiJisho.Modules.Bot">
             <summary>
-            Class responsible for managing the Discord bot.
+            The main entry point of the application.
+            </summary>
+            <summary>
+            The main entry point of the application.
             </summary>
         </member>
         <member name="P:KWiJisho.Modules.Bot.DiscordClient">

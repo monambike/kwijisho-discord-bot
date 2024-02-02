@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho
+  commentId: N:KWiJisho
+  id: KWiJisho
+  children:
+  - KWiJisho.Program
+  langs:
+  - csharp
+  - vb
+  name: KWiJisho
+  nameWithType: KWiJisho
+  fullName: KWiJisho
+  type: Namespace
+  assemblies:
+  - KWiJisho
+references:
+- uid: KWiJisho.Program
+  commentId: T:KWiJisho.Program
+  href: KWiJisho.Program.html
+  name: Program
+  nameWithType: Program
+  fullName: KWiJisho.Program

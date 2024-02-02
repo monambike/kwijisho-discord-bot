@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace KWiJisho.Modules
 {
     /// <summary>
-    /// Class responsible for managing the Discord bot.
+    /// The main entry point of the application.
     /// </summary>
     internal partial class Bot
     {
