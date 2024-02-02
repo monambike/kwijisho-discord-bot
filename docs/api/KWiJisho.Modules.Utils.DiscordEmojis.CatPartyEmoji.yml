@@ -20,10 +20,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: CatPartyEmoji
     path: ../src/KWiJisho/Modules/Utils/DiscordEmojis.cs
-    startLine: 36
+    startLine: 45
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
+  summary: Represents a custom Discord emoji for cat party emojis, inheriting from the base <xref href="KWiJisho.Modules.Utils.Emoji" data-throw-if-not-resolved="false"></xref> class.
+  example: []
   syntax:
     content: 'internal record DiscordEmojis.CatPartyEmoji : Emoji, IEquatable<Emoji>, IEquatable<DiscordEmojis.CatPartyEmoji>'
     content.vb: Friend Class DiscordEmojis.CatPartyEmoji Inherits Emoji Implements IEquatable(Of Emoji), IEquatable(Of DiscordEmojis.CatPartyEmoji)
@@ -62,23 +64,34 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: .ctor
     path: ../src/KWiJisho/Modules/Utils/DiscordEmojis.cs
-    startLine: 38
+    startLine: 52
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
+  summary: Initializes a new instance of <xref href="KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji" data-throw-if-not-resolved="false"></xref> with its emoji name and Id.
+  example: []
   syntax:
     content: public CatPartyEmoji(string name, ulong id)
     parameters:
     - id: name
       type: System.String
+      description: The <xref href="KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji" data-throw-if-not-resolved="false"></xref> emoji name.
     - id: id
       type: System.UInt64
+      description: The <xref href="KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji" data-throw-if-not-resolved="false"></xref> emoji Id.
     content.vb: Public Sub New(name As String, id As ULong)
   overload: KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji.#ctor*
   nameWithType.vb: DiscordEmojis.CatPartyEmoji.New(String, ULong)
   fullName.vb: KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji.New(String, ULong)
   name.vb: New(String, ULong)
 references:
+- uid: KWiJisho.Modules.Utils.Emoji
+  commentId: T:KWiJisho.Modules.Utils.Emoji
+  parent: KWiJisho.Modules.Utils
+  href: KWiJisho.Modules.Utils.Emoji.html
+  name: Emoji
+  nameWithType: Emoji
+  fullName: KWiJisho.Modules.Utils.Emoji
 - uid: KWiJisho.Modules.Utils
   commentId: N:KWiJisho.Modules.Utils
   href: KWiJisho.html
@@ -120,13 +133,6 @@ references:
   nameWithType.vb: Object
   fullName.vb: Object
   name.vb: Object
-- uid: KWiJisho.Modules.Utils.Emoji
-  commentId: T:KWiJisho.Modules.Utils.Emoji
-  parent: KWiJisho.Modules.Utils
-  href: KWiJisho.Modules.Utils.Emoji.html
-  name: Emoji
-  nameWithType: Emoji
-  fullName: KWiJisho.Modules.Utils.Emoji
 - uid: System.IEquatable{KWiJisho.Modules.Utils.Emoji}
   commentId: T:System.IEquatable{KWiJisho.Modules.Utils.Emoji}
   parent: System
@@ -471,6 +477,29 @@ references:
   - name: " "
   - name: T
   - name: )
+- uid: KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji
+  commentId: T:KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji
+  parent: KWiJisho.Modules.Utils
+  href: KWiJisho.Modules.Utils.DiscordEmojis.html
+  name: DiscordEmojis.CatPartyEmoji
+  nameWithType: DiscordEmojis.CatPartyEmoji
+  fullName: KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji
+  spec.csharp:
+  - uid: KWiJisho.Modules.Utils.DiscordEmojis
+    name: DiscordEmojis
+    href: KWiJisho.Modules.Utils.DiscordEmojis.html
+  - name: .
+  - uid: KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji
+    name: CatPartyEmoji
+    href: KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Utils.DiscordEmojis
+    name: DiscordEmojis
+    href: KWiJisho.Modules.Utils.DiscordEmojis.html
+  - name: .
+  - uid: KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji
+    name: CatPartyEmoji
+    href: KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji.html
 - uid: KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji.#ctor*
   commentId: Overload:KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji.#ctor
   href: KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji.html#KWiJisho_Modules_Utils_DiscordEmojis_CatPartyEmoji__ctor_System_String_System_UInt64_

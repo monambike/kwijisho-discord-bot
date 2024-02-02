@@ -2211,19 +2211,6 @@ references:
   isSpec: "True"
   fullName: KWiJisho.Modules.Utils.Birthday.GetDaysRemainingByUser
   nameWithType: Birthday.GetDaysRemainingByUser
-- uid: KWiJisho.Modules.Utils.Birthday.GetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)
-  name: GetDiscordUserByClosestBirthday(DiscordGuild)
-  href: api/KWiJisho.Modules.Utils.Birthday.html#KWiJisho_Modules_Utils_Birthday_GetDiscordUserByClosestBirthday_DSharpPlus_Entities_DiscordGuild_
-  commentId: M:KWiJisho.Modules.Utils.Birthday.GetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)
-  fullName: KWiJisho.Modules.Utils.Birthday.GetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)
-  nameWithType: Birthday.GetDiscordUserByClosestBirthday(DiscordGuild)
-- uid: KWiJisho.Modules.Utils.Birthday.GetDiscordUserByClosestBirthday*
-  name: GetDiscordUserByClosestBirthday
-  href: api/KWiJisho.Modules.Utils.Birthday.html#KWiJisho_Modules_Utils_Birthday_GetDiscordUserByClosestBirthday_
-  commentId: Overload:KWiJisho.Modules.Utils.Birthday.GetDiscordUserByClosestBirthday
-  isSpec: "True"
-  fullName: KWiJisho.Modules.Utils.Birthday.GetDiscordUserByClosestBirthday
-  nameWithType: Birthday.GetDiscordUserByClosestBirthday
 - uid: KWiJisho.Modules.Utils.Birthday.GetUpcomingBirthdayDate(System.Double)
   name: GetUpcomingBirthdayDate(double)
   href: api/KWiJisho.Modules.Utils.Birthday.html#KWiJisho_Modules_Utils_Birthday_GetUpcomingBirthdayDate_System_Double_
@@ -2240,19 +2227,32 @@ references:
   isSpec: "True"
   fullName: KWiJisho.Modules.Utils.Birthday.GetUpcomingBirthdayDate
   nameWithType: Birthday.GetUpcomingBirthdayDate
-- uid: KWiJisho.Modules.Utils.Birthday.GetUsersByClosestBirthday
-  name: GetUsersByClosestBirthday()
-  href: api/KWiJisho.Modules.Utils.Birthday.html#KWiJisho_Modules_Utils_Birthday_GetUsersByClosestBirthday
-  commentId: M:KWiJisho.Modules.Utils.Birthday.GetUsersByClosestBirthday
-  fullName: KWiJisho.Modules.Utils.Birthday.GetUsersByClosestBirthday()
-  nameWithType: Birthday.GetUsersByClosestBirthday()
-- uid: KWiJisho.Modules.Utils.Birthday.GetUsersByClosestBirthday*
-  name: GetUsersByClosestBirthday
-  href: api/KWiJisho.Modules.Utils.Birthday.html#KWiJisho_Modules_Utils_Birthday_GetUsersByClosestBirthday_
-  commentId: Overload:KWiJisho.Modules.Utils.Birthday.GetUsersByClosestBirthday
+- uid: KWiJisho.Modules.Utils.Birthday.GetUsersOrderByClosestBirthday
+  name: GetUsersOrderByClosestBirthday()
+  href: api/KWiJisho.Modules.Utils.Birthday.html#KWiJisho_Modules_Utils_Birthday_GetUsersOrderByClosestBirthday
+  commentId: M:KWiJisho.Modules.Utils.Birthday.GetUsersOrderByClosestBirthday
+  fullName: KWiJisho.Modules.Utils.Birthday.GetUsersOrderByClosestBirthday()
+  nameWithType: Birthday.GetUsersOrderByClosestBirthday()
+- uid: KWiJisho.Modules.Utils.Birthday.GetUsersOrderByClosestBirthday*
+  name: GetUsersOrderByClosestBirthday
+  href: api/KWiJisho.Modules.Utils.Birthday.html#KWiJisho_Modules_Utils_Birthday_GetUsersOrderByClosestBirthday_
+  commentId: Overload:KWiJisho.Modules.Utils.Birthday.GetUsersOrderByClosestBirthday
   isSpec: "True"
-  fullName: KWiJisho.Modules.Utils.Birthday.GetUsersByClosestBirthday
-  nameWithType: Birthday.GetUsersByClosestBirthday
+  fullName: KWiJisho.Modules.Utils.Birthday.GetUsersOrderByClosestBirthday
+  nameWithType: Birthday.GetUsersOrderByClosestBirthday
+- uid: KWiJisho.Modules.Utils.Birthday.TryGetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)
+  name: TryGetDiscordUserByClosestBirthday(DiscordGuild)
+  href: api/KWiJisho.Modules.Utils.Birthday.html#KWiJisho_Modules_Utils_Birthday_TryGetDiscordUserByClosestBirthday_DSharpPlus_Entities_DiscordGuild_
+  commentId: M:KWiJisho.Modules.Utils.Birthday.TryGetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)
+  fullName: KWiJisho.Modules.Utils.Birthday.TryGetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)
+  nameWithType: Birthday.TryGetDiscordUserByClosestBirthday(DiscordGuild)
+- uid: KWiJisho.Modules.Utils.Birthday.TryGetDiscordUserByClosestBirthday*
+  name: TryGetDiscordUserByClosestBirthday
+  href: api/KWiJisho.Modules.Utils.Birthday.html#KWiJisho_Modules_Utils_Birthday_TryGetDiscordUserByClosestBirthday_
+  commentId: Overload:KWiJisho.Modules.Utils.Birthday.TryGetDiscordUserByClosestBirthday
+  isSpec: "True"
+  fullName: KWiJisho.Modules.Utils.Birthday.TryGetDiscordUserByClosestBirthday
+  nameWithType: Birthday.TryGetDiscordUserByClosestBirthday
 - uid: KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate
   name: Birthday.UpcomingBirthdayDate
   href: api/KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate.html
@@ -2360,7 +2360,7 @@ references:
   nameWithType: DiscordEmojis
 - uid: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis
   name: DiscordEmojis.AnimatedEmojis
-  href: api/KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.html
+  href: api/KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.html#KWiJisho_Modules_Utils_DiscordEmojis_AnimatedEmojis
   commentId: T:KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis
   fullName: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis
   nameWithType: DiscordEmojis.AnimatedEmojis
@@ -2430,6 +2430,24 @@ references:
   commentId: F:KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.MemeHappyCat
   fullName: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.MemeHappyCat
   nameWithType: DiscordEmojis.AnimatedEmojis.MemeHappyCat
+- uid: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedMemeEmojis
+  name: AnimatedMemeEmojis
+  href: api/KWiJisho.Modules.Utils.DiscordEmojis.html#KWiJisho_Modules_Utils_DiscordEmojis_AnimatedMemeEmojis
+  commentId: F:KWiJisho.Modules.Utils.DiscordEmojis.AnimatedMemeEmojis
+  fullName: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedMemeEmojis
+  nameWithType: DiscordEmojis.AnimatedMemeEmojis
+- uid: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedPartyEmojis
+  name: AnimatedPartyEmojis
+  href: api/KWiJisho.Modules.Utils.DiscordEmojis.html#KWiJisho_Modules_Utils_DiscordEmojis_AnimatedPartyEmojis
+  commentId: F:KWiJisho.Modules.Utils.DiscordEmojis.AnimatedPartyEmojis
+  fullName: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedPartyEmojis
+  nameWithType: DiscordEmojis.AnimatedPartyEmojis
+- uid: KWiJisho.Modules.Utils.DiscordEmojis.CatCoke
+  name: CatCoke
+  href: api/KWiJisho.Modules.Utils.DiscordEmojis.html#KWiJisho_Modules_Utils_DiscordEmojis_CatCoke
+  commentId: F:KWiJisho.Modules.Utils.DiscordEmojis.CatCoke
+  fullName: KWiJisho.Modules.Utils.DiscordEmojis.CatCoke
+  nameWithType: DiscordEmojis.CatCoke
 - uid: KWiJisho.Modules.Utils.DiscordEmojis.CatMemeEmoji
   name: DiscordEmojis.CatMemeEmoji
   href: api/KWiJisho.Modules.Utils.DiscordEmojis.CatMemeEmoji.html
@@ -2455,6 +2473,24 @@ references:
   fullName.vb: KWiJisho.Modules.Utils.DiscordEmojis.CatMemeEmoji.New
   nameWithType: DiscordEmojis.CatMemeEmoji.CatMemeEmoji
   nameWithType.vb: DiscordEmojis.CatMemeEmoji.New
+- uid: KWiJisho.Modules.Utils.DiscordEmojis.CatParty1
+  name: CatParty1
+  href: api/KWiJisho.Modules.Utils.DiscordEmojis.html#KWiJisho_Modules_Utils_DiscordEmojis_CatParty1
+  commentId: F:KWiJisho.Modules.Utils.DiscordEmojis.CatParty1
+  fullName: KWiJisho.Modules.Utils.DiscordEmojis.CatParty1
+  nameWithType: DiscordEmojis.CatParty1
+- uid: KWiJisho.Modules.Utils.DiscordEmojis.CatParty2
+  name: CatParty2
+  href: api/KWiJisho.Modules.Utils.DiscordEmojis.html#KWiJisho_Modules_Utils_DiscordEmojis_CatParty2
+  commentId: F:KWiJisho.Modules.Utils.DiscordEmojis.CatParty2
+  fullName: KWiJisho.Modules.Utils.DiscordEmojis.CatParty2
+  nameWithType: DiscordEmojis.CatParty2
+- uid: KWiJisho.Modules.Utils.DiscordEmojis.CatParty3
+  name: CatParty3
+  href: api/KWiJisho.Modules.Utils.DiscordEmojis.html#KWiJisho_Modules_Utils_DiscordEmojis_CatParty3
+  commentId: F:KWiJisho.Modules.Utils.DiscordEmojis.CatParty3
+  fullName: KWiJisho.Modules.Utils.DiscordEmojis.CatParty3
+  nameWithType: DiscordEmojis.CatParty3
 - uid: KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji
   name: DiscordEmojis.CatPartyEmoji
   href: api/KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji.html
@@ -2480,6 +2516,30 @@ references:
   fullName.vb: KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji.New
   nameWithType: DiscordEmojis.CatPartyEmoji.CatPartyEmoji
   nameWithType.vb: DiscordEmojis.CatPartyEmoji.New
+- uid: KWiJisho.Modules.Utils.DiscordEmojis.MemeAppleCat
+  name: MemeAppleCat
+  href: api/KWiJisho.Modules.Utils.DiscordEmojis.html#KWiJisho_Modules_Utils_DiscordEmojis_MemeAppleCat
+  commentId: F:KWiJisho.Modules.Utils.DiscordEmojis.MemeAppleCat
+  fullName: KWiJisho.Modules.Utils.DiscordEmojis.MemeAppleCat
+  nameWithType: DiscordEmojis.MemeAppleCat
+- uid: KWiJisho.Modules.Utils.DiscordEmojis.MemeBananaCat
+  name: MemeBananaCat
+  href: api/KWiJisho.Modules.Utils.DiscordEmojis.html#KWiJisho_Modules_Utils_DiscordEmojis_MemeBananaCat
+  commentId: F:KWiJisho.Modules.Utils.DiscordEmojis.MemeBananaCat
+  fullName: KWiJisho.Modules.Utils.DiscordEmojis.MemeBananaCat
+  nameWithType: DiscordEmojis.MemeBananaCat
+- uid: KWiJisho.Modules.Utils.DiscordEmojis.MemeChipiCat
+  name: MemeChipiCat
+  href: api/KWiJisho.Modules.Utils.DiscordEmojis.html#KWiJisho_Modules_Utils_DiscordEmojis_MemeChipiCat
+  commentId: F:KWiJisho.Modules.Utils.DiscordEmojis.MemeChipiCat
+  fullName: KWiJisho.Modules.Utils.DiscordEmojis.MemeChipiCat
+  nameWithType: DiscordEmojis.MemeChipiCat
+- uid: KWiJisho.Modules.Utils.DiscordEmojis.MemeHappyCat
+  name: MemeHappyCat
+  href: api/KWiJisho.Modules.Utils.DiscordEmojis.html#KWiJisho_Modules_Utils_DiscordEmojis_MemeHappyCat
+  commentId: F:KWiJisho.Modules.Utils.DiscordEmojis.MemeHappyCat
+  fullName: KWiJisho.Modules.Utils.DiscordEmojis.MemeHappyCat
+  nameWithType: DiscordEmojis.MemeHappyCat
 - uid: KWiJisho.Modules.Utils.DiscordFormat
   name: DiscordFormat
   href: api/KWiJisho.Modules.Utils.DiscordFormat.html

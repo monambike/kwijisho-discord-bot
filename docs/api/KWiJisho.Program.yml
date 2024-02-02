@@ -20,10 +20,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Program
     path: ../src/KWiJisho/Program.cs
-    startLine: 4
+    startLine: 7
   assemblies:
   - KWIJisho
   namespace: KWiJisho
+  summary: The main entry point class of the application.
+  example: []
   syntax:
     content: internal class Program
     content.vb: Friend Class Program
@@ -55,11 +57,11 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Main
     path: ../src/KWiJisho/Program.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - KWIJisho
   namespace: KWiJisho
-  summary: The main entry point of the application.
+  summary: The main entry point method of the application.
   example: []
   syntax:
     content: internal static void Main()

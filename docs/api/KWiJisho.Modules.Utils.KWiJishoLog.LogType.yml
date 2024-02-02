@@ -28,7 +28,7 @@ items:
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
-  summary: The log type for a log entry.
+  summary: Represents options for the application log type.
   example: []
   syntax:
     content: internal enum KWiJishoLog.LogType
@@ -51,10 +51,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Debug
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-    startLine: 18
+    startLine: 23
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
+  summary: Indicated a debug level log.
+  example: []
   syntax:
     content: Debug = 0
     return:
@@ -77,10 +79,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Info
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-    startLine: 18
+    startLine: 28
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
+  summary: Indicated a info level log.
+  example: []
   syntax:
     content: Info = 1
     return:
@@ -103,10 +107,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Warning
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-    startLine: 18
+    startLine: 33
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
+  summary: Indicated a warning level log.
+  example: []
   syntax:
     content: Warning = 2
     return:
@@ -129,10 +135,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Error
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-    startLine: 18
+    startLine: 38
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
+  summary: Indicated a error level log.
+  example: []
   syntax:
     content: Error = 3
     return:
@@ -155,10 +163,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Fatal
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-    startLine: 18
+    startLine: 43
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
+  summary: Indicated a fatal level log.
+  example: []
   syntax:
     content: Fatal = 4
     return:

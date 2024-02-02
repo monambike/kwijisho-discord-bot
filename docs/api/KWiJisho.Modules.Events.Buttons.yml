@@ -58,7 +58,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: OnComponentInteractionCreatedAsync
     path: ../src/KWiJisho/Modules/Events/Buttons.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Events
@@ -78,6 +78,10 @@ items:
       description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> representing the asynchronous operation.
     content.vb: Friend Shared Function OnComponentInteractionCreatedAsync(sender As DiscordClient, e As ComponentInteractionCreateEventArgs) As Task
   overload: KWiJisho.Modules.Events.Buttons.OnComponentInteractionCreatedAsync*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown if the <code class="paramref">sender</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
 - uid: KWiJisho.Modules.Events.Buttons.CopyServerNameAsync(DSharpPlus.EventArgs.ComponentInteractionCreateEventArgs)
   commentId: M:KWiJisho.Modules.Events.Buttons.CopyServerNameAsync(DSharpPlus.EventArgs.ComponentInteractionCreateEventArgs)
   id: CopyServerNameAsync(DSharpPlus.EventArgs.ComponentInteractionCreateEventArgs)
@@ -96,7 +100,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: CopyServerNameAsync
     path: ../src/KWiJisho/Modules/Events/Buttons.cs
-    startLine: 38
+    startLine: 39
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Events
@@ -392,6 +396,13 @@ references:
   name: Task
   nameWithType: Task
   fullName: System.Threading.Tasks.Task
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
 - uid: KWiJisho.Modules.Events.Buttons.OnComponentInteractionCreatedAsync*
   commentId: Overload:KWiJisho.Modules.Events.Buttons.OnComponentInteractionCreatedAsync
   href: KWiJisho.Modules.Events.Buttons.html#KWiJisho_Modules_Events_Buttons_OnComponentInteractionCreatedAsync_DSharpPlus_DiscordClient_DSharpPlus_EventArgs_ComponentInteractionCreateEventArgs_

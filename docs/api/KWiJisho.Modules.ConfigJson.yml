@@ -72,10 +72,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: KWiJishoToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 16
+    startLine: 20
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
+  summary: Gets or sets the API token for KWiJisho.
+  example: []
   syntax:
     content: internal static string KWiJishoToken { get; set; }
     parameters: []
@@ -101,10 +103,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ChatGptToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 18
+    startLine: 25
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
+  summary: Gets or sets the API token for ChatGPT.
+  example: []
   syntax:
     content: internal static string ChatGptToken { get; set; }
     parameters: []
@@ -130,10 +134,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: NasaToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 20
+    startLine: 30
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
+  summary: Gets or sets the API token for NASA.
+  example: []
   syntax:
     content: internal static string NasaToken { get; set; }
     parameters: []
@@ -159,10 +165,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Prefix
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 22
+    startLine: 35
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
+  summary: Gets or sets the command prefix for the bot.
+  example: []
   syntax:
     content: internal static string Prefix { get; set; }
     parameters: []
@@ -188,10 +196,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Activity
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 24
+    startLine: 40
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
+  summary: Gets or sets the default bot activity.
+  example: []
   syntax:
     content: internal static string Activity { get; set; }
     parameters: []
@@ -217,10 +227,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: DefaultColor
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 26
+    startLine: 45
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
+  summary: Gets or sets the default color for bot messages.
+  example: []
   syntax:
     content: internal static ConfigJson.Color DefaultColor { get; set; }
     parameters: []
@@ -246,7 +258,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: _configJsonKWiJishoToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 31
+    startLine: 51
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -273,7 +285,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ConfigJsonKWiJishoToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 32
+    startLine: 52
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -344,7 +356,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: _configJsonChatGptToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 46
+    startLine: 68
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -371,7 +383,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ConfigJsonChatGptToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 47
+    startLine: 69
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -442,7 +454,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: _configJsonNasaToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 61
+    startLine: 85
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -469,7 +481,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ConfigJsonNasaToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 62
+    startLine: 86
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -540,7 +552,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: _configJsonPrefix
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 76
+    startLine: 102
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -567,7 +579,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ConfigJsonPrefix
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 77
+    startLine: 103
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -638,7 +650,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: _configJsonActivity
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 82
+    startLine: 108
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -665,7 +677,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ConfigJsonActivity
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 83
+    startLine: 109
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -736,7 +748,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: _configJsonPurpleColor
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 88
+    startLine: 114
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -763,7 +775,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ConfigJsonPurpleColor
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 89
+    startLine: 115
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -834,14 +846,20 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: DeserializeConfigJsonFileAsync
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 94
+    startLine: 125
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
+  summary: >-
+    Asynchronously deserializes the content of the config.json file into a <xref href="KWiJisho.Modules.ConfigJson" data-throw-if-not-resolved="false"></xref> instance. The <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/static">static</a> properties
+
+    from <xref href="KWiJisho.Modules.ConfigJson" data-throw-if-not-resolved="false"></xref> will receive the values.
+  example: []
   syntax:
     content: internal static Task<ConfigJson> DeserializeConfigJsonFileAsync()
     return:
       type: System.Threading.Tasks.Task{KWiJisho.Modules.ConfigJson}
+      description: A <xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref> representing the asynchronous operation, yielding a <xref href="KWiJisho.Modules.ConfigJson" data-throw-if-not-resolved="false"></xref> instance.
     content.vb: Friend Shared Function DeserializeConfigJsonFileAsync() As Task(Of ConfigJson)
   overload: KWiJisho.Modules.ConfigJson.DeserializeConfigJsonFileAsync*
 references:
@@ -1190,6 +1208,40 @@ references:
   name: ConfigJsonPurpleColor
   nameWithType: ConfigJson.ConfigJsonPurpleColor
   fullName: KWiJisho.Modules.ConfigJson.ConfigJsonPurpleColor
+- uid: KWiJisho.Modules.ConfigJson
+  commentId: T:KWiJisho.Modules.ConfigJson
+  href: KWiJisho.Modules.ConfigJson.html
+  name: ConfigJson
+  nameWithType: ConfigJson
+  fullName: KWiJisho.Modules.ConfigJson
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
 - uid: KWiJisho.Modules.ConfigJson.DeserializeConfigJsonFileAsync*
   commentId: Overload:KWiJisho.Modules.ConfigJson.DeserializeConfigJsonFileAsync
   href: KWiJisho.Modules.ConfigJson.html#KWiJisho_Modules_ConfigJson_DeserializeConfigJsonFileAsync
@@ -1228,34 +1280,6 @@ references:
   - uid: KWiJisho.Modules.ConfigJson
     name: ConfigJson
     href: KWiJisho.Modules.ConfigJson.html
-  - name: )
-- uid: System.Threading.Tasks.Task`1
-  commentId: T:System.Threading.Tasks.Task`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  name: Task<TResult>
-  nameWithType: Task<TResult>
-  fullName: System.Threading.Tasks.Task<TResult>
-  nameWithType.vb: Task(Of TResult)
-  fullName.vb: System.Threading.Tasks.Task(Of TResult)
-  name.vb: Task(Of TResult)
-  spec.csharp:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: <
-  - name: TResult
-  - name: '>'
-  spec.vb:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: TResult
   - name: )
 - uid: System.Threading.Tasks
   commentId: N:System.Threading.Tasks

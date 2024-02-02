@@ -24,7 +24,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Emoji
     path: ../src/KWiJisho/Modules/Utils/DiscordEmojis.cs
-    startLine: 48
+    startLine: 60
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
@@ -65,7 +65,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Name
     path: ../src/KWiJisho/Modules/Utils/DiscordEmojis.cs
-    startLine: 53
+    startLine: 65
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
@@ -96,7 +96,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Id
     path: ../src/KWiJisho/Modules/Utils/DiscordEmojis.cs
-    startLine: 58
+    startLine: 70
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
@@ -127,7 +127,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Code
     path: ../src/KWiJisho/Modules/Utils/DiscordEmojis.cs
-    startLine: 64
+    startLine: 76
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
@@ -161,7 +161,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: .ctor
     path: ../src/KWiJisho/Modules/Utils/DiscordEmojis.cs
-    startLine: 73
+    startLine: 85
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
@@ -202,17 +202,17 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ToString
     path: ../src/KWiJisho/Modules/Utils/DiscordEmojis.cs
-    startLine: 80
+    startLine: 98
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
-  summary: Returns a string that represents the current object.
+  summary: Converts the Discord emoji to its string representation, which is the Discord emoji code.
   example: []
   syntax:
     content: public override string ToString()
     return:
       type: System.String
-      description: A string that represents the current object.
+      description: The Discord emoji code in the format "<code>&lt;a:{<xref href="KWiJisho.Modules.Utils.Emoji.Name" data-throw-if-not-resolved="false"></xref>}:{<xref href="KWiJisho.Modules.Utils.Emoji.Id" data-throw-if-not-resolved="false"></xref>}&gt;</code>".
     content.vb: Public Overrides Function ToString() As String
   overridden: System.Object.ToString
   overload: KWiJisho.Modules.Utils.Emoji.ToString*
@@ -577,6 +577,20 @@ references:
   nameWithType.vb: Emoji.New
   fullName.vb: KWiJisho.Modules.Utils.Emoji.New
   name.vb: New
+- uid: KWiJisho.Modules.Utils.Emoji.Name
+  commentId: P:KWiJisho.Modules.Utils.Emoji.Name
+  parent: KWiJisho.Modules.Utils.Emoji
+  href: KWiJisho.Modules.Utils.Emoji.html#KWiJisho_Modules_Utils_Emoji_Name
+  name: Name
+  nameWithType: Emoji.Name
+  fullName: KWiJisho.Modules.Utils.Emoji.Name
+- uid: KWiJisho.Modules.Utils.Emoji.Id
+  commentId: P:KWiJisho.Modules.Utils.Emoji.Id
+  parent: KWiJisho.Modules.Utils.Emoji
+  href: KWiJisho.Modules.Utils.Emoji.html#KWiJisho_Modules_Utils_Emoji_Id
+  name: Id
+  nameWithType: Emoji.Id
+  fullName: KWiJisho.Modules.Utils.Emoji.Id
 - uid: System.Object.ToString
   commentId: M:System.Object.ToString
   parent: System.Object

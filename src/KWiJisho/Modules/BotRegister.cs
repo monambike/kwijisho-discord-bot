@@ -67,6 +67,9 @@ namespace KWiJisho.Modules
             DiscordClient.GuildMemberRemoved += GoodbyeWelcome.OnGuildMemberRemovedAsync;
         }
 
+        /// <summary>
+        /// Register all the Discord bot prefix commands permissions.
+        /// </summary>
         internal void RegisterPrefixCommandsPermissions()
         {
             PrefixCommands.CommandErrored += async (sender, exception) =>
@@ -87,6 +90,10 @@ namespace KWiJisho.Modules
                 }
             };
         }
+
+        /// <summary>
+        /// Register all the Discord bot slash commands permissions.
+        /// </summary>
         internal void RegisterSlashCommandsPermissions()
         {
             SlashCommandsExtension slash = SlashCommands;

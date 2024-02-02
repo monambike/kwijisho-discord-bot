@@ -23,10 +23,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Color
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 107
+    startLine: 142
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
+  summary: Represents an RGB color with red, green, and blue components.
+  example: []
   syntax:
     content: internal class ConfigJson.Color
     content.vb: Friend Class ConfigJson.Color
@@ -58,10 +60,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Red
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 109
+    startLine: 147
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
+  summary: Gets or sets the red component of the RGB color.
+  example: []
   syntax:
     content: >-
       [JsonProperty("red")]
@@ -99,10 +103,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Green
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 112
+    startLine: 153
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
+  summary: Gets or sets the green component of the RGB color.
+  example: []
   syntax:
     content: >-
       [JsonProperty("green")]
@@ -140,10 +146,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Blue
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 115
+    startLine: 159
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
+  summary: Gets or sets the blue component of the RGB color.
+  example: []
   syntax:
     content: >-
       [JsonProperty("blue")]
@@ -181,10 +189,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: DiscordColor
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 118
+    startLine: 165
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
+  summary: Gets a Discord color representation based on the RGB components.
+  example: []
   syntax:
     content: internal DiscordColor DiscordColor { get; }
     parameters: []

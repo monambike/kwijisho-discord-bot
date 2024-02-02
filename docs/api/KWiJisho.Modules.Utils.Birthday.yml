@@ -7,9 +7,9 @@ items:
   children:
   - KWiJisho.Modules.Utils.Birthday.GenerateBirthdayMessage(KWiJisho.Modules.Utils.User)
   - KWiJisho.Modules.Utils.Birthday.GetDaysRemainingByUser(KWiJisho.Modules.Utils.User)
-  - KWiJisho.Modules.Utils.Birthday.GetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)
   - KWiJisho.Modules.Utils.Birthday.GetUpcomingBirthdayDate(System.Double)
-  - KWiJisho.Modules.Utils.Birthday.GetUsersByClosestBirthday
+  - KWiJisho.Modules.Utils.Birthday.GetUsersOrderByClosestBirthday
+  - KWiJisho.Modules.Utils.Birthday.TryGetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)
   langs:
   - csharp
   - vb
@@ -24,10 +24,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Birthday
     path: ../src/KWiJisho/Modules/Utils/Birthday.cs
-    startLine: 7
+    startLine: 10
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
+  summary: Class that provides a set of utilities for birthday tasks.
+  example: []
   syntax:
     content: internal static class Birthday
     content.vb: Friend Module Birthday
@@ -41,65 +43,72 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: KWiJisho.Modules.Utils.Birthday.GetUsersByClosestBirthday
-  commentId: M:KWiJisho.Modules.Utils.Birthday.GetUsersByClosestBirthday
-  id: GetUsersByClosestBirthday
+- uid: KWiJisho.Modules.Utils.Birthday.GetUsersOrderByClosestBirthday
+  commentId: M:KWiJisho.Modules.Utils.Birthday.GetUsersOrderByClosestBirthday
+  id: GetUsersOrderByClosestBirthday
   parent: KWiJisho.Modules.Utils.Birthday
   langs:
   - csharp
   - vb
-  name: GetUsersByClosestBirthday()
-  nameWithType: Birthday.GetUsersByClosestBirthday()
-  fullName: KWiJisho.Modules.Utils.Birthday.GetUsersByClosestBirthday()
+  name: GetUsersOrderByClosestBirthday()
+  nameWithType: Birthday.GetUsersOrderByClosestBirthday()
+  fullName: KWiJisho.Modules.Utils.Birthday.GetUsersOrderByClosestBirthday()
   type: Method
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/Birthday.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
-    id: GetUsersByClosestBirthday
+    id: GetUsersOrderByClosestBirthday
     path: ../src/KWiJisho/Modules/Utils/Birthday.cs
-    startLine: 9
+    startLine: 16
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
+  summary: Gets a list of users ordered by how closer are their birthday.
+  example: []
   syntax:
-    content: internal static List<User> GetUsersByClosestBirthday()
+    content: internal static List<User> GetUsersOrderByClosestBirthday()
     return:
       type: System.Collections.Generic.List{KWiJisho.Modules.Utils.User}
-    content.vb: Friend Shared Function GetUsersByClosestBirthday() As List(Of User)
-  overload: KWiJisho.Modules.Utils.Birthday.GetUsersByClosestBirthday*
-- uid: KWiJisho.Modules.Utils.Birthday.GetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)
-  commentId: M:KWiJisho.Modules.Utils.Birthday.GetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)
-  id: GetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)
+      description: A <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref> containing a group of <xref href="KWiJisho.Modules.Utils.User" data-throw-if-not-resolved="false"></xref> and their <xref href="KWiJisho.Modules.Utils.User.Birthday" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Friend Shared Function GetUsersOrderByClosestBirthday() As List(Of User)
+  overload: KWiJisho.Modules.Utils.Birthday.GetUsersOrderByClosestBirthday*
+- uid: KWiJisho.Modules.Utils.Birthday.TryGetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)
+  commentId: M:KWiJisho.Modules.Utils.Birthday.TryGetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)
+  id: TryGetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)
   parent: KWiJisho.Modules.Utils.Birthday
   langs:
   - csharp
   - vb
-  name: GetDiscordUserByClosestBirthday(DiscordGuild)
-  nameWithType: Birthday.GetDiscordUserByClosestBirthday(DiscordGuild)
-  fullName: KWiJisho.Modules.Utils.Birthday.GetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)
+  name: TryGetDiscordUserByClosestBirthday(DiscordGuild)
+  nameWithType: Birthday.TryGetDiscordUserByClosestBirthday(DiscordGuild)
+  fullName: KWiJisho.Modules.Utils.Birthday.TryGetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)
   type: Method
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/Birthday.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
-    id: GetDiscordUserByClosestBirthday
+    id: TryGetDiscordUserByClosestBirthday
     path: ../src/KWiJisho/Modules/Utils/Birthday.cs
-    startLine: 34
+    startLine: 51
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
+  summary: Tries to get the user if they are presents in current Discord server.
+  example: []
   syntax:
-    content: internal static User GetDiscordUserByClosestBirthday(DiscordGuild discordGuild)
+    content: internal static User TryGetDiscordUserByClosestBirthday(DiscordGuild discordGuild)
     parameters:
     - id: discordGuild
       type: DSharpPlus.Entities.DiscordGuild
+      description: ''
     return:
       type: KWiJisho.Modules.Utils.User
-    content.vb: Friend Shared Function GetDiscordUserByClosestBirthday(discordGuild As DiscordGuild) As User
-  overload: KWiJisho.Modules.Utils.Birthday.GetDiscordUserByClosestBirthday*
+      description: Returns the <xref href="KWiJisho.Modules.Utils.User" data-throw-if-not-resolved="false"></xref> if avaiable in current Discord server; otherwise, returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+    content.vb: Friend Shared Function TryGetDiscordUserByClosestBirthday(discordGuild As DiscordGuild) As User
+  overload: KWiJisho.Modules.Utils.Birthday.TryGetDiscordUserByClosestBirthday*
 - uid: KWiJisho.Modules.Utils.Birthday.GetDaysRemainingByUser(KWiJisho.Modules.Utils.User)
   commentId: M:KWiJisho.Modules.Utils.Birthday.GetDaysRemainingByUser(KWiJisho.Modules.Utils.User)
   id: GetDaysRemainingByUser(KWiJisho.Modules.Utils.User)
@@ -118,17 +127,23 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetDaysRemainingByUser
     path: ../src/KWiJisho/Modules/Utils/Birthday.cs
-    startLine: 52
+    startLine: 80
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
+  summary: Get how many days are remaning for the user's birthday.
+  example: []
   syntax:
     content: internal static double GetDaysRemainingByUser(User discordUser)
     parameters:
     - id: discordUser
       type: KWiJisho.Modules.Utils.User
+      description: >-
+        The user to get how many years are remaining for they
+            birthday.
     return:
       type: System.Double
+      description: A <xref href="System.Double" data-throw-if-not-resolved="false"></xref> containing the number of days remaining for they birthday.
     content.vb: Friend Shared Function GetDaysRemainingByUser(discordUser As User) As Double
   overload: KWiJisho.Modules.Utils.Birthday.GetDaysRemainingByUser*
 - uid: KWiJisho.Modules.Utils.Birthday.GetUpcomingBirthdayDate(System.Double)
@@ -149,19 +164,29 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetUpcomingBirthdayDate
     path: ../src/KWiJisho/Modules/Utils/Birthday.cs
-    startLine: 58
+    startLine: 111
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
+  summary: Gets the <xref href="KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate" data-throw-if-not-resolved="false"></xref> based on how much days are remaining for it.
+  example: []
   syntax:
     content: internal static Birthday.UpcomingBirthdayDate GetUpcomingBirthdayDate(double daysRemaning)
     parameters:
     - id: daysRemaning
       type: System.Double
+      description: How many days are remaining for the birthday.
     return:
       type: KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate
+      description: The <xref href="KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate" data-throw-if-not-resolved="false"></xref> based on how many days are remaning.
     content.vb: Friend Shared Function GetUpcomingBirthdayDate(daysRemaning As Double) As Birthday.UpcomingBirthdayDate
   overload: KWiJisho.Modules.Utils.Birthday.GetUpcomingBirthdayDate*
+  exceptions:
+  - type: System.NotImplementedException
+    commentId: T:System.NotImplementedException
+    description: >-
+      Thrown if the upcoming birthday date is not yet implemented
+          on this current method.
   nameWithType.vb: Birthday.GetUpcomingBirthdayDate(Double)
   fullName.vb: KWiJisho.Modules.Utils.Birthday.GetUpcomingBirthdayDate(Double)
   name.vb: GetUpcomingBirthdayDate(Double)
@@ -183,19 +208,29 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GenerateBirthdayMessage
     path: ../src/KWiJisho/Modules/Utils/Birthday.cs
-    startLine: 69
+    startLine: 129
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
+  summary: Method responsible for generating a birthday message.
+  example: []
   syntax:
     content: internal static string GenerateBirthdayMessage(User discordUser)
     parameters:
     - id: discordUser
       type: KWiJisho.Modules.Utils.User
+      description: The user that to get the generated birthday message.
     return:
       type: System.String
+      description: A <xref href="System.String" data-throw-if-not-resolved="false"></xref> containing the generated birthday message.
     content.vb: Friend Shared Function GenerateBirthdayMessage(discordUser As User) As String
   overload: KWiJisho.Modules.Utils.Birthday.GenerateBirthdayMessage*
+  exceptions:
+  - type: System.NotImplementedException
+    commentId: T:System.NotImplementedException
+    description: >-
+      Thrown if the upcoming birthday date is not yet implemented on this
+          current method.
 references:
 - uid: KWiJisho.Modules.Utils
   commentId: N:KWiJisho.Modules.Utils
@@ -464,12 +499,53 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: KWiJisho.Modules.Utils.Birthday.GetUsersByClosestBirthday*
-  commentId: Overload:KWiJisho.Modules.Utils.Birthday.GetUsersByClosestBirthday
-  href: KWiJisho.Modules.Utils.Birthday.html#KWiJisho_Modules_Utils_Birthday_GetUsersByClosestBirthday
-  name: GetUsersByClosestBirthday
-  nameWithType: Birthday.GetUsersByClosestBirthday
-  fullName: KWiJisho.Modules.Utils.Birthday.GetUsersByClosestBirthday
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: KWiJisho.Modules.Utils.User
+  commentId: T:KWiJisho.Modules.Utils.User
+  parent: KWiJisho.Modules.Utils
+  href: KWiJisho.Modules.Utils.User.html
+  name: User
+  nameWithType: User
+  fullName: KWiJisho.Modules.Utils.User
+- uid: KWiJisho.Modules.Utils.User.Birthday
+  commentId: P:KWiJisho.Modules.Utils.User.Birthday
+  href: KWiJisho.Modules.Utils.User.html#KWiJisho_Modules_Utils_User_Birthday
+  name: Birthday
+  nameWithType: User.Birthday
+  fullName: KWiJisho.Modules.Utils.User.Birthday
+- uid: KWiJisho.Modules.Utils.Birthday.GetUsersOrderByClosestBirthday*
+  commentId: Overload:KWiJisho.Modules.Utils.Birthday.GetUsersOrderByClosestBirthday
+  href: KWiJisho.Modules.Utils.Birthday.html#KWiJisho_Modules_Utils_Birthday_GetUsersOrderByClosestBirthday
+  name: GetUsersOrderByClosestBirthday
+  nameWithType: Birthday.GetUsersOrderByClosestBirthday
+  fullName: KWiJisho.Modules.Utils.Birthday.GetUsersOrderByClosestBirthday
 - uid: System.Collections.Generic.List{KWiJisho.Modules.Utils.User}
   commentId: T:System.Collections.Generic.List{KWiJisho.Modules.Utils.User}
   parent: System.Collections.Generic
@@ -502,34 +578,6 @@ references:
   - uid: KWiJisho.Modules.Utils.User
     name: User
     href: KWiJisho.Modules.Utils.User.html
-  - name: )
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
-  spec.csharp:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: <
-  - name: T
-  - name: '>'
-  spec.vb:
-  - uid: System.Collections.Generic.List`1
-    name: List
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
-  - name: (
-  - name: Of
-  - name: " "
-  - name: T
   - name: )
 - uid: System.Collections.Generic
   commentId: N:System.Collections.Generic
@@ -568,12 +616,12 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-- uid: KWiJisho.Modules.Utils.Birthday.GetDiscordUserByClosestBirthday*
-  commentId: Overload:KWiJisho.Modules.Utils.Birthday.GetDiscordUserByClosestBirthday
-  href: KWiJisho.Modules.Utils.Birthday.html#KWiJisho_Modules_Utils_Birthday_GetDiscordUserByClosestBirthday_DSharpPlus_Entities_DiscordGuild_
-  name: GetDiscordUserByClosestBirthday
-  nameWithType: Birthday.GetDiscordUserByClosestBirthday
-  fullName: KWiJisho.Modules.Utils.Birthday.GetDiscordUserByClosestBirthday
+- uid: KWiJisho.Modules.Utils.Birthday.TryGetDiscordUserByClosestBirthday*
+  commentId: Overload:KWiJisho.Modules.Utils.Birthday.TryGetDiscordUserByClosestBirthday
+  href: KWiJisho.Modules.Utils.Birthday.html#KWiJisho_Modules_Utils_Birthday_TryGetDiscordUserByClosestBirthday_DSharpPlus_Entities_DiscordGuild_
+  name: TryGetDiscordUserByClosestBirthday
+  nameWithType: Birthday.TryGetDiscordUserByClosestBirthday
+  fullName: KWiJisho.Modules.Utils.Birthday.TryGetDiscordUserByClosestBirthday
 - uid: DSharpPlus.Entities.DiscordGuild
   commentId: T:DSharpPlus.Entities.DiscordGuild
   parent: DSharpPlus.Entities
@@ -581,13 +629,6 @@ references:
   name: DiscordGuild
   nameWithType: DiscordGuild
   fullName: DSharpPlus.Entities.DiscordGuild
-- uid: KWiJisho.Modules.Utils.User
-  commentId: T:KWiJisho.Modules.Utils.User
-  parent: KWiJisho.Modules.Utils
-  href: KWiJisho.Modules.Utils.User.html
-  name: User
-  nameWithType: User
-  fullName: KWiJisho.Modules.Utils.User
 - uid: DSharpPlus.Entities
   commentId: N:DSharpPlus.Entities
   isExternal: true
@@ -610,12 +651,6 @@ references:
   - uid: DSharpPlus.Entities
     name: Entities
     isExternal: true
-- uid: KWiJisho.Modules.Utils.Birthday.GetDaysRemainingByUser*
-  commentId: Overload:KWiJisho.Modules.Utils.Birthday.GetDaysRemainingByUser
-  href: KWiJisho.Modules.Utils.Birthday.html#KWiJisho_Modules_Utils_Birthday_GetDaysRemainingByUser_KWiJisho_Modules_Utils_User_
-  name: GetDaysRemainingByUser
-  nameWithType: Birthday.GetDaysRemainingByUser
-  fullName: KWiJisho.Modules.Utils.Birthday.GetDaysRemainingByUser
 - uid: System.Double
   commentId: T:System.Double
   parent: System
@@ -627,12 +662,12 @@ references:
   nameWithType.vb: Double
   fullName.vb: Double
   name.vb: Double
-- uid: KWiJisho.Modules.Utils.Birthday.GetUpcomingBirthdayDate*
-  commentId: Overload:KWiJisho.Modules.Utils.Birthday.GetUpcomingBirthdayDate
-  href: KWiJisho.Modules.Utils.Birthday.html#KWiJisho_Modules_Utils_Birthday_GetUpcomingBirthdayDate_System_Double_
-  name: GetUpcomingBirthdayDate
-  nameWithType: Birthday.GetUpcomingBirthdayDate
-  fullName: KWiJisho.Modules.Utils.Birthday.GetUpcomingBirthdayDate
+- uid: KWiJisho.Modules.Utils.Birthday.GetDaysRemainingByUser*
+  commentId: Overload:KWiJisho.Modules.Utils.Birthday.GetDaysRemainingByUser
+  href: KWiJisho.Modules.Utils.Birthday.html#KWiJisho_Modules_Utils_Birthday_GetDaysRemainingByUser_KWiJisho_Modules_Utils_User_
+  name: GetDaysRemainingByUser
+  nameWithType: Birthday.GetDaysRemainingByUser
+  fullName: KWiJisho.Modules.Utils.Birthday.GetDaysRemainingByUser
 - uid: KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate
   commentId: T:KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate
   parent: KWiJisho.Modules.Utils
@@ -656,12 +691,19 @@ references:
   - uid: KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate
     name: UpcomingBirthdayDate
     href: KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate.html
-- uid: KWiJisho.Modules.Utils.Birthday.GenerateBirthdayMessage*
-  commentId: Overload:KWiJisho.Modules.Utils.Birthday.GenerateBirthdayMessage
-  href: KWiJisho.Modules.Utils.Birthday.html#KWiJisho_Modules_Utils_Birthday_GenerateBirthdayMessage_KWiJisho_Modules_Utils_User_
-  name: GenerateBirthdayMessage
-  nameWithType: Birthday.GenerateBirthdayMessage
-  fullName: KWiJisho.Modules.Utils.Birthday.GenerateBirthdayMessage
+- uid: System.NotImplementedException
+  commentId: T:System.NotImplementedException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.notimplementedexception
+  name: NotImplementedException
+  nameWithType: NotImplementedException
+  fullName: System.NotImplementedException
+- uid: KWiJisho.Modules.Utils.Birthday.GetUpcomingBirthdayDate*
+  commentId: Overload:KWiJisho.Modules.Utils.Birthday.GetUpcomingBirthdayDate
+  href: KWiJisho.Modules.Utils.Birthday.html#KWiJisho_Modules_Utils_Birthday_GetUpcomingBirthdayDate_System_Double_
+  name: GetUpcomingBirthdayDate
+  nameWithType: Birthday.GetUpcomingBirthdayDate
+  fullName: KWiJisho.Modules.Utils.Birthday.GetUpcomingBirthdayDate
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -673,3 +715,9 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
+- uid: KWiJisho.Modules.Utils.Birthday.GenerateBirthdayMessage*
+  commentId: Overload:KWiJisho.Modules.Utils.Birthday.GenerateBirthdayMessage
+  href: KWiJisho.Modules.Utils.Birthday.html#KWiJisho_Modules_Utils_Birthday_GenerateBirthdayMessage_KWiJisho_Modules_Utils_User_
+  name: GenerateBirthdayMessage
+  nameWithType: Birthday.GenerateBirthdayMessage
+  fullName: KWiJisho.Modules.Utils.Birthday.GenerateBirthdayMessage

@@ -22,10 +22,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: UpcomingBirthdayDate
     path: ../src/KWiJisho/Modules/Utils/Birthday.cs
-    startLine: 57
+    startLine: 86
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
+  summary: Represents options for categorizing upcoming birthday dates.
+  example: []
   syntax:
     content: internal enum Birthday.UpcomingBirthdayDate
     content.vb: Friend Enum Birthday.UpcomingBirthdayDate
@@ -47,10 +49,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Today
     path: ../src/KWiJisho/Modules/Utils/Birthday.cs
-    startLine: 57
+    startLine: 91
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
+  summary: Indicates an upcoming birthday today.
+  example: []
   syntax:
     content: Today = 0
     return:
@@ -73,10 +77,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Tomorrow
     path: ../src/KWiJisho/Modules/Utils/Birthday.cs
-    startLine: 57
+    startLine: 96
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
+  summary: Indicates an upcoming birthday tomorrow.
+  example: []
   syntax:
     content: Tomorrow = 1
     return:
@@ -99,10 +105,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: InSomeDays
     path: ../src/KWiJisho/Modules/Utils/Birthday.cs
-    startLine: 57
+    startLine: 101
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
+  summary: Indicates an upcoming birthday in the future, beyond tomorrow.
+  example: []
   syntax:
     content: InSomeDays = 2
     return:

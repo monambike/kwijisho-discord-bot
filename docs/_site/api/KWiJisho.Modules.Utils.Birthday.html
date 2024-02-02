@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class Birthday | KWiJisho ">
       
-      
+      <meta name="description" content="Class that provides a set of utilities for birthday tasks.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="KWiJisho_Modules_Utils_Birthday" data-uid="KWiJisho.Modules.Utils.Birthday" class="text-break">
-Class Birthday  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Utils/Birthday.cs/#L8"><i class="bi bi-code-slash"></i></a>
+Class Birthday  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Utils/Birthday.cs/#L11"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,8 @@ Class Birthday  <a class="header-action link-secondary" title="View source" href
   <dl><dt>Assembly</dt><dd>KWIJisho.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Class that provides a set of utilities for birthday tasks.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -156,10 +157,11 @@ Class Birthday  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="KWiJisho_Modules_Utils_Birthday_GenerateBirthdayMessage_KWiJisho_Modules_Utils_User_" data-uid="KWiJisho.Modules.Utils.Birthday.GenerateBirthdayMessage(KWiJisho.Modules.Utils.User)">
   GenerateBirthdayMessage(User)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Utils/Birthday.cs/#L70"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Utils/Birthday.cs/#L130"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Method responsible for generating a birthday message.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -169,13 +171,15 @@ Class Birthday  <a class="header-action link-secondary" title="View source" href
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>discordUser</code> <a class="xref" href="KWiJisho.Modules.Utils.User.html">User</a></dt>
-    <dd></dd>
+    <dd><p>The user that to get the generated birthday message.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> containing the generated birthday message.</p>
+</dd>
   </dl>
 
 
@@ -185,6 +189,13 @@ Class Birthday  <a class="header-action link-secondary" title="View source" href
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></dt>
+    <dd><p>Thrown if the upcoming birthday date is not yet implemented on this
+current method.</p>
+</dd>
+  </dl>
 
 
 
@@ -192,10 +203,11 @@ Class Birthday  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="KWiJisho_Modules_Utils_Birthday_GetDaysRemainingByUser_KWiJisho_Modules_Utils_User_" data-uid="KWiJisho.Modules.Utils.Birthday.GetDaysRemainingByUser(KWiJisho.Modules.Utils.User)">
   GetDaysRemainingByUser(User)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Utils/Birthday.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Utils/Birthday.cs/#L81"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Get how many days are remaning for the user's birthday.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -205,49 +217,16 @@ Class Birthday  <a class="header-action link-secondary" title="View source" href
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>discordUser</code> <a class="xref" href="KWiJisho.Modules.Utils.User.html">User</a></dt>
-    <dd></dd>
+    <dd><p>The user to get how many years are remaining for they
+birthday.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-
-
-
-  <a id="KWiJisho_Modules_Utils_Birthday_GetDiscordUserByClosestBirthday_" data-uid="KWiJisho.Modules.Utils.Birthday.GetDiscordUserByClosestBirthday*"></a>
-
-  <h3 id="KWiJisho_Modules_Utils_Birthday_GetDiscordUserByClosestBirthday_DSharpPlus_Entities_DiscordGuild_" data-uid="KWiJisho.Modules.Utils.Birthday.GetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)">
-  GetDiscordUserByClosestBirthday(DiscordGuild)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Utils/Birthday.cs/#L35"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">internal static User GetDiscordUserByClosestBirthday(DiscordGuild discordGuild)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>discordGuild</code> <span class="xref">DiscordGuild</span></dt>
-    <dd></dd>
-  </dl>
-
-  <h4 class="section">Returns</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="KWiJisho.Modules.Utils.User.html">User</a></dt>
-    <dd></dd>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a> containing the number of days remaining for they birthday.</p>
+</dd>
   </dl>
 
 
@@ -264,10 +243,11 @@ Class Birthday  <a class="header-action link-secondary" title="View source" href
 
   <h3 id="KWiJisho_Modules_Utils_Birthday_GetUpcomingBirthdayDate_System_Double_" data-uid="KWiJisho.Modules.Utils.Birthday.GetUpcomingBirthdayDate(System.Double)">
   GetUpcomingBirthdayDate(double)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Utils/Birthday.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Utils/Birthday.cs/#L112"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate.html">Birthday.UpcomingBirthdayDate</a> based on how much days are remaining for it.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -277,13 +257,15 @@ Class Birthday  <a class="header-action link-secondary" title="View source" href
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>daysRemaning</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
-    <dd></dd>
+    <dd><p>How many days are remaining for the birthday.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="KWiJisho.Modules.Utils.Birthday.html">Birthday</a>.<a class="xref" href="KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate.html">UpcomingBirthdayDate</a></dt>
-    <dd></dd>
+    <dd><p>The <a class="xref" href="KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate.html">Birthday.UpcomingBirthdayDate</a> based on how many days are remaning.</p>
+</dd>
   </dl>
 
 
@@ -293,28 +275,75 @@ Class Birthday  <a class="header-action link-secondary" title="View source" href
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.notimplementedexception">NotImplementedException</a></dt>
+    <dd><p>Thrown if the upcoming birthday date is not yet implemented
+on this current method.</p>
+</dd>
+  </dl>
 
 
 
-  <a id="KWiJisho_Modules_Utils_Birthday_GetUsersByClosestBirthday_" data-uid="KWiJisho.Modules.Utils.Birthday.GetUsersByClosestBirthday*"></a>
+  <a id="KWiJisho_Modules_Utils_Birthday_GetUsersOrderByClosestBirthday_" data-uid="KWiJisho.Modules.Utils.Birthday.GetUsersOrderByClosestBirthday*"></a>
 
-  <h3 id="KWiJisho_Modules_Utils_Birthday_GetUsersByClosestBirthday" data-uid="KWiJisho.Modules.Utils.Birthday.GetUsersByClosestBirthday">
-  GetUsersByClosestBirthday()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Utils/Birthday.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <h3 id="KWiJisho_Modules_Utils_Birthday_GetUsersOrderByClosestBirthday" data-uid="KWiJisho.Modules.Utils.Birthday.GetUsersOrderByClosestBirthday">
+  GetUsersOrderByClosestBirthday()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Utils/Birthday.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a list of users ordered by how closer are their birthday.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">internal static List&lt;User&gt; GetUsersByClosestBirthday()</code></pre>
+    <pre><code class="lang-csharp hljs">internal static List&lt;User&gt; GetUsersOrderByClosestBirthday()</code></pre>
   </div>
 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="KWiJisho.Modules.Utils.User.html">User</a>&gt;</dt>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List&lt;T&gt;</a> containing a group of <a class="xref" href="KWiJisho.Modules.Utils.User.html">User</a> and their <a class="xref" href="KWiJisho.Modules.Utils.User.html#KWiJisho_Modules_Utils_User_Birthday">Birthday</a>.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="KWiJisho_Modules_Utils_Birthday_TryGetDiscordUserByClosestBirthday_" data-uid="KWiJisho.Modules.Utils.Birthday.TryGetDiscordUserByClosestBirthday*"></a>
+
+  <h3 id="KWiJisho_Modules_Utils_Birthday_TryGetDiscordUserByClosestBirthday_DSharpPlus_Entities_DiscordGuild_" data-uid="KWiJisho.Modules.Utils.Birthday.TryGetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)">
+  TryGetDiscordUserByClosestBirthday(DiscordGuild)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Utils/Birthday.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get the user if they are presents in current Discord server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">internal static User TryGetDiscordUserByClosestBirthday(DiscordGuild discordGuild)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discordGuild</code> <span class="xref">DiscordGuild</span></dt>
     <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="KWiJisho.Modules.Utils.User.html">User</a></dt>
+    <dd><p>Returns the <a class="xref" href="KWiJisho.Modules.Utils.User.html">User</a> if avaiable in current Discord server; otherwise, returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
+</dd>
   </dl>
 
 
@@ -331,7 +360,7 @@ Class Birthday  <a class="header-action link-secondary" title="View source" href
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Utils/Birthday.cs/#L8" class="edit-link">Edit this page</a>
+          <a href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Utils/Birthday.cs/#L11" class="edit-link">Edit this page</a>
         </div>
 
 

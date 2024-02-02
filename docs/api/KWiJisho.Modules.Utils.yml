@@ -9,7 +9,6 @@ items:
   - KWiJisho.Modules.Utils.Channel
   - KWiJisho.Modules.Utils.DiscordEmbedTest
   - KWiJisho.Modules.Utils.DiscordEmojis
-  - KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis
   - KWiJisho.Modules.Utils.DiscordEmojis.CatMemeEmoji
   - KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji
   - KWiJisho.Modules.Utils.DiscordFormat
@@ -80,28 +79,6 @@ references:
   name: DiscordEmojis
   nameWithType: DiscordEmojis
   fullName: KWiJisho.Modules.Utils.DiscordEmojis
-- uid: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis
-  commentId: T:KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis
-  href: KWiJisho.Modules.Utils.DiscordEmojis.html
-  name: DiscordEmojis.AnimatedEmojis
-  nameWithType: DiscordEmojis.AnimatedEmojis
-  fullName: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis
-  spec.csharp:
-  - uid: KWiJisho.Modules.Utils.DiscordEmojis
-    name: DiscordEmojis
-    href: KWiJisho.Modules.Utils.DiscordEmojis.html
-  - name: .
-  - uid: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis
-    name: AnimatedEmojis
-    href: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.html
-  spec.vb:
-  - uid: KWiJisho.Modules.Utils.DiscordEmojis
-    name: DiscordEmojis
-    href: KWiJisho.Modules.Utils.DiscordEmojis.html
-  - name: .
-  - uid: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis
-    name: AnimatedEmojis
-    href: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.html
 - uid: KWiJisho.Modules.Utils.DiscordEmojis.CatMemeEmoji
   commentId: T:KWiJisho.Modules.Utils.DiscordEmojis.CatMemeEmoji
   parent: KWiJisho.Modules.Utils

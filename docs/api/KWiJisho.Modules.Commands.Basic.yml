@@ -63,7 +63,7 @@ items:
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands
-  summary: Sends a random animated emoji from <xref href="KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoEmojis" data-throw-if-not-resolved="false"></xref>.
+  summary: Sends a random animated emoji from <xref href="KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: internal static Task SendRandomAnimatedEmoji(DiscordChannel discordChannel)
@@ -98,7 +98,7 @@ items:
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands
-  summary: Sends a random animated emoji from <xref href="KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoMemeEmojis" data-throw-if-not-resolved="false"></xref>.
+  summary: Sends a random animated emoji from <xref href="KWiJisho.Modules.Utils.DiscordEmojis.AnimatedMemeEmojis" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: internal static Task SendRandomAnimatedMemeEmoji(DiscordChannel discordChannel)
@@ -133,7 +133,7 @@ items:
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands
-  summary: Sends a random animated emoji from <xref href="KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoPartyEmojis" data-throw-if-not-resolved="false"></xref>.
+  summary: Sends a random animated emoji from <xref href="KWiJisho.Modules.Utils.DiscordEmojis.AnimatedPartyEmojis" data-throw-if-not-resolved="false"></xref>.
   example: []
   syntax:
     content: internal static Task SendRandomAnimatedPartyEmoji(DiscordChannel discordChannel)
@@ -414,12 +414,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoEmojis
-  commentId: F:KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoEmojis
-  href: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.html#KWiJisho_Modules_Utils_DiscordEmojis_AnimatedEmojis_KWiJishoEmojis
-  name: KWiJishoEmojis
-  nameWithType: DiscordEmojis.AnimatedEmojis.KWiJishoEmojis
-  fullName: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoEmojis
+- uid: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis
+  commentId: F:KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis
+  href: KWiJisho.Modules.Utils.DiscordEmojis.html#KWiJisho_Modules_Utils_DiscordEmojis_AnimatedEmojis
+  name: AnimatedEmojis
+  nameWithType: DiscordEmojis.AnimatedEmojis
+  fullName: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis
 - uid: System.Threading.Tasks.Task
   commentId: T:System.Threading.Tasks.Task
   parent: System.Threading.Tasks
@@ -500,24 +500,24 @@ references:
   - uid: DSharpPlus.Entities
     name: Entities
     isExternal: true
-- uid: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoMemeEmojis
-  commentId: F:KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoMemeEmojis
-  href: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.html#KWiJisho_Modules_Utils_DiscordEmojis_AnimatedEmojis_KWiJishoMemeEmojis
-  name: KWiJishoMemeEmojis
-  nameWithType: DiscordEmojis.AnimatedEmojis.KWiJishoMemeEmojis
-  fullName: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoMemeEmojis
+- uid: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedMemeEmojis
+  commentId: F:KWiJisho.Modules.Utils.DiscordEmojis.AnimatedMemeEmojis
+  href: KWiJisho.Modules.Utils.DiscordEmojis.html#KWiJisho_Modules_Utils_DiscordEmojis_AnimatedMemeEmojis
+  name: AnimatedMemeEmojis
+  nameWithType: DiscordEmojis.AnimatedMemeEmojis
+  fullName: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedMemeEmojis
 - uid: KWiJisho.Modules.Commands.Basic.SendRandomAnimatedMemeEmoji*
   commentId: Overload:KWiJisho.Modules.Commands.Basic.SendRandomAnimatedMemeEmoji
   href: KWiJisho.Modules.Commands.Basic.html#KWiJisho_Modules_Commands_Basic_SendRandomAnimatedMemeEmoji_DSharpPlus_Entities_DiscordChannel_
   name: SendRandomAnimatedMemeEmoji
   nameWithType: Basic.SendRandomAnimatedMemeEmoji
   fullName: KWiJisho.Modules.Commands.Basic.SendRandomAnimatedMemeEmoji
-- uid: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoPartyEmojis
-  commentId: F:KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoPartyEmojis
-  href: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.html#KWiJisho_Modules_Utils_DiscordEmojis_AnimatedEmojis_KWiJishoPartyEmojis
-  name: KWiJishoPartyEmojis
-  nameWithType: DiscordEmojis.AnimatedEmojis.KWiJishoPartyEmojis
-  fullName: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoPartyEmojis
+- uid: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedPartyEmojis
+  commentId: F:KWiJisho.Modules.Utils.DiscordEmojis.AnimatedPartyEmojis
+  href: KWiJisho.Modules.Utils.DiscordEmojis.html#KWiJisho_Modules_Utils_DiscordEmojis_AnimatedPartyEmojis
+  name: AnimatedPartyEmojis
+  nameWithType: DiscordEmojis.AnimatedPartyEmojis
+  fullName: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedPartyEmojis
 - uid: KWiJisho.Modules.Commands.Basic.SendRandomAnimatedPartyEmoji*
   commentId: Overload:KWiJisho.Modules.Commands.Basic.SendRandomAnimatedPartyEmoji
   href: KWiJisho.Modules.Commands.Basic.html#KWiJisho_Modules_Commands_Basic_SendRandomAnimatedPartyEmoji_DSharpPlus_Entities_DiscordChannel_

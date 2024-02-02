@@ -231,7 +231,7 @@ items:
   summary: >-
     Tries to return a <xref href="DSharpPlus.Entities.DiscordMember" data-throw-if-not-resolved="false"></xref> representing the user in the specified server.
 
-    If the user is not found, returns null.
+    If the user is not found, returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
   example: []
   syntax:
     content: internal DiscordMember GetUserDiscordMember(DiscordGuild discordGuild)
@@ -241,7 +241,7 @@ items:
       description: The Discord guild where the user is expected to be a member.
     return:
       type: DSharpPlus.Entities.DiscordMember
-      description: Returns <xref href="DSharpPlus.Entities.DiscordMember" data-throw-if-not-resolved="false"></xref> if found; otherwise, returns null.
+      description: Returns <xref href="DSharpPlus.Entities.DiscordMember" data-throw-if-not-resolved="false"></xref> if found; otherwise, returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
     content.vb: Friend Function GetUserDiscordMember(discordGuild As DiscordGuild) As DiscordMember
   overload: KWiJisho.Modules.Utils.User.GetUserDiscordMember*
 references:

@@ -20,10 +20,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: DiscordEmbedTest
     path: ../src/KWiJisho/Modules/Utils/DiscordEmbedTest.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
+  summary: Utility class providing default embeds for KWiJisho Discord bot.
+  example: []
   syntax:
     content: internal class DiscordEmbedTest
     content.vb: Friend Class DiscordEmbedTest
@@ -55,7 +57,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetDiscordEmbed
     path: ../src/KWiJisho/Modules/Utils/DiscordEmbedTest.cs
-    startLine: 7
+    startLine: 10
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils

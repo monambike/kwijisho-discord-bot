@@ -110,8 +110,6 @@ items:
     name: DiscordEmbedTest
   - uid: KWiJisho.Modules.Utils.DiscordEmojis
     name: DiscordEmojis
-  - uid: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis
-    name: DiscordEmojis.AnimatedEmojis
   - uid: KWiJisho.Modules.Utils.DiscordEmojis.CatMemeEmoji
     name: DiscordEmojis.CatMemeEmoji
   - uid: KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji

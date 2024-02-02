@@ -276,10 +276,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: RegisterPrefixCommandsPermissions
     path: ../src/KWiJisho/Modules/BotRegister.cs
-    startLine: 69
+    startLine: 72
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
+  summary: Register all the Discord bot prefix commands permissions.
+  example: []
   syntax:
     content: internal void RegisterPrefixCommandsPermissions()
     content.vb: Friend Sub RegisterPrefixCommandsPermissions()
@@ -302,10 +304,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: RegisterSlashCommandsPermissions
     path: ../src/KWiJisho/Modules/BotRegister.cs
-    startLine: 89
+    startLine: 96
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
+  summary: Register all the Discord bot slash commands permissions.
+  example: []
   syntax:
     content: internal void RegisterSlashCommandsPermissions()
     content.vb: Friend Sub RegisterSlashCommandsPermissions()

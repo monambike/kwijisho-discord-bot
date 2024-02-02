@@ -174,7 +174,7 @@ items:
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
-  summary: Updates the name of the Discord channel asynchronously.
+  summary: Updates asynchronously the name of the Discord channel.
   example: []
   syntax:
     content: internal void UpdateChannelNameAsync(CommandContext commandContext, string newName)
