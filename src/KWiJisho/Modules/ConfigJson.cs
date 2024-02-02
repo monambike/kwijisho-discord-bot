@@ -61,7 +61,7 @@ namespace KWiJisho.Modules
                 _configJsonKWiJishoToken = value;
                 // Tries to get the token from the environment variable
                 var kwijishoToken = Environment.GetEnvironmentVariable("KWIJISHO_TOKEN");
-                // If the token from the file is null, value will be set using the environment variable
+                // If the token from the environment variables is null, value will be set using the config json file values
                 KWiJishoToken = kwijishoToken ?? _configJsonKWiJishoToken;
             }
         }
@@ -78,7 +78,7 @@ namespace KWiJisho.Modules
                 _configJsonChatGptToken = value;
                 // Tries to get the token from the environment variable
                 var chatgptToken = Environment.GetEnvironmentVariable("KWIJISHO_CHATGPT_TOKEN");
-                // If the token from the file is null, value will be set using the environment variable
+                // If the token from the environment variables is null, value will be set using the config json file values
                 ChatGptToken = chatgptToken ?? _configJsonChatGptToken;
             }
         }
@@ -95,7 +95,7 @@ namespace KWiJisho.Modules
                 _configJsonNasaToken = value;
                 // Tries to get the token from the environment variable
                 var nasaToken = Environment.GetEnvironmentVariable("KWIJISHO_NASA_TOKEN");
-                // If the token from the file is null, value will be set using the environment variable
+                // If the token from the environment variables is null, value will be set using the config json file values
                 NasaToken = nasaToken ?? _configJsonNasaToken;
             }
         }
