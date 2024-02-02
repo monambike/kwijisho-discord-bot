@@ -1,51 +1,33 @@
 # KWiJisho
 
-Fun and friendly interactive Discord bot with a wide range of functions, including a custom dictionary feature. KWiJisho stands for Kawaii and Jisho (Cute and Dictionary in japanese respectively).
+Fun and friendly interactive Discord bot with a wide range of functions.
 
-![Captura de tela 2023-05-31 222206](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/0def11c4-8d71-4b3e-b961-b55439bfecf2)
+KWiJisho stands for "Kawaii" and "Jisho" that means "Cute" and "Dictionary" in japanese respectively. I played with the words like this because the main objective for creating this bot was because it would have a custom dictionary feature.
+
+### Some of her Prefix Commands:
+
+![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/a573854c-c93a-4f5e-98ac-997354c603f7)
+
+### Some of her Slash Commands:
+
+![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/207d27bf-6222-4c94-93c1-2388b68ab3da)
 
 You can check the old version of this project written with Node.js (Javascript) [here](https://github.com/monambike/kwijisho-discord-bot-legacy).
 
-## How to Edit the Bot
+# Features
 
-#### Notice: The following explanation will contain instructions on how to create a bot. It will simply provide information on what is needed to fetch and edit my bot.
+## ChatGPT
 
-After downloading the files, follow these steps:
+The bot also have implemented the ChatGPT API. You can talk with her in her cheerful KWiJisho style. 💫🌟
 
-1. Create a folder called `storage`.
+![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/17763ad7-4a20-4055-8c89-2f935eec023b)
 
-2. Within this folder, create two files named `dictionaryFile.json` and `metaData.json`, and **place the following code inside both files**:
+## Nasa APOD API
 
-`storage\dictionaryFile.json`
-```
-{
-    "Words": {
-        "0": {
-            "word": "",
-            "desc": ""
-        }
-    }
-}
-```
+You can get the APOD (Astronomy Picture of the Day) directly from Nasa website with their api, it will give you the attached text rewriten and summarized in portuguese!
+It will also contain the copyright and APOD image date information embedded.
 
-`storage\metaData.json`
-```
-{
-    "countOfWords": 0
-}
-```
-
-3. Outside of this folder, at the root level, include a file named `config.json` with the following code:
-```
-{
-	"prefix": "!",
-	"token": "here-goes-the-token",
-	"activity": "Ayaya!! Digite '!' para me chamar :D"
-}
-```
-You will need to change the "token" field with the token of the bot you create. You can modify the "prefix" and "activity" of the bot as desired.
-
-# Funcionalities
+![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/52bd8259-da9b-4542-b63b-ee3b16971f00)
 
 ## Change Discord Server Theme
 
