@@ -1,0 +1,259 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Modules.Utils
+  commentId: N:KWiJisho.Modules.Utils
+  id: KWiJisho.Modules.Utils
+  children:
+  - KWiJisho.Modules.Utils.Birthday
+  - KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate
+  - KWiJisho.Modules.Utils.Channel
+  - KWiJisho.Modules.Utils.DiscordEmbedTest
+  - KWiJisho.Modules.Utils.DiscordEmojis
+  - KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis
+  - KWiJisho.Modules.Utils.DiscordEmojis.CatMemeEmoji
+  - KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji
+  - KWiJisho.Modules.Utils.DiscordFormat
+  - KWiJisho.Modules.Utils.DiscordUsers
+  - KWiJisho.Modules.Utils.Emoji
+  - KWiJisho.Modules.Utils.KWiJishoInfo
+  - KWiJisho.Modules.Utils.KWiJishoLog
+  - KWiJisho.Modules.Utils.KWiJishoLog.LogType
+  - KWiJisho.Modules.Utils.KWiJishoPermission
+  - KWiJisho.Modules.Utils.ServerInfos
+  - KWiJisho.Modules.Utils.User
+  - KWiJisho.Modules.Utils.UtilList
+  langs:
+  - csharp
+  - vb
+  name: KWiJisho.Modules.Utils
+  nameWithType: KWiJisho.Modules.Utils
+  fullName: KWiJisho.Modules.Utils
+  type: Namespace
+  assemblies:
+  - KWiJisho
+references:
+- uid: KWiJisho.Modules.Utils.Birthday
+  commentId: T:KWiJisho.Modules.Utils.Birthday
+  href: KWiJisho.Modules.Utils.Birthday.html
+  name: Birthday
+  nameWithType: Birthday
+  fullName: KWiJisho.Modules.Utils.Birthday
+- uid: KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate
+  commentId: T:KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate
+  parent: KWiJisho.Modules.Utils
+  href: KWiJisho.Modules.Utils.Birthday.html
+  name: Birthday.UpcomingBirthdayDate
+  nameWithType: Birthday.UpcomingBirthdayDate
+  fullName: KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate
+  spec.csharp:
+  - uid: KWiJisho.Modules.Utils.Birthday
+    name: Birthday
+    href: KWiJisho.Modules.Utils.Birthday.html
+  - name: .
+  - uid: KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate
+    name: UpcomingBirthdayDate
+    href: KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Utils.Birthday
+    name: Birthday
+    href: KWiJisho.Modules.Utils.Birthday.html
+  - name: .
+  - uid: KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate
+    name: UpcomingBirthdayDate
+    href: KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate.html
+- uid: KWiJisho.Modules.Utils.Channel
+  commentId: T:KWiJisho.Modules.Utils.Channel
+  parent: KWiJisho.Modules.Utils
+  href: KWiJisho.Modules.Utils.Channel.html
+  name: Channel
+  nameWithType: Channel
+  fullName: KWiJisho.Modules.Utils.Channel
+- uid: KWiJisho.Modules.Utils.DiscordEmbedTest
+  commentId: T:KWiJisho.Modules.Utils.DiscordEmbedTest
+  href: KWiJisho.Modules.Utils.DiscordEmbedTest.html
+  name: DiscordEmbedTest
+  nameWithType: DiscordEmbedTest
+  fullName: KWiJisho.Modules.Utils.DiscordEmbedTest
+- uid: KWiJisho.Modules.Utils.DiscordEmojis
+  commentId: T:KWiJisho.Modules.Utils.DiscordEmojis
+  href: KWiJisho.Modules.Utils.DiscordEmojis.html
+  name: DiscordEmojis
+  nameWithType: DiscordEmojis
+  fullName: KWiJisho.Modules.Utils.DiscordEmojis
+- uid: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis
+  commentId: T:KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis
+  href: KWiJisho.Modules.Utils.DiscordEmojis.html
+  name: DiscordEmojis.AnimatedEmojis
+  nameWithType: DiscordEmojis.AnimatedEmojis
+  fullName: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis
+  spec.csharp:
+  - uid: KWiJisho.Modules.Utils.DiscordEmojis
+    name: DiscordEmojis
+    href: KWiJisho.Modules.Utils.DiscordEmojis.html
+  - name: .
+  - uid: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis
+    name: AnimatedEmojis
+    href: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Utils.DiscordEmojis
+    name: DiscordEmojis
+    href: KWiJisho.Modules.Utils.DiscordEmojis.html
+  - name: .
+  - uid: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis
+    name: AnimatedEmojis
+    href: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.html
+- uid: KWiJisho.Modules.Utils.DiscordEmojis.CatMemeEmoji
+  commentId: T:KWiJisho.Modules.Utils.DiscordEmojis.CatMemeEmoji
+  parent: KWiJisho.Modules.Utils
+  href: KWiJisho.Modules.Utils.DiscordEmojis.html
+  name: DiscordEmojis.CatMemeEmoji
+  nameWithType: DiscordEmojis.CatMemeEmoji
+  fullName: KWiJisho.Modules.Utils.DiscordEmojis.CatMemeEmoji
+  spec.csharp:
+  - uid: KWiJisho.Modules.Utils.DiscordEmojis
+    name: DiscordEmojis
+    href: KWiJisho.Modules.Utils.DiscordEmojis.html
+  - name: .
+  - uid: KWiJisho.Modules.Utils.DiscordEmojis.CatMemeEmoji
+    name: CatMemeEmoji
+    href: KWiJisho.Modules.Utils.DiscordEmojis.CatMemeEmoji.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Utils.DiscordEmojis
+    name: DiscordEmojis
+    href: KWiJisho.Modules.Utils.DiscordEmojis.html
+  - name: .
+  - uid: KWiJisho.Modules.Utils.DiscordEmojis.CatMemeEmoji
+    name: CatMemeEmoji
+    href: KWiJisho.Modules.Utils.DiscordEmojis.CatMemeEmoji.html
+- uid: KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji
+  commentId: T:KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji
+  parent: KWiJisho.Modules.Utils
+  href: KWiJisho.Modules.Utils.DiscordEmojis.html
+  name: DiscordEmojis.CatPartyEmoji
+  nameWithType: DiscordEmojis.CatPartyEmoji
+  fullName: KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji
+  spec.csharp:
+  - uid: KWiJisho.Modules.Utils.DiscordEmojis
+    name: DiscordEmojis
+    href: KWiJisho.Modules.Utils.DiscordEmojis.html
+  - name: .
+  - uid: KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji
+    name: CatPartyEmoji
+    href: KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Utils.DiscordEmojis
+    name: DiscordEmojis
+    href: KWiJisho.Modules.Utils.DiscordEmojis.html
+  - name: .
+  - uid: KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji
+    name: CatPartyEmoji
+    href: KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji.html
+- uid: KWiJisho.Modules.Utils.Emoji
+  commentId: T:KWiJisho.Modules.Utils.Emoji
+  parent: KWiJisho.Modules.Utils
+  href: KWiJisho.Modules.Utils.Emoji.html
+  name: Emoji
+  nameWithType: Emoji
+  fullName: KWiJisho.Modules.Utils.Emoji
+- uid: KWiJisho.Modules.Utils.DiscordFormat
+  commentId: T:KWiJisho.Modules.Utils.DiscordFormat
+  href: KWiJisho.Modules.Utils.DiscordFormat.html
+  name: DiscordFormat
+  nameWithType: DiscordFormat
+  fullName: KWiJisho.Modules.Utils.DiscordFormat
+- uid: KWiJisho.Modules.Utils.DiscordUsers
+  commentId: T:KWiJisho.Modules.Utils.DiscordUsers
+  href: KWiJisho.Modules.Utils.DiscordUsers.html
+  name: DiscordUsers
+  nameWithType: DiscordUsers
+  fullName: KWiJisho.Modules.Utils.DiscordUsers
+- uid: KWiJisho.Modules.Utils.User
+  commentId: T:KWiJisho.Modules.Utils.User
+  parent: KWiJisho.Modules.Utils
+  href: KWiJisho.Modules.Utils.User.html
+  name: User
+  nameWithType: User
+  fullName: KWiJisho.Modules.Utils.User
+- uid: KWiJisho.Modules.Utils.KWiJishoInfo
+  commentId: T:KWiJisho.Modules.Utils.KWiJishoInfo
+  href: KWiJisho.Modules.Utils.KWiJishoInfo.html
+  name: KWiJishoInfo
+  nameWithType: KWiJishoInfo
+  fullName: KWiJisho.Modules.Utils.KWiJishoInfo
+- uid: KWiJisho.Modules.Utils.KWiJishoLog
+  commentId: T:KWiJisho.Modules.Utils.KWiJishoLog
+  href: KWiJisho.Modules.Utils.KWiJishoLog.html
+  name: KWiJishoLog
+  nameWithType: KWiJishoLog
+  fullName: KWiJisho.Modules.Utils.KWiJishoLog
+- uid: KWiJisho.Modules.Utils.KWiJishoLog.LogType
+  commentId: T:KWiJisho.Modules.Utils.KWiJishoLog.LogType
+  parent: KWiJisho.Modules.Utils
+  href: KWiJisho.Modules.Utils.KWiJishoLog.html
+  name: KWiJishoLog.LogType
+  nameWithType: KWiJishoLog.LogType
+  fullName: KWiJisho.Modules.Utils.KWiJishoLog.LogType
+  spec.csharp:
+  - uid: KWiJisho.Modules.Utils.KWiJishoLog
+    name: KWiJishoLog
+    href: KWiJisho.Modules.Utils.KWiJishoLog.html
+  - name: .
+  - uid: KWiJisho.Modules.Utils.KWiJishoLog.LogType
+    name: LogType
+    href: KWiJisho.Modules.Utils.KWiJishoLog.LogType.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Utils.KWiJishoLog
+    name: KWiJishoLog
+    href: KWiJisho.Modules.Utils.KWiJishoLog.html
+  - name: .
+  - uid: KWiJisho.Modules.Utils.KWiJishoLog.LogType
+    name: LogType
+    href: KWiJisho.Modules.Utils.KWiJishoLog.LogType.html
+- uid: KWiJisho.Modules.Utils.KWiJishoPermission
+  commentId: T:KWiJisho.Modules.Utils.KWiJishoPermission
+  href: KWiJisho.Modules.Utils.KWiJishoPermission.html
+  name: KWiJishoPermission
+  nameWithType: KWiJishoPermission
+  fullName: KWiJisho.Modules.Utils.KWiJishoPermission
+- uid: KWiJisho.Modules.Utils.ServerInfos
+  commentId: T:KWiJisho.Modules.Utils.ServerInfos
+  href: KWiJisho.Modules.Utils.ServerInfos.html
+  name: ServerInfos
+  nameWithType: ServerInfos
+  fullName: KWiJisho.Modules.Utils.ServerInfos
+- uid: KWiJisho.Modules.Utils.UtilList
+  commentId: T:KWiJisho.Modules.Utils.UtilList
+  href: KWiJisho.Modules.Utils.UtilList.html
+  name: UtilList
+  nameWithType: UtilList
+  fullName: KWiJisho.Modules.Utils.UtilList
+- uid: KWiJisho.Modules.Utils
+  commentId: N:KWiJisho.Modules.Utils
+  href: KWiJisho.html
+  name: KWiJisho.Modules.Utils
+  nameWithType: KWiJisho.Modules.Utils
+  fullName: KWiJisho.Modules.Utils
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Modules
+    name: Modules
+    href: KWiJisho.Modules.html
+  - name: .
+  - uid: KWiJisho.Modules.Utils
+    name: Utils
+    href: KWiJisho.Modules.Utils.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Modules
+    name: Modules
+    href: KWiJisho.Modules.html
+  - name: .
+  - uid: KWiJisho.Modules.Utils
+    name: Utils
+    href: KWiJisho.Modules.Utils.html
