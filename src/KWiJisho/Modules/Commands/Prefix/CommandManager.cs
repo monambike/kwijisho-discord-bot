@@ -7,7 +7,7 @@ using System.Linq;
 namespace KWiJisho.Modules.Commands.Prefix
 {
     /// <summary>
-    /// Represent the class that represents commands groups and holds all Discord command classes.
+    /// Provides a set of commands and classes for managing commands in a Discord server.
     /// </summary>
     internal static partial class PrefixCommandManager
     {

@@ -2,8 +2,6 @@
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
-using DSharpPlus.SlashCommands;
-using DSharpPlus.SlashCommands.Attributes;
 using KWiJisho.Modules.Utils;
 using System;
 using System.Collections.Generic;
@@ -12,10 +10,19 @@ using System.Threading.Tasks;
 
 namespace KWiJisho.Modules.Commands.Prefix
 {
+    /// <summary>
+    /// Provides a set of commands and classes for managing commands in a Discord server.
+    /// </summary>
     internal partial class PrefixCommandManager
     {
+        /// <summary>
+        /// Represents a set of prefix commands to change theme in a Discord server.
+        /// </summary>
         internal partial class PrefixTheme
         {
+            /// <summary>
+            /// Represents a set of prefix commands to change theme designed specifically for Tramontina Discord server.
+            /// </summary>
             internal class PrefixThemeTramontina : BaseCommandModule
             {
                 // Text Channels
@@ -131,6 +138,7 @@ namespace KWiJisho.Modules.Commands.Prefix
                         Description = $"{description}{Environment.NewLine}",
                         Color = ConfigJson.DefaultColor.DiscordColor
                     }.AddField("HOOOOOOOOOORA DE ENTRAR NO CLIMA", $"Que tal aproveitar e tentar {"trocar o nome do servidor".ToDiscordBold()} pela minha sugestãozinha abaixo? ;D AHAHAHA");
+                    
                     // Sending the first message (presentation)
                     await commandContext.Channel.SendMessageAsync(new DiscordMessageBuilder().AddEmbed(presentationDiscordEmbedBuilder));
 
@@ -160,18 +168,32 @@ namespace KWiJisho.Modules.Commands.Prefix
                 }
             }
 
-            internal class TramontinaChannel : Channel
+            /// <summary>
+            /// Initializes a new instance of <see cref="TramontinaChannel"/> class with the specified id, the default channel
+            /// text title and emoji theme.
+            /// </summary>
+            /// <param name="id">The Id from the Discord channel.</param>
+            /// <param name="defaultTextTitle">The default text title from the Discord channel.</param>
+            /// <param name="emojiTheme">The emoji theme dictionary avaiable for this channel.</param>
+            internal class TramontinaChannel(ulong id, string defaultTextTitle, Dictionary<EmojiTheme, string> emojiTheme) : Channel(id, $"{defaultTextTitle}")
             {
-                internal string DefaultTextTitle { get; set; }
+                /// <summary>
+                /// The default text title for the tramontina Discord channel.
+                /// </summary>
+                internal string DefaultTextTitle { get; set; } = defaultTextTitle;
 
-                internal Dictionary<EmojiTheme, string> EmojiTheme { get; set; }
+                /// <summary>
+                /// The dictionary containing the EmojiTheme that represents the seasonal theme associate to the emoji, and
+                /// the string that represents the emoji itself for the tramontina Discord channel.
+                /// </summary>
+                internal Dictionary<EmojiTheme, string> EmojiTheme { get; set; } = emojiTheme;
 
-                internal TramontinaChannel(ulong id, string defaultTextTitle, Dictionary<EmojiTheme, string> emojiTheme) : base(id, $"{defaultTextTitle}")
-                {
-                    DefaultTextTitle = defaultTextTitle;
-                    EmojiTheme = emojiTheme;
-                }
-
+                /// <summary>
+                /// Change the emoji for current channel. At the current moment, you can do this twice with the same channel
+                /// every 10 minutes.
+                /// </summary>
+                /// <param name="commandContext">The command context of the interaction.</param>
+                /// <param name="emoji">The emoji to be changed in the channel.</param>
                 internal void ChangeEmoji(CommandContext commandContext, string emoji) => UpdateChannelNameAsync(commandContext, $"{emoji}│{DefaultTextTitle}");
 
             }

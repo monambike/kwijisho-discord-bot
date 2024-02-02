@@ -3,36 +3,49 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace KWiJisho.Modules.Api
+namespace KWiJisho.Modules.APIs
 {
     /// <summary>
-    /// API Documentation: https://api.nasa.gov/
+    /// This class provides methods for interacting with the NASA's API using
+    /// HTTP requests.
+    /// API Documentation: <a href="https://api.nasa.gov/"/>
     /// </summary>
     internal static class NasaApi
     {
         /// <summary>
-        /// HttpClient for making api requests.
+        /// HttpClient responsible for making api requests.
         /// </summary>
         readonly static HttpClient HttpClient = new() { BaseAddress = new Uri("https://api.nasa.gov") };
 
+        /// <summary>
+        /// This class provides methods for interacting with the APOD (Astronomy Picture of
+        /// the Day) API using HTTP requests.
+        /// </summary>
         internal static class Apod
         {
             /// <summary>
-            /// Makes a image request for APOD, also known as Astronomy Picture of the Day.
+            /// Retrieves the Astronomy Picture of the Day (APOD) through a request to NASA's API.
             /// </summary>
+            /// <returns>An asynchronous <see cref="Task"/> that represents the operation. The task result contains an <see cref="ApodResponseJson"/> object.</returns>
             internal static async Task<ApodResponseJson> GetAsync()
             {
+                // Make an asynchronous request to NASA's API to get the APOD data.
                 var response = await GetUsingNasaApiAsync("planetary/apod");
+
+                // Deserialize the string JSON response into an ApodResponseJson object.
                 return JsonConvert.DeserializeObject<ApodResponseJson>(response);
             }
 
             /// <summary>
-            /// Makes a request for the nasa API.
+            /// Makes a generic request to NASA's API with the specified endpoint.
             /// </summary>
-            /// <param name="request"></param>
-            /// <returns></returns>
+            /// <param name="request">The endpoint for the API request.</param>
+            /// <returns>An asynchronous task that represents the operation. The task result contains the API response as a string.</returns>
             private static async Task<string> GetUsingNasaApiAsync(string request) => await HttpService.GetAsync(HttpClient, $"{request}?api_key={ConfigJson.NasaToken}");
 
+            /// <summary>
+            /// Represents the APOD Json response for a NASA's API HTTP request.
+            /// </summary>
             internal class ApodResponseJson
             {
                 /// <summary>

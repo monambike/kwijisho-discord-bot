@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace KWiJisho.Modules.Commands
 {
+    /// <summary>
+    /// Provides methods for "prefix" and "slash" birthday commands.
+    /// </summary>
     internal static class Birthday
     {
         private static Dictionary<int, string> Months => new()

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace KWiJisho.Modules.Events
 {
     /// <summary>
-    /// Class responsible for handling button click events.
+    /// Provides a set of events and methods fired when a interaction is made.
     /// </summary>
     internal class Buttons
     {

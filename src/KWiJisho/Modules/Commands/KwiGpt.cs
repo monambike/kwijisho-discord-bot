@@ -1,9 +1,12 @@
 ﻿using DSharpPlus.Entities;
-using KWiJisho.Modules.Api;
+using KWiJisho.Modules.APIs;
 using System.Threading.Tasks;
 
 namespace KWiJisho.Modules.Commands
 {
+    /// <summary>
+    /// Provides methods for "prefix" and "slash" KWiGPT commands.
+    /// </summary>
     internal static class KwiGpt
     {
         internal static async Task ChatGptPromptAsync(DiscordChannel discordChannel, params string[] input)

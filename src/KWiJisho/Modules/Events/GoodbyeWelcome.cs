@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 namespace KWiJisho.Modules.Events
 {
     /// <summary>
-    /// Class responsible for managing goodbye and welcome events and methods.
+    /// Provides a set of events and methods fired when a user enters and leaves a discord
+    /// server.
     /// </summary>
     internal class GoodbyeWelcome
     {

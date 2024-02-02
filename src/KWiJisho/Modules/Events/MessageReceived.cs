@@ -3,6 +3,9 @@ using System.Threading.Tasks;
 
 namespace KWiJisho.Modules.Events
 {
+    /// <summary>
+    /// Provides a set of events and methods for when a message is received.
+    /// </summary>
     internal class MessageReceived
     {
         //    internal static async Task OnMessageReceivedAsync(DiscordClient sender, MessageCreateEventArgs e)

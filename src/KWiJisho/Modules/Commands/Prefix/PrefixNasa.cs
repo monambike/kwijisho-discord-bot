@@ -1,7 +1,7 @@
 ﻿using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
-using KWiJisho.Modules.Api;
+using KWiJisho.Modules.APIs;
 using KWiJisho.Modules.Utils;
 using System;
 using System.Globalization;
@@ -9,24 +9,51 @@ using System.Threading.Tasks;
 
 namespace KWiJisho.Modules.Commands.Prefix
 {
+    /// <summary>
+    /// Provides a set of commands and classes for managing commands in a Discord server.
+    /// </summary>
     internal partial class PrefixCommandManager
     {
         internal class PrefixNasa : BaseCommandModule
         {
+            /// <summary>
+            /// Represent the command to get the APOD at its current default state.
+            /// </summary>
             internal PrefixCommand apod = new(nameof(apod), $"(APOD - Astronomy Picture of the Day) Te trago a imagem do dia fresquinha diretamente do site da Nasa! Com uma descrição traduzida por mim é claro uwu", Astronomy);
+
+            /// <summary>
+            /// Represent the command to get the APOD resumed and translated to portuguese.
+            /// </summary>
+            internal PrefixCommand apodResume = new(nameof(apodResume), $"Te trago o mesmo conteúdo do comando {"!apod".ToDiscordBold()} mas mais fácil e divertido de ler! (Texto Resumido)", Astronomy);
+
+            /// <summary>
+            /// Represents the asynchronous prefix APOD method callend when user asks for the APOD command.
+            /// </summary>
+            /// <param name="commandContext">The command context from the current command call.</param>
+            /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
             [Command(nameof(apod))]
             internal async Task ApodAsync(CommandContext commandContext)
             {
+                // The discord message builder generated within the APOD.
                 var message = await GenerateApodDiscordMessageBuilderAsync(commandContext);
+
+                // Sending the generated discord embed builder
                 await commandContext.Channel.SendMessageAsync(message);
             }
 
-
-            internal PrefixCommand apodResume = new(nameof(apodResume), $"Te trago o mesmo conteúdo do comando {"!apod".ToDiscordBold()} mas mais fácil e divertido de ler! (Texto Resumido)", Astronomy);
+            /// <summary>
+            /// Represents the asynchronous prefix APOD resume method callend when user asks for the APOD resume command.
+            /// </summary>
+            /// <param name="commandContext">The command context from the current command call.</param>
+            /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
+            /// <returns></returns>
             [Command(nameof(apodResume))]
             internal async Task ApodResumeAsync(CommandContext commandContext)
             {
+                // The discord message builder generated within the APOD.
                 var message = await GenerateApodDiscordMessageBuilderAsync(commandContext);
+
+                // Sending the generated discord embed builder
                 await commandContext.Channel.SendMessageAsync(message);
             }
 
@@ -58,6 +85,7 @@ namespace KWiJisho.Modules.Commands.Prefix
                     }
                 }.WithImageUrl(response.Url).AddField("👇🏻 Leia essa histórinha que tem a ver com a imagem", Environment.NewLine + formattedExplanation);
 
+                // Returning the created discord embed builder
                 return discordEmbedBuilder;
             }
 

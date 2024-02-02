@@ -13,7 +13,9 @@ namespace KWiJisho.Modules.Utils
         /// </summary>
         private static string Path => "KWiJishoLog.txt";
 
-
+        /// <summary>
+        /// The log type for a log entry.
+        /// </summary>
         internal enum LogType { Debug, Info, Warning, Error, Fatal }
 
         /// <summary>

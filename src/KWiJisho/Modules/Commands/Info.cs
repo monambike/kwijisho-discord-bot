@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace KWiJisho.Modules.Commands
 {
+    /// <summary>
+    /// Provides methods for "prefix" and "slash" informational and helpful commands.
+    /// </summary>
     internal static class Info
     {
         internal static async Task GetHelpAsync(DiscordChannel discordChannel, DiscordClient discordClient)

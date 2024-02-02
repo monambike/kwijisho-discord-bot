@@ -1,7 +1,7 @@
 ﻿using OpenAI_API;
 using System.Threading.Tasks;
 
-namespace KWiJisho.Modules.Api
+namespace KWiJisho.Modules.APIs
 {
     /// <summary>
     /// This class provides methods for interacting with the OpenAI GPT-3.5 model
@@ -18,8 +18,11 @@ namespace KWiJisho.Modules.Api
 
         internal static async Task<string> GetPromptKWiJishoStyleAsync(string input)
         {
+            // The default style for the ChatGPT prompts executed by this method
             var style = "Aja alegre e animada, falando de um jeito descontraído e se possível com emojis. Nada de formalidade, pontos finais e capitalizar o início das palavras."
                      + @"E o seu nome é ""KWiJisho"", eu te dei esse nome porque você inicialmente era um bot de dicionário e esse é um jogo de palavras com ""Kawaii"" e ""Jisho"" em japonês.";
+
+            // Getting the prompt assynchronously
             return await GetPromptAsync(style, input);
         }
 

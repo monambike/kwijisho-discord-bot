@@ -4,16 +4,34 @@ using System.Threading.Tasks;
 
 namespace KWiJisho.Modules.Events
 {
+    /// <summary>
+    /// Represents a Quartz.NET job that executes a birthday message task.
+    /// </summary>
     internal class BirthdayJob : IJob
     {
-        /// <inheritdoc/>
+        /// <summary>
+        /// Executes the birthday message task as part of the Quartz.NET job.
+        /// </summary>
+        /// <param name="context">The execution context provided by Quartz.NET.</param>
+        /// <returns>A <see cref="Task"/> representing the asynchronous execution of the job.</returns>
         public Task Execute(IJobExecutionContext context) => GiveBirthdayMessage();
 
+        /// <summary>
+        /// Sends a birthday message as an asynchronous task.
+        /// </summary>
+        /// <returns>A <see cref="Task"/> representing the asynchronous execution of the birthday message task.</returns>
         private static async Task GiveBirthdayMessage() => await Task.Run(() => "");
     }
 
+    /// <summary>
+    /// Provides methods for scheduling tasks.
+    /// </summary>
     internal class Scheduler
     {
+        /// <summary>
+        /// Creates a birthday scheduler as part of the Quartz.NET library.
+        /// </summary>
+        /// <returns>A <see cref="Task"/> representing the asynchronous creation of the birthday scheduler.</returns>
         internal static async Task CreateBirthdayScheduler()
         {
             // Creating and starting a scheduler

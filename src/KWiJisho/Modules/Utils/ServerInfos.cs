@@ -15,6 +15,9 @@
         /// </summary>
         internal static ulong TramontinaDiscordServerGuildId => 737541664775602269;
 
+        /// <summary>
+        /// Tramontina welcome Discord channeld Id.
+        /// </summary>
         internal static ulong TramontinaWelcomeChannelId => 842222447410544650;
     }
 }
