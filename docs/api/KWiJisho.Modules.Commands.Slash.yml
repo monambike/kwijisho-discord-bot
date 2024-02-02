@@ -1,0 +1,67 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Modules.Commands.Slash
+  commentId: N:KWiJisho.Modules.Commands.Slash
+  id: KWiJisho.Modules.Commands.Slash
+  children:
+  - KWiJisho.Modules.Commands.Slash.SlashBasic
+  - KWiJisho.Modules.Commands.Slash.SlashBasic.Emoji
+  - KWiJisho.Modules.Commands.Slash.SlashBirthday
+  - KWiJisho.Modules.Commands.Slash.SlashInfo
+  - KWiJisho.Modules.Commands.Slash.SlashKwiGpt
+  langs:
+  - csharp
+  - vb
+  name: KWiJisho.Modules.Commands.Slash
+  nameWithType: KWiJisho.Modules.Commands.Slash
+  fullName: KWiJisho.Modules.Commands.Slash
+  type: Namespace
+  assemblies:
+  - KWiJisho
+references:
+- uid: KWiJisho.Modules.Commands.Slash.SlashBasic
+  commentId: T:KWiJisho.Modules.Commands.Slash.SlashBasic
+  href: KWiJisho.Modules.Commands.Slash.SlashBasic.html
+  name: SlashBasic
+  nameWithType: SlashBasic
+  fullName: KWiJisho.Modules.Commands.Slash.SlashBasic
+- uid: KWiJisho.Modules.Commands.Slash.SlashBasic.Emoji
+  commentId: T:KWiJisho.Modules.Commands.Slash.SlashBasic.Emoji
+  href: KWiJisho.Modules.Commands.Slash.SlashBasic.html
+  name: SlashBasic.Emoji
+  nameWithType: SlashBasic.Emoji
+  fullName: KWiJisho.Modules.Commands.Slash.SlashBasic.Emoji
+  spec.csharp:
+  - uid: KWiJisho.Modules.Commands.Slash.SlashBasic
+    name: SlashBasic
+    href: KWiJisho.Modules.Commands.Slash.SlashBasic.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Slash.SlashBasic.Emoji
+    name: Emoji
+    href: KWiJisho.Modules.Commands.Slash.SlashBasic.Emoji.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Commands.Slash.SlashBasic
+    name: SlashBasic
+    href: KWiJisho.Modules.Commands.Slash.SlashBasic.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Slash.SlashBasic.Emoji
+    name: Emoji
+    href: KWiJisho.Modules.Commands.Slash.SlashBasic.Emoji.html
+- uid: KWiJisho.Modules.Commands.Slash.SlashBirthday
+  commentId: T:KWiJisho.Modules.Commands.Slash.SlashBirthday
+  href: KWiJisho.Modules.Commands.Slash.SlashBirthday.html
+  name: SlashBirthday
+  nameWithType: SlashBirthday
+  fullName: KWiJisho.Modules.Commands.Slash.SlashBirthday
+- uid: KWiJisho.Modules.Commands.Slash.SlashInfo
+  commentId: T:KWiJisho.Modules.Commands.Slash.SlashInfo
+  href: KWiJisho.Modules.Commands.Slash.SlashInfo.html
+  name: SlashInfo
+  nameWithType: SlashInfo
+  fullName: KWiJisho.Modules.Commands.Slash.SlashInfo
+- uid: KWiJisho.Modules.Commands.Slash.SlashKwiGpt
+  commentId: T:KWiJisho.Modules.Commands.Slash.SlashKwiGpt
+  href: KWiJisho.Modules.Commands.Slash.SlashKwiGpt.html
+  name: SlashKwiGpt
+  nameWithType: SlashKwiGpt
+  fullName: KWiJisho.Modules.Commands.Slash.SlashKwiGpt
