@@ -5,10 +5,12 @@ Fun and friendly interactive Discord bot with a wide range of functions.
 KWiJisho stands for "Kawaii" and "Jisho" that means "Cute" and "Dictionary" in japanese respectively. I played with the words like this because the main objective for creating this bot was because it would have a custom dictionary feature.
 
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/a573854c-c93a-4f5e-98ac-997354c603f7)
-*Prefix Commands*
+
+*Here you can see some of her Prefix Commands*
 
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/207d27bf-6222-4c94-93c1-2388b68ab3da)
-*Slash Commands*
+
+*Here you can see some of her Slash Commands*
 
 You can check the old version of this project written with Node.js (Javascript) [here](https://github.com/monambike/kwijisho-discord-bot-legacy).
 
