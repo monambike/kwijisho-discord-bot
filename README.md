@@ -10,9 +10,15 @@ You can check the old version of this project written with Node.js (Javascript) 
 
 # Features
 
-## Nasa APOD
+## ChatGPT
 
-You can get the APOD (Astronomy Picture of the Day) directly from Nasa website with the attached text rewriten and summarized in portuguese!
+The bot also have implemented the ChatGPT API. You can talk with her in her cheerful KWiJisho style. 💫🌟
+
+![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/17763ad7-4a20-4055-8c89-2f935eec023b)
+
+## Nasa APOD API
+
+You can get the APOD (Astronomy Picture of the Day) directly from Nasa website with their api, it will give you the attached text rewriten and summarized in portuguese!
 It will also contain the copyright and APOD image date information embedded.
 
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/52bd8259-da9b-4542-b63b-ee3b16971f00)
