@@ -20,10 +20,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: KwiGpt
     path: ../src/KWiJisho/Modules/Commands/KwiGpt.cs
-    startLine: 6
+    startLine: 9
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands
+  summary: Provides methods for "prefix" and "slash" KWiGPT commands.
+  example: []
   syntax:
     content: internal static class KwiGpt
     content.vb: Friend Module KwiGpt
@@ -55,7 +57,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ChatGptPromptAsync
     path: ../src/KWiJisho/Modules/Commands/KwiGpt.cs
-    startLine: 8
+    startLine: 11
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands

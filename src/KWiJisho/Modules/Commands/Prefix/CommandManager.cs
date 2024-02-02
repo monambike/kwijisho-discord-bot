@@ -76,10 +76,10 @@ namespace KWiJisho.Modules.Commands.Prefix
         /// <param name="permission">The required permissions for the command.</param>
         internal PrefixCommand(string name, string description, PrefixCommandGroup group, Permissions permission = Permissions.None)
         {
-            // Setting values from parameters into the properties
+            // Setting values from parameters into the properties.
             (Name, Description, Permissions) = (name, description, permission);
 
-            // If found the command group of this command, then add current prefix to the list
+            // If found the command group of this command, then add current prefix to the list.
             PrefixCommandManager.CommandGroups.FirstOrDefault(commandGroup => commandGroup.Name == group.Name)?.Commands.Add(this);
             if (permission != Permissions.None)
                 Description = $"{description}{Environment.NewLine}" + $@"[Esse comando só pode ser executado por pessoas com a permissão de ""{KWiJishoPermission.GetPermissionNameInPortuguese(permission)}""]".ToDiscordItalic(); ;
@@ -107,10 +107,10 @@ namespace KWiJisho.Modules.Commands.Prefix
         /// <param name="name">The name of the command group.</param>
         internal PrefixCommandGroup(string name)
         {
-            // Setting the property values
+            // Setting the property values.
             Name = name;
 
-            // If found a command group with the same name, add it into the list
+            // If found a command group with the same name, add it into the list.
             if (!PrefixCommandManager.CommandGroups.Any(commandGroup => commandGroup.Name == name))
                 PrefixCommandManager.CommandGroups.Add(this);
         }

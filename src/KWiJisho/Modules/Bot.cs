@@ -33,10 +33,10 @@ namespace KWiJisho.Modules
         /// <returns>A task representing the asynchronous operation.</returns>
         internal async Task RunAsync()
         {
-            // Getting info from Json file and setting into the ConfigJson class
+            // Getting info from Json file and setting into the ConfigJson class.
             await ConfigJson.DeserializeConfigJsonFileAsync();
 
-            // Settings Discord bot settings for DiscordClient
+            // Settings Discord bot settings for DiscordClient.
             var discordConfiguration = new DiscordConfiguration
             {
                 Token = ConfigJson.KWiJishoToken,
@@ -46,11 +46,11 @@ namespace KWiJisho.Modules
                 Intents = DiscordIntents.All
             };
 
-            // Defining and registering the Discord bot configuration and events
+            // Defining and registering the Discord bot configuration and events.
             DiscordClient = new DiscordClient(discordConfiguration);
             RegisterBotEvents();
 
-            // Defining bot prefix commands settings
+            // Defining bot prefix commands settings.
             var commandsNextConfiguration = new CommandsNextConfiguration
             {
                 StringPrefixes = new string[] { ConfigJson.Prefix },
@@ -59,26 +59,26 @@ namespace KWiJisho.Modules
                 EnableDefaultHelp = false
             };
 
-            // Defining and registering the Discord bot prefix commands
+            // Defining and registering the Discord bot prefix commands.
             PrefixCommands = DiscordClient.UseCommandsNext(commandsNextConfiguration);
             RegisterPrefixCommands();
             RegisterPrefixCommandsPermissions();
 
-            // Defining and registering the Discord bot slash commands
+            // Defining and registering the Discord bot slash commands.
             SlashCommands = DiscordClient.UseSlashCommands();
             RegisterSlashCommands();
             RegisterSlashCommandsPermissions();
 
-            // Connecting the bot into the Discord
+            // Connecting the bot into the Discord.
             await DiscordClient.ConnectAsync();
 
-            // This code that will be executed when the bot is ready and connected to Discord sending
+            // This code that will be executed when the bot is ready and connected to Discord sending.
             // a message into my personal server
             var channel = await DiscordClient.GetChannelAsync(ServerInfos.PersonalDiscordServerGuildId);
             if (channel != null) await channel.SendMessageAsync("Olá!! Agora eu tô online e prontíssima pra ajudar! 🥳🎉🎉");
 
             // Keeps the task alive that effectively never completes, preventing the bot from
-            // disconnecting when method ends
+            // disconnecting when method ends.
             await Task.Delay(-1);
         }
     }

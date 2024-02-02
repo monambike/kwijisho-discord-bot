@@ -31,14 +31,14 @@ namespace KWiJisho.Modules.Commands
         internal static async Task GetNextBirthdayAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
         {
 
-            var discordUser = Utils.Birthday.GetDiscordUserByClosestBirthday(discordGuild);
+            var discordUser = Utils.Birthday.TryGetDiscordUserByClosestBirthday(discordGuild);
             var discordMember = discordUser.GetUserDiscordMember(discordGuild);
 
             var daysRemaining = Utils.Birthday.GetDaysRemainingByUser(discordUser);
             var upcomingDate = Utils.Birthday.GetUpcomingBirthdayDate(daysRemaining);
             var message = Utils.Birthday.GenerateBirthdayMessage(discordUser);
 
-            // Getting image name and image's full path
+            // Getting image name and image's full path.
             var fileName = $"500x500-happybirthday-{upcomingDate.ToString().ToLower()}.png";
             var imagePath = Path.GetFullPath($"Resources/Images/Birthday/{fileName}");
 
@@ -53,15 +53,15 @@ namespace KWiJisho.Modules.Commands
             using var fileStream = new FileStream(imagePath, FileMode.Open);
             await discordChannel.SendMessageAsync(new DiscordMessageBuilder()
                 .AddEmbed(discordEmbedBuilder)
-                // The image gif of karen kujou happy talking
+                // The image gif of karen kujou happy talking.
                 .AddFile(fileName, fileStream));
         }
 
         internal static async Task GetListBirthdayAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
         {
-            var users = Utils.Birthday.GetUsersByClosestBirthday();
+            var users = Utils.Birthday.GetUsersOrderByClosestBirthday();
 
-            // Getting image name and image's full path
+            // Getting image name and image's full path.
             var fileName = $"500x281-talking.gif";
             var imagePath = Path.GetFullPath($"Resources/Images/{fileName}");
 
@@ -71,13 +71,13 @@ namespace KWiJisho.Modules.Commands
                 Title = "LISTA DE ANIVERSARIANTES",
             };
 
-            // Adding a field for every month that someone makes birthday
+            // Adding a field for every month that someone makes birthday.
             foreach (var month in Months)
             {
                 var usersBirthdayThisMonth = users.Where(user => user.Birthday.Month == month.Key);
 
                 // Building a string that will hold all users that will make birthday
-                // at current month
+                // at current month.
                 var usersBirthdayThisMonthString = string.Empty;
                 foreach (var userBirthdayThisMonth in usersBirthdayThisMonth)
                 {
@@ -86,15 +86,15 @@ namespace KWiJisho.Modules.Commands
                     {
                         // Formatting user name
                         var name = (userInfo.DisplayName == userInfo.Username) ? userInfo.DisplayName : $"{userInfo.DisplayName} ({userInfo.Username})";
-                        // Formatting user field with name and birthday month and day
+                        // Formatting user field with name and birthday month and day.
                         usersBirthdayThisMonthString += $"{userBirthdayThisMonth.Birthday:dd/MM} - {name}{Environment.NewLine}";
                     }
                 }
 
-                // If wasn't found no users or there's no birthday users this month, go to the next month
+                // If wasn't found no users or there's no birthday users this month, go to the next month.
                 if (string.IsNullOrEmpty(usersBirthdayThisMonthString)) continue;
 
-                // Adding field with all birthday users of this month
+                // Adding field with all birthday users of this month.
                 discordEmbedBuilder.AddField($"Aniversariantes de {month.Value.ToUpper()}", usersBirthdayThisMonthString);
             }
 

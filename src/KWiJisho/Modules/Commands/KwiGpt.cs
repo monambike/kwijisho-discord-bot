@@ -11,20 +11,20 @@ namespace KWiJisho.Modules.Commands
     {
         internal static async Task ChatGptPromptAsync(DiscordChannel discordChannel, params string[] input)
         {
-            // Getting all user inputs and combining into a string
+            // Getting all user inputs and combining into a string.
             string userInput = string.Join(" ", input);
 
             // Getting response from the prompt
             var response = await OpenAiApi.GetPromptKWiJishoStyleAsync(userInput);
 
-            // Adding the prompt into a embed builder
+            // Adding the prompt into a embed builder.
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
                 Description = response,
                 Color = ConfigJson.DefaultColor.DiscordColor
             };
 
-            // Sending the response to the user
+            // Sending the response to the user.
             await discordChannel.SendMessageAsync(discordEmbedBuilder);
         }
     }

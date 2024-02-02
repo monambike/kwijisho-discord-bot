@@ -24,11 +24,11 @@ namespace KWiJisho.Modules.Events
         internal static async Task OnGuildMemberAddedAsync(DiscordClient sender, GuildMemberAddEventArgs e)
         {
             ArgumentNullException.ThrowIfNull(sender);
-            // Getting welcome image info
+            // Getting welcome image info.
             var fileName = $"500x500-welcome.gif";
             var imagePath = Path.GetFullPath($"Resources/Images/Tramontina/{fileName}");
 
-            // Message body
+            // Making the Discord Embed Builder with the message body.
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
                 Title = $"BEM-VINDO",
@@ -37,11 +37,11 @@ namespace KWiJisho.Modules.Events
             }.WithImageUrl($"attachment://{imagePath}").Build();
 
             using var fileStream = new FileStream(imagePath, FileMode.Open);
-            // Creating message builder and attaching the message embed builder and image file
+            // Creating message builder and attaching the message embed builder and image file.
             var discordMessageBuilder = new DiscordMessageBuilder()
                 .AddEmbed(discordEmbedBuilder).AddFile(fileName, fileStream);
 
-            // Sending the message on welcome channel
+            // Sending the message on welcome channel.
             await e.Guild.GetChannel(ServerInfos.TramontinaWelcomeChannelId).SendMessageAsync(discordMessageBuilder);
         }
 
@@ -54,14 +54,14 @@ namespace KWiJisho.Modules.Events
         /// <returns>A <see cref="Task"/> representing the assynchronous operation.</returns>
         internal static async Task OnGuildMemberRemovedAsync(DiscordClient sender, GuildMemberRemoveEventArgs e)
         {
-            // If senders is null throws an exception
+            // If senders is null throws an exception.
             ArgumentNullException.ThrowIfNull(sender);
 
-            // Getting welcome image info
+            // Getting welcome image info.
             var fileName = $"1173x315-goodbye.png";
             var imagePath = Path.GetFullPath($"Resources/Images/Tramontina/{fileName}");
 
-            // Making the discord embed builder with the message body content and image file
+            // Making the discord embed builder with the message body content and image file.
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
                 Title = @$"""ACHO QUE ISSO É UM ADEUS""",
@@ -70,7 +70,7 @@ namespace KWiJisho.Modules.Events
             }.WithImageUrl($"attachment://{imagePath}").Build();
 
             using var fileStream = new FileStream(imagePath, FileMode.Open);
-            // Creating message builder and attaching the message embed builder and image file
+            // Creating message builder and attaching the message embed builder and image file.
             var discordMessageBuilder = new DiscordMessageBuilder()
                 .AddEmbed(discordEmbedBuilder).AddFile(fileName, fileStream);
 

@@ -47,7 +47,7 @@ namespace KWiJisho.Modules.Commands
                 $"Se quiser conversar com ele aposto que ele ficará feliz em falar com você ainda mais setindo que você é uma pessoa legal. ;D" +
                 $"Vou te mostrar {"algumas informações de contato".ToDiscordBold()}.";
 
-            // Getting image name and image's full path
+            // Getting image name and image's full path.
             var fileName = $"500x281-talking.gif";
             var imagePath = Path.GetFullPath($"Resources/Images/KarenKujo/{fileName}");
 
@@ -67,10 +67,10 @@ namespace KWiJisho.Modules.Commands
             .WithImageUrl($"attachment://{imagePath}").Build();
 
             using var fileStream = new FileStream(imagePath, FileMode.Open);
-            // Sending the second message with the image and button
+            // Sending the second message with the image and button.
             await discordChannel.SendMessageAsync(new DiscordMessageBuilder()
                 .AddEmbed(discordEmbedBuilder)
-                // The image gif of karen kujou happy talking
+                // The image gif of karen kujou happy talking.
                 .AddFile(fileName, fileStream));
         }
     }

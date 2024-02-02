@@ -20,10 +20,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: BotStart
     path: ../src/KWiJisho/Modules/Events/BotStart.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Events
+  summary: Provides a set of events and methods fired when bot starts.
+  example: []
   syntax:
     content: internal class BotStart
     content.vb: Friend Class BotStart
@@ -55,19 +57,24 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: OnClientReady
     path: ../src/KWiJisho/Modules/Events/BotStart.cs
-    startLine: 7
+    startLine: 16
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Events
+  summary: Handles the events when the bot's client is ready.
+  example: []
   syntax:
     content: internal static Task OnClientReady(object sender, ReadyEventArgs e)
     parameters:
     - id: sender
       type: System.Object
+      description: The object that triggered the events.
     - id: e
       type: DSharpPlus.EventArgs.ReadyEventArgs
+      description: The event arguments containing information about the ready event.
     return:
       type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> representing the asynchronous execution of the event handler.
     content.vb: Friend Shared Function OnClientReady(sender As Object, e As ReadyEventArgs) As Task
   overload: KWiJisho.Modules.Events.BotStart.OnClientReady*
   nameWithType.vb: BotStart.OnClientReady(Object, ReadyEventArgs)
@@ -341,6 +348,14 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
 - uid: KWiJisho.Modules.Events.BotStart.OnClientReady*
   commentId: Overload:KWiJisho.Modules.Events.BotStart.OnClientReady
   href: KWiJisho.Modules.Events.BotStart.html#KWiJisho_Modules_Events_BotStart_OnClientReady_System_Object_DSharpPlus_EventArgs_ReadyEventArgs_
@@ -354,36 +369,6 @@ references:
   name: ReadyEventArgs
   nameWithType: ReadyEventArgs
   fullName: DSharpPlus.EventArgs.ReadyEventArgs
-- uid: System.Threading.Tasks.Task
-  commentId: T:System.Threading.Tasks.Task
-  parent: System.Threading.Tasks
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
-  name: Task
-  nameWithType: Task
-  fullName: System.Threading.Tasks.Task
-- uid: DSharpPlus.EventArgs
-  commentId: N:DSharpPlus.EventArgs
-  isExternal: true
-  name: DSharpPlus.EventArgs
-  nameWithType: DSharpPlus.EventArgs
-  fullName: DSharpPlus.EventArgs
-  spec.csharp:
-  - uid: DSharpPlus
-    name: DSharpPlus
-    isExternal: true
-  - name: .
-  - uid: DSharpPlus.EventArgs
-    name: EventArgs
-    isExternal: true
-  spec.vb:
-  - uid: DSharpPlus
-    name: DSharpPlus
-    isExternal: true
-  - name: .
-  - uid: DSharpPlus.EventArgs
-    name: EventArgs
-    isExternal: true
 - uid: System.Threading.Tasks
   commentId: N:System.Threading.Tasks
   isExternal: true
@@ -421,3 +406,25 @@ references:
     name: Tasks
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: DSharpPlus.EventArgs
+  commentId: N:DSharpPlus.EventArgs
+  isExternal: true
+  name: DSharpPlus.EventArgs
+  nameWithType: DSharpPlus.EventArgs
+  fullName: DSharpPlus.EventArgs
+  spec.csharp:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.EventArgs
+    name: EventArgs
+    isExternal: true
+  spec.vb:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.EventArgs
+    name: EventArgs
+    isExternal: true

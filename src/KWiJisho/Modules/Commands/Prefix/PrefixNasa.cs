@@ -37,7 +37,7 @@ namespace KWiJisho.Modules.Commands.Prefix
                 // The discord message builder generated within the APOD.
                 var message = await GenerateApodDiscordMessageBuilderAsync(commandContext);
 
-                // Sending the generated discord embed builder
+                // Sending the generated discord embed builder.
                 await commandContext.Channel.SendMessageAsync(message);
             }
 
@@ -53,28 +53,28 @@ namespace KWiJisho.Modules.Commands.Prefix
                 // The discord message builder generated within the APOD.
                 var message = await GenerateApodDiscordMessageBuilderAsync(commandContext);
 
-                // Sending the generated discord embed builder
+                // Sending the generated discord embed builder.
                 await commandContext.Channel.SendMessageAsync(message);
             }
 
             private async Task<DiscordEmbedBuilder> GenerateApodDiscordMessageBuilderAsync(CommandContext commandContext)
             {
-                // Getting the picture of the day
+                // Getting the picture of the day.
                 var response = await NasaApi.Apod.GetAsync();
-                
-                // Translate title
+
+                // Translate title.
                 var translatedTitle = await OpenAiApi.GetPromptTranslateToPortugueseAsync(response.Title);
 
-                // Translate explanation with the specified translation type
+                // Translate explanation with the specified translation type.
                 await commandContext.TriggerTypingAsync();
                 var summarizedExplanation = await OpenAiApi.GetPromptSummarizeTextAsync(response.Explanation);
                 var translatedExplanation = await OpenAiApi.GetPromptTranslateToPortugueseAsync(summarizedExplanation);
                 var formattedExplanation = translatedExplanation.Replace(". ", "." + Environment.NewLine);
 
-                // Creating copyright message
+                // Creating copyright message.
                 var copyright = string.IsNullOrEmpty(response.Copyright) ? "(sem copyright)" : response.Copyright;
 
-                // Creating embed builder
+                // Creating embed builder.
                 var discordEmbedBuilder = new DiscordEmbedBuilder
                 {
                     Title = $"(IMAGEM DO DIA) {translatedTitle.ToUpper()}",
@@ -85,7 +85,7 @@ namespace KWiJisho.Modules.Commands.Prefix
                     }
                 }.WithImageUrl(response.Url).AddField("👇🏻 Leia essa histórinha que tem a ver com a imagem", Environment.NewLine + formattedExplanation);
 
-                // Returning the created discord embed builder
+                // Returning the created discord embed builder.
                 return discordEmbedBuilder;
             }
 
@@ -93,7 +93,7 @@ namespace KWiJisho.Modules.Commands.Prefix
             {
                 var thisApodDateText = "Data deste APOD";
                 var copyrightText = "(sem copyright)";
-                var cultureInfo = new System.Globalization.CultureInfo("pt-BR");
+                var cultureInfo = new CultureInfo("pt-BR");
 
                 DateTime dateContent = DateTime.Now;
                 var titleContent = "";
@@ -101,10 +101,10 @@ namespace KWiJisho.Modules.Commands.Prefix
                 var explanationContent = "";
                 var urlContent = "";
 
-                // Creating copyright message
+                // Creating copyright message.
                 var copyright = string.IsNullOrEmpty(copyrightContent) ? copyrightText : copyrightContent;
 
-                // Creating embed builder
+                // Creating embed builder.
                 var discordEmbedBuilder = new DiscordEmbedBuilder
                 {
                     Title = $"(IMAGEM DO DIA) {titleContent.ToUpper()}",

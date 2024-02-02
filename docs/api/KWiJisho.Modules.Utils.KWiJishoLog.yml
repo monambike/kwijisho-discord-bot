@@ -95,7 +95,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: AddDebug
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-    startLine: 22
+    startLine: 24
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
@@ -130,7 +130,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: AddInfo
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-    startLine: 28
+    startLine: 30
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
@@ -165,7 +165,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: AddWarning
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-    startLine: 34
+    startLine: 36
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
@@ -200,7 +200,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: AddError
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-    startLine: 40
+    startLine: 42
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
@@ -235,7 +235,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: AddFatal
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-    startLine: 46
+    startLine: 48
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
@@ -270,7 +270,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Add
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-    startLine: 53
+    startLine: 55
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
@@ -308,7 +308,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: AddLineToFile
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-    startLine: 60
+    startLine: 62
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils

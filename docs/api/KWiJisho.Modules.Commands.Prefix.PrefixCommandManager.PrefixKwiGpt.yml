@@ -5,7 +5,7 @@ items:
   id: PrefixCommandManager.PrefixKwiGpt
   parent: KWiJisho.Modules.Commands.Prefix
   children:
-  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync(DSharpPlus.CommandsNext.CommandContext,System.String[])
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync(DSharpPlus.CommandsNext.CommandContext,System.String[])
   - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.k
   langs:
   - csharp
@@ -21,7 +21,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrefixKwiGpt
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixKwiGpt.cs
-    startLine: 13
+    startLine: 15
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -64,65 +64,73 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: k
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixKwiGpt.cs
-    startLine: 18
+    startLine: 20
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
-  summary: Represent the command to interact with the bot with ChatGpt in KWiJisho style.
+  summary: Represents the command to get the chat gpt prompt in KWiJisho style.
   example: []
   syntax:
     content: internal PrefixCommand k
     return:
       type: KWiJisho.Modules.Commands.Prefix.PrefixCommand
     content.vb: Friend k As PrefixCommand
-- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync(DSharpPlus.CommandsNext.CommandContext,System.String[])
-  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync(DSharpPlus.CommandsNext.CommandContext,System.String[])
-  id: ChatGptPromptAsync(DSharpPlus.CommandsNext.CommandContext,System.String[])
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync(DSharpPlus.CommandsNext.CommandContext,System.String[])
+  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync(DSharpPlus.CommandsNext.CommandContext,System.String[])
+  id: GetChatGptPromptAsync(DSharpPlus.CommandsNext.CommandContext,System.String[])
   parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt
   langs:
   - csharp
   - vb
-  name: ChatGptPromptAsync(CommandContext, params string[])
-  nameWithType: PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync(CommandContext, params string[])
-  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync(DSharpPlus.CommandsNext.CommandContext, params string[])
+  name: GetChatGptPromptAsync(CommandContext, params string[])
+  nameWithType: PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync(CommandContext, params string[])
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync(DSharpPlus.CommandsNext.CommandContext, params string[])
   type: Method
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixKwiGpt.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
-    id: ChatGptPromptAsync
+    id: GetChatGptPromptAsync
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixKwiGpt.cs
-    startLine: 19
+    startLine: 29
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
+  summary: >-
+    Represent the asynchronous prefix get chat gpt prompt async method called when user uses the
+
+    command to interact with the bot with ChatGpt in KWiJisho style.
+  example: []
   syntax:
     content: >-
       [Command("k")]
 
-      internal Task ChatGptPromptAsync(CommandContext commandContext, params string[] inputs)
+      internal Task GetChatGptPromptAsync(CommandContext commandContext, params string[] inputs)
     parameters:
     - id: commandContext
       type: DSharpPlus.CommandsNext.CommandContext
+      description: The command context from the current command call.
     - id: inputs
       type: System.String[]
+      description: The user input for getting the chat prompt
     return:
       type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> from the current asynchronous task.
     content.vb: >-
       <Command("k")>
 
-      Friend Function ChatGptPromptAsync(commandContext As CommandContext, ParamArray inputs As String()) As Task
-  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync*
+      Friend Function GetChatGptPromptAsync(commandContext As CommandContext, ParamArray inputs As String()) As Task
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync*
   attributes:
   - type: DSharpPlus.CommandsNext.Attributes.CommandAttribute
     ctor: DSharpPlus.CommandsNext.Attributes.CommandAttribute.#ctor(System.String)
     arguments:
     - type: System.String
       value: k
-  nameWithType.vb: PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync(CommandContext, ParamArray String())
-  fullName.vb: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync(DSharpPlus.CommandsNext.CommandContext, ParamArray String())
-  name.vb: ChatGptPromptAsync(CommandContext, ParamArray String())
+  nameWithType.vb: PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync(CommandContext, ParamArray String())
+  fullName.vb: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync(DSharpPlus.CommandsNext.CommandContext, ParamArray String())
+  name.vb: GetChatGptPromptAsync(CommandContext, ParamArray String())
 references:
 - uid: KWiJisho.Modules.Commands.Prefix
   commentId: N:KWiJisho.Modules.Commands.Prefix
@@ -485,12 +493,20 @@ references:
   name: PrefixCommand
   nameWithType: PrefixCommand
   fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommand
-- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync*
-  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync
-  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixKwiGpt_ChatGptPromptAsync_DSharpPlus_CommandsNext_CommandContext_System_String___
-  name: ChatGptPromptAsync
-  nameWithType: PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync
-  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync*
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixKwiGpt_GetChatGptPromptAsync_DSharpPlus_CommandsNext_CommandContext_System_String___
+  name: GetChatGptPromptAsync
+  nameWithType: PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync
 - uid: DSharpPlus.CommandsNext.CommandContext
   commentId: T:DSharpPlus.CommandsNext.CommandContext
   parent: DSharpPlus.CommandsNext
@@ -521,14 +537,6 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: (
   - name: )
-- uid: System.Threading.Tasks.Task
-  commentId: T:System.Threading.Tasks.Task
-  parent: System.Threading.Tasks
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
-  name: Task
-  nameWithType: Task
-  fullName: System.Threading.Tasks.Task
 - uid: System.Threading.Tasks
   commentId: N:System.Threading.Tasks
   isExternal: true

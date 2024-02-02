@@ -14,9 +14,35 @@ namespace KWiJisho.Modules.Utils
         private static string Path => "KWiJishoLog.txt";
 
         /// <summary>
-        /// The log type for a log entry.
+        /// Represents options for the application log type.
         /// </summary>
-        internal enum LogType { Debug, Info, Warning, Error, Fatal }
+        internal enum LogType
+        {
+            /// <summary>
+            /// Indicated a debug level log.
+            /// </summary>
+            Debug,
+
+            /// <summary>
+            /// Indicated a info level log.
+            /// </summary>
+            Info,
+
+            /// <summary>
+            /// Indicated a warning level log.
+            /// </summary>
+            Warning,
+
+            /// <summary>
+            /// Indicated a error level log.
+            /// </summary>
+            Error,
+
+            /// <summary>
+            /// Indicated a fatal level log.
+            /// </summary>
+            Fatal
+        }
 
         /// <summary>
         /// Adds a debug log entry with the specified message.
@@ -62,7 +88,10 @@ namespace KWiJisho.Modules.Utils
         /// <param name="line">The line to be added to the log file.</param>
         internal static void AddLineToFile(string line)
         {
+            // Opens the log file at the specified path for appending a new text.
             using StreamWriter writer = File.AppendText(Path);
+
+            // Writing the line on the log file.
             writer.WriteLine(line);
         }
     }

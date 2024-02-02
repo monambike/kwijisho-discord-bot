@@ -18,11 +18,11 @@ namespace KWiJisho.Modules.APIs
 
         internal static async Task<string> GetPromptKWiJishoStyleAsync(string input)
         {
-            // The default style for the ChatGPT prompts executed by this method
+            // The default style for the ChatGPT prompts executed by this method.
             var style = "Aja alegre e animada, falando de um jeito descontraído e se possível com emojis. Nada de formalidade, pontos finais e capitalizar o início das palavras."
                      + @"E o seu nome é ""KWiJisho"", eu te dei esse nome porque você inicialmente era um bot de dicionário e esse é um jogo de palavras com ""Kawaii"" e ""Jisho"" em japonês.";
 
-            // Getting the prompt assynchronously
+            // Getting the prompt assynchronously.
             return await GetPromptAsync(style, input);
         }
 
@@ -51,22 +51,22 @@ namespace KWiJisho.Modules.APIs
         /// <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
         private static async Task<string> GetPromptAsync(string userInput, string promptStyle)
         {
-            // Creating an instance of the OpenAIAPI class with the ChatGptToken
+            // Creating an instance of the OpenAIAPI class with the ChatGptToken.
             var api = new OpenAIAPI(ConfigJson.ChatGptToken);
 
-            // Creating a new conversation
+            // Creating a new conversation.
             var chat = api.Chat.CreateConversation();
 
-            // Appending system message representing the prompt style
+            // Appending system message representing the prompt style.
             chat.AppendSystemMessage(promptStyle);
 
-            // Appending user input to the conversation
+            // Appending user input to the conversation.
             chat.AppendUserInput(userInput);
 
-            // Getting a response from the chatbot asynchronously
+            // Getting a response from the chatbot asynchronously.
             var response = await chat.GetResponseFromChatbotAsync();
 
-            // Returning the response
+            // Returning the response.
             return response;
         }
     }

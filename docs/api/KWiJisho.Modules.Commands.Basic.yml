@@ -22,10 +22,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Basic
     path: ../src/KWiJisho/Modules/Commands/Basic.cs
-    startLine: 6
+    startLine: 9
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands
+  summary: Provides methods for "prefix" and "slash" basic commands.
+  example: []
   syntax:
     content: internal static class Basic
     content.vb: Friend Module Basic
@@ -57,7 +59,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SendRandomAnimatedEmoji
     path: ../src/KWiJisho/Modules/Commands/Basic.cs
-    startLine: 13
+    startLine: 16
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands
@@ -68,10 +70,10 @@ items:
     parameters:
     - id: discordChannel
       type: DSharpPlus.Entities.DiscordChannel
-      description: ''
+      description: The discord channel where the command will be executed.
     return:
       type: System.Threading.Tasks.Task
-      description: ''
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> from the current asynchronous task.
     content.vb: Friend Shared Function SendRandomAnimatedEmoji(discordChannel As DiscordChannel) As Task
   overload: KWiJisho.Modules.Commands.Basic.SendRandomAnimatedEmoji*
 - uid: KWiJisho.Modules.Commands.Basic.SendRandomAnimatedMemeEmoji(DSharpPlus.Entities.DiscordChannel)
@@ -92,7 +94,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SendRandomAnimatedMemeEmoji
     path: ../src/KWiJisho/Modules/Commands/Basic.cs
-    startLine: 21
+    startLine: 24
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands
@@ -103,10 +105,10 @@ items:
     parameters:
     - id: discordChannel
       type: DSharpPlus.Entities.DiscordChannel
-      description: ''
+      description: The discord channel where the command will be executed.
     return:
       type: System.Threading.Tasks.Task
-      description: ''
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> from the current asynchronous task.
     content.vb: Friend Shared Function SendRandomAnimatedMemeEmoji(discordChannel As DiscordChannel) As Task
   overload: KWiJisho.Modules.Commands.Basic.SendRandomAnimatedMemeEmoji*
 - uid: KWiJisho.Modules.Commands.Basic.SendRandomAnimatedPartyEmoji(DSharpPlus.Entities.DiscordChannel)
@@ -127,7 +129,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SendRandomAnimatedPartyEmoji
     path: ../src/KWiJisho/Modules/Commands/Basic.cs
-    startLine: 29
+    startLine: 32
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands
@@ -138,10 +140,10 @@ items:
     parameters:
     - id: discordChannel
       type: DSharpPlus.Entities.DiscordChannel
-      description: ''
+      description: The discord channel where the command will be executed.
     return:
       type: System.Threading.Tasks.Task
-      description: ''
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> from the current asynchronous task.
     content.vb: Friend Shared Function SendRandomAnimatedPartyEmoji(discordChannel As DiscordChannel) As Task
   overload: KWiJisho.Modules.Commands.Basic.SendRandomAnimatedPartyEmoji*
 references:
@@ -418,6 +420,14 @@ references:
   name: KWiJishoEmojis
   nameWithType: DiscordEmojis.AnimatedEmojis.KWiJishoEmojis
   fullName: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoEmojis
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
 - uid: KWiJisho.Modules.Commands.Basic.SendRandomAnimatedEmoji*
   commentId: Overload:KWiJisho.Modules.Commands.Basic.SendRandomAnimatedEmoji
   href: KWiJisho.Modules.Commands.Basic.html#KWiJisho_Modules_Commands_Basic_SendRandomAnimatedEmoji_DSharpPlus_Entities_DiscordChannel_
@@ -431,36 +441,6 @@ references:
   name: DiscordChannel
   nameWithType: DiscordChannel
   fullName: DSharpPlus.Entities.DiscordChannel
-- uid: System.Threading.Tasks.Task
-  commentId: T:System.Threading.Tasks.Task
-  parent: System.Threading.Tasks
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
-  name: Task
-  nameWithType: Task
-  fullName: System.Threading.Tasks.Task
-- uid: DSharpPlus.Entities
-  commentId: N:DSharpPlus.Entities
-  isExternal: true
-  name: DSharpPlus.Entities
-  nameWithType: DSharpPlus.Entities
-  fullName: DSharpPlus.Entities
-  spec.csharp:
-  - uid: DSharpPlus
-    name: DSharpPlus
-    isExternal: true
-  - name: .
-  - uid: DSharpPlus.Entities
-    name: Entities
-    isExternal: true
-  spec.vb:
-  - uid: DSharpPlus
-    name: DSharpPlus
-    isExternal: true
-  - name: .
-  - uid: DSharpPlus.Entities
-    name: Entities
-    isExternal: true
 - uid: System.Threading.Tasks
   commentId: N:System.Threading.Tasks
   isExternal: true
@@ -498,6 +478,28 @@ references:
     name: Tasks
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: DSharpPlus.Entities
+  commentId: N:DSharpPlus.Entities
+  isExternal: true
+  name: DSharpPlus.Entities
+  nameWithType: DSharpPlus.Entities
+  fullName: DSharpPlus.Entities
+  spec.csharp:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.Entities
+    name: Entities
+    isExternal: true
+  spec.vb:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.Entities
+    name: Entities
+    isExternal: true
 - uid: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoMemeEmojis
   commentId: F:KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoMemeEmojis
   href: KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.html#KWiJisho_Modules_Utils_DiscordEmojis_AnimatedEmojis_KWiJishoMemeEmojis

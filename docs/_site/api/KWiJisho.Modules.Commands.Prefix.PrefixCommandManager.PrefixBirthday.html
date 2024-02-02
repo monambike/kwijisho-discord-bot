@@ -89,7 +89,7 @@
 
 
   <h1 id="KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixBirthday" data-uid="KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday" class="text-break">
-Class PrefixCommandManager.PrefixBirthday  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Class PrefixCommandManager.PrefixBirthday  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -163,7 +163,7 @@ Class PrefixCommandManager.PrefixBirthday  <a class="header-action link-secondar
 
   <h3 id="KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixBirthday_listBirthday" data-uid="KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.listBirthday">
   listBirthday
-  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Represents the command to list people will have birthday.</p>
@@ -194,10 +194,10 @@ Class PrefixCommandManager.PrefixBirthday  <a class="header-action link-secondar
 
   <h3 id="KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixBirthday_nextBirthday" data-uid="KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.nextBirthday">
   nextBirthday
-  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Represents the command to show the next person to have birthday.</p>
+  <div class="markdown level1 summary"><p>Represents the command to show the next person to have a birthday.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -230,10 +230,11 @@ Class PrefixCommandManager.PrefixBirthday  <a class="header-action link-secondar
 
   <h3 id="KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixBirthday_GetListBirthdayAsync_DSharpPlus_CommandsNext_CommandContext_" data-uid="KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetListBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)">
   GetListBirthdayAsync(CommandContext)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Represents the asynchronous prefix get birthday list called when requesting to show the list of people to have a birthday.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -244,13 +245,15 @@ internal Task GetListBirthdayAsync(CommandContext commandContext)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>commandContext</code> <span class="xref">CommandContext</span></dt>
-    <dd></dd>
+    <dd><p>The command context from the current command call.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd></dd>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> from the current asynchronous task.</p>
+</dd>
   </dl>
 
 
@@ -267,10 +270,11 @@ internal Task GetListBirthdayAsync(CommandContext commandContext)</code></pre>
 
   <h3 id="KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixBirthday_GetNextBirthdayAsync_DSharpPlus_CommandsNext_CommandContext_" data-uid="KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)">
   GetNextBirthdayAsync(CommandContext)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs/#L32"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Represents the asynchronous prefix get next birthday method called when requesting to show the next person to have a birthday.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -281,13 +285,15 @@ internal Task GetNextBirthdayAsync(CommandContext commandContext)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>commandContext</code> <span class="xref">CommandContext</span></dt>
-    <dd></dd>
+    <dd><p>The command context from the current command call.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd></dd>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> from the current asynchronous task.</p>
+</dd>
   </dl>
 
 
@@ -304,7 +310,7 @@ internal Task GetNextBirthdayAsync(CommandContext commandContext)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs/#L15" class="edit-link">Edit this page</a>
         </div>
 
 

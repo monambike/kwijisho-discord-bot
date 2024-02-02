@@ -23,10 +23,15 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: TramontinaChannel
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-    startLine: 162
+    startLine: 177
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
+  summary: >-
+    Initializes a new instance of <xref href="KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel" data-throw-if-not-resolved="false"></xref> class with the specified id, the default channel
+
+    text title and emoji theme.
+  example: []
   syntax:
     content: 'internal class PrefixCommandManager.PrefixTheme.TramontinaChannel : Channel'
     content.vb: Friend Class PrefixCommandManager.PrefixTheme.TramontinaChannel Inherits Channel
@@ -44,6 +49,50 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.#ctor(System.UInt64,System.String,System.Collections.Generic.Dictionary{KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme,System.String})
+  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.#ctor(System.UInt64,System.String,System.Collections.Generic.Dictionary{KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme,System.String})
+  id: '#ctor(System.UInt64,System.String,System.Collections.Generic.Dictionary{KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme,System.String})'
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+  langs:
+  - csharp
+  - vb
+  name: TramontinaChannel(ulong, string, Dictionary<EmojiTheme, string>)
+  nameWithType: PrefixCommandManager.PrefixTheme.TramontinaChannel.TramontinaChannel(ulong, string, Dictionary<PrefixCommandManager.PrefixTheme.EmojiTheme, string>)
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.TramontinaChannel(ulong, string, System.Collections.Generic.Dictionary<KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme, string>)
+  type: Constructor
+  source:
+    remote:
+      path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: .ctor
+    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 177
+  assemblies:
+  - KWIJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: >-
+    Initializes a new instance of <xref href="KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel" data-throw-if-not-resolved="false"></xref> class with the specified id, the default channel
+
+    text title and emoji theme.
+  example: []
+  syntax:
+    content: public TramontinaChannel(ulong id, string defaultTextTitle, Dictionary<PrefixCommandManager.PrefixTheme.EmojiTheme, string> emojiTheme)
+    parameters:
+    - id: id
+      type: System.UInt64
+      description: The Id from the Discord channel.
+    - id: defaultTextTitle
+      type: System.String
+      description: The default text title from the Discord channel.
+    - id: emojiTheme
+      type: System.Collections.Generic.Dictionary{KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme,System.String}
+      description: The emoji theme dictionary avaiable for this channel.
+    content.vb: Public Sub New(id As ULong, defaultTextTitle As String, emojiTheme As Dictionary(Of PrefixCommandManager.PrefixTheme.EmojiTheme, String))
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.#ctor*
+  nameWithType.vb: PrefixCommandManager.PrefixTheme.TramontinaChannel.New(ULong, String, Dictionary(Of PrefixCommandManager.PrefixTheme.EmojiTheme, String))
+  fullName.vb: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.New(ULong, String, System.Collections.Generic.Dictionary(Of KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme, String))
+  name.vb: New(ULong, String, Dictionary(Of EmojiTheme, String))
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.DefaultTextTitle
   commentId: P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.DefaultTextTitle
   id: DefaultTextTitle
@@ -62,10 +111,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: DefaultTextTitle
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-    startLine: 164
+    startLine: 182
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
+  summary: The default text title for the tramontina Discord channel.
+  example: []
   syntax:
     content: internal string DefaultTextTitle { get; set; }
     parameters: []
@@ -91,10 +142,15 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: EmojiTheme
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-    startLine: 166
+    startLine: 188
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
+  summary: >-
+    The dictionary containing the EmojiTheme that represents the seasonal theme associate to the emoji, and
+
+    the string that represents the emoji itself for the tramontina Discord channel.
+  example: []
   syntax:
     content: internal Dictionary<PrefixCommandManager.PrefixTheme.EmojiTheme, string> EmojiTheme { get; set; }
     parameters: []
@@ -102,42 +158,6 @@ items:
       type: System.Collections.Generic.Dictionary{KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme,System.String}
     content.vb: Friend Property EmojiTheme As Dictionary(Of PrefixCommandManager.PrefixTheme.EmojiTheme, String)
   overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.EmojiTheme*
-- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.#ctor(System.UInt64,System.String,System.Collections.Generic.Dictionary{KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme,System.String})
-  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.#ctor(System.UInt64,System.String,System.Collections.Generic.Dictionary{KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme,System.String})
-  id: '#ctor(System.UInt64,System.String,System.Collections.Generic.Dictionary{KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme,System.String})'
-  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
-  langs:
-  - csharp
-  - vb
-  name: TramontinaChannel(ulong, string, Dictionary<EmojiTheme, string>)
-  nameWithType: PrefixCommandManager.PrefixTheme.TramontinaChannel.TramontinaChannel(ulong, string, Dictionary<PrefixCommandManager.PrefixTheme.EmojiTheme, string>)
-  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.TramontinaChannel(ulong, string, System.Collections.Generic.Dictionary<KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme, string>)
-  type: Constructor
-  source:
-    remote:
-      path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: main
-      repo: https://github.com/monambike/kwijisho-discord-bot.git
-    id: .ctor
-    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-    startLine: 168
-  assemblies:
-  - KWIJisho
-  namespace: KWiJisho.Modules.Commands.Prefix
-  syntax:
-    content: internal TramontinaChannel(ulong id, string defaultTextTitle, Dictionary<PrefixCommandManager.PrefixTheme.EmojiTheme, string> emojiTheme)
-    parameters:
-    - id: id
-      type: System.UInt64
-    - id: defaultTextTitle
-      type: System.String
-    - id: emojiTheme
-      type: System.Collections.Generic.Dictionary{KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme,System.String}
-    content.vb: Friend Sub New(id As ULong, defaultTextTitle As String, emojiTheme As Dictionary(Of PrefixCommandManager.PrefixTheme.EmojiTheme, String))
-  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.#ctor*
-  nameWithType.vb: PrefixCommandManager.PrefixTheme.TramontinaChannel.New(ULong, String, Dictionary(Of PrefixCommandManager.PrefixTheme.EmojiTheme, String))
-  fullName.vb: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.New(ULong, String, System.Collections.Generic.Dictionary(Of KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme, String))
-  name.vb: New(ULong, String, Dictionary(Of EmojiTheme, String))
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.ChangeEmoji(DSharpPlus.CommandsNext.CommandContext,System.String)
   commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.ChangeEmoji(DSharpPlus.CommandsNext.CommandContext,System.String)
   id: ChangeEmoji(DSharpPlus.CommandsNext.CommandContext,System.String)
@@ -156,23 +176,61 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ChangeEmoji
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-    startLine: 174
+    startLine: 196
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
+  summary: >-
+    Change the emoji for current channel. At the current moment, you can do this twice with the same channel
+
+    every 10 minutes.
+  example: []
   syntax:
     content: internal void ChangeEmoji(CommandContext commandContext, string emoji)
     parameters:
     - id: commandContext
       type: DSharpPlus.CommandsNext.CommandContext
+      description: The command context of the interaction.
     - id: emoji
       type: System.String
+      description: The emoji to be changed in the channel.
     content.vb: Friend Sub ChangeEmoji(commandContext As CommandContext, emoji As String)
   overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.ChangeEmoji*
   nameWithType.vb: PrefixCommandManager.PrefixTheme.TramontinaChannel.ChangeEmoji(CommandContext, String)
   fullName.vb: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.ChangeEmoji(DSharpPlus.CommandsNext.CommandContext, String)
   name.vb: ChangeEmoji(CommandContext, String)
 references:
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+  parent: KWiJisho.Modules.Commands.Prefix
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  name: PrefixCommandManager.PrefixTheme.TramontinaChannel
+  nameWithType: PrefixCommandManager.PrefixTheme.TramontinaChannel
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+  spec.csharp:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+    name: PrefixTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+    name: TramontinaChannel
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+    name: PrefixTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+    name: TramontinaChannel
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.html
 - uid: KWiJisho.Modules.Commands.Prefix
   commentId: N:KWiJisho.Modules.Commands.Prefix
   href: KWiJisho.html
@@ -540,12 +598,26 @@ references:
   - uid: KWiJisho.Modules.Utils
     name: Utils
     href: KWiJisho.Modules.Utils.html
-- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.DefaultTextTitle*
-  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.DefaultTextTitle
-  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixTheme_TramontinaChannel_DefaultTextTitle
-  name: DefaultTextTitle
-  nameWithType: PrefixCommandManager.PrefixTheme.TramontinaChannel.DefaultTextTitle
-  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.DefaultTextTitle
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.#ctor*
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.#ctor
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixTheme_TramontinaChannel__ctor_System_UInt64_System_String_System_Collections_Generic_Dictionary_KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixTheme_EmojiTheme_System_String__
+  name: TramontinaChannel
+  nameWithType: PrefixCommandManager.PrefixTheme.TramontinaChannel.TramontinaChannel
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.TramontinaChannel
+  nameWithType.vb: PrefixCommandManager.PrefixTheme.TramontinaChannel.New
+  fullName.vb: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.New
+  name.vb: New
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -557,12 +629,6 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.EmojiTheme*
-  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.EmojiTheme
-  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixTheme_TramontinaChannel_EmojiTheme
-  name: EmojiTheme
-  nameWithType: PrefixCommandManager.PrefixTheme.TramontinaChannel.EmojiTheme
-  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.EmojiTheme
 - uid: System.Collections.Generic.Dictionary{KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme,System.String}
   commentId: T:System.Collections.Generic.Dictionary{KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme,System.String}
   parent: System.Collections.Generic
@@ -695,26 +761,18 @@ references:
     name: Generic
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.collections.generic
-- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.#ctor*
-  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.#ctor
-  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixTheme_TramontinaChannel__ctor_System_UInt64_System_String_System_Collections_Generic_Dictionary_KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixTheme_EmojiTheme_System_String__
-  name: TramontinaChannel
-  nameWithType: PrefixCommandManager.PrefixTheme.TramontinaChannel.TramontinaChannel
-  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.TramontinaChannel
-  nameWithType.vb: PrefixCommandManager.PrefixTheme.TramontinaChannel.New
-  fullName.vb: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.New
-  name.vb: New
-- uid: System.UInt64
-  commentId: T:System.UInt64
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.uint64
-  name: ulong
-  nameWithType: ulong
-  fullName: ulong
-  nameWithType.vb: ULong
-  fullName.vb: ULong
-  name.vb: ULong
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.DefaultTextTitle*
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.DefaultTextTitle
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixTheme_TramontinaChannel_DefaultTextTitle
+  name: DefaultTextTitle
+  nameWithType: PrefixCommandManager.PrefixTheme.TramontinaChannel.DefaultTextTitle
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.DefaultTextTitle
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.EmojiTheme*
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.EmojiTheme
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixTheme_TramontinaChannel_EmojiTheme
+  name: EmojiTheme
+  nameWithType: PrefixCommandManager.PrefixTheme.TramontinaChannel.EmojiTheme
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.EmojiTheme
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.ChangeEmoji*
   commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.ChangeEmoji
   href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixTheme_TramontinaChannel_ChangeEmoji_DSharpPlus_CommandsNext_CommandContext_System_String_

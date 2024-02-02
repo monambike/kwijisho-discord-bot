@@ -23,7 +23,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrefixBirthday
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -63,60 +63,17 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: nextBirthday
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs
-    startLine: 16
+    startLine: 19
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
-  summary: Represents the command to show the next person to have birthday.
+  summary: Represents the command to show the next person to have a birthday.
   example: []
   syntax:
     content: internal PrefixCommand nextBirthday
     return:
       type: KWiJisho.Modules.Commands.Prefix.PrefixCommand
     content.vb: Friend nextBirthday As PrefixCommand
-- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)
-  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)
-  id: GetNextBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)
-  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday
-  langs:
-  - csharp
-  - vb
-  name: GetNextBirthdayAsync(CommandContext)
-  nameWithType: PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync(CommandContext)
-  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)
-  type: Method
-  source:
-    remote:
-      path: src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs
-      branch: main
-      repo: https://github.com/monambike/kwijisho-discord-bot.git
-    id: GetNextBirthdayAsync
-    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs
-    startLine: 17
-  assemblies:
-  - KWIJisho
-  namespace: KWiJisho.Modules.Commands.Prefix
-  syntax:
-    content: >-
-      [Command("nextBirthday")]
-
-      internal Task GetNextBirthdayAsync(CommandContext commandContext)
-    parameters:
-    - id: commandContext
-      type: DSharpPlus.CommandsNext.CommandContext
-    return:
-      type: System.Threading.Tasks.Task
-    content.vb: >-
-      <Command("nextBirthday")>
-
-      Friend Function GetNextBirthdayAsync(commandContext As CommandContext) As Task
-  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync*
-  attributes:
-  - type: DSharpPlus.CommandsNext.Attributes.CommandAttribute
-    ctor: DSharpPlus.CommandsNext.Attributes.CommandAttribute.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: nextBirthday
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.listBirthday
   commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.listBirthday
   id: listBirthday
@@ -135,7 +92,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: listBirthday
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -146,6 +103,53 @@ items:
     return:
       type: KWiJisho.Modules.Commands.Prefix.PrefixCommand
     content.vb: Friend listBirthday As PrefixCommand
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)
+  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)
+  id: GetNextBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday
+  langs:
+  - csharp
+  - vb
+  name: GetNextBirthdayAsync(CommandContext)
+  nameWithType: PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync(CommandContext)
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)
+  type: Method
+  source:
+    remote:
+      path: src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: GetNextBirthdayAsync
+    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs
+    startLine: 31
+  assemblies:
+  - KWIJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Represents the asynchronous prefix get next birthday method called when requesting to show the next person to have a birthday.
+  example: []
+  syntax:
+    content: >-
+      [Command("nextBirthday")]
+
+      internal Task GetNextBirthdayAsync(CommandContext commandContext)
+    parameters:
+    - id: commandContext
+      type: DSharpPlus.CommandsNext.CommandContext
+      description: The command context from the current command call.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> from the current asynchronous task.
+    content.vb: >-
+      <Command("nextBirthday")>
+
+      Friend Function GetNextBirthdayAsync(commandContext As CommandContext) As Task
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync*
+  attributes:
+  - type: DSharpPlus.CommandsNext.Attributes.CommandAttribute
+    ctor: DSharpPlus.CommandsNext.Attributes.CommandAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: nextBirthday
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetListBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)
   commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetListBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)
   id: GetListBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)
@@ -164,10 +168,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetListBirthdayAsync
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs
-    startLine: 24
+    startLine: 39
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Represents the asynchronous prefix get birthday list called when requesting to show the list of people to have a birthday.
+  example: []
   syntax:
     content: >-
       [Command("listBirthday")]
@@ -176,8 +182,10 @@ items:
     parameters:
     - id: commandContext
       type: DSharpPlus.CommandsNext.CommandContext
+      description: The command context from the current command call.
     return:
       type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> from the current asynchronous task.
     content.vb: >-
       <Command("listBirthday")>
 
@@ -551,6 +559,14 @@ references:
   name: PrefixCommand
   nameWithType: PrefixCommand
   fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommand
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync*
   commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync
   href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixBirthday_GetNextBirthdayAsync_DSharpPlus_CommandsNext_CommandContext_
@@ -564,14 +580,6 @@ references:
   name: CommandContext
   nameWithType: CommandContext
   fullName: DSharpPlus.CommandsNext.CommandContext
-- uid: System.Threading.Tasks.Task
-  commentId: T:System.Threading.Tasks.Task
-  parent: System.Threading.Tasks
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
-  name: Task
-  nameWithType: Task
-  fullName: System.Threading.Tasks.Task
 - uid: System.Threading.Tasks
   commentId: N:System.Threading.Tasks
   isExternal: true

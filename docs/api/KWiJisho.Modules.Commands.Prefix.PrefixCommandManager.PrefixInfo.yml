@@ -7,7 +7,7 @@ items:
   children:
   - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.GetHelpAsync(DSharpPlus.CommandsNext.CommandContext)
   - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.GetInfoAsync(DSharpPlus.CommandsNext.CommandContext)
-  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.furtherHelpDetailsMessage
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.furtherHelpMessage
   - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.help
   - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.info
   langs:
@@ -24,7 +24,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrefixInfo
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -46,35 +46,35 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.furtherHelpDetailsMessage
-  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.furtherHelpDetailsMessage
-  id: furtherHelpDetailsMessage
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.furtherHelpMessage
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.furtherHelpMessage
+  id: furtherHelpMessage
   parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo
   langs:
   - csharp
   - vb
-  name: furtherHelpDetailsMessage
-  nameWithType: PrefixCommandManager.PrefixInfo.furtherHelpDetailsMessage
-  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.furtherHelpDetailsMessage
+  name: furtherHelpMessage
+  nameWithType: PrefixCommandManager.PrefixInfo.furtherHelpMessage
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.furtherHelpMessage
   type: Field
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
-    id: furtherHelpDetailsMessage
+    id: furtherHelpMessage
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs
-    startLine: 16
+    startLine: 19
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
-  summary: Represents the command to show help about the Discord bot commands.
+  summary: Constant string that holds the further help message.
   example: []
   syntax:
-    content: internal const string furtherHelpDetailsMessage = " Para receber detalhes sobre um comando digite \"help <nome do comando>\"."
+    content: internal const string furtherHelpMessage = " Para receber detalhes sobre um comando digite \"help <nome do comando>\"."
     return:
       type: System.String
-    content.vb: Friend Const furtherHelpDetailsMessage As String = " Para receber detalhes sobre um comando digite ""help <nome do comando>""."
+    content.vb: Friend Const furtherHelpMessage As String = " Para receber detalhes sobre um comando digite ""help <nome do comando>""."
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.help
   commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.help
   id: help
@@ -93,58 +93,17 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: help
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs
-    startLine: 17
+    startLine: 24
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Represents the command to show help about the Discord bot commands.
+  example: []
   syntax:
     content: internal PrefixCommand help
     return:
       type: KWiJisho.Modules.Commands.Prefix.PrefixCommand
     content.vb: Friend help As PrefixCommand
-- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.GetHelpAsync(DSharpPlus.CommandsNext.CommandContext)
-  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.GetHelpAsync(DSharpPlus.CommandsNext.CommandContext)
-  id: GetHelpAsync(DSharpPlus.CommandsNext.CommandContext)
-  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo
-  langs:
-  - csharp
-  - vb
-  name: GetHelpAsync(CommandContext)
-  nameWithType: PrefixCommandManager.PrefixInfo.GetHelpAsync(CommandContext)
-  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.GetHelpAsync(DSharpPlus.CommandsNext.CommandContext)
-  type: Method
-  source:
-    remote:
-      path: src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs
-      branch: main
-      repo: https://github.com/monambike/kwijisho-discord-bot.git
-    id: GetHelpAsync
-    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs
-    startLine: 18
-  assemblies:
-  - KWIJisho
-  namespace: KWiJisho.Modules.Commands.Prefix
-  syntax:
-    content: >-
-      [Command("help")]
-
-      internal Task GetHelpAsync(CommandContext commandContext)
-    parameters:
-    - id: commandContext
-      type: DSharpPlus.CommandsNext.CommandContext
-    return:
-      type: System.Threading.Tasks.Task
-    content.vb: >-
-      <Command("help")>
-
-      Friend Function GetHelpAsync(commandContext As CommandContext) As Task
-  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.GetHelpAsync*
-  attributes:
-  - type: DSharpPlus.CommandsNext.Attributes.CommandAttribute
-    ctor: DSharpPlus.CommandsNext.Attributes.CommandAttribute.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: help
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.info
   commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.info
   id: info
@@ -163,7 +122,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: info
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs
-    startLine: 24
+    startLine: 29
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -174,6 +133,53 @@ items:
     return:
       type: KWiJisho.Modules.Commands.Prefix.PrefixCommand
     content.vb: Friend info As PrefixCommand
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.GetHelpAsync(DSharpPlus.CommandsNext.CommandContext)
+  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.GetHelpAsync(DSharpPlus.CommandsNext.CommandContext)
+  id: GetHelpAsync(DSharpPlus.CommandsNext.CommandContext)
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo
+  langs:
+  - csharp
+  - vb
+  name: GetHelpAsync(CommandContext)
+  nameWithType: PrefixCommandManager.PrefixInfo.GetHelpAsync(CommandContext)
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.GetHelpAsync(DSharpPlus.CommandsNext.CommandContext)
+  type: Method
+  source:
+    remote:
+      path: src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: GetHelpAsync
+    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs
+    startLine: 36
+  assemblies:
+  - KWIJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Represents the asynchronous prefix help method called when user asks for the prefix help command.
+  example: []
+  syntax:
+    content: >-
+      [Command("help")]
+
+      internal Task GetHelpAsync(CommandContext commandContext)
+    parameters:
+    - id: commandContext
+      type: DSharpPlus.CommandsNext.CommandContext
+      description: The command context from the current command call.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> from the current asynchronous task.
+    content.vb: >-
+      <Command("help")>
+
+      Friend Function GetHelpAsync(commandContext As CommandContext) As Task
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.GetHelpAsync*
+  attributes:
+  - type: DSharpPlus.CommandsNext.Attributes.CommandAttribute
+    ctor: DSharpPlus.CommandsNext.Attributes.CommandAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: help
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.GetInfoAsync(DSharpPlus.CommandsNext.CommandContext)
   commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.GetInfoAsync(DSharpPlus.CommandsNext.CommandContext)
   id: GetInfoAsync(DSharpPlus.CommandsNext.CommandContext)
@@ -192,10 +198,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetInfoAsync
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs
-    startLine: 25
+    startLine: 44
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Represents the asynchronous prefix info method called when user asks for the prefix info command.
+  example: []
   syntax:
     content: >-
       [Command("info")]
@@ -204,8 +212,10 @@ items:
     parameters:
     - id: commandContext
       type: DSharpPlus.CommandsNext.CommandContext
+      description: The command context from the current command call.
     return:
       type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> from the current asynchronous task.
     content.vb: >-
       <Command("info")>
 
@@ -590,6 +600,14 @@ references:
   name: PrefixCommand
   nameWithType: PrefixCommand
   fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommand
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.GetHelpAsync*
   commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.GetHelpAsync
   href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixInfo_GetHelpAsync_DSharpPlus_CommandsNext_CommandContext_
@@ -603,14 +621,6 @@ references:
   name: CommandContext
   nameWithType: CommandContext
   fullName: DSharpPlus.CommandsNext.CommandContext
-- uid: System.Threading.Tasks.Task
-  commentId: T:System.Threading.Tasks.Task
-  parent: System.Threading.Tasks
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
-  name: Task
-  nameWithType: Task
-  fullName: System.Threading.Tasks.Task
 - uid: System.Threading.Tasks
   commentId: N:System.Threading.Tasks
   isExternal: true

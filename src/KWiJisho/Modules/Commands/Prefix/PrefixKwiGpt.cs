@@ -30,10 +30,10 @@ namespace KWiJisho.Modules.Commands.Prefix
             [Command(nameof(k))]
             internal async Task GetChatGptPromptAsync(CommandContext commandContext, params string[] inputs)
             {
-                // Show's that the bot is "typing" while it process everything
+                // Show's that the bot is "typing" while it process everything.
                 await commandContext.TriggerTypingAsync();
 
-                // Calling the method that will execute the prompt
+                // Calling the method that will execute the prompt.
                 await KwiGpt.ChatGptPromptAsync(commandContext.Channel, inputs);
             }
         }

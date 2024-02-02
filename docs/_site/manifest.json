@@ -12,6 +12,66 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/KWiJisho.Modules.APIs.HttpService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KWiJisho.Modules.APIs.HttpService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KWiJisho.Modules.APIs.NasaApi.Apod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KWiJisho.Modules.APIs.NasaApi.Apod.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KWiJisho.Modules.APIs.NasaApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KWiJisho.Modules.APIs.NasaApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KWiJisho.Modules.APIs.OpenAiApi.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KWiJisho.Modules.APIs.OpenAiApi.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KWiJisho.Modules.APIs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KWiJisho.Modules.APIs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/KWiJisho.Modules.Api.HttpService.yml",
       "output": {
         ".html": {

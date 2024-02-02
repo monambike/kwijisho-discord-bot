@@ -25,24 +25,24 @@ namespace KWiJisho.Modules.Commands.Prefix
             /// </summary>
             internal class PrefixThemeTramontina : BaseCommandModule
             {
-                // Text Channels
+                // Tramontina's Text Channels.
                 internal static readonly TramontinaChannel Geral = new(692588978959941656, "geral", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "💬" }, { EmojiTheme.Christmas, "🍪" }, { EmojiTheme.Easter, "🐇" }, { EmojiTheme.Halloween, "🎃" }  });
                 internal static readonly TramontinaChannel PrintsEternizados = new(841452121983418418, "prints-eternizados", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "💾" }, { EmojiTheme.Christmas, "🥛" }, { EmojiTheme.Easter, "🐰" }, { EmojiTheme.Halloween, "👺" }  });
-                // Organized Text Channels
+                // Tramontina's Organized Text Channels.
                 internal static readonly TramontinaChannel YouTube = new(1142723035447705600, "youtube", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "📹" }, { EmojiTheme.Christmas, "🌟" }, { EmojiTheme.Easter, "🍫" }, { EmojiTheme.Halloween, "🍭" } });
                 internal static readonly TramontinaChannel Dicionario = new(1143020466190172220, "dicionario", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "📖" }, { EmojiTheme.Christmas, "⛄" }, { EmojiTheme.Easter, "🥕" }, { EmojiTheme.Halloween, "🔮" } });
-                // Bot Channels
+                // Tramontina's Bot Channels.
                 internal static readonly TramontinaChannel Waifu = new(692591710466998272, "waifu", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "💘" }, { EmojiTheme.Christmas, "💝" }, { EmojiTheme.Easter, "🌷" }, { EmojiTheme.Halloween, "🍬" } });
                 internal static readonly TramontinaChannel Radio = new(841136093813538827, "radio", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "📻" }, { EmojiTheme.Christmas, "🎶" }, { EmojiTheme.Easter, "🙏🏻" }, { EmojiTheme.Halloween, "💀" } });
                 internal static readonly TramontinaChannel OutrosBots = new(693742473155182663, "outros-bots", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "🤖" }, { EmojiTheme.Christmas, "⛄" }, { EmojiTheme.Easter, "🧺" }, { EmojiTheme.Halloween, "🧟" } });
-                // Voice Channels
+                // Tramontina's Voice Channels.
                 internal static readonly TramontinaChannel CanalEscondidinho = new(1010349376922722436, "Canal Escondidinho", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "🏃🏻💨" }, { EmojiTheme.Christmas, "🎁🧦" }, { EmojiTheme.Easter, "🐣🌱" }, { EmojiTheme.Halloween, "🏰👻" } });
                 internal static readonly TramontinaChannel CorpoDeBombeiros1 = new(929778181458767932, "Corpo de Bombeiros 1", new Dictionary<EmojiTheme, string>
@@ -57,10 +57,10 @@ namespace KWiJisho.Modules.Commands.Prefix
                 /// </summary>
                 private static readonly List<TramontinaChannel> TramontinaChannels =
                 [
-                    Geral, PrintsEternizados, // Text Channels
-                    YouTube, Dicionario, // Organized Text Channels
-                    Waifu, Radio, OutrosBots, // Bot Channels
-                    CanalEscondidinho, CorpoDeBombeiros1, CorpoDeBombeiros2, CantinhoDaFofoca // Voice Channels
+                    Geral, PrintsEternizados, // Tramontina's Text Channels.
+                    YouTube, Dicionario, // Tramontina's Organized Text Channels.
+                    Waifu, Radio, OutrosBots, // Tramontina's Bot Channels.
+                    CanalEscondidinho, CorpoDeBombeiros1, CorpoDeBombeiros2, CantinhoDaFofoca // Tramontina's Voice Channels.
                 ];
 
                 /// <summary>
@@ -124,46 +124,46 @@ namespace KWiJisho.Modules.Commands.Prefix
                     // Admin permission check
                     //if (!await Permission.RequireAdministratorAsync(commandContext.Channel, commandContext.Member)) return;
 
-                    // Initial message so user can know 
+                    // Initial message so user can know .
                     await commandContext.Channel.SendMessageAsync("Só um segundinho... Vou botar as decorações então pode tomar um tempinho! ;P");
 
-                    // Modifies emoji from every mentioned channel
+                    // Modifies emoji from every mentioned channel.
                     foreach (var tramontinaChannel in TramontinaChannels)
                         tramontinaChannel.ChangeEmoji(commandContext, tramontinaChannel.EmojiTheme[emojiTheme]);
 
-                    // Presentation discord embed builder (first message)
+                    // Presentation discord embed builder (first message).
                     var presentationDiscordEmbedBuilder = new DiscordEmbedBuilder
                     {
                         Title = title,
                         Description = $"{description}{Environment.NewLine}",
                         Color = ConfigJson.DefaultColor.DiscordColor
                     }.AddField("HOOOOOOOOOORA DE ENTRAR NO CLIMA", $"Que tal aproveitar e tentar {"trocar o nome do servidor".ToDiscordBold()} pela minha sugestãozinha abaixo? ;D AHAHAHA");
-                    
-                    // Sending the first message (presentation)
+
+                    // Sending the first message (presentation).
                     await commandContext.Channel.SendMessageAsync(new DiscordMessageBuilder().AddEmbed(presentationDiscordEmbedBuilder));
 
                     // Just appends the festive name suggestion if there's a suggestion, if not,
-                    // return the default server name
+                    // return the default server name.
                     string fullServerNameWithSuggestion = string.IsNullOrEmpty(serverNameSuggestion) ? "Tramontina│Bizarre Adventures"
                         : $"{serverNameSuggestion} - Tramontina│Bizarre Adventures";
 
-                    // Getting image name and image's full path
+                    // Getting image name and image's full path.
                     var fileName = $"128x128-mello-{emojiTheme.ToString().ToLower()}.png";
                     var imagePath = Path.GetFullPath($"Resources/Images/Tramontina/{fileName}");
 
-                    // Suggestions discord embed builder (seconds message)
+                    // Suggestions discord embed builder (seconds message).
                     var suggestionsDiscordEmbedBuilder = new DiscordEmbedBuilder
                     {
                         Description = fullServerNameWithSuggestion,
                         Color = ConfigJson.DefaultColor.DiscordColor
                     }.WithImageUrl($"attachment://{imagePath}").Build();
 
-                    // Sending the second message with the image and button
+                    // Sending the second message with the image and button.
                     await commandContext.Channel.SendMessageAsync(new DiscordMessageBuilder()
                         .AddEmbed(suggestionsDiscordEmbedBuilder)
-                        // The image suggestion for the server
+                        // The image suggestion for the server.
                         .AddFile(fileName, new FileStream(imagePath, FileMode.Open))
-                        // Button to copy server name suggestion
+                        // Button to copy server name suggestion.
                         .AddComponents(new DiscordButtonComponent(ButtonStyle.Primary, "copy_server_name_suggestion", "Copiar Sugestão de Nome")));
                 }
             }

@@ -19,10 +19,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrefixTheme
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-    startLine: 16
+    startLine: 20
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Represents a set of prefix commands to change theme in a Discord server.
+  example: []
   syntax:
     content: internal class PrefixCommandManager.PrefixTheme
     content.vb: Friend Class PrefixCommandManager.PrefixTheme

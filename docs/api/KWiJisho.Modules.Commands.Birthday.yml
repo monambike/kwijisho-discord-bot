@@ -22,10 +22,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Birthday
     path: ../src/KWiJisho/Modules/Commands/Birthday.cs
-    startLine: 9
+    startLine: 12
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands
+  summary: Provides methods for "prefix" and "slash" birthday commands.
+  example: []
   syntax:
     content: internal static class Birthday
     content.vb: Friend Module Birthday
@@ -57,7 +59,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Months
     path: ../src/KWiJisho/Modules/Commands/Birthday.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands
@@ -86,7 +88,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetNextBirthdayAsync
     path: ../src/KWiJisho/Modules/Commands/Birthday.cs
-    startLine: 27
+    startLine: 30
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands
@@ -119,7 +121,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetListBirthdayAsync
     path: ../src/KWiJisho/Modules/Commands/Birthday.cs
-    startLine: 56
+    startLine: 59
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands

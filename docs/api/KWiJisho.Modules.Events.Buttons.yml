@@ -25,7 +25,7 @@ items:
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Events
-  summary: Class responsible for handling button click events.
+  summary: Provides a set of events and methods fired when a interaction is made.
   example: []
   syntax:
     content: internal class Buttons

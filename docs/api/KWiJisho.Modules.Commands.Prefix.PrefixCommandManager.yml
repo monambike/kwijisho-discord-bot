@@ -26,11 +26,11 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrefixCommandManager
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
-  summary: Represent the class that represents commands groups and holds all Discord command classes.
+  summary: Provides a set of commands and classes for managing commands in a Discord server.
   example: []
   syntax:
     content: internal static class PrefixCommandManager

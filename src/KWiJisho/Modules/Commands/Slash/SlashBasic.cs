@@ -9,6 +9,9 @@ namespace KWiJisho.Modules.Commands.Slash
     /// </summary>
     internal class SlashBasic : ApplicationCommandModule
     {
+        /// <summary>
+        /// Represents a command group to senda random animated emoji.
+        /// </summary>
         [SlashCommandGroup("emoji", "Envia um emoji animado aleatório! hehe.")]
         public class Emoji : ApplicationCommandModule
         {

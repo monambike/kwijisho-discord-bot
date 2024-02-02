@@ -24,10 +24,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: LogType
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-    startLine: 16
+    startLine: 18
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
+  summary: The log type for a log entry.
+  example: []
   syntax:
     content: internal enum KWiJishoLog.LogType
     content.vb: Friend Enum KWiJishoLog.LogType
@@ -49,7 +51,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Debug
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-    startLine: 16
+    startLine: 18
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
@@ -75,7 +77,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Info
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-    startLine: 16
+    startLine: 18
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
@@ -101,7 +103,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Warning
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-    startLine: 16
+    startLine: 18
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
@@ -127,7 +129,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Error
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-    startLine: 16
+    startLine: 18
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
@@ -153,7 +155,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Fatal
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-    startLine: 16
+    startLine: 18
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils

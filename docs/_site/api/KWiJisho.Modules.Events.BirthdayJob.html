@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Class BirthdayJob | KWiJisho ">
       
-      
+      <meta name="description" content="Represents a Quartz.NET job that executes a birthday message task.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -89,7 +89,7 @@
 
 
   <h1 id="KWiJisho_Modules_Events_BirthdayJob" data-uid="KWiJisho.Modules.Events.BirthdayJob" class="text-break">
-Class BirthdayJob  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Events/BirthdayJob.cs/#L7"><i class="bi bi-code-slash"></i></a>
+Class BirthdayJob  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Events/BirthdayJob.cs/#L10"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,7 +97,8 @@ Class BirthdayJob  <a class="header-action link-secondary" title="View source" h
   <dl><dt>Assembly</dt><dd>KWIJisho.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"></div>
+  <div class="markdown summary"><p>Represents a Quartz.NET job that executes a birthday message task.</p>
+</div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -162,11 +163,10 @@ Class BirthdayJob  <a class="header-action link-secondary" title="View source" h
 
   <h3 id="KWiJisho_Modules_Events_BirthdayJob_Execute_Quartz_IJobExecutionContext_" data-uid="KWiJisho.Modules.Events.BirthdayJob.Execute(Quartz.IJobExecutionContext)">
   Execute(IJobExecutionContext)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Events/BirthdayJob.cs/#L10"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Events/BirthdayJob.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Called by the <span class="xref">Quartz.IScheduler</span> when a <span class="xref">Quartz.ITrigger</span>
-fires that is associated with the <span class="xref">Quartz.IJob</span>.</p>
+  <div class="markdown level1 summary"><p>Executes the birthday message task as part of the Quartz.NET job.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -177,14 +177,15 @@ fires that is associated with the <span class="xref">Quartz.IJob</span>.</p>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>context</code> <span class="xref">IJobExecutionContext</span></dt>
-    <dd><p>The execution context.</p>
+    <dd><p>The execution context provided by Quartz.NET.</p>
 </dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd></dd>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> representing the asynchronous execution of the job.</p>
+</dd>
   </dl>
 
 
@@ -193,14 +194,6 @@ fires that is associated with the <span class="xref">Quartz.IJob</span>.</p>
 
 
 
-  <h4 class="section" id="KWiJisho_Modules_Events_BirthdayJob_Execute_Quartz_IJobExecutionContext__remarks">Remarks</h4>
-  <div class="markdown level1 remarks"><p>The implementation may wish to set a  result object on the
-JobExecutionContext before this method exits.  The result itself
-is meaningless to Quartz, but may be informative to
-<span class="xref">Quartz.IJobListener</span>s or
-<span class="xref">Quartz.ITriggerListener</span>s that are watching the job's
-execution.</p>
-</div>
 
 
 
@@ -209,10 +202,11 @@ execution.</p>
 
   <h3 id="KWiJisho_Modules_Events_BirthdayJob_GiveBirthdayMessage" data-uid="KWiJisho.Modules.Events.BirthdayJob.GiveBirthdayMessage">
   GiveBirthdayMessage()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Events/BirthdayJob.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Events/BirthdayJob.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sends a birthday message as an asynchronous task.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -223,7 +217,8 @@ execution.</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd></dd>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> representing the asynchronous execution of the birthday message task.</p>
+</dd>
   </dl>
 
 
@@ -240,7 +235,7 @@ execution.</p>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Events/BirthdayJob.cs/#L7" class="edit-link">Edit this page</a>
+          <a href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Events/BirthdayJob.cs/#L10" class="edit-link">Edit this page</a>
         </div>
 
 

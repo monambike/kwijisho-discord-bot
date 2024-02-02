@@ -21,14 +21,16 @@ namespace KWiJisho.Modules.Utils
         internal string DefaultName = defaultName;
 
         /// <summary>
-        /// Updates the name of the Discord channel asynchronously.
+        /// Updates asynchronously the name of the Discord channel.
         /// </summary>
         /// <param name="commandContext">The command context containing information about the command.</param>
         /// <param name="newName">The new name for the Discord channel.</param>
         internal async void UpdateChannelNameAsync(CommandContext commandContext, string newName)
         {
+            // Get the channel on current Discord server based their Id.
             var channel = commandContext.Client.GetChannelAsync(Id).Result;
-            // Rename the channel
+
+            // Rename the channel with the new name.
             await channel.ModifyAsync(editChannel => editChannel.Name = $"{newName}");
         }
     }

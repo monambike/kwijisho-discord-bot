@@ -14,18 +14,18 @@ items:
     name: ConfigJson
   - uid: KWiJisho.Modules.ConfigJson.Color
     name: ConfigJson.Color
-- uid: KWiJisho.Modules.Api
-  name: KWiJisho.Modules.Api
+- uid: KWiJisho.Modules.APIs
+  name: KWiJisho.Modules.APIs
   items:
-  - uid: KWiJisho.Modules.Api.HttpService
+  - uid: KWiJisho.Modules.APIs.HttpService
     name: HttpService
-  - uid: KWiJisho.Modules.Api.NasaApi
+  - uid: KWiJisho.Modules.APIs.NasaApi
     name: NasaApi
-  - uid: KWiJisho.Modules.Api.NasaApi.Apod
+  - uid: KWiJisho.Modules.APIs.NasaApi.Apod
     name: NasaApi.Apod
-  - uid: KWiJisho.Modules.Api.NasaApi.Apod.ApodResponseJson
+  - uid: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson
     name: NasaApi.Apod.ApodResponseJson
-  - uid: KWiJisho.Modules.Api.OpenAiApi
+  - uid: KWiJisho.Modules.APIs.OpenAiApi
     name: OpenAiApi
 - uid: KWiJisho.Modules.Commands
   name: KWiJisho.Modules.Commands

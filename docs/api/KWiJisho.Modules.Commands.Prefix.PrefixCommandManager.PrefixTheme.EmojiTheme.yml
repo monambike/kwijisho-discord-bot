@@ -23,11 +23,11 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: EmojiTheme
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixTheme.cs
-    startLine: 9
+    startLine: 15
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
-  summary: Represents seasonal themes that you can change the server into.
+  summary: Represents seasonal themes that you can set to the Discord server.
   example: []
   syntax:
     content: internal enum PrefixCommandManager.PrefixTheme.EmojiTheme
@@ -50,7 +50,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Default
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixTheme.cs
-    startLine: 11
+    startLine: 15
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -76,7 +76,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Christmas
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixTheme.cs
-    startLine: 12
+    startLine: 15
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -102,7 +102,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Easter
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixTheme.cs
-    startLine: 13
+    startLine: 15
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -128,7 +128,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Halloween
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixTheme.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix

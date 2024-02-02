@@ -89,7 +89,7 @@
 
 
   <h1 id="KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixInfo" data-uid="KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo" class="text-break">
-Class PrefixCommandManager.PrefixInfo  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs/#L12"><i class="bi bi-code-slash"></i></a>
+Class PrefixCommandManager.PrefixInfo  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -161,17 +161,17 @@ Class PrefixCommandManager.PrefixInfo  <a class="header-action link-secondary" t
 
 
 
-  <h3 id="KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixInfo_furtherHelpDetailsMessage" data-uid="KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.furtherHelpDetailsMessage">
-  furtherHelpDetailsMessage
-  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  <h3 id="KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixInfo_furtherHelpMessage" data-uid="KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.furtherHelpMessage">
+  furtherHelpMessage
+  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Represents the command to show help about the Discord bot commands.</p>
+  <div class="markdown level1 summary"><p>Constant string that holds the further help message.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">internal const string furtherHelpDetailsMessage = &quot; Para receber detalhes sobre um comando digite \&quot;help &lt;nome do comando&gt;\&quot;.&quot;</code></pre>
+    <pre><code class="lang-csharp hljs">internal const string furtherHelpMessage = &quot; Para receber detalhes sobre um comando digite \&quot;help &lt;nome do comando&gt;\&quot;.&quot;</code></pre>
   </div>
 
 
@@ -194,10 +194,11 @@ Class PrefixCommandManager.PrefixInfo  <a class="header-action link-secondary" t
 
   <h3 id="KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixInfo_help" data-uid="KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.help">
   help
-  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Represents the command to show help about the Discord bot commands.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -224,7 +225,7 @@ Class PrefixCommandManager.PrefixInfo  <a class="header-action link-secondary" t
 
   <h3 id="KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixInfo_info" data-uid="KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.info">
   info
-  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Represents the command to show information about the bot and the bot owner.</p>
@@ -260,10 +261,11 @@ Class PrefixCommandManager.PrefixInfo  <a class="header-action link-secondary" t
 
   <h3 id="KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixInfo_GetHelpAsync_DSharpPlus_CommandsNext_CommandContext_" data-uid="KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.GetHelpAsync(DSharpPlus.CommandsNext.CommandContext)">
   GetHelpAsync(CommandContext)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs/#L37"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Represents the asynchronous prefix help method called when user asks for the prefix help command.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -274,13 +276,15 @@ internal Task GetHelpAsync(CommandContext commandContext)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>commandContext</code> <span class="xref">CommandContext</span></dt>
-    <dd></dd>
+    <dd><p>The command context from the current command call.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd></dd>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> from the current asynchronous task.</p>
+</dd>
   </dl>
 
 
@@ -297,10 +301,11 @@ internal Task GetHelpAsync(CommandContext commandContext)</code></pre>
 
   <h3 id="KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixInfo_GetInfoAsync_DSharpPlus_CommandsNext_CommandContext_" data-uid="KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.GetInfoAsync(DSharpPlus.CommandsNext.CommandContext)">
   GetInfoAsync(CommandContext)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs/#L26"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs/#L45"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Represents the asynchronous prefix info method called when user asks for the prefix info command.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -311,13 +316,15 @@ internal Task GetInfoAsync(CommandContext commandContext)</code></pre>
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>commandContext</code> <span class="xref">CommandContext</span></dt>
-    <dd></dd>
+    <dd><p>The command context from the current command call.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></dt>
-    <dd></dd>
+    <dd><p>A <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> from the current asynchronous task.</p>
+</dd>
   </dl>
 
 
@@ -334,7 +341,7 @@ internal Task GetInfoAsync(CommandContext commandContext)</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs/#L12" class="edit-link">Edit this page</a>
+          <a href="https://github.com/monambike/kwijisho-discord-bot/blob/main/src/KWiJisho/Modules/Commands/Prefix/PrefixInfo.cs/#L15" class="edit-link">Edit this page</a>
         </div>
 
 

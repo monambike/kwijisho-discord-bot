@@ -25,7 +25,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrefixBasic
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -65,7 +65,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: emoji
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
-    startLine: 16
+    startLine: 19
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -76,49 +76,6 @@ items:
     return:
       type: KWiJisho.Modules.Commands.Prefix.PrefixCommand
     content.vb: Friend emoji As PrefixCommand
-- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomAnimatedEmoji(DSharpPlus.CommandsNext.CommandContext)
-  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomAnimatedEmoji(DSharpPlus.CommandsNext.CommandContext)
-  id: SendRandomAnimatedEmoji(DSharpPlus.CommandsNext.CommandContext)
-  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic
-  langs:
-  - csharp
-  - vb
-  name: SendRandomAnimatedEmoji(CommandContext)
-  nameWithType: PrefixCommandManager.PrefixBasic.SendRandomAnimatedEmoji(CommandContext)
-  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomAnimatedEmoji(DSharpPlus.CommandsNext.CommandContext)
-  type: Method
-  source:
-    remote:
-      path: src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
-      branch: main
-      repo: https://github.com/monambike/kwijisho-discord-bot.git
-    id: SendRandomAnimatedEmoji
-    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
-    startLine: 17
-  assemblies:
-  - KWIJisho
-  namespace: KWiJisho.Modules.Commands.Prefix
-  syntax:
-    content: >-
-      [Command("emoji")]
-
-      internal Task SendRandomAnimatedEmoji(CommandContext commandContext)
-    parameters:
-    - id: commandContext
-      type: DSharpPlus.CommandsNext.CommandContext
-    return:
-      type: System.Threading.Tasks.Task
-    content.vb: >-
-      <Command("emoji")>
-
-      Friend Function SendRandomAnimatedEmoji(commandContext As CommandContext) As Task
-  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomAnimatedEmoji*
-  attributes:
-  - type: DSharpPlus.CommandsNext.Attributes.CommandAttribute
-    ctor: DSharpPlus.CommandsNext.Attributes.CommandAttribute.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: emoji
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.emojim
   commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.emojim
   id: emojim
@@ -137,7 +94,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: emojim
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
-    startLine: 23
+    startLine: 25
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -148,49 +105,6 @@ items:
     return:
       type: KWiJisho.Modules.Commands.Prefix.PrefixCommand
     content.vb: Friend emojim As PrefixCommand
-- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomMemeEmoji(DSharpPlus.CommandsNext.CommandContext)
-  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomMemeEmoji(DSharpPlus.CommandsNext.CommandContext)
-  id: SendRandomMemeEmoji(DSharpPlus.CommandsNext.CommandContext)
-  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic
-  langs:
-  - csharp
-  - vb
-  name: SendRandomMemeEmoji(CommandContext)
-  nameWithType: PrefixCommandManager.PrefixBasic.SendRandomMemeEmoji(CommandContext)
-  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomMemeEmoji(DSharpPlus.CommandsNext.CommandContext)
-  type: Method
-  source:
-    remote:
-      path: src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
-      branch: main
-      repo: https://github.com/monambike/kwijisho-discord-bot.git
-    id: SendRandomMemeEmoji
-    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
-    startLine: 24
-  assemblies:
-  - KWIJisho
-  namespace: KWiJisho.Modules.Commands.Prefix
-  syntax:
-    content: >-
-      [Command("emojim")]
-
-      internal Task SendRandomMemeEmoji(CommandContext commandContext)
-    parameters:
-    - id: commandContext
-      type: DSharpPlus.CommandsNext.CommandContext
-    return:
-      type: System.Threading.Tasks.Task
-    content.vb: >-
-      <Command("emojim")>
-
-      Friend Function SendRandomMemeEmoji(commandContext As CommandContext) As Task
-  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomMemeEmoji*
-  attributes:
-  - type: DSharpPlus.CommandsNext.Attributes.CommandAttribute
-    ctor: DSharpPlus.CommandsNext.Attributes.CommandAttribute.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: emojim
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.emojip
   commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.emojip
   id: emojip
@@ -220,6 +134,100 @@ items:
     return:
       type: KWiJisho.Modules.Commands.Prefix.PrefixCommand
     content.vb: Friend emojip As PrefixCommand
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomAnimatedEmoji(DSharpPlus.CommandsNext.CommandContext)
+  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomAnimatedEmoji(DSharpPlus.CommandsNext.CommandContext)
+  id: SendRandomAnimatedEmoji(DSharpPlus.CommandsNext.CommandContext)
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic
+  langs:
+  - csharp
+  - vb
+  name: SendRandomAnimatedEmoji(CommandContext)
+  nameWithType: PrefixCommandManager.PrefixBasic.SendRandomAnimatedEmoji(CommandContext)
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomAnimatedEmoji(DSharpPlus.CommandsNext.CommandContext)
+  type: Method
+  source:
+    remote:
+      path: src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: SendRandomAnimatedEmoji
+    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
+    startLine: 37
+  assemblies:
+  - KWIJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Represents the asynchronous prefix send random animated emoji method called when sending a random animated emoji.
+  example: []
+  syntax:
+    content: >-
+      [Command("emoji")]
+
+      internal Task SendRandomAnimatedEmoji(CommandContext commandContext)
+    parameters:
+    - id: commandContext
+      type: DSharpPlus.CommandsNext.CommandContext
+      description: The command context from the current command call.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> from the current asynchronous task.
+    content.vb: >-
+      <Command("emoji")>
+
+      Friend Function SendRandomAnimatedEmoji(commandContext As CommandContext) As Task
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomAnimatedEmoji*
+  attributes:
+  - type: DSharpPlus.CommandsNext.Attributes.CommandAttribute
+    ctor: DSharpPlus.CommandsNext.Attributes.CommandAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: emoji
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomMemeEmoji(DSharpPlus.CommandsNext.CommandContext)
+  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomMemeEmoji(DSharpPlus.CommandsNext.CommandContext)
+  id: SendRandomMemeEmoji(DSharpPlus.CommandsNext.CommandContext)
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic
+  langs:
+  - csharp
+  - vb
+  name: SendRandomMemeEmoji(CommandContext)
+  nameWithType: PrefixCommandManager.PrefixBasic.SendRandomMemeEmoji(CommandContext)
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomMemeEmoji(DSharpPlus.CommandsNext.CommandContext)
+  type: Method
+  source:
+    remote:
+      path: src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: SendRandomMemeEmoji
+    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
+    startLine: 45
+  assemblies:
+  - KWIJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Represents the asynchronous prefix send random animated meme emoji method called when sending a random meme animated emoji.
+  example: []
+  syntax:
+    content: >-
+      [Command("emojim")]
+
+      internal Task SendRandomMemeEmoji(CommandContext commandContext)
+    parameters:
+    - id: commandContext
+      type: DSharpPlus.CommandsNext.CommandContext
+      description: The command context from the current command call.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> from the current asynchronous task.
+    content.vb: >-
+      <Command("emojim")>
+
+      Friend Function SendRandomMemeEmoji(commandContext As CommandContext) As Task
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomMemeEmoji*
+  attributes:
+  - type: DSharpPlus.CommandsNext.Attributes.CommandAttribute
+    ctor: DSharpPlus.CommandsNext.Attributes.CommandAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: emojim
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomPartyEmoji(DSharpPlus.CommandsNext.CommandContext)
   commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomPartyEmoji(DSharpPlus.CommandsNext.CommandContext)
   id: SendRandomPartyEmoji(DSharpPlus.CommandsNext.CommandContext)
@@ -238,10 +246,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SendRandomPartyEmoji
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
-    startLine: 31
+    startLine: 53
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Represents the asynchronous prefix send random animated party emoji method called when sending a random party animated emoji.
+  example: []
   syntax:
     content: >-
       [Command("emojip")]
@@ -250,8 +260,10 @@ items:
     parameters:
     - id: commandContext
       type: DSharpPlus.CommandsNext.CommandContext
+      description: The command context from the current command call.
     return:
       type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> from the current asynchronous task.
     content.vb: >-
       <Command("emojip")>
 
@@ -625,6 +637,14 @@ references:
   name: PrefixCommand
   nameWithType: PrefixCommand
   fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommand
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomAnimatedEmoji*
   commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomAnimatedEmoji
   href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixBasic_SendRandomAnimatedEmoji_DSharpPlus_CommandsNext_CommandContext_
@@ -638,14 +658,6 @@ references:
   name: CommandContext
   nameWithType: CommandContext
   fullName: DSharpPlus.CommandsNext.CommandContext
-- uid: System.Threading.Tasks.Task
-  commentId: T:System.Threading.Tasks.Task
-  parent: System.Threading.Tasks
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
-  name: Task
-  nameWithType: Task
-  fullName: System.Threading.Tasks.Task
 - uid: System.Threading.Tasks
   commentId: N:System.Threading.Tasks
   isExternal: true

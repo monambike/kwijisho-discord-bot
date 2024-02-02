@@ -22,7 +22,7 @@ namespace KWiJisho.Modules
         /// </summary>
         internal void RegisterPrefixCommands()
         {
-            // Registering discord bot prefix commands
+            // Registering discord bot prefix commands.
             PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixBasic>();
             PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixBirthday>();
             PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixInfo>();
@@ -40,13 +40,13 @@ namespace KWiJisho.Modules
             // take up to an hour to apply)
             List<ulong> guildIds =
             [
-                737541664318554143, // Personal Server
-                692588978959941653 // Tramontina
+                737541664318554143, // Personal Discord server.
+                692588978959941653 // Tramontina Discord server.
             ];
 
             foreach (var guildId in guildIds)
             {
-                // Registering discord bot slash commands
+                // Registering discord bot slash commands.
                 SlashCommands.RegisterCommands<SlashBasic>(guildId);
                 SlashCommands.RegisterCommands<SlashBirthday>(guildId);
                 SlashCommands.RegisterCommands<SlashInfo>(guildId);
@@ -60,7 +60,7 @@ namespace KWiJisho.Modules
         /// <returns></returns>
         internal void RegisterBotEvents()
         {
-            // Registering discord bot events
+            // Registering discord bot events.
             DiscordClient.Ready += BotStart.OnClientReady;
             DiscordClient.ComponentInteractionCreated += Buttons.OnComponentInteractionCreatedAsync;
             DiscordClient.GuildMemberAdded += GoodbyeWelcome.OnGuildMemberAddedAsync;
@@ -71,16 +71,16 @@ namespace KWiJisho.Modules
         {
             PrefixCommands.CommandErrored += async (sender, exception) =>
             {
-                // Checking if the exception is a checks failed exception
+                // Checking if the exception is a checks failed exception.
                 if (exception.Exception is ChecksFailedException checkFailedException)
                 {
-                    // Iterate over the failed checks
+                    // Iterate over the failed checks.
                     foreach (var check in checkFailedException.FailedChecks)
                     {
-                        // Check if the failed check is a require user permissions attribute
+                        // Check if the failed check is a require user permissions attribute.
                         if (check is RequireUserPermissionsAttribute requireUserPermissionAttribute)
                         {
-                            // Send a custom error message to the user
+                            // Send a custom error message to the user.
                             await exception.Context.RespondAsync(KWiJishoPermission.PermissionCustomErrorMessage(requireUserPermissionAttribute.Permissions));
                         }
                     }
@@ -92,16 +92,16 @@ namespace KWiJisho.Modules
             SlashCommandsExtension slash = SlashCommands;
             slash.SlashCommandErrored += async (s, e) =>
             {
-                // Checking if the exception is a slash execution checks failed exception
+                // Checking if the exception is a slash execution checks failed exception.
                 if (e.Exception is SlashExecutionChecksFailedException slashExecutionChecksFailedException)
                 {
                     // Iterate over the failed checks
                     foreach (var check in slashExecutionChecksFailedException.FailedChecks)
                     {
-                        // Check if the failed check is a slash require user permissions attribute
+                        // Check if the failed check is a slash require user permissions attribute.
                         if (check is SlashRequireUserPermissionsAttribute slashRequireUserPermissionsAttribute)
                         {
-                            // Send a custom error message to the user
+                            // Send a custom error message to the user.
                             await e.Context.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource,
                                 new DiscordInteractionResponseBuilder().WithContent(KWiJishoPermission.PermissionCustomErrorMessage(slashRequireUserPermissionsAttribute.Permissions)));
                         }

@@ -25,7 +25,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrefixNasa
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-    startLine: 13
+    startLine: 16
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -63,58 +63,17 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: apod
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-    startLine: 15
+    startLine: 21
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Represent the command to get the APOD at its current default state.
+  example: []
   syntax:
     content: internal PrefixCommand apod
     return:
       type: KWiJisho.Modules.Commands.Prefix.PrefixCommand
     content.vb: Friend apod As PrefixCommand
-- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodAsync(DSharpPlus.CommandsNext.CommandContext)
-  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodAsync(DSharpPlus.CommandsNext.CommandContext)
-  id: ApodAsync(DSharpPlus.CommandsNext.CommandContext)
-  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa
-  langs:
-  - csharp
-  - vb
-  name: ApodAsync(CommandContext)
-  nameWithType: PrefixCommandManager.PrefixNasa.ApodAsync(CommandContext)
-  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodAsync(DSharpPlus.CommandsNext.CommandContext)
-  type: Method
-  source:
-    remote:
-      path: src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-      branch: main
-      repo: https://github.com/monambike/kwijisho-discord-bot.git
-    id: ApodAsync
-    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-    startLine: 16
-  assemblies:
-  - KWIJisho
-  namespace: KWiJisho.Modules.Commands.Prefix
-  syntax:
-    content: >-
-      [Command("apod")]
-
-      internal Task ApodAsync(CommandContext commandContext)
-    parameters:
-    - id: commandContext
-      type: DSharpPlus.CommandsNext.CommandContext
-    return:
-      type: System.Threading.Tasks.Task
-    content.vb: >-
-      <Command("apod")>
-
-      Friend Function ApodAsync(commandContext As CommandContext) As Task
-  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodAsync*
-  attributes:
-  - type: DSharpPlus.CommandsNext.Attributes.CommandAttribute
-    ctor: DSharpPlus.CommandsNext.Attributes.CommandAttribute.#ctor(System.String)
-    arguments:
-    - type: System.String
-      value: apod
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.apodResume
   commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.apodResume
   id: apodResume
@@ -133,15 +92,64 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: apodResume
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-    startLine: 24
+    startLine: 26
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Represent the command to get the APOD resumed and translated to portuguese.
+  example: []
   syntax:
     content: internal PrefixCommand apodResume
     return:
       type: KWiJisho.Modules.Commands.Prefix.PrefixCommand
     content.vb: Friend apodResume As PrefixCommand
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodAsync(DSharpPlus.CommandsNext.CommandContext)
+  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodAsync(DSharpPlus.CommandsNext.CommandContext)
+  id: ApodAsync(DSharpPlus.CommandsNext.CommandContext)
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa
+  langs:
+  - csharp
+  - vb
+  name: ApodAsync(CommandContext)
+  nameWithType: PrefixCommandManager.PrefixNasa.ApodAsync(CommandContext)
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodAsync(DSharpPlus.CommandsNext.CommandContext)
+  type: Method
+  source:
+    remote:
+      path: src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ApodAsync
+    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
+    startLine: 33
+  assemblies:
+  - KWIJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Represents the asynchronous prefix APOD method callend when user asks for the APOD command.
+  example: []
+  syntax:
+    content: >-
+      [Command("apod")]
+
+      internal Task ApodAsync(CommandContext commandContext)
+    parameters:
+    - id: commandContext
+      type: DSharpPlus.CommandsNext.CommandContext
+      description: The command context from the current command call.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> from the current asynchronous task.
+    content.vb: >-
+      <Command("apod")>
+
+      Friend Function ApodAsync(commandContext As CommandContext) As Task
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodAsync*
+  attributes:
+  - type: DSharpPlus.CommandsNext.Attributes.CommandAttribute
+    ctor: DSharpPlus.CommandsNext.Attributes.CommandAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: apod
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodResumeAsync(DSharpPlus.CommandsNext.CommandContext)
   commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodResumeAsync(DSharpPlus.CommandsNext.CommandContext)
   id: ApodResumeAsync(DSharpPlus.CommandsNext.CommandContext)
@@ -160,10 +168,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ApodResumeAsync
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-    startLine: 25
+    startLine: 49
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Represents the asynchronous prefix APOD resume method callend when user asks for the APOD resume command.
+  example: []
   syntax:
     content: >-
       [Command("apodResume")]
@@ -172,8 +182,10 @@ items:
     parameters:
     - id: commandContext
       type: DSharpPlus.CommandsNext.CommandContext
+      description: The command context from the current command call.
     return:
       type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> from the current asynchronous task.
     content.vb: >-
       <Command("apodResume")>
 
@@ -203,7 +215,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GenerateApodDiscordMessageBuilderAsync
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-    startLine: 32
+    startLine: 59
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -234,7 +246,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: BuildApodMessage
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-    startLine: 63
+    startLine: 91
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -609,6 +621,14 @@ references:
   name: PrefixCommand
   nameWithType: PrefixCommand
   fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommand
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodAsync*
   commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodAsync
   href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixNasa_ApodAsync_DSharpPlus_CommandsNext_CommandContext_
@@ -622,14 +642,6 @@ references:
   name: CommandContext
   nameWithType: CommandContext
   fullName: DSharpPlus.CommandsNext.CommandContext
-- uid: System.Threading.Tasks.Task
-  commentId: T:System.Threading.Tasks.Task
-  parent: System.Threading.Tasks
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
-  name: Task
-  nameWithType: Task
-  fullName: System.Threading.Tasks.Task
 - uid: System.Threading.Tasks
   commentId: N:System.Threading.Tasks
   isExternal: true

@@ -25,7 +25,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ApodBuilder
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-    startLine: 92
+    startLine: 120
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -60,7 +60,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ApodDateText
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-    startLine: 94
+    startLine: 122
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -89,7 +89,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: CopyrightText
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-    startLine: 95
+    startLine: 123
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -118,7 +118,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: CultureInfo
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-    startLine: 96
+    startLine: 124
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -147,7 +147,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: DateContent
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-    startLine: 98
+    startLine: 126
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -176,7 +176,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ExplanationContent
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-    startLine: 99
+    startLine: 127
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -205,7 +205,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: UrlContent
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-    startLine: 100
+    startLine: 128
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix

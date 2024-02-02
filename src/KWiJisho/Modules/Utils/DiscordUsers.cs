@@ -53,15 +53,15 @@ namespace KWiJisho.Modules.Utils
 
         /// <summary>
         /// Tries to return a <see cref="DiscordMember"/> representing the user in the specified server.
-        /// If the user is not found, returns null.
+        /// If the user is not found, returns <see langword="null"/>. 
         /// </summary>
         /// <param name="discordGuild">The Discord guild where the user is expected to be a member.</param>
-        /// <returns>Returns <see cref="DiscordMember"/> if found; otherwise, returns null.</returns>
+        /// <returns>Returns <see cref="DiscordMember"/> if found; otherwise, returns <see langword="null"/>.</returns>
         internal DiscordMember GetUserDiscordMember(DiscordGuild discordGuild)
         {
-            // Tries to return a user
+            // Tries to return a user.
             try { return discordGuild.GetMemberAsync(Id).Result; }
-            // If not possible because the user wasn't found, return null
+            // If not possible because the user wasn't found, return null.
             catch { return null; }
         }
     }

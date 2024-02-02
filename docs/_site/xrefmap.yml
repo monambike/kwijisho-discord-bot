@@ -13,6 +13,222 @@ references:
   commentId: N:KWiJisho.Modules
   fullName: KWiJisho.Modules
   nameWithType: KWiJisho.Modules
+- uid: KWiJisho.Modules.APIs
+  name: KWiJisho.Modules.APIs
+  href: api/KWiJisho.Modules.APIs.html
+  commentId: N:KWiJisho.Modules.APIs
+  fullName: KWiJisho.Modules.APIs
+  nameWithType: KWiJisho.Modules.APIs
+- uid: KWiJisho.Modules.APIs.HttpService
+  name: HttpService
+  href: api/KWiJisho.Modules.APIs.HttpService.html
+  commentId: T:KWiJisho.Modules.APIs.HttpService
+  fullName: KWiJisho.Modules.APIs.HttpService
+  nameWithType: HttpService
+- uid: KWiJisho.Modules.APIs.HttpService.GetAsync(System.Net.Http.HttpClient,System.String)
+  name: GetAsync(HttpClient, string)
+  href: api/KWiJisho.Modules.APIs.HttpService.html#KWiJisho_Modules_APIs_HttpService_GetAsync_System_Net_Http_HttpClient_System_String_
+  commentId: M:KWiJisho.Modules.APIs.HttpService.GetAsync(System.Net.Http.HttpClient,System.String)
+  name.vb: GetAsync(HttpClient, String)
+  fullName: KWiJisho.Modules.APIs.HttpService.GetAsync(System.Net.Http.HttpClient, string)
+  fullName.vb: KWiJisho.Modules.APIs.HttpService.GetAsync(System.Net.Http.HttpClient, String)
+  nameWithType: HttpService.GetAsync(HttpClient, string)
+  nameWithType.vb: HttpService.GetAsync(HttpClient, String)
+- uid: KWiJisho.Modules.APIs.HttpService.GetAsync*
+  name: GetAsync
+  href: api/KWiJisho.Modules.APIs.HttpService.html#KWiJisho_Modules_APIs_HttpService_GetAsync_
+  commentId: Overload:KWiJisho.Modules.APIs.HttpService.GetAsync
+  isSpec: "True"
+  fullName: KWiJisho.Modules.APIs.HttpService.GetAsync
+  nameWithType: HttpService.GetAsync
+- uid: KWiJisho.Modules.APIs.NasaApi
+  name: NasaApi
+  href: api/KWiJisho.Modules.APIs.NasaApi.html
+  commentId: T:KWiJisho.Modules.APIs.NasaApi
+  fullName: KWiJisho.Modules.APIs.NasaApi
+  nameWithType: NasaApi
+- uid: KWiJisho.Modules.APIs.NasaApi.Apod
+  name: NasaApi.Apod
+  href: api/KWiJisho.Modules.APIs.NasaApi.Apod.html
+  commentId: T:KWiJisho.Modules.APIs.NasaApi.Apod
+  fullName: KWiJisho.Modules.APIs.NasaApi.Apod
+  nameWithType: NasaApi.Apod
+- uid: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson
+  name: NasaApi.Apod.ApodResponseJson
+  href: api/KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.html
+  commentId: T:KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson
+  fullName: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson
+  nameWithType: NasaApi.Apod.ApodResponseJson
+- uid: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Copyright
+  name: Copyright
+  href: api/KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.html#KWiJisho_Modules_APIs_NasaApi_Apod_ApodResponseJson_Copyright
+  commentId: P:KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Copyright
+  fullName: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Copyright
+  nameWithType: NasaApi.Apod.ApodResponseJson.Copyright
+- uid: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Copyright*
+  name: Copyright
+  href: api/KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.html#KWiJisho_Modules_APIs_NasaApi_Apod_ApodResponseJson_Copyright_
+  commentId: Overload:KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Copyright
+  isSpec: "True"
+  fullName: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Copyright
+  nameWithType: NasaApi.Apod.ApodResponseJson.Copyright
+- uid: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Date
+  name: Date
+  href: api/KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.html#KWiJisho_Modules_APIs_NasaApi_Apod_ApodResponseJson_Date
+  commentId: P:KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Date
+  fullName: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Date
+  nameWithType: NasaApi.Apod.ApodResponseJson.Date
+- uid: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Date*
+  name: Date
+  href: api/KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.html#KWiJisho_Modules_APIs_NasaApi_Apod_ApodResponseJson_Date_
+  commentId: Overload:KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Date
+  isSpec: "True"
+  fullName: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Date
+  nameWithType: NasaApi.Apod.ApodResponseJson.Date
+- uid: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Explanation
+  name: Explanation
+  href: api/KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.html#KWiJisho_Modules_APIs_NasaApi_Apod_ApodResponseJson_Explanation
+  commentId: P:KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Explanation
+  fullName: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Explanation
+  nameWithType: NasaApi.Apod.ApodResponseJson.Explanation
+- uid: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Explanation*
+  name: Explanation
+  href: api/KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.html#KWiJisho_Modules_APIs_NasaApi_Apod_ApodResponseJson_Explanation_
+  commentId: Overload:KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Explanation
+  isSpec: "True"
+  fullName: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Explanation
+  nameWithType: NasaApi.Apod.ApodResponseJson.Explanation
+- uid: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Title
+  name: Title
+  href: api/KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.html#KWiJisho_Modules_APIs_NasaApi_Apod_ApodResponseJson_Title
+  commentId: P:KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Title
+  fullName: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Title
+  nameWithType: NasaApi.Apod.ApodResponseJson.Title
+- uid: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Title*
+  name: Title
+  href: api/KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.html#KWiJisho_Modules_APIs_NasaApi_Apod_ApodResponseJson_Title_
+  commentId: Overload:KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Title
+  isSpec: "True"
+  fullName: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Title
+  nameWithType: NasaApi.Apod.ApodResponseJson.Title
+- uid: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Url
+  name: Url
+  href: api/KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.html#KWiJisho_Modules_APIs_NasaApi_Apod_ApodResponseJson_Url
+  commentId: P:KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Url
+  fullName: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Url
+  nameWithType: NasaApi.Apod.ApodResponseJson.Url
+- uid: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Url*
+  name: Url
+  href: api/KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.html#KWiJisho_Modules_APIs_NasaApi_Apod_ApodResponseJson_Url_
+  commentId: Overload:KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Url
+  isSpec: "True"
+  fullName: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.Url
+  nameWithType: NasaApi.Apod.ApodResponseJson.Url
+- uid: KWiJisho.Modules.APIs.NasaApi.Apod.GetAsync
+  name: GetAsync()
+  href: api/KWiJisho.Modules.APIs.NasaApi.Apod.html#KWiJisho_Modules_APIs_NasaApi_Apod_GetAsync
+  commentId: M:KWiJisho.Modules.APIs.NasaApi.Apod.GetAsync
+  fullName: KWiJisho.Modules.APIs.NasaApi.Apod.GetAsync()
+  nameWithType: NasaApi.Apod.GetAsync()
+- uid: KWiJisho.Modules.APIs.NasaApi.Apod.GetAsync*
+  name: GetAsync
+  href: api/KWiJisho.Modules.APIs.NasaApi.Apod.html#KWiJisho_Modules_APIs_NasaApi_Apod_GetAsync_
+  commentId: Overload:KWiJisho.Modules.APIs.NasaApi.Apod.GetAsync
+  isSpec: "True"
+  fullName: KWiJisho.Modules.APIs.NasaApi.Apod.GetAsync
+  nameWithType: NasaApi.Apod.GetAsync
+- uid: KWiJisho.Modules.APIs.NasaApi.Apod.GetUsingNasaApiAsync(System.String)
+  name: GetUsingNasaApiAsync(string)
+  href: api/KWiJisho.Modules.APIs.NasaApi.Apod.html#KWiJisho_Modules_APIs_NasaApi_Apod_GetUsingNasaApiAsync_System_String_
+  commentId: M:KWiJisho.Modules.APIs.NasaApi.Apod.GetUsingNasaApiAsync(System.String)
+  name.vb: GetUsingNasaApiAsync(String)
+  fullName: KWiJisho.Modules.APIs.NasaApi.Apod.GetUsingNasaApiAsync(string)
+  fullName.vb: KWiJisho.Modules.APIs.NasaApi.Apod.GetUsingNasaApiAsync(String)
+  nameWithType: NasaApi.Apod.GetUsingNasaApiAsync(string)
+  nameWithType.vb: NasaApi.Apod.GetUsingNasaApiAsync(String)
+- uid: KWiJisho.Modules.APIs.NasaApi.Apod.GetUsingNasaApiAsync*
+  name: GetUsingNasaApiAsync
+  href: api/KWiJisho.Modules.APIs.NasaApi.Apod.html#KWiJisho_Modules_APIs_NasaApi_Apod_GetUsingNasaApiAsync_
+  commentId: Overload:KWiJisho.Modules.APIs.NasaApi.Apod.GetUsingNasaApiAsync
+  isSpec: "True"
+  fullName: KWiJisho.Modules.APIs.NasaApi.Apod.GetUsingNasaApiAsync
+  nameWithType: NasaApi.Apod.GetUsingNasaApiAsync
+- uid: KWiJisho.Modules.APIs.NasaApi.HttpClient
+  name: HttpClient
+  href: api/KWiJisho.Modules.APIs.NasaApi.html#KWiJisho_Modules_APIs_NasaApi_HttpClient
+  commentId: F:KWiJisho.Modules.APIs.NasaApi.HttpClient
+  fullName: KWiJisho.Modules.APIs.NasaApi.HttpClient
+  nameWithType: NasaApi.HttpClient
+- uid: KWiJisho.Modules.APIs.OpenAiApi
+  name: OpenAiApi
+  href: api/KWiJisho.Modules.APIs.OpenAiApi.html
+  commentId: T:KWiJisho.Modules.APIs.OpenAiApi
+  fullName: KWiJisho.Modules.APIs.OpenAiApi
+  nameWithType: OpenAiApi
+- uid: KWiJisho.Modules.APIs.OpenAiApi.GetPromptAsync(System.String,System.String)
+  name: GetPromptAsync(string, string)
+  href: api/KWiJisho.Modules.APIs.OpenAiApi.html#KWiJisho_Modules_APIs_OpenAiApi_GetPromptAsync_System_String_System_String_
+  commentId: M:KWiJisho.Modules.APIs.OpenAiApi.GetPromptAsync(System.String,System.String)
+  name.vb: GetPromptAsync(String, String)
+  fullName: KWiJisho.Modules.APIs.OpenAiApi.GetPromptAsync(string, string)
+  fullName.vb: KWiJisho.Modules.APIs.OpenAiApi.GetPromptAsync(String, String)
+  nameWithType: OpenAiApi.GetPromptAsync(string, string)
+  nameWithType.vb: OpenAiApi.GetPromptAsync(String, String)
+- uid: KWiJisho.Modules.APIs.OpenAiApi.GetPromptAsync*
+  name: GetPromptAsync
+  href: api/KWiJisho.Modules.APIs.OpenAiApi.html#KWiJisho_Modules_APIs_OpenAiApi_GetPromptAsync_
+  commentId: Overload:KWiJisho.Modules.APIs.OpenAiApi.GetPromptAsync
+  isSpec: "True"
+  fullName: KWiJisho.Modules.APIs.OpenAiApi.GetPromptAsync
+  nameWithType: OpenAiApi.GetPromptAsync
+- uid: KWiJisho.Modules.APIs.OpenAiApi.GetPromptKWiJishoStyleAsync(System.String)
+  name: GetPromptKWiJishoStyleAsync(string)
+  href: api/KWiJisho.Modules.APIs.OpenAiApi.html#KWiJisho_Modules_APIs_OpenAiApi_GetPromptKWiJishoStyleAsync_System_String_
+  commentId: M:KWiJisho.Modules.APIs.OpenAiApi.GetPromptKWiJishoStyleAsync(System.String)
+  name.vb: GetPromptKWiJishoStyleAsync(String)
+  fullName: KWiJisho.Modules.APIs.OpenAiApi.GetPromptKWiJishoStyleAsync(string)
+  fullName.vb: KWiJisho.Modules.APIs.OpenAiApi.GetPromptKWiJishoStyleAsync(String)
+  nameWithType: OpenAiApi.GetPromptKWiJishoStyleAsync(string)
+  nameWithType.vb: OpenAiApi.GetPromptKWiJishoStyleAsync(String)
+- uid: KWiJisho.Modules.APIs.OpenAiApi.GetPromptKWiJishoStyleAsync*
+  name: GetPromptKWiJishoStyleAsync
+  href: api/KWiJisho.Modules.APIs.OpenAiApi.html#KWiJisho_Modules_APIs_OpenAiApi_GetPromptKWiJishoStyleAsync_
+  commentId: Overload:KWiJisho.Modules.APIs.OpenAiApi.GetPromptKWiJishoStyleAsync
+  isSpec: "True"
+  fullName: KWiJisho.Modules.APIs.OpenAiApi.GetPromptKWiJishoStyleAsync
+  nameWithType: OpenAiApi.GetPromptKWiJishoStyleAsync
+- uid: KWiJisho.Modules.APIs.OpenAiApi.GetPromptSummarizeTextAsync(System.String)
+  name: GetPromptSummarizeTextAsync(string)
+  href: api/KWiJisho.Modules.APIs.OpenAiApi.html#KWiJisho_Modules_APIs_OpenAiApi_GetPromptSummarizeTextAsync_System_String_
+  commentId: M:KWiJisho.Modules.APIs.OpenAiApi.GetPromptSummarizeTextAsync(System.String)
+  name.vb: GetPromptSummarizeTextAsync(String)
+  fullName: KWiJisho.Modules.APIs.OpenAiApi.GetPromptSummarizeTextAsync(string)
+  fullName.vb: KWiJisho.Modules.APIs.OpenAiApi.GetPromptSummarizeTextAsync(String)
+  nameWithType: OpenAiApi.GetPromptSummarizeTextAsync(string)
+  nameWithType.vb: OpenAiApi.GetPromptSummarizeTextAsync(String)
+- uid: KWiJisho.Modules.APIs.OpenAiApi.GetPromptSummarizeTextAsync*
+  name: GetPromptSummarizeTextAsync
+  href: api/KWiJisho.Modules.APIs.OpenAiApi.html#KWiJisho_Modules_APIs_OpenAiApi_GetPromptSummarizeTextAsync_
+  commentId: Overload:KWiJisho.Modules.APIs.OpenAiApi.GetPromptSummarizeTextAsync
+  isSpec: "True"
+  fullName: KWiJisho.Modules.APIs.OpenAiApi.GetPromptSummarizeTextAsync
+  nameWithType: OpenAiApi.GetPromptSummarizeTextAsync
+- uid: KWiJisho.Modules.APIs.OpenAiApi.GetPromptTranslateToPortugueseAsync(System.String)
+  name: GetPromptTranslateToPortugueseAsync(string)
+  href: api/KWiJisho.Modules.APIs.OpenAiApi.html#KWiJisho_Modules_APIs_OpenAiApi_GetPromptTranslateToPortugueseAsync_System_String_
+  commentId: M:KWiJisho.Modules.APIs.OpenAiApi.GetPromptTranslateToPortugueseAsync(System.String)
+  name.vb: GetPromptTranslateToPortugueseAsync(String)
+  fullName: KWiJisho.Modules.APIs.OpenAiApi.GetPromptTranslateToPortugueseAsync(string)
+  fullName.vb: KWiJisho.Modules.APIs.OpenAiApi.GetPromptTranslateToPortugueseAsync(String)
+  nameWithType: OpenAiApi.GetPromptTranslateToPortugueseAsync(string)
+  nameWithType.vb: OpenAiApi.GetPromptTranslateToPortugueseAsync(String)
+- uid: KWiJisho.Modules.APIs.OpenAiApi.GetPromptTranslateToPortugueseAsync*
+  name: GetPromptTranslateToPortugueseAsync
+  href: api/KWiJisho.Modules.APIs.OpenAiApi.html#KWiJisho_Modules_APIs_OpenAiApi_GetPromptTranslateToPortugueseAsync_
+  commentId: Overload:KWiJisho.Modules.APIs.OpenAiApi.GetPromptTranslateToPortugueseAsync
+  isSpec: "True"
+  fullName: KWiJisho.Modules.APIs.OpenAiApi.GetPromptTranslateToPortugueseAsync
+  nameWithType: OpenAiApi.GetPromptTranslateToPortugueseAsync
 - uid: KWiJisho.Modules.Api
   name: KWiJisho.Modules.Api
   href: api/KWiJisho.Modules.Api.html
@@ -859,12 +1075,12 @@ references:
   isSpec: "True"
   fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.GetInfoAsync
   nameWithType: PrefixCommandManager.PrefixInfo.GetInfoAsync
-- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.furtherHelpDetailsMessage
-  name: furtherHelpDetailsMessage
-  href: api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixInfo_furtherHelpDetailsMessage
-  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.furtherHelpDetailsMessage
-  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.furtherHelpDetailsMessage
-  nameWithType: PrefixCommandManager.PrefixInfo.furtherHelpDetailsMessage
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.furtherHelpMessage
+  name: furtherHelpMessage
+  href: api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixInfo_furtherHelpMessage
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.furtherHelpMessage
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.furtherHelpMessage
+  nameWithType: PrefixCommandManager.PrefixInfo.furtherHelpMessage
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.help
   name: help
   href: api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixInfo_help
@@ -883,22 +1099,22 @@ references:
   commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt
   fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt
   nameWithType: PrefixCommandManager.PrefixKwiGpt
-- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync(DSharpPlus.CommandsNext.CommandContext,System.String[])
-  name: ChatGptPromptAsync(CommandContext, params string[])
-  href: api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixKwiGpt_ChatGptPromptAsync_DSharpPlus_CommandsNext_CommandContext_System_String___
-  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync(DSharpPlus.CommandsNext.CommandContext,System.String[])
-  name.vb: ChatGptPromptAsync(CommandContext, ParamArray String())
-  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync(DSharpPlus.CommandsNext.CommandContext, params string[])
-  fullName.vb: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync(DSharpPlus.CommandsNext.CommandContext, ParamArray String())
-  nameWithType: PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync(CommandContext, params string[])
-  nameWithType.vb: PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync(CommandContext, ParamArray String())
-- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync*
-  name: ChatGptPromptAsync
-  href: api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixKwiGpt_ChatGptPromptAsync_
-  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync(DSharpPlus.CommandsNext.CommandContext,System.String[])
+  name: GetChatGptPromptAsync(CommandContext, params string[])
+  href: api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixKwiGpt_GetChatGptPromptAsync_DSharpPlus_CommandsNext_CommandContext_System_String___
+  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync(DSharpPlus.CommandsNext.CommandContext,System.String[])
+  name.vb: GetChatGptPromptAsync(CommandContext, ParamArray String())
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync(DSharpPlus.CommandsNext.CommandContext, params string[])
+  fullName.vb: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync(DSharpPlus.CommandsNext.CommandContext, ParamArray String())
+  nameWithType: PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync(CommandContext, params string[])
+  nameWithType.vb: PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync(CommandContext, ParamArray String())
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync*
+  name: GetChatGptPromptAsync
+  href: api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixKwiGpt_GetChatGptPromptAsync_
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync
   isSpec: "True"
-  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync
-  nameWithType: PrefixCommandManager.PrefixKwiGpt.ChatGptPromptAsync
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync
+  nameWithType: PrefixCommandManager.PrefixKwiGpt.GetChatGptPromptAsync
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.k
   name: k
   href: api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixKwiGpt_k

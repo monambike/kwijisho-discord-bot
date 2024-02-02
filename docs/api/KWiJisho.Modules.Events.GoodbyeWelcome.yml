@@ -23,11 +23,14 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GoodbyeWelcome
     path: ../src/KWiJisho/Modules/Events/GoodbyeWelcome.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Events
-  summary: Class responsible for managing goodbye and welcome events and methods.
+  summary: >-
+    Provides a set of events and methods fired when a user enters and leaves a discord
+
+    server.
   example: []
   syntax:
     content: internal class GoodbyeWelcome
@@ -60,7 +63,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: OnGuildMemberAddedAsync
     path: ../src/KWiJisho/Modules/Events/GoodbyeWelcome.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Events
@@ -101,7 +104,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: OnGuildMemberRemovedAsync
     path: ../src/KWiJisho/Modules/Events/GoodbyeWelcome.cs
-    startLine: 53
+    startLine: 54
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Events
@@ -142,7 +145,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetRandomWelcomeMessage
     path: ../src/KWiJisho/Modules/Events/GoodbyeWelcome.cs
-    startLine: 84
+    startLine: 85
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Events
@@ -180,7 +183,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetRandomGoodbyeMessage
     path: ../src/KWiJisho/Modules/Events/GoodbyeWelcome.cs
-    startLine: 96
+    startLine: 97
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Events

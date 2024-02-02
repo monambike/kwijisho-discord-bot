@@ -94,14 +94,15 @@ namespace KWiJisho.Modules
 
         internal static async Task<ConfigJson> DeserializeConfigJsonFileAsync()
         {
-
+            // The variable to hold the JSON content.
             var json = string.Empty;
-            // Opening config.json file and reading its content
+
+            // Opening config.json file and reading its content.
             using (var fileSteam = File.OpenRead("config.json"))
             using (var streamReader = new StreamReader(fileSteam, new UTF8Encoding(false)))
-                // Getting Json from the read and setting into the variable
+                // Getting Json from the read and setting into the variable.
                 json = await streamReader.ReadToEndAsync().ConfigureAwait(false);
-            // Deserializing Json from the string and returning as result
+            // Deserializing Json from the string and returning as result.
             return JsonConvert.DeserializeObject<ConfigJson>(json);
         }
 

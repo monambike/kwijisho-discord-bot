@@ -121,10 +121,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: TramontinaWelcomeChannelId
     path: ../src/KWiJisho/Modules/Utils/ServerInfos.cs
-    startLine: 17
+    startLine: 20
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Utils
+  summary: Tramontina welcome Discord channeld Id.
+  example: []
   syntax:
     content: internal static ulong TramontinaWelcomeChannelId { get; }
     parameters: []

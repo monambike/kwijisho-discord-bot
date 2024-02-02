@@ -20,10 +20,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: MessageReceived
     path: ../src/KWiJisho/Modules/Events/MessageReceived.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Events
+  summary: Provides a set of events and methods for when a message is received.
+  example: []
   syntax:
     content: internal class MessageReceived
     content.vb: Friend Class MessageReceived
@@ -55,7 +57,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ValidateMentionedUsersAsync
     path: ../src/KWiJisho/Modules/Events/MessageReceived.cs
-    startLine: 16
+    startLine: 19
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Events

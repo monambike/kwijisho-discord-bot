@@ -20,10 +20,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Scheduler
     path: ../src/KWiJisho/Modules/Events/BirthdayJob.cs
-    startLine: 14
+    startLine: 28
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Events
+  summary: Provides methods for scheduling tasks.
+  example: []
   syntax:
     content: internal class Scheduler
     content.vb: Friend Class Scheduler
@@ -55,14 +57,17 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: CreateBirthdayScheduler
     path: ../src/KWiJisho/Modules/Events/BirthdayJob.cs
-    startLine: 16
+    startLine: 34
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Events
+  summary: Creates a birthday scheduler as part of the Quartz.NET library.
+  example: []
   syntax:
     content: internal static Task CreateBirthdayScheduler()
     return:
       type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> representing the asynchronous creation of the birthday scheduler.
     content.vb: Friend Shared Function CreateBirthdayScheduler() As Task
   overload: KWiJisho.Modules.Events.Scheduler.CreateBirthdayScheduler*
 references:
@@ -333,12 +338,6 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: KWiJisho.Modules.Events.Scheduler.CreateBirthdayScheduler*
-  commentId: Overload:KWiJisho.Modules.Events.Scheduler.CreateBirthdayScheduler
-  href: KWiJisho.Modules.Events.Scheduler.html#KWiJisho_Modules_Events_Scheduler_CreateBirthdayScheduler
-  name: CreateBirthdayScheduler
-  nameWithType: Scheduler.CreateBirthdayScheduler
-  fullName: KWiJisho.Modules.Events.Scheduler.CreateBirthdayScheduler
 - uid: System.Threading.Tasks.Task
   commentId: T:System.Threading.Tasks.Task
   parent: System.Threading.Tasks
@@ -347,6 +346,12 @@ references:
   name: Task
   nameWithType: Task
   fullName: System.Threading.Tasks.Task
+- uid: KWiJisho.Modules.Events.Scheduler.CreateBirthdayScheduler*
+  commentId: Overload:KWiJisho.Modules.Events.Scheduler.CreateBirthdayScheduler
+  href: KWiJisho.Modules.Events.Scheduler.html#KWiJisho_Modules_Events_Scheduler_CreateBirthdayScheduler
+  name: CreateBirthdayScheduler
+  nameWithType: Scheduler.CreateBirthdayScheduler
+  fullName: KWiJisho.Modules.Events.Scheduler.CreateBirthdayScheduler
 - uid: System.Threading.Tasks
   commentId: N:System.Threading.Tasks
   isExternal: true

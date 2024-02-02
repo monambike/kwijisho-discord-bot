@@ -21,10 +21,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: BirthdayJob
     path: ../src/KWiJisho/Modules/Events/BirthdayJob.cs
-    startLine: 6
+    startLine: 9
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Events
+  summary: Represents a Quartz.NET job that executes a birthday message task.
+  example: []
   syntax:
     content: 'internal class BirthdayJob : IJob'
     content.vb: Friend Class BirthdayJob Implements IJob
@@ -58,35 +60,21 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Execute
     path: ../src/KWiJisho/Modules/Events/BirthdayJob.cs
-    startLine: 9
+    startLine: 16
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Events
-  summary: >-
-    Called by the <xref href="Quartz.IScheduler" data-throw-if-not-resolved="false"></xref> when a <xref href="Quartz.ITrigger" data-throw-if-not-resolved="false"></xref>
-
-    fires that is associated with the <xref href="Quartz.IJob" data-throw-if-not-resolved="false"></xref>.
-  remarks: >-
-    The implementation may wish to set a  result object on the 
-
-    JobExecutionContext before this method exits.  The result itself
-
-    is meaningless to Quartz, but may be informative to 
-
-    <xref href="Quartz.IJobListener" data-throw-if-not-resolved="false"></xref>s or 
-
-    <xref href="Quartz.ITriggerListener" data-throw-if-not-resolved="false"></xref>s that are watching the job's 
-
-    execution.
+  summary: Executes the birthday message task as part of the Quartz.NET job.
   example: []
   syntax:
     content: public Task Execute(IJobExecutionContext context)
     parameters:
     - id: context
       type: Quartz.IJobExecutionContext
-      description: The execution context.
+      description: The execution context provided by Quartz.NET.
     return:
       type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> representing the asynchronous execution of the job.
     content.vb: Public Function Execute(context As IJobExecutionContext) As Task
   overload: KWiJisho.Modules.Events.BirthdayJob.Execute*
   implements:
@@ -109,14 +97,17 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GiveBirthdayMessage
     path: ../src/KWiJisho/Modules/Events/BirthdayJob.cs
-    startLine: 11
+    startLine: 22
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Events
+  summary: Sends a birthday message as an asynchronous task.
+  example: []
   syntax:
     content: private static Task GiveBirthdayMessage()
     return:
       type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> representing the asynchronous execution of the birthday message task.
     content.vb: Private Shared Function GiveBirthdayMessage() As Task
   overload: KWiJisho.Modules.Events.BirthdayJob.GiveBirthdayMessage*
 references:
@@ -400,30 +391,14 @@ references:
   name: Quartz
   nameWithType: Quartz
   fullName: Quartz
-- uid: Quartz.IScheduler
-  commentId: T:Quartz.IScheduler
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
   isExternal: true
-  name: IScheduler
-  nameWithType: IScheduler
-  fullName: Quartz.IScheduler
-- uid: Quartz.ITrigger
-  commentId: T:Quartz.ITrigger
-  isExternal: true
-  name: ITrigger
-  nameWithType: ITrigger
-  fullName: Quartz.ITrigger
-- uid: Quartz.IJobListener
-  commentId: T:Quartz.IJobListener
-  isExternal: true
-  name: IJobListener
-  nameWithType: IJobListener
-  fullName: Quartz.IJobListener
-- uid: Quartz.ITriggerListener
-  commentId: T:Quartz.ITriggerListener
-  isExternal: true
-  name: ITriggerListener
-  nameWithType: ITriggerListener
-  fullName: Quartz.ITriggerListener
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
 - uid: KWiJisho.Modules.Events.BirthdayJob.Execute*
   commentId: Overload:KWiJisho.Modules.Events.BirthdayJob.Execute
   href: KWiJisho.Modules.Events.BirthdayJob.html#KWiJisho_Modules_Events_BirthdayJob_Execute_Quartz_IJobExecutionContext_
@@ -462,14 +437,6 @@ references:
   name: IJobExecutionContext
   nameWithType: IJobExecutionContext
   fullName: Quartz.IJobExecutionContext
-- uid: System.Threading.Tasks.Task
-  commentId: T:System.Threading.Tasks.Task
-  parent: System.Threading.Tasks
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
-  name: Task
-  nameWithType: Task
-  fullName: System.Threading.Tasks.Task
 - uid: System.Threading.Tasks
   commentId: N:System.Threading.Tasks
   isExternal: true
