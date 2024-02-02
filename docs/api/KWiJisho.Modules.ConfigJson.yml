@@ -34,13 +34,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/ConfigJson.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ConfigJson
     path: ../src/KWiJisho/Modules/ConfigJson.cs
     startLine: 12
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   summary: Class that represents the ConfigJson file for configuring the discord bot.
   example: []
@@ -68,13 +68,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/ConfigJson.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: KWiJishoToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
     startLine: 16
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
     content: internal static string KWiJishoToken { get; set; }
@@ -97,13 +97,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/ConfigJson.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ChatGptToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
     startLine: 18
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
     content: internal static string ChatGptToken { get; set; }
@@ -126,13 +126,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/ConfigJson.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: NasaToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
     startLine: 20
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
     content: internal static string NasaToken { get; set; }
@@ -155,13 +155,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/ConfigJson.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Prefix
     path: ../src/KWiJisho/Modules/ConfigJson.cs
     startLine: 22
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
     content: internal static string Prefix { get; set; }
@@ -184,13 +184,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/ConfigJson.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Activity
     path: ../src/KWiJisho/Modules/ConfigJson.cs
     startLine: 24
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
     content: internal static string Activity { get; set; }
@@ -213,13 +213,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/ConfigJson.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: DefaultColor
     path: ../src/KWiJisho/Modules/ConfigJson.cs
     startLine: 26
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
     content: internal static ConfigJson.Color DefaultColor { get; set; }
@@ -242,13 +242,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/ConfigJson.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: _configJsonKWiJishoToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
     startLine: 31
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
     content: private string _configJsonKWiJishoToken
@@ -269,13 +269,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/ConfigJson.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ConfigJsonKWiJishoToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
     startLine: 32
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
     content: >-
@@ -340,13 +340,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/ConfigJson.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: _configJsonChatGptToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
     startLine: 46
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
     content: private string _configJsonChatGptToken
@@ -367,13 +367,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/ConfigJson.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ConfigJsonChatGptToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
     startLine: 47
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
     content: >-
@@ -438,13 +438,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/ConfigJson.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: _configJsonNasaToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
     startLine: 61
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
     content: private string _configJsonNasaToken
@@ -465,13 +465,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/ConfigJson.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ConfigJsonNasaToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
     startLine: 62
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
     content: >-
@@ -536,13 +536,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/ConfigJson.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: _configJsonPrefix
     path: ../src/KWiJisho/Modules/ConfigJson.cs
     startLine: 76
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
     content: private string _configJsonPrefix
@@ -563,13 +563,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/ConfigJson.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ConfigJsonPrefix
     path: ../src/KWiJisho/Modules/ConfigJson.cs
     startLine: 77
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
     content: >-
@@ -634,13 +634,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/ConfigJson.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: _configJsonActivity
     path: ../src/KWiJisho/Modules/ConfigJson.cs
     startLine: 82
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
     content: private string _configJsonActivity
@@ -661,13 +661,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/ConfigJson.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ConfigJsonActivity
     path: ../src/KWiJisho/Modules/ConfigJson.cs
     startLine: 83
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
     content: >-
@@ -732,13 +732,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/ConfigJson.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: _configJsonPurpleColor
     path: ../src/KWiJisho/Modules/ConfigJson.cs
     startLine: 88
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
     content: private ConfigJson.Color _configJsonPurpleColor
@@ -759,13 +759,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/ConfigJson.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ConfigJsonPurpleColor
     path: ../src/KWiJisho/Modules/ConfigJson.cs
     startLine: 89
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
     content: >-
@@ -830,13 +830,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/ConfigJson.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: DeserializeConfigJsonFileAsync
     path: ../src/KWiJisho/Modules/ConfigJson.cs
     startLine: 94
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
     content: internal static Task<ConfigJson> DeserializeConfigJsonFileAsync()

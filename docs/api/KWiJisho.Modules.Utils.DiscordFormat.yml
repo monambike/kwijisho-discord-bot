@@ -17,13 +17,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordFormat.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: DiscordFormat
     path: ../src/KWiJisho/Modules/Utils/DiscordFormat.cs
     startLine: 5
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: Provides utility extension methods for formatting text with Discord markdown.
   example: []
@@ -55,13 +55,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordFormat.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ToDiscordBold
     path: ../src/KWiJisho/Modules/Utils/DiscordFormat.cs
     startLine: 12
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: Formats the specified string in bold using Discord markdown.
   example: []
@@ -94,13 +94,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordFormat.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ToDiscordItalic
     path: ../src/KWiJisho/Modules/Utils/DiscordFormat.cs
     startLine: 19
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: Formats the specified string in italic using Discord markdown.
   example: []

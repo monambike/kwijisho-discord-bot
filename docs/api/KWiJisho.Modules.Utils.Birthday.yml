@@ -20,13 +20,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/Birthday.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Birthday
     path: ../src/KWiJisho/Modules/Utils/Birthday.cs
     startLine: 7
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: internal static class Birthday
@@ -55,13 +55,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/Birthday.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetUsersByClosestBirthday
     path: ../src/KWiJisho/Modules/Utils/Birthday.cs
     startLine: 9
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: internal static List<User> GetUsersByClosestBirthday()
@@ -83,13 +83,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/Birthday.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetDiscordUserByClosestBirthday
     path: ../src/KWiJisho/Modules/Utils/Birthday.cs
     startLine: 34
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: internal static User GetDiscordUserByClosestBirthday(DiscordGuild discordGuild)
@@ -114,13 +114,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/Birthday.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetDaysRemainingByUser
     path: ../src/KWiJisho/Modules/Utils/Birthday.cs
     startLine: 52
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: internal static double GetDaysRemainingByUser(User discordUser)
@@ -145,13 +145,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/Birthday.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetUpcomingBirthdayDate
     path: ../src/KWiJisho/Modules/Utils/Birthday.cs
     startLine: 58
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: internal static Birthday.UpcomingBirthdayDate GetUpcomingBirthdayDate(double daysRemaning)
@@ -179,13 +179,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/Birthday.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GenerateBirthdayMessage
     path: ../src/KWiJisho/Modules/Utils/Birthday.cs
     startLine: 69
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: internal static string GenerateBirthdayMessage(User discordUser)

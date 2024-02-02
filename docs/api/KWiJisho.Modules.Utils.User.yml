@@ -21,13 +21,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordUsers.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: User
     path: ../src/KWiJisho/Modules/Utils/DiscordUsers.cs
     startLine: 31
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: Represents a Discord user along with their identifier and additional information.
   example: []
@@ -58,13 +58,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordUsers.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: .ctor
     path: ../src/KWiJisho/Modules/Utils/DiscordUsers.cs
     startLine: 31
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: Represents a Discord user along with their identifier and additional information.
   example: []
@@ -96,13 +96,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordUsers.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Id
     path: ../src/KWiJisho/Modules/Utils/DiscordUsers.cs
     startLine: 36
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: The unique identifier of the user.
   example: []
@@ -127,13 +127,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordUsers.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Born
     path: ../src/KWiJisho/Modules/Utils/DiscordUsers.cs
     startLine: 41
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: The date when the user was born.
   example: []
@@ -158,13 +158,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordUsers.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Identifier
     path: ../src/KWiJisho/Modules/Utils/DiscordUsers.cs
     startLine: 46
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: The custom identifier or nickname associated with the user.
   example: []
@@ -189,13 +189,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordUsers.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Birthday
     path: ../src/KWiJisho/Modules/Utils/DiscordUsers.cs
     startLine: 51
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: Gets or sets the user's birthday (if applicable).
   example: []
@@ -220,13 +220,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordUsers.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetUserDiscordMember
     path: ../src/KWiJisho/Modules/Utils/DiscordUsers.cs
     startLine: 59
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: >-
     Tries to return a <xref href="DSharpPlus.Entities.DiscordMember" data-throw-if-not-resolved="false"></xref> representing the user in the specified server.

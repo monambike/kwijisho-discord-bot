@@ -15,13 +15,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Slash/SlashBasic.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SlashBasic
     path: ../src/KWiJisho/Modules/Commands/Slash/SlashBasic.cs
     startLine: 9
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Slash
   summary: Represents a set of basic slash commands.
   example: []

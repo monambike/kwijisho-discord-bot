@@ -17,13 +17,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixKwiGpt.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrefixKwiGpt
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixKwiGpt.cs
     startLine: 13
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: >-
     Represents a set of KWiGpt prefix commands. Interaction commands with ChatGpt
@@ -60,13 +60,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixKwiGpt.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: k
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixKwiGpt.cs
     startLine: 18
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Represent the command to interact with the bot with ChatGpt in KWiJisho style.
   example: []
@@ -89,13 +89,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixKwiGpt.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ChatGptPromptAsync
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixKwiGpt.cs
     startLine: 19
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: >-

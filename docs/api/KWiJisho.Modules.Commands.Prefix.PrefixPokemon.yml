@@ -15,13 +15,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixPokemon.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrefixPokemon
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixPokemon.cs
     startLine: 2
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal class PrefixPokemon

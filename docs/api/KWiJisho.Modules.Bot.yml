@@ -24,13 +24,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/BotRegister.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Bot
     path: ../src/KWiJisho/Modules/BotRegister.cs
     startLine: 17
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   summary: The main entry point of the application.
   example: []
@@ -61,13 +61,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Bot.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: DiscordClient
     path: ../src/KWiJisho/Modules/Bot.cs
     startLine: 16
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   summary: Gets or sets the Discord client instance used by the bot.
   example: []
@@ -92,13 +92,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Bot.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrefixCommands
     path: ../src/KWiJisho/Modules/Bot.cs
     startLine: 21
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   summary: Gets or sets the <xref href="DSharpPlus.CommandsNext.CommandsNextExtension" data-throw-if-not-resolved="false"></xref> instance for handling bot prefix commands.
   example: []
@@ -123,13 +123,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Bot.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SlashCommands
     path: ../src/KWiJisho/Modules/Bot.cs
     startLine: 26
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   summary: Gets or sets the <xref href="DSharpPlus.SlashCommands.SlashCommandsExtension" data-throw-if-not-resolved="false"></xref> instance for handling bot slash commands.
   example: []
@@ -154,13 +154,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Bot.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: RunAsync
     path: ../src/KWiJisho/Modules/Bot.cs
     startLine: 33
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   summary: >-
     Asynchronously runs the bot connecting it to the Discord and initializing
@@ -188,13 +188,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/BotRegister.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: RegisterPrefixCommands
     path: ../src/KWiJisho/Modules/BotRegister.cs
     startLine: 22
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   summary: Register all the Discord bot prefix commands.
   example: []
@@ -216,13 +216,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/BotRegister.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: RegisterSlashCommands
     path: ../src/KWiJisho/Modules/BotRegister.cs
     startLine: 36
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   summary: Register all the Discord bot slash commands.
   example: []
@@ -244,13 +244,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/BotRegister.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: RegisterBotEvents
     path: ../src/KWiJisho/Modules/BotRegister.cs
     startLine: 60
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   summary: Register all the Discord bot events.
   example: []
@@ -272,13 +272,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/BotRegister.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: RegisterPrefixCommandsPermissions
     path: ../src/KWiJisho/Modules/BotRegister.cs
     startLine: 69
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
     content: internal void RegisterPrefixCommandsPermissions()
@@ -298,13 +298,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/BotRegister.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: RegisterSlashCommandsPermissions
     path: ../src/KWiJisho/Modules/BotRegister.cs
     startLine: 89
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
     content: internal void RegisterSlashCommandsPermissions()

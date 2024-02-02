@@ -17,7 +17,7 @@ items:
   fullName: KWiJisho.Modules.Commands.Slash
   type: Namespace
   assemblies:
-  - KWiJisho
+  - KWIJisho
 references:
 - uid: KWiJisho.Modules.Commands.Slash.SlashBasic
   commentId: T:KWiJisho.Modules.Commands.Slash.SlashBasic

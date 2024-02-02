@@ -16,13 +16,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Events/BirthdayJob.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Scheduler
     path: ../src/KWiJisho/Modules/Events/BirthdayJob.cs
     startLine: 14
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Events
   syntax:
     content: internal class Scheduler
@@ -51,13 +51,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Events/BirthdayJob.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: CreateBirthdayScheduler
     path: ../src/KWiJisho/Modules/Events/BirthdayJob.cs
     startLine: 16
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Events
   syntax:
     content: internal static Task CreateBirthdayScheduler()

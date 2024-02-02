@@ -18,7 +18,7 @@ items:
   fullName: KWiJisho.Modules.Events
   type: Namespace
   assemblies:
-  - KWiJisho
+  - KWIJisho
 references:
 - uid: KWiJisho.Modules.Events.BirthdayJob
   commentId: T:KWiJisho.Modules.Events.BirthdayJob

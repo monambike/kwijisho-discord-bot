@@ -26,13 +26,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordEmojis.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: AnimatedEmojis
     path: ../src/KWiJisho/Modules/Utils/DiscordEmojis.cs
     startLine: 6
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: internal static class DiscordEmojis.AnimatedEmojis
@@ -61,13 +61,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordEmojis.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: KWiJishoEmojis
     path: ../src/KWiJisho/Modules/Utils/DiscordEmojis.cs
     startLine: 9
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: internal static List<Emoji> KWiJishoEmojis
@@ -88,13 +88,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordEmojis.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: KWiJishoMemeEmojis
     path: ../src/KWiJisho/Modules/Utils/DiscordEmojis.cs
     startLine: 12
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: internal static List<DiscordEmojis.CatMemeEmoji> KWiJishoMemeEmojis
@@ -115,13 +115,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordEmojis.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: MemeChipiCat
     path: ../src/KWiJisho/Modules/Utils/DiscordEmojis.cs
     startLine: 14
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: internal static DiscordEmojis.CatMemeEmoji MemeChipiCat
@@ -142,13 +142,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordEmojis.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: MemeAppleCat
     path: ../src/KWiJisho/Modules/Utils/DiscordEmojis.cs
     startLine: 15
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: internal static DiscordEmojis.CatMemeEmoji MemeAppleCat
@@ -169,13 +169,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordEmojis.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: MemeBananaCat
     path: ../src/KWiJisho/Modules/Utils/DiscordEmojis.cs
     startLine: 16
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: internal static DiscordEmojis.CatMemeEmoji MemeBananaCat
@@ -196,13 +196,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordEmojis.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: MemeHappyCat
     path: ../src/KWiJisho/Modules/Utils/DiscordEmojis.cs
     startLine: 17
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: internal static DiscordEmojis.CatMemeEmoji MemeHappyCat
@@ -223,13 +223,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordEmojis.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: KWiJishoPartyEmojis
     path: ../src/KWiJisho/Modules/Utils/DiscordEmojis.cs
     startLine: 20
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: internal static List<DiscordEmojis.CatPartyEmoji> KWiJishoPartyEmojis
@@ -250,13 +250,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordEmojis.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: CatCoke
     path: ../src/KWiJisho/Modules/Utils/DiscordEmojis.cs
     startLine: 22
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: internal static DiscordEmojis.CatPartyEmoji CatCoke
@@ -277,13 +277,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordEmojis.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: CatParty1
     path: ../src/KWiJisho/Modules/Utils/DiscordEmojis.cs
     startLine: 24
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: internal static DiscordEmojis.CatPartyEmoji CatParty1
@@ -304,13 +304,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordEmojis.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: CatParty2
     path: ../src/KWiJisho/Modules/Utils/DiscordEmojis.cs
     startLine: 25
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: internal static DiscordEmojis.CatPartyEmoji CatParty2
@@ -331,13 +331,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordEmojis.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: CatParty3
     path: ../src/KWiJisho/Modules/Utils/DiscordEmojis.cs
     startLine: 26
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: internal static DiscordEmojis.CatPartyEmoji CatParty3

@@ -19,13 +19,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrefixCommand
     path: ../src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
     startLine: 52
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Represents a single Discord command.
   example: []
@@ -56,13 +56,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Name
     path: ../src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
     startLine: 57
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Gets or sets the name of the command.
   example: []
@@ -87,13 +87,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Description
     path: ../src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
     startLine: 62
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Gets or sets the description of the commands.
   example: []
@@ -118,13 +118,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Permissions
     path: ../src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
     startLine: 67
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Gets or sets the required permissions for the command.
   example: []
@@ -149,13 +149,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: .ctor
     path: ../src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
     startLine: 76
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Initializes a new instance of the <xref href="KWiJisho.Modules.Commands.Prefix.PrefixCommand" data-throw-if-not-resolved="false"></xref> class.
   example: []

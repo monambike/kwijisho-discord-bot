@@ -21,13 +21,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrefixNasa
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
     startLine: 13
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: 'internal class PrefixCommandManager.PrefixNasa : BaseCommandModule'
@@ -59,13 +59,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: apod
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
     startLine: 15
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal PrefixCommand apod
@@ -86,13 +86,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ApodAsync
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
     startLine: 16
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: >-
@@ -129,13 +129,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: apodResume
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
     startLine: 24
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal PrefixCommand apodResume
@@ -156,13 +156,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ApodResumeAsync
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
     startLine: 25
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: >-
@@ -199,13 +199,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GenerateApodDiscordMessageBuilderAsync
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
     startLine: 32
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: private Task<DiscordEmbedBuilder> GenerateApodDiscordMessageBuilderAsync(CommandContext commandContext)
@@ -230,13 +230,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: BuildApodMessage
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
     startLine: 63
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: private Task<DiscordEmbedBuilder> BuildApodMessage(CommandContext commandContext)

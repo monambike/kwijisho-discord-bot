@@ -21,13 +21,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ApodBuilder
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
     startLine: 92
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal class PrefixCommandManager.PrefixNasa.ApodBuilder
@@ -56,13 +56,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ApodDateText
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
     startLine: 94
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal string ApodDateText { get; set; }
@@ -85,13 +85,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: CopyrightText
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
     startLine: 95
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal string CopyrightText { get; set; }
@@ -114,13 +114,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: CultureInfo
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
     startLine: 96
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal CultureInfo CultureInfo { get; set; }
@@ -143,13 +143,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: DateContent
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
     startLine: 98
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal DateTime DateContent { get; set; }
@@ -172,13 +172,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ExplanationContent
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
     startLine: 99
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal string ExplanationContent { get; set; }
@@ -201,13 +201,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: UrlContent
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
     startLine: 100
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal string UrlContent { get; set; }

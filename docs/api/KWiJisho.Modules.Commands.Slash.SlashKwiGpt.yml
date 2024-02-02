@@ -16,13 +16,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Slash/SlashKwiGpt.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SlashKwiGpt
     path: ../src/KWiJisho/Modules/Commands/Slash/SlashKwiGpt.cs
     startLine: 10
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Slash
   summary: >-
     Represents a set of KWiGpt slash commands. Interaction commands with ChatGpt
@@ -61,13 +61,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Slash/SlashKwiGpt.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ChatGptPromptAsync
     path: ../src/KWiJisho/Modules/Commands/Slash/SlashKwiGpt.cs
     startLine: 15
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Slash
   summary: Represent the command to interact with the bot with ChatGpt in KWiJisho style.
   example: []

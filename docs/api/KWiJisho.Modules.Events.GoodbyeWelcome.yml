@@ -19,13 +19,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Events/GoodbyeWelcome.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GoodbyeWelcome
     path: ../src/KWiJisho/Modules/Events/GoodbyeWelcome.cs
     startLine: 13
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Events
   summary: Class responsible for managing goodbye and welcome events and methods.
   example: []
@@ -56,13 +56,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Events/GoodbyeWelcome.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: OnGuildMemberAddedAsync
     path: ../src/KWiJisho/Modules/Events/GoodbyeWelcome.cs
     startLine: 22
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Events
   summary: >-
     Handles the event when a new member joins the Discord server. Sends a welcome message
@@ -97,13 +97,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Events/GoodbyeWelcome.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: OnGuildMemberRemovedAsync
     path: ../src/KWiJisho/Modules/Events/GoodbyeWelcome.cs
     startLine: 53
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Events
   summary: >-
     Handles the event when a member leaves the Discord server. Sends a goodbye message
@@ -138,13 +138,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Events/GoodbyeWelcome.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetRandomWelcomeMessage
     path: ../src/KWiJisho/Modules/Events/GoodbyeWelcome.cs
     startLine: 84
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Events
   summary: Gets a random string welcome message.
   example: []
@@ -176,13 +176,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Events/GoodbyeWelcome.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetRandomGoodbyeMessage
     path: ../src/KWiJisho/Modules/Events/GoodbyeWelcome.cs
     startLine: 96
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Events
   summary: Gets a random string goodbye message.
   example: []

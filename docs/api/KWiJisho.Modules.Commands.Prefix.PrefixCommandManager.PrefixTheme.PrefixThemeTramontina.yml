@@ -36,13 +36,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrefixThemeTramontina
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 18
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: 'internal class PrefixCommandManager.PrefixTheme.PrefixThemeTramontina : BaseCommandModule'
@@ -74,13 +74,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Geral
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 21
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel Geral
@@ -101,13 +101,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrintsEternizados
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 23
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel PrintsEternizados
@@ -128,13 +128,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: YouTube
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 26
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel YouTube
@@ -155,13 +155,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Dicionario
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 28
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel Dicionario
@@ -182,13 +182,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Waifu
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 31
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel Waifu
@@ -209,13 +209,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Radio
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 33
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel Radio
@@ -236,13 +236,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: OutrosBots
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 35
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel OutrosBots
@@ -263,13 +263,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: CanalEscondidinho
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 38
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel CanalEscondidinho
@@ -290,13 +290,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: CorpoDeBombeiros1
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 40
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel CorpoDeBombeiros1
@@ -317,13 +317,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: CorpoDeBombeiros2
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 42
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel CorpoDeBombeiros2
@@ -344,13 +344,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: CantinhoDaFofoca
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 44
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel CantinhoDaFofoca
@@ -371,13 +371,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: TramontinaChannels
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 50
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Channels from tramontina server that can receive theme changing.
   example: []
@@ -400,13 +400,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: themeReset
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 61
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Resets the Tramontina server emojis.
   example: []
@@ -429,13 +429,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ResetThemeAsync
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 62
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: >-
@@ -472,13 +472,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: themeChristmas
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 71
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Sets the Tramontina server to Christmas Theme.
   example: []
@@ -501,13 +501,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SetChristmasThemeAsync
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 72
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: >-
@@ -555,13 +555,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: themeEaster
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 89
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Sets the Tramontina server to Easter Theme.
   example: []
@@ -584,13 +584,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SetEasterThemeAsync
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 90
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: >-
@@ -638,13 +638,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: themeHalloween
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 101
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Sets the Tramontina server to Halloween Theme.
   example: []
@@ -667,13 +667,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SetHalloweenThemeAsync
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 102
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: >-
@@ -721,13 +721,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SetThemeAsync
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 113
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Sets the Tramontina server to a Theme according with parameterization.
   example: []

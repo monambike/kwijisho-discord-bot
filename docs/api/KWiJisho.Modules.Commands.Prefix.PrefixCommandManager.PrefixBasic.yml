@@ -21,13 +21,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrefixBasic
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
     startLine: 11
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Represents a set of basic prefix commands.
   example: []
@@ -61,13 +61,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: emoji
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
     startLine: 16
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Represents the command to send a random animated emoji.
   example: []
@@ -90,13 +90,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SendRandomAnimatedEmoji
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
     startLine: 17
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: >-
@@ -133,13 +133,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: emojim
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
     startLine: 23
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Represents the command to send a random animated meme emoji.
   example: []
@@ -162,13 +162,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SendRandomMemeEmoji
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
     startLine: 24
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: >-
@@ -205,13 +205,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: emojip
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
     startLine: 30
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Represents the command to send a random animated party emoji.
   example: []
@@ -234,13 +234,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SendRandomPartyEmoji
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBasic.cs
     startLine: 31
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: >-

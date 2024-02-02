@@ -23,13 +23,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: KWiJishoLog
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
     startLine: 8
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: Provides methods for handling the application log for important tasks.
   example: []
@@ -60,13 +60,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Path
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
     startLine: 13
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: The log file path.
   example: []
@@ -91,13 +91,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: AddDebug
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
     startLine: 22
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: Adds a debug log entry with the specified message.
   example: []
@@ -126,13 +126,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: AddInfo
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
     startLine: 28
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: Adds a info log entry with the specified message.
   example: []
@@ -161,13 +161,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: AddWarning
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
     startLine: 34
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: Adds a warning log entry with the specified message.
   example: []
@@ -196,13 +196,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: AddError
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
     startLine: 40
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: Adds a error log entry with the specified message.
   example: []
@@ -231,13 +231,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: AddFatal
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
     startLine: 46
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: Adds a fatal log entry with the specified message.
   example: []
@@ -266,13 +266,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Add
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
     startLine: 53
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: Adds a formatted log entry to the log file.
   example: []
@@ -304,13 +304,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/KWiJishoLog.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: AddLineToFile
     path: ../src/KWiJisho/Modules/Utils/KWiJishoLog.cs
     startLine: 60
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: Adds a line to the log file with the specified content.
   example: []

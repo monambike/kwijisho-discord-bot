@@ -17,13 +17,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Events/Buttons.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Buttons
     path: ../src/KWiJisho/Modules/Events/Buttons.cs
     startLine: 11
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Events
   summary: Class responsible for handling button click events.
   example: []
@@ -54,13 +54,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Events/Buttons.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: OnComponentInteractionCreatedAsync
     path: ../src/KWiJisho/Modules/Events/Buttons.cs
     startLine: 19
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Events
   summary: Handles the event when a component interaction is created, like button clicks.
   example: []
@@ -92,13 +92,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Events/Buttons.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: CopyServerNameAsync
     path: ../src/KWiJisho/Modules/Events/Buttons.cs
     startLine: 38
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Events
   summary: >-
     Copies the server name from the interaction's message and puts it into the clipboard.

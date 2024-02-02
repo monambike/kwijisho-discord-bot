@@ -16,7 +16,7 @@ items:
   fullName: KWiJisho.Modules.Commands
   type: Namespace
   assemblies:
-  - KWiJisho
+  - KWIJisho
 references:
 - uid: KWiJisho.Modules.Commands.Basic
   commentId: T:KWiJisho.Modules.Commands.Basic

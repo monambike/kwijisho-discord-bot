@@ -20,13 +20,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Api/NasaApi.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ApodResponseJson
     path: ../src/KWiJisho/Modules/Api/NasaApi.cs
     startLine: 35
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Api
   syntax:
     content: internal class NasaApi.Apod.ApodResponseJson
@@ -55,13 +55,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Api/NasaApi.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Title
     path: ../src/KWiJisho/Modules/Api/NasaApi.cs
     startLine: 40
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Api
   summary: Title of the current Astronomy Picture of the Day.
   example: []
@@ -98,13 +98,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Api/NasaApi.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Explanation
     path: ../src/KWiJisho/Modules/Api/NasaApi.cs
     startLine: 46
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Api
   summary: Explanation of the current Astronomy Picture of the Day.
   example: []
@@ -141,13 +141,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Api/NasaApi.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Date
     path: ../src/KWiJisho/Modules/Api/NasaApi.cs
     startLine: 52
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Api
   summary: Date of the current Astronomy Picture of the Day.
   example: []
@@ -184,13 +184,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Api/NasaApi.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Url
     path: ../src/KWiJisho/Modules/Api/NasaApi.cs
     startLine: 58
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Api
   summary: Image URL of the current Astronomy Picture of the Day.
   example: []
@@ -227,13 +227,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Api/NasaApi.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Copyright
     path: ../src/KWiJisho/Modules/Api/NasaApi.cs
     startLine: 64
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Api
   summary: Copyright of the current Astronomy Picture of the Day.
   example: []

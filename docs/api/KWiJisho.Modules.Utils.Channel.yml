@@ -19,13 +19,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordChannel.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Channel
     path: ../src/KWiJisho/Modules/Utils/DiscordChannel.cs
     startLine: 10
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: >-
     The class that represents a new instance of a Discord channel with a
@@ -65,13 +65,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordChannel.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: .ctor
     path: ../src/KWiJisho/Modules/Utils/DiscordChannel.cs
     startLine: 10
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: >-
     The class that represents a new instance of a Discord channel with a
@@ -108,13 +108,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordChannel.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Id
     path: ../src/KWiJisho/Modules/Utils/DiscordChannel.cs
     startLine: 15
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: The Discord channel unique identifier.
   example: []
@@ -137,13 +137,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordChannel.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: DefaultName
     path: ../src/KWiJisho/Modules/Utils/DiscordChannel.cs
     startLine: 20
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: The Discord channel default name.
   example: []
@@ -166,13 +166,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordChannel.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: UpdateChannelNameAsync
     path: ../src/KWiJisho/Modules/Utils/DiscordChannel.cs
     startLine: 27
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: Updates the name of the Discord channel asynchronously.
   example: []

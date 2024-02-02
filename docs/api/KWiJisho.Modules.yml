@@ -15,7 +15,7 @@ items:
   fullName: KWiJisho.Modules
   type: Namespace
   assemblies:
-  - KWiJisho
+  - KWIJisho
 references:
 - uid: KWiJisho.Modules.Bot
   commentId: T:KWiJisho.Modules.Bot

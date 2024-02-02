@@ -17,7 +17,7 @@ items:
     path: OneOf.SourceGenerator\OneOf.SourceGenerator.OneOfGenerator\GenerateOneOfAttribute.g.cs
     startLine: 7
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: OneOf
   syntax:
     content: >-

@@ -2,10 +2,6 @@
 _layout: landing
 ---
 
-# This is the **HOMEPAGE**.
+# KWiJisho Discord Bot
 
-Refer to [Markdown](http://daringfireball.net/projects/markdown/) for how to write markdown files.
-
-## Quick Start Notes:
-
-1. Add images to the *images* folder if the file is referencing an image.
+Fun and friendly interactive Discord bot with a wide range of functions, including a custom dictionary feature. KWiJisho stands for Kawaii and Jisho (Cute and Dictionary in japanese respectively).

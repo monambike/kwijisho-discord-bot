@@ -26,7 +26,7 @@ items:
   fullName: KWiJisho.Modules.Commands.Prefix
   type: Namespace
   assemblies:
-  - KWiJisho
+  - KWIJisho
 references:
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
   commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager

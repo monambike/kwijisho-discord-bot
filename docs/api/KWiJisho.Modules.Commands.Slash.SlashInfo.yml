@@ -17,13 +17,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Slash/SlashInfo.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SlashInfo
     path: ../src/KWiJisho/Modules/Commands/Slash/SlashInfo.cs
     startLine: 6
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Slash
   syntax:
     content: 'internal class SlashInfo : ApplicationCommandModule'
@@ -57,13 +57,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Slash/SlashInfo.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetHelpAsync
     path: ../src/KWiJisho/Modules/Commands/Slash/SlashInfo.cs
     startLine: 11
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Slash
   summary: Represents the command to show help about the Discord bot commands.
   example: []
@@ -106,13 +106,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Slash/SlashInfo.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetInfoAsync
     path: ../src/KWiJisho/Modules/Commands/Slash/SlashInfo.cs
     startLine: 21
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Slash
   summary: Represents the command to show information about the bot and the bot owner.
   example: []

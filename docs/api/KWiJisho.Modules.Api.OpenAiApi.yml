@@ -19,13 +19,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Api/OpenAiApi.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: OpenAiApi
     path: ../src/KWiJisho/Modules/Api/OpenAiApi.cs
     startLine: 10
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Api
   summary: >-
     This class provides methods for interacting with the OpenAI GPT-3.5 model
@@ -61,13 +61,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Api/OpenAiApi.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetPromptKWiJishoStyleAsync
     path: ../src/KWiJisho/Modules/Api/OpenAiApi.cs
     startLine: 18
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Api
   summary: Asynchronous method to generate a prompt in the style of "KWiJisho."
   example: []
@@ -99,13 +99,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Api/OpenAiApi.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetPromptSummarizeTextAsync
     path: ../src/KWiJisho/Modules/Api/OpenAiApi.cs
     startLine: 30
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Api
   summary: Asynchronous method to generate a prompt for summarizing text.
   example: []
@@ -137,13 +137,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Api/OpenAiApi.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetPromptTranslateToPortugueseAsync
     path: ../src/KWiJisho/Modules/Api/OpenAiApi.cs
     startLine: 39
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Api
   summary: Asynchronous method to generate a prompt for translating text to Brazilian Portuguese.
   example: []
@@ -175,13 +175,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Api/OpenAiApi.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetPromptAsync
     path: ../src/KWiJisho/Modules/Api/OpenAiApi.cs
     startLine: 48
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Api
   summary: Asynchronous method to generate a prompt for the OpenAI GPT-3.5 model.
   example: []

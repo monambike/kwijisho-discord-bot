@@ -16,13 +16,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Api/NasaApi.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: NasaApi
     path: ../src/KWiJisho/Modules/Api/NasaApi.cs
     startLine: 10
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Api
   summary: 'API Documentation: https://api.nasa.gov/'
   example: []
@@ -53,13 +53,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Api/NasaApi.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: HttpClient
     path: ../src/KWiJisho/Modules/Api/NasaApi.cs
     startLine: 15
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Api
   summary: HttpClient for making api requests.
   example: []

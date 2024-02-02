@@ -17,13 +17,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Events/BirthdayJob.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: BirthdayJob
     path: ../src/KWiJisho/Modules/Events/BirthdayJob.cs
     startLine: 6
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Events
   syntax:
     content: 'internal class BirthdayJob : IJob'
@@ -54,13 +54,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Events/BirthdayJob.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Execute
     path: ../src/KWiJisho/Modules/Events/BirthdayJob.cs
     startLine: 9
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Events
   summary: >-
     Called by the <xref href="Quartz.IScheduler" data-throw-if-not-resolved="false"></xref> when a <xref href="Quartz.ITrigger" data-throw-if-not-resolved="false"></xref>
@@ -105,13 +105,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Events/BirthdayJob.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GiveBirthdayMessage
     path: ../src/KWiJisho/Modules/Events/BirthdayJob.cs
     startLine: 11
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Events
   syntax:
     content: private static Task GiveBirthdayMessage()

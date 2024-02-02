@@ -30,7 +30,7 @@ items:
   fullName: KWiJisho.Modules.Utils
   type: Namespace
   assemblies:
-  - KWiJisho
+  - KWIJisho
 references:
 - uid: KWiJisho.Modules.Utils.Birthday
   commentId: T:KWiJisho.Modules.Utils.Birthday

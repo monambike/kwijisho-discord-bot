@@ -19,13 +19,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrefixBirthday
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs
     startLine: 11
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Represents a set of birthday prefix commands.
   example: []
@@ -59,13 +59,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: nextBirthday
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs
     startLine: 16
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Represents the command to show the next person to have birthday.
   example: []
@@ -88,13 +88,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetNextBirthdayAsync
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs
     startLine: 17
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: >-
@@ -131,13 +131,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: listBirthday
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs
     startLine: 23
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Represents the command to list people will have birthday.
   example: []
@@ -160,13 +160,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetListBirthdayAsync
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixBirthday.cs
     startLine: 24
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: >-

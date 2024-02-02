@@ -18,13 +18,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/ServerInfos.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ServerInfos
     path: ../src/KWiJisho/Modules/Utils/ServerInfos.cs
     startLine: 5
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: Static class responsible for handling information about discord servers.
   example: []
@@ -55,13 +55,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/ServerInfos.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PersonalDiscordServerGuildId
     path: ../src/KWiJisho/Modules/Utils/ServerInfos.cs
     startLine: 10
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: My personal Discord server guild Id.
   example: []
@@ -86,13 +86,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/ServerInfos.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: TramontinaDiscordServerGuildId
     path: ../src/KWiJisho/Modules/Utils/ServerInfos.cs
     startLine: 15
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: Tramontina Discord server guild Id.
   example: []
@@ -117,13 +117,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/ServerInfos.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: TramontinaWelcomeChannelId
     path: ../src/KWiJisho/Modules/Utils/ServerInfos.cs
     startLine: 17
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: internal static ulong TramontinaWelcomeChannelId { get; }

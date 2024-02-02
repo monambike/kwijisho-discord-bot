@@ -17,13 +17,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Api/NasaApi.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Apod
     path: ../src/KWiJisho/Modules/Api/NasaApi.cs
     startLine: 17
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Api
   syntax:
     content: internal static class NasaApi.Apod
@@ -52,13 +52,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Api/NasaApi.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetAsync
     path: ../src/KWiJisho/Modules/Api/NasaApi.cs
     startLine: 22
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Api
   summary: Makes a image request for APOD, also known as Astronomy Picture of the Day.
   example: []
@@ -82,13 +82,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Api/NasaApi.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetUsingNasaApiAsync
     path: ../src/KWiJisho/Modules/Api/NasaApi.cs
     startLine: 33
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Api
   summary: Makes a request for the nasa API.
   example: []

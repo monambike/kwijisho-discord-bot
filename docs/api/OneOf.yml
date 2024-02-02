@@ -13,7 +13,7 @@ items:
   fullName: OneOf
   type: Namespace
   assemblies:
-  - KWiJisho
+  - KWIJisho
 references:
 - uid: OneOf.GenerateOneOfAttribute
   commentId: T:OneOf.GenerateOneOfAttribute

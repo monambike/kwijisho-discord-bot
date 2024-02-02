@@ -18,13 +18,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Basic.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Basic
     path: ../src/KWiJisho/Modules/Commands/Basic.cs
     startLine: 6
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands
   syntax:
     content: internal static class Basic
@@ -53,13 +53,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Basic.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SendRandomAnimatedEmoji
     path: ../src/KWiJisho/Modules/Commands/Basic.cs
     startLine: 13
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands
   summary: Sends a random animated emoji from <xref href="KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoEmojis" data-throw-if-not-resolved="false"></xref>.
   example: []
@@ -88,13 +88,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Basic.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SendRandomAnimatedMemeEmoji
     path: ../src/KWiJisho/Modules/Commands/Basic.cs
     startLine: 21
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands
   summary: Sends a random animated emoji from <xref href="KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoMemeEmojis" data-throw-if-not-resolved="false"></xref>.
   example: []
@@ -123,13 +123,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Basic.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SendRandomAnimatedPartyEmoji
     path: ../src/KWiJisho/Modules/Commands/Basic.cs
     startLine: 29
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands
   summary: Sends a random animated emoji from <xref href="KWiJisho.Modules.Utils.DiscordEmojis.AnimatedEmojis.KWiJishoPartyEmojis" data-throw-if-not-resolved="false"></xref>.
   example: []

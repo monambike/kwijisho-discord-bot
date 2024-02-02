@@ -16,13 +16,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Api/HttpService.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: HttpService
     path: ../src/KWiJisho/Modules/Api/HttpService.cs
     startLine: 9
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Api
   summary: A simple HTTP service for making GET requests and retrieving the response content.
   example: []
@@ -53,13 +53,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Api/HttpService.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetAsync
     path: ../src/KWiJisho/Modules/Api/HttpService.cs
     startLine: 17
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Api
   summary: Sends an asynchronous GET request to the specified URI and returns the response content as a string.
   example: []

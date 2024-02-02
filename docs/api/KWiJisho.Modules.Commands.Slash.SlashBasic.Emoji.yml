@@ -18,13 +18,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Slash/SlashBasic.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Emoji
     path: ../src/KWiJisho/Modules/Commands/Slash/SlashBasic.cs
     startLine: 11
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Slash
   syntax:
     content: >-
@@ -74,13 +74,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Slash/SlashBasic.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SendRandomAnimatedEmoji
     path: ../src/KWiJisho/Modules/Commands/Slash/SlashBasic.cs
     startLine: 17
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Slash
   summary: Represents the command to send a random animated emoji.
   example: []
@@ -123,13 +123,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Slash/SlashBasic.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SendRandomAnimatedMemeEmoji
     path: ../src/KWiJisho/Modules/Commands/Slash/SlashBasic.cs
     startLine: 27
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Slash
   summary: Represents the command to send a random animated meme emoji.
   example: []
@@ -172,13 +172,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Slash/SlashBasic.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SendRandomAnimatedPartyEmoji
     path: ../src/KWiJisho/Modules/Commands/Slash/SlashBasic.cs
     startLine: 37
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Slash
   summary: Represents the command to send a random animated party emoji.
   example: []

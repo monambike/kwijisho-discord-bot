@@ -18,13 +18,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/Birthday.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: UpcomingBirthdayDate
     path: ../src/KWiJisho/Modules/Utils/Birthday.cs
     startLine: 57
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: internal enum Birthday.UpcomingBirthdayDate
@@ -43,13 +43,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/Birthday.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Today
     path: ../src/KWiJisho/Modules/Utils/Birthday.cs
     startLine: 57
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: Today = 0
@@ -69,13 +69,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/Birthday.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Tomorrow
     path: ../src/KWiJisho/Modules/Utils/Birthday.cs
     startLine: 57
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: Tomorrow = 1
@@ -95,13 +95,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/Birthday.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: InSomeDays
     path: ../src/KWiJisho/Modules/Utils/Birthday.cs
     startLine: 57
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: InSomeDays = 2

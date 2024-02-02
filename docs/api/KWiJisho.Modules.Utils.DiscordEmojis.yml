@@ -15,13 +15,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/DiscordEmojis.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: DiscordEmojis
     path: ../src/KWiJisho/Modules/Utils/DiscordEmojis.cs
     startLine: 4
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   syntax:
     content: internal static class DiscordEmojis

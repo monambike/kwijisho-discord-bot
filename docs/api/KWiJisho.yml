@@ -13,7 +13,7 @@ items:
   fullName: KWiJisho
   type: Namespace
   assemblies:
-  - KWiJisho
+  - KWIJisho
 references:
 - uid: KWiJisho.Program
   commentId: T:KWiJisho.Program

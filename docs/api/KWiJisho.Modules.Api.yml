@@ -17,7 +17,7 @@ items:
   fullName: KWiJisho.Modules.Api
   type: Namespace
   assemblies:
-  - KWiJisho
+  - KWIJisho
 references:
 - uid: KWiJisho.Modules.Api.HttpService
   commentId: T:KWiJisho.Modules.Api.HttpService

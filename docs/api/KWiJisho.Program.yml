@@ -16,13 +16,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Program.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Program
     path: ../src/KWiJisho/Program.cs
     startLine: 4
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho
   syntax:
     content: internal class Program
@@ -51,13 +51,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Program.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Main
     path: ../src/KWiJisho/Program.cs
     startLine: 9
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho
   summary: The main entry point of the application.
   example: []

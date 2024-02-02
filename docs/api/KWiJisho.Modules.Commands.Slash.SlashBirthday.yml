@@ -17,13 +17,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Slash/SlashBirthday.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SlashBirthday
     path: ../src/KWiJisho/Modules/Commands/Slash/SlashBirthday.cs
     startLine: 9
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Slash
   summary: Represents a set of birthday slash commands.
   example: []
@@ -59,13 +59,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Slash/SlashBirthday.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetNextBirthdayAsync
     path: ../src/KWiJisho/Modules/Commands/Slash/SlashBirthday.cs
     startLine: 14
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Slash
   summary: Represents the command to show the next person to have birthday.
   example: []
@@ -108,13 +108,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Slash/SlashBirthday.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetListBirthdayAsync
     path: ../src/KWiJisho/Modules/Commands/Slash/SlashBirthday.cs
     startLine: 26
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Slash
   summary: Represents the command to list people will have birthday.
   example: []

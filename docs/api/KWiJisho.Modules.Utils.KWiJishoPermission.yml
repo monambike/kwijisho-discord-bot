@@ -17,13 +17,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/KWiJishoPermission.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: KWiJishoPermission
     path: ../src/KWiJisho/Modules/Utils/KWiJishoPermission.cs
     startLine: 8
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: Provides utility methods for handling permissions in the KWiJisho application.
   example: []
@@ -54,13 +54,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/KWiJishoPermission.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PermissionCustomErrorMessage
     path: ../src/KWiJisho/Modules/Utils/KWiJishoPermission.cs
     startLine: 15
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: Generates a custom error message for a permission check failure.
   example: []
@@ -89,13 +89,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/KWiJishoPermission.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetPermissionNameInPortuguese
     path: ../src/KWiJisho/Modules/Utils/KWiJishoPermission.cs
     startLine: 23
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: Gets the Portuguese name of a Discord permission.
   example: []

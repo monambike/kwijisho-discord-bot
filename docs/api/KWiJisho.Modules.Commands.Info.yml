@@ -17,13 +17,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Info.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Info
     path: ../src/KWiJisho/Modules/Commands/Info.cs
     startLine: 10
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands
   syntax:
     content: internal static class Info
@@ -52,13 +52,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Info.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetHelpAsync
     path: ../src/KWiJisho/Modules/Commands/Info.cs
     startLine: 12
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands
   syntax:
     content: internal static Task GetHelpAsync(DiscordChannel discordChannel, DiscordClient discordClient)
@@ -85,13 +85,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Info.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetInfoAsync
     path: ../src/KWiJisho/Modules/Commands/Info.cs
     startLine: 36
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands
   syntax:
     content: internal static Task GetInfoAsync(DiscordChannel discordChannel, DiscordClient discordClient)

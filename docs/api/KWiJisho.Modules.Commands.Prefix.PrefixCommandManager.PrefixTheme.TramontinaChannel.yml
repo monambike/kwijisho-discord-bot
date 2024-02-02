@@ -19,13 +19,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: TramontinaChannel
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 162
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: 'internal class PrefixCommandManager.PrefixTheme.TramontinaChannel : Channel'
@@ -58,13 +58,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: DefaultTextTitle
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 164
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal string DefaultTextTitle { get; set; }
@@ -87,13 +87,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: EmojiTheme
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 166
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal Dictionary<PrefixCommandManager.PrefixTheme.EmojiTheme, string> EmojiTheme { get; set; }
@@ -116,13 +116,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: .ctor
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 168
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal TramontinaChannel(ulong id, string defaultTextTitle, Dictionary<PrefixCommandManager.PrefixTheme.EmojiTheme, string> emojiTheme)
@@ -152,13 +152,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ChangeEmoji
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 174
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   syntax:
     content: internal void ChangeEmoji(CommandContext commandContext, string emoji)

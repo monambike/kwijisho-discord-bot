@@ -22,13 +22,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrefixCommandManager
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
     startLine: 14
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Represent the class that represents commands groups and holds all Discord command classes.
   example: []
@@ -59,13 +59,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: CommandGroups
     path: ../src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
     startLine: 16
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Gets or sets the list of command groups.
   example: []
@@ -90,13 +90,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Astronomy
     path: ../src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
     startLine: 21
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Gets the command group for Astronomy commands.
   example: []
@@ -121,13 +121,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ChatGpt
     path: ../src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
     startLine: 26
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Gets the command group for ChatGPT commands.
   example: []
@@ -152,13 +152,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Info
     path: ../src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
     startLine: 31
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Gets the command group for Information and Help commands.
   example: []
@@ -183,13 +183,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Theme
     path: ../src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
     startLine: 36
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Gets the command group for Theme commands.
   example: []
@@ -214,13 +214,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Birthday
     path: ../src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
     startLine: 41
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Gets the command group for Birthday commands.
   example: []
@@ -245,13 +245,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Basic
     path: ../src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
     startLine: 46
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
   summary: Gets the command group for Basic commands.
   example: []

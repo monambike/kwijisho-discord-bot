@@ -18,13 +18,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/KWiJishoInfo.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: KWiJishoInfo
     path: ../src/KWiJisho/Modules/Utils/KWiJishoInfo.cs
     startLine: 8
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: Class that provides static basic information about KWiJisho bot.
   example: []
@@ -55,13 +55,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/KWiJishoInfo.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Name
     path: ../src/KWiJisho/Modules/Utils/KWiJishoInfo.cs
     startLine: 13
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: KWiJisho project name gotten directly from <xref href="System.Reflection.Assembly" data-throw-if-not-resolved="false"></xref>.
   example: []
@@ -84,13 +84,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/KWiJishoInfo.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Created
     path: ../src/KWiJisho/Modules/Utils/KWiJishoInfo.cs
     startLine: 18
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: The date Karen Kujo project was first commit on <a href="https://github.com/monambike/kwijisho-discord-bot">GitHub repository</a>.
   example: []
@@ -115,13 +115,13 @@ items:
   source:
     remote:
       path: src/KWiJisho/Modules/Utils/KWiJishoInfo.cs
-      branch: master
+      branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: KarenKujoBirthday
     path: ../src/KWiJisho/Modules/Utils/KWiJishoInfo.cs
     startLine: 25
   assemblies:
-  - KWiJisho
+  - KWIJisho
   namespace: KWiJisho.Modules.Utils
   summary: >-
     Gets the calculated birthday for Karen Kujo. Karen Kujo was born on December 1st,
