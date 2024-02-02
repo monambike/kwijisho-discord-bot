@@ -45,7 +45,14 @@ After downloading the files, follow these steps:
 ```
 You will need to change the "token" field with the token of the bot you create. You can modify the "prefix" and "activity" of the bot as desired.
 
-# Funcionalities
+# Features
+
+## Nasa APOD
+
+You can get the APOD (Astronomy Picture of the Day) directly from Nasa website with the attached text rewriten and summarized in portuguese!
+It will also contain the copyright and APOD image date information embedded.
+
+![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/52bd8259-da9b-4542-b63b-ee3b16971f00)
 
 ## Change Discord Server Theme
 
