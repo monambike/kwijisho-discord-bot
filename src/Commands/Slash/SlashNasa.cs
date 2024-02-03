@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 
 namespace KWiJisho.Commands.Slash
 {
+    /// <summary>
+    /// Represents a set of NASA slash commands.
+    /// </summary>
     internal class SlashNasa : ApplicationCommandModule
     {
         /// <summary>

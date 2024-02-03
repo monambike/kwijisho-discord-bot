@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace KWiJisho.Commands
 {
     /// <summary>
-    /// Provides utilities for "prefix" and "slash" notice commands.
+    /// Provides methods for notice prefix and slash commands.
     /// </summary>
     internal class Notice
     {

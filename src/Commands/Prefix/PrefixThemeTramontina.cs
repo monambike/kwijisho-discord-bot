@@ -17,7 +17,7 @@ namespace KWiJisho.Commands.Prefix
     internal partial class PrefixCommandManager
     {
         /// <summary>
-        /// Represents a set of prefix theme commands.
+        /// Represents a set of theme prefix commands.
         /// </summary>
         internal class PrefixTheme
         {

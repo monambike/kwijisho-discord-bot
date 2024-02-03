@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace KWiJisho.Commands
 {
     /// <summary>
-    /// Provides utilities for "prefix" and "slash" informational and helpful commands.
+    /// Provides methods for info prefix and slash commands.
     /// </summary>
     internal static class Info
     {
@@ -44,6 +44,7 @@ namespace KWiJisho.Commands
                 discordEmbedBuilder.AddField(commandGroup.Name, content);
             }
 
+            // Sending the help list into the specified channel
             await discordChannel.SendMessageAsync(discordEmbedBuilder);
         }
 

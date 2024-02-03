@@ -39,7 +39,7 @@ namespace KWiJisho.Models
         /// </summary>
         /// <param name="apodResponse">The APOD response content to build the embed.</param>
         /// <returns>A <see cref="Task{TResult}"/> containing the <see cref="DiscordEmbedBuilder"/>.</returns>
-        internal static async Task<DiscordEmbedBuilder> BuildPortgueseApodMessageAsync(ApodResponse apodResponse)
+        internal static async Task<DiscordEmbedBuilder> BuildPortugueseApodMessageAsync(ApodResponse apodResponse)
         {
             // Translate the title from the APOD response.
             var translatedTitle = await OpenAiApi.GetPromptTranslateToPortugueseAsync(apodResponse.Title);

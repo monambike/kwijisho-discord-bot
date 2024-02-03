@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 namespace KWiJisho.Commands.Slash
 {
     /// <summary>
-    /// Represents a set of informational and helpful slash commands.
+    /// Represents a set of info slash commands.
     /// </summary>
     internal class SlashInfo : ApplicationCommandModule
     {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace KWiJisho.Commands
 {
     /// <summary>
-    /// Provides utilities for "prefix" and "slash" basic commands.
+    /// Provides methods for basic prefix and slash commands.
     /// </summary>
     internal static class Basic
     {

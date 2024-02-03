@@ -13,7 +13,7 @@ namespace KWiJisho.Commands.Prefix
     internal partial class PrefixCommandManager
     {
         /// <summary>
-        /// Represents a set of prefix notice commands.
+        /// Represents a set of notice prefix commands.
         /// </summary>
         internal class PrefixNotice : BaseCommandModule
         {
