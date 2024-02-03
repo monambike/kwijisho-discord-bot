@@ -19,9 +19,9 @@ namespace KWiJisho.Commands.Slash
             /// Represents the command to send a random animated emoji.
             /// </summary>
             [SlashCommand("any", "Envia qualquer emoji animado.")]
-            internal static async Task SendRandomAnimatedEmoji(InteractionContext interactionContext)
+            internal static async Task ExecuteSlashRandomAnimatedEmoji(InteractionContext interactionContext)
             {
-                await Basic.SendRandomAnimatedEmoji(interactionContext.Channel);
+                await Basic.ExecuteRandomAnimatedEmoji(interactionContext.Channel);
                 await interactionContext.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource);
             }
 
@@ -29,9 +29,9 @@ namespace KWiJisho.Commands.Slash
             /// Represents the command to send a random animated meme emoji.
             /// </summary>
             [SlashCommand("meme", "Envia um emoji de meme animado.")]
-            internal static async Task SendRandomAnimatedMemeEmoji(InteractionContext interactionContext)
+            internal static async Task ExecuteSlashRandomAnimatedMemeEmoji(InteractionContext interactionContext)
             {
-                await Basic.SendRandomAnimatedMemeEmoji(interactionContext.Channel);
+                await Basic.ExecuteRandomAnimatedMemeEmoji(interactionContext.Channel);
                 await interactionContext.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource);
             }
 
@@ -39,9 +39,9 @@ namespace KWiJisho.Commands.Slash
             /// Represents the command to send a random animated party emoji.
             /// </summary>
             [SlashCommand("party", "Envia um emoji de festa animado.")]
-            internal static async Task SendRandomAnimatedPartyEmoji(InteractionContext interactionContext)
+            internal static async Task ExecuteSlashRandomAnimatedPartyEmoji(InteractionContext interactionContext)
             {
-                await Basic.SendRandomAnimatedPartyEmoji(interactionContext.Channel);
+                await Basic.ExecuteRandomAnimatedPartyEmoji(interactionContext.Channel);
                 await interactionContext.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource);
             }
         }

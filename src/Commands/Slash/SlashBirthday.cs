@@ -13,10 +13,10 @@ namespace KWiJisho.Commands.Slash
         /// Represents the command to show the next person to have birthday.
         /// </summary>
         [SlashCommand("next-birthday", "Mostra o aniversário mais próximo!")]
-        internal static async Task GetNextBirthdayAsync(InteractionContext interactionContext)
+        internal static async Task ExecuteSlashNextBirthdayAsync(InteractionContext interactionContext)
         {
             await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);
-            await Birthday.GetNextBirthdayAsync(interactionContext.Channel, interactionContext.Guild);
+            await Birthday.ExecuteNextBirthdayAsync(interactionContext.Channel, interactionContext.Guild);
             await interactionContext.DeleteResponseAsync();
         }
 
@@ -25,10 +25,10 @@ namespace KWiJisho.Commands.Slash
         /// </summary>
 
         [SlashCommand("birthday-list", "Mostra a lista de aniversariantes!")]
-        internal static async Task GetListBirthdayAsync(InteractionContext interactionContext)
+        internal static async Task ExecuteSlashBirthdayListAsync(InteractionContext interactionContext)
         {
             await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);
-            await Birthday.GetListBirthdayAsync(interactionContext.Channel, interactionContext.Guild);
+            await Birthday.ExecuteBirthdayListAsync(interactionContext.Channel, interactionContext.Guild);
             await interactionContext.DeleteResponseAsync();
         }
     }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace KWiJisho.Commands
 {
     /// <summary>
-    /// Provides methods for "prefix" and "slash" birthday commands.
+    /// Provides utilities for "prefix" and "slash" birthday commands.
     /// </summary>
     internal static class Birthday
     {
@@ -36,20 +36,24 @@ namespace KWiJisho.Commands
         /// </summary>
         /// <param name="discordChannel">The Discord channel where the message will be sent.</param>
         /// <param name="discordGuild">The Discord guild containing the users.</param>
-        internal static async Task GetNextBirthdayAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
+        internal static async Task ExecuteNextBirthdayAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
         {
+            // Getting closest birthday from user present in the server and its member info
+            var user = Models.Birthday.GetNextUserToMakeBirthday(discordGuild);
+            var discordMember = user.GetUserDiscordMember(discordGuild);
 
-            var discordUser = Utils.Birthday.TryGetDiscordUserByClosestBirthday(discordGuild);
-            var discordMember = discordUser.GetUserDiscordMember(discordGuild);
+            // Getting how many days are maining for the user's birthday
+            var daysRemaining = Models.Birthday.GetBirthdayDaysRemaining(user);
+            var upcomingDate = Models.Birthday.GetBirthdayUpcomingDate(daysRemaining);
 
-            var daysRemaining = Utils.Birthday.GetDaysRemainingByUser(discordUser);
-            var upcomingDate = Utils.Birthday.GetUpcomingBirthdayDate(daysRemaining);
-            var message = Utils.Birthday.GenerateBirthdayMessage(discordUser);
+            // Generating birthday message according how many days are remaining for its birthday
+            var message = Models.Birthday.GenerateBirthdayMessage(user);
 
             // Getting image name and image's full path.
             var fileName = $"500x500-happybirthday-{upcomingDate.ToString().ToLower()}.png";
             var imagePath = Path.GetFullPath($"Resources/Images/Birthday/{fileName}");
 
+            // Initinializing discord embed builder message
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
                 Color = ConfigJson.DefaultColor.DiscordColor,
@@ -59,6 +63,7 @@ namespace KWiJisho.Commands
             .WithImageUrl($"attachment://{imagePath}").Build();
 
             using var fileStream = new FileStream(imagePath, FileMode.Open);
+            // Attaching file and embed to the message and sending it to the discord channel
             await discordChannel.SendMessageAsync(new DiscordMessageBuilder()
                 .AddEmbed(discordEmbedBuilder)
                 // The image gif of karen kujou happy talking.
@@ -70,9 +75,10 @@ namespace KWiJisho.Commands
         /// </summary>
         /// <param name="discordChannel">The Discord channel where the message will be sent.</param>
         /// <param name="discordGuild">The Discord guild containing the users.</param>
-        internal static async Task GetListBirthdayAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
+        internal static async Task ExecuteBirthdayListAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
         {
-            var users = Utils.Birthday.GetUsersOrderByClosestBirthday();
+            // Getting list of users and their birthday
+            var users = Models.Birthday.GetBirthdayList();
 
             // Getting image name and image's full path.
             var fileName = $"500x281-talking.gif";

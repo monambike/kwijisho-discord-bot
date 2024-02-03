@@ -17,7 +17,7 @@ namespace KWiJisho.Commands.Prefix
     internal partial class PrefixCommandManager
     {
         /// <summary>
-        /// Represents a set of prefix commands to change theme in a Discord server.
+        /// Represents a set of prefix theme commands.
         /// </summary>
         internal class PrefixTheme
         {

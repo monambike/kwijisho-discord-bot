@@ -16,7 +16,7 @@ namespace KWiJisho.APIs
         /// <param name="input">The user input text.</param>
         /// <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
 
-        internal static async Task<string> GetPromptKWiJishoStyleAsync(string input)
+        internal static async Task<string> GetKWiJishoPromptAsync(string input)
         {
             // The default style for the ChatGPT prompts executed by this method.
             var style = "Aja alegre e animada, falando de um jeito descontraído e se possível com emojis. Nada de formalidade, pontos finais e capitalizar o início das palavras."

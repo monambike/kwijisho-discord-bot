@@ -90,7 +90,7 @@
             API Documentation: <a href="https://github.com/OkGoDoIt/OpenAI-API-dotnet"/>
             </summary>
         </member>
-        <member name="M:KWiJisho.APIs.OpenAiApi.GetPromptKWiJishoStyleAsync(System.String)">
+        <member name="M:KWiJisho.APIs.OpenAiApi.GetKWiJishoPromptAsync(System.String)">
             <summary>
             Asynchronous method to generate a prompt in the style of "KWiJisho."
             </summary>
@@ -121,24 +121,24 @@
         </member>
         <member name="T:KWiJisho.Commands.Basic">
             <summary>
-            Provides methods for "prefix" and "slash" basic commands.
+            Provides utilities for "prefix" and "slash" basic commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Basic.SendRandomAnimatedEmoji(DSharpPlus.Entities.DiscordChannel)">
+        <member name="M:KWiJisho.Commands.Basic.ExecuteRandomAnimatedEmoji(DSharpPlus.Entities.DiscordChannel)">
             <summary>
             Sends a random animated emoji from <see cref="F:KWiJisho.Data.DiscordEmojis.AnimatedEmojis"/>.
             </summary>
             <param name="discordChannel">The discord channel where the command will be executed.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
         </member>
-        <member name="M:KWiJisho.Commands.Basic.SendRandomAnimatedMemeEmoji(DSharpPlus.Entities.DiscordChannel)">
+        <member name="M:KWiJisho.Commands.Basic.ExecuteRandomAnimatedMemeEmoji(DSharpPlus.Entities.DiscordChannel)">
             <summary>
             Sends a random animated emoji from <see cref="F:KWiJisho.Data.DiscordEmojis.AnimatedMemeEmojis"/>.
             </summary>
             <param name="discordChannel">The discord channel where the command will be executed.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
         </member>
-        <member name="M:KWiJisho.Commands.Basic.SendRandomAnimatedPartyEmoji(DSharpPlus.Entities.DiscordChannel)">
+        <member name="M:KWiJisho.Commands.Basic.ExecuteRandomAnimatedPartyEmoji(DSharpPlus.Entities.DiscordChannel)">
             <summary>
             Sends a random animated emoji from <see cref="F:KWiJisho.Data.DiscordEmojis.AnimatedPartyEmojis"/>.
             </summary>
@@ -147,33 +147,78 @@
         </member>
         <member name="T:KWiJisho.Commands.Birthday">
             <summary>
-            Provides methods for "prefix" and "slash" birthday commands.
+            Provides utilities for "prefix" and "slash" birthday commands.
             </summary>
+        </member>
+        <member name="P:KWiJisho.Commands.Birthday.Months">
+            <summary>
+            Represents the year months in Portuguese.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Commands.Birthday.ExecuteNextBirthdayAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild)">
+            <summary>
+            Sends a birthday message for the next upcoming birthday in the specified Discord channel.
+            </summary>
+            <param name="discordChannel">The Discord channel where the message will be sent.</param>
+            <param name="discordGuild">The Discord guild containing the users.</param>
+        </member>
+        <member name="M:KWiJisho.Commands.Birthday.ExecuteBirthdayListAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild)">
+            <summary>
+            Sends a list of upcoming birthdays in the specified Discord channel.
+            </summary>
+            <param name="discordChannel">The Discord channel where the message will be sent.</param>
+            <param name="discordGuild">The Discord guild containing the users.</param>
         </member>
         <member name="T:KWiJisho.Commands.Info">
             <summary>
-            Provides methods for "prefix" and "slash" informational and helpful commands.
+            Provides utilities for "prefix" and "slash" informational and helpful commands.
             </summary>
+        </member>
+        <member name="M:KWiJisho.Commands.Info.ExecuteHelpAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)">
+            <summary>
+            Sends a help message containing a list of available commands and their descriptions to the specified Discord channel.
+            </summary>
+            <param name="discordChannel">The Discord channel where the message will be sent.</param>
+            <param name="discordClient">The Discord client instance.</param>
+        </member>
+        <member name="M:KWiJisho.Commands.Info.ExecuteInfoAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)">
+            <summary>
+            Sends an information message about the bot, its creator, and contact details to the specified Discord channel.
+            </summary>
+            <param name="discordChannel">The Discord channel where the message will be sent.</param>
+            <param name="discordClient">The Discord client instance.</param>
         </member>
         <member name="T:KWiJisho.Commands.KwiGpt">
             <summary>
-            Provides methods for "prefix" and "slash" KWiGPT commands.
+            Provides utilities for "prefix" and "slash" KWiGPT commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.KwiGpt.ChatGptPromptAsync(DSharpPlus.Entities.DiscordChannel,System.String[])">
+        <member name="M:KWiJisho.Commands.KwiGpt.ExecuteKWiJishoPromptAsync(DSharpPlus.Entities.DiscordChannel,System.String[])">
             <summary>
             Represents the command to get the chat gpt prompt in KWiJisho style.
             </summary>
         </member>
         <member name="T:KWiJisho.Commands.Notice">
             <summary>
-            Provides methods for "prefix" and "slash" notice commands.
+            Provides utilities for "prefix" and "slash" notice commands.
             </summary>
         </member>
         <member name="F:KWiJisho.Commands.Notice.Yellow">
             <summary>
             Represents the Yellow color.
             </summary>
+        </member>
+        <member name="M:KWiJisho.Commands.Notice.ExecuteNewsAsync(DSharpPlus.DiscordClient,DSharpPlus.Entities.DiscordMember,System.String,System.String,System.Boolean,DSharpPlus.Entities.DiscordAttachment)">
+            <summary>
+            Method responsible for sending and creating a "news" in the news channel.
+            </summary>
+            <param name="discordClient"></param>
+            <param name="discordMember"></param>
+            <param name="title"></param>
+            <param name="description"></param>
+            <param name="sendInTramontina"></param>
+            <param name="discordAttachments"></param>
+            <returns></returns>
         </member>
         <member name="T:KWiJisho.Commands.Prefix.PrefixCommandManager">
             <summary>
@@ -342,8 +387,7 @@
         </member>
         <member name="T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt">
             <summary>
-            Represents a set of KWiGpt prefix commands. Interaction commands with ChatGpt
-            in KWiJisho bot style.
+            Represents a set of KWiGPT prefix commands.
             </summary>
         </member>
         <member name="F:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.k">
@@ -392,17 +436,27 @@
         </member>
         <member name="T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNotice">
             <summary>
-            Represents a set of prefix channel notice commands.
+            Represents a set of prefix notice commands.
             </summary>
         </member>
         <member name="F:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNotice.sendNews">
             <summary>
-            Represents the prefix command method to send news at the news channel.
+            Represents the send news prefix command.
             </summary>
+        </member>
+        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNotice.SendNewsAsync(DSharpPlus.CommandsNext.CommandContext,System.String,System.String,System.Boolean)">
+            <summary>
+            Prefix send news command method to send news at the news' channel.
+            </summary>
+            <param name="commandContext">The command context.</param>
+            <param name="title">The news' title.s</param>
+            <param name="description">The news' description.s</param>
+            <param name="sendInTramontina">If the news should be send in <see cref="T:KWiJisho.Data.ServerTramontina"/>; otherwise, it will send it to <see cref="T:KWiJisho.Data.ServerPersonal"/>.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> containing the result from the asynchronous method.</returns>
         </member>
         <member name="T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme">
             <summary>
-            Represents a set of prefix commands to change theme in a Discord server.
+            Represents a set of prefix theme commands.
             </summary>
         </member>
         <member name="T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme">
@@ -545,17 +599,17 @@
             Represents a command group to senda random animated emoji.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Slash.SlashBasic.Emoji.SendRandomAnimatedEmoji(DSharpPlus.SlashCommands.InteractionContext)">
+        <member name="M:KWiJisho.Commands.Slash.SlashBasic.Emoji.ExecuteSlashRandomAnimatedEmoji(DSharpPlus.SlashCommands.InteractionContext)">
             <summary>
             Represents the command to send a random animated emoji.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Slash.SlashBasic.Emoji.SendRandomAnimatedMemeEmoji(DSharpPlus.SlashCommands.InteractionContext)">
+        <member name="M:KWiJisho.Commands.Slash.SlashBasic.Emoji.ExecuteSlashRandomAnimatedMemeEmoji(DSharpPlus.SlashCommands.InteractionContext)">
             <summary>
             Represents the command to send a random animated meme emoji.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Slash.SlashBasic.Emoji.SendRandomAnimatedPartyEmoji(DSharpPlus.SlashCommands.InteractionContext)">
+        <member name="M:KWiJisho.Commands.Slash.SlashBasic.Emoji.ExecuteSlashRandomAnimatedPartyEmoji(DSharpPlus.SlashCommands.InteractionContext)">
             <summary>
             Represents the command to send a random animated party emoji.
             </summary>
@@ -565,12 +619,12 @@
             Represents a set of birthday slash commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Slash.SlashBirthday.GetNextBirthdayAsync(DSharpPlus.SlashCommands.InteractionContext)">
+        <member name="M:KWiJisho.Commands.Slash.SlashBirthday.ExecuteSlashNextBirthdayAsync(DSharpPlus.SlashCommands.InteractionContext)">
             <summary>
             Represents the command to show the next person to have birthday.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Slash.SlashBirthday.GetListBirthdayAsync(DSharpPlus.SlashCommands.InteractionContext)">
+        <member name="M:KWiJisho.Commands.Slash.SlashBirthday.ExecuteSlashBirthdayListAsync(DSharpPlus.SlashCommands.InteractionContext)">
             <summary>
             Represents the command to list people will have birthday.
             </summary>
@@ -580,42 +634,41 @@
             Represents a set of informational and helpful slash commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Slash.SlashInfo.GetHelpAsync(DSharpPlus.SlashCommands.InteractionContext)">
+        <member name="M:KWiJisho.Commands.Slash.SlashInfo.ExecuteSlashHelpAsync(DSharpPlus.SlashCommands.InteractionContext)">
             <summary>
             Represents the command to show help about the Discord bot commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Slash.SlashInfo.GetInfoAsync(DSharpPlus.SlashCommands.InteractionContext)">
+        <member name="M:KWiJisho.Commands.Slash.SlashInfo.ExecuteSlashInfoAsync(DSharpPlus.SlashCommands.InteractionContext)">
             <summary>
             Represents the command to show information about the bot and the bot owner.
             </summary>
         </member>
         <member name="T:KWiJisho.Commands.Slash.SlashKwiGpt">
             <summary>
-            Represents a set of KWiGpt slash commands. Interaction commands with ChatGpt
-            in KWiJisho bot style.
+            Represents a set of KWiGPT slash commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Slash.SlashKwiGpt.ChatGptPromptAsync(DSharpPlus.SlashCommands.InteractionContext,System.String)">
+        <member name="M:KWiJisho.Commands.Slash.SlashKwiGpt.ExecuteSlashKWiJishoPromptAsync(DSharpPlus.SlashCommands.InteractionContext,System.String)">
             <summary>
             Represent the command to interact with the bot with ChatGpt in KWiJisho style.
             </summary>
         </member>
         <member name="T:KWiJisho.Commands.Slash.SlashNotice">
             <summary>
-            Provides methods for "prefix" and "slash" notice commands.
+            Represents a set of notice slash commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Slash.SlashNotice.ChatGptPromptAsync(DSharpPlus.SlashCommands.InteractionContext,System.String,System.String,DSharpPlus.Entities.DiscordAttachment,System.Boolean)">
+        <member name="M:KWiJisho.Commands.Slash.SlashNotice.ExecuteSlashNewsAsync(DSharpPlus.SlashCommands.InteractionContext,System.String,System.String,DSharpPlus.Entities.DiscordAttachment,System.Boolean)">
             <summary>
-            Represents the slash command method to send news at the news channel.
+            Slash send news command method to send news at the news' channel.
             </summary>
             <param name="interactionContext">The interaction context from the command.</param>
-            <param name="title">The message title.</param>
-            <param name="description">The message description.</param>
-            <param name="discordAttachment">The attachment (if present).</param>
-            <param name="sendInTramontina">If the message should be sent in Tramontina Discord server or the Personal Test Server.</param>
-            <returns></returns>
+            <param name="title">The news' title.s</param>
+            <param name="description">The news' description.s</param>
+            <param name="discordAttachment">The news's attachment. (if present)</param>
+            <param name="sendInTramontina">If the news should be send in <see cref="!:ServerTramontina"/>; otherwise, it will send it to <see cref="!:ServerPersonal"/>.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> containing the result from the asynchronous method.</returns>
         </member>
         <member name="T:KWiJisho.ConfigJson">
             <summary>
@@ -896,54 +949,12 @@
             <param name="discordGuild">The Discord guild where the user is expected to be a member.</param>
             <returns>Returns <see cref="T:DSharpPlus.Entities.DiscordMember"/> if found; otherwise, returns <see langword="null"/>.</returns>
         </member>
-        <member name="T:KWiJisho.Events.BirthdayJob">
-            <summary>
-            Represents a Quartz.NET job that executes a birthday message task.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Events.BirthdayJob.Execute(Quartz.IJobExecutionContext)">
-            <summary>
-            Executes the birthday message task as part of the Quartz.NET job.
-            </summary>
-            <param name="context">The execution context provided by Quartz.NET.</param>
-            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous execution of the job.</returns>
-        </member>
-        <member name="M:KWiJisho.Events.BirthdayJob.GiveBirthdayMessage">
-            <summary>
-            Sends a birthday message as an asynchronous task.
-            </summary>
-            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous execution of the birthday message task.</returns>
-        </member>
-        <member name="T:KWiJisho.Events.Scheduler">
-            <summary>
-            Provides methods for scheduling tasks.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Events.Scheduler.CreateBirthdayScheduler">
-            <summary>
-            Creates a birthday scheduler as part of the Quartz.NET library.
-            </summary>
-            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous creation of the birthday scheduler.</returns>
-        </member>
-        <member name="T:KWiJisho.Events.BotStart">
-            <summary>
-            Provides a set of events and methods fired when bot starts.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Events.BotStart.OnClientReady(System.Object,DSharpPlus.EventArgs.ReadyEventArgs)">
-            <summary>
-            Handles the events when the bot's client is ready.
-            </summary>
-            <param name="sender">The object that triggered the events.</param>
-            <param name="e">The event arguments containing information about the ready event.</param>
-            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous execution of the event handler.</returns>
-        </member>
-        <member name="T:KWiJisho.Events.Buttons">
+        <member name="T:KWiJisho.Events.ButtonInteraction">
             <summary>
             Provides a set of events and methods fired when a interaction is made.
             </summary>
         </member>
-        <member name="M:KWiJisho.Events.Buttons.OnComponentInteractionCreatedAsync(DSharpPlus.DiscordClient,DSharpPlus.EventArgs.ComponentInteractionCreateEventArgs)">
+        <member name="M:KWiJisho.Events.ButtonInteraction.OnComponentInteractionCreatedAsync(DSharpPlus.DiscordClient,DSharpPlus.EventArgs.ComponentInteractionCreateEventArgs)">
             <summary>
             Handles the event when a component interaction is created, like button clicks.
             </summary>
@@ -952,7 +963,7 @@
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
             <exception cref="T:System.ArgumentNullException">Thrown if the <paramref name="sender"/> is <see langword="null"/>.</exception>
         </member>
-        <member name="M:KWiJisho.Events.Buttons.CopyServerNameAsync(DSharpPlus.EventArgs.ComponentInteractionCreateEventArgs)">
+        <member name="M:KWiJisho.Events.ButtonInteraction.CopyServerNameAsync(DSharpPlus.EventArgs.ComponentInteractionCreateEventArgs)">
             <summary>
             Copies the server name from the interaction's message and puts it into the clipboard.
             Sends a feedback message to the user.
@@ -997,6 +1008,19 @@
             </summary>
             <param name="user">The user that will receive the welcome message.</param>
             <returns>The string containing the goodbye message .</returns>
+        </member>
+        <member name="T:KWiJisho.Events.KWiJishoBotStart">
+            <summary>
+            Provides a set of events and methods fired when bot starts.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Events.KWiJishoBotStart.OnClientReady(System.Object,DSharpPlus.EventArgs.ReadyEventArgs)">
+            <summary>
+            Handles the events when the bot's client is ready.
+            </summary>
+            <param name="sender">The object that triggered the events.</param>
+            <param name="e">The event arguments containing information about the ready event.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous execution of the event handler.</returns>
         </member>
         <member name="T:KWiJisho.Events.MessageReceived">
             <summary>
@@ -1065,62 +1089,25 @@
             Register all the Discord bot slash commands permissions.
             </summary>
         </member>
-        <member name="T:KWiJisho.Utils.Birthday">
+        <member name="T:KWiJisho.Models.Birthday">
             <summary>
             Class that provides a set of utilities for birthday tasks.
             </summary>
         </member>
-        <member name="M:KWiJisho.Utils.Birthday.GetUsersOrderByClosestBirthday">
+        <member name="M:KWiJisho.Models.Birthday.GetBirthdayList">
             <summary>
             Gets a list of users ordered by how closer are their birthday.
             </summary>
-            <returns>A <see cref="T:System.Collections.Generic.List`1"/> containing a group of <see cref="T:KWiJisho.Entities.User"/> and their <see cref="P:KWiJisho.Entities.User.Birthday"/>.</returns>
+            <returns>A <see cref="T:System.Collections.Generic.List`1"/> containing a group of <see cref="T:KWiJisho.Entities.User"/> and their <see cref="P:KWiJisho.Entities.User.Birthday"/> ordered by their birthday date.</returns>
         </member>
-        <member name="M:KWiJisho.Utils.Birthday.TryGetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)">
+        <member name="M:KWiJisho.Models.Birthday.GetNextUserToMakeBirthday(DSharpPlus.Entities.DiscordGuild)">
             <summary>
             Tries to get the user if they are presents in current Discord server.
             </summary>
             <param name="discordGuild"></param>
             <returns>Returns the <see cref="T:KWiJisho.Entities.User"/> if avaiable in current Discord server; otherwise, returns <see langword="null"/>.</returns>
         </member>
-        <member name="M:KWiJisho.Utils.Birthday.GetDaysRemainingByUser(KWiJisho.Entities.User)">
-            <summary>
-            Get how many days are remaning for the user's birthday.
-            </summary>
-            <param name="discordUser">The user to get how many years are remaining for they
-            birthday.</param>
-            <returns>A <see cref="T:System.Double"/> containing the number of days remaining for they birthday.</returns>
-        </member>
-        <member name="T:KWiJisho.Utils.Birthday.UpcomingBirthdayDate">
-            <summary>
-            Represents options for categorizing upcoming birthday dates.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Utils.Birthday.UpcomingBirthdayDate.Today">
-            <summary>
-            Indicates an upcoming birthday today.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Utils.Birthday.UpcomingBirthdayDate.Tomorrow">
-            <summary>
-            Indicates an upcoming birthday tomorrow.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Utils.Birthday.UpcomingBirthdayDate.InSomeDays">
-            <summary>
-            Indicates an upcoming birthday in the future, beyond tomorrow.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Utils.Birthday.GetUpcomingBirthdayDate(System.Double)">
-            <summary>
-            Gets the <see cref="T:KWiJisho.Utils.Birthday.UpcomingBirthdayDate"/> based on how much days are remaining for it.
-            </summary>
-            <param name="daysRemaning">How many days are remaining for the birthday.</param>
-            <returns>The <see cref="T:KWiJisho.Utils.Birthday.UpcomingBirthdayDate"/> based on how many days are remaning.</returns>
-            <exception cref="T:System.NotImplementedException">Thrown if the upcoming birthday date is not yet implemented
-            on this current method.</exception>
-        </member>
-        <member name="M:KWiJisho.Utils.Birthday.GenerateBirthdayMessage(KWiJisho.Entities.User)">
+        <member name="M:KWiJisho.Models.Birthday.GenerateBirthdayMessage(KWiJisho.Entities.User)">
             <summary>
             Method responsible for generating a birthday message.
             </summary>
@@ -1129,7 +1116,73 @@
             <exception cref="T:System.NotImplementedException">Thrown if the upcoming birthday date is not yet implemented on this
             current method.</exception>
         </member>
-        <member name="T:KWiJisho.Utils.DiscordEmbedTest">
+        <member name="M:KWiJisho.Models.Birthday.GetBirthdayDaysRemaining(KWiJisho.Entities.User)">
+            <summary>
+            Get how many days are remaning for the user's birthday.
+            </summary>
+            <param name="discordUser">The user to get how many years are remaining for they
+            birthday.</param>
+            <returns>A <see cref="T:System.Double"/> containing the number of days remaining for they birthday.</returns>
+        </member>
+        <member name="M:KWiJisho.Models.Birthday.GetBirthdayUpcomingDate(System.Double)">
+            <summary>
+            Gets the <see cref="T:KWiJisho.Models.Birthday.BirthdayUpcomingDate"/> based on how much days are remaining for it.
+            </summary>
+            <param name="daysRemaning">How many days are remaining for the birthday.</param>
+            <returns>The <see cref="T:KWiJisho.Models.Birthday.BirthdayUpcomingDate"/> based on how many days are remaning.</returns>
+            <exception cref="T:System.NotImplementedException">Thrown if the upcoming birthday date is not yet implemented
+            on this current method.</exception>
+        </member>
+        <member name="T:KWiJisho.Models.Birthday.BirthdayUpcomingDate">
+            <summary>
+            Represents options for categorizing upcoming birthday dates.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Models.Birthday.BirthdayUpcomingDate.Today">
+            <summary>
+            Indicates an upcoming birthday today.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Models.Birthday.BirthdayUpcomingDate.Tomorrow">
+            <summary>
+            Indicates an upcoming birthday tomorrow.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Models.Birthday.BirthdayUpcomingDate.InSomeDays">
+            <summary>
+            Indicates an upcoming birthday in the future, beyond tomorrow.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Scheduling.BirthdayJob">
+            <summary>
+            Represents a Quartz.NET job that executes a birthday message task.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Scheduling.BirthdayJob.Execute(Quartz.IJobExecutionContext)">
+            <summary>
+            Executes the birthday message task as part of the Quartz.NET job.
+            </summary>
+            <param name="context">The execution context provided by Quartz.NET.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous execution of the job.</returns>
+        </member>
+        <member name="M:KWiJisho.Scheduling.BirthdayJob.GiveBirthdayMessage">
+            <summary>
+            Sends a birthday message as an asynchronous task.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous execution of the birthday message task.</returns>
+        </member>
+        <member name="T:KWiJisho.Scheduling.Scheduler">
+            <summary>
+            Provides methods for scheduling tasks.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Scheduling.Scheduler.CreateBirthdayScheduler">
+            <summary>
+            Creates a birthday scheduler as part of the Quartz.NET library.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous creation of the birthday scheduler.</returns>
+        </member>
+        <member name="T:KWiJisho.Utils.DiscordCustomEmbed">
             <summary>
             Utility class providing default embeds for KWiJisho Discord bot.
             </summary>

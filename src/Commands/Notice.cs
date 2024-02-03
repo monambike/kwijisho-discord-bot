@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace KWiJisho.Commands
 {
     /// <summary>
-    /// Provides methods for "prefix" and "slash" notice commands.
+    /// Provides utilities for "prefix" and "slash" notice commands.
     /// </summary>
     internal class Notice
     {
@@ -28,7 +28,7 @@ namespace KWiJisho.Commands
         /// <param name="sendInTramontina"></param>
         /// <param name="discordAttachments"></param>
         /// <returns></returns>
-        internal static async Task SendNewsAsync(DiscordClient discordClient, DiscordMember discordMember, string title, string description, bool sendInTramontina, DiscordAttachment discordAttachments = null)
+        internal static async Task ExecuteNewsAsync(DiscordClient discordClient, DiscordMember discordMember, string title, string description, bool sendInTramontina, DiscordAttachment discordAttachments = null)
         {
             // Making the DiscordEmbedBuilder with the news content.
             var discordEmbedBuilder = new DiscordEmbedBuilder

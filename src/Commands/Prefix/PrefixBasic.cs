@@ -36,7 +36,7 @@ namespace KWiJisho.Commands.Prefix
             /// <param name="commandContext">The command context from the current command call.</param>
             /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
             [Command(nameof(emoji))]
-            internal async Task SendRandomAnimatedEmoji(CommandContext commandContext) => await KWiJisho.Commands.Basic.SendRandomAnimatedEmoji(commandContext.Channel);
+            internal async Task SendRandomAnimatedEmoji(CommandContext commandContext) => await KWiJisho.Commands.Basic.ExecuteRandomAnimatedEmoji(commandContext.Channel);
 
             /// <summary>
             /// Represents the asynchronous prefix send random animated meme emoji method called when sending a random meme animated emoji.
@@ -44,7 +44,7 @@ namespace KWiJisho.Commands.Prefix
             /// <param name="commandContext">The command context from the current command call.</param>
             /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
             [Command(nameof(emojim))]
-            internal async Task SendRandomMemeEmoji(CommandContext commandContext) => await KWiJisho.Commands.Basic.SendRandomAnimatedMemeEmoji(commandContext.Channel);
+            internal async Task SendRandomMemeEmoji(CommandContext commandContext) => await KWiJisho.Commands.Basic.ExecuteRandomAnimatedMemeEmoji(commandContext.Channel);
 
             /// <summary>
             /// Represents the asynchronous prefix send random animated party emoji method called when sending a random party animated emoji.
@@ -52,7 +52,7 @@ namespace KWiJisho.Commands.Prefix
             /// <param name="commandContext">The command context from the current command call.</param>
             /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
             [Command(nameof(emojip))]
-            internal async Task SendRandomPartyEmoji(CommandContext commandContext) => await KWiJisho.Commands.Basic.SendRandomAnimatedPartyEmoji(commandContext.Channel);
+            internal async Task SendRandomPartyEmoji(CommandContext commandContext) => await KWiJisho.Commands.Basic.ExecuteRandomAnimatedPartyEmoji(commandContext.Channel);
         }
     }
 }

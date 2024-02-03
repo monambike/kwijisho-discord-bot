@@ -57,12 +57,10 @@ namespace KWiJisho
         {
             get => _configJsonKWiJishoToken; set
             {
-                // Getting the token from the config json file
-                _configJsonKWiJishoToken = value;
                 // Tries to get the token from the environment variable
                 var kwijishoToken = Environment.GetEnvironmentVariable("KWIJISHO_TOKEN");
                 // If the token from the environment variables is null, value will be set using the config json file values
-                KWiJishoToken = kwijishoToken ?? _configJsonKWiJishoToken;
+                KWiJishoToken = kwijishoToken ?? value;
             }
         }
 

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace KWiJisho.Commands
 {
     /// <summary>
-    /// Provides methods for "prefix" and "slash" informational and helpful commands.
+    /// Provides utilities for "prefix" and "slash" informational and helpful commands.
     /// </summary>
     internal static class Info
     {
@@ -18,8 +18,7 @@ namespace KWiJisho.Commands
         /// </summary>
         /// <param name="discordChannel">The Discord channel where the message will be sent.</param>
         /// <param name="discordClient">The Discord client instance.</param>
-
-        internal static async Task GetHelpAsync(DiscordChannel discordChannel, DiscordClient discordClient)
+        internal static async Task ExecuteHelpAsync(DiscordChannel discordChannel, DiscordClient discordClient)
         {
             // Initializing discord embed builder
             var discordEmbedBuilder = new DiscordEmbedBuilder
@@ -53,7 +52,7 @@ namespace KWiJisho.Commands
         /// </summary>
         /// <param name="discordChannel">The Discord channel where the message will be sent.</param>
         /// <param name="discordClient">The Discord client instance.</param>
-        internal static async Task GetInfoAsync(DiscordChannel discordChannel, DiscordClient discordClient)
+        internal static async Task ExecuteInfoAsync(DiscordChannel discordChannel, DiscordClient discordClient)
         {
             // Description for discord embed builder
             var description = $@"Que legal que você quer saber mais sobre mim AHAHAHAHA eu sou a KWiJisho 🌟 😎 o bot {"MAIS LEGAL DE TODOS!!!!!".ToDiscordBold()} criado " +

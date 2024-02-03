@@ -35,7 +35,7 @@ namespace KWiJisho.Commands.Prefix
             /// <param name="commandContext">The command context from the current command call.</param>
             /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
             [Command(nameof(help))]
-            internal async Task GetHelpAsync(CommandContext commandContext) => await KWiJisho.Commands.Info.GetHelpAsync(commandContext.Channel, commandContext.Client);
+            internal async Task GetHelpAsync(CommandContext commandContext) => await KWiJisho.Commands.Info.ExecuteHelpAsync(commandContext.Channel, commandContext.Client);
 
             /// <summary>
             /// Represents the asynchronous prefix info method called when user asks for the prefix info command.
@@ -43,7 +43,7 @@ namespace KWiJisho.Commands.Prefix
             /// <param name="commandContext">The command context from the current command call.</param>
             /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
             [Command(nameof(info))]
-            internal async Task GetInfoAsync(CommandContext commandContext) => await KWiJisho.Commands.Info.GetInfoAsync(commandContext.Channel, commandContext.Client);
+            internal async Task GetInfoAsync(CommandContext commandContext) => await KWiJisho.Commands.Info.ExecuteInfoAsync(commandContext.Channel, commandContext.Client);
         }
     }
 }

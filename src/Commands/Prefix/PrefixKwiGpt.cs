@@ -11,8 +11,7 @@ namespace KWiJisho.Commands.Prefix
     internal partial class PrefixCommandManager
     {
         /// <summary>
-        /// Represents a set of KWiGpt prefix commands. Interaction commands with ChatGpt
-        /// in KWiJisho bot style.
+        /// Represents a set of KWiGPT prefix commands.
         /// </summary>
         internal class PrefixKwiGpt : BaseCommandModule
         {
@@ -35,7 +34,7 @@ namespace KWiJisho.Commands.Prefix
                 await commandContext.TriggerTypingAsync();
 
                 // Calling the method that will execute the prompt.
-                await KwiGpt.ChatGptPromptAsync(commandContext.Channel, inputs);
+                await KwiGpt.ExecuteKWiJishoPromptAsync(commandContext.Channel, inputs);
             }
         }
     }

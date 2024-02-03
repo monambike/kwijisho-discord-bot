@@ -1,11 +1,12 @@
 ﻿using DSharpPlus.Entities;
 using KWiJisho.Data;
 using KWiJisho.Entities;
+using KWiJisho.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace KWiJisho.Utils
+namespace KWiJisho.Models
 {
     /// <summary>
     /// Class that provides a set of utilities for birthday tasks.
@@ -15,8 +16,8 @@ namespace KWiJisho.Utils
         /// <summary>
         /// Gets a list of users ordered by how closer are their birthday.
         /// </summary>
-        /// <returns>A <see cref="List{T}"/> containing a group of <see cref="User"/> and their <see cref="User.Birthday"/>.</returns>
-        internal static List<User> GetUsersOrderByClosestBirthday()
+        /// <returns>A <see cref="List{T}"/> containing a group of <see cref="User"/> and their <see cref="User.Birthday"/> ordered by their birthday date.</returns>
+        internal static List<User> GetBirthdayList()
         {
             // Get today's date.
             var dateTimeNow = DateTime.Now.Date;
@@ -51,10 +52,10 @@ namespace KWiJisho.Utils
         /// </summary>
         /// <param name="discordGuild"></param>
         /// <returns>Returns the <see cref="User"/> if avaiable in current Discord server; otherwise, returns <see langword="null"/>.</returns>
-        internal static User TryGetDiscordUserByClosestBirthday(DiscordGuild discordGuild)
+        internal static User GetNextUserToMakeBirthday(DiscordGuild discordGuild)
         {
             // Retrieving users by their closest birthday.
-            var users = GetUsersOrderByClosestBirthday();
+            var users = GetBirthdayList();
 
             // For each user in the list of users.
             foreach (var user in users)
@@ -71,7 +72,29 @@ namespace KWiJisho.Utils
                 // If not possible, goes to the next user.
                 catch { continue; }
             }
+            // If not possible to return any user, returns null
             return null;
+        }
+
+        /// <summary>
+        /// Method responsible for generating a birthday message.
+        /// </summary>
+        /// <param name="discordUser">The user that to get the generated birthday message.</param>
+        /// <returns>A <see cref="string"/> containing the generated birthday message.</returns>
+        /// <exception cref="NotImplementedException">Thrown if the upcoming birthday date is not yet implemented on this
+        /// current method.</exception>
+        internal static string GenerateBirthdayMessage(User discordUser)
+        {
+            // Getting days remaining for registered user birthday.
+            var daysRemaning = GetBirthdayDaysRemaining(discordUser);
+            var upcomingBirthdayDate = GetBirthdayUpcomingDate(daysRemaning);
+            return upcomingBirthdayDate switch
+            {
+                BirthdayUpcomingDate.Today => $"Hoje é seu aniversário!! 🥳🎉 {"PARABÉNSS!!!!".ToDiscordBold()} Feliz Aniversário 🎂",
+                BirthdayUpcomingDate.Tomorrow => $"{"Amanhá".ToDiscordBold()} já é o aniversário. 🥳🎉",
+                BirthdayUpcomingDate.InSomeDays => $"Faltam apenas {(daysRemaning + " dias").ToDiscordBold()} para o aniversário!! 👀 Tô ansiosa!!",
+                _ => throw new NotImplementedException()
+            };
         }
 
         /// <summary>
@@ -80,13 +103,31 @@ namespace KWiJisho.Utils
         /// <param name="discordUser">The user to get how many years are remaining for they
         /// birthday.</param>
         /// <returns>A <see cref="double"/> containing the number of days remaining for they birthday.</returns>
-        internal static double GetDaysRemainingByUser(User discordUser)
+        internal static double GetBirthdayDaysRemaining(User discordUser)
             => (discordUser.Birthday.Date - DateTime.Now.Date).TotalDays;
+
+        /// <summary>
+        /// Gets the <see cref="BirthdayUpcomingDate"/> based on how much days are remaining for it.
+        /// </summary>
+        /// <param name="daysRemaning">How many days are remaining for the birthday.</param>
+        /// <returns>The <see cref="BirthdayUpcomingDate"/> based on how many days are remaning.</returns>
+        /// <exception cref="NotImplementedException">Thrown if the upcoming birthday date is not yet implemented
+        /// on this current method.</exception>
+        internal static BirthdayUpcomingDate GetBirthdayUpcomingDate(double daysRemaning)
+        {
+            return daysRemaning switch
+            {
+                0 => BirthdayUpcomingDate.Today,
+                1 => BirthdayUpcomingDate.Tomorrow,
+                > 1 => BirthdayUpcomingDate.InSomeDays,
+                _ => throw new NotImplementedException()
+            };
+        }
 
         /// <summary>
         /// Represents options for categorizing upcoming birthday dates.
         /// </summary>
-        internal enum UpcomingBirthdayDate
+        internal enum BirthdayUpcomingDate
         {
             /// <summary>
             /// Indicates an upcoming birthday today.
@@ -102,45 +143,6 @@ namespace KWiJisho.Utils
             /// Indicates an upcoming birthday in the future, beyond tomorrow.
             /// </summary>
             InSomeDays
-        }
-
-        /// <summary>
-        /// Gets the <see cref="UpcomingBirthdayDate"/> based on how much days are remaining for it.
-        /// </summary>
-        /// <param name="daysRemaning">How many days are remaining for the birthday.</param>
-        /// <returns>The <see cref="UpcomingBirthdayDate"/> based on how many days are remaning.</returns>
-        /// <exception cref="NotImplementedException">Thrown if the upcoming birthday date is not yet implemented
-        /// on this current method.</exception>
-        internal static UpcomingBirthdayDate GetUpcomingBirthdayDate(double daysRemaning)
-        {
-            return daysRemaning switch
-            {
-                0 => UpcomingBirthdayDate.Today,
-                1 => UpcomingBirthdayDate.Tomorrow,
-                > 1 => UpcomingBirthdayDate.InSomeDays,
-                _ => throw new NotImplementedException()
-            };
-        }
-
-        /// <summary>
-        /// Method responsible for generating a birthday message.
-        /// </summary>
-        /// <param name="discordUser">The user that to get the generated birthday message.</param>
-        /// <returns>A <see cref="string"/> containing the generated birthday message.</returns>
-        /// <exception cref="NotImplementedException">Thrown if the upcoming birthday date is not yet implemented on this
-        /// current method.</exception>
-        internal static string GenerateBirthdayMessage(User discordUser)
-        {
-            // Getting days remaining for registered user birthday.
-            var daysRemaning = GetDaysRemainingByUser(discordUser);
-            var upcomingBirthdayDate = GetUpcomingBirthdayDate(daysRemaning);
-            return upcomingBirthdayDate switch
-            {
-                UpcomingBirthdayDate.Today => $"Hoje é seu aniversário!! 🥳🎉 {"PARABÉNSS!!!!".ToDiscordBold()} Feliz Aniversário 🎂",
-                UpcomingBirthdayDate.Tomorrow => $"{"Amanhá".ToDiscordBold()} já é o aniversário. 🥳🎉",
-                UpcomingBirthdayDate.InSomeDays => $"Faltam apenas {(daysRemaning + " dias").ToDiscordBold()} para o aniversário!! 👀 Tô ansiosa!!",
-                _ => throw new NotImplementedException()
-            };
         }
     }
 }

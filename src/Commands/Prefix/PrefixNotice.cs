@@ -13,7 +13,7 @@ namespace KWiJisho.Commands.Prefix
     internal partial class PrefixCommandManager
     {
         /// <summary>
-        /// Represents a set of prefix channel notice commands.
+        /// Represents a set of prefix notice commands.
         /// </summary>
         internal class PrefixNotice : BaseCommandModule
         {
@@ -33,7 +33,7 @@ Considerações:
             internal PrefixCommand sendNews = new(nameof(sendNews), sendNewsDescription, Manage, Permissions.Administrator);
 
             /// <summary>
-            /// Send news asynchronous method for prefix commands.
+            /// Prefix send news command method to send news at the news' channel.
             /// </summary>
             /// <param name="commandContext">The command context.</param>
             /// <param name="title">The news' title.s</param>
@@ -48,7 +48,7 @@ Considerações:
                 var attachment = commandContext.Message.Attachments.Count > 0 ? commandContext.Message.Attachments[0] : null;
 
                 // Send the message
-                await Notice.SendNewsAsync(commandContext.Client, commandContext.Member, title, description, sendInTramontina, attachment);
+                await Notice.ExecuteNewsAsync(commandContext.Client, commandContext.Member, title, description, sendInTramontina, attachment);
             }
         }
     }
