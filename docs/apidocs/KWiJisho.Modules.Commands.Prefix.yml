@@ -1,0 +1,372 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Modules.Commands.Prefix
+  commentId: N:KWiJisho.Modules.Commands.Prefix
+  id: KWiJisho.Modules.Commands.Prefix
+  children:
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommand
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+  - KWiJisho.Modules.Commands.Prefix.PrefixPokemon
+  langs:
+  - csharp
+  - vb
+  name: KWiJisho.Modules.Commands.Prefix
+  nameWithType: KWiJisho.Modules.Commands.Prefix
+  fullName: KWiJisho.Modules.Commands.Prefix
+  type: Namespace
+  assemblies:
+  - KWiJisho
+references:
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  name: PrefixCommandManager
+  nameWithType: PrefixCommandManager
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  name: PrefixCommandManager.PrefixBasic
+  nameWithType: PrefixCommandManager.PrefixBasic
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic
+  spec.csharp:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic
+    name: PrefixBasic
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic
+    name: PrefixBasic
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.html
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  name: PrefixCommandManager.PrefixBirthday
+  nameWithType: PrefixCommandManager.PrefixBirthday
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday
+  spec.csharp:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday
+    name: PrefixBirthday
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday
+    name: PrefixBirthday
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.html
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  name: PrefixCommandManager.PrefixInfo
+  nameWithType: PrefixCommandManager.PrefixInfo
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo
+  spec.csharp:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo
+    name: PrefixInfo
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo
+    name: PrefixInfo
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo.html
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  name: PrefixCommandManager.PrefixKwiGpt
+  nameWithType: PrefixCommandManager.PrefixKwiGpt
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt
+  spec.csharp:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt
+    name: PrefixKwiGpt
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt
+    name: PrefixKwiGpt
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt.html
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  name: PrefixCommandManager.PrefixNasa
+  nameWithType: PrefixCommandManager.PrefixNasa
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa
+  spec.csharp:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa
+    name: PrefixNasa
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa
+    name: PrefixNasa
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.html
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  name: PrefixCommandManager.PrefixNasa.ApodBuilder
+  nameWithType: PrefixCommandManager.PrefixNasa.ApodBuilder
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder
+  spec.csharp:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa
+    name: PrefixNasa
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder
+    name: ApodBuilder
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa
+    name: PrefixNasa
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder
+    name: ApodBuilder
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder.html
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  name: PrefixCommandManager.PrefixNotice
+  nameWithType: PrefixCommandManager.PrefixNotice
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice
+  spec.csharp:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice
+    name: PrefixNotice
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice
+    name: PrefixNotice
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.html
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  name: PrefixCommandManager.PrefixTheme
+  nameWithType: PrefixCommandManager.PrefixTheme
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+  spec.csharp:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+    name: PrefixTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+    name: PrefixTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+  parent: KWiJisho.Modules.Commands.Prefix
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  name: PrefixCommandManager.PrefixTheme.EmojiTheme
+  nameWithType: PrefixCommandManager.PrefixTheme.EmojiTheme
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+  spec.csharp:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+    name: PrefixTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+    name: EmojiTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+    name: PrefixTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+    name: EmojiTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.html
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  name: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  spec.csharp:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+    name: PrefixTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+    name: PrefixThemeTramontina
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+    name: PrefixTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+    name: PrefixThemeTramontina
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.html
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+  parent: KWiJisho.Modules.Commands.Prefix
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  name: PrefixCommandManager.PrefixTheme.TramontinaChannel
+  nameWithType: PrefixCommandManager.PrefixTheme.TramontinaChannel
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+  spec.csharp:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+    name: PrefixTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+    name: TramontinaChannel
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+    name: PrefixTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+    name: TramontinaChannel
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.html
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommand
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommand
+  parent: KWiJisho.Modules.Commands.Prefix
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommand.html
+  name: PrefixCommand
+  nameWithType: PrefixCommand
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommand
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup
+  parent: KWiJisho.Modules.Commands.Prefix
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup.html
+  name: PrefixCommandGroup
+  nameWithType: PrefixCommandGroup
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixPokemon
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixPokemon
+  href: KWiJisho.Modules.Commands.Prefix.PrefixPokemon.html
+  name: PrefixPokemon
+  nameWithType: PrefixPokemon
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixPokemon
+- uid: KWiJisho.Modules.Commands.Prefix
+  commentId: N:KWiJisho.Modules.Commands.Prefix
+  href: KWiJisho.html
+  name: KWiJisho.Modules.Commands.Prefix
+  nameWithType: KWiJisho.Modules.Commands.Prefix
+  fullName: KWiJisho.Modules.Commands.Prefix
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Modules
+    name: Modules
+    href: KWiJisho.Modules.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands
+    name: Commands
+    href: KWiJisho.Modules.Commands.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix
+    name: Prefix
+    href: KWiJisho.Modules.Commands.Prefix.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Modules
+    name: Modules
+    href: KWiJisho.Modules.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands
+    name: Commands
+    href: KWiJisho.Modules.Commands.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix
+    name: Prefix
+    href: KWiJisho.Modules.Commands.Prefix.html
+memberLayout: SeparatePages

@@ -1,0 +1,624 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Modules.Commands.Birthday
+  commentId: T:KWiJisho.Modules.Commands.Birthday
+  id: Birthday
+  parent: KWiJisho.Modules.Commands
+  children:
+  - KWiJisho.Modules.Commands.Birthday.GetListBirthdayAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild)
+  - KWiJisho.Modules.Commands.Birthday.GetNextBirthdayAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild)
+  - KWiJisho.Modules.Commands.Birthday.Months
+  langs:
+  - csharp
+  - vb
+  name: Birthday
+  nameWithType: Birthday
+  fullName: KWiJisho.Modules.Commands.Birthday
+  type: Class
+  source:
+    remote:
+      path: src/Modules/Commands/Birthday.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Birthday
+    path: ../src/Modules/Commands/Birthday.cs
+    startLine: 12
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands
+  summary: Provides methods for "prefix" and "slash" birthday commands.
+  example: []
+  syntax:
+    content: internal static class Birthday
+    content.vb: Friend Module Birthday
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: KWiJisho.Modules.Commands.Birthday.Months
+  commentId: P:KWiJisho.Modules.Commands.Birthday.Months
+  id: Months
+  parent: KWiJisho.Modules.Commands.Birthday
+  langs:
+  - csharp
+  - vb
+  name: Months
+  nameWithType: Birthday.Months
+  fullName: KWiJisho.Modules.Commands.Birthday.Months
+  type: Property
+  source:
+    remote:
+      path: src/Modules/Commands/Birthday.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Months
+    path: ../src/Modules/Commands/Birthday.cs
+    startLine: 14
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands
+  syntax:
+    content: private static Dictionary<int, string> Months { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.Int32,System.String}
+    content.vb: Private Shared ReadOnly Property Months As Dictionary(Of Integer, String)
+  overload: KWiJisho.Modules.Commands.Birthday.Months*
+- uid: KWiJisho.Modules.Commands.Birthday.GetNextBirthdayAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild)
+  commentId: M:KWiJisho.Modules.Commands.Birthday.GetNextBirthdayAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild)
+  id: GetNextBirthdayAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild)
+  parent: KWiJisho.Modules.Commands.Birthday
+  langs:
+  - csharp
+  - vb
+  name: GetNextBirthdayAsync(DiscordChannel, DiscordGuild)
+  nameWithType: Birthday.GetNextBirthdayAsync(DiscordChannel, DiscordGuild)
+  fullName: KWiJisho.Modules.Commands.Birthday.GetNextBirthdayAsync(DSharpPlus.Entities.DiscordChannel, DSharpPlus.Entities.DiscordGuild)
+  type: Method
+  source:
+    remote:
+      path: src/Modules/Commands/Birthday.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: GetNextBirthdayAsync
+    path: ../src/Modules/Commands/Birthday.cs
+    startLine: 30
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands
+  syntax:
+    content: internal static Task GetNextBirthdayAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
+    parameters:
+    - id: discordChannel
+      type: DSharpPlus.Entities.DiscordChannel
+    - id: discordGuild
+      type: DSharpPlus.Entities.DiscordGuild
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Friend Shared Function GetNextBirthdayAsync(discordChannel As DiscordChannel, discordGuild As DiscordGuild) As Task
+  overload: KWiJisho.Modules.Commands.Birthday.GetNextBirthdayAsync*
+- uid: KWiJisho.Modules.Commands.Birthday.GetListBirthdayAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild)
+  commentId: M:KWiJisho.Modules.Commands.Birthday.GetListBirthdayAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild)
+  id: GetListBirthdayAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild)
+  parent: KWiJisho.Modules.Commands.Birthday
+  langs:
+  - csharp
+  - vb
+  name: GetListBirthdayAsync(DiscordChannel, DiscordGuild)
+  nameWithType: Birthday.GetListBirthdayAsync(DiscordChannel, DiscordGuild)
+  fullName: KWiJisho.Modules.Commands.Birthday.GetListBirthdayAsync(DSharpPlus.Entities.DiscordChannel, DSharpPlus.Entities.DiscordGuild)
+  type: Method
+  source:
+    remote:
+      path: src/Modules/Commands/Birthday.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: GetListBirthdayAsync
+    path: ../src/Modules/Commands/Birthday.cs
+    startLine: 59
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands
+  syntax:
+    content: internal static Task GetListBirthdayAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
+    parameters:
+    - id: discordChannel
+      type: DSharpPlus.Entities.DiscordChannel
+    - id: discordGuild
+      type: DSharpPlus.Entities.DiscordGuild
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Friend Shared Function GetListBirthdayAsync(discordChannel As DiscordChannel, discordGuild As DiscordGuild) As Task
+  overload: KWiJisho.Modules.Commands.Birthday.GetListBirthdayAsync*
+references:
+- uid: KWiJisho.Modules.Commands
+  commentId: N:KWiJisho.Modules.Commands
+  href: KWiJisho.html
+  name: KWiJisho.Modules.Commands
+  nameWithType: KWiJisho.Modules.Commands
+  fullName: KWiJisho.Modules.Commands
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Modules
+    name: Modules
+    href: KWiJisho.Modules.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands
+    name: Commands
+    href: KWiJisho.Modules.Commands.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Modules
+    name: Modules
+    href: KWiJisho.Modules.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands
+    name: Commands
+    href: KWiJisho.Modules.Commands.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: KWiJisho.Modules.Commands.Birthday.Months*
+  commentId: Overload:KWiJisho.Modules.Commands.Birthday.Months
+  href: KWiJisho.Modules.Commands.Birthday.Months.html#KWiJisho_Modules_Commands_Birthday_Months
+  name: Months
+  nameWithType: Birthday.Months
+  fullName: KWiJisho.Modules.Commands.Birthday.Months
+- uid: System.Collections.Generic.Dictionary{System.Int32,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.Int32,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<int, string>
+  nameWithType: Dictionary<int, string>
+  fullName: System.Collections.Generic.Dictionary<int, string>
+  nameWithType.vb: Dictionary(Of Integer, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of Integer, String)
+  name.vb: Dictionary(Of Integer, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: KWiJisho.Modules.Commands.Birthday.GetNextBirthdayAsync*
+  commentId: Overload:KWiJisho.Modules.Commands.Birthday.GetNextBirthdayAsync
+  href: KWiJisho.Modules.Commands.Birthday.GetNextBirthdayAsync.html#KWiJisho_Modules_Commands_Birthday_GetNextBirthdayAsync_DSharpPlus_Entities_DiscordChannel_DSharpPlus_Entities_DiscordGuild_
+  name: GetNextBirthdayAsync
+  nameWithType: Birthday.GetNextBirthdayAsync
+  fullName: KWiJisho.Modules.Commands.Birthday.GetNextBirthdayAsync
+- uid: DSharpPlus.Entities.DiscordChannel
+  commentId: T:DSharpPlus.Entities.DiscordChannel
+  parent: DSharpPlus.Entities
+  isExternal: true
+  name: DiscordChannel
+  nameWithType: DiscordChannel
+  fullName: DSharpPlus.Entities.DiscordChannel
+- uid: DSharpPlus.Entities.DiscordGuild
+  commentId: T:DSharpPlus.Entities.DiscordGuild
+  parent: DSharpPlus.Entities
+  isExternal: true
+  name: DiscordGuild
+  nameWithType: DiscordGuild
+  fullName: DSharpPlus.Entities.DiscordGuild
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: DSharpPlus.Entities
+  commentId: N:DSharpPlus.Entities
+  isExternal: true
+  name: DSharpPlus.Entities
+  nameWithType: DSharpPlus.Entities
+  fullName: DSharpPlus.Entities
+  spec.csharp:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.Entities
+    name: Entities
+    isExternal: true
+  spec.vb:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.Entities
+    name: Entities
+    isExternal: true
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: KWiJisho.Modules.Commands.Birthday.GetListBirthdayAsync*
+  commentId: Overload:KWiJisho.Modules.Commands.Birthday.GetListBirthdayAsync
+  href: KWiJisho.Modules.Commands.Birthday.GetListBirthdayAsync.html#KWiJisho_Modules_Commands_Birthday_GetListBirthdayAsync_DSharpPlus_Entities_DiscordChannel_DSharpPlus_Entities_DiscordGuild_
+  name: GetListBirthdayAsync
+  nameWithType: Birthday.GetListBirthdayAsync
+  fullName: KWiJisho.Modules.Commands.Birthday.GetListBirthdayAsync
+memberLayout: SeparatePages

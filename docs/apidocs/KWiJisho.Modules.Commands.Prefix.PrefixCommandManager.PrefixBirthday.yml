@@ -1,0 +1,626 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday
+  id: PrefixCommandManager.PrefixBirthday
+  parent: KWiJisho.Modules.Commands.Prefix
+  children:
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetListBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.listBirthday
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.nextBirthday
+  langs:
+  - csharp
+  - vb
+  name: PrefixCommandManager.PrefixBirthday
+  nameWithType: PrefixCommandManager.PrefixBirthday
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday
+  type: Class
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixBirthday.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: PrefixBirthday
+    path: ../src/Modules/Commands/Prefix/PrefixBirthday.cs
+    startLine: 14
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Represents a set of birthday prefix commands.
+  example: []
+  syntax:
+    content: 'internal class PrefixCommandManager.PrefixBirthday : BaseCommandModule'
+    content.vb: Friend Class PrefixCommandManager.PrefixBirthday Inherits BaseCommandModule
+  inheritance:
+  - System.Object
+  - DSharpPlus.CommandsNext.BaseCommandModule
+  inheritedMembers:
+  - DSharpPlus.CommandsNext.BaseCommandModule.BeforeExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+  - DSharpPlus.CommandsNext.BaseCommandModule.AfterExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.nextBirthday
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.nextBirthday
+  id: nextBirthday
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday
+  langs:
+  - csharp
+  - vb
+  name: nextBirthday
+  nameWithType: PrefixCommandManager.PrefixBirthday.nextBirthday
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.nextBirthday
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixBirthday.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: nextBirthday
+    path: ../src/Modules/Commands/Prefix/PrefixBirthday.cs
+    startLine: 19
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Represents the command to show the next person to have a birthday.
+  example: []
+  syntax:
+    content: internal PrefixCommand nextBirthday
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommand
+    content.vb: Friend nextBirthday As PrefixCommand
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.listBirthday
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.listBirthday
+  id: listBirthday
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday
+  langs:
+  - csharp
+  - vb
+  name: listBirthday
+  nameWithType: PrefixCommandManager.PrefixBirthday.listBirthday
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.listBirthday
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixBirthday.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: listBirthday
+    path: ../src/Modules/Commands/Prefix/PrefixBirthday.cs
+    startLine: 24
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Represents the command to list people will have birthday.
+  example: []
+  syntax:
+    content: internal PrefixCommand listBirthday
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommand
+    content.vb: Friend listBirthday As PrefixCommand
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)
+  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)
+  id: GetNextBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday
+  langs:
+  - csharp
+  - vb
+  name: GetNextBirthdayAsync(CommandContext)
+  nameWithType: PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync(CommandContext)
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)
+  type: Method
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixBirthday.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: GetNextBirthdayAsync
+    path: ../src/Modules/Commands/Prefix/PrefixBirthday.cs
+    startLine: 31
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Represents the asynchronous prefix get next birthday method called when requesting to show the next person to have a birthday.
+  example: []
+  syntax:
+    content: >-
+      [Command("nextBirthday")]
+
+      internal Task GetNextBirthdayAsync(CommandContext commandContext)
+    parameters:
+    - id: commandContext
+      type: DSharpPlus.CommandsNext.CommandContext
+      description: The command context from the current command call.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> from the current asynchronous task.
+    content.vb: >-
+      <Command("nextBirthday")>
+
+      Friend Function GetNextBirthdayAsync(commandContext As CommandContext) As Task
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync*
+  attributes:
+  - type: DSharpPlus.CommandsNext.Attributes.CommandAttribute
+    ctor: DSharpPlus.CommandsNext.Attributes.CommandAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: nextBirthday
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetListBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)
+  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetListBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)
+  id: GetListBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday
+  langs:
+  - csharp
+  - vb
+  name: GetListBirthdayAsync(CommandContext)
+  nameWithType: PrefixCommandManager.PrefixBirthday.GetListBirthdayAsync(CommandContext)
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetListBirthdayAsync(DSharpPlus.CommandsNext.CommandContext)
+  type: Method
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixBirthday.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: GetListBirthdayAsync
+    path: ../src/Modules/Commands/Prefix/PrefixBirthday.cs
+    startLine: 39
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Represents the asynchronous prefix get birthday list called when requesting to show the list of people to have a birthday.
+  example: []
+  syntax:
+    content: >-
+      [Command("listBirthday")]
+
+      internal Task GetListBirthdayAsync(CommandContext commandContext)
+    parameters:
+    - id: commandContext
+      type: DSharpPlus.CommandsNext.CommandContext
+      description: The command context from the current command call.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> from the current asynchronous task.
+    content.vb: >-
+      <Command("listBirthday")>
+
+      Friend Function GetListBirthdayAsync(commandContext As CommandContext) As Task
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetListBirthdayAsync*
+  attributes:
+  - type: DSharpPlus.CommandsNext.Attributes.CommandAttribute
+    ctor: DSharpPlus.CommandsNext.Attributes.CommandAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: listBirthday
+references:
+- uid: KWiJisho.Modules.Commands.Prefix
+  commentId: N:KWiJisho.Modules.Commands.Prefix
+  href: KWiJisho.html
+  name: KWiJisho.Modules.Commands.Prefix
+  nameWithType: KWiJisho.Modules.Commands.Prefix
+  fullName: KWiJisho.Modules.Commands.Prefix
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Modules
+    name: Modules
+    href: KWiJisho.Modules.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands
+    name: Commands
+    href: KWiJisho.Modules.Commands.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix
+    name: Prefix
+    href: KWiJisho.Modules.Commands.Prefix.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Modules
+    name: Modules
+    href: KWiJisho.Modules.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands
+    name: Commands
+    href: KWiJisho.Modules.Commands.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix
+    name: Prefix
+    href: KWiJisho.Modules.Commands.Prefix.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DSharpPlus.CommandsNext.BaseCommandModule
+  commentId: T:DSharpPlus.CommandsNext.BaseCommandModule
+  parent: DSharpPlus.CommandsNext
+  isExternal: true
+  name: BaseCommandModule
+  nameWithType: BaseCommandModule
+  fullName: DSharpPlus.CommandsNext.BaseCommandModule
+- uid: DSharpPlus.CommandsNext.BaseCommandModule.BeforeExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+  commentId: M:DSharpPlus.CommandsNext.BaseCommandModule.BeforeExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+  parent: DSharpPlus.CommandsNext.BaseCommandModule
+  isExternal: true
+  name: BeforeExecutionAsync(CommandContext)
+  nameWithType: BaseCommandModule.BeforeExecutionAsync(CommandContext)
+  fullName: DSharpPlus.CommandsNext.BaseCommandModule.BeforeExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+  spec.csharp:
+  - uid: DSharpPlus.CommandsNext.BaseCommandModule.BeforeExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+    name: BeforeExecutionAsync
+    isExternal: true
+  - name: (
+  - uid: DSharpPlus.CommandsNext.CommandContext
+    name: CommandContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: DSharpPlus.CommandsNext.BaseCommandModule.BeforeExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+    name: BeforeExecutionAsync
+    isExternal: true
+  - name: (
+  - uid: DSharpPlus.CommandsNext.CommandContext
+    name: CommandContext
+    isExternal: true
+  - name: )
+- uid: DSharpPlus.CommandsNext.BaseCommandModule.AfterExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+  commentId: M:DSharpPlus.CommandsNext.BaseCommandModule.AfterExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+  parent: DSharpPlus.CommandsNext.BaseCommandModule
+  isExternal: true
+  name: AfterExecutionAsync(CommandContext)
+  nameWithType: BaseCommandModule.AfterExecutionAsync(CommandContext)
+  fullName: DSharpPlus.CommandsNext.BaseCommandModule.AfterExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+  spec.csharp:
+  - uid: DSharpPlus.CommandsNext.BaseCommandModule.AfterExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+    name: AfterExecutionAsync
+    isExternal: true
+  - name: (
+  - uid: DSharpPlus.CommandsNext.CommandContext
+    name: CommandContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: DSharpPlus.CommandsNext.BaseCommandModule.AfterExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+    name: AfterExecutionAsync
+    isExternal: true
+  - name: (
+  - uid: DSharpPlus.CommandsNext.CommandContext
+    name: CommandContext
+    isExternal: true
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DSharpPlus.CommandsNext
+  commentId: N:DSharpPlus.CommandsNext
+  isExternal: true
+  name: DSharpPlus.CommandsNext
+  nameWithType: DSharpPlus.CommandsNext
+  fullName: DSharpPlus.CommandsNext
+  spec.csharp:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.CommandsNext
+    name: CommandsNext
+    isExternal: true
+  spec.vb:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.CommandsNext
+    name: CommandsNext
+    isExternal: true
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommand
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommand
+  parent: KWiJisho.Modules.Commands.Prefix
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommand.html
+  name: PrefixCommand
+  nameWithType: PrefixCommand
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommand
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync*
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixBirthday_GetNextBirthdayAsync_DSharpPlus_CommandsNext_CommandContext_
+  name: GetNextBirthdayAsync
+  nameWithType: PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetNextBirthdayAsync
+- uid: DSharpPlus.CommandsNext.CommandContext
+  commentId: T:DSharpPlus.CommandsNext.CommandContext
+  parent: DSharpPlus.CommandsNext
+  isExternal: true
+  name: CommandContext
+  nameWithType: CommandContext
+  fullName: DSharpPlus.CommandsNext.CommandContext
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetListBirthdayAsync*
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetListBirthdayAsync
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetListBirthdayAsync.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixBirthday_GetListBirthdayAsync_DSharpPlus_CommandsNext_CommandContext_
+  name: GetListBirthdayAsync
+  nameWithType: PrefixCommandManager.PrefixBirthday.GetListBirthdayAsync
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday.GetListBirthdayAsync
+memberLayout: SeparatePages

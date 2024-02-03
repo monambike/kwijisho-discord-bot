@@ -1,6 +1,6 @@
-- name: Docs
-  href: docs/
-- name: API
-  href: api/
-- name: My Website
+- name: Articles
+  href: articles/
+- name: API Documentation
+  href: apidocs/
+- name: My Website (monambike.com)↗
   href: https://monambike.com

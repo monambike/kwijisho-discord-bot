@@ -1,0 +1,527 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Modules.Utils.Channel
+  commentId: T:KWiJisho.Modules.Utils.Channel
+  id: Channel
+  parent: KWiJisho.Modules.Utils
+  children:
+  - KWiJisho.Modules.Utils.Channel.#ctor(System.UInt64,System.String)
+  - KWiJisho.Modules.Utils.Channel.DefaultName
+  - KWiJisho.Modules.Utils.Channel.Id
+  - KWiJisho.Modules.Utils.Channel.UpdateChannelNameAsync(DSharpPlus.CommandsNext.CommandContext,System.String)
+  langs:
+  - csharp
+  - vb
+  name: Channel
+  nameWithType: Channel
+  fullName: KWiJisho.Modules.Utils.Channel
+  type: Class
+  source:
+    remote:
+      path: src/Modules/Utils/DiscordChannel.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Channel
+    path: ../src/Modules/Utils/DiscordChannel.cs
+    startLine: 10
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Utils
+  summary: >-
+    The class that represents a new instance of a Discord channel with a
+
+    unique identifier and a default name.
+
+    <param name="id">The Discord channel unique identifier.</param>
+
+    <param name="defaultName">The Discord channel default name.</param>
+  example: []
+  syntax:
+    content: internal class Channel
+    content.vb: Friend Class Channel
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: KWiJisho.Modules.Utils.Channel.#ctor(System.UInt64,System.String)
+  commentId: M:KWiJisho.Modules.Utils.Channel.#ctor(System.UInt64,System.String)
+  id: '#ctor(System.UInt64,System.String)'
+  parent: KWiJisho.Modules.Utils.Channel
+  langs:
+  - csharp
+  - vb
+  name: Channel(ulong, string)
+  nameWithType: Channel.Channel(ulong, string)
+  fullName: KWiJisho.Modules.Utils.Channel.Channel(ulong, string)
+  type: Constructor
+  source:
+    remote:
+      path: src/Modules/Utils/DiscordChannel.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: .ctor
+    path: ../src/Modules/Utils/DiscordChannel.cs
+    startLine: 10
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Utils
+  summary: >-
+    The class that represents a new instance of a Discord channel with a
+
+    unique identifier and a default name.
+
+    <param name="id">The Discord channel unique identifier.</param>
+
+    <param name="defaultName">The Discord channel default name.</param>
+  example: []
+  syntax:
+    content: public Channel(ulong id, string defaultName)
+    parameters:
+    - id: id
+      type: System.UInt64
+    - id: defaultName
+      type: System.String
+    content.vb: Public Sub New(id As ULong, defaultName As String)
+  overload: KWiJisho.Modules.Utils.Channel.#ctor*
+  nameWithType.vb: Channel.New(ULong, String)
+  fullName.vb: KWiJisho.Modules.Utils.Channel.New(ULong, String)
+  name.vb: New(ULong, String)
+- uid: KWiJisho.Modules.Utils.Channel.Id
+  commentId: F:KWiJisho.Modules.Utils.Channel.Id
+  id: Id
+  parent: KWiJisho.Modules.Utils.Channel
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Channel.Id
+  fullName: KWiJisho.Modules.Utils.Channel.Id
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Utils/DiscordChannel.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Id
+    path: ../src/Modules/Utils/DiscordChannel.cs
+    startLine: 15
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Utils
+  summary: The Discord channel unique identifier.
+  example: []
+  syntax:
+    content: internal ulong Id
+    return:
+      type: System.UInt64
+    content.vb: Friend Id As ULong
+- uid: KWiJisho.Modules.Utils.Channel.DefaultName
+  commentId: F:KWiJisho.Modules.Utils.Channel.DefaultName
+  id: DefaultName
+  parent: KWiJisho.Modules.Utils.Channel
+  langs:
+  - csharp
+  - vb
+  name: DefaultName
+  nameWithType: Channel.DefaultName
+  fullName: KWiJisho.Modules.Utils.Channel.DefaultName
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Utils/DiscordChannel.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: DefaultName
+    path: ../src/Modules/Utils/DiscordChannel.cs
+    startLine: 20
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Utils
+  summary: The Discord channel default name.
+  example: []
+  syntax:
+    content: internal string DefaultName
+    return:
+      type: System.String
+    content.vb: Friend DefaultName As String
+- uid: KWiJisho.Modules.Utils.Channel.UpdateChannelNameAsync(DSharpPlus.CommandsNext.CommandContext,System.String)
+  commentId: M:KWiJisho.Modules.Utils.Channel.UpdateChannelNameAsync(DSharpPlus.CommandsNext.CommandContext,System.String)
+  id: UpdateChannelNameAsync(DSharpPlus.CommandsNext.CommandContext,System.String)
+  parent: KWiJisho.Modules.Utils.Channel
+  langs:
+  - csharp
+  - vb
+  name: UpdateChannelNameAsync(CommandContext, string)
+  nameWithType: Channel.UpdateChannelNameAsync(CommandContext, string)
+  fullName: KWiJisho.Modules.Utils.Channel.UpdateChannelNameAsync(DSharpPlus.CommandsNext.CommandContext, string)
+  type: Method
+  source:
+    remote:
+      path: src/Modules/Utils/DiscordChannel.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: UpdateChannelNameAsync
+    path: ../src/Modules/Utils/DiscordChannel.cs
+    startLine: 27
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Utils
+  summary: Updates asynchronously the name of the Discord channel.
+  example: []
+  syntax:
+    content: internal void UpdateChannelNameAsync(CommandContext commandContext, string newName)
+    parameters:
+    - id: commandContext
+      type: DSharpPlus.CommandsNext.CommandContext
+      description: The command context containing information about the command.
+    - id: newName
+      type: System.String
+      description: The new name for the Discord channel.
+    content.vb: Friend Sub UpdateChannelNameAsync(commandContext As CommandContext, newName As String)
+  overload: KWiJisho.Modules.Utils.Channel.UpdateChannelNameAsync*
+  nameWithType.vb: Channel.UpdateChannelNameAsync(CommandContext, String)
+  fullName.vb: KWiJisho.Modules.Utils.Channel.UpdateChannelNameAsync(DSharpPlus.CommandsNext.CommandContext, String)
+  name.vb: UpdateChannelNameAsync(CommandContext, String)
+references:
+- uid: KWiJisho.Modules.Utils
+  commentId: N:KWiJisho.Modules.Utils
+  href: KWiJisho.html
+  name: KWiJisho.Modules.Utils
+  nameWithType: KWiJisho.Modules.Utils
+  fullName: KWiJisho.Modules.Utils
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Modules
+    name: Modules
+    href: KWiJisho.Modules.html
+  - name: .
+  - uid: KWiJisho.Modules.Utils
+    name: Utils
+    href: KWiJisho.Modules.Utils.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Modules
+    name: Modules
+    href: KWiJisho.Modules.html
+  - name: .
+  - uid: KWiJisho.Modules.Utils
+    name: Utils
+    href: KWiJisho.Modules.Utils.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: KWiJisho.Modules.Utils.Channel.#ctor*
+  commentId: Overload:KWiJisho.Modules.Utils.Channel.#ctor
+  href: KWiJisho.Modules.Utils.Channel.-ctor.html#KWiJisho_Modules_Utils_Channel__ctor_System_UInt64_System_String_
+  name: Channel
+  nameWithType: Channel.Channel
+  fullName: KWiJisho.Modules.Utils.Channel.Channel
+  nameWithType.vb: Channel.New
+  fullName.vb: KWiJisho.Modules.Utils.Channel.New
+  name.vb: New
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: KWiJisho.Modules.Utils.Channel.UpdateChannelNameAsync*
+  commentId: Overload:KWiJisho.Modules.Utils.Channel.UpdateChannelNameAsync
+  href: KWiJisho.Modules.Utils.Channel.UpdateChannelNameAsync.html#KWiJisho_Modules_Utils_Channel_UpdateChannelNameAsync_DSharpPlus_CommandsNext_CommandContext_System_String_
+  name: UpdateChannelNameAsync
+  nameWithType: Channel.UpdateChannelNameAsync
+  fullName: KWiJisho.Modules.Utils.Channel.UpdateChannelNameAsync
+- uid: DSharpPlus.CommandsNext.CommandContext
+  commentId: T:DSharpPlus.CommandsNext.CommandContext
+  parent: DSharpPlus.CommandsNext
+  isExternal: true
+  name: CommandContext
+  nameWithType: CommandContext
+  fullName: DSharpPlus.CommandsNext.CommandContext
+- uid: DSharpPlus.CommandsNext
+  commentId: N:DSharpPlus.CommandsNext
+  isExternal: true
+  name: DSharpPlus.CommandsNext
+  nameWithType: DSharpPlus.CommandsNext
+  fullName: DSharpPlus.CommandsNext
+  spec.csharp:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.CommandsNext
+    name: CommandsNext
+    isExternal: true
+  spec.vb:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.CommandsNext
+    name: CommandsNext
+    isExternal: true
+memberLayout: SeparatePages

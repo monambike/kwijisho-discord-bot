@@ -1,0 +1,92 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Modules.APIs
+  commentId: N:KWiJisho.Modules.APIs
+  id: KWiJisho.Modules.APIs
+  children:
+  - KWiJisho.Modules.APIs.HttpService
+  - KWiJisho.Modules.APIs.NasaApi
+  - KWiJisho.Modules.APIs.NasaApi.Apod
+  - KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson
+  - KWiJisho.Modules.APIs.OpenAiApi
+  langs:
+  - csharp
+  - vb
+  name: KWiJisho.Modules.APIs
+  nameWithType: KWiJisho.Modules.APIs
+  fullName: KWiJisho.Modules.APIs
+  type: Namespace
+  assemblies:
+  - KWiJisho
+references:
+- uid: KWiJisho.Modules.APIs.HttpService
+  commentId: T:KWiJisho.Modules.APIs.HttpService
+  href: KWiJisho.Modules.APIs.HttpService.html
+  name: HttpService
+  nameWithType: HttpService
+  fullName: KWiJisho.Modules.APIs.HttpService
+- uid: KWiJisho.Modules.APIs.NasaApi
+  commentId: T:KWiJisho.Modules.APIs.NasaApi
+  href: KWiJisho.Modules.APIs.NasaApi.html
+  name: NasaApi
+  nameWithType: NasaApi
+  fullName: KWiJisho.Modules.APIs.NasaApi
+- uid: KWiJisho.Modules.APIs.NasaApi.Apod
+  commentId: T:KWiJisho.Modules.APIs.NasaApi.Apod
+  href: KWiJisho.Modules.APIs.NasaApi.html
+  name: NasaApi.Apod
+  nameWithType: NasaApi.Apod
+  fullName: KWiJisho.Modules.APIs.NasaApi.Apod
+  spec.csharp:
+  - uid: KWiJisho.Modules.APIs.NasaApi
+    name: NasaApi
+    href: KWiJisho.Modules.APIs.NasaApi.html
+  - name: .
+  - uid: KWiJisho.Modules.APIs.NasaApi.Apod
+    name: Apod
+    href: KWiJisho.Modules.APIs.NasaApi.Apod.html
+  spec.vb:
+  - uid: KWiJisho.Modules.APIs.NasaApi
+    name: NasaApi
+    href: KWiJisho.Modules.APIs.NasaApi.html
+  - name: .
+  - uid: KWiJisho.Modules.APIs.NasaApi.Apod
+    name: Apod
+    href: KWiJisho.Modules.APIs.NasaApi.Apod.html
+- uid: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson
+  commentId: T:KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson
+  href: KWiJisho.Modules.APIs.NasaApi.html
+  name: NasaApi.Apod.ApodResponseJson
+  nameWithType: NasaApi.Apod.ApodResponseJson
+  fullName: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson
+  spec.csharp:
+  - uid: KWiJisho.Modules.APIs.NasaApi
+    name: NasaApi
+    href: KWiJisho.Modules.APIs.NasaApi.html
+  - name: .
+  - uid: KWiJisho.Modules.APIs.NasaApi.Apod
+    name: Apod
+    href: KWiJisho.Modules.APIs.NasaApi.Apod.html
+  - name: .
+  - uid: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson
+    name: ApodResponseJson
+    href: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.html
+  spec.vb:
+  - uid: KWiJisho.Modules.APIs.NasaApi
+    name: NasaApi
+    href: KWiJisho.Modules.APIs.NasaApi.html
+  - name: .
+  - uid: KWiJisho.Modules.APIs.NasaApi.Apod
+    name: Apod
+    href: KWiJisho.Modules.APIs.NasaApi.Apod.html
+  - name: .
+  - uid: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson
+    name: ApodResponseJson
+    href: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson.html
+- uid: KWiJisho.Modules.APIs.OpenAiApi
+  commentId: T:KWiJisho.Modules.APIs.OpenAiApi
+  href: KWiJisho.Modules.APIs.OpenAiApi.html
+  name: OpenAiApi
+  nameWithType: OpenAiApi
+  fullName: KWiJisho.Modules.APIs.OpenAiApi
+memberLayout: SeparatePages

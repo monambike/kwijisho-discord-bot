@@ -9,9 +9,10 @@
           ]
         }
       ],
-      "dest": "api",
+      "dest": "apidocs",
       "disableDefaultFilter": true,
-      "includePrivateMembers": true
+      "includePrivateMembers": true,
+      "memberLayout": "separatePages"
     }
   ],
   "build": {
@@ -40,6 +41,9 @@
     "globalMetadata": {
       "_appName": "KWiJisho",
       "_appTitle": "KWiJisho",
+      "_appFooter": "© 2016-2024 DSharpPlus Contributors",
+      "_appLogoPath": "images/logo.png",
+      "_appFaviconPath": "images/favicon.ico",
       "_enableSearch": true,
       "pdf": true
     }

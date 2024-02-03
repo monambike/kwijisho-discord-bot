@@ -1,0 +1,31 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Modules
+  commentId: N:KWiJisho.Modules
+  id: KWiJisho.Modules
+  children:
+  - KWiJisho.Modules.Bot
+  - KWiJisho.Modules.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: KWiJisho.Modules
+  nameWithType: KWiJisho.Modules
+  fullName: KWiJisho.Modules
+  type: Namespace
+  assemblies:
+  - KWiJisho
+references:
+- uid: KWiJisho.Modules.Bot
+  commentId: T:KWiJisho.Modules.Bot
+  href: KWiJisho.Modules.Bot.html
+  name: Bot
+  nameWithType: Bot
+  fullName: KWiJisho.Modules.Bot
+- uid: KWiJisho.Modules.ConfigJson
+  commentId: T:KWiJisho.Modules.ConfigJson
+  href: KWiJisho.Modules.ConfigJson.html
+  name: ConfigJson
+  nameWithType: ConfigJson
+  fullName: KWiJisho.Modules.ConfigJson
+memberLayout: SeparatePages

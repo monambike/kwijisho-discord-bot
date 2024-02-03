@@ -1,0 +1,688 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+  id: PrefixCommandManager
+  parent: KWiJisho.Modules.Commands.Prefix
+  children:
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Astronomy
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Basic
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Birthday
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.ChatGpt
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.CommandGroups
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Info
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage
+  langs:
+  - csharp
+  - vb
+  name: PrefixCommandManager
+  nameWithType: PrefixCommandManager
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+  type: Class
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: PrefixCommandManager
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 15
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Provides a set of commands and classes for managing commands in a Discord server.
+  example: []
+  syntax:
+    content: internal static class PrefixCommandManager
+    content.vb: Friend Module PrefixCommandManager
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.CommandGroups
+  commentId: P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.CommandGroups
+  id: CommandGroups
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+  langs:
+  - csharp
+  - vb
+  name: CommandGroups
+  nameWithType: PrefixCommandManager.CommandGroups
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.CommandGroups
+  type: Property
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/CommandManager.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: CommandGroups
+    path: ../src/Modules/Commands/Prefix/CommandManager.cs
+    startLine: 16
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Gets or sets the list of command groups.
+  example: []
+  syntax:
+    content: internal static List<PrefixCommandGroup> CommandGroups { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup}
+    content.vb: Friend Shared Property CommandGroups As List(Of PrefixCommandGroup)
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.CommandGroups*
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Astronomy
+  commentId: P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Astronomy
+  id: Astronomy
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+  langs:
+  - csharp
+  - vb
+  name: Astronomy
+  nameWithType: PrefixCommandManager.Astronomy
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Astronomy
+  type: Property
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/CommandManager.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Astronomy
+    path: ../src/Modules/Commands/Prefix/CommandManager.cs
+    startLine: 21
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Gets the command group for Astronomy commands.
+  example: []
+  syntax:
+    content: internal static PrefixCommandGroup Astronomy { get; }
+    parameters: []
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup
+    content.vb: Friend Shared ReadOnly Property Astronomy As PrefixCommandGroup
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Astronomy*
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.ChatGpt
+  commentId: P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.ChatGpt
+  id: ChatGpt
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+  langs:
+  - csharp
+  - vb
+  name: ChatGpt
+  nameWithType: PrefixCommandManager.ChatGpt
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.ChatGpt
+  type: Property
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/CommandManager.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ChatGpt
+    path: ../src/Modules/Commands/Prefix/CommandManager.cs
+    startLine: 26
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Gets the command group for ChatGPT commands.
+  example: []
+  syntax:
+    content: internal static PrefixCommandGroup ChatGpt { get; }
+    parameters: []
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup
+    content.vb: Friend Shared ReadOnly Property ChatGpt As PrefixCommandGroup
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.ChatGpt*
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Info
+  commentId: P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Info
+  id: Info
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+  langs:
+  - csharp
+  - vb
+  name: Info
+  nameWithType: PrefixCommandManager.Info
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Info
+  type: Property
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/CommandManager.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Info
+    path: ../src/Modules/Commands/Prefix/CommandManager.cs
+    startLine: 31
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Gets the command group for Information and Help commands.
+  example: []
+  syntax:
+    content: internal static PrefixCommandGroup Info { get; }
+    parameters: []
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup
+    content.vb: Friend Shared ReadOnly Property Info As PrefixCommandGroup
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Info*
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage
+  commentId: P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage
+  id: Manage
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+  langs:
+  - csharp
+  - vb
+  name: Manage
+  nameWithType: PrefixCommandManager.Manage
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage
+  type: Property
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/CommandManager.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Manage
+    path: ../src/Modules/Commands/Prefix/CommandManager.cs
+    startLine: 36
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Gets the command group for Theme commands.
+  example: []
+  syntax:
+    content: internal static PrefixCommandGroup Manage { get; }
+    parameters: []
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup
+    content.vb: Friend Shared ReadOnly Property Manage As PrefixCommandGroup
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage*
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Birthday
+  commentId: P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Birthday
+  id: Birthday
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+  langs:
+  - csharp
+  - vb
+  name: Birthday
+  nameWithType: PrefixCommandManager.Birthday
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Birthday
+  type: Property
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/CommandManager.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Birthday
+    path: ../src/Modules/Commands/Prefix/CommandManager.cs
+    startLine: 41
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Gets the command group for Birthday commands.
+  example: []
+  syntax:
+    content: internal static PrefixCommandGroup Birthday { get; }
+    parameters: []
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup
+    content.vb: Friend Shared ReadOnly Property Birthday As PrefixCommandGroup
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Birthday*
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Basic
+  commentId: P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Basic
+  id: Basic
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+  langs:
+  - csharp
+  - vb
+  name: Basic
+  nameWithType: PrefixCommandManager.Basic
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Basic
+  type: Property
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/CommandManager.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Basic
+    path: ../src/Modules/Commands/Prefix/CommandManager.cs
+    startLine: 46
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Gets the command group for Basic commands.
+  example: []
+  syntax:
+    content: internal static PrefixCommandGroup Basic { get; }
+    parameters: []
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup
+    content.vb: Friend Shared ReadOnly Property Basic As PrefixCommandGroup
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Basic*
+references:
+- uid: KWiJisho.Modules.Commands.Prefix
+  commentId: N:KWiJisho.Modules.Commands.Prefix
+  href: KWiJisho.html
+  name: KWiJisho.Modules.Commands.Prefix
+  nameWithType: KWiJisho.Modules.Commands.Prefix
+  fullName: KWiJisho.Modules.Commands.Prefix
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Modules
+    name: Modules
+    href: KWiJisho.Modules.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands
+    name: Commands
+    href: KWiJisho.Modules.Commands.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix
+    name: Prefix
+    href: KWiJisho.Modules.Commands.Prefix.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Modules
+    name: Modules
+    href: KWiJisho.Modules.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands
+    name: Commands
+    href: KWiJisho.Modules.Commands.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix
+    name: Prefix
+    href: KWiJisho.Modules.Commands.Prefix.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.CommandGroups*
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.CommandGroups
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.CommandGroups.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_CommandGroups
+  name: CommandGroups
+  nameWithType: PrefixCommandManager.CommandGroups
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.CommandGroups
+- uid: System.Collections.Generic.List{KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup}
+  commentId: T:System.Collections.Generic.List{KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<PrefixCommandGroup>
+  nameWithType: List<PrefixCommandGroup>
+  fullName: System.Collections.Generic.List<KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup>
+  nameWithType.vb: List(Of PrefixCommandGroup)
+  fullName.vb: System.Collections.Generic.List(Of KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup)
+  name.vb: List(Of PrefixCommandGroup)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup
+    name: PrefixCommandGroup
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup
+    name: PrefixCommandGroup
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Astronomy*
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Astronomy
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Astronomy.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_Astronomy
+  name: Astronomy
+  nameWithType: PrefixCommandManager.Astronomy
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Astronomy
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup
+  parent: KWiJisho.Modules.Commands.Prefix
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup.html
+  name: PrefixCommandGroup
+  nameWithType: PrefixCommandGroup
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.ChatGpt*
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.ChatGpt
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.ChatGpt.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_ChatGpt
+  name: ChatGpt
+  nameWithType: PrefixCommandManager.ChatGpt
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.ChatGpt
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Info*
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Info
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Info.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_Info
+  name: Info
+  nameWithType: PrefixCommandManager.Info
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Info
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage*
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_Manage
+  name: Manage
+  nameWithType: PrefixCommandManager.Manage
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Birthday*
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Birthday
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Birthday.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_Birthday
+  name: Birthday
+  nameWithType: PrefixCommandManager.Birthday
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Birthday
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Basic*
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Basic
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Basic.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_Basic
+  name: Basic
+  nameWithType: PrefixCommandManager.Basic
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Basic
+memberLayout: SeparatePages

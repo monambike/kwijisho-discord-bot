@@ -1,0 +1,209 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+  id: PrefixCommandManager.PrefixTheme.EmojiTheme
+  parent: KWiJisho.Modules.Commands.Prefix
+  children:
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.Christmas
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.Default
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.Easter
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.Halloween
+  langs:
+  - csharp
+  - vb
+  name: PrefixCommandManager.PrefixTheme.EmojiTheme
+  nameWithType: PrefixCommandManager.PrefixTheme.EmojiTheme
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+  type: Enum
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: EmojiTheme
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 25
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Represents seasonal themes that you can set to the Discord server.
+  example: []
+  syntax:
+    content: internal enum PrefixCommandManager.PrefixTheme.EmojiTheme
+    content.vb: Friend Enum PrefixCommandManager.PrefixTheme.EmojiTheme
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.Default
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.Default
+  id: Default
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+  langs:
+  - csharp
+  - vb
+  name: Default
+  nameWithType: PrefixCommandManager.PrefixTheme.EmojiTheme.Default
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.Default
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Default
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 25
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  syntax:
+    content: Default = 0
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.Christmas
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.Christmas
+  id: Christmas
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+  langs:
+  - csharp
+  - vb
+  name: Christmas
+  nameWithType: PrefixCommandManager.PrefixTheme.EmojiTheme.Christmas
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.Christmas
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Christmas
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 25
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  syntax:
+    content: Christmas = 1
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.Easter
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.Easter
+  id: Easter
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+  langs:
+  - csharp
+  - vb
+  name: Easter
+  nameWithType: PrefixCommandManager.PrefixTheme.EmojiTheme.Easter
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.Easter
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Easter
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 25
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  syntax:
+    content: Easter = 2
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.Halloween
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.Halloween
+  id: Halloween
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+  langs:
+  - csharp
+  - vb
+  name: Halloween
+  nameWithType: PrefixCommandManager.PrefixTheme.EmojiTheme.Halloween
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.Halloween
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Halloween
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 25
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  syntax:
+    content: Halloween = 3
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+references:
+- uid: KWiJisho.Modules.Commands.Prefix
+  commentId: N:KWiJisho.Modules.Commands.Prefix
+  href: KWiJisho.html
+  name: KWiJisho.Modules.Commands.Prefix
+  nameWithType: KWiJisho.Modules.Commands.Prefix
+  fullName: KWiJisho.Modules.Commands.Prefix
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Modules
+    name: Modules
+    href: KWiJisho.Modules.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands
+    name: Commands
+    href: KWiJisho.Modules.Commands.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix
+    name: Prefix
+    href: KWiJisho.Modules.Commands.Prefix.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Modules
+    name: Modules
+    href: KWiJisho.Modules.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands
+    name: Commands
+    href: KWiJisho.Modules.Commands.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix
+    name: Prefix
+    href: KWiJisho.Modules.Commands.Prefix.html
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+  parent: KWiJisho.Modules.Commands.Prefix
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  name: PrefixCommandManager.PrefixTheme.EmojiTheme
+  nameWithType: PrefixCommandManager.PrefixTheme.EmojiTheme
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+  spec.csharp:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+    name: PrefixTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+    name: EmojiTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+    name: PrefixTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+    name: EmojiTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.html
+memberLayout: SeparatePages

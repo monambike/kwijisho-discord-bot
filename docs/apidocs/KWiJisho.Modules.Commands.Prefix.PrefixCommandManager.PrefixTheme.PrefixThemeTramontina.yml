@@ -1,0 +1,1401 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  id: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  parent: KWiJisho.Modules.Commands.Prefix
+  children:
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.CanalEscondidinho
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.CantinhoDaFofoca
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.CorpoDeBombeiros1
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.CorpoDeBombeiros2
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.Dicionario
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.Geral
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.OutrosBots
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.PrintsEternizados
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.Radio
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.ResetThemeAsync(DSharpPlus.CommandsNext.CommandContext)
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetChristmasThemeAsync(DSharpPlus.CommandsNext.CommandContext)
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetEasterThemeAsync(DSharpPlus.CommandsNext.CommandContext)
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetHalloweenThemeAsync(DSharpPlus.CommandsNext.CommandContext)
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetThemeAsync(DSharpPlus.CommandsNext.CommandContext,KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme,System.String,System.String,System.String)
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.TramontinaChannels
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.Waifu
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.YouTube
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeChristmas
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeEaster
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeHalloween
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeReset
+  langs:
+  - csharp
+  - vb
+  name: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  type: Class
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: PrefixThemeTramontina
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 30
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Represents a set of prefix commands to change theme designed specifically for Tramontina Discord server.
+  example: []
+  syntax:
+    content: 'internal class PrefixCommandManager.PrefixTheme.PrefixThemeTramontina : BaseCommandModule'
+    content.vb: Friend Class PrefixCommandManager.PrefixTheme.PrefixThemeTramontina Inherits BaseCommandModule
+  inheritance:
+  - System.Object
+  - DSharpPlus.CommandsNext.BaseCommandModule
+  inheritedMembers:
+  - DSharpPlus.CommandsNext.BaseCommandModule.BeforeExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+  - DSharpPlus.CommandsNext.BaseCommandModule.AfterExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.Geral
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.Geral
+  id: Geral
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: Geral
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.Geral
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.Geral
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Geral
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 33
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  syntax:
+    content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel Geral
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+    content.vb: Friend Shared ReadOnly Geral As PrefixCommandManager.PrefixTheme.TramontinaChannel
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.PrintsEternizados
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.PrintsEternizados
+  id: PrintsEternizados
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: PrintsEternizados
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.PrintsEternizados
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.PrintsEternizados
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: PrintsEternizados
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 35
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  syntax:
+    content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel PrintsEternizados
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+    content.vb: Friend Shared ReadOnly PrintsEternizados As PrefixCommandManager.PrefixTheme.TramontinaChannel
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.YouTube
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.YouTube
+  id: YouTube
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: YouTube
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.YouTube
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.YouTube
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: YouTube
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 38
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  syntax:
+    content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel YouTube
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+    content.vb: Friend Shared ReadOnly YouTube As PrefixCommandManager.PrefixTheme.TramontinaChannel
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.Dicionario
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.Dicionario
+  id: Dicionario
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: Dicionario
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.Dicionario
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.Dicionario
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Dicionario
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 40
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  syntax:
+    content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel Dicionario
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+    content.vb: Friend Shared ReadOnly Dicionario As PrefixCommandManager.PrefixTheme.TramontinaChannel
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.Waifu
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.Waifu
+  id: Waifu
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: Waifu
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.Waifu
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.Waifu
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Waifu
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 43
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  syntax:
+    content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel Waifu
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+    content.vb: Friend Shared ReadOnly Waifu As PrefixCommandManager.PrefixTheme.TramontinaChannel
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.Radio
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.Radio
+  id: Radio
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: Radio
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.Radio
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.Radio
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Radio
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 45
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  syntax:
+    content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel Radio
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+    content.vb: Friend Shared ReadOnly Radio As PrefixCommandManager.PrefixTheme.TramontinaChannel
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.OutrosBots
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.OutrosBots
+  id: OutrosBots
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: OutrosBots
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.OutrosBots
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.OutrosBots
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: OutrosBots
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 47
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  syntax:
+    content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel OutrosBots
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+    content.vb: Friend Shared ReadOnly OutrosBots As PrefixCommandManager.PrefixTheme.TramontinaChannel
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.CanalEscondidinho
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.CanalEscondidinho
+  id: CanalEscondidinho
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: CanalEscondidinho
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.CanalEscondidinho
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.CanalEscondidinho
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: CanalEscondidinho
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 50
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  syntax:
+    content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel CanalEscondidinho
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+    content.vb: Friend Shared ReadOnly CanalEscondidinho As PrefixCommandManager.PrefixTheme.TramontinaChannel
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.CorpoDeBombeiros1
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.CorpoDeBombeiros1
+  id: CorpoDeBombeiros1
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: CorpoDeBombeiros1
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.CorpoDeBombeiros1
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.CorpoDeBombeiros1
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: CorpoDeBombeiros1
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 52
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  syntax:
+    content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel CorpoDeBombeiros1
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+    content.vb: Friend Shared ReadOnly CorpoDeBombeiros1 As PrefixCommandManager.PrefixTheme.TramontinaChannel
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.CorpoDeBombeiros2
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.CorpoDeBombeiros2
+  id: CorpoDeBombeiros2
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: CorpoDeBombeiros2
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.CorpoDeBombeiros2
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.CorpoDeBombeiros2
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: CorpoDeBombeiros2
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 54
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  syntax:
+    content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel CorpoDeBombeiros2
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+    content.vb: Friend Shared ReadOnly CorpoDeBombeiros2 As PrefixCommandManager.PrefixTheme.TramontinaChannel
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.CantinhoDaFofoca
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.CantinhoDaFofoca
+  id: CantinhoDaFofoca
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: CantinhoDaFofoca
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.CantinhoDaFofoca
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.CantinhoDaFofoca
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: CantinhoDaFofoca
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 56
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  syntax:
+    content: internal static readonly PrefixCommandManager.PrefixTheme.TramontinaChannel CantinhoDaFofoca
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+    content.vb: Friend Shared ReadOnly CantinhoDaFofoca As PrefixCommandManager.PrefixTheme.TramontinaChannel
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.TramontinaChannels
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.TramontinaChannels
+  id: TramontinaChannels
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: TramontinaChannels
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.TramontinaChannels
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.TramontinaChannels
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: TramontinaChannels
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 62
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Channels from tramontina server that can receive theme changing.
+  example: []
+  syntax:
+    content: private static readonly List<PrefixCommandManager.PrefixTheme.TramontinaChannel> TramontinaChannels
+    return:
+      type: System.Collections.Generic.List{KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel}
+    content.vb: Private Shared ReadOnly TramontinaChannels As List(Of PrefixCommandManager.PrefixTheme.TramontinaChannel)
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeReset
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeReset
+  id: themeReset
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: themeReset
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeReset
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeReset
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: themeReset
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 73
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Resets the Tramontina server emojis.
+  example: []
+  syntax:
+    content: internal PrefixCommand themeReset
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommand
+    content.vb: Friend themeReset As PrefixCommand
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.ResetThemeAsync(DSharpPlus.CommandsNext.CommandContext)
+  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.ResetThemeAsync(DSharpPlus.CommandsNext.CommandContext)
+  id: ResetThemeAsync(DSharpPlus.CommandsNext.CommandContext)
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: ResetThemeAsync(CommandContext)
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.ResetThemeAsync(CommandContext)
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.ResetThemeAsync(DSharpPlus.CommandsNext.CommandContext)
+  type: Method
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ResetThemeAsync
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 74
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  syntax:
+    content: >-
+      [Command("themeReset")]
+
+      internal Task ResetThemeAsync(CommandContext commandContext)
+    parameters:
+    - id: commandContext
+      type: DSharpPlus.CommandsNext.CommandContext
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Command("themeReset")>
+
+      Friend Function ResetThemeAsync(commandContext As CommandContext) As Task
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.ResetThemeAsync*
+  attributes:
+  - type: DSharpPlus.CommandsNext.Attributes.CommandAttribute
+    ctor: DSharpPlus.CommandsNext.Attributes.CommandAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: themeReset
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeChristmas
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeChristmas
+  id: themeChristmas
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: themeChristmas
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeChristmas
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeChristmas
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: themeChristmas
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 83
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Sets the Tramontina server to Christmas Theme.
+  example: []
+  syntax:
+    content: internal PrefixCommand themeChristmas
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommand
+    content.vb: Friend themeChristmas As PrefixCommand
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetChristmasThemeAsync(DSharpPlus.CommandsNext.CommandContext)
+  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetChristmasThemeAsync(DSharpPlus.CommandsNext.CommandContext)
+  id: SetChristmasThemeAsync(DSharpPlus.CommandsNext.CommandContext)
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: SetChristmasThemeAsync(CommandContext)
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetChristmasThemeAsync(CommandContext)
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetChristmasThemeAsync(DSharpPlus.CommandsNext.CommandContext)
+  type: Method
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: SetChristmasThemeAsync
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 84
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  syntax:
+    content: >-
+      [Command("themeChristmas")]
+
+      [RequireUserPermissions(Permissions.Administrator, true)]
+
+      internal Task SetChristmasThemeAsync(CommandContext commandContext)
+    parameters:
+    - id: commandContext
+      type: DSharpPlus.CommandsNext.CommandContext
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Command("themeChristmas")>
+
+      <RequireUserPermissions(Permissions.Administrator, True)>
+
+      Friend Function SetChristmasThemeAsync(commandContext As CommandContext) As Task
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetChristmasThemeAsync*
+  attributes:
+  - type: DSharpPlus.CommandsNext.Attributes.CommandAttribute
+    ctor: DSharpPlus.CommandsNext.Attributes.CommandAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: themeChristmas
+  - type: DSharpPlus.CommandsNext.Attributes.RequireUserPermissionsAttribute
+    ctor: DSharpPlus.CommandsNext.Attributes.RequireUserPermissionsAttribute.#ctor(DSharpPlus.Permissions,System.Boolean)
+    arguments:
+    - type: DSharpPlus.Permissions
+      value: "8"
+    - type: System.Boolean
+      value: true
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeEaster
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeEaster
+  id: themeEaster
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: themeEaster
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeEaster
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeEaster
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: themeEaster
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 101
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Sets the Tramontina server to Easter Theme.
+  example: []
+  syntax:
+    content: internal PrefixCommand themeEaster
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommand
+    content.vb: Friend themeEaster As PrefixCommand
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetEasterThemeAsync(DSharpPlus.CommandsNext.CommandContext)
+  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetEasterThemeAsync(DSharpPlus.CommandsNext.CommandContext)
+  id: SetEasterThemeAsync(DSharpPlus.CommandsNext.CommandContext)
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: SetEasterThemeAsync(CommandContext)
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetEasterThemeAsync(CommandContext)
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetEasterThemeAsync(DSharpPlus.CommandsNext.CommandContext)
+  type: Method
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: SetEasterThemeAsync
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 102
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  syntax:
+    content: >-
+      [Command("themeEaster")]
+
+      [RequireUserPermissions(Permissions.Administrator, true)]
+
+      internal Task SetEasterThemeAsync(CommandContext commandContext)
+    parameters:
+    - id: commandContext
+      type: DSharpPlus.CommandsNext.CommandContext
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Command("themeEaster")>
+
+      <RequireUserPermissions(Permissions.Administrator, True)>
+
+      Friend Function SetEasterThemeAsync(commandContext As CommandContext) As Task
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetEasterThemeAsync*
+  attributes:
+  - type: DSharpPlus.CommandsNext.Attributes.CommandAttribute
+    ctor: DSharpPlus.CommandsNext.Attributes.CommandAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: themeEaster
+  - type: DSharpPlus.CommandsNext.Attributes.RequireUserPermissionsAttribute
+    ctor: DSharpPlus.CommandsNext.Attributes.RequireUserPermissionsAttribute.#ctor(DSharpPlus.Permissions,System.Boolean)
+    arguments:
+    - type: DSharpPlus.Permissions
+      value: "8"
+    - type: System.Boolean
+      value: true
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeHalloween
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeHalloween
+  id: themeHalloween
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: themeHalloween
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeHalloween
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeHalloween
+  type: Field
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: themeHalloween
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 113
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Sets the Tramontina server to Halloween Theme.
+  example: []
+  syntax:
+    content: internal PrefixCommand themeHalloween
+    return:
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommand
+    content.vb: Friend themeHalloween As PrefixCommand
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetHalloweenThemeAsync(DSharpPlus.CommandsNext.CommandContext)
+  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetHalloweenThemeAsync(DSharpPlus.CommandsNext.CommandContext)
+  id: SetHalloweenThemeAsync(DSharpPlus.CommandsNext.CommandContext)
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: SetHalloweenThemeAsync(CommandContext)
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetHalloweenThemeAsync(CommandContext)
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetHalloweenThemeAsync(DSharpPlus.CommandsNext.CommandContext)
+  type: Method
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: SetHalloweenThemeAsync
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 114
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  syntax:
+    content: >-
+      [Command("themeHalloween")]
+
+      [RequireUserPermissions(Permissions.Administrator, true)]
+
+      internal Task SetHalloweenThemeAsync(CommandContext commandContext)
+    parameters:
+    - id: commandContext
+      type: DSharpPlus.CommandsNext.CommandContext
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Command("themeHalloween")>
+
+      <RequireUserPermissions(Permissions.Administrator, True)>
+
+      Friend Function SetHalloweenThemeAsync(commandContext As CommandContext) As Task
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetHalloweenThemeAsync*
+  attributes:
+  - type: DSharpPlus.CommandsNext.Attributes.CommandAttribute
+    ctor: DSharpPlus.CommandsNext.Attributes.CommandAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: themeHalloween
+  - type: DSharpPlus.CommandsNext.Attributes.RequireUserPermissionsAttribute
+    ctor: DSharpPlus.CommandsNext.Attributes.RequireUserPermissionsAttribute.#ctor(DSharpPlus.Permissions,System.Boolean)
+    arguments:
+    - type: DSharpPlus.Permissions
+      value: "8"
+    - type: System.Boolean
+      value: true
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetThemeAsync(DSharpPlus.CommandsNext.CommandContext,KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme,System.String,System.String,System.String)
+  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetThemeAsync(DSharpPlus.CommandsNext.CommandContext,KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme,System.String,System.String,System.String)
+  id: SetThemeAsync(DSharpPlus.CommandsNext.CommandContext,KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme,System.String,System.String,System.String)
+  parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: SetThemeAsync(CommandContext, EmojiTheme, string, string, string)
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetThemeAsync(CommandContext, PrefixCommandManager.PrefixTheme.EmojiTheme, string, string, string)
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetThemeAsync(DSharpPlus.CommandsNext.CommandContext, KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme, string, string, string)
+  type: Method
+  source:
+    remote:
+      path: src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: SetThemeAsync
+    path: ../src/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 125
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Sets the Tramontina server to a Theme according with parameterization.
+  example: []
+  syntax:
+    content: >-
+      [RequireUserPermissions(Permissions.Administrator, true)]
+
+      private static Task SetThemeAsync(CommandContext commandContext, PrefixCommandManager.PrefixTheme.EmojiTheme emojiTheme, string title, string description, string serverNameSuggestion = null)
+    parameters:
+    - id: commandContext
+      type: DSharpPlus.CommandsNext.CommandContext
+    - id: emojiTheme
+      type: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+    - id: title
+      type: System.String
+    - id: description
+      type: System.String
+    - id: serverNameSuggestion
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <RequireUserPermissions(Permissions.Administrator, True)>
+
+      Private Shared Function SetThemeAsync(commandContext As CommandContext, emojiTheme As PrefixCommandManager.PrefixTheme.EmojiTheme, title As String, description As String, serverNameSuggestion As String = Nothing) As Task
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetThemeAsync*
+  attributes:
+  - type: DSharpPlus.CommandsNext.Attributes.RequireUserPermissionsAttribute
+    ctor: DSharpPlus.CommandsNext.Attributes.RequireUserPermissionsAttribute.#ctor(DSharpPlus.Permissions,System.Boolean)
+    arguments:
+    - type: DSharpPlus.Permissions
+      value: "8"
+    - type: System.Boolean
+      value: true
+  nameWithType.vb: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetThemeAsync(CommandContext, PrefixCommandManager.PrefixTheme.EmojiTheme, String, String, String)
+  fullName.vb: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetThemeAsync(DSharpPlus.CommandsNext.CommandContext, KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme, String, String, String)
+  name.vb: SetThemeAsync(CommandContext, EmojiTheme, String, String, String)
+references:
+- uid: KWiJisho.Modules.Commands.Prefix
+  commentId: N:KWiJisho.Modules.Commands.Prefix
+  href: KWiJisho.html
+  name: KWiJisho.Modules.Commands.Prefix
+  nameWithType: KWiJisho.Modules.Commands.Prefix
+  fullName: KWiJisho.Modules.Commands.Prefix
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Modules
+    name: Modules
+    href: KWiJisho.Modules.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands
+    name: Commands
+    href: KWiJisho.Modules.Commands.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix
+    name: Prefix
+    href: KWiJisho.Modules.Commands.Prefix.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Modules
+    name: Modules
+    href: KWiJisho.Modules.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands
+    name: Commands
+    href: KWiJisho.Modules.Commands.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix
+    name: Prefix
+    href: KWiJisho.Modules.Commands.Prefix.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DSharpPlus.CommandsNext.BaseCommandModule
+  commentId: T:DSharpPlus.CommandsNext.BaseCommandModule
+  parent: DSharpPlus.CommandsNext
+  isExternal: true
+  name: BaseCommandModule
+  nameWithType: BaseCommandModule
+  fullName: DSharpPlus.CommandsNext.BaseCommandModule
+- uid: DSharpPlus.CommandsNext.BaseCommandModule.BeforeExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+  commentId: M:DSharpPlus.CommandsNext.BaseCommandModule.BeforeExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+  parent: DSharpPlus.CommandsNext.BaseCommandModule
+  isExternal: true
+  name: BeforeExecutionAsync(CommandContext)
+  nameWithType: BaseCommandModule.BeforeExecutionAsync(CommandContext)
+  fullName: DSharpPlus.CommandsNext.BaseCommandModule.BeforeExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+  spec.csharp:
+  - uid: DSharpPlus.CommandsNext.BaseCommandModule.BeforeExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+    name: BeforeExecutionAsync
+    isExternal: true
+  - name: (
+  - uid: DSharpPlus.CommandsNext.CommandContext
+    name: CommandContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: DSharpPlus.CommandsNext.BaseCommandModule.BeforeExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+    name: BeforeExecutionAsync
+    isExternal: true
+  - name: (
+  - uid: DSharpPlus.CommandsNext.CommandContext
+    name: CommandContext
+    isExternal: true
+  - name: )
+- uid: DSharpPlus.CommandsNext.BaseCommandModule.AfterExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+  commentId: M:DSharpPlus.CommandsNext.BaseCommandModule.AfterExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+  parent: DSharpPlus.CommandsNext.BaseCommandModule
+  isExternal: true
+  name: AfterExecutionAsync(CommandContext)
+  nameWithType: BaseCommandModule.AfterExecutionAsync(CommandContext)
+  fullName: DSharpPlus.CommandsNext.BaseCommandModule.AfterExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+  spec.csharp:
+  - uid: DSharpPlus.CommandsNext.BaseCommandModule.AfterExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+    name: AfterExecutionAsync
+    isExternal: true
+  - name: (
+  - uid: DSharpPlus.CommandsNext.CommandContext
+    name: CommandContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: DSharpPlus.CommandsNext.BaseCommandModule.AfterExecutionAsync(DSharpPlus.CommandsNext.CommandContext)
+    name: AfterExecutionAsync
+    isExternal: true
+  - name: (
+  - uid: DSharpPlus.CommandsNext.CommandContext
+    name: CommandContext
+    isExternal: true
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DSharpPlus.CommandsNext
+  commentId: N:DSharpPlus.CommandsNext
+  isExternal: true
+  name: DSharpPlus.CommandsNext
+  nameWithType: DSharpPlus.CommandsNext
+  fullName: DSharpPlus.CommandsNext
+  spec.csharp:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.CommandsNext
+    name: CommandsNext
+    isExternal: true
+  spec.vb:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.CommandsNext
+    name: CommandsNext
+    isExternal: true
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+  parent: KWiJisho.Modules.Commands.Prefix
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  name: PrefixCommandManager.PrefixTheme.TramontinaChannel
+  nameWithType: PrefixCommandManager.PrefixTheme.TramontinaChannel
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+  spec.csharp:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+    name: PrefixTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+    name: TramontinaChannel
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+    name: PrefixTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+    name: TramontinaChannel
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.html
+- uid: System.Collections.Generic.List{KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel}
+  commentId: T:System.Collections.Generic.List{KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<PrefixCommandManager.PrefixTheme.TramontinaChannel>
+  nameWithType: List<PrefixCommandManager.PrefixTheme.TramontinaChannel>
+  fullName: System.Collections.Generic.List<KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel>
+  nameWithType.vb: List(Of PrefixCommandManager.PrefixTheme.TramontinaChannel)
+  fullName.vb: System.Collections.Generic.List(Of KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel)
+  name.vb: List(Of PrefixCommandManager.PrefixTheme.TramontinaChannel)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+    name: PrefixTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+    name: TramontinaChannel
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+    name: PrefixTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+    name: TramontinaChannel
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommand
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommand
+  parent: KWiJisho.Modules.Commands.Prefix
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommand.html
+  name: PrefixCommand
+  nameWithType: PrefixCommand
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommand
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.ResetThemeAsync*
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.ResetThemeAsync
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.ResetThemeAsync.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixTheme_PrefixThemeTramontina_ResetThemeAsync_DSharpPlus_CommandsNext_CommandContext_
+  name: ResetThemeAsync
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.ResetThemeAsync
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.ResetThemeAsync
+- uid: DSharpPlus.CommandsNext.CommandContext
+  commentId: T:DSharpPlus.CommandsNext.CommandContext
+  parent: DSharpPlus.CommandsNext
+  isExternal: true
+  name: CommandContext
+  nameWithType: CommandContext
+  fullName: DSharpPlus.CommandsNext.CommandContext
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetChristmasThemeAsync*
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetChristmasThemeAsync
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetChristmasThemeAsync.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixTheme_PrefixThemeTramontina_SetChristmasThemeAsync_DSharpPlus_CommandsNext_CommandContext_
+  name: SetChristmasThemeAsync
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetChristmasThemeAsync
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetChristmasThemeAsync
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetEasterThemeAsync*
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetEasterThemeAsync
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetEasterThemeAsync.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixTheme_PrefixThemeTramontina_SetEasterThemeAsync_DSharpPlus_CommandsNext_CommandContext_
+  name: SetEasterThemeAsync
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetEasterThemeAsync
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetEasterThemeAsync
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetHalloweenThemeAsync*
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetHalloweenThemeAsync
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetHalloweenThemeAsync.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixTheme_PrefixThemeTramontina_SetHalloweenThemeAsync_DSharpPlus_CommandsNext_CommandContext_
+  name: SetHalloweenThemeAsync
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetHalloweenThemeAsync
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetHalloweenThemeAsync
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetThemeAsync*
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetThemeAsync
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetThemeAsync.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixTheme_PrefixThemeTramontina_SetThemeAsync_DSharpPlus_CommandsNext_CommandContext_KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixTheme_EmojiTheme_System_String_System_String_System_String_
+  name: SetThemeAsync
+  nameWithType: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetThemeAsync
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetThemeAsync
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+  parent: KWiJisho.Modules.Commands.Prefix
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  name: PrefixCommandManager.PrefixTheme.EmojiTheme
+  nameWithType: PrefixCommandManager.PrefixTheme.EmojiTheme
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+  spec.csharp:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+    name: PrefixTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+    name: EmojiTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+    name: PrefixTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+    name: EmojiTheme
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.html
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+memberLayout: SeparatePages
