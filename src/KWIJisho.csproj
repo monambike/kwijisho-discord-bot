@@ -22,7 +22,7 @@
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>KWiJisho.Program</StartupObject>
+    <StartupObject>KWiJisho.KWiJishoBot</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Resources\Images\256x256-ayaya.ico</ApplicationIcon>

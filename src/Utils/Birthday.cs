@@ -1,4 +1,6 @@
 ﻿using DSharpPlus.Entities;
+using KWiJisho.Data;
+using KWiJisho.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

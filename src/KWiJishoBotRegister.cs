@@ -8,13 +8,14 @@ using KWiJisho.Events;
 using KWiJisho.Commands.Prefix;
 using KWiJisho.Utils;
 using System.Collections.Generic;
+using KWiJisho.Data;
 
 namespace KWiJisho
 {
     /// <summary>
     /// Main class responsible for managing and instantiate the KWiJisho Discord bot.
     /// </summary>
-    internal partial class Bot
+    internal partial class KWiJishoBot
     {
         /// <summary>
         /// Register all the Discord bot prefix commands.

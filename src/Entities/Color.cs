@@ -1,7 +1,7 @@
 ﻿using DSharpPlus.Entities;
 using Newtonsoft.Json;
 
-namespace KWiJisho.Utils
+namespace KWiJisho.Entities
 {
     /// <summary>
     /// Represents an RGB color with red, green, and blue components.

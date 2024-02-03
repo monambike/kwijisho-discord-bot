@@ -23,6 +23,11 @@
             HTTP requests.
             API Documentation: <a href="https://api.nasa.gov/"/>
             </summary>
+            <summary>
+            This class provides methods for interacting with the NASA's API using
+            HTTP requests.
+            API Documentation: <a href="https://api.nasa.gov/"/>
+            </summary>
         </member>
         <member name="F:KWiJisho.APIs.NasaApi.HttpClient">
             <summary>
@@ -114,62 +119,6 @@
             <param name="promptStyle">The style of the prompt to be added.</param>
             <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
         </member>
-        <member name="T:KWiJisho.Bot">
-            <summary>
-            Main class responsible for managing and instantiate the KWiJisho Discord bot.
-            </summary>
-            <summary>
-            Main class responsible for managing and instantiate the KWiJisho Discord bot.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Bot.DiscordClient">
-            <summary>
-            Gets or sets the Discord client instance used by the bot.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Bot.PrefixCommands">
-            <summary>
-            Gets or sets the <see cref="T:DSharpPlus.CommandsNext.CommandsNextExtension"/> instance for handling bot prefix commands.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Bot.SlashCommands">
-            <summary>
-            Gets or sets the <see cref="T:DSharpPlus.SlashCommands.SlashCommandsExtension"/> instance for handling bot slash commands.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Bot.RunAsync">
-            <summary>
-            Asynchronously runs the bot connecting it to the Discord and initializing
-            the necessary configurations.
-            </summary>
-            <returns>A task representing the asynchronous operation.</returns>
-        </member>
-        <member name="M:KWiJisho.Bot.RegisterPrefixCommands">
-            <summary>
-            Register all the Discord bot prefix commands.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Bot.RegisterSlashCommands">
-            <summary>
-            Register all the Discord bot slash commands.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Bot.RegisterBotEvents">
-            <summary>
-            Register all the Discord bot events.
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:KWiJisho.Bot.RegisterPrefixCommandsPermissions">
-            <summary>
-            Register all the Discord bot prefix commands permissions.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Bot.RegisterSlashCommandsPermissions">
-            <summary>
-            Register all the Discord bot slash commands permissions.
-            </summary>
-        </member>
         <member name="T:KWiJisho.Commands.Basic">
             <summary>
             Provides methods for "prefix" and "slash" basic commands.
@@ -177,21 +126,21 @@
         </member>
         <member name="M:KWiJisho.Commands.Basic.SendRandomAnimatedEmoji(DSharpPlus.Entities.DiscordChannel)">
             <summary>
-            Sends a random animated emoji from <see cref="F:KWiJisho.Utils.DiscordEmojis.AnimatedEmojis"/>.
+            Sends a random animated emoji from <see cref="F:KWiJisho.Data.DiscordEmojis.AnimatedEmojis"/>.
             </summary>
             <param name="discordChannel">The discord channel where the command will be executed.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
         </member>
         <member name="M:KWiJisho.Commands.Basic.SendRandomAnimatedMemeEmoji(DSharpPlus.Entities.DiscordChannel)">
             <summary>
-            Sends a random animated emoji from <see cref="F:KWiJisho.Utils.DiscordEmojis.AnimatedMemeEmojis"/>.
+            Sends a random animated emoji from <see cref="F:KWiJisho.Data.DiscordEmojis.AnimatedMemeEmojis"/>.
             </summary>
             <param name="discordChannel">The discord channel where the command will be executed.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
         </member>
         <member name="M:KWiJisho.Commands.Basic.SendRandomAnimatedPartyEmoji(DSharpPlus.Entities.DiscordChannel)">
             <summary>
-            Sends a random animated emoji from <see cref="F:KWiJisho.Utils.DiscordEmojis.AnimatedPartyEmojis"/>.
+            Sends a random animated emoji from <see cref="F:KWiJisho.Data.DiscordEmojis.AnimatedPartyEmojis"/>.
             </summary>
             <param name="discordChannel">The discord channel where the command will be executed.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
@@ -710,6 +659,243 @@
             </summary>
             <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the asynchronous operation, yielding a <see cref="T:KWiJisho.ConfigJson"/> instance.</returns>
         </member>
+        <member name="T:KWiJisho.Data.DiscordEmojis">
+            <summary>
+            Static class that provides class, properties and methods for handling Discord emojis.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Data.KWiJishoInfo">
+            <summary>
+            Class that provides static basic information about KWiJisho bot.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Data.KWiJishoInfo.Name">
+            <summary>
+            KWiJisho project name gotten directly from <see cref="T:System.Reflection.Assembly"/>.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Data.KWiJishoInfo.Created">
+            <summary>
+            The date Karen Kujo project was first commit on <a href="https://github.com/monambike/kwijisho-discord-bot">GitHub repository</a>.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Data.KWiJishoInfo.KarenKujoBirthday">
+            <summary>
+            Gets the calculated birthday for Karen Kujo. Karen Kujo was born on December 1st,
+            and the age is fixed at 15 years.
+            The property provides the current date with the year adjusted to maintain the age of 15.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Data.ServerPersonal">
+            <summary>
+            Static class responsible for holding information about my personal testing Discord server.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Data.ServerPersonal.GuildId">
+            <summary>
+            Personal Discord server guild Id.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Data.ServerPersonal.KWiJishoChannelId">
+            <summary>
+            Personal KWiJisho Discord server channel Id.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Data.ServerTramontina">
+            <summary>
+            Static class responsible for holding information about Tramontina Discord server.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Data.ServerTramontina.GuildId">
+            <summary>
+            Tramontina Discord server guild Id.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Data.ServerTramontina.WelcomeChannelId">
+            <summary>
+            Tramontina welcome Discord server channeld Id.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Data.ServerTramontina.NewsChannelId">
+            <summary>
+            Tramontina news Discord server channel Id.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Data.DiscordUsers">
+            <summary>
+            Provides a static class for managing Discord users along with their identifiers.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Data.DiscordUsers.Users">
+            <summary>
+            The list of users along with their identifiers.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Entities.Channel">
+            <summary>
+            The class that represents a new instance of a Discord channel with a
+            unique identifier and a default name.
+            <param name="id">The Discord channel unique identifier.</param>
+            <param name="defaultName">The Discord channel default name.</param>
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Entities.Channel.#ctor(System.UInt64,System.String)">
+            <summary>
+            The class that represents a new instance of a Discord channel with a
+            unique identifier and a default name.
+            <param name="id">The Discord channel unique identifier.</param>
+            <param name="defaultName">The Discord channel default name.</param>
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Entities.Channel.Id">
+            <summary>
+            The Discord channel unique identifier.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Entities.Channel.DefaultName">
+            <summary>
+            The Discord channel default name.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Entities.Channel.UpdateChannelNameAsync(DSharpPlus.CommandsNext.CommandContext,System.String)">
+            <summary>
+            Updates asynchronously the name of the Discord channel.
+            </summary>
+            <param name="commandContext">The command context containing information about the command.</param>
+            <param name="newName">The new name for the Discord channel.</param>
+        </member>
+        <member name="T:KWiJisho.Entities.Color">
+            <summary>
+            Represents an RGB color with red, green, and blue components.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Entities.Color.#ctor(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Represents an RGB color with red, green, and blue components.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.Color.Red">
+            <summary>
+            Gets or sets the red component of the RGB color.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.Color.Green">
+            <summary>
+            Gets or sets the green component of the RGB color.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.Color.Blue">
+            <summary>
+            Gets or sets the blue component of the RGB color.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.Color.DiscordColor">
+            <summary>
+            Gets a Discord color representation based on the RGB components.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.Color.Hexadecimal">
+            <summary>
+            Gets a Hexadecimal color representation based on the RGB components.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Entities.Emoji">
+            <summary>
+            Class responsible for creating and handling custom Discord emojis.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.Emoji.Name">
+            <summary>
+            The discord emoji name.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.Emoji.Id">
+            <summary>
+            The discord emoji unique identifier.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.Emoji.Code">
+            <summary>
+            The discord emoji code responsible for outputing it into the chat.
+            <c>&lt;a:{name}:{id}&gt;</c>
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Entities.Emoji.#ctor(System.String,System.UInt64)">
+            <summary>
+            Initializes a new instance of <see cref="T:KWiJisho.Entities.Emoji"/> class with the specified
+            name and identifier.
+            </summary>
+            <param name="name">The name of the Discord emoji.</param>
+            <param name="id">The unique identifier of the Discord emoji.</param>
+        </member>
+        <member name="M:KWiJisho.Entities.Emoji.ToString">
+            <summary>
+            Converts the Discord emoji to its string representation, which is the Discord emoji code.
+            </summary>
+            <returns>The Discord emoji code in the format "<c>&lt;a:{<see cref="P:KWiJisho.Entities.Emoji.Name"/>}:{<see cref="P:KWiJisho.Entities.Emoji.Id"/>}&gt;</c>".</returns>
+        </member>
+        <member name="T:KWiJisho.Entities.EmojiCatMeme">
+            <summary>
+            Represents a custom Discord emoji for cat meme emojis, inheriting from the base <see cref="T:KWiJisho.Entities.Emoji"/> class.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Entities.EmojiCatMeme.#ctor(System.String,System.UInt64)">
+            <summary>
+            Initializes a new instance of <see cref="T:KWiJisho.Entities.EmojiCatMeme"/> with its emoji name and Id.
+            </summary>
+            <param name="name">The <see cref="T:KWiJisho.Entities.EmojiCatMeme"/> emoji name.</param>
+            <param name="id">The <see cref="T:KWiJisho.Entities.EmojiCatMeme"/> emoji Id.</param>
+        </member>
+        <member name="T:KWiJisho.Entities.EmojiCatParty">
+            <summary>
+            Represents a custom Discord emoji for cat party emojis, inheriting from the base <see cref="T:KWiJisho.Entities.Emoji"/> class.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Entities.EmojiCatParty.#ctor(System.String,System.UInt64)">
+            <summary>
+            Initializes a new instance of <see cref="T:KWiJisho.Entities.EmojiCatParty"/> with its emoji name and Id.
+            </summary>
+            <param name="name">The <see cref="T:KWiJisho.Entities.EmojiCatParty"/> emoji name.</param>
+            <param name="id">The <see cref="T:KWiJisho.Entities.EmojiCatParty"/> emoji Id.</param>
+        </member>
+        <member name="T:KWiJisho.Entities.User">
+            <summary>
+            Represents a Discord user along with their identifier and additional information.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Entities.User.#ctor(System.UInt64,System.DateTime,System.String)">
+            <summary>
+            Represents a Discord user along with their identifier and additional information.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.User.Id">
+            <summary>
+            The unique identifier of the user.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.User.Born">
+            <summary>
+            The date when the user was born.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.User.Identifier">
+            <summary>
+            The custom identifier or nickname associated with the user.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.User.Birthday">
+            <summary>
+            Gets or sets the user's birthday (if applicable).
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Entities.User.GetUserDiscordMember(DSharpPlus.Entities.DiscordGuild)">
+            <summary>
+            Tries to return a <see cref="T:DSharpPlus.Entities.DiscordMember"/> representing the user in the specified server.
+            If the user is not found, returns <see langword="null"/>. 
+            </summary>
+            <param name="discordGuild">The Discord guild where the user is expected to be a member.</param>
+            <returns>Returns <see cref="T:DSharpPlus.Entities.DiscordMember"/> if found; otherwise, returns <see langword="null"/>.</returns>
+        </member>
         <member name="T:KWiJisho.Events.BirthdayJob">
             <summary>
             Represents a Quartz.NET job that executes a birthday message task.
@@ -817,14 +1003,66 @@
             Provides a set of events and methods for when a message is received.
             </summary>
         </member>
-        <member name="T:KWiJisho.Program">
+        <member name="T:KWiJisho.KWiJishoBot">
             <summary>
-            The main entry point class of the application.
+            Main class responsible for managing and instantiate the KWiJisho Discord bot. The main entry
+            point class of the application.
+            </summary>
+            <summary>
+            Main class responsible for managing and instantiate the KWiJisho Discord bot.
             </summary>
         </member>
-        <member name="M:KWiJisho.Program.Main">
+        <member name="P:KWiJisho.KWiJishoBot.DiscordClient">
+            <summary>
+            Gets or sets the Discord client instance used by the bot.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.KWiJishoBot.PrefixCommands">
+            <summary>
+            Gets or sets the <see cref="T:DSharpPlus.CommandsNext.CommandsNextExtension"/> instance for handling bot prefix commands.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.KWiJishoBot.SlashCommands">
+            <summary>
+            Gets or sets the <see cref="T:DSharpPlus.SlashCommands.SlashCommandsExtension"/> instance for handling bot slash commands.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.KWiJishoBot.Main">
             <summary>
             The main entry point method of the application.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.KWiJishoBot.RunAsync">
+            <summary>
+            Asynchronously runs the bot connecting it to the Discord and initializing
+            the necessary configurations.
+            </summary>
+            <returns>A task representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:KWiJisho.KWiJishoBot.RegisterPrefixCommands">
+            <summary>
+            Register all the Discord bot prefix commands.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.KWiJishoBot.RegisterSlashCommands">
+            <summary>
+            Register all the Discord bot slash commands.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.KWiJishoBot.RegisterBotEvents">
+            <summary>
+            Register all the Discord bot events.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:KWiJisho.KWiJishoBot.RegisterPrefixCommandsPermissions">
+            <summary>
+            Register all the Discord bot prefix commands permissions.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.KWiJishoBot.RegisterSlashCommandsPermissions">
+            <summary>
+            Register all the Discord bot slash commands permissions.
             </summary>
         </member>
         <member name="T:KWiJisho.Utils.Birthday">
@@ -836,16 +1074,16 @@
             <summary>
             Gets a list of users ordered by how closer are their birthday.
             </summary>
-            <returns>A <see cref="T:System.Collections.Generic.List`1"/> containing a group of <see cref="T:KWiJisho.Utils.User"/> and their <see cref="P:KWiJisho.Utils.User.Birthday"/>.</returns>
+            <returns>A <see cref="T:System.Collections.Generic.List`1"/> containing a group of <see cref="T:KWiJisho.Entities.User"/> and their <see cref="P:KWiJisho.Entities.User.Birthday"/>.</returns>
         </member>
         <member name="M:KWiJisho.Utils.Birthday.TryGetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)">
             <summary>
             Tries to get the user if they are presents in current Discord server.
             </summary>
             <param name="discordGuild"></param>
-            <returns>Returns the <see cref="T:KWiJisho.Utils.User"/> if avaiable in current Discord server; otherwise, returns <see langword="null"/>.</returns>
+            <returns>Returns the <see cref="T:KWiJisho.Entities.User"/> if avaiable in current Discord server; otherwise, returns <see langword="null"/>.</returns>
         </member>
-        <member name="M:KWiJisho.Utils.Birthday.GetDaysRemainingByUser(KWiJisho.Utils.User)">
+        <member name="M:KWiJisho.Utils.Birthday.GetDaysRemainingByUser(KWiJisho.Entities.User)">
             <summary>
             Get how many days are remaning for the user's birthday.
             </summary>
@@ -882,7 +1120,7 @@
             <exception cref="T:System.NotImplementedException">Thrown if the upcoming birthday date is not yet implemented
             on this current method.</exception>
         </member>
-        <member name="M:KWiJisho.Utils.Birthday.GenerateBirthdayMessage(KWiJisho.Utils.User)">
+        <member name="M:KWiJisho.Utils.Birthday.GenerateBirthdayMessage(KWiJisho.Entities.User)">
             <summary>
             Method responsible for generating a birthday message.
             </summary>
@@ -891,142 +1129,10 @@
             <exception cref="T:System.NotImplementedException">Thrown if the upcoming birthday date is not yet implemented on this
             current method.</exception>
         </member>
-        <member name="T:KWiJisho.Utils.Color">
-            <summary>
-            Represents an RGB color with red, green, and blue components.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Utils.Color.#ctor(System.Byte,System.Byte,System.Byte)">
-            <summary>
-            Represents an RGB color with red, green, and blue components.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Utils.Color.Red">
-            <summary>
-            Gets or sets the red component of the RGB color.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Utils.Color.Green">
-            <summary>
-            Gets or sets the green component of the RGB color.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Utils.Color.Blue">
-            <summary>
-            Gets or sets the blue component of the RGB color.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Utils.Color.DiscordColor">
-            <summary>
-            Gets a Discord color representation based on the RGB components.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Utils.Color.Hexadecimal">
-            <summary>
-            Gets a Hexadecimal color representation based on the RGB components.
-            </summary>
-        </member>
-        <member name="T:KWiJisho.Utils.Channel">
-            <summary>
-            The class that represents a new instance of a Discord channel with a
-            unique identifier and a default name.
-            <param name="id">The Discord channel unique identifier.</param>
-            <param name="defaultName">The Discord channel default name.</param>
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Utils.Channel.#ctor(System.UInt64,System.String)">
-            <summary>
-            The class that represents a new instance of a Discord channel with a
-            unique identifier and a default name.
-            <param name="id">The Discord channel unique identifier.</param>
-            <param name="defaultName">The Discord channel default name.</param>
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Utils.Channel.Id">
-            <summary>
-            The Discord channel unique identifier.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Utils.Channel.DefaultName">
-            <summary>
-            The Discord channel default name.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Utils.Channel.UpdateChannelNameAsync(DSharpPlus.CommandsNext.CommandContext,System.String)">
-            <summary>
-            Updates asynchronously the name of the Discord channel.
-            </summary>
-            <param name="commandContext">The command context containing information about the command.</param>
-            <param name="newName">The new name for the Discord channel.</param>
-        </member>
         <member name="T:KWiJisho.Utils.DiscordEmbedTest">
             <summary>
             Utility class providing default embeds for KWiJisho Discord bot.
             </summary>
-        </member>
-        <member name="T:KWiJisho.Utils.DiscordEmojis">
-            <summary>
-            Static class that provides class, properties and methods for handling Discord emojis.
-            </summary>
-        </member>
-        <member name="T:KWiJisho.Utils.DiscordEmojis.CatMemeEmoji">
-            <summary>
-            Represents a custom Discord emoji for cat meme emojis, inheriting from the base <see cref="T:KWiJisho.Utils.Emoji"/> class.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Utils.DiscordEmojis.CatMemeEmoji.#ctor(System.String,System.UInt64)">
-            <summary>
-            Initializes a new instance of <see cref="T:KWiJisho.Utils.DiscordEmojis.CatMemeEmoji"/> with its emoji name and Id.
-            </summary>
-            <param name="name">The <see cref="T:KWiJisho.Utils.DiscordEmojis.CatMemeEmoji"/> emoji name.</param>
-            <param name="id">The <see cref="T:KWiJisho.Utils.DiscordEmojis.CatMemeEmoji"/> emoji Id.</param>
-        </member>
-        <member name="T:KWiJisho.Utils.DiscordEmojis.CatPartyEmoji">
-            <summary>
-            Represents a custom Discord emoji for cat party emojis, inheriting from the base <see cref="T:KWiJisho.Utils.Emoji"/> class.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Utils.DiscordEmojis.CatPartyEmoji.#ctor(System.String,System.UInt64)">
-            <summary>
-            Initializes a new instance of <see cref="T:KWiJisho.Utils.DiscordEmojis.CatPartyEmoji"/> with its emoji name and Id.
-            </summary>
-            <param name="name">The <see cref="T:KWiJisho.Utils.DiscordEmojis.CatPartyEmoji"/> emoji name.</param>
-            <param name="id">The <see cref="T:KWiJisho.Utils.DiscordEmojis.CatPartyEmoji"/> emoji Id.</param>
-        </member>
-        <member name="T:KWiJisho.Utils.Emoji">
-            <summary>
-            Class responsible for creating and handling custom Discord emojis.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Utils.Emoji.Name">
-            <summary>
-            The discord emoji name.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Utils.Emoji.Id">
-            <summary>
-            The discord emoji unique identifier.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Utils.Emoji.Code">
-            <summary>
-            The discord emoji code responsible for outputing it into the chat.
-            <c>&lt;a:{name}:{id}&gt;</c>
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Utils.Emoji.#ctor(System.String,System.UInt64)">
-            <summary>
-            Initializes a new instance of <see cref="T:KWiJisho.Utils.Emoji"/> class with the specified
-            name and identifier.
-            </summary>
-            <param name="name">The name of the Discord emoji.</param>
-            <param name="id">The unique identifier of the Discord emoji.</param>
-        </member>
-        <member name="M:KWiJisho.Utils.Emoji.ToString">
-            <summary>
-            Converts the Discord emoji to its string representation, which is the Discord emoji code.
-            </summary>
-            <returns>The Discord emoji code in the format "<c>&lt;a:{<see cref="P:KWiJisho.Utils.Emoji.Name"/>}:{<see cref="P:KWiJisho.Utils.Emoji.Id"/>}&gt;</c>".</returns>
         </member>
         <member name="T:KWiJisho.Utils.DiscordFormat">
             <summary>
@@ -1053,76 +1159,6 @@
             </summary>
             <param name="str">The string to be formatted.</param>
             <returns>The escaped string.</returns>
-        </member>
-        <member name="T:KWiJisho.Utils.DiscordUsers">
-            <summary>
-            Provides a static class for managing Discord users along with their identifiers.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Utils.DiscordUsers.Users">
-            <summary>
-            The list of users along with their identifiers.
-            </summary>
-        </member>
-        <member name="T:KWiJisho.Utils.User">
-            <summary>
-            Represents a Discord user along with their identifier and additional information.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Utils.User.#ctor(System.UInt64,System.DateTime,System.String)">
-            <summary>
-            Represents a Discord user along with their identifier and additional information.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Utils.User.Id">
-            <summary>
-            The unique identifier of the user.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Utils.User.Born">
-            <summary>
-            The date when the user was born.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Utils.User.Identifier">
-            <summary>
-            The custom identifier or nickname associated with the user.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Utils.User.Birthday">
-            <summary>
-            Gets or sets the user's birthday (if applicable).
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Utils.User.GetUserDiscordMember(DSharpPlus.Entities.DiscordGuild)">
-            <summary>
-            Tries to return a <see cref="T:DSharpPlus.Entities.DiscordMember"/> representing the user in the specified server.
-            If the user is not found, returns <see langword="null"/>. 
-            </summary>
-            <param name="discordGuild">The Discord guild where the user is expected to be a member.</param>
-            <returns>Returns <see cref="T:DSharpPlus.Entities.DiscordMember"/> if found; otherwise, returns <see langword="null"/>.</returns>
-        </member>
-        <member name="T:KWiJisho.Utils.KWiJishoInfo">
-            <summary>
-            Class that provides static basic information about KWiJisho bot.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Utils.KWiJishoInfo.Name">
-            <summary>
-            KWiJisho project name gotten directly from <see cref="T:System.Reflection.Assembly"/>.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Utils.KWiJishoInfo.Created">
-            <summary>
-            The date Karen Kujo project was first commit on <a href="https://github.com/monambike/kwijisho-discord-bot">GitHub repository</a>.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Utils.KWiJishoInfo.KarenKujoBirthday">
-            <summary>
-            Gets the calculated birthday for Karen Kujo. Karen Kujo was born on December 1st,
-            and the age is fixed at 15 years.
-            The property provides the current date with the year adjusted to maintain the age of 15.
-            </summary>
         </member>
         <member name="T:KWiJisho.Utils.KWiJishoLog">
             <summary>
@@ -1225,41 +1261,6 @@
             </summary>
             <param name="permission">The Discord permission.</param>
             <returns>The Portuguese name of the permission.</returns>
-        </member>
-        <member name="T:KWiJisho.Utils.ServerPersonal">
-            <summary>
-            Static class responsible for holding information about my personal testing Discord server.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Utils.ServerPersonal.GuildId">
-            <summary>
-            Personal Discord server guild Id.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Utils.ServerPersonal.KWiJishoChannelId">
-            <summary>
-            Personal KWiJisho Discord server channel Id.
-            </summary>
-        </member>
-        <member name="T:KWiJisho.Utils.ServerTramontina">
-            <summary>
-            Static class responsible for holding information about Tramontina Discord server.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Utils.ServerTramontina.GuildId">
-            <summary>
-            Tramontina Discord server guild Id.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Utils.ServerTramontina.WelcomeChannelId">
-            <summary>
-            Tramontina welcome Discord server channeld Id.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Utils.ServerTramontina.NewsChannelId">
-            <summary>
-            Tramontina news Discord server channel Id.
-            </summary>
         </member>
         <member name="T:KWiJisho.Utils.UtilList">
             <summary>

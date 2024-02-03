@@ -2,6 +2,7 @@
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
+using KWiJisho.Entities;
 using KWiJisho.Utils;
 using System;
 using System.Collections.Generic;

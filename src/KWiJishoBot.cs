@@ -1,15 +1,16 @@
 ﻿using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.SlashCommands;
-using KWiJisho.Utils;
+using KWiJisho.Data;
 using System.Threading.Tasks;
 
 namespace KWiJisho
 {
     /// <summary>
-    /// Main class responsible for managing and instantiate the KWiJisho Discord bot.
+    /// Main class responsible for managing and instantiate the KWiJisho Discord bot. The main entry
+    /// point class of the application.
     /// </summary>
-    internal partial class Bot
+    internal partial class KWiJishoBot
     {
         /// <summary>
         /// Gets or sets the Discord client instance used by the bot.
@@ -25,7 +26,20 @@ namespace KWiJisho
         /// Gets or sets the <see cref="SlashCommandsExtension"/> instance for handling bot slash commands.
         /// </summary>
         internal SlashCommandsExtension SlashCommands { get; private set; }
-        
+
+        /// <summary>
+        /// The main entry point method of the application.
+        /// </summary>
+        internal static void Main()
+        {
+            // Creating a new instance of the Discord bot class.
+            var bot = new KWiJishoBot();
+
+            // Initializing the Discord bot application and waiting for the inifinite task
+            // result on the awaiter.
+            bot.RunAsync().GetAwaiter().GetResult();
+        }
+
         /// <summary>
         /// Asynchronously runs the bot connecting it to the Discord and initializing
         /// the necessary configurations.

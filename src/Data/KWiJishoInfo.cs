@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace KWiJisho.Utils
+namespace KWiJisho.Data
 {
     /// <summary>
     /// Class that provides static basic information about KWiJisho bot.

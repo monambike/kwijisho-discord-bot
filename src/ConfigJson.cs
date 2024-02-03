@@ -1,5 +1,4 @@
-﻿using DSharpPlus.Entities;
-using KWiJisho.Utils;
+﻿using KWiJisho.Entities;
 using Newtonsoft.Json;
 using System;
 using System.IO;

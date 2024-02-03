@@ -1,6 +1,7 @@
 ﻿using DSharpPlus;
 using DSharpPlus.Entities;
-using KWiJisho.Utils;
+using KWiJisho.Data;
+using KWiJisho.Entities;
 using System;
 using System.Globalization;
 using System.Threading.Tasks;

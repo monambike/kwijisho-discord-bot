@@ -1,4 +1,4 @@
-﻿namespace KWiJisho.Utils
+﻿namespace KWiJisho.Data
 {
     /// <summary>
     /// Static class responsible for holding information about Tramontina Discord server.

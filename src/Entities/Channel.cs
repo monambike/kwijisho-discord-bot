@@ -1,6 +1,6 @@
 ﻿using DSharpPlus.CommandsNext;
 
-namespace KWiJisho.Utils
+namespace KWiJisho.Entities
 {
     /// <summary>
     /// The class that represents a new instance of a Discord channel with a
