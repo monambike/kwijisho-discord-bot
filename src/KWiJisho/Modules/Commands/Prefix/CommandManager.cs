@@ -34,7 +34,7 @@ namespace KWiJisho.Modules.Commands.Prefix
         /// <summary>
         /// Gets the command group for Theme commands.
         /// </summary>
-        internal static PrefixCommandGroup Theme => new("Mudar Tema do Servidor");
+        internal static PrefixCommandGroup Manage => new("Gerencia do Servidor");
 
         /// <summary>
         /// Gets the command group for Birthday commands.

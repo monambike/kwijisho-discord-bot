@@ -18,5 +18,12 @@
         /// <param name="str">The string to be formatted.</param>
         /// <returns>The string in italic.</returns>
         internal static string ToDiscordItalic(this string str) => $"*{str}*";
+
+        /// <summary>
+        /// Formats the specified string to be escaped using Discord markdown.
+        /// </summary>
+        /// <param name="str">The string to be formatted.</param>
+        /// <returns>The escaped string.</returns>
+        internal static string ToDiscordEscape(this string str) => $@"\{str}";
     }
 }

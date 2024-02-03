@@ -1,4 +1,5 @@
 ﻿using DSharpPlus.Entities;
+using KWiJisho.Modules.Utils;
 using Newtonsoft.Json;
 using System;
 using System.IO;
@@ -135,35 +136,6 @@ namespace KWiJisho.Modules
                 json = await streamReader.ReadToEndAsync().ConfigureAwait(false);
             // Deserializing Json from the string and returning as result.
             return JsonConvert.DeserializeObject<ConfigJson>(json);
-        }
-
-        /// <summary>
-        /// Represents an RGB color with red, green, and blue components.
-        /// </summary>
-        internal class Color
-        {
-            /// <summary>
-            /// Gets or sets the red component of the RGB color.
-            /// </summary>
-            [JsonProperty("red")]
-            internal byte Red { get; set; }
-
-            /// <summary>
-            /// Gets or sets the green component of the RGB color.
-            /// </summary>
-            [JsonProperty("green")]
-            internal byte Green { get; set; }
-
-            /// <summary>
-            /// Gets or sets the blue component of the RGB color.
-            /// </summary>
-            [JsonProperty("blue")]
-            internal byte Blue { get; set; }
-
-            /// <summary>
-            /// Gets a Discord color representation based on the RGB components.
-            /// </summary>
-            internal DiscordColor DiscordColor => new(Red, Green, Blue);
         }
     }
 }

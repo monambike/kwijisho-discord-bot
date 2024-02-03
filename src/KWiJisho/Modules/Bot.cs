@@ -74,7 +74,7 @@ namespace KWiJisho.Modules
 
             // This code that will be executed when the bot is ready and connected to Discord sending.
             // a message into my personal server
-            var channel = await DiscordClient.GetChannelAsync(ServerInfos.PersonalDiscordServerGuildId);
+            var channel = await DiscordClient.GetChannelAsync(ServerPersonal.KWiJishoChannelId);
             if (channel != null) await channel.SendMessageAsync("Olá!! Agora eu tô online e prontíssima pra ajudar! 🥳🎉🎉");
 
             // Keeps the task alive that effectively never completes, preventing the bot from

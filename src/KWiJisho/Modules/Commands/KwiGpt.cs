@@ -9,6 +9,9 @@ namespace KWiJisho.Modules.Commands
     /// </summary>
     internal static class KwiGpt
     {
+        /// <summary>
+        /// Represents the command to get the chat gpt prompt in KWiJisho style.
+        /// </summary>
         internal static async Task ChatGptPromptAsync(DiscordChannel discordChannel, params string[] input)
         {
             // Getting all user inputs and combining into a string.

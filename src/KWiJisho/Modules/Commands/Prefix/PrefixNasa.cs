@@ -14,6 +14,9 @@ namespace KWiJisho.Modules.Commands.Prefix
     /// </summary>
     internal partial class PrefixCommandManager
     {
+        /// <summary>
+        /// Represents a set of prefix NASA commands.
+        /// </summary>
         internal class PrefixNasa : BaseCommandModule
         {
             /// <summary>

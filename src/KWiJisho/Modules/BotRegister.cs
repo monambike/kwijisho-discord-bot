@@ -28,6 +28,7 @@ namespace KWiJisho.Modules
             PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixInfo>();
             PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixKwiGpt>();
             PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixNasa>();
+            PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixNotice>();
             PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixTheme.PrefixThemeTramontina>();
         }
 
@@ -37,13 +38,14 @@ namespace KWiJisho.Modules
         internal void RegisterSlashCommands()
         {
             // Discord Server ID. If set to null, slash commmands will register to all servers that the bot is in (changes
-            // take up to an hour to apply)
+            // take up to an hour to apply).
             List<ulong> guildIds =
             [
-                737541664318554143, // Personal Discord server.
-                692588978959941653 // Tramontina Discord server.
+                ServerPersonal.GuildId, // Personal Discord server.
+                ServerTramontina.GuildId // Tramontina Discord server.
             ];
 
+            // For each guild id from servers in the server list.
             foreach (var guildId in guildIds)
             {
                 // Registering discord bot slash commands.
@@ -51,6 +53,7 @@ namespace KWiJisho.Modules
                 SlashCommands.RegisterCommands<SlashBirthday>(guildId);
                 SlashCommands.RegisterCommands<SlashInfo>(guildId);
                 SlashCommands.RegisterCommands<SlashKwiGpt>(guildId);
+                SlashCommands.RegisterCommands<SlashNotice>(guildId);
             }
         }
 

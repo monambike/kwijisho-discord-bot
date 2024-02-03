@@ -257,7 +257,7 @@
             Gets the command group for Information and Help commands.
             </summary>
         </member>
-        <member name="P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Theme">
+        <member name="P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage">
             <summary>
             Gets the command group for Theme commands.
             </summary>
@@ -396,6 +396,11 @@
             <param name="inputs">The user input for getting the chat prompt</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
         </member>
+        <member name="T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa">
+            <summary>
+            Represents a set of prefix NASA commands.
+            </summary>
+        </member>
         <member name="F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.apod">
             <summary>
             Represent the command to get the APOD at its current default state.
@@ -421,10 +426,12 @@
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
             <returns></returns>
         </member>
-        <member name="T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme">
+        <member name="T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice">
             <summary>
-            Represents a set of prefix commands to change theme in a Discord server.
+            Represents a set of prefix channel notice commands.
             </summary>
+        </member>
+        <member name="T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme">
             <summary>
             Represents a set of prefix commands to change theme in a Discord server.
             </summary>
@@ -667,31 +674,6 @@
             </summary>
             <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the asynchronous operation, yielding a <see cref="T:KWiJisho.Modules.ConfigJson"/> instance.</returns>
         </member>
-        <member name="T:KWiJisho.Modules.ConfigJson.Color">
-            <summary>
-            Represents an RGB color with red, green, and blue components.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Modules.ConfigJson.Color.Red">
-            <summary>
-            Gets or sets the red component of the RGB color.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Modules.ConfigJson.Color.Green">
-            <summary>
-            Gets or sets the green component of the RGB color.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Modules.ConfigJson.Color.Blue">
-            <summary>
-            Gets or sets the blue component of the RGB color.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Modules.ConfigJson.Color.DiscordColor">
-            <summary>
-            Gets a Discord color representation based on the RGB components.
-            </summary>
-        </member>
         <member name="T:KWiJisho.Modules.Events.BirthdayJob">
             <summary>
             Represents a Quartz.NET job that executes a birthday message task.
@@ -863,6 +845,41 @@
             <exception cref="T:System.NotImplementedException">Thrown if the upcoming birthday date is not yet implemented on this
             current method.</exception>
         </member>
+        <member name="T:KWiJisho.Modules.Utils.Color">
+            <summary>
+            Represents an RGB color with red, green, and blue components.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Modules.Utils.Color.#ctor(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Represents an RGB color with red, green, and blue components.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Modules.Utils.Color.Red">
+            <summary>
+            Gets or sets the red component of the RGB color.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Modules.Utils.Color.Green">
+            <summary>
+            Gets or sets the green component of the RGB color.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Modules.Utils.Color.Blue">
+            <summary>
+            Gets or sets the blue component of the RGB color.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Modules.Utils.Color.DiscordColor">
+            <summary>
+            Gets a Discord color representation based on the RGB components.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Modules.Utils.Color.Hexadecimal">
+            <summary>
+            Gets a Hexadecimal color representation based on the RGB components.
+            </summary>
+        </member>
         <member name="T:KWiJisho.Modules.Utils.Channel">
             <summary>
             The class that represents a new instance of a Discord channel with a
@@ -983,6 +1000,13 @@
             </summary>
             <param name="str">The string to be formatted.</param>
             <returns>The string in italic.</returns>
+        </member>
+        <member name="M:KWiJisho.Modules.Utils.DiscordFormat.ToDiscordEscape(System.String)">
+            <summary>
+            Formats the specified string to be escaped using Discord markdown.
+            </summary>
+            <param name="str">The string to be formatted.</param>
+            <returns>The escaped string.</returns>
         </member>
         <member name="T:KWiJisho.Modules.Utils.DiscordUsers">
             <summary>
@@ -1156,24 +1180,39 @@
             <param name="permission">The Discord permission.</param>
             <returns>The Portuguese name of the permission.</returns>
         </member>
-        <member name="T:KWiJisho.Modules.Utils.ServerInfos">
+        <member name="T:KWiJisho.Modules.Utils.TramontinaServer">
             <summary>
-            Static class responsible for handling information about discord servers.
+            Static class responsible for holding information about Tramontina Discord server.
             </summary>
         </member>
-        <member name="P:KWiJisho.Modules.Utils.ServerInfos.PersonalDiscordServerGuildId">
-            <summary>
-            My personal Discord server guild Id.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Modules.Utils.ServerInfos.TramontinaDiscordServerGuildId">
+        <member name="F:KWiJisho.Modules.Utils.TramontinaServer.GuildId">
             <summary>
             Tramontina Discord server guild Id.
             </summary>
         </member>
-        <member name="P:KWiJisho.Modules.Utils.ServerInfos.TramontinaWelcomeChannelId">
+        <member name="F:KWiJisho.Modules.Utils.TramontinaServer.WelcomeChannelId">
             <summary>
-            Tramontina welcome Discord channeld Id.
+            Tramontina welcome Discord server channeld Id.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Modules.Utils.TramontinaServer.NewsChannelId">
+            <summary>
+            Tramontina news Discord server channel Id.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Modules.Utils.PersonalServer">
+            <summary>
+            Static class responsible for holding information about my personal testing Discord server.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Modules.Utils.PersonalServer.GuildId">
+            <summary>
+            Personal Discord server guild Id.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Modules.Utils.PersonalServer.KWiJishoChannelId">
+            <summary>
+            Personal KWiJisho Discord server channel Id.
             </summary>
         </member>
         <member name="T:KWiJisho.Modules.Utils.UtilList">
