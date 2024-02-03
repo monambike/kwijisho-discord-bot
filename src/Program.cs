@@ -1,4 +1,4 @@
-﻿using KWiJisho.Modules;
+﻿using KWiJisho;
 
 namespace KWiJisho
 {

@@ -150,9 +150,6 @@
     <Content Include="Resources\Images\KarenKujo\500x281-laughing.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Images\KarenKujo\500x281-pontingup-transparent.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Resources\Images\KarenKujo\500x281-talking.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
