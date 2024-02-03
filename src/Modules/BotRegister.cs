@@ -1,20 +1,18 @@
 ﻿using DSharpPlus;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.CommandsNext.Exceptions;
-using DSharpPlus.Entities;
 using DSharpPlus.SlashCommands;
 using DSharpPlus.SlashCommands.Attributes;
 using KWiJisho.Modules.Commands.Prefix;
 using KWiJisho.Modules.Commands.Slash;
 using KWiJisho.Modules.Events;
 using KWiJisho.Modules.Utils;
-using System;
 using System.Collections.Generic;
 
 namespace KWiJisho.Modules
 {
     /// <summary>
-    /// The main entry point of the application.
+    /// Main class responsible for managing and instantiate the KWiJisho Discord bot.
     /// </summary>
     internal partial class Bot
     {
