@@ -53,6 +53,7 @@ namespace KWiJisho
                 SlashCommands.RegisterCommands<SlashBirthday>(guildId);
                 SlashCommands.RegisterCommands<SlashInfo>(guildId);
                 SlashCommands.RegisterCommands<SlashKwiGpt>(guildId);
+                SlashCommands.RegisterCommands<SlashNasa>(guildId);
                 SlashCommands.RegisterCommands<SlashNotice>(guildId);
             }
         }

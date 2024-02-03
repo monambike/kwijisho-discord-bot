@@ -44,7 +44,7 @@
             <summary>
             Retrieves the Astronomy Picture of the Day (APOD) through a request to NASA's API.
             </summary>
-            <returns>An asynchronous <see cref="T:System.Threading.Tasks.Task"/> that represents the operation. The task result contains an <see cref="T:KWiJisho.APIs.NasaApi.Apod.ApodResponseJson"/> object.</returns>
+            <returns>An asynchronous <see cref="T:System.Threading.Tasks.Task"/> that represents the operation. The task result contains an <see cref="T:KWiJisho.APIs.NasaApi.Apod.ApodResponse"/> object.</returns>
         </member>
         <member name="M:KWiJisho.APIs.NasaApi.Apod.GetUsingNasaApiAsync(System.String)">
             <summary>
@@ -53,32 +53,32 @@
             <param name="request">The endpoint for the API request.</param>
             <returns>An asynchronous task that represents the operation. The task result contains the API response as a string.</returns>
         </member>
-        <member name="T:KWiJisho.APIs.NasaApi.Apod.ApodResponseJson">
+        <member name="T:KWiJisho.APIs.NasaApi.Apod.ApodResponse">
             <summary>
             Represents the APOD Json response for a NASA's API HTTP request.
             </summary>
         </member>
-        <member name="P:KWiJisho.APIs.NasaApi.Apod.ApodResponseJson.Title">
+        <member name="P:KWiJisho.APIs.NasaApi.Apod.ApodResponse.Title">
             <summary>
             Title of the current Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="P:KWiJisho.APIs.NasaApi.Apod.ApodResponseJson.Explanation">
+        <member name="P:KWiJisho.APIs.NasaApi.Apod.ApodResponse.Explanation">
             <summary>
             Explanation of the current Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="P:KWiJisho.APIs.NasaApi.Apod.ApodResponseJson.Date">
+        <member name="P:KWiJisho.APIs.NasaApi.Apod.ApodResponse.Date">
             <summary>
             Date of the current Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="P:KWiJisho.APIs.NasaApi.Apod.ApodResponseJson.Url">
+        <member name="P:KWiJisho.APIs.NasaApi.Apod.ApodResponse.Url">
             <summary>
             Image URL of the current Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="P:KWiJisho.APIs.NasaApi.Apod.ApodResponseJson.Copyright">
+        <member name="P:KWiJisho.APIs.NasaApi.Apod.ApodResponse.Copyright">
             <summary>
             Copyright of the current Astronomy Picture of the Day.
             </summary>
@@ -434,67 +434,6 @@
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
             <returns></returns>
         </member>
-        <member name="T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder">
-            <summary>
-            Builder class for creating a Discord embed for Astronomy Picture of the Day (APOD) information.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder.TitleField">
-            <summary>
-            Gets or initializes the title field for the APOD embed.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder.TitleContent">
-            <summary>
-            Gets or initializes the title content for the APOD embed.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder.ExplanationField">
-            <summary>
-            Gets or initializes the explanation field for the APOD embed.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder.ExplanationContent">
-            <summary>
-            Gets or initializes the explanation content for the APOD embed.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder.ImageUrlContent">
-            <summary>
-            Gets or initializes the image URL content for the APOD embed.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder.CopyrightContent">
-            <summary>
-            Gets or initializes the copyright content for the APOD embed.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder.NullCopyrightField">
-            <summary>
-            Gets or initializes the placeholder for null copyright field in the APOD embed.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder.DateField">
-            <summary>
-            Gets or initializes the date field for the APOD embed.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder.DateContent">
-            <summary>
-            Gets or initializes the date content for the APOD embed.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder.DateFormat">
-            <summary>
-            Gets or initializes the date format for the date in the APOD embed.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder.GetDiscordEmbedBuilder">
-            <summary>
-            Builds and returns a Discord embed builder based on the provided APOD information.
-            </summary>
-            <returns>A <see cref="T:DSharpPlus.Entities.DiscordEmbedBuilder"/> representing the APOD information in embed format.</returns>
-        </member>
         <member name="T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNotice">
             <summary>
             Represents a set of prefix notice commands.
@@ -713,6 +652,21 @@
         <member name="M:KWiJisho.Commands.Slash.SlashKwiGpt.ExecuteSlashKWiJishoPromptAsync(DSharpPlus.SlashCommands.InteractionContext,System.String)">
             <summary>
             Represent the command to interact with the bot with ChatGpt in KWiJisho style.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Commands.Slash.SlashNasa.Emoji">
+            <summary>
+            Represents a command group to senda random animated emoji.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Commands.Slash.SlashNasa.Emoji.ExecuteEnglishApodAsync(DSharpPlus.SlashCommands.InteractionContext)">
+            <summary>
+            Represents the command to get the english APOD.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Commands.Slash.SlashNasa.Emoji.ExecutePortugueseApodHelpAsync(DSharpPlus.SlashCommands.InteractionContext)">
+            <summary>
+            Represents the command to get the portuguese APOD.
             </summary>
         </member>
         <member name="T:KWiJisho.Commands.Slash.SlashNotice">
@@ -1248,6 +1202,75 @@
             <summary>
             Indicates an upcoming birthday in the future, beyond tomorrow.
             </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:KWiJisho.Models.Nasa.BuildEnglishApodMessageAsync(KWiJisho.APIs.NasaApi.Apod.ApodResponse)" -->
+        <member name="M:KWiJisho.Models.Nasa.BuildPortgueseApodMessageAsync(KWiJisho.APIs.NasaApi.Apod.ApodResponse)">
+            <summary>
+            Asynchronously builds a portuguese apod message with the apod response.
+            </summary>
+            <param name="apodResponse">The APOD response content to build the embed.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> containing the <see cref="T:DSharpPlus.Entities.DiscordEmbedBuilder"/>.</returns>
+        </member>
+        <member name="T:KWiJisho.Models.Nasa.ApodBuilder">
+            <summary>
+            Builder class for creating a Discord embed for Astronomy Picture of the Day (APOD) information.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Models.Nasa.ApodBuilder.TitleField">
+            <summary>
+            Gets or initializes the title field for the APOD embed.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Models.Nasa.ApodBuilder.TitleContent">
+            <summary>
+            Gets or initializes the title content for the APOD embed.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Models.Nasa.ApodBuilder.ExplanationField">
+            <summary>
+            Gets or initializes the explanation field for the APOD embed.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Models.Nasa.ApodBuilder.ExplanationContent">
+            <summary>
+            Gets or initializes the explanation content for the APOD embed.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Models.Nasa.ApodBuilder.ImageUrlContent">
+            <summary>
+            Gets or initializes the image URL content for the APOD embed.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Models.Nasa.ApodBuilder.CopyrightContent">
+            <summary>
+            Gets or initializes the copyright content for the APOD embed.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Models.Nasa.ApodBuilder.NullCopyrightField">
+            <summary>
+            Gets or initializes the placeholder for null copyright field in the APOD embed.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Models.Nasa.ApodBuilder.DateField">
+            <summary>
+            Gets or initializes the date field for the APOD embed.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Models.Nasa.ApodBuilder.DateContent">
+            <summary>
+            Gets or initializes the date content for the APOD embed.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Models.Nasa.ApodBuilder.DateFormat">
+            <summary>
+            Gets or initializes the date format for the date in the APOD embed.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Models.Nasa.ApodBuilder.GetDiscordEmbedBuilder">
+            <summary>
+            Builds and returns a Discord embed builder based on the provided APOD information.
+            </summary>
+            <returns>A <see cref="T:DSharpPlus.Entities.DiscordEmbedBuilder"/> representing the APOD information in embed format.</returns>
         </member>
         <member name="T:KWiJisho.Scheduling.BirthdayJob">
             <summary>
