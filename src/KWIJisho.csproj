@@ -51,6 +51,7 @@
     <WarningLevel>9999</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="config.json" />
     <None Remove="Resources\Images\256x256-ayaya-christmas.ico" />
     <None Remove="Resources\Images\Birthday\500x500-happybirthday-insomedays.png" />
     <None Remove="Resources\Images\Birthday\500x500-happybirthday-today.png" />
@@ -96,6 +97,9 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="config.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Images\256x256-ayaya-christmas.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -214,9 +218,6 @@
     <None Update="Resources\Images\256x256-ayaya.ico">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
-    </None>
-    <None Update="config.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Resources\Images\KarenKujo\256x256-ayaya.png">
       <Pack>True</Pack>
