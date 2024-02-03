@@ -64,8 +64,8 @@ namespace KWiJisho
         internal void RegisterBotEvents()
         {
             // Registering discord bot events.
-            DiscordClient.Ready += BotStart.OnClientReady;
-            DiscordClient.ComponentInteractionCreated += Buttons.OnComponentInteractionCreatedAsync;
+            DiscordClient.Ready += KWiJishoBotStart.OnClientReady;
+            DiscordClient.ComponentInteractionCreated += ButtonInteraction.OnComponentInteractionCreatedAsync;
             DiscordClient.GuildMemberAdded += GoodbyeWelcome.OnGuildMemberAddedAsync;
             DiscordClient.GuildMemberRemoved += GoodbyeWelcome.OnGuildMemberRemovedAsync;
         }

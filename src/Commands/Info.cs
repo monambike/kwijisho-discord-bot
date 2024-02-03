@@ -13,8 +13,15 @@ namespace KWiJisho.Commands
     /// </summary>
     internal static class Info
     {
+        /// <summary>
+        /// Sends a help message containing a list of available commands and their descriptions to the specified Discord channel.
+        /// </summary>
+        /// <param name="discordChannel">The Discord channel where the message will be sent.</param>
+        /// <param name="discordClient">The Discord client instance.</param>
+
         internal static async Task GetHelpAsync(DiscordChannel discordChannel, DiscordClient discordClient)
         {
+            // Initializing discord embed builder
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
                 Color = ConfigJson.DefaultColor.DiscordColor,
@@ -26,19 +33,29 @@ namespace KWiJisho.Commands
                 }
             };
 
+            // For each command group inside command group list
             foreach (var commandGroup in PrefixCommandManager.CommandGroups)
             {
                 string content = "";
+                // For each command inside the current command group
                 foreach (var discordCommand in commandGroup.Commands)
+                    // Append the string that will represent the command and its description to the content
                     content += $"{ConfigJson.Prefix}{discordCommand.Name}: ".ToDiscordBold() + $"{discordCommand.Description}{Environment.NewLine}";
+                // Add a field with the command group name and the appended content
                 discordEmbedBuilder.AddField(commandGroup.Name, content);
             }
 
             await discordChannel.SendMessageAsync(discordEmbedBuilder);
         }
 
+        /// <summary>
+        /// Sends an information message about the bot, its creator, and contact details to the specified Discord channel.
+        /// </summary>
+        /// <param name="discordChannel">The Discord channel where the message will be sent.</param>
+        /// <param name="discordClient">The Discord client instance.</param>
         internal static async Task GetInfoAsync(DiscordChannel discordChannel, DiscordClient discordClient)
         {
+            // Description for discord embed builder
             var description = $@"Que legal que você quer saber mais sobre mim AHAHAHAHA eu sou a KWiJisho 🌟 😎 o bot {"MAIS LEGAL DE TODOS!!!!!".ToDiscordBold()} criado " +
                 "pro servidor Tramontina." +
                 $"{Environment.NewLine + Environment.NewLine}Você não vai encontrar um bot tão simpático quanto eu AHAHAHHA." +
@@ -51,6 +68,7 @@ namespace KWiJisho.Commands
             var fileName = $"500x281-talking.gif";
             var imagePath = Path.GetFullPath($"Resources/Images/KarenKujo/{fileName}");
 
+            // Initializing discord embed builder
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
                 Color = ConfigJson.DefaultColor.DiscordColor,

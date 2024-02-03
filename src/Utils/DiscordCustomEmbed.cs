@@ -6,7 +6,7 @@ namespace KWiJisho.Utils
     /// <summary>
     /// Utility class providing default embeds for KWiJisho Discord bot.
     /// </summary>
-    internal class DiscordEmbedTest
+    internal class DiscordCustomEmbed
     {
         internal static DiscordEmbed GetDiscordEmbed(string title, string description, bool useKWiJishoThumbnail = false)
         {

@@ -12,6 +12,9 @@ namespace KWiJisho.Commands
     /// </summary>
     internal static class Birthday
     {
+        /// <summary>
+        /// Represents the year months in Portuguese.
+        /// </summary>
         private static Dictionary<int, string> Months => new()
         {
             { 01, "Janeiro" },
@@ -28,6 +31,11 @@ namespace KWiJisho.Commands
             { 12, "Dezembro" }
         };
 
+        /// <summary>
+        /// Sends a birthday message for the next upcoming birthday in the specified Discord channel.
+        /// </summary>
+        /// <param name="discordChannel">The Discord channel where the message will be sent.</param>
+        /// <param name="discordGuild">The Discord guild containing the users.</param>
         internal static async Task GetNextBirthdayAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
         {
 
@@ -57,6 +65,11 @@ namespace KWiJisho.Commands
                 .AddFile(fileName, fileStream));
         }
 
+        /// <summary>
+        /// Sends a list of upcoming birthdays in the specified Discord channel.
+        /// </summary>
+        /// <param name="discordChannel">The Discord channel where the message will be sent.</param>
+        /// <param name="discordGuild">The Discord guild containing the users.</param>
         internal static async Task GetListBirthdayAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
         {
             var users = Utils.Birthday.GetUsersOrderByClosestBirthday();
@@ -65,6 +78,7 @@ namespace KWiJisho.Commands
             var fileName = $"500x281-talking.gif";
             var imagePath = Path.GetFullPath($"Resources/Images/{fileName}");
 
+            // Initializing discord embed builder
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
                 Color = ConfigJson.DefaultColor.DiscordColor,
@@ -74,18 +88,20 @@ namespace KWiJisho.Commands
             // Adding a field for every month that someone makes birthday.
             foreach (var month in Months)
             {
+                // Getting users that make birthday at the current month
                 var usersBirthdayThisMonth = users.Where(user => user.Birthday.Month == month.Key);
 
-                // Building a string that will hold all users that will make birthday
-                // at current month.
+                // Building a string that will hold all users that will make birthday at current month.
                 var usersBirthdayThisMonthString = string.Empty;
                 foreach (var userBirthdayThisMonth in usersBirthdayThisMonth)
                 {
-                    var userInfo = userBirthdayThisMonth.GetUserDiscordMember(discordGuild);
-                    if (userInfo is not null)
+                    // Getting discord member information
+                    var member = userBirthdayThisMonth.GetUserDiscordMember(discordGuild);
+                    if (member is not null)
                     {
-                        // Formatting user name
-                        var name = userInfo.DisplayName == userInfo.Username ? userInfo.DisplayName : $"{userInfo.DisplayName} ({userInfo.Username})";
+                        // Formatting member name
+                        var name = member.DisplayName == member.Username ? member.DisplayName : $"{member.DisplayName} ({member.Username})";
+
                         // Formatting user field with name and birthday month and day.
                         usersBirthdayThisMonthString += $"{userBirthdayThisMonth.Birthday:dd/MM} - {name}{Environment.NewLine}";
                     }
@@ -98,6 +114,7 @@ namespace KWiJisho.Commands
                 discordEmbedBuilder.AddField($"Aniversariantes de {month.Value.ToUpper()}", usersBirthdayThisMonthString);
             }
 
+            // Sending the builded embed message
             await discordChannel.SendMessageAsync(discordEmbedBuilder);
         }
     }

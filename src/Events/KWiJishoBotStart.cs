@@ -6,7 +6,7 @@ namespace KWiJisho.Events
     /// <summary>
     /// Provides a set of events and methods fired when bot starts.
     /// </summary>
-    internal class BotStart
+    internal class KWiJishoBotStart
     {
         /// <summary>
         /// Handles the events when the bot's client is ready.

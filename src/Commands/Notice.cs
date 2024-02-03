@@ -18,6 +18,16 @@ namespace KWiJisho.Commands
         /// </summary>
         internal static Color Yellow = new(255, 231, 94);
 
+        /// <summary>
+        /// Method responsible for sending and creating a "news" in the news channel.
+        /// </summary>
+        /// <param name="discordClient"></param>
+        /// <param name="discordMember"></param>
+        /// <param name="title"></param>
+        /// <param name="description"></param>
+        /// <param name="sendInTramontina"></param>
+        /// <param name="discordAttachments"></param>
+        /// <returns></returns>
         internal static async Task SendNewsAsync(DiscordClient discordClient, DiscordMember discordMember, string title, string description, bool sendInTramontina, DiscordAttachment discordAttachments = null)
         {
             // Making the DiscordEmbedBuilder with the news content.

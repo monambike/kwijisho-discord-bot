@@ -9,7 +9,7 @@ namespace KWiJisho.Events
     /// <summary>
     /// Provides a set of events and methods fired when a interaction is made.
     /// </summary>
-    internal class Buttons
+    internal class ButtonInteraction
     {
         /// <summary>
         /// Handles the event when a component interaction is created, like button clicks.

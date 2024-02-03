@@ -2,7 +2,6 @@
 using DSharpPlus.Entities;
 using DSharpPlus.SlashCommands;
 using DSharpPlus.SlashCommands.Attributes;
-using KWiJisho.Commands;
 using System.Threading.Tasks;
 
 namespace KWiJisho.Commands.Slash

@@ -1,6 +1,5 @@
 ﻿using DSharpPlus;
 using DSharpPlus.SlashCommands;
-using KWiJisho.Commands;
 using System.Threading.Tasks;
 
 namespace KWiJisho.Commands.Slash
