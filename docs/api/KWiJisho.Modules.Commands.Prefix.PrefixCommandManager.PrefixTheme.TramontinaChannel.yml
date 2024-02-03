@@ -23,7 +23,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: TramontinaChannel
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-    startLine: 177
+    startLine: 182
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -67,7 +67,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: .ctor
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-    startLine: 177
+    startLine: 182
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -111,7 +111,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: DefaultTextTitle
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-    startLine: 182
+    startLine: 187
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -142,7 +142,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: EmojiTheme
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-    startLine: 188
+    startLine: 193
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -176,7 +176,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ChangeEmoji
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
-    startLine: 196
+    startLine: 201
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix

@@ -57,10 +57,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ChatGptPromptAsync
     path: ../src/KWiJisho/Modules/Commands/KwiGpt.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands
+  summary: Represents the command to get the chat gpt prompt in KWiJisho style.
+  example: []
   syntax:
     content: internal static Task ChatGptPromptAsync(DiscordChannel discordChannel, params string[] input)
     parameters:

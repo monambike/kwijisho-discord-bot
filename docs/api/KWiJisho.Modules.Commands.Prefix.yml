@@ -13,6 +13,7 @@ items:
   - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt
   - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa
   - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice
   - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
   - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
   - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
@@ -174,6 +175,28 @@ references:
   - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder
     name: ApodBuilder
     href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder.html
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  name: PrefixCommandManager.PrefixNotice
+  nameWithType: PrefixCommandManager.PrefixNotice
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice
+  spec.csharp:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice
+    name: PrefixNotice
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.html
+  spec.vb:
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+    name: PrefixCommandManager
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html
+  - name: .
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice
+    name: PrefixNotice
+    href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.html
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
   commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
   href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html

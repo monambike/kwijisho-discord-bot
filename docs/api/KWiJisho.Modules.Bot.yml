@@ -220,7 +220,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: RegisterSlashCommands
     path: ../src/KWiJisho/Modules/BotRegister.cs
-    startLine: 36
+    startLine: 37
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -248,7 +248,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: RegisterBotEvents
     path: ../src/KWiJisho/Modules/BotRegister.cs
-    startLine: 60
+    startLine: 63
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -276,7 +276,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: RegisterPrefixCommandsPermissions
     path: ../src/KWiJisho/Modules/BotRegister.cs
-    startLine: 72
+    startLine: 75
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -304,7 +304,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: RegisterSlashCommandsPermissions
     path: ../src/KWiJisho/Modules/BotRegister.cs
-    startLine: 96
+    startLine: 99
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules

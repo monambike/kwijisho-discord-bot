@@ -6,6 +6,7 @@ items:
   parent: KWiJisho.Modules.Utils
   children:
   - KWiJisho.Modules.Utils.DiscordFormat.ToDiscordBold(System.String)
+  - KWiJisho.Modules.Utils.DiscordFormat.ToDiscordEscape(System.String)
   - KWiJisho.Modules.Utils.DiscordFormat.ToDiscordItalic(System.String)
   langs:
   - csharp
@@ -118,6 +119,45 @@ items:
   nameWithType.vb: DiscordFormat.ToDiscordItalic(String)
   fullName.vb: KWiJisho.Modules.Utils.DiscordFormat.ToDiscordItalic(String)
   name.vb: ToDiscordItalic(String)
+- uid: KWiJisho.Modules.Utils.DiscordFormat.ToDiscordEscape(System.String)
+  commentId: M:KWiJisho.Modules.Utils.DiscordFormat.ToDiscordEscape(System.String)
+  id: ToDiscordEscape(System.String)
+  isExtensionMethod: true
+  parent: KWiJisho.Modules.Utils.DiscordFormat
+  langs:
+  - csharp
+  - vb
+  name: ToDiscordEscape(string)
+  nameWithType: DiscordFormat.ToDiscordEscape(string)
+  fullName: KWiJisho.Modules.Utils.DiscordFormat.ToDiscordEscape(string)
+  type: Method
+  source:
+    remote:
+      path: src/KWiJisho/Modules/Utils/DiscordFormat.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ToDiscordEscape
+    path: ../src/KWiJisho/Modules/Utils/DiscordFormat.cs
+    startLine: 26
+  assemblies:
+  - KWIJisho
+  namespace: KWiJisho.Modules.Utils
+  summary: Formats the specified string to be escaped using Discord markdown.
+  example: []
+  syntax:
+    content: internal static string ToDiscordEscape(this string str)
+    parameters:
+    - id: str
+      type: System.String
+      description: The string to be formatted.
+    return:
+      type: System.String
+      description: The escaped string.
+    content.vb: Friend Shared Function ToDiscordEscape(str As String) As String
+  overload: KWiJisho.Modules.Utils.DiscordFormat.ToDiscordEscape*
+  nameWithType.vb: DiscordFormat.ToDiscordEscape(String)
+  fullName.vb: KWiJisho.Modules.Utils.DiscordFormat.ToDiscordEscape(String)
+  name.vb: ToDiscordEscape(String)
 references:
 - uid: KWiJisho.Modules.Utils
   commentId: N:KWiJisho.Modules.Utils
@@ -409,3 +449,9 @@ references:
   name: ToDiscordItalic
   nameWithType: DiscordFormat.ToDiscordItalic
   fullName: KWiJisho.Modules.Utils.DiscordFormat.ToDiscordItalic
+- uid: KWiJisho.Modules.Utils.DiscordFormat.ToDiscordEscape*
+  commentId: Overload:KWiJisho.Modules.Utils.DiscordFormat.ToDiscordEscape
+  href: KWiJisho.Modules.Utils.DiscordFormat.html#KWiJisho_Modules_Utils_DiscordFormat_ToDiscordEscape_System_String_
+  name: ToDiscordEscape
+  nameWithType: DiscordFormat.ToDiscordEscape
+  fullName: KWiJisho.Modules.Utils.DiscordFormat.ToDiscordEscape

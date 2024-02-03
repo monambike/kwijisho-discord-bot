@@ -8,6 +8,7 @@ items:
   - KWiJisho.Modules.Commands.Birthday
   - KWiJisho.Modules.Commands.Info
   - KWiJisho.Modules.Commands.KwiGpt
+  - KWiJisho.Modules.Commands.Notice
   langs:
   - csharp
   - vb
@@ -42,3 +43,9 @@ references:
   name: KwiGpt
   nameWithType: KwiGpt
   fullName: KWiJisho.Modules.Commands.KwiGpt
+- uid: KWiJisho.Modules.Commands.Notice
+  commentId: T:KWiJisho.Modules.Commands.Notice
+  href: KWiJisho.Modules.Commands.Notice.html
+  name: Notice
+  nameWithType: Notice
+  fullName: KWiJisho.Modules.Commands.Notice

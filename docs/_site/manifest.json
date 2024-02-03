@@ -182,6 +182,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/KWiJisho.Modules.Commands.Notice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KWiJisho.Modules.Commands.Notice.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/KWiJisho.Modules.Commands.Prefix.PrefixCommand.yml",
       "output": {
         ".html": {
@@ -256,6 +266,16 @@
       "output": {
         ".html": {
           "relative_path": "api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.html"
         }
       },
       "version": ""
@@ -376,6 +396,16 @@
       "output": {
         ".html": {
           "relative_path": "api/KWiJisho.Modules.Commands.Slash.SlashKwiGpt.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KWiJisho.Modules.Commands.Slash.SlashNotice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KWiJisho.Modules.Commands.Slash.SlashNotice.html"
         }
       },
       "version": ""
@@ -522,6 +552,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/KWiJisho.Modules.Utils.Color.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KWiJisho.Modules.Utils.Color.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/KWiJisho.Modules.Utils.DiscordEmbedTest.yml",
       "output": {
         ".html": {
@@ -652,6 +692,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/KWiJisho.Modules.Utils.ServerPersonal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KWiJisho.Modules.Utils.ServerPersonal.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KWiJisho.Modules.Utils.ServerTramontina.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KWiJisho.Modules.Utils.ServerTramontina.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/KWiJisho.Modules.Utils.User.yml",
       "output": {
         ".html": {
@@ -739,6 +799,39 @@
         },
         ".json": {
           "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
         }
       },
       "version": ""

@@ -718,6 +718,34 @@ references:
   isSpec: "True"
   fullName: KWiJisho.Modules.Commands.KwiGpt.ChatGptPromptAsync
   nameWithType: KwiGpt.ChatGptPromptAsync
+- uid: KWiJisho.Modules.Commands.Notice
+  name: Notice
+  href: api/KWiJisho.Modules.Commands.Notice.html
+  commentId: T:KWiJisho.Modules.Commands.Notice
+  fullName: KWiJisho.Modules.Commands.Notice
+  nameWithType: Notice
+- uid: KWiJisho.Modules.Commands.Notice.SendNewsAsync(DSharpPlus.DiscordClient,DSharpPlus.Entities.DiscordMember,System.String,System.String,System.Boolean,DSharpPlus.Entities.DiscordAttachment)
+  name: SendNewsAsync(DiscordClient, DiscordMember, string, string, bool, DiscordAttachment)
+  href: api/KWiJisho.Modules.Commands.Notice.html#KWiJisho_Modules_Commands_Notice_SendNewsAsync_DSharpPlus_DiscordClient_DSharpPlus_Entities_DiscordMember_System_String_System_String_System_Boolean_DSharpPlus_Entities_DiscordAttachment_
+  commentId: M:KWiJisho.Modules.Commands.Notice.SendNewsAsync(DSharpPlus.DiscordClient,DSharpPlus.Entities.DiscordMember,System.String,System.String,System.Boolean,DSharpPlus.Entities.DiscordAttachment)
+  name.vb: SendNewsAsync(DiscordClient, DiscordMember, String, String, Boolean, DiscordAttachment)
+  fullName: KWiJisho.Modules.Commands.Notice.SendNewsAsync(DSharpPlus.DiscordClient, DSharpPlus.Entities.DiscordMember, string, string, bool, DSharpPlus.Entities.DiscordAttachment)
+  fullName.vb: KWiJisho.Modules.Commands.Notice.SendNewsAsync(DSharpPlus.DiscordClient, DSharpPlus.Entities.DiscordMember, String, String, Boolean, DSharpPlus.Entities.DiscordAttachment)
+  nameWithType: Notice.SendNewsAsync(DiscordClient, DiscordMember, string, string, bool, DiscordAttachment)
+  nameWithType.vb: Notice.SendNewsAsync(DiscordClient, DiscordMember, String, String, Boolean, DiscordAttachment)
+- uid: KWiJisho.Modules.Commands.Notice.SendNewsAsync*
+  name: SendNewsAsync
+  href: api/KWiJisho.Modules.Commands.Notice.html#KWiJisho_Modules_Commands_Notice_SendNewsAsync_
+  commentId: Overload:KWiJisho.Modules.Commands.Notice.SendNewsAsync
+  isSpec: "True"
+  fullName: KWiJisho.Modules.Commands.Notice.SendNewsAsync
+  nameWithType: Notice.SendNewsAsync
+- uid: KWiJisho.Modules.Commands.Notice.Yellow
+  name: Yellow
+  href: api/KWiJisho.Modules.Commands.Notice.html#KWiJisho_Modules_Commands_Notice_Yellow
+  commentId: F:KWiJisho.Modules.Commands.Notice.Yellow
+  fullName: KWiJisho.Modules.Commands.Notice.Yellow
+  nameWithType: Notice.Yellow
 - uid: KWiJisho.Modules.Commands.Prefix
   name: KWiJisho.Modules.Commands.Prefix
   href: api/KWiJisho.Modules.Commands.Prefix.html
@@ -936,6 +964,19 @@ references:
   isSpec: "True"
   fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Info
   nameWithType: PrefixCommandManager.Info
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage
+  name: Manage
+  href: api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_Manage
+  commentId: P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage
+  nameWithType: PrefixCommandManager.Manage
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage*
+  name: Manage
+  href: api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_Manage_
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage
+  isSpec: "True"
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage
+  nameWithType: PrefixCommandManager.Manage
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic
   name: PrefixCommandManager.PrefixBasic
   href: api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic.html
@@ -1275,6 +1316,46 @@ references:
   commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.apodResume
   fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.apodResume
   nameWithType: PrefixCommandManager.PrefixNasa.apodResume
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice
+  name: PrefixCommandManager.PrefixNotice
+  href: api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.html
+  commentId: T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice
+  nameWithType: PrefixCommandManager.PrefixNotice
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.SendNewsAsync(DSharpPlus.CommandsNext.CommandContext,System.String,System.String,System.Boolean)
+  name: SendNewsAsync(CommandContext, string, string, bool)
+  href: api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixNotice_SendNewsAsync_DSharpPlus_CommandsNext_CommandContext_System_String_System_String_System_Boolean_
+  commentId: M:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.SendNewsAsync(DSharpPlus.CommandsNext.CommandContext,System.String,System.String,System.Boolean)
+  name.vb: SendNewsAsync(CommandContext, String, String, Boolean)
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.SendNewsAsync(DSharpPlus.CommandsNext.CommandContext, string, string, bool)
+  fullName.vb: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.SendNewsAsync(DSharpPlus.CommandsNext.CommandContext, String, String, Boolean)
+  nameWithType: PrefixCommandManager.PrefixNotice.SendNewsAsync(CommandContext, string, string, bool)
+  nameWithType.vb: PrefixCommandManager.PrefixNotice.SendNewsAsync(CommandContext, String, String, Boolean)
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.SendNewsAsync*
+  name: SendNewsAsync
+  href: api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixNotice_SendNewsAsync_
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.SendNewsAsync
+  isSpec: "True"
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.SendNewsAsync
+  nameWithType: PrefixCommandManager.PrefixNotice.SendNewsAsync
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.commandSyntax
+  name: commandSyntax
+  href: api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixNotice_commandSyntax
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.commandSyntax
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.commandSyntax
+  nameWithType: PrefixCommandManager.PrefixNotice.commandSyntax
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.description
+  name: description
+  href: api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixNotice_description
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.description
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.description
+  nameWithType: PrefixCommandManager.PrefixNotice.description
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.sendNews
+  name: sendNews
+  href: api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_PrefixNotice_sendNews
+  commentId: F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.sendNews
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.sendNews
+  nameWithType: PrefixCommandManager.PrefixNotice.sendNews
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
   name: PrefixCommandManager.PrefixTheme
   href: api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
@@ -1548,19 +1629,6 @@ references:
   isSpec: "True"
   fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.EmojiTheme
   nameWithType: PrefixCommandManager.PrefixTheme.TramontinaChannel.EmojiTheme
-- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Theme
-  name: Theme
-  href: api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_Theme
-  commentId: P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Theme
-  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Theme
-  nameWithType: PrefixCommandManager.Theme
-- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Theme*
-  name: Theme
-  href: api/KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_Theme_
-  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Theme
-  isSpec: "True"
-  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Theme
-  nameWithType: PrefixCommandManager.Theme
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixPokemon
   name: PrefixPokemon
   href: api/KWiJisho.Modules.Commands.Prefix.PrefixPokemon.html
@@ -1710,6 +1778,28 @@ references:
   isSpec: "True"
   fullName: KWiJisho.Modules.Commands.Slash.SlashKwiGpt.ChatGptPromptAsync
   nameWithType: SlashKwiGpt.ChatGptPromptAsync
+- uid: KWiJisho.Modules.Commands.Slash.SlashNotice
+  name: SlashNotice
+  href: api/KWiJisho.Modules.Commands.Slash.SlashNotice.html
+  commentId: T:KWiJisho.Modules.Commands.Slash.SlashNotice
+  fullName: KWiJisho.Modules.Commands.Slash.SlashNotice
+  nameWithType: SlashNotice
+- uid: KWiJisho.Modules.Commands.Slash.SlashNotice.ChatGptPromptAsync(DSharpPlus.SlashCommands.InteractionContext,System.String,System.String,DSharpPlus.Entities.DiscordAttachment,System.Boolean)
+  name: ChatGptPromptAsync(InteractionContext, string, string, DiscordAttachment, bool)
+  href: api/KWiJisho.Modules.Commands.Slash.SlashNotice.html#KWiJisho_Modules_Commands_Slash_SlashNotice_ChatGptPromptAsync_DSharpPlus_SlashCommands_InteractionContext_System_String_System_String_DSharpPlus_Entities_DiscordAttachment_System_Boolean_
+  commentId: M:KWiJisho.Modules.Commands.Slash.SlashNotice.ChatGptPromptAsync(DSharpPlus.SlashCommands.InteractionContext,System.String,System.String,DSharpPlus.Entities.DiscordAttachment,System.Boolean)
+  name.vb: ChatGptPromptAsync(InteractionContext, String, String, DiscordAttachment, Boolean)
+  fullName: KWiJisho.Modules.Commands.Slash.SlashNotice.ChatGptPromptAsync(DSharpPlus.SlashCommands.InteractionContext, string, string, DSharpPlus.Entities.DiscordAttachment, bool)
+  fullName.vb: KWiJisho.Modules.Commands.Slash.SlashNotice.ChatGptPromptAsync(DSharpPlus.SlashCommands.InteractionContext, String, String, DSharpPlus.Entities.DiscordAttachment, Boolean)
+  nameWithType: SlashNotice.ChatGptPromptAsync(InteractionContext, string, string, DiscordAttachment, bool)
+  nameWithType.vb: SlashNotice.ChatGptPromptAsync(InteractionContext, String, String, DiscordAttachment, Boolean)
+- uid: KWiJisho.Modules.Commands.Slash.SlashNotice.ChatGptPromptAsync*
+  name: ChatGptPromptAsync
+  href: api/KWiJisho.Modules.Commands.Slash.SlashNotice.html#KWiJisho_Modules_Commands_Slash_SlashNotice_ChatGptPromptAsync_
+  commentId: Overload:KWiJisho.Modules.Commands.Slash.SlashNotice.ChatGptPromptAsync
+  isSpec: "True"
+  fullName: KWiJisho.Modules.Commands.Slash.SlashNotice.ChatGptPromptAsync
+  nameWithType: SlashNotice.ChatGptPromptAsync
 - uid: KWiJisho.Modules.ConfigJson
   name: ConfigJson
   href: api/KWiJisho.Modules.ConfigJson.html
@@ -2330,6 +2420,96 @@ references:
   isSpec: "True"
   fullName: KWiJisho.Modules.Utils.Channel.UpdateChannelNameAsync
   nameWithType: Channel.UpdateChannelNameAsync
+- uid: KWiJisho.Modules.Utils.Color
+  name: Color
+  href: api/KWiJisho.Modules.Utils.Color.html
+  commentId: T:KWiJisho.Modules.Utils.Color
+  fullName: KWiJisho.Modules.Utils.Color
+  nameWithType: Color
+- uid: KWiJisho.Modules.Utils.Color.#ctor(System.Byte,System.Byte,System.Byte)
+  name: Color(byte, byte, byte)
+  href: api/KWiJisho.Modules.Utils.Color.html#KWiJisho_Modules_Utils_Color__ctor_System_Byte_System_Byte_System_Byte_
+  commentId: M:KWiJisho.Modules.Utils.Color.#ctor(System.Byte,System.Byte,System.Byte)
+  name.vb: New(Byte, Byte, Byte)
+  fullName: KWiJisho.Modules.Utils.Color.Color(byte, byte, byte)
+  fullName.vb: KWiJisho.Modules.Utils.Color.New(Byte, Byte, Byte)
+  nameWithType: Color.Color(byte, byte, byte)
+  nameWithType.vb: Color.New(Byte, Byte, Byte)
+- uid: KWiJisho.Modules.Utils.Color.#ctor*
+  name: Color
+  href: api/KWiJisho.Modules.Utils.Color.html#KWiJisho_Modules_Utils_Color__ctor_
+  commentId: Overload:KWiJisho.Modules.Utils.Color.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: KWiJisho.Modules.Utils.Color.Color
+  fullName.vb: KWiJisho.Modules.Utils.Color.New
+  nameWithType: Color.Color
+  nameWithType.vb: Color.New
+- uid: KWiJisho.Modules.Utils.Color.Blue
+  name: Blue
+  href: api/KWiJisho.Modules.Utils.Color.html#KWiJisho_Modules_Utils_Color_Blue
+  commentId: P:KWiJisho.Modules.Utils.Color.Blue
+  fullName: KWiJisho.Modules.Utils.Color.Blue
+  nameWithType: Color.Blue
+- uid: KWiJisho.Modules.Utils.Color.Blue*
+  name: Blue
+  href: api/KWiJisho.Modules.Utils.Color.html#KWiJisho_Modules_Utils_Color_Blue_
+  commentId: Overload:KWiJisho.Modules.Utils.Color.Blue
+  isSpec: "True"
+  fullName: KWiJisho.Modules.Utils.Color.Blue
+  nameWithType: Color.Blue
+- uid: KWiJisho.Modules.Utils.Color.DiscordColor
+  name: DiscordColor
+  href: api/KWiJisho.Modules.Utils.Color.html#KWiJisho_Modules_Utils_Color_DiscordColor
+  commentId: P:KWiJisho.Modules.Utils.Color.DiscordColor
+  fullName: KWiJisho.Modules.Utils.Color.DiscordColor
+  nameWithType: Color.DiscordColor
+- uid: KWiJisho.Modules.Utils.Color.DiscordColor*
+  name: DiscordColor
+  href: api/KWiJisho.Modules.Utils.Color.html#KWiJisho_Modules_Utils_Color_DiscordColor_
+  commentId: Overload:KWiJisho.Modules.Utils.Color.DiscordColor
+  isSpec: "True"
+  fullName: KWiJisho.Modules.Utils.Color.DiscordColor
+  nameWithType: Color.DiscordColor
+- uid: KWiJisho.Modules.Utils.Color.Green
+  name: Green
+  href: api/KWiJisho.Modules.Utils.Color.html#KWiJisho_Modules_Utils_Color_Green
+  commentId: P:KWiJisho.Modules.Utils.Color.Green
+  fullName: KWiJisho.Modules.Utils.Color.Green
+  nameWithType: Color.Green
+- uid: KWiJisho.Modules.Utils.Color.Green*
+  name: Green
+  href: api/KWiJisho.Modules.Utils.Color.html#KWiJisho_Modules_Utils_Color_Green_
+  commentId: Overload:KWiJisho.Modules.Utils.Color.Green
+  isSpec: "True"
+  fullName: KWiJisho.Modules.Utils.Color.Green
+  nameWithType: Color.Green
+- uid: KWiJisho.Modules.Utils.Color.Hexadecimal
+  name: Hexadecimal
+  href: api/KWiJisho.Modules.Utils.Color.html#KWiJisho_Modules_Utils_Color_Hexadecimal
+  commentId: P:KWiJisho.Modules.Utils.Color.Hexadecimal
+  fullName: KWiJisho.Modules.Utils.Color.Hexadecimal
+  nameWithType: Color.Hexadecimal
+- uid: KWiJisho.Modules.Utils.Color.Hexadecimal*
+  name: Hexadecimal
+  href: api/KWiJisho.Modules.Utils.Color.html#KWiJisho_Modules_Utils_Color_Hexadecimal_
+  commentId: Overload:KWiJisho.Modules.Utils.Color.Hexadecimal
+  isSpec: "True"
+  fullName: KWiJisho.Modules.Utils.Color.Hexadecimal
+  nameWithType: Color.Hexadecimal
+- uid: KWiJisho.Modules.Utils.Color.Red
+  name: Red
+  href: api/KWiJisho.Modules.Utils.Color.html#KWiJisho_Modules_Utils_Color_Red
+  commentId: P:KWiJisho.Modules.Utils.Color.Red
+  fullName: KWiJisho.Modules.Utils.Color.Red
+  nameWithType: Color.Red
+- uid: KWiJisho.Modules.Utils.Color.Red*
+  name: Red
+  href: api/KWiJisho.Modules.Utils.Color.html#KWiJisho_Modules_Utils_Color_Red_
+  commentId: Overload:KWiJisho.Modules.Utils.Color.Red
+  isSpec: "True"
+  fullName: KWiJisho.Modules.Utils.Color.Red
+  nameWithType: Color.Red
 - uid: KWiJisho.Modules.Utils.DiscordEmbedTest
   name: DiscordEmbedTest
   href: api/KWiJisho.Modules.Utils.DiscordEmbedTest.html
@@ -2562,6 +2742,22 @@ references:
   isSpec: "True"
   fullName: KWiJisho.Modules.Utils.DiscordFormat.ToDiscordBold
   nameWithType: DiscordFormat.ToDiscordBold
+- uid: KWiJisho.Modules.Utils.DiscordFormat.ToDiscordEscape(System.String)
+  name: ToDiscordEscape(string)
+  href: api/KWiJisho.Modules.Utils.DiscordFormat.html#KWiJisho_Modules_Utils_DiscordFormat_ToDiscordEscape_System_String_
+  commentId: M:KWiJisho.Modules.Utils.DiscordFormat.ToDiscordEscape(System.String)
+  name.vb: ToDiscordEscape(String)
+  fullName: KWiJisho.Modules.Utils.DiscordFormat.ToDiscordEscape(string)
+  fullName.vb: KWiJisho.Modules.Utils.DiscordFormat.ToDiscordEscape(String)
+  nameWithType: DiscordFormat.ToDiscordEscape(string)
+  nameWithType.vb: DiscordFormat.ToDiscordEscape(String)
+- uid: KWiJisho.Modules.Utils.DiscordFormat.ToDiscordEscape*
+  name: ToDiscordEscape
+  href: api/KWiJisho.Modules.Utils.DiscordFormat.html#KWiJisho_Modules_Utils_DiscordFormat_ToDiscordEscape_
+  commentId: Overload:KWiJisho.Modules.Utils.DiscordFormat.ToDiscordEscape
+  isSpec: "True"
+  fullName: KWiJisho.Modules.Utils.DiscordFormat.ToDiscordEscape
+  nameWithType: DiscordFormat.ToDiscordEscape
 - uid: KWiJisho.Modules.Utils.DiscordFormat.ToDiscordItalic(System.String)
   name: ToDiscordItalic(string)
   href: api/KWiJisho.Modules.Utils.DiscordFormat.html#KWiJisho_Modules_Utils_DiscordFormat_ToDiscordItalic_System_String_
@@ -2956,6 +3152,48 @@ references:
   isSpec: "True"
   fullName: KWiJisho.Modules.Utils.ServerInfos.TramontinaWelcomeChannelId
   nameWithType: ServerInfos.TramontinaWelcomeChannelId
+- uid: KWiJisho.Modules.Utils.ServerPersonal
+  name: ServerPersonal
+  href: api/KWiJisho.Modules.Utils.ServerPersonal.html
+  commentId: T:KWiJisho.Modules.Utils.ServerPersonal
+  fullName: KWiJisho.Modules.Utils.ServerPersonal
+  nameWithType: ServerPersonal
+- uid: KWiJisho.Modules.Utils.ServerPersonal.GuildId
+  name: GuildId
+  href: api/KWiJisho.Modules.Utils.ServerPersonal.html#KWiJisho_Modules_Utils_ServerPersonal_GuildId
+  commentId: F:KWiJisho.Modules.Utils.ServerPersonal.GuildId
+  fullName: KWiJisho.Modules.Utils.ServerPersonal.GuildId
+  nameWithType: ServerPersonal.GuildId
+- uid: KWiJisho.Modules.Utils.ServerPersonal.KWiJishoChannelId
+  name: KWiJishoChannelId
+  href: api/KWiJisho.Modules.Utils.ServerPersonal.html#KWiJisho_Modules_Utils_ServerPersonal_KWiJishoChannelId
+  commentId: F:KWiJisho.Modules.Utils.ServerPersonal.KWiJishoChannelId
+  fullName: KWiJisho.Modules.Utils.ServerPersonal.KWiJishoChannelId
+  nameWithType: ServerPersonal.KWiJishoChannelId
+- uid: KWiJisho.Modules.Utils.ServerTramontina
+  name: ServerTramontina
+  href: api/KWiJisho.Modules.Utils.ServerTramontina.html
+  commentId: T:KWiJisho.Modules.Utils.ServerTramontina
+  fullName: KWiJisho.Modules.Utils.ServerTramontina
+  nameWithType: ServerTramontina
+- uid: KWiJisho.Modules.Utils.ServerTramontina.GuildId
+  name: GuildId
+  href: api/KWiJisho.Modules.Utils.ServerTramontina.html#KWiJisho_Modules_Utils_ServerTramontina_GuildId
+  commentId: F:KWiJisho.Modules.Utils.ServerTramontina.GuildId
+  fullName: KWiJisho.Modules.Utils.ServerTramontina.GuildId
+  nameWithType: ServerTramontina.GuildId
+- uid: KWiJisho.Modules.Utils.ServerTramontina.NewsChannelId
+  name: NewsChannelId
+  href: api/KWiJisho.Modules.Utils.ServerTramontina.html#KWiJisho_Modules_Utils_ServerTramontina_NewsChannelId
+  commentId: F:KWiJisho.Modules.Utils.ServerTramontina.NewsChannelId
+  fullName: KWiJisho.Modules.Utils.ServerTramontina.NewsChannelId
+  nameWithType: ServerTramontina.NewsChannelId
+- uid: KWiJisho.Modules.Utils.ServerTramontina.WelcomeChannelId
+  name: WelcomeChannelId
+  href: api/KWiJisho.Modules.Utils.ServerTramontina.html#KWiJisho_Modules_Utils_ServerTramontina_WelcomeChannelId
+  commentId: F:KWiJisho.Modules.Utils.ServerTramontina.WelcomeChannelId
+  fullName: KWiJisho.Modules.Utils.ServerTramontina.WelcomeChannelId
+  nameWithType: ServerTramontina.WelcomeChannelId
 - uid: KWiJisho.Modules.Utils.User
   name: User
   href: api/KWiJisho.Modules.Utils.User.html

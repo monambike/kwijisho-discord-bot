@@ -18,12 +18,12 @@ items:
   type: Enum
   source:
     remote:
-      path: src/KWiJisho/Modules/Commands/Prefix/PrefixTheme.cs
+      path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: EmojiTheme
-    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixTheme.cs
-    startLine: 15
+    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 25
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -45,12 +45,12 @@ items:
   type: Field
   source:
     remote:
-      path: src/KWiJisho/Modules/Commands/Prefix/PrefixTheme.cs
+      path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Default
-    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixTheme.cs
-    startLine: 15
+    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 25
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -71,12 +71,12 @@ items:
   type: Field
   source:
     remote:
-      path: src/KWiJisho/Modules/Commands/Prefix/PrefixTheme.cs
+      path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Christmas
-    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixTheme.cs
-    startLine: 15
+    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 25
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -97,12 +97,12 @@ items:
   type: Field
   source:
     remote:
-      path: src/KWiJisho/Modules/Commands/Prefix/PrefixTheme.cs
+      path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Easter
-    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixTheme.cs
-    startLine: 15
+    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 25
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -123,12 +123,12 @@ items:
   type: Field
   source:
     remote:
-      path: src/KWiJisho/Modules/Commands/Prefix/PrefixTheme.cs
+      path: src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Halloween
-    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixTheme.cs
-    startLine: 15
+    path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixThemeTramontina.cs
+    startLine: 25
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix

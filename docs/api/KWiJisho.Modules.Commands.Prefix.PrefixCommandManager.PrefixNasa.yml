@@ -25,10 +25,12 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrefixNasa
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-    startLine: 16
+    startLine: 19
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
+  summary: Represents a set of prefix NASA commands.
+  example: []
   syntax:
     content: 'internal class PrefixCommandManager.PrefixNasa : BaseCommandModule'
     content.vb: Friend Class PrefixCommandManager.PrefixNasa Inherits BaseCommandModule
@@ -63,7 +65,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: apod
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-    startLine: 21
+    startLine: 24
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -92,7 +94,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: apodResume
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-    startLine: 26
+    startLine: 29
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -121,7 +123,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ApodAsync
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-    startLine: 33
+    startLine: 36
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -168,7 +170,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ApodResumeAsync
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-    startLine: 49
+    startLine: 52
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -215,7 +217,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GenerateApodDiscordMessageBuilderAsync
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-    startLine: 59
+    startLine: 62
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix
@@ -246,7 +248,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: BuildApodMessage
     path: ../src/KWiJisho/Modules/Commands/Prefix/PrefixNasa.cs
-    startLine: 91
+    startLine: 94
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules.Commands.Prefix

@@ -38,7 +38,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ConfigJson
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -72,7 +72,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: KWiJishoToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -103,7 +103,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ChatGptToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 25
+    startLine: 26
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -134,7 +134,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: NasaToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 30
+    startLine: 31
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -165,7 +165,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Prefix
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 35
+    startLine: 36
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -196,7 +196,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Activity
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 40
+    startLine: 41
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -227,18 +227,18 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: DefaultColor
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 45
+    startLine: 46
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
   summary: Gets or sets the default color for bot messages.
   example: []
   syntax:
-    content: internal static ConfigJson.Color DefaultColor { get; set; }
+    content: internal static Color DefaultColor { get; set; }
     parameters: []
     return:
-      type: KWiJisho.Modules.ConfigJson.Color
-    content.vb: Friend Shared Property DefaultColor As ConfigJson.Color
+      type: KWiJisho.Modules.Utils.Color
+    content.vb: Friend Shared Property DefaultColor As Color
   overload: KWiJisho.Modules.ConfigJson.DefaultColor*
 - uid: KWiJisho.Modules.ConfigJson._configJsonKWiJishoToken
   commentId: F:KWiJisho.Modules.ConfigJson._configJsonKWiJishoToken
@@ -258,7 +258,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: _configJsonKWiJishoToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 51
+    startLine: 52
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -285,7 +285,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ConfigJsonKWiJishoToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 52
+    startLine: 53
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -356,7 +356,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: _configJsonChatGptToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 68
+    startLine: 69
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -383,7 +383,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ConfigJsonChatGptToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 69
+    startLine: 70
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -454,7 +454,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: _configJsonNasaToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 85
+    startLine: 86
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -481,7 +481,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ConfigJsonNasaToken
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 86
+    startLine: 87
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -552,7 +552,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: _configJsonPrefix
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 102
+    startLine: 103
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -579,7 +579,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ConfigJsonPrefix
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 103
+    startLine: 104
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -650,7 +650,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: _configJsonActivity
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 108
+    startLine: 109
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -677,7 +677,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ConfigJsonActivity
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 109
+    startLine: 110
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -748,15 +748,15 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: _configJsonPurpleColor
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 114
+    startLine: 115
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
   syntax:
-    content: private ConfigJson.Color _configJsonPurpleColor
+    content: private Color _configJsonPurpleColor
     return:
-      type: KWiJisho.Modules.ConfigJson.Color
-    content.vb: Private _configJsonPurpleColor As ConfigJson.Color
+      type: KWiJisho.Modules.Utils.Color
+    content.vb: Private _configJsonPurpleColor As Color
 - uid: KWiJisho.Modules.ConfigJson.ConfigJsonPurpleColor
   commentId: P:KWiJisho.Modules.ConfigJson.ConfigJsonPurpleColor
   id: ConfigJsonPurpleColor
@@ -775,7 +775,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ConfigJsonPurpleColor
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 115
+    startLine: 116
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -787,10 +787,10 @@ items:
 
       [SuppressMessage("Style", "IDE0251:Make member 'readonly'", Justification = "It's being set on Json file.")]
 
-      private ConfigJson.Color ConfigJsonPurpleColor { get; set; }
+      private Color ConfigJsonPurpleColor { get; set; }
     parameters: []
     return:
-      type: KWiJisho.Modules.ConfigJson.Color
+      type: KWiJisho.Modules.Utils.Color
     content.vb: >-
       <JsonProperty("purpleColor")>
 
@@ -798,7 +798,7 @@ items:
 
       <SuppressMessage("Style", "IDE0251:Make member 'readonly'", Justification:="It's being set on Json file.")>
 
-      Private Property ConfigJsonPurpleColor As ConfigJson.Color
+      Private Property ConfigJsonPurpleColor As Color
   overload: KWiJisho.Modules.ConfigJson.ConfigJsonPurpleColor*
   attributes:
   - type: Newtonsoft.Json.JsonPropertyAttribute
@@ -846,7 +846,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: DeserializeConfigJsonFileAsync
     path: ../src/KWiJisho/Modules/ConfigJson.cs
-    startLine: 125
+    startLine: 126
   assemblies:
   - KWIJisho
   namespace: KWiJisho.Modules
@@ -1149,29 +1149,43 @@ references:
   name: DefaultColor
   nameWithType: ConfigJson.DefaultColor
   fullName: KWiJisho.Modules.ConfigJson.DefaultColor
-- uid: KWiJisho.Modules.ConfigJson.Color
-  commentId: T:KWiJisho.Modules.ConfigJson.Color
-  parent: KWiJisho.Modules
-  href: KWiJisho.Modules.ConfigJson.html
-  name: ConfigJson.Color
-  nameWithType: ConfigJson.Color
-  fullName: KWiJisho.Modules.ConfigJson.Color
+- uid: KWiJisho.Modules.Utils.Color
+  commentId: T:KWiJisho.Modules.Utils.Color
+  parent: KWiJisho.Modules.Utils
+  href: KWiJisho.Modules.Utils.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: KWiJisho.Modules.Utils.Color
+- uid: KWiJisho.Modules.Utils
+  commentId: N:KWiJisho.Modules.Utils
+  href: KWiJisho.html
+  name: KWiJisho.Modules.Utils
+  nameWithType: KWiJisho.Modules.Utils
+  fullName: KWiJisho.Modules.Utils
   spec.csharp:
-  - uid: KWiJisho.Modules.ConfigJson
-    name: ConfigJson
-    href: KWiJisho.Modules.ConfigJson.html
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
   - name: .
-  - uid: KWiJisho.Modules.ConfigJson.Color
-    name: Color
-    href: KWiJisho.Modules.ConfigJson.Color.html
+  - uid: KWiJisho.Modules
+    name: Modules
+    href: KWiJisho.Modules.html
+  - name: .
+  - uid: KWiJisho.Modules.Utils
+    name: Utils
+    href: KWiJisho.Modules.Utils.html
   spec.vb:
-  - uid: KWiJisho.Modules.ConfigJson
-    name: ConfigJson
-    href: KWiJisho.Modules.ConfigJson.html
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
   - name: .
-  - uid: KWiJisho.Modules.ConfigJson.Color
-    name: Color
-    href: KWiJisho.Modules.ConfigJson.Color.html
+  - uid: KWiJisho.Modules
+    name: Modules
+    href: KWiJisho.Modules.html
+  - name: .
+  - uid: KWiJisho.Modules.Utils
+    name: Utils
+    href: KWiJisho.Modules.Utils.html
 - uid: KWiJisho.Modules.ConfigJson.ConfigJsonKWiJishoToken*
   commentId: Overload:KWiJisho.Modules.ConfigJson.ConfigJsonKWiJishoToken
   href: KWiJisho.Modules.ConfigJson.html#KWiJisho_Modules_ConfigJson_ConfigJsonKWiJishoToken

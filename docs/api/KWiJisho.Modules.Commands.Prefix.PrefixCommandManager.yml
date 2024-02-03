@@ -11,7 +11,7 @@ items:
   - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.ChatGpt
   - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.CommandGroups
   - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Info
-  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Theme
+  - KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage
   langs:
   - csharp
   - vb
@@ -169,23 +169,23 @@ items:
       type: KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup
     content.vb: Friend Shared ReadOnly Property Info As PrefixCommandGroup
   overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Info*
-- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Theme
-  commentId: P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Theme
-  id: Theme
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage
+  commentId: P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage
+  id: Manage
   parent: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
   langs:
   - csharp
   - vb
-  name: Theme
-  nameWithType: PrefixCommandManager.Theme
-  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Theme
+  name: Manage
+  nameWithType: PrefixCommandManager.Manage
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage
   type: Property
   source:
     remote:
       path: src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
-    id: Theme
+    id: Manage
     path: ../src/KWiJisho/Modules/Commands/Prefix/CommandManager.cs
     startLine: 36
   assemblies:
@@ -194,12 +194,12 @@ items:
   summary: Gets the command group for Theme commands.
   example: []
   syntax:
-    content: internal static PrefixCommandGroup Theme { get; }
+    content: internal static PrefixCommandGroup Manage { get; }
     parameters: []
     return:
       type: KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup
-    content.vb: Friend Shared ReadOnly Property Theme As PrefixCommandGroup
-  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Theme*
+    content.vb: Friend Shared ReadOnly Property Manage As PrefixCommandGroup
+  overload: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage*
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Birthday
   commentId: P:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Birthday
   id: Birthday
@@ -667,12 +667,12 @@ references:
   name: Info
   nameWithType: PrefixCommandManager.Info
   fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Info
-- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Theme*
-  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Theme
-  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_Theme
-  name: Theme
-  nameWithType: PrefixCommandManager.Theme
-  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Theme
+- uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage*
+  commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage
+  href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_Manage
+  name: Manage
+  nameWithType: PrefixCommandManager.Manage
+  fullName: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Manage
 - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Birthday*
   commentId: Overload:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.Birthday
   href: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.html#KWiJisho_Modules_Commands_Prefix_PrefixCommandManager_Birthday

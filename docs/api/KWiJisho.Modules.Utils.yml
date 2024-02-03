@@ -7,6 +7,7 @@ items:
   - KWiJisho.Modules.Utils.Birthday
   - KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate
   - KWiJisho.Modules.Utils.Channel
+  - KWiJisho.Modules.Utils.Color
   - KWiJisho.Modules.Utils.DiscordEmbedTest
   - KWiJisho.Modules.Utils.DiscordEmojis
   - KWiJisho.Modules.Utils.DiscordEmojis.CatMemeEmoji
@@ -18,7 +19,8 @@ items:
   - KWiJisho.Modules.Utils.KWiJishoLog
   - KWiJisho.Modules.Utils.KWiJishoLog.LogType
   - KWiJisho.Modules.Utils.KWiJishoPermission
-  - KWiJisho.Modules.Utils.ServerInfos
+  - KWiJisho.Modules.Utils.ServerPersonal
+  - KWiJisho.Modules.Utils.ServerTramontina
   - KWiJisho.Modules.Utils.User
   - KWiJisho.Modules.Utils.UtilList
   langs:
@@ -60,6 +62,13 @@ references:
   - uid: KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate
     name: UpcomingBirthdayDate
     href: KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate.html
+- uid: KWiJisho.Modules.Utils.Color
+  commentId: T:KWiJisho.Modules.Utils.Color
+  parent: KWiJisho.Modules.Utils
+  href: KWiJisho.Modules.Utils.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: KWiJisho.Modules.Utils.Color
 - uid: KWiJisho.Modules.Utils.Channel
   commentId: T:KWiJisho.Modules.Utils.Channel
   parent: KWiJisho.Modules.Utils
@@ -192,12 +201,18 @@ references:
   name: KWiJishoPermission
   nameWithType: KWiJishoPermission
   fullName: KWiJisho.Modules.Utils.KWiJishoPermission
-- uid: KWiJisho.Modules.Utils.ServerInfos
-  commentId: T:KWiJisho.Modules.Utils.ServerInfos
-  href: KWiJisho.Modules.Utils.ServerInfos.html
-  name: ServerInfos
-  nameWithType: ServerInfos
-  fullName: KWiJisho.Modules.Utils.ServerInfos
+- uid: KWiJisho.Modules.Utils.ServerPersonal
+  commentId: T:KWiJisho.Modules.Utils.ServerPersonal
+  href: KWiJisho.Modules.Utils.ServerPersonal.html
+  name: ServerPersonal
+  nameWithType: ServerPersonal
+  fullName: KWiJisho.Modules.Utils.ServerPersonal
+- uid: KWiJisho.Modules.Utils.ServerTramontina
+  commentId: T:KWiJisho.Modules.Utils.ServerTramontina
+  href: KWiJisho.Modules.Utils.ServerTramontina.html
+  name: ServerTramontina
+  nameWithType: ServerTramontina
+  fullName: KWiJisho.Modules.Utils.ServerTramontina
 - uid: KWiJisho.Modules.Utils.UtilList
   commentId: T:KWiJisho.Modules.Utils.UtilList
   href: KWiJisho.Modules.Utils.UtilList.html

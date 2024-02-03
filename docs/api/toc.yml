@@ -12,8 +12,6 @@ items:
     name: Bot
   - uid: KWiJisho.Modules.ConfigJson
     name: ConfigJson
-  - uid: KWiJisho.Modules.ConfigJson.Color
-    name: ConfigJson.Color
 - uid: KWiJisho.Modules.APIs
   name: KWiJisho.Modules.APIs
   items:
@@ -38,6 +36,8 @@ items:
     name: Info
   - uid: KWiJisho.Modules.Commands.KwiGpt
     name: KwiGpt
+  - uid: KWiJisho.Modules.Commands.Notice
+    name: Notice
 - uid: KWiJisho.Modules.Commands.Prefix
   name: KWiJisho.Modules.Commands.Prefix
   items:
@@ -59,6 +59,8 @@ items:
     name: PrefixCommandManager.PrefixNasa
   - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder
     name: PrefixCommandManager.PrefixNasa.ApodBuilder
+  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice
+    name: PrefixCommandManager.PrefixNotice
   - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
     name: PrefixCommandManager.PrefixTheme
   - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
@@ -82,6 +84,8 @@ items:
     name: SlashInfo
   - uid: KWiJisho.Modules.Commands.Slash.SlashKwiGpt
     name: SlashKwiGpt
+  - uid: KWiJisho.Modules.Commands.Slash.SlashNotice
+    name: SlashNotice
 - uid: KWiJisho.Modules.Events
   name: KWiJisho.Modules.Events
   items:
@@ -106,6 +110,8 @@ items:
     name: Birthday.UpcomingBirthdayDate
   - uid: KWiJisho.Modules.Utils.Channel
     name: Channel
+  - uid: KWiJisho.Modules.Utils.Color
+    name: Color
   - uid: KWiJisho.Modules.Utils.DiscordEmbedTest
     name: DiscordEmbedTest
   - uid: KWiJisho.Modules.Utils.DiscordEmojis
@@ -128,8 +134,10 @@ items:
     name: KWiJishoLog.LogType
   - uid: KWiJisho.Modules.Utils.KWiJishoPermission
     name: KWiJishoPermission
-  - uid: KWiJisho.Modules.Utils.ServerInfos
-    name: ServerInfos
+  - uid: KWiJisho.Modules.Utils.ServerPersonal
+    name: ServerPersonal
+  - uid: KWiJisho.Modules.Utils.ServerTramontina
+    name: ServerTramontina
   - uid: KWiJisho.Modules.Utils.User
     name: User
   - uid: KWiJisho.Modules.Utils.UtilList
