@@ -211,6 +211,21 @@
             Provides methods for "prefix" and "slash" KWiGPT commands.
             </summary>
         </member>
+        <member name="M:KWiJisho.Modules.Commands.KwiGpt.ChatGptPromptAsync(DSharpPlus.Entities.DiscordChannel,System.String[])">
+            <summary>
+            Represents the command to get the chat gpt prompt in KWiJisho style.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Modules.Commands.Notice">
+            <summary>
+            Provides methods for "prefix" and "slash" notice commands.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Modules.Commands.Notice.Yellow">
+            <summary>
+            Represents the Yellow color.
+            </summary>
+        </member>
         <member name="T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager">
             <summary>
             Provides a set of commands and classes for managing commands in a Discord server.
@@ -431,6 +446,11 @@
             Represents a set of prefix channel notice commands.
             </summary>
         </member>
+        <member name="F:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice.sendNews">
+            <summary>
+            Represents the prefix command method to send news at the news channel.
+            </summary>
+        </member>
         <member name="T:KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme">
             <summary>
             Represents a set of prefix commands to change theme in a Discord server.
@@ -631,6 +651,22 @@
             <summary>
             Represent the command to interact with the bot with ChatGpt in KWiJisho style.
             </summary>
+        </member>
+        <member name="T:KWiJisho.Modules.Commands.Slash.SlashNotice">
+            <summary>
+            Provides methods for "prefix" and "slash" notice commands.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Modules.Commands.Slash.SlashNotice.ChatGptPromptAsync(DSharpPlus.SlashCommands.InteractionContext,System.String,System.String,DSharpPlus.Entities.DiscordAttachment,System.Boolean)">
+            <summary>
+            Represents the slash command method to send news at the news channel.
+            </summary>
+            <param name="interactionContext">The interaction context from the command.</param>
+            <param name="title">The message title.</param>
+            <param name="description">The message description.</param>
+            <param name="discordAttachment">The attachment (if present).</param>
+            <param name="sendInTramontina">If the message should be sent in Tramontina Discord server or the Personal Test Server.</param>
+            <returns></returns>
         </member>
         <member name="T:KWiJisho.Modules.ConfigJson">
             <summary>
@@ -1180,39 +1216,39 @@
             <param name="permission">The Discord permission.</param>
             <returns>The Portuguese name of the permission.</returns>
         </member>
-        <member name="T:KWiJisho.Modules.Utils.TramontinaServer">
-            <summary>
-            Static class responsible for holding information about Tramontina Discord server.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Modules.Utils.TramontinaServer.GuildId">
-            <summary>
-            Tramontina Discord server guild Id.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Modules.Utils.TramontinaServer.WelcomeChannelId">
-            <summary>
-            Tramontina welcome Discord server channeld Id.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Modules.Utils.TramontinaServer.NewsChannelId">
-            <summary>
-            Tramontina news Discord server channel Id.
-            </summary>
-        </member>
-        <member name="T:KWiJisho.Modules.Utils.PersonalServer">
+        <member name="T:KWiJisho.Modules.Utils.ServerPersonal">
             <summary>
             Static class responsible for holding information about my personal testing Discord server.
             </summary>
         </member>
-        <member name="F:KWiJisho.Modules.Utils.PersonalServer.GuildId">
+        <member name="F:KWiJisho.Modules.Utils.ServerPersonal.GuildId">
             <summary>
             Personal Discord server guild Id.
             </summary>
         </member>
-        <member name="F:KWiJisho.Modules.Utils.PersonalServer.KWiJishoChannelId">
+        <member name="F:KWiJisho.Modules.Utils.ServerPersonal.KWiJishoChannelId">
             <summary>
             Personal KWiJisho Discord server channel Id.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Modules.Utils.ServerTramontina">
+            <summary>
+            Static class responsible for holding information about Tramontina Discord server.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Modules.Utils.ServerTramontina.GuildId">
+            <summary>
+            Tramontina Discord server guild Id.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Modules.Utils.ServerTramontina.WelcomeChannelId">
+            <summary>
+            Tramontina welcome Discord server channeld Id.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Modules.Utils.ServerTramontina.NewsChannelId">
+            <summary>
+            Tramontina news Discord server channel Id.
             </summary>
         </member>
         <member name="T:KWiJisho.Modules.Utils.UtilList">
