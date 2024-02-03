@@ -8,6 +8,7 @@ using KWiJisho.Modules.Commands.Prefix;
 using KWiJisho.Modules.Commands.Slash;
 using KWiJisho.Modules.Events;
 using KWiJisho.Modules.Utils;
+using System;
 using System.Collections.Generic;
 
 namespace KWiJisho.Modules
@@ -112,8 +113,7 @@ namespace KWiJisho.Modules
                         if (check is SlashRequireUserPermissionsAttribute slashRequireUserPermissionsAttribute)
                         {
                             // Send a custom error message to the user.
-                            await e.Context.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource,
-                                new DiscordInteractionResponseBuilder().WithContent(KWiJishoPermission.PermissionCustomErrorMessage(slashRequireUserPermissionsAttribute.Permissions)));
+                            await e.Context.Channel.SendMessageAsync(KWiJishoPermission.PermissionCustomErrorMessage(slashRequireUserPermissionsAttribute.Permissions));
                         }
                     }
                 }

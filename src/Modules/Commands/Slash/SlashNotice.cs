@@ -1,6 +1,7 @@
 ﻿using DSharpPlus;
 using DSharpPlus.Entities;
 using DSharpPlus.SlashCommands;
+using DSharpPlus.SlashCommands.Attributes;
 using System.Threading.Tasks;
 
 namespace KWiJisho.Modules.Commands.Slash
@@ -20,6 +21,7 @@ namespace KWiJisho.Modules.Commands.Slash
         /// <param name="sendInTramontina">If the message should be sent in Tramontina Discord server or the Personal Test Server.</param>
         /// <returns></returns>
         [SlashCommand("send-news", "Manda uma notícia no canal de notícias!!")]
+        [SlashRequireUserPermissions(Permissions.Administrator)]
         internal static async Task ChatGptPromptAsync(InteractionContext interactionContext,
             [Option("title", "O título da sua mensagem!!")] string title,
             [Option("description", "A descrição da sua mensagem!!")] string description,
