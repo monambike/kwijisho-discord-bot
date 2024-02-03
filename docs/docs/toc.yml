@@ -2,3 +2,7 @@
   href: introduction.md
 - name: Getting Started
   href: getting-started.md
+- name: Prefix Commands
+  href: prefix-commands.md
+- name: Slash Commands
+  href: slash-commands.md
