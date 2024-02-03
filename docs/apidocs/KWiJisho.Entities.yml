@@ -1,0 +1,95 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Entities
+  commentId: N:KWiJisho.Entities
+  id: KWiJisho.Entities
+  children:
+  - KWiJisho.Entities.Channel
+  - KWiJisho.Entities.Color
+  - KWiJisho.Entities.ConfigJson
+  - KWiJisho.Entities.Emoji
+  - KWiJisho.Entities.EmojiCatMeme
+  - KWiJisho.Entities.EmojiCatParty
+  - KWiJisho.Entities.User
+  langs:
+  - csharp
+  - vb
+  name: KWiJisho.Entities
+  nameWithType: KWiJisho.Entities
+  fullName: KWiJisho.Entities
+  type: Namespace
+  assemblies:
+  - KWiJisho
+references:
+- uid: KWiJisho.Entities.Channel
+  commentId: T:KWiJisho.Entities.Channel
+  parent: KWiJisho.Entities
+  href: KWiJisho.Entities.Channel.html
+  name: Channel
+  nameWithType: Channel
+  fullName: KWiJisho.Entities.Channel
+- uid: KWiJisho.Entities.Color
+  commentId: T:KWiJisho.Entities.Color
+  parent: KWiJisho.Entities
+  href: KWiJisho.Entities.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: KWiJisho.Entities.Color
+- uid: KWiJisho.Entities.ConfigJson
+  commentId: T:KWiJisho.Entities.ConfigJson
+  parent: KWiJisho.Entities
+  href: KWiJisho.Entities.ConfigJson.html
+  name: ConfigJson
+  nameWithType: ConfigJson
+  fullName: KWiJisho.Entities.ConfigJson
+- uid: KWiJisho.Entities.Emoji
+  commentId: T:KWiJisho.Entities.Emoji
+  parent: KWiJisho.Entities
+  href: KWiJisho.Entities.Emoji.html
+  name: Emoji
+  nameWithType: Emoji
+  fullName: KWiJisho.Entities.Emoji
+- uid: KWiJisho.Entities.EmojiCatMeme
+  commentId: T:KWiJisho.Entities.EmojiCatMeme
+  parent: KWiJisho.Entities
+  href: KWiJisho.Entities.EmojiCatMeme.html
+  name: EmojiCatMeme
+  nameWithType: EmojiCatMeme
+  fullName: KWiJisho.Entities.EmojiCatMeme
+- uid: KWiJisho.Entities.EmojiCatParty
+  commentId: T:KWiJisho.Entities.EmojiCatParty
+  parent: KWiJisho.Entities
+  href: KWiJisho.Entities.EmojiCatParty.html
+  name: EmojiCatParty
+  nameWithType: EmojiCatParty
+  fullName: KWiJisho.Entities.EmojiCatParty
+- uid: KWiJisho.Entities.User
+  commentId: T:KWiJisho.Entities.User
+  parent: KWiJisho.Entities
+  href: KWiJisho.Entities.User.html
+  name: User
+  nameWithType: User
+  fullName: KWiJisho.Entities.User
+- uid: KWiJisho.Entities
+  commentId: N:KWiJisho.Entities
+  href: KWiJisho.html
+  name: KWiJisho.Entities
+  nameWithType: KWiJisho.Entities
+  fullName: KWiJisho.Entities
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Entities
+    name: Entities
+    href: KWiJisho.Entities.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Entities
+    name: Entities
+    href: KWiJisho.Entities.html
+memberLayout: SeparatePages

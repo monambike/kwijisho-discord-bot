@@ -1,0 +1,45 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Events
+  commentId: N:KWiJisho.Events
+  id: KWiJisho.Events
+  children:
+  - KWiJisho.Events.ButtonInteraction
+  - KWiJisho.Events.GoodbyeWelcome
+  - KWiJisho.Events.KWiJishoBotStart
+  - KWiJisho.Events.MessageReceived
+  langs:
+  - csharp
+  - vb
+  name: KWiJisho.Events
+  nameWithType: KWiJisho.Events
+  fullName: KWiJisho.Events
+  type: Namespace
+  assemblies:
+  - KWiJisho
+references:
+- uid: KWiJisho.Events.ButtonInteraction
+  commentId: T:KWiJisho.Events.ButtonInteraction
+  href: KWiJisho.Events.ButtonInteraction.html
+  name: ButtonInteraction
+  nameWithType: ButtonInteraction
+  fullName: KWiJisho.Events.ButtonInteraction
+- uid: KWiJisho.Events.GoodbyeWelcome
+  commentId: T:KWiJisho.Events.GoodbyeWelcome
+  href: KWiJisho.Events.GoodbyeWelcome.html
+  name: GoodbyeWelcome
+  nameWithType: GoodbyeWelcome
+  fullName: KWiJisho.Events.GoodbyeWelcome
+- uid: KWiJisho.Events.KWiJishoBotStart
+  commentId: T:KWiJisho.Events.KWiJishoBotStart
+  href: KWiJisho.Events.KWiJishoBotStart.html
+  name: KWiJishoBotStart
+  nameWithType: KWiJishoBotStart
+  fullName: KWiJisho.Events.KWiJishoBotStart
+- uid: KWiJisho.Events.MessageReceived
+  commentId: T:KWiJisho.Events.MessageReceived
+  href: KWiJisho.Events.MessageReceived.html
+  name: MessageReceived
+  nameWithType: MessageReceived
+  fullName: KWiJisho.Events.MessageReceived
+memberLayout: SeparatePages

@@ -1,0 +1,59 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Commands
+  commentId: N:KWiJisho.Commands
+  id: KWiJisho.Commands
+  children:
+  - KWiJisho.Commands.Basic
+  - KWiJisho.Commands.Birthday
+  - KWiJisho.Commands.Info
+  - KWiJisho.Commands.KwiGpt
+  - KWiJisho.Commands.Nasa
+  - KWiJisho.Commands.Notice
+  langs:
+  - csharp
+  - vb
+  name: KWiJisho.Commands
+  nameWithType: KWiJisho.Commands
+  fullName: KWiJisho.Commands
+  type: Namespace
+  assemblies:
+  - KWiJisho
+references:
+- uid: KWiJisho.Commands.Basic
+  commentId: T:KWiJisho.Commands.Basic
+  href: KWiJisho.Commands.Basic.html
+  name: Basic
+  nameWithType: Basic
+  fullName: KWiJisho.Commands.Basic
+- uid: KWiJisho.Commands.Birthday
+  commentId: T:KWiJisho.Commands.Birthday
+  href: KWiJisho.Commands.Birthday.html
+  name: Birthday
+  nameWithType: Birthday
+  fullName: KWiJisho.Commands.Birthday
+- uid: KWiJisho.Commands.Info
+  commentId: T:KWiJisho.Commands.Info
+  href: KWiJisho.Commands.Info.html
+  name: Info
+  nameWithType: Info
+  fullName: KWiJisho.Commands.Info
+- uid: KWiJisho.Commands.KwiGpt
+  commentId: T:KWiJisho.Commands.KwiGpt
+  href: KWiJisho.Commands.KwiGpt.html
+  name: KwiGpt
+  nameWithType: KwiGpt
+  fullName: KWiJisho.Commands.KwiGpt
+- uid: KWiJisho.Commands.Nasa
+  commentId: T:KWiJisho.Commands.Nasa
+  href: KWiJisho.Commands.Nasa.html
+  name: Nasa
+  nameWithType: Nasa
+  fullName: KWiJisho.Commands.Nasa
+- uid: KWiJisho.Commands.Notice
+  commentId: T:KWiJisho.Commands.Notice
+  href: KWiJisho.Commands.Notice.html
+  name: Notice
+  nameWithType: Notice
+  fullName: KWiJisho.Commands.Notice
+memberLayout: SeparatePages

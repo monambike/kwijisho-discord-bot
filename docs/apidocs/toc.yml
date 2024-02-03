@@ -3,143 +3,160 @@ items:
 - uid: KWiJisho
   name: KWiJisho
   items:
-  - uid: KWiJisho.Program
-    name: Program
-- uid: KWiJisho.Modules
-  name: KWiJisho.Modules
+  - uid: KWiJisho.KWiJishoBot
+    name: KWiJishoBot
+- uid: KWiJisho.APIs
+  name: KWiJisho.APIs
   items:
-  - uid: KWiJisho.Modules.Bot
-    name: Bot
-  - uid: KWiJisho.Modules.ConfigJson
-    name: ConfigJson
-- uid: KWiJisho.Modules.APIs
-  name: KWiJisho.Modules.APIs
-  items:
-  - uid: KWiJisho.Modules.APIs.HttpService
+  - uid: KWiJisho.APIs.HttpService
     name: HttpService
-  - uid: KWiJisho.Modules.APIs.NasaApi
+  - uid: KWiJisho.APIs.NasaApi
     name: NasaApi
-  - uid: KWiJisho.Modules.APIs.NasaApi.Apod
+  - uid: KWiJisho.APIs.NasaApi.Apod
     name: NasaApi.Apod
-  - uid: KWiJisho.Modules.APIs.NasaApi.Apod.ApodResponseJson
-    name: NasaApi.Apod.ApodResponseJson
-  - uid: KWiJisho.Modules.APIs.OpenAiApi
+  - uid: KWiJisho.APIs.NasaApi.Apod.ApodResponse
+    name: NasaApi.Apod.ApodResponse
+  - uid: KWiJisho.APIs.OpenAiApi
     name: OpenAiApi
-- uid: KWiJisho.Modules.Commands
-  name: KWiJisho.Modules.Commands
+- uid: KWiJisho.Commands
+  name: KWiJisho.Commands
   items:
-  - uid: KWiJisho.Modules.Commands.Basic
+  - uid: KWiJisho.Commands.Basic
     name: Basic
-  - uid: KWiJisho.Modules.Commands.Birthday
+  - uid: KWiJisho.Commands.Birthday
     name: Birthday
-  - uid: KWiJisho.Modules.Commands.Info
+  - uid: KWiJisho.Commands.Info
     name: Info
-  - uid: KWiJisho.Modules.Commands.KwiGpt
+  - uid: KWiJisho.Commands.KwiGpt
     name: KwiGpt
-  - uid: KWiJisho.Modules.Commands.Notice
+  - uid: KWiJisho.Commands.Nasa
+    name: Nasa
+  - uid: KWiJisho.Commands.Notice
     name: Notice
-- uid: KWiJisho.Modules.Commands.Prefix
-  name: KWiJisho.Modules.Commands.Prefix
+- uid: KWiJisho.Commands.Prefix
+  name: KWiJisho.Commands.Prefix
   items:
-  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommand
+  - uid: KWiJisho.Commands.Prefix.PrefixCommand
     name: PrefixCommand
-  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandGroup
+  - uid: KWiJisho.Commands.Prefix.PrefixCommandGroup
     name: PrefixCommandGroup
-  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager
+  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager
     name: PrefixCommandManager
-  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBasic
+  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixBasic
     name: PrefixCommandManager.PrefixBasic
-  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixBirthday
+  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixBirthday
     name: PrefixCommandManager.PrefixBirthday
-  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixInfo
+  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixInfo
     name: PrefixCommandManager.PrefixInfo
-  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt
+  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixKwiGpt
     name: PrefixCommandManager.PrefixKwiGpt
-  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa
+  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa
     name: PrefixCommandManager.PrefixNasa
-  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodBuilder
-    name: PrefixCommandManager.PrefixNasa.ApodBuilder
-  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixNotice
+  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNotice
     name: PrefixCommandManager.PrefixNotice
-  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme
+  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme
     name: PrefixCommandManager.PrefixTheme
-  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
+  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
     name: PrefixCommandManager.PrefixTheme.EmojiTheme
-  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
+  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
     name: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
-  - uid: KWiJisho.Modules.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
     name: PrefixCommandManager.PrefixTheme.TramontinaChannel
-  - uid: KWiJisho.Modules.Commands.Prefix.PrefixPokemon
+  - uid: KWiJisho.Commands.Prefix.PrefixPokemon
     name: PrefixPokemon
-- uid: KWiJisho.Modules.Commands.Slash
-  name: KWiJisho.Modules.Commands.Slash
+- uid: KWiJisho.Commands.Slash
+  name: KWiJisho.Commands.Slash
   items:
-  - uid: KWiJisho.Modules.Commands.Slash.SlashBasic
+  - uid: KWiJisho.Commands.Slash.SlashBasic
     name: SlashBasic
-  - uid: KWiJisho.Modules.Commands.Slash.SlashBasic.Emoji
+  - uid: KWiJisho.Commands.Slash.SlashBasic.Emoji
     name: SlashBasic.Emoji
-  - uid: KWiJisho.Modules.Commands.Slash.SlashBirthday
+  - uid: KWiJisho.Commands.Slash.SlashBirthday
     name: SlashBirthday
-  - uid: KWiJisho.Modules.Commands.Slash.SlashInfo
+  - uid: KWiJisho.Commands.Slash.SlashInfo
     name: SlashInfo
-  - uid: KWiJisho.Modules.Commands.Slash.SlashKwiGpt
+  - uid: KWiJisho.Commands.Slash.SlashKwiGpt
     name: SlashKwiGpt
-  - uid: KWiJisho.Modules.Commands.Slash.SlashNotice
+  - uid: KWiJisho.Commands.Slash.SlashNasa
+    name: SlashNasa
+  - uid: KWiJisho.Commands.Slash.SlashNasa.Emoji
+    name: SlashNasa.Emoji
+  - uid: KWiJisho.Commands.Slash.SlashNotice
     name: SlashNotice
-- uid: KWiJisho.Modules.Events
-  name: KWiJisho.Modules.Events
+- uid: KWiJisho.Data
+  name: KWiJisho.Data
   items:
-  - uid: KWiJisho.Modules.Events.BirthdayJob
-    name: BirthdayJob
-  - uid: KWiJisho.Modules.Events.BotStart
-    name: BotStart
-  - uid: KWiJisho.Modules.Events.Buttons
-    name: Buttons
-  - uid: KWiJisho.Modules.Events.GoodbyeWelcome
-    name: GoodbyeWelcome
-  - uid: KWiJisho.Modules.Events.MessageReceived
-    name: MessageReceived
-  - uid: KWiJisho.Modules.Events.Scheduler
-    name: Scheduler
-- uid: KWiJisho.Modules.Utils
-  name: KWiJisho.Modules.Utils
-  items:
-  - uid: KWiJisho.Modules.Utils.Birthday
-    name: Birthday
-  - uid: KWiJisho.Modules.Utils.Birthday.UpcomingBirthdayDate
-    name: Birthday.UpcomingBirthdayDate
-  - uid: KWiJisho.Modules.Utils.Channel
-    name: Channel
-  - uid: KWiJisho.Modules.Utils.Color
-    name: Color
-  - uid: KWiJisho.Modules.Utils.DiscordEmbedTest
-    name: DiscordEmbedTest
-  - uid: KWiJisho.Modules.Utils.DiscordEmojis
+  - uid: KWiJisho.Data.ConfigJson
+    name: ConfigJson
+  - uid: KWiJisho.Data.DiscordEmojis
     name: DiscordEmojis
-  - uid: KWiJisho.Modules.Utils.DiscordEmojis.CatMemeEmoji
-    name: DiscordEmojis.CatMemeEmoji
-  - uid: KWiJisho.Modules.Utils.DiscordEmojis.CatPartyEmoji
-    name: DiscordEmojis.CatPartyEmoji
-  - uid: KWiJisho.Modules.Utils.DiscordFormat
-    name: DiscordFormat
-  - uid: KWiJisho.Modules.Utils.DiscordUsers
+  - uid: KWiJisho.Data.DiscordUsers
     name: DiscordUsers
-  - uid: KWiJisho.Modules.Utils.Emoji
-    name: Emoji
-  - uid: KWiJisho.Modules.Utils.KWiJishoInfo
+  - uid: KWiJisho.Data.KWiJishoInfo
     name: KWiJishoInfo
-  - uid: KWiJisho.Modules.Utils.KWiJishoLog
-    name: KWiJishoLog
-  - uid: KWiJisho.Modules.Utils.KWiJishoLog.LogType
-    name: KWiJishoLog.LogType
-  - uid: KWiJisho.Modules.Utils.KWiJishoPermission
-    name: KWiJishoPermission
-  - uid: KWiJisho.Modules.Utils.ServerPersonal
+  - uid: KWiJisho.Data.ServerPersonal
     name: ServerPersonal
-  - uid: KWiJisho.Modules.Utils.ServerTramontina
+  - uid: KWiJisho.Data.ServerTramontina
     name: ServerTramontina
-  - uid: KWiJisho.Modules.Utils.User
+- uid: KWiJisho.Entities
+  name: KWiJisho.Entities
+  items:
+  - uid: KWiJisho.Entities.Channel
+    name: Channel
+  - uid: KWiJisho.Entities.Color
+    name: Color
+  - uid: KWiJisho.Entities.ConfigJson
+    name: ConfigJson
+  - uid: KWiJisho.Entities.Emoji
+    name: Emoji
+  - uid: KWiJisho.Entities.EmojiCatMeme
+    name: EmojiCatMeme
+  - uid: KWiJisho.Entities.EmojiCatParty
+    name: EmojiCatParty
+  - uid: KWiJisho.Entities.User
     name: User
-  - uid: KWiJisho.Modules.Utils.UtilList
-    name: UtilList
+- uid: KWiJisho.Events
+  name: KWiJisho.Events
+  items:
+  - uid: KWiJisho.Events.ButtonInteraction
+    name: ButtonInteraction
+  - uid: KWiJisho.Events.GoodbyeWelcome
+    name: GoodbyeWelcome
+  - uid: KWiJisho.Events.KWiJishoBotStart
+    name: KWiJishoBotStart
+  - uid: KWiJisho.Events.MessageReceived
+    name: MessageReceived
+- uid: KWiJisho.Models
+  name: KWiJisho.Models
+  items:
+  - uid: KWiJisho.Models.Birthday
+    name: Birthday
+  - uid: KWiJisho.Models.Birthday.BirthdayUpcomingDate
+    name: Birthday.BirthdayUpcomingDate
+  - uid: KWiJisho.Models.Nasa
+    name: Nasa
+  - uid: KWiJisho.Models.Nasa.ApodBuilder
+    name: Nasa.ApodBuilder
+- uid: KWiJisho.Scheduling
+  name: KWiJisho.Scheduling
+  items:
+  - uid: KWiJisho.Scheduling.BirthdayJob
+    name: BirthdayJob
+  - uid: KWiJisho.Scheduling.Scheduler
+    name: Scheduler
+- uid: KWiJisho.Utils
+  name: KWiJisho.Utils
+  items:
+  - uid: KWiJisho.Utils.DiscordCustomEmbed
+    name: DiscordCustomEmbed
+  - uid: KWiJisho.Utils.DiscordFormat
+    name: DiscordFormat
+  - uid: KWiJisho.Utils.KWiJishoLog
+    name: KWiJishoLog
+  - uid: KWiJisho.Utils.KWiJishoLog.LogType
+    name: KWiJishoLog.LogType
+  - uid: KWiJisho.Utils.KWiJishoPermission
+    name: KWiJishoPermission
+  - uid: KWiJisho.Utils.UtilCollections
+    name: UtilCollections
 memberLayout: SeparatePages

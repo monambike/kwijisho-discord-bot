@@ -4,7 +4,7 @@ items:
   commentId: N:KWiJisho
   id: KWiJisho
   children:
-  - KWiJisho.Program
+  - KWiJisho.KWiJishoBot
   langs:
   - csharp
   - vb
@@ -15,10 +15,10 @@ items:
   assemblies:
   - KWiJisho
 references:
-- uid: KWiJisho.Program
-  commentId: T:KWiJisho.Program
-  href: KWiJisho.Program.html
-  name: Program
-  nameWithType: Program
-  fullName: KWiJisho.Program
+- uid: KWiJisho.KWiJishoBot
+  commentId: T:KWiJisho.KWiJishoBot
+  href: KWiJisho.KWiJishoBot.html
+  name: KWiJishoBot
+  nameWithType: KWiJishoBot
+  fullName: KWiJisho.KWiJishoBot
 memberLayout: SeparatePages

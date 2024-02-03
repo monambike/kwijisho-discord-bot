@@ -1,0 +1,59 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Data
+  commentId: N:KWiJisho.Data
+  id: KWiJisho.Data
+  children:
+  - KWiJisho.Data.ConfigJson
+  - KWiJisho.Data.DiscordEmojis
+  - KWiJisho.Data.DiscordUsers
+  - KWiJisho.Data.KWiJishoInfo
+  - KWiJisho.Data.ServerPersonal
+  - KWiJisho.Data.ServerTramontina
+  langs:
+  - csharp
+  - vb
+  name: KWiJisho.Data
+  nameWithType: KWiJisho.Data
+  fullName: KWiJisho.Data
+  type: Namespace
+  assemblies:
+  - KWiJisho
+references:
+- uid: KWiJisho.Data.ConfigJson
+  commentId: T:KWiJisho.Data.ConfigJson
+  href: KWiJisho.Data.ConfigJson.html
+  name: ConfigJson
+  nameWithType: ConfigJson
+  fullName: KWiJisho.Data.ConfigJson
+- uid: KWiJisho.Data.DiscordEmojis
+  commentId: T:KWiJisho.Data.DiscordEmojis
+  href: KWiJisho.Data.DiscordEmojis.html
+  name: DiscordEmojis
+  nameWithType: DiscordEmojis
+  fullName: KWiJisho.Data.DiscordEmojis
+- uid: KWiJisho.Data.KWiJishoInfo
+  commentId: T:KWiJisho.Data.KWiJishoInfo
+  href: KWiJisho.Data.KWiJishoInfo.html
+  name: KWiJishoInfo
+  nameWithType: KWiJishoInfo
+  fullName: KWiJisho.Data.KWiJishoInfo
+- uid: KWiJisho.Data.ServerPersonal
+  commentId: T:KWiJisho.Data.ServerPersonal
+  href: KWiJisho.Data.ServerPersonal.html
+  name: ServerPersonal
+  nameWithType: ServerPersonal
+  fullName: KWiJisho.Data.ServerPersonal
+- uid: KWiJisho.Data.ServerTramontina
+  commentId: T:KWiJisho.Data.ServerTramontina
+  href: KWiJisho.Data.ServerTramontina.html
+  name: ServerTramontina
+  nameWithType: ServerTramontina
+  fullName: KWiJisho.Data.ServerTramontina
+- uid: KWiJisho.Data.DiscordUsers
+  commentId: T:KWiJisho.Data.DiscordUsers
+  href: KWiJisho.Data.DiscordUsers.html
+  name: DiscordUsers
+  nameWithType: DiscordUsers
+  fullName: KWiJisho.Data.DiscordUsers
+memberLayout: SeparatePages

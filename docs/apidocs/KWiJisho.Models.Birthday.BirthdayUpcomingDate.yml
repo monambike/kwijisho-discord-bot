@@ -1,0 +1,164 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Models.Birthday.BirthdayUpcomingDate
+  commentId: T:KWiJisho.Models.Birthday.BirthdayUpcomingDate
+  id: Birthday.BirthdayUpcomingDate
+  parent: KWiJisho.Models
+  children:
+  - KWiJisho.Models.Birthday.BirthdayUpcomingDate.InSomeDays
+  - KWiJisho.Models.Birthday.BirthdayUpcomingDate.Today
+  - KWiJisho.Models.Birthday.BirthdayUpcomingDate.Tomorrow
+  langs:
+  - csharp
+  - vb
+  name: Birthday.BirthdayUpcomingDate
+  nameWithType: Birthday.BirthdayUpcomingDate
+  fullName: KWiJisho.Models.Birthday.BirthdayUpcomingDate
+  type: Enum
+  source:
+    remote:
+      path: src/Models/Birthday.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: BirthdayUpcomingDate
+    path: ../src/Models/Birthday.cs
+    startLine: 129
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Models
+  summary: Represents options for categorizing upcoming birthday dates.
+  example: []
+  syntax:
+    content: internal enum Birthday.BirthdayUpcomingDate
+    content.vb: Friend Enum Birthday.BirthdayUpcomingDate
+- uid: KWiJisho.Models.Birthday.BirthdayUpcomingDate.Today
+  commentId: F:KWiJisho.Models.Birthday.BirthdayUpcomingDate.Today
+  id: Today
+  parent: KWiJisho.Models.Birthday.BirthdayUpcomingDate
+  langs:
+  - csharp
+  - vb
+  name: Today
+  nameWithType: Birthday.BirthdayUpcomingDate.Today
+  fullName: KWiJisho.Models.Birthday.BirthdayUpcomingDate.Today
+  type: Field
+  source:
+    remote:
+      path: src/Models/Birthday.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Today
+    path: ../src/Models/Birthday.cs
+    startLine: 134
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Models
+  summary: Indicates an upcoming birthday today.
+  example: []
+  syntax:
+    content: Today = 0
+    return:
+      type: KWiJisho.Models.Birthday.BirthdayUpcomingDate
+- uid: KWiJisho.Models.Birthday.BirthdayUpcomingDate.Tomorrow
+  commentId: F:KWiJisho.Models.Birthday.BirthdayUpcomingDate.Tomorrow
+  id: Tomorrow
+  parent: KWiJisho.Models.Birthday.BirthdayUpcomingDate
+  langs:
+  - csharp
+  - vb
+  name: Tomorrow
+  nameWithType: Birthday.BirthdayUpcomingDate.Tomorrow
+  fullName: KWiJisho.Models.Birthday.BirthdayUpcomingDate.Tomorrow
+  type: Field
+  source:
+    remote:
+      path: src/Models/Birthday.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Tomorrow
+    path: ../src/Models/Birthday.cs
+    startLine: 139
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Models
+  summary: Indicates an upcoming birthday tomorrow.
+  example: []
+  syntax:
+    content: Tomorrow = 1
+    return:
+      type: KWiJisho.Models.Birthday.BirthdayUpcomingDate
+- uid: KWiJisho.Models.Birthday.BirthdayUpcomingDate.InSomeDays
+  commentId: F:KWiJisho.Models.Birthday.BirthdayUpcomingDate.InSomeDays
+  id: InSomeDays
+  parent: KWiJisho.Models.Birthday.BirthdayUpcomingDate
+  langs:
+  - csharp
+  - vb
+  name: InSomeDays
+  nameWithType: Birthday.BirthdayUpcomingDate.InSomeDays
+  fullName: KWiJisho.Models.Birthday.BirthdayUpcomingDate.InSomeDays
+  type: Field
+  source:
+    remote:
+      path: src/Models/Birthday.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: InSomeDays
+    path: ../src/Models/Birthday.cs
+    startLine: 144
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Models
+  summary: Indicates an upcoming birthday in the future, beyond tomorrow.
+  example: []
+  syntax:
+    content: InSomeDays = 2
+    return:
+      type: KWiJisho.Models.Birthday.BirthdayUpcomingDate
+references:
+- uid: KWiJisho.Models
+  commentId: N:KWiJisho.Models
+  href: KWiJisho.html
+  name: KWiJisho.Models
+  nameWithType: KWiJisho.Models
+  fullName: KWiJisho.Models
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Models
+    name: Models
+    href: KWiJisho.Models.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Models
+    name: Models
+    href: KWiJisho.Models.html
+- uid: KWiJisho.Models.Birthday.BirthdayUpcomingDate
+  commentId: T:KWiJisho.Models.Birthday.BirthdayUpcomingDate
+  parent: KWiJisho.Models
+  href: KWiJisho.Models.Birthday.html
+  name: Birthday.BirthdayUpcomingDate
+  nameWithType: Birthday.BirthdayUpcomingDate
+  fullName: KWiJisho.Models.Birthday.BirthdayUpcomingDate
+  spec.csharp:
+  - uid: KWiJisho.Models.Birthday
+    name: Birthday
+    href: KWiJisho.Models.Birthday.html
+  - name: .
+  - uid: KWiJisho.Models.Birthday.BirthdayUpcomingDate
+    name: BirthdayUpcomingDate
+    href: KWiJisho.Models.Birthday.BirthdayUpcomingDate.html
+  spec.vb:
+  - uid: KWiJisho.Models.Birthday
+    name: Birthday
+    href: KWiJisho.Models.Birthday.html
+  - name: .
+  - uid: KWiJisho.Models.Birthday.BirthdayUpcomingDate
+    name: BirthdayUpcomingDate
+    href: KWiJisho.Models.Birthday.BirthdayUpcomingDate.html
+memberLayout: SeparatePages

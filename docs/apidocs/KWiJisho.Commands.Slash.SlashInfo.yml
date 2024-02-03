@@ -1,0 +1,607 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Commands.Slash.SlashInfo
+  commentId: T:KWiJisho.Commands.Slash.SlashInfo
+  id: SlashInfo
+  parent: KWiJisho.Commands.Slash
+  children:
+  - KWiJisho.Commands.Slash.SlashInfo.ExecuteSlashHelpAsync(DSharpPlus.SlashCommands.InteractionContext)
+  - KWiJisho.Commands.Slash.SlashInfo.ExecuteSlashInfoAsync(DSharpPlus.SlashCommands.InteractionContext)
+  langs:
+  - csharp
+  - vb
+  name: SlashInfo
+  nameWithType: SlashInfo
+  fullName: KWiJisho.Commands.Slash.SlashInfo
+  type: Class
+  source:
+    remote:
+      path: src/Commands/Slash/SlashInfo.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: SlashInfo
+    path: ../src/Commands/Slash/SlashInfo.cs
+    startLine: 9
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands.Slash
+  summary: Represents a set of info slash commands.
+  example: []
+  syntax:
+    content: 'internal class SlashInfo : ApplicationCommandModule'
+    content.vb: Friend Class SlashInfo Inherits ApplicationCommandModule
+  inheritance:
+  - System.Object
+  - DSharpPlus.SlashCommands.ApplicationCommandModule
+  inheritedMembers:
+  - DSharpPlus.SlashCommands.ApplicationCommandModule.BeforeSlashExecutionAsync(DSharpPlus.SlashCommands.InteractionContext)
+  - DSharpPlus.SlashCommands.ApplicationCommandModule.AfterSlashExecutionAsync(DSharpPlus.SlashCommands.InteractionContext)
+  - DSharpPlus.SlashCommands.ApplicationCommandModule.BeforeContextMenuExecutionAsync(DSharpPlus.SlashCommands.ContextMenuContext)
+  - DSharpPlus.SlashCommands.ApplicationCommandModule.AfterContextMenuExecutionAsync(DSharpPlus.SlashCommands.ContextMenuContext)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: KWiJisho.Commands.Slash.SlashInfo.ExecuteSlashHelpAsync(DSharpPlus.SlashCommands.InteractionContext)
+  commentId: M:KWiJisho.Commands.Slash.SlashInfo.ExecuteSlashHelpAsync(DSharpPlus.SlashCommands.InteractionContext)
+  id: ExecuteSlashHelpAsync(DSharpPlus.SlashCommands.InteractionContext)
+  parent: KWiJisho.Commands.Slash.SlashInfo
+  langs:
+  - csharp
+  - vb
+  name: ExecuteSlashHelpAsync(InteractionContext)
+  nameWithType: SlashInfo.ExecuteSlashHelpAsync(InteractionContext)
+  fullName: KWiJisho.Commands.Slash.SlashInfo.ExecuteSlashHelpAsync(DSharpPlus.SlashCommands.InteractionContext)
+  type: Method
+  source:
+    remote:
+      path: src/Commands/Slash/SlashInfo.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ExecuteSlashHelpAsync
+    path: ../src/Commands/Slash/SlashInfo.cs
+    startLine: 14
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands.Slash
+  summary: Represents the command to show help about the Discord bot commands.
+  example: []
+  syntax:
+    content: >-
+      [SlashCommand("help", "Mostra a ajuda.", true)]
+
+      internal static Task ExecuteSlashHelpAsync(InteractionContext interactionContext)
+    parameters:
+    - id: interactionContext
+      type: DSharpPlus.SlashCommands.InteractionContext
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <SlashCommand("help", "Mostra a ajuda.", True)>
+
+      Friend Shared Function ExecuteSlashHelpAsync(interactionContext As InteractionContext) As Task
+  overload: KWiJisho.Commands.Slash.SlashInfo.ExecuteSlashHelpAsync*
+  attributes:
+  - type: DSharpPlus.SlashCommands.SlashCommandAttribute
+    ctor: DSharpPlus.SlashCommands.SlashCommandAttribute.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: help
+    - type: System.String
+      value: Mostra a ajuda.
+    - type: System.Boolean
+      value: true
+- uid: KWiJisho.Commands.Slash.SlashInfo.ExecuteSlashInfoAsync(DSharpPlus.SlashCommands.InteractionContext)
+  commentId: M:KWiJisho.Commands.Slash.SlashInfo.ExecuteSlashInfoAsync(DSharpPlus.SlashCommands.InteractionContext)
+  id: ExecuteSlashInfoAsync(DSharpPlus.SlashCommands.InteractionContext)
+  parent: KWiJisho.Commands.Slash.SlashInfo
+  langs:
+  - csharp
+  - vb
+  name: ExecuteSlashInfoAsync(InteractionContext)
+  nameWithType: SlashInfo.ExecuteSlashInfoAsync(InteractionContext)
+  fullName: KWiJisho.Commands.Slash.SlashInfo.ExecuteSlashInfoAsync(DSharpPlus.SlashCommands.InteractionContext)
+  type: Method
+  source:
+    remote:
+      path: src/Commands/Slash/SlashInfo.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ExecuteSlashInfoAsync
+    path: ../src/Commands/Slash/SlashInfo.cs
+    startLine: 24
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands.Slash
+  summary: Represents the command to show information about the bot and the bot owner.
+  example: []
+  syntax:
+    content: >-
+      [SlashCommand("info", "Mostra informações básicas sobre mim e o meu criador. (@monambike)", true)]
+
+      internal static Task ExecuteSlashInfoAsync(InteractionContext interactionContext)
+    parameters:
+    - id: interactionContext
+      type: DSharpPlus.SlashCommands.InteractionContext
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <SlashCommand("info", "Mostra informações básicas sobre mim e o meu criador. (@monambike)", True)>
+
+      Friend Shared Function ExecuteSlashInfoAsync(interactionContext As InteractionContext) As Task
+  overload: KWiJisho.Commands.Slash.SlashInfo.ExecuteSlashInfoAsync*
+  attributes:
+  - type: DSharpPlus.SlashCommands.SlashCommandAttribute
+    ctor: DSharpPlus.SlashCommands.SlashCommandAttribute.#ctor(System.String,System.String,System.Boolean)
+    arguments:
+    - type: System.String
+      value: info
+    - type: System.String
+      value: Mostra informações básicas sobre mim e o meu criador. (@monambike)
+    - type: System.Boolean
+      value: true
+references:
+- uid: KWiJisho.Commands.Slash
+  commentId: N:KWiJisho.Commands.Slash
+  href: KWiJisho.html
+  name: KWiJisho.Commands.Slash
+  nameWithType: KWiJisho.Commands.Slash
+  fullName: KWiJisho.Commands.Slash
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Commands
+    name: Commands
+    href: KWiJisho.Commands.html
+  - name: .
+  - uid: KWiJisho.Commands.Slash
+    name: Slash
+    href: KWiJisho.Commands.Slash.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Commands
+    name: Commands
+    href: KWiJisho.Commands.html
+  - name: .
+  - uid: KWiJisho.Commands.Slash
+    name: Slash
+    href: KWiJisho.Commands.Slash.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: DSharpPlus.SlashCommands.ApplicationCommandModule
+  commentId: T:DSharpPlus.SlashCommands.ApplicationCommandModule
+  parent: DSharpPlus.SlashCommands
+  isExternal: true
+  name: ApplicationCommandModule
+  nameWithType: ApplicationCommandModule
+  fullName: DSharpPlus.SlashCommands.ApplicationCommandModule
+- uid: DSharpPlus.SlashCommands.ApplicationCommandModule.BeforeSlashExecutionAsync(DSharpPlus.SlashCommands.InteractionContext)
+  commentId: M:DSharpPlus.SlashCommands.ApplicationCommandModule.BeforeSlashExecutionAsync(DSharpPlus.SlashCommands.InteractionContext)
+  parent: DSharpPlus.SlashCommands.ApplicationCommandModule
+  isExternal: true
+  name: BeforeSlashExecutionAsync(InteractionContext)
+  nameWithType: ApplicationCommandModule.BeforeSlashExecutionAsync(InteractionContext)
+  fullName: DSharpPlus.SlashCommands.ApplicationCommandModule.BeforeSlashExecutionAsync(DSharpPlus.SlashCommands.InteractionContext)
+  spec.csharp:
+  - uid: DSharpPlus.SlashCommands.ApplicationCommandModule.BeforeSlashExecutionAsync(DSharpPlus.SlashCommands.InteractionContext)
+    name: BeforeSlashExecutionAsync
+    isExternal: true
+  - name: (
+  - uid: DSharpPlus.SlashCommands.InteractionContext
+    name: InteractionContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: DSharpPlus.SlashCommands.ApplicationCommandModule.BeforeSlashExecutionAsync(DSharpPlus.SlashCommands.InteractionContext)
+    name: BeforeSlashExecutionAsync
+    isExternal: true
+  - name: (
+  - uid: DSharpPlus.SlashCommands.InteractionContext
+    name: InteractionContext
+    isExternal: true
+  - name: )
+- uid: DSharpPlus.SlashCommands.ApplicationCommandModule.AfterSlashExecutionAsync(DSharpPlus.SlashCommands.InteractionContext)
+  commentId: M:DSharpPlus.SlashCommands.ApplicationCommandModule.AfterSlashExecutionAsync(DSharpPlus.SlashCommands.InteractionContext)
+  parent: DSharpPlus.SlashCommands.ApplicationCommandModule
+  isExternal: true
+  name: AfterSlashExecutionAsync(InteractionContext)
+  nameWithType: ApplicationCommandModule.AfterSlashExecutionAsync(InteractionContext)
+  fullName: DSharpPlus.SlashCommands.ApplicationCommandModule.AfterSlashExecutionAsync(DSharpPlus.SlashCommands.InteractionContext)
+  spec.csharp:
+  - uid: DSharpPlus.SlashCommands.ApplicationCommandModule.AfterSlashExecutionAsync(DSharpPlus.SlashCommands.InteractionContext)
+    name: AfterSlashExecutionAsync
+    isExternal: true
+  - name: (
+  - uid: DSharpPlus.SlashCommands.InteractionContext
+    name: InteractionContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: DSharpPlus.SlashCommands.ApplicationCommandModule.AfterSlashExecutionAsync(DSharpPlus.SlashCommands.InteractionContext)
+    name: AfterSlashExecutionAsync
+    isExternal: true
+  - name: (
+  - uid: DSharpPlus.SlashCommands.InteractionContext
+    name: InteractionContext
+    isExternal: true
+  - name: )
+- uid: DSharpPlus.SlashCommands.ApplicationCommandModule.BeforeContextMenuExecutionAsync(DSharpPlus.SlashCommands.ContextMenuContext)
+  commentId: M:DSharpPlus.SlashCommands.ApplicationCommandModule.BeforeContextMenuExecutionAsync(DSharpPlus.SlashCommands.ContextMenuContext)
+  parent: DSharpPlus.SlashCommands.ApplicationCommandModule
+  isExternal: true
+  name: BeforeContextMenuExecutionAsync(ContextMenuContext)
+  nameWithType: ApplicationCommandModule.BeforeContextMenuExecutionAsync(ContextMenuContext)
+  fullName: DSharpPlus.SlashCommands.ApplicationCommandModule.BeforeContextMenuExecutionAsync(DSharpPlus.SlashCommands.ContextMenuContext)
+  spec.csharp:
+  - uid: DSharpPlus.SlashCommands.ApplicationCommandModule.BeforeContextMenuExecutionAsync(DSharpPlus.SlashCommands.ContextMenuContext)
+    name: BeforeContextMenuExecutionAsync
+    isExternal: true
+  - name: (
+  - uid: DSharpPlus.SlashCommands.ContextMenuContext
+    name: ContextMenuContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: DSharpPlus.SlashCommands.ApplicationCommandModule.BeforeContextMenuExecutionAsync(DSharpPlus.SlashCommands.ContextMenuContext)
+    name: BeforeContextMenuExecutionAsync
+    isExternal: true
+  - name: (
+  - uid: DSharpPlus.SlashCommands.ContextMenuContext
+    name: ContextMenuContext
+    isExternal: true
+  - name: )
+- uid: DSharpPlus.SlashCommands.ApplicationCommandModule.AfterContextMenuExecutionAsync(DSharpPlus.SlashCommands.ContextMenuContext)
+  commentId: M:DSharpPlus.SlashCommands.ApplicationCommandModule.AfterContextMenuExecutionAsync(DSharpPlus.SlashCommands.ContextMenuContext)
+  parent: DSharpPlus.SlashCommands.ApplicationCommandModule
+  isExternal: true
+  name: AfterContextMenuExecutionAsync(ContextMenuContext)
+  nameWithType: ApplicationCommandModule.AfterContextMenuExecutionAsync(ContextMenuContext)
+  fullName: DSharpPlus.SlashCommands.ApplicationCommandModule.AfterContextMenuExecutionAsync(DSharpPlus.SlashCommands.ContextMenuContext)
+  spec.csharp:
+  - uid: DSharpPlus.SlashCommands.ApplicationCommandModule.AfterContextMenuExecutionAsync(DSharpPlus.SlashCommands.ContextMenuContext)
+    name: AfterContextMenuExecutionAsync
+    isExternal: true
+  - name: (
+  - uid: DSharpPlus.SlashCommands.ContextMenuContext
+    name: ContextMenuContext
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: DSharpPlus.SlashCommands.ApplicationCommandModule.AfterContextMenuExecutionAsync(DSharpPlus.SlashCommands.ContextMenuContext)
+    name: AfterContextMenuExecutionAsync
+    isExternal: true
+  - name: (
+  - uid: DSharpPlus.SlashCommands.ContextMenuContext
+    name: ContextMenuContext
+    isExternal: true
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DSharpPlus.SlashCommands
+  commentId: N:DSharpPlus.SlashCommands
+  isExternal: true
+  name: DSharpPlus.SlashCommands
+  nameWithType: DSharpPlus.SlashCommands
+  fullName: DSharpPlus.SlashCommands
+  spec.csharp:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.SlashCommands
+    name: SlashCommands
+    isExternal: true
+  spec.vb:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.SlashCommands
+    name: SlashCommands
+    isExternal: true
+- uid: KWiJisho.Commands.Slash.SlashInfo.ExecuteSlashHelpAsync*
+  commentId: Overload:KWiJisho.Commands.Slash.SlashInfo.ExecuteSlashHelpAsync
+  href: KWiJisho.Commands.Slash.SlashInfo.ExecuteSlashHelpAsync.html#KWiJisho_Commands_Slash_SlashInfo_ExecuteSlashHelpAsync_DSharpPlus_SlashCommands_InteractionContext_
+  name: ExecuteSlashHelpAsync
+  nameWithType: SlashInfo.ExecuteSlashHelpAsync
+  fullName: KWiJisho.Commands.Slash.SlashInfo.ExecuteSlashHelpAsync
+- uid: DSharpPlus.SlashCommands.InteractionContext
+  commentId: T:DSharpPlus.SlashCommands.InteractionContext
+  parent: DSharpPlus.SlashCommands
+  isExternal: true
+  name: InteractionContext
+  nameWithType: InteractionContext
+  fullName: DSharpPlus.SlashCommands.InteractionContext
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: KWiJisho.Commands.Slash.SlashInfo.ExecuteSlashInfoAsync*
+  commentId: Overload:KWiJisho.Commands.Slash.SlashInfo.ExecuteSlashInfoAsync
+  href: KWiJisho.Commands.Slash.SlashInfo.ExecuteSlashInfoAsync.html#KWiJisho_Commands_Slash_SlashInfo_ExecuteSlashInfoAsync_DSharpPlus_SlashCommands_InteractionContext_
+  name: ExecuteSlashInfoAsync
+  nameWithType: SlashInfo.ExecuteSlashInfoAsync
+  fullName: KWiJisho.Commands.Slash.SlashInfo.ExecuteSlashInfoAsync
+memberLayout: SeparatePages

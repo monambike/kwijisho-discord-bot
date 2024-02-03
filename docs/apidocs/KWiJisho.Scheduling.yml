@@ -1,0 +1,31 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Scheduling
+  commentId: N:KWiJisho.Scheduling
+  id: KWiJisho.Scheduling
+  children:
+  - KWiJisho.Scheduling.BirthdayJob
+  - KWiJisho.Scheduling.Scheduler
+  langs:
+  - csharp
+  - vb
+  name: KWiJisho.Scheduling
+  nameWithType: KWiJisho.Scheduling
+  fullName: KWiJisho.Scheduling
+  type: Namespace
+  assemblies:
+  - KWiJisho
+references:
+- uid: KWiJisho.Scheduling.BirthdayJob
+  commentId: T:KWiJisho.Scheduling.BirthdayJob
+  href: KWiJisho.Scheduling.BirthdayJob.html
+  name: BirthdayJob
+  nameWithType: BirthdayJob
+  fullName: KWiJisho.Scheduling.BirthdayJob
+- uid: KWiJisho.Scheduling.Scheduler
+  commentId: T:KWiJisho.Scheduling.Scheduler
+  href: KWiJisho.Scheduling.Scheduler.html
+  name: Scheduler
+  nameWithType: Scheduler
+  fullName: KWiJisho.Scheduling.Scheduler
+memberLayout: SeparatePages

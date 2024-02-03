@@ -1,0 +1,613 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Data.ConfigJson
+  commentId: T:KWiJisho.Data.ConfigJson
+  id: ConfigJson
+  parent: KWiJisho.Data
+  children:
+  - KWiJisho.Data.ConfigJson.Activity
+  - KWiJisho.Data.ConfigJson.ChatGptToken
+  - KWiJisho.Data.ConfigJson.DefaultColor
+  - KWiJisho.Data.ConfigJson.KWiJishoToken
+  - KWiJisho.Data.ConfigJson.NasaToken
+  - KWiJisho.Data.ConfigJson.Prefix
+  - KWiJisho.Data.ConfigJson.SetValuesFromConfigJson(KWiJisho.Entities.ConfigJson)
+  langs:
+  - csharp
+  - vb
+  name: ConfigJson
+  nameWithType: ConfigJson
+  fullName: KWiJisho.Data.ConfigJson
+  type: Class
+  source:
+    remote:
+      path: src/Data/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ConfigJson
+    path: ../src/Data/ConfigJson.cs
+    startLine: 5
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Data
+  syntax:
+    content: internal class ConfigJson
+    content.vb: Friend Class ConfigJson
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: KWiJisho.Data.ConfigJson.KWiJishoToken
+  commentId: P:KWiJisho.Data.ConfigJson.KWiJishoToken
+  id: KWiJishoToken
+  parent: KWiJisho.Data.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: KWiJishoToken
+  nameWithType: ConfigJson.KWiJishoToken
+  fullName: KWiJisho.Data.ConfigJson.KWiJishoToken
+  type: Property
+  source:
+    remote:
+      path: src/Data/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: KWiJishoToken
+    path: ../src/Data/ConfigJson.cs
+    startLine: 10
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Data
+  summary: Gets or sets the API token for KWiJisho.
+  example: []
+  syntax:
+    content: internal static string KWiJishoToken { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Friend Shared Property KWiJishoToken As String
+  overload: KWiJisho.Data.ConfigJson.KWiJishoToken*
+- uid: KWiJisho.Data.ConfigJson.ChatGptToken
+  commentId: P:KWiJisho.Data.ConfigJson.ChatGptToken
+  id: ChatGptToken
+  parent: KWiJisho.Data.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: ChatGptToken
+  nameWithType: ConfigJson.ChatGptToken
+  fullName: KWiJisho.Data.ConfigJson.ChatGptToken
+  type: Property
+  source:
+    remote:
+      path: src/Data/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ChatGptToken
+    path: ../src/Data/ConfigJson.cs
+    startLine: 15
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Data
+  summary: Gets or sets the API token for ChatGPT.
+  example: []
+  syntax:
+    content: internal static string ChatGptToken { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Friend Shared Property ChatGptToken As String
+  overload: KWiJisho.Data.ConfigJson.ChatGptToken*
+- uid: KWiJisho.Data.ConfigJson.NasaToken
+  commentId: P:KWiJisho.Data.ConfigJson.NasaToken
+  id: NasaToken
+  parent: KWiJisho.Data.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: NasaToken
+  nameWithType: ConfigJson.NasaToken
+  fullName: KWiJisho.Data.ConfigJson.NasaToken
+  type: Property
+  source:
+    remote:
+      path: src/Data/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: NasaToken
+    path: ../src/Data/ConfigJson.cs
+    startLine: 20
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Data
+  summary: Gets or sets the API token for NASA.
+  example: []
+  syntax:
+    content: internal static string NasaToken { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Friend Shared Property NasaToken As String
+  overload: KWiJisho.Data.ConfigJson.NasaToken*
+- uid: KWiJisho.Data.ConfigJson.Prefix
+  commentId: P:KWiJisho.Data.ConfigJson.Prefix
+  id: Prefix
+  parent: KWiJisho.Data.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: Prefix
+  nameWithType: ConfigJson.Prefix
+  fullName: KWiJisho.Data.ConfigJson.Prefix
+  type: Property
+  source:
+    remote:
+      path: src/Data/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Prefix
+    path: ../src/Data/ConfigJson.cs
+    startLine: 25
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Data
+  summary: Gets or sets the command prefix for the bot.
+  example: []
+  syntax:
+    content: internal static string Prefix { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Friend Shared Property Prefix As String
+  overload: KWiJisho.Data.ConfigJson.Prefix*
+- uid: KWiJisho.Data.ConfigJson.Activity
+  commentId: P:KWiJisho.Data.ConfigJson.Activity
+  id: Activity
+  parent: KWiJisho.Data.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: Activity
+  nameWithType: ConfigJson.Activity
+  fullName: KWiJisho.Data.ConfigJson.Activity
+  type: Property
+  source:
+    remote:
+      path: src/Data/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Activity
+    path: ../src/Data/ConfigJson.cs
+    startLine: 30
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Data
+  summary: Gets or sets the default bot activity.
+  example: []
+  syntax:
+    content: internal static string Activity { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Friend Shared Property Activity As String
+  overload: KWiJisho.Data.ConfigJson.Activity*
+- uid: KWiJisho.Data.ConfigJson.DefaultColor
+  commentId: P:KWiJisho.Data.ConfigJson.DefaultColor
+  id: DefaultColor
+  parent: KWiJisho.Data.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: DefaultColor
+  nameWithType: ConfigJson.DefaultColor
+  fullName: KWiJisho.Data.ConfigJson.DefaultColor
+  type: Property
+  source:
+    remote:
+      path: src/Data/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: DefaultColor
+    path: ../src/Data/ConfigJson.cs
+    startLine: 35
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Data
+  summary: Gets or sets the default color for bot messages.
+  example: []
+  syntax:
+    content: internal static Color DefaultColor { get; set; }
+    parameters: []
+    return:
+      type: KWiJisho.Entities.Color
+    content.vb: Friend Shared Property DefaultColor As Color
+  overload: KWiJisho.Data.ConfigJson.DefaultColor*
+- uid: KWiJisho.Data.ConfigJson.SetValuesFromConfigJson(KWiJisho.Entities.ConfigJson)
+  commentId: M:KWiJisho.Data.ConfigJson.SetValuesFromConfigJson(KWiJisho.Entities.ConfigJson)
+  id: SetValuesFromConfigJson(KWiJisho.Entities.ConfigJson)
+  parent: KWiJisho.Data.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: SetValuesFromConfigJson(ConfigJson)
+  nameWithType: ConfigJson.SetValuesFromConfigJson(ConfigJson)
+  fullName: KWiJisho.Data.ConfigJson.SetValuesFromConfigJson(KWiJisho.Entities.ConfigJson)
+  type: Method
+  source:
+    remote:
+      path: src/Data/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: SetValuesFromConfigJson
+    path: ../src/Data/ConfigJson.cs
+    startLine: 41
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Data
+  summary: Set values from ConfigJson file.
+  example: []
+  syntax:
+    content: internal static void SetValuesFromConfigJson(ConfigJson configJson)
+    parameters:
+    - id: configJson
+      type: KWiJisho.Entities.ConfigJson
+      description: The instance of the ConfigJson file.
+    content.vb: Friend Shared Sub SetValuesFromConfigJson(configJson As ConfigJson)
+  overload: KWiJisho.Data.ConfigJson.SetValuesFromConfigJson*
+references:
+- uid: KWiJisho.Data
+  commentId: N:KWiJisho.Data
+  href: KWiJisho.html
+  name: KWiJisho.Data
+  nameWithType: KWiJisho.Data
+  fullName: KWiJisho.Data
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Data
+    name: Data
+    href: KWiJisho.Data.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Data
+    name: Data
+    href: KWiJisho.Data.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: KWiJisho.Data.ConfigJson.KWiJishoToken*
+  commentId: Overload:KWiJisho.Data.ConfigJson.KWiJishoToken
+  href: KWiJisho.Data.ConfigJson.KWiJishoToken.html#KWiJisho_Data_ConfigJson_KWiJishoToken
+  name: KWiJishoToken
+  nameWithType: ConfigJson.KWiJishoToken
+  fullName: KWiJisho.Data.ConfigJson.KWiJishoToken
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: KWiJisho.Data.ConfigJson.ChatGptToken*
+  commentId: Overload:KWiJisho.Data.ConfigJson.ChatGptToken
+  href: KWiJisho.Data.ConfigJson.ChatGptToken.html#KWiJisho_Data_ConfigJson_ChatGptToken
+  name: ChatGptToken
+  nameWithType: ConfigJson.ChatGptToken
+  fullName: KWiJisho.Data.ConfigJson.ChatGptToken
+- uid: KWiJisho.Data.ConfigJson.NasaToken*
+  commentId: Overload:KWiJisho.Data.ConfigJson.NasaToken
+  href: KWiJisho.Data.ConfigJson.NasaToken.html#KWiJisho_Data_ConfigJson_NasaToken
+  name: NasaToken
+  nameWithType: ConfigJson.NasaToken
+  fullName: KWiJisho.Data.ConfigJson.NasaToken
+- uid: KWiJisho.Data.ConfigJson.Prefix*
+  commentId: Overload:KWiJisho.Data.ConfigJson.Prefix
+  href: KWiJisho.Data.ConfigJson.Prefix.html#KWiJisho_Data_ConfigJson_Prefix
+  name: Prefix
+  nameWithType: ConfigJson.Prefix
+  fullName: KWiJisho.Data.ConfigJson.Prefix
+- uid: KWiJisho.Data.ConfigJson.Activity*
+  commentId: Overload:KWiJisho.Data.ConfigJson.Activity
+  href: KWiJisho.Data.ConfigJson.Activity.html#KWiJisho_Data_ConfigJson_Activity
+  name: Activity
+  nameWithType: ConfigJson.Activity
+  fullName: KWiJisho.Data.ConfigJson.Activity
+- uid: KWiJisho.Data.ConfigJson.DefaultColor*
+  commentId: Overload:KWiJisho.Data.ConfigJson.DefaultColor
+  href: KWiJisho.Data.ConfigJson.DefaultColor.html#KWiJisho_Data_ConfigJson_DefaultColor
+  name: DefaultColor
+  nameWithType: ConfigJson.DefaultColor
+  fullName: KWiJisho.Data.ConfigJson.DefaultColor
+- uid: KWiJisho.Entities.Color
+  commentId: T:KWiJisho.Entities.Color
+  parent: KWiJisho.Entities
+  href: KWiJisho.Entities.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: KWiJisho.Entities.Color
+- uid: KWiJisho.Entities
+  commentId: N:KWiJisho.Entities
+  href: KWiJisho.html
+  name: KWiJisho.Entities
+  nameWithType: KWiJisho.Entities
+  fullName: KWiJisho.Entities
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Entities
+    name: Entities
+    href: KWiJisho.Entities.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Entities
+    name: Entities
+    href: KWiJisho.Entities.html
+- uid: KWiJisho.Data.ConfigJson.SetValuesFromConfigJson*
+  commentId: Overload:KWiJisho.Data.ConfigJson.SetValuesFromConfigJson
+  href: KWiJisho.Data.ConfigJson.SetValuesFromConfigJson.html#KWiJisho_Data_ConfigJson_SetValuesFromConfigJson_KWiJisho_Entities_ConfigJson_
+  name: SetValuesFromConfigJson
+  nameWithType: ConfigJson.SetValuesFromConfigJson
+  fullName: KWiJisho.Data.ConfigJson.SetValuesFromConfigJson
+- uid: KWiJisho.Entities.ConfigJson
+  commentId: T:KWiJisho.Entities.ConfigJson
+  parent: KWiJisho.Entities
+  href: KWiJisho.Entities.ConfigJson.html
+  name: ConfigJson
+  nameWithType: ConfigJson
+  fullName: KWiJisho.Entities.ConfigJson
+memberLayout: SeparatePages

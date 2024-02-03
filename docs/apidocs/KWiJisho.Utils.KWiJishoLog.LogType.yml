@@ -1,0 +1,222 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Utils.KWiJishoLog.LogType
+  commentId: T:KWiJisho.Utils.KWiJishoLog.LogType
+  id: KWiJishoLog.LogType
+  parent: KWiJisho.Utils
+  children:
+  - KWiJisho.Utils.KWiJishoLog.LogType.Debug
+  - KWiJisho.Utils.KWiJishoLog.LogType.Error
+  - KWiJisho.Utils.KWiJishoLog.LogType.Fatal
+  - KWiJisho.Utils.KWiJishoLog.LogType.Info
+  - KWiJisho.Utils.KWiJishoLog.LogType.Warning
+  langs:
+  - csharp
+  - vb
+  name: KWiJishoLog.LogType
+  nameWithType: KWiJishoLog.LogType
+  fullName: KWiJisho.Utils.KWiJishoLog.LogType
+  type: Enum
+  source:
+    remote:
+      path: src/Utils/KWiJishoLog.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: LogType
+    path: ../src/Utils/KWiJishoLog.cs
+    startLine: 18
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Represents options for the application log type.
+  example: []
+  syntax:
+    content: internal enum KWiJishoLog.LogType
+    content.vb: Friend Enum KWiJishoLog.LogType
+- uid: KWiJisho.Utils.KWiJishoLog.LogType.Debug
+  commentId: F:KWiJisho.Utils.KWiJishoLog.LogType.Debug
+  id: Debug
+  parent: KWiJisho.Utils.KWiJishoLog.LogType
+  langs:
+  - csharp
+  - vb
+  name: Debug
+  nameWithType: KWiJishoLog.LogType.Debug
+  fullName: KWiJisho.Utils.KWiJishoLog.LogType.Debug
+  type: Field
+  source:
+    remote:
+      path: src/Utils/KWiJishoLog.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Debug
+    path: ../src/Utils/KWiJishoLog.cs
+    startLine: 23
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Indicated a debug level log.
+  example: []
+  syntax:
+    content: Debug = 0
+    return:
+      type: KWiJisho.Utils.KWiJishoLog.LogType
+- uid: KWiJisho.Utils.KWiJishoLog.LogType.Info
+  commentId: F:KWiJisho.Utils.KWiJishoLog.LogType.Info
+  id: Info
+  parent: KWiJisho.Utils.KWiJishoLog.LogType
+  langs:
+  - csharp
+  - vb
+  name: Info
+  nameWithType: KWiJishoLog.LogType.Info
+  fullName: KWiJisho.Utils.KWiJishoLog.LogType.Info
+  type: Field
+  source:
+    remote:
+      path: src/Utils/KWiJishoLog.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Info
+    path: ../src/Utils/KWiJishoLog.cs
+    startLine: 28
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Indicated a info level log.
+  example: []
+  syntax:
+    content: Info = 1
+    return:
+      type: KWiJisho.Utils.KWiJishoLog.LogType
+- uid: KWiJisho.Utils.KWiJishoLog.LogType.Warning
+  commentId: F:KWiJisho.Utils.KWiJishoLog.LogType.Warning
+  id: Warning
+  parent: KWiJisho.Utils.KWiJishoLog.LogType
+  langs:
+  - csharp
+  - vb
+  name: Warning
+  nameWithType: KWiJishoLog.LogType.Warning
+  fullName: KWiJisho.Utils.KWiJishoLog.LogType.Warning
+  type: Field
+  source:
+    remote:
+      path: src/Utils/KWiJishoLog.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Warning
+    path: ../src/Utils/KWiJishoLog.cs
+    startLine: 33
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Indicated a warning level log.
+  example: []
+  syntax:
+    content: Warning = 2
+    return:
+      type: KWiJisho.Utils.KWiJishoLog.LogType
+- uid: KWiJisho.Utils.KWiJishoLog.LogType.Error
+  commentId: F:KWiJisho.Utils.KWiJishoLog.LogType.Error
+  id: Error
+  parent: KWiJisho.Utils.KWiJishoLog.LogType
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: KWiJishoLog.LogType.Error
+  fullName: KWiJisho.Utils.KWiJishoLog.LogType.Error
+  type: Field
+  source:
+    remote:
+      path: src/Utils/KWiJishoLog.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Error
+    path: ../src/Utils/KWiJishoLog.cs
+    startLine: 38
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Indicated a error level log.
+  example: []
+  syntax:
+    content: Error = 3
+    return:
+      type: KWiJisho.Utils.KWiJishoLog.LogType
+- uid: KWiJisho.Utils.KWiJishoLog.LogType.Fatal
+  commentId: F:KWiJisho.Utils.KWiJishoLog.LogType.Fatal
+  id: Fatal
+  parent: KWiJisho.Utils.KWiJishoLog.LogType
+  langs:
+  - csharp
+  - vb
+  name: Fatal
+  nameWithType: KWiJishoLog.LogType.Fatal
+  fullName: KWiJisho.Utils.KWiJishoLog.LogType.Fatal
+  type: Field
+  source:
+    remote:
+      path: src/Utils/KWiJishoLog.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Fatal
+    path: ../src/Utils/KWiJishoLog.cs
+    startLine: 43
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Indicated a fatal level log.
+  example: []
+  syntax:
+    content: Fatal = 4
+    return:
+      type: KWiJisho.Utils.KWiJishoLog.LogType
+references:
+- uid: KWiJisho.Utils
+  commentId: N:KWiJisho.Utils
+  href: KWiJisho.html
+  name: KWiJisho.Utils
+  nameWithType: KWiJisho.Utils
+  fullName: KWiJisho.Utils
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Utils
+    name: Utils
+    href: KWiJisho.Utils.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Utils
+    name: Utils
+    href: KWiJisho.Utils.html
+- uid: KWiJisho.Utils.KWiJishoLog.LogType
+  commentId: T:KWiJisho.Utils.KWiJishoLog.LogType
+  parent: KWiJisho.Utils
+  href: KWiJisho.Utils.KWiJishoLog.html
+  name: KWiJishoLog.LogType
+  nameWithType: KWiJishoLog.LogType
+  fullName: KWiJisho.Utils.KWiJishoLog.LogType
+  spec.csharp:
+  - uid: KWiJisho.Utils.KWiJishoLog
+    name: KWiJishoLog
+    href: KWiJisho.Utils.KWiJishoLog.html
+  - name: .
+  - uid: KWiJisho.Utils.KWiJishoLog.LogType
+    name: LogType
+    href: KWiJisho.Utils.KWiJishoLog.LogType.html
+  spec.vb:
+  - uid: KWiJisho.Utils.KWiJishoLog
+    name: KWiJishoLog
+    href: KWiJisho.Utils.KWiJishoLog.html
+  - name: .
+  - uid: KWiJisho.Utils.KWiJishoLog.LogType
+    name: LogType
+    href: KWiJisho.Utils.KWiJishoLog.LogType.html
+memberLayout: SeparatePages

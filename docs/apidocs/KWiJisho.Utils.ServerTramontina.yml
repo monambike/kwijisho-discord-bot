@@ -1,0 +1,402 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Utils.ServerTramontina
+  commentId: T:KWiJisho.Utils.ServerTramontina
+  id: ServerTramontina
+  parent: KWiJisho.Utils
+  children:
+  - KWiJisho.Utils.ServerTramontina.GuildId
+  - KWiJisho.Utils.ServerTramontina.NewsChannelId
+  - KWiJisho.Utils.ServerTramontina.WelcomeChannelId
+  langs:
+  - csharp
+  - vb
+  name: ServerTramontina
+  nameWithType: ServerTramontina
+  fullName: KWiJisho.Utils.ServerTramontina
+  type: Class
+  source:
+    remote:
+      path: src/Utils/ServerTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ServerTramontina
+    path: ../src/Utils/ServerTramontina.cs
+    startLine: 5
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Static class responsible for holding information about Tramontina Discord server.
+  example: []
+  syntax:
+    content: internal static class ServerTramontina
+    content.vb: Friend Module ServerTramontina
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: KWiJisho.Utils.ServerTramontina.GuildId
+  commentId: F:KWiJisho.Utils.ServerTramontina.GuildId
+  id: GuildId
+  parent: KWiJisho.Utils.ServerTramontina
+  langs:
+  - csharp
+  - vb
+  name: GuildId
+  nameWithType: ServerTramontina.GuildId
+  fullName: KWiJisho.Utils.ServerTramontina.GuildId
+  type: Field
+  source:
+    remote:
+      path: src/Utils/ServerTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: GuildId
+    path: ../src/Utils/ServerTramontina.cs
+    startLine: 10
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Tramontina Discord server guild Id.
+  example: []
+  syntax:
+    content: internal const ulong GuildId = 692588978959941653
+    return:
+      type: System.UInt64
+    content.vb: Friend Const GuildId As ULong = 692588978959941653
+- uid: KWiJisho.Utils.ServerTramontina.WelcomeChannelId
+  commentId: F:KWiJisho.Utils.ServerTramontina.WelcomeChannelId
+  id: WelcomeChannelId
+  parent: KWiJisho.Utils.ServerTramontina
+  langs:
+  - csharp
+  - vb
+  name: WelcomeChannelId
+  nameWithType: ServerTramontina.WelcomeChannelId
+  fullName: KWiJisho.Utils.ServerTramontina.WelcomeChannelId
+  type: Field
+  source:
+    remote:
+      path: src/Utils/ServerTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: WelcomeChannelId
+    path: ../src/Utils/ServerTramontina.cs
+    startLine: 15
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Tramontina welcome Discord server channeld Id.
+  example: []
+  syntax:
+    content: internal const ulong WelcomeChannelId = 842222447410544650
+    return:
+      type: System.UInt64
+    content.vb: Friend Const WelcomeChannelId As ULong = 842222447410544650
+- uid: KWiJisho.Utils.ServerTramontina.NewsChannelId
+  commentId: F:KWiJisho.Utils.ServerTramontina.NewsChannelId
+  id: NewsChannelId
+  parent: KWiJisho.Utils.ServerTramontina
+  langs:
+  - csharp
+  - vb
+  name: NewsChannelId
+  nameWithType: ServerTramontina.NewsChannelId
+  fullName: KWiJisho.Utils.ServerTramontina.NewsChannelId
+  type: Field
+  source:
+    remote:
+      path: src/Utils/ServerTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: NewsChannelId
+    path: ../src/Utils/ServerTramontina.cs
+    startLine: 20
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Tramontina news Discord server channel Id.
+  example: []
+  syntax:
+    content: internal const ulong NewsChannelId = 1203090940701446214
+    return:
+      type: System.UInt64
+    content.vb: Friend Const NewsChannelId As ULong = 1203090940701446214
+references:
+- uid: KWiJisho.Utils
+  commentId: N:KWiJisho.Utils
+  href: KWiJisho.html
+  name: KWiJisho.Utils
+  nameWithType: KWiJisho.Utils
+  fullName: KWiJisho.Utils
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Utils
+    name: Utils
+    href: KWiJisho.Utils.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Utils
+    name: Utils
+    href: KWiJisho.Utils.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+memberLayout: SeparatePages

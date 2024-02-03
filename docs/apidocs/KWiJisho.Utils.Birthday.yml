@@ -1,0 +1,738 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Utils.Birthday
+  commentId: T:KWiJisho.Utils.Birthday
+  id: Birthday
+  parent: KWiJisho.Utils
+  children:
+  - KWiJisho.Utils.Birthday.GenerateBirthdayMessage(KWiJisho.Entities.User)
+  - KWiJisho.Utils.Birthday.GetDaysRemainingByUser(KWiJisho.Entities.User)
+  - KWiJisho.Utils.Birthday.GetUpcomingBirthdayDate(System.Double)
+  - KWiJisho.Utils.Birthday.GetUsersOrderByClosestBirthday
+  - KWiJisho.Utils.Birthday.TryGetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)
+  langs:
+  - csharp
+  - vb
+  name: Birthday
+  nameWithType: Birthday
+  fullName: KWiJisho.Utils.Birthday
+  type: Class
+  source:
+    remote:
+      path: src/Utils/Birthday.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Birthday
+    path: ../src/Utils/Birthday.cs
+    startLine: 12
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Class that provides a set of utilities for birthday tasks.
+  example: []
+  syntax:
+    content: internal static class Birthday
+    content.vb: Friend Module Birthday
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: KWiJisho.Utils.Birthday.GetUsersOrderByClosestBirthday
+  commentId: M:KWiJisho.Utils.Birthday.GetUsersOrderByClosestBirthday
+  id: GetUsersOrderByClosestBirthday
+  parent: KWiJisho.Utils.Birthday
+  langs:
+  - csharp
+  - vb
+  name: GetUsersOrderByClosestBirthday()
+  nameWithType: Birthday.GetUsersOrderByClosestBirthday()
+  fullName: KWiJisho.Utils.Birthday.GetUsersOrderByClosestBirthday()
+  type: Method
+  source:
+    remote:
+      path: src/Utils/Birthday.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: GetUsersOrderByClosestBirthday
+    path: ../src/Utils/Birthday.cs
+    startLine: 18
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Gets a list of users ordered by how closer are their birthday.
+  example: []
+  syntax:
+    content: internal static List<User> GetUsersOrderByClosestBirthday()
+    return:
+      type: System.Collections.Generic.List{KWiJisho.Entities.User}
+      description: A <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref> containing a group of <xref href="KWiJisho.Entities.User" data-throw-if-not-resolved="false"></xref> and their <xref href="KWiJisho.Entities.User.Birthday" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Friend Shared Function GetUsersOrderByClosestBirthday() As List(Of User)
+  overload: KWiJisho.Utils.Birthday.GetUsersOrderByClosestBirthday*
+- uid: KWiJisho.Utils.Birthday.TryGetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)
+  commentId: M:KWiJisho.Utils.Birthday.TryGetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)
+  id: TryGetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)
+  parent: KWiJisho.Utils.Birthday
+  langs:
+  - csharp
+  - vb
+  name: TryGetDiscordUserByClosestBirthday(DiscordGuild)
+  nameWithType: Birthday.TryGetDiscordUserByClosestBirthday(DiscordGuild)
+  fullName: KWiJisho.Utils.Birthday.TryGetDiscordUserByClosestBirthday(DSharpPlus.Entities.DiscordGuild)
+  type: Method
+  source:
+    remote:
+      path: src/Utils/Birthday.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: TryGetDiscordUserByClosestBirthday
+    path: ../src/Utils/Birthday.cs
+    startLine: 53
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Tries to get the user if they are presents in current Discord server.
+  example: []
+  syntax:
+    content: internal static User TryGetDiscordUserByClosestBirthday(DiscordGuild discordGuild)
+    parameters:
+    - id: discordGuild
+      type: DSharpPlus.Entities.DiscordGuild
+      description: ''
+    return:
+      type: KWiJisho.Entities.User
+      description: Returns the <xref href="KWiJisho.Entities.User" data-throw-if-not-resolved="false"></xref> if avaiable in current Discord server; otherwise, returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+    content.vb: Friend Shared Function TryGetDiscordUserByClosestBirthday(discordGuild As DiscordGuild) As User
+  overload: KWiJisho.Utils.Birthday.TryGetDiscordUserByClosestBirthday*
+- uid: KWiJisho.Utils.Birthday.GetDaysRemainingByUser(KWiJisho.Entities.User)
+  commentId: M:KWiJisho.Utils.Birthday.GetDaysRemainingByUser(KWiJisho.Entities.User)
+  id: GetDaysRemainingByUser(KWiJisho.Entities.User)
+  parent: KWiJisho.Utils.Birthday
+  langs:
+  - csharp
+  - vb
+  name: GetDaysRemainingByUser(User)
+  nameWithType: Birthday.GetDaysRemainingByUser(User)
+  fullName: KWiJisho.Utils.Birthday.GetDaysRemainingByUser(KWiJisho.Entities.User)
+  type: Method
+  source:
+    remote:
+      path: src/Utils/Birthday.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: GetDaysRemainingByUser
+    path: ../src/Utils/Birthday.cs
+    startLine: 82
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Get how many days are remaning for the user's birthday.
+  example: []
+  syntax:
+    content: internal static double GetDaysRemainingByUser(User discordUser)
+    parameters:
+    - id: discordUser
+      type: KWiJisho.Entities.User
+      description: >-
+        The user to get how many years are remaining for they
+            birthday.
+    return:
+      type: System.Double
+      description: A <xref href="System.Double" data-throw-if-not-resolved="false"></xref> containing the number of days remaining for they birthday.
+    content.vb: Friend Shared Function GetDaysRemainingByUser(discordUser As User) As Double
+  overload: KWiJisho.Utils.Birthday.GetDaysRemainingByUser*
+- uid: KWiJisho.Utils.Birthday.GetUpcomingBirthdayDate(System.Double)
+  commentId: M:KWiJisho.Utils.Birthday.GetUpcomingBirthdayDate(System.Double)
+  id: GetUpcomingBirthdayDate(System.Double)
+  parent: KWiJisho.Utils.Birthday
+  langs:
+  - csharp
+  - vb
+  name: GetUpcomingBirthdayDate(double)
+  nameWithType: Birthday.GetUpcomingBirthdayDate(double)
+  fullName: KWiJisho.Utils.Birthday.GetUpcomingBirthdayDate(double)
+  type: Method
+  source:
+    remote:
+      path: src/Utils/Birthday.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: GetUpcomingBirthdayDate
+    path: ../src/Utils/Birthday.cs
+    startLine: 113
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Gets the <xref href="KWiJisho.Utils.Birthday.UpcomingBirthdayDate" data-throw-if-not-resolved="false"></xref> based on how much days are remaining for it.
+  example: []
+  syntax:
+    content: internal static Birthday.UpcomingBirthdayDate GetUpcomingBirthdayDate(double daysRemaning)
+    parameters:
+    - id: daysRemaning
+      type: System.Double
+      description: How many days are remaining for the birthday.
+    return:
+      type: KWiJisho.Utils.Birthday.UpcomingBirthdayDate
+      description: The <xref href="KWiJisho.Utils.Birthday.UpcomingBirthdayDate" data-throw-if-not-resolved="false"></xref> based on how many days are remaning.
+    content.vb: Friend Shared Function GetUpcomingBirthdayDate(daysRemaning As Double) As Birthday.UpcomingBirthdayDate
+  overload: KWiJisho.Utils.Birthday.GetUpcomingBirthdayDate*
+  exceptions:
+  - type: System.NotImplementedException
+    commentId: T:System.NotImplementedException
+    description: >-
+      Thrown if the upcoming birthday date is not yet implemented
+          on this current method.
+  nameWithType.vb: Birthday.GetUpcomingBirthdayDate(Double)
+  fullName.vb: KWiJisho.Utils.Birthday.GetUpcomingBirthdayDate(Double)
+  name.vb: GetUpcomingBirthdayDate(Double)
+- uid: KWiJisho.Utils.Birthday.GenerateBirthdayMessage(KWiJisho.Entities.User)
+  commentId: M:KWiJisho.Utils.Birthday.GenerateBirthdayMessage(KWiJisho.Entities.User)
+  id: GenerateBirthdayMessage(KWiJisho.Entities.User)
+  parent: KWiJisho.Utils.Birthday
+  langs:
+  - csharp
+  - vb
+  name: GenerateBirthdayMessage(User)
+  nameWithType: Birthday.GenerateBirthdayMessage(User)
+  fullName: KWiJisho.Utils.Birthday.GenerateBirthdayMessage(KWiJisho.Entities.User)
+  type: Method
+  source:
+    remote:
+      path: src/Utils/Birthday.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: GenerateBirthdayMessage
+    path: ../src/Utils/Birthday.cs
+    startLine: 131
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Method responsible for generating a birthday message.
+  example: []
+  syntax:
+    content: internal static string GenerateBirthdayMessage(User discordUser)
+    parameters:
+    - id: discordUser
+      type: KWiJisho.Entities.User
+      description: The user that to get the generated birthday message.
+    return:
+      type: System.String
+      description: A <xref href="System.String" data-throw-if-not-resolved="false"></xref> containing the generated birthday message.
+    content.vb: Friend Shared Function GenerateBirthdayMessage(discordUser As User) As String
+  overload: KWiJisho.Utils.Birthday.GenerateBirthdayMessage*
+  exceptions:
+  - type: System.NotImplementedException
+    commentId: T:System.NotImplementedException
+    description: >-
+      Thrown if the upcoming birthday date is not yet implemented on this
+          current method.
+references:
+- uid: KWiJisho.Utils
+  commentId: N:KWiJisho.Utils
+  href: KWiJisho.html
+  name: KWiJisho.Utils
+  nameWithType: KWiJisho.Utils
+  fullName: KWiJisho.Utils
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Utils
+    name: Utils
+    href: KWiJisho.Utils.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Utils
+    name: Utils
+    href: KWiJisho.Utils.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: KWiJisho.Entities.User
+  commentId: T:KWiJisho.Entities.User
+  parent: KWiJisho.Entities
+  href: KWiJisho.Entities.User.html
+  name: User
+  nameWithType: User
+  fullName: KWiJisho.Entities.User
+- uid: KWiJisho.Entities.User.Birthday
+  commentId: P:KWiJisho.Entities.User.Birthday
+  href: KWiJisho.Entities.User.Birthday.html#KWiJisho_Entities_User_Birthday
+  name: Birthday
+  nameWithType: User.Birthday
+  fullName: KWiJisho.Entities.User.Birthday
+- uid: KWiJisho.Utils.Birthday.GetUsersOrderByClosestBirthday*
+  commentId: Overload:KWiJisho.Utils.Birthday.GetUsersOrderByClosestBirthday
+  href: KWiJisho.Utils.Birthday.GetUsersOrderByClosestBirthday.html#KWiJisho_Utils_Birthday_GetUsersOrderByClosestBirthday
+  name: GetUsersOrderByClosestBirthday
+  nameWithType: Birthday.GetUsersOrderByClosestBirthday
+  fullName: KWiJisho.Utils.Birthday.GetUsersOrderByClosestBirthday
+- uid: System.Collections.Generic.List{KWiJisho.Entities.User}
+  commentId: T:System.Collections.Generic.List{KWiJisho.Entities.User}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<User>
+  nameWithType: List<User>
+  fullName: System.Collections.Generic.List<KWiJisho.Entities.User>
+  nameWithType.vb: List(Of User)
+  fullName.vb: System.Collections.Generic.List(Of KWiJisho.Entities.User)
+  name.vb: List(Of User)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: KWiJisho.Entities.User
+    name: User
+    href: KWiJisho.Entities.User.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: KWiJisho.Entities.User
+    name: User
+    href: KWiJisho.Entities.User.html
+  - name: )
+- uid: KWiJisho.Entities
+  commentId: N:KWiJisho.Entities
+  href: KWiJisho.html
+  name: KWiJisho.Entities
+  nameWithType: KWiJisho.Entities
+  fullName: KWiJisho.Entities
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Entities
+    name: Entities
+    href: KWiJisho.Entities.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Entities
+    name: Entities
+    href: KWiJisho.Entities.html
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: KWiJisho.Utils.Birthday.TryGetDiscordUserByClosestBirthday*
+  commentId: Overload:KWiJisho.Utils.Birthday.TryGetDiscordUserByClosestBirthday
+  href: KWiJisho.Utils.Birthday.TryGetDiscordUserByClosestBirthday.html#KWiJisho_Utils_Birthday_TryGetDiscordUserByClosestBirthday_DSharpPlus_Entities_DiscordGuild_
+  name: TryGetDiscordUserByClosestBirthday
+  nameWithType: Birthday.TryGetDiscordUserByClosestBirthday
+  fullName: KWiJisho.Utils.Birthday.TryGetDiscordUserByClosestBirthday
+- uid: DSharpPlus.Entities.DiscordGuild
+  commentId: T:DSharpPlus.Entities.DiscordGuild
+  parent: DSharpPlus.Entities
+  isExternal: true
+  name: DiscordGuild
+  nameWithType: DiscordGuild
+  fullName: DSharpPlus.Entities.DiscordGuild
+- uid: DSharpPlus.Entities
+  commentId: N:DSharpPlus.Entities
+  isExternal: true
+  name: DSharpPlus.Entities
+  nameWithType: DSharpPlus.Entities
+  fullName: DSharpPlus.Entities
+  spec.csharp:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.Entities
+    name: Entities
+    isExternal: true
+  spec.vb:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.Entities
+    name: Entities
+    isExternal: true
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: KWiJisho.Utils.Birthday.GetDaysRemainingByUser*
+  commentId: Overload:KWiJisho.Utils.Birthday.GetDaysRemainingByUser
+  href: KWiJisho.Utils.Birthday.GetDaysRemainingByUser.html#KWiJisho_Utils_Birthday_GetDaysRemainingByUser_KWiJisho_Entities_User_
+  name: GetDaysRemainingByUser
+  nameWithType: Birthday.GetDaysRemainingByUser
+  fullName: KWiJisho.Utils.Birthday.GetDaysRemainingByUser
+- uid: KWiJisho.Utils.Birthday.UpcomingBirthdayDate
+  commentId: T:KWiJisho.Utils.Birthday.UpcomingBirthdayDate
+  parent: KWiJisho.Utils
+  href: KWiJisho.Utils.Birthday.html
+  name: Birthday.UpcomingBirthdayDate
+  nameWithType: Birthday.UpcomingBirthdayDate
+  fullName: KWiJisho.Utils.Birthday.UpcomingBirthdayDate
+  spec.csharp:
+  - uid: KWiJisho.Utils.Birthday
+    name: Birthday
+    href: KWiJisho.Utils.Birthday.html
+  - name: .
+  - uid: KWiJisho.Utils.Birthday.UpcomingBirthdayDate
+    name: UpcomingBirthdayDate
+    href: KWiJisho.Utils.Birthday.UpcomingBirthdayDate.html
+  spec.vb:
+  - uid: KWiJisho.Utils.Birthday
+    name: Birthday
+    href: KWiJisho.Utils.Birthday.html
+  - name: .
+  - uid: KWiJisho.Utils.Birthday.UpcomingBirthdayDate
+    name: UpcomingBirthdayDate
+    href: KWiJisho.Utils.Birthday.UpcomingBirthdayDate.html
+- uid: System.NotImplementedException
+  commentId: T:System.NotImplementedException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.notimplementedexception
+  name: NotImplementedException
+  nameWithType: NotImplementedException
+  fullName: System.NotImplementedException
+- uid: KWiJisho.Utils.Birthday.GetUpcomingBirthdayDate*
+  commentId: Overload:KWiJisho.Utils.Birthday.GetUpcomingBirthdayDate
+  href: KWiJisho.Utils.Birthday.GetUpcomingBirthdayDate.html#KWiJisho_Utils_Birthday_GetUpcomingBirthdayDate_System_Double_
+  name: GetUpcomingBirthdayDate
+  nameWithType: Birthday.GetUpcomingBirthdayDate
+  fullName: KWiJisho.Utils.Birthday.GetUpcomingBirthdayDate
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: KWiJisho.Utils.Birthday.GenerateBirthdayMessage*
+  commentId: Overload:KWiJisho.Utils.Birthday.GenerateBirthdayMessage
+  href: KWiJisho.Utils.Birthday.GenerateBirthdayMessage.html#KWiJisho_Utils_Birthday_GenerateBirthdayMessage_KWiJisho_Entities_User_
+  name: GenerateBirthdayMessage
+  nameWithType: Birthday.GenerateBirthdayMessage
+  fullName: KWiJisho.Utils.Birthday.GenerateBirthdayMessage
+memberLayout: SeparatePages

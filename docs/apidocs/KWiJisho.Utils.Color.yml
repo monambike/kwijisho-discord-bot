@@ -1,0 +1,626 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Utils.Color
+  commentId: T:KWiJisho.Utils.Color
+  id: Color
+  parent: KWiJisho.Utils
+  children:
+  - KWiJisho.Utils.Color.#ctor(System.Byte,System.Byte,System.Byte)
+  - KWiJisho.Utils.Color.Blue
+  - KWiJisho.Utils.Color.DiscordColor
+  - KWiJisho.Utils.Color.Green
+  - KWiJisho.Utils.Color.Hexadecimal
+  - KWiJisho.Utils.Color.Red
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: Color
+  fullName: KWiJisho.Utils.Color
+  type: Class
+  source:
+    remote:
+      path: src/Utils/Color.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Color
+    path: ../src/Utils/Color.cs
+    startLine: 8
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Represents an RGB color with red, green, and blue components.
+  example: []
+  syntax:
+    content: internal class Color
+    content.vb: Friend Class Color
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: KWiJisho.Utils.Color.#ctor(System.Byte,System.Byte,System.Byte)
+  commentId: M:KWiJisho.Utils.Color.#ctor(System.Byte,System.Byte,System.Byte)
+  id: '#ctor(System.Byte,System.Byte,System.Byte)'
+  parent: KWiJisho.Utils.Color
+  langs:
+  - csharp
+  - vb
+  name: Color(byte, byte, byte)
+  nameWithType: Color.Color(byte, byte, byte)
+  fullName: KWiJisho.Utils.Color.Color(byte, byte, byte)
+  type: Constructor
+  source:
+    remote:
+      path: src/Utils/Color.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: .ctor
+    path: ../src/Utils/Color.cs
+    startLine: 8
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Represents an RGB color with red, green, and blue components.
+  example: []
+  syntax:
+    content: public Color(byte red, byte green, byte blue)
+    parameters:
+    - id: red
+      type: System.Byte
+    - id: green
+      type: System.Byte
+    - id: blue
+      type: System.Byte
+    content.vb: Public Sub New(red As Byte, green As Byte, blue As Byte)
+  overload: KWiJisho.Utils.Color.#ctor*
+  nameWithType.vb: Color.New(Byte, Byte, Byte)
+  fullName.vb: KWiJisho.Utils.Color.New(Byte, Byte, Byte)
+  name.vb: New(Byte, Byte, Byte)
+- uid: KWiJisho.Utils.Color.Red
+  commentId: P:KWiJisho.Utils.Color.Red
+  id: Red
+  parent: KWiJisho.Utils.Color
+  langs:
+  - csharp
+  - vb
+  name: Red
+  nameWithType: Color.Red
+  fullName: KWiJisho.Utils.Color.Red
+  type: Property
+  source:
+    remote:
+      path: src/Utils/Color.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Red
+    path: ../src/Utils/Color.cs
+    startLine: 13
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Gets or sets the red component of the RGB color.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("red")]
+
+      internal byte Red { get; set; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: >-
+      <JsonProperty("red")>
+
+      Friend Property Red As Byte
+  overload: KWiJisho.Utils.Color.Red*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: red
+- uid: KWiJisho.Utils.Color.Green
+  commentId: P:KWiJisho.Utils.Color.Green
+  id: Green
+  parent: KWiJisho.Utils.Color
+  langs:
+  - csharp
+  - vb
+  name: Green
+  nameWithType: Color.Green
+  fullName: KWiJisho.Utils.Color.Green
+  type: Property
+  source:
+    remote:
+      path: src/Utils/Color.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Green
+    path: ../src/Utils/Color.cs
+    startLine: 19
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Gets or sets the green component of the RGB color.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("green")]
+
+      internal byte Green { get; set; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: >-
+      <JsonProperty("green")>
+
+      Friend Property Green As Byte
+  overload: KWiJisho.Utils.Color.Green*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: green
+- uid: KWiJisho.Utils.Color.Blue
+  commentId: P:KWiJisho.Utils.Color.Blue
+  id: Blue
+  parent: KWiJisho.Utils.Color
+  langs:
+  - csharp
+  - vb
+  name: Blue
+  nameWithType: Color.Blue
+  fullName: KWiJisho.Utils.Color.Blue
+  type: Property
+  source:
+    remote:
+      path: src/Utils/Color.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Blue
+    path: ../src/Utils/Color.cs
+    startLine: 25
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Gets or sets the blue component of the RGB color.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("blue")]
+
+      internal byte Blue { get; set; }
+    parameters: []
+    return:
+      type: System.Byte
+    content.vb: >-
+      <JsonProperty("blue")>
+
+      Friend Property Blue As Byte
+  overload: KWiJisho.Utils.Color.Blue*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: blue
+- uid: KWiJisho.Utils.Color.DiscordColor
+  commentId: P:KWiJisho.Utils.Color.DiscordColor
+  id: DiscordColor
+  parent: KWiJisho.Utils.Color
+  langs:
+  - csharp
+  - vb
+  name: DiscordColor
+  nameWithType: Color.DiscordColor
+  fullName: KWiJisho.Utils.Color.DiscordColor
+  type: Property
+  source:
+    remote:
+      path: src/Utils/Color.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: DiscordColor
+    path: ../src/Utils/Color.cs
+    startLine: 31
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Gets a Discord color representation based on the RGB components.
+  example: []
+  syntax:
+    content: internal DiscordColor DiscordColor { get; }
+    parameters: []
+    return:
+      type: DSharpPlus.Entities.DiscordColor
+    content.vb: Friend ReadOnly Property DiscordColor As DiscordColor
+  overload: KWiJisho.Utils.Color.DiscordColor*
+- uid: KWiJisho.Utils.Color.Hexadecimal
+  commentId: P:KWiJisho.Utils.Color.Hexadecimal
+  id: Hexadecimal
+  parent: KWiJisho.Utils.Color
+  langs:
+  - csharp
+  - vb
+  name: Hexadecimal
+  nameWithType: Color.Hexadecimal
+  fullName: KWiJisho.Utils.Color.Hexadecimal
+  type: Property
+  source:
+    remote:
+      path: src/Utils/Color.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Hexadecimal
+    path: ../src/Utils/Color.cs
+    startLine: 36
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Gets a Hexadecimal color representation based on the RGB components.
+  example: []
+  syntax:
+    content: internal string Hexadecimal { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Friend ReadOnly Property Hexadecimal As String
+  overload: KWiJisho.Utils.Color.Hexadecimal*
+references:
+- uid: KWiJisho.Utils
+  commentId: N:KWiJisho.Utils
+  href: KWiJisho.html
+  name: KWiJisho.Utils
+  nameWithType: KWiJisho.Utils
+  fullName: KWiJisho.Utils
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Utils
+    name: Utils
+    href: KWiJisho.Utils.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Utils
+    name: Utils
+    href: KWiJisho.Utils.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: KWiJisho.Utils.Color.#ctor*
+  commentId: Overload:KWiJisho.Utils.Color.#ctor
+  href: KWiJisho.Utils.Color.-ctor.html#KWiJisho_Utils_Color__ctor_System_Byte_System_Byte_System_Byte_
+  name: Color
+  nameWithType: Color.Color
+  fullName: KWiJisho.Utils.Color.Color
+  nameWithType.vb: Color.New
+  fullName.vb: KWiJisho.Utils.Color.New
+  name.vb: New
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: KWiJisho.Utils.Color.Red*
+  commentId: Overload:KWiJisho.Utils.Color.Red
+  href: KWiJisho.Utils.Color.Red.html#KWiJisho_Utils_Color_Red
+  name: Red
+  nameWithType: Color.Red
+  fullName: KWiJisho.Utils.Color.Red
+- uid: KWiJisho.Utils.Color.Green*
+  commentId: Overload:KWiJisho.Utils.Color.Green
+  href: KWiJisho.Utils.Color.Green.html#KWiJisho_Utils_Color_Green
+  name: Green
+  nameWithType: Color.Green
+  fullName: KWiJisho.Utils.Color.Green
+- uid: KWiJisho.Utils.Color.Blue*
+  commentId: Overload:KWiJisho.Utils.Color.Blue
+  href: KWiJisho.Utils.Color.Blue.html#KWiJisho_Utils_Color_Blue
+  name: Blue
+  nameWithType: Color.Blue
+  fullName: KWiJisho.Utils.Color.Blue
+- uid: KWiJisho.Utils.Color.DiscordColor*
+  commentId: Overload:KWiJisho.Utils.Color.DiscordColor
+  href: KWiJisho.Utils.Color.DiscordColor.html#KWiJisho_Utils_Color_DiscordColor
+  name: DiscordColor
+  nameWithType: Color.DiscordColor
+  fullName: KWiJisho.Utils.Color.DiscordColor
+- uid: DSharpPlus.Entities.DiscordColor
+  commentId: T:DSharpPlus.Entities.DiscordColor
+  parent: DSharpPlus.Entities
+  isExternal: true
+  name: DiscordColor
+  nameWithType: DiscordColor
+  fullName: DSharpPlus.Entities.DiscordColor
+- uid: DSharpPlus.Entities
+  commentId: N:DSharpPlus.Entities
+  isExternal: true
+  name: DSharpPlus.Entities
+  nameWithType: DSharpPlus.Entities
+  fullName: DSharpPlus.Entities
+  spec.csharp:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.Entities
+    name: Entities
+    isExternal: true
+  spec.vb:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.Entities
+    name: Entities
+    isExternal: true
+- uid: KWiJisho.Utils.Color.Hexadecimal*
+  commentId: Overload:KWiJisho.Utils.Color.Hexadecimal
+  href: KWiJisho.Utils.Color.Hexadecimal.html#KWiJisho_Utils_Color_Hexadecimal
+  name: Hexadecimal
+  nameWithType: Color.Hexadecimal
+  fullName: KWiJisho.Utils.Color.Hexadecimal
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+memberLayout: SeparatePages

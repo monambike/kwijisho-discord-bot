@@ -1,0 +1,105 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Commands.Slash
+  commentId: N:KWiJisho.Commands.Slash
+  id: KWiJisho.Commands.Slash
+  children:
+  - KWiJisho.Commands.Slash.SlashBasic
+  - KWiJisho.Commands.Slash.SlashBasic.Emoji
+  - KWiJisho.Commands.Slash.SlashBirthday
+  - KWiJisho.Commands.Slash.SlashInfo
+  - KWiJisho.Commands.Slash.SlashKwiGpt
+  - KWiJisho.Commands.Slash.SlashNasa
+  - KWiJisho.Commands.Slash.SlashNasa.Emoji
+  - KWiJisho.Commands.Slash.SlashNotice
+  langs:
+  - csharp
+  - vb
+  name: KWiJisho.Commands.Slash
+  nameWithType: KWiJisho.Commands.Slash
+  fullName: KWiJisho.Commands.Slash
+  type: Namespace
+  assemblies:
+  - KWiJisho
+references:
+- uid: KWiJisho.Commands.Slash.SlashBasic
+  commentId: T:KWiJisho.Commands.Slash.SlashBasic
+  href: KWiJisho.Commands.Slash.SlashBasic.html
+  name: SlashBasic
+  nameWithType: SlashBasic
+  fullName: KWiJisho.Commands.Slash.SlashBasic
+- uid: KWiJisho.Commands.Slash.SlashBasic.Emoji
+  commentId: T:KWiJisho.Commands.Slash.SlashBasic.Emoji
+  href: KWiJisho.Commands.Slash.SlashBasic.html
+  name: SlashBasic.Emoji
+  nameWithType: SlashBasic.Emoji
+  fullName: KWiJisho.Commands.Slash.SlashBasic.Emoji
+  spec.csharp:
+  - uid: KWiJisho.Commands.Slash.SlashBasic
+    name: SlashBasic
+    href: KWiJisho.Commands.Slash.SlashBasic.html
+  - name: .
+  - uid: KWiJisho.Commands.Slash.SlashBasic.Emoji
+    name: Emoji
+    href: KWiJisho.Commands.Slash.SlashBasic.Emoji.html
+  spec.vb:
+  - uid: KWiJisho.Commands.Slash.SlashBasic
+    name: SlashBasic
+    href: KWiJisho.Commands.Slash.SlashBasic.html
+  - name: .
+  - uid: KWiJisho.Commands.Slash.SlashBasic.Emoji
+    name: Emoji
+    href: KWiJisho.Commands.Slash.SlashBasic.Emoji.html
+- uid: KWiJisho.Commands.Slash.SlashBirthday
+  commentId: T:KWiJisho.Commands.Slash.SlashBirthday
+  href: KWiJisho.Commands.Slash.SlashBirthday.html
+  name: SlashBirthday
+  nameWithType: SlashBirthday
+  fullName: KWiJisho.Commands.Slash.SlashBirthday
+- uid: KWiJisho.Commands.Slash.SlashInfo
+  commentId: T:KWiJisho.Commands.Slash.SlashInfo
+  href: KWiJisho.Commands.Slash.SlashInfo.html
+  name: SlashInfo
+  nameWithType: SlashInfo
+  fullName: KWiJisho.Commands.Slash.SlashInfo
+- uid: KWiJisho.Commands.Slash.SlashKwiGpt
+  commentId: T:KWiJisho.Commands.Slash.SlashKwiGpt
+  href: KWiJisho.Commands.Slash.SlashKwiGpt.html
+  name: SlashKwiGpt
+  nameWithType: SlashKwiGpt
+  fullName: KWiJisho.Commands.Slash.SlashKwiGpt
+- uid: KWiJisho.Commands.Slash.SlashNasa
+  commentId: T:KWiJisho.Commands.Slash.SlashNasa
+  href: KWiJisho.Commands.Slash.SlashNasa.html
+  name: SlashNasa
+  nameWithType: SlashNasa
+  fullName: KWiJisho.Commands.Slash.SlashNasa
+- uid: KWiJisho.Commands.Slash.SlashNasa.Emoji
+  commentId: T:KWiJisho.Commands.Slash.SlashNasa.Emoji
+  href: KWiJisho.Commands.Slash.SlashNasa.html
+  name: SlashNasa.Emoji
+  nameWithType: SlashNasa.Emoji
+  fullName: KWiJisho.Commands.Slash.SlashNasa.Emoji
+  spec.csharp:
+  - uid: KWiJisho.Commands.Slash.SlashNasa
+    name: SlashNasa
+    href: KWiJisho.Commands.Slash.SlashNasa.html
+  - name: .
+  - uid: KWiJisho.Commands.Slash.SlashNasa.Emoji
+    name: Emoji
+    href: KWiJisho.Commands.Slash.SlashNasa.Emoji.html
+  spec.vb:
+  - uid: KWiJisho.Commands.Slash.SlashNasa
+    name: SlashNasa
+    href: KWiJisho.Commands.Slash.SlashNasa.html
+  - name: .
+  - uid: KWiJisho.Commands.Slash.SlashNasa.Emoji
+    name: Emoji
+    href: KWiJisho.Commands.Slash.SlashNasa.Emoji.html
+- uid: KWiJisho.Commands.Slash.SlashNotice
+  commentId: T:KWiJisho.Commands.Slash.SlashNotice
+  href: KWiJisho.Commands.Slash.SlashNotice.html
+  name: SlashNotice
+  nameWithType: SlashNotice
+  fullName: KWiJisho.Commands.Slash.SlashNotice
+memberLayout: SeparatePages

@@ -1,0 +1,739 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Entities.ConfigJson
+  commentId: T:KWiJisho.Entities.ConfigJson
+  id: ConfigJson
+  parent: KWiJisho.Entities
+  children:
+  - KWiJisho.Entities.ConfigJson.Activity
+  - KWiJisho.Entities.ConfigJson.ChatGptToken
+  - KWiJisho.Entities.ConfigJson.DefaultColor
+  - KWiJisho.Entities.ConfigJson.DeserializeConfigJsonFileAsync
+  - KWiJisho.Entities.ConfigJson.KWiJishoToken
+  - KWiJisho.Entities.ConfigJson.NasaToken
+  - KWiJisho.Entities.ConfigJson.Prefix
+  langs:
+  - csharp
+  - vb
+  name: ConfigJson
+  nameWithType: ConfigJson
+  fullName: KWiJisho.Entities.ConfigJson
+  type: Struct
+  source:
+    remote:
+      path: src/Entities/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ConfigJson
+    path: ../src/Entities/ConfigJson.cs
+    startLine: 11
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Entities
+  summary: Class that represents the ConfigJson file for configuring the discord bot.
+  example: []
+  syntax:
+    content: internal struct ConfigJson
+    content.vb: Friend Structure ConfigJson
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: KWiJisho.Entities.ConfigJson.KWiJishoToken
+  commentId: P:KWiJisho.Entities.ConfigJson.KWiJishoToken
+  id: KWiJishoToken
+  parent: KWiJisho.Entities.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: KWiJishoToken
+  nameWithType: ConfigJson.KWiJishoToken
+  fullName: KWiJisho.Entities.ConfigJson.KWiJishoToken
+  type: Property
+  source:
+    remote:
+      path: src/Entities/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: KWiJishoToken
+    path: ../src/Entities/ConfigJson.cs
+    startLine: 16
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Entities
+  summary: Gets or sets the Discord bot token for the KWiJisho module.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("kwijishoToken")]
+
+      internal string KWiJishoToken { readonly get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("kwijishoToken")>
+
+      Friend Property KWiJishoToken As String
+  overload: KWiJisho.Entities.ConfigJson.KWiJishoToken*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: kwijishoToken
+- uid: KWiJisho.Entities.ConfigJson.ChatGptToken
+  commentId: P:KWiJisho.Entities.ConfigJson.ChatGptToken
+  id: ChatGptToken
+  parent: KWiJisho.Entities.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: ChatGptToken
+  nameWithType: ConfigJson.ChatGptToken
+  fullName: KWiJisho.Entities.ConfigJson.ChatGptToken
+  type: Property
+  source:
+    remote:
+      path: src/Entities/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ChatGptToken
+    path: ../src/Entities/ConfigJson.cs
+    startLine: 22
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Entities
+  summary: Gets or sets the API token for accessing ChatGPT's services.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("chatgptToken")]
+
+      internal string ChatGptToken { readonly get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("chatgptToken")>
+
+      Friend Property ChatGptToken As String
+  overload: KWiJisho.Entities.ConfigJson.ChatGptToken*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: chatgptToken
+- uid: KWiJisho.Entities.ConfigJson.NasaToken
+  commentId: P:KWiJisho.Entities.ConfigJson.NasaToken
+  id: NasaToken
+  parent: KWiJisho.Entities.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: NasaToken
+  nameWithType: ConfigJson.NasaToken
+  fullName: KWiJisho.Entities.ConfigJson.NasaToken
+  type: Property
+  source:
+    remote:
+      path: src/Entities/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: NasaToken
+    path: ../src/Entities/ConfigJson.cs
+    startLine: 28
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Entities
+  summary: Gets or sets the API token for accessing NASA's services.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("nasaToken")]
+
+      internal string NasaToken { readonly get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("nasaToken")>
+
+      Friend Property NasaToken As String
+  overload: KWiJisho.Entities.ConfigJson.NasaToken*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: nasaToken
+- uid: KWiJisho.Entities.ConfigJson.Prefix
+  commentId: P:KWiJisho.Entities.ConfigJson.Prefix
+  id: Prefix
+  parent: KWiJisho.Entities.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: Prefix
+  nameWithType: ConfigJson.Prefix
+  fullName: KWiJisho.Entities.ConfigJson.Prefix
+  type: Property
+  source:
+    remote:
+      path: src/Entities/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Prefix
+    path: ../src/Entities/ConfigJson.cs
+    startLine: 34
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Entities
+  summary: Gets or sets the prefix used for Discord bot commands.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("prefix")]
+
+      internal string Prefix { readonly get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("prefix")>
+
+      Friend Property Prefix As String
+  overload: KWiJisho.Entities.ConfigJson.Prefix*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: prefix
+- uid: KWiJisho.Entities.ConfigJson.Activity
+  commentId: P:KWiJisho.Entities.ConfigJson.Activity
+  id: Activity
+  parent: KWiJisho.Entities.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: Activity
+  nameWithType: ConfigJson.Activity
+  fullName: KWiJisho.Entities.ConfigJson.Activity
+  type: Property
+  source:
+    remote:
+      path: src/Entities/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Activity
+    path: ../src/Entities/ConfigJson.cs
+    startLine: 40
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Entities
+  summary: Gets or sets the activity status message for the Discord bot.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("activity")]
+
+      internal string Activity { readonly get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("activity")>
+
+      Friend Property Activity As String
+  overload: KWiJisho.Entities.ConfigJson.Activity*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: activity
+- uid: KWiJisho.Entities.ConfigJson.DefaultColor
+  commentId: P:KWiJisho.Entities.ConfigJson.DefaultColor
+  id: DefaultColor
+  parent: KWiJisho.Entities.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: DefaultColor
+  nameWithType: ConfigJson.DefaultColor
+  fullName: KWiJisho.Entities.ConfigJson.DefaultColor
+  type: Property
+  source:
+    remote:
+      path: src/Entities/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: DefaultColor
+    path: ../src/Entities/ConfigJson.cs
+    startLine: 46
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Entities
+  summary: Gets or sets the default color used for Discord bot embeds.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("defaultColor")]
+
+      internal Color DefaultColor { readonly get; set; }
+    parameters: []
+    return:
+      type: KWiJisho.Entities.Color
+    content.vb: >-
+      <JsonProperty("defaultColor")>
+
+      Friend Property DefaultColor As Color
+  overload: KWiJisho.Entities.ConfigJson.DefaultColor*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: defaultColor
+- uid: KWiJisho.Entities.ConfigJson.DeserializeConfigJsonFileAsync
+  commentId: M:KWiJisho.Entities.ConfigJson.DeserializeConfigJsonFileAsync
+  id: DeserializeConfigJsonFileAsync
+  parent: KWiJisho.Entities.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: DeserializeConfigJsonFileAsync()
+  nameWithType: ConfigJson.DeserializeConfigJsonFileAsync()
+  fullName: KWiJisho.Entities.ConfigJson.DeserializeConfigJsonFileAsync()
+  type: Method
+  source:
+    remote:
+      path: src/Entities/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: DeserializeConfigJsonFileAsync
+    path: ../src/Entities/ConfigJson.cs
+    startLine: 53
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Entities
+  summary: Asynchronously deserializes the content of the config.json file into a <xref href="KWiJisho.Entities.ConfigJson" data-throw-if-not-resolved="false"></xref> instance.
+  example: []
+  syntax:
+    content: internal static Task<ConfigJson> DeserializeConfigJsonFileAsync()
+    return:
+      type: System.Threading.Tasks.Task{KWiJisho.Entities.ConfigJson}
+      description: A <xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref> representing the asynchronous operation, yielding a <xref href="KWiJisho.Entities.ConfigJson" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Friend Shared Function DeserializeConfigJsonFileAsync() As Task(Of ConfigJson)
+  overload: KWiJisho.Entities.ConfigJson.DeserializeConfigJsonFileAsync*
+references:
+- uid: KWiJisho.Entities
+  commentId: N:KWiJisho.Entities
+  href: KWiJisho.html
+  name: KWiJisho.Entities
+  nameWithType: KWiJisho.Entities
+  fullName: KWiJisho.Entities
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Entities
+    name: Entities
+    href: KWiJisho.Entities.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Entities
+    name: Entities
+    href: KWiJisho.Entities.html
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: KWiJisho.Entities.ConfigJson.KWiJishoToken*
+  commentId: Overload:KWiJisho.Entities.ConfigJson.KWiJishoToken
+  href: KWiJisho.Entities.ConfigJson.KWiJishoToken.html#KWiJisho_Entities_ConfigJson_KWiJishoToken
+  name: KWiJishoToken
+  nameWithType: ConfigJson.KWiJishoToken
+  fullName: KWiJisho.Entities.ConfigJson.KWiJishoToken
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: KWiJisho.Entities.ConfigJson.ChatGptToken*
+  commentId: Overload:KWiJisho.Entities.ConfigJson.ChatGptToken
+  href: KWiJisho.Entities.ConfigJson.ChatGptToken.html#KWiJisho_Entities_ConfigJson_ChatGptToken
+  name: ChatGptToken
+  nameWithType: ConfigJson.ChatGptToken
+  fullName: KWiJisho.Entities.ConfigJson.ChatGptToken
+- uid: KWiJisho.Entities.ConfigJson.NasaToken*
+  commentId: Overload:KWiJisho.Entities.ConfigJson.NasaToken
+  href: KWiJisho.Entities.ConfigJson.NasaToken.html#KWiJisho_Entities_ConfigJson_NasaToken
+  name: NasaToken
+  nameWithType: ConfigJson.NasaToken
+  fullName: KWiJisho.Entities.ConfigJson.NasaToken
+- uid: KWiJisho.Entities.ConfigJson.Prefix*
+  commentId: Overload:KWiJisho.Entities.ConfigJson.Prefix
+  href: KWiJisho.Entities.ConfigJson.Prefix.html#KWiJisho_Entities_ConfigJson_Prefix
+  name: Prefix
+  nameWithType: ConfigJson.Prefix
+  fullName: KWiJisho.Entities.ConfigJson.Prefix
+- uid: KWiJisho.Entities.ConfigJson.Activity*
+  commentId: Overload:KWiJisho.Entities.ConfigJson.Activity
+  href: KWiJisho.Entities.ConfigJson.Activity.html#KWiJisho_Entities_ConfigJson_Activity
+  name: Activity
+  nameWithType: ConfigJson.Activity
+  fullName: KWiJisho.Entities.ConfigJson.Activity
+- uid: KWiJisho.Entities.ConfigJson.DefaultColor*
+  commentId: Overload:KWiJisho.Entities.ConfigJson.DefaultColor
+  href: KWiJisho.Entities.ConfigJson.DefaultColor.html#KWiJisho_Entities_ConfigJson_DefaultColor
+  name: DefaultColor
+  nameWithType: ConfigJson.DefaultColor
+  fullName: KWiJisho.Entities.ConfigJson.DefaultColor
+- uid: KWiJisho.Entities.Color
+  commentId: T:KWiJisho.Entities.Color
+  parent: KWiJisho.Entities
+  href: KWiJisho.Entities.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: KWiJisho.Entities.Color
+- uid: KWiJisho.Entities.ConfigJson
+  commentId: T:KWiJisho.Entities.ConfigJson
+  parent: KWiJisho.Entities
+  href: KWiJisho.Entities.ConfigJson.html
+  name: ConfigJson
+  nameWithType: ConfigJson
+  fullName: KWiJisho.Entities.ConfigJson
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: KWiJisho.Entities.ConfigJson.DeserializeConfigJsonFileAsync*
+  commentId: Overload:KWiJisho.Entities.ConfigJson.DeserializeConfigJsonFileAsync
+  href: KWiJisho.Entities.ConfigJson.DeserializeConfigJsonFileAsync.html#KWiJisho_Entities_ConfigJson_DeserializeConfigJsonFileAsync
+  name: DeserializeConfigJsonFileAsync
+  nameWithType: ConfigJson.DeserializeConfigJsonFileAsync
+  fullName: KWiJisho.Entities.ConfigJson.DeserializeConfigJsonFileAsync
+- uid: System.Threading.Tasks.Task{KWiJisho.Entities.ConfigJson}
+  commentId: T:System.Threading.Tasks.Task{KWiJisho.Entities.ConfigJson}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ConfigJson>
+  nameWithType: Task<ConfigJson>
+  fullName: System.Threading.Tasks.Task<KWiJisho.Entities.ConfigJson>
+  nameWithType.vb: Task(Of ConfigJson)
+  fullName.vb: System.Threading.Tasks.Task(Of KWiJisho.Entities.ConfigJson)
+  name.vb: Task(Of ConfigJson)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: KWiJisho.Entities.ConfigJson
+    name: ConfigJson
+    href: KWiJisho.Entities.ConfigJson.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: KWiJisho.Entities.ConfigJson
+    name: ConfigJson
+    href: KWiJisho.Entities.ConfigJson.html
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+memberLayout: SeparatePages

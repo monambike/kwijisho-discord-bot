@@ -1,0 +1,98 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Utils
+  commentId: N:KWiJisho.Utils
+  id: KWiJisho.Utils
+  children:
+  - KWiJisho.Utils.DiscordCustomEmbed
+  - KWiJisho.Utils.DiscordFormat
+  - KWiJisho.Utils.KWiJishoLog
+  - KWiJisho.Utils.KWiJishoLog.LogType
+  - KWiJisho.Utils.KWiJishoPermission
+  - KWiJisho.Utils.UtilCollections
+  langs:
+  - csharp
+  - vb
+  name: KWiJisho.Utils
+  nameWithType: KWiJisho.Utils
+  fullName: KWiJisho.Utils
+  type: Namespace
+  assemblies:
+  - KWiJisho
+references:
+- uid: KWiJisho.Utils.DiscordCustomEmbed
+  commentId: T:KWiJisho.Utils.DiscordCustomEmbed
+  href: KWiJisho.Utils.DiscordCustomEmbed.html
+  name: DiscordCustomEmbed
+  nameWithType: DiscordCustomEmbed
+  fullName: KWiJisho.Utils.DiscordCustomEmbed
+- uid: KWiJisho.Utils.DiscordFormat
+  commentId: T:KWiJisho.Utils.DiscordFormat
+  href: KWiJisho.Utils.DiscordFormat.html
+  name: DiscordFormat
+  nameWithType: DiscordFormat
+  fullName: KWiJisho.Utils.DiscordFormat
+- uid: KWiJisho.Utils.KWiJishoLog
+  commentId: T:KWiJisho.Utils.KWiJishoLog
+  href: KWiJisho.Utils.KWiJishoLog.html
+  name: KWiJishoLog
+  nameWithType: KWiJishoLog
+  fullName: KWiJisho.Utils.KWiJishoLog
+- uid: KWiJisho.Utils.KWiJishoLog.LogType
+  commentId: T:KWiJisho.Utils.KWiJishoLog.LogType
+  parent: KWiJisho.Utils
+  href: KWiJisho.Utils.KWiJishoLog.html
+  name: KWiJishoLog.LogType
+  nameWithType: KWiJishoLog.LogType
+  fullName: KWiJisho.Utils.KWiJishoLog.LogType
+  spec.csharp:
+  - uid: KWiJisho.Utils.KWiJishoLog
+    name: KWiJishoLog
+    href: KWiJisho.Utils.KWiJishoLog.html
+  - name: .
+  - uid: KWiJisho.Utils.KWiJishoLog.LogType
+    name: LogType
+    href: KWiJisho.Utils.KWiJishoLog.LogType.html
+  spec.vb:
+  - uid: KWiJisho.Utils.KWiJishoLog
+    name: KWiJishoLog
+    href: KWiJisho.Utils.KWiJishoLog.html
+  - name: .
+  - uid: KWiJisho.Utils.KWiJishoLog.LogType
+    name: LogType
+    href: KWiJisho.Utils.KWiJishoLog.LogType.html
+- uid: KWiJisho.Utils.KWiJishoPermission
+  commentId: T:KWiJisho.Utils.KWiJishoPermission
+  href: KWiJisho.Utils.KWiJishoPermission.html
+  name: KWiJishoPermission
+  nameWithType: KWiJishoPermission
+  fullName: KWiJisho.Utils.KWiJishoPermission
+- uid: KWiJisho.Utils.UtilCollections
+  commentId: T:KWiJisho.Utils.UtilCollections
+  href: KWiJisho.Utils.UtilCollections.html
+  name: UtilCollections
+  nameWithType: UtilCollections
+  fullName: KWiJisho.Utils.UtilCollections
+- uid: KWiJisho.Utils
+  commentId: N:KWiJisho.Utils
+  href: KWiJisho.html
+  name: KWiJisho.Utils
+  nameWithType: KWiJisho.Utils
+  fullName: KWiJisho.Utils
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Utils
+    name: Utils
+    href: KWiJisho.Utils.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Utils
+    name: Utils
+    href: KWiJisho.Utils.html
+memberLayout: SeparatePages

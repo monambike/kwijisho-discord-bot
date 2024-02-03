@@ -1,0 +1,1311 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.ConfigJson
+  commentId: T:KWiJisho.ConfigJson
+  id: ConfigJson
+  parent: KWiJisho
+  children:
+  - KWiJisho.ConfigJson.Activity
+  - KWiJisho.ConfigJson.ChatGptToken
+  - KWiJisho.ConfigJson.ConfigJsonActivity
+  - KWiJisho.ConfigJson.ConfigJsonChatGptToken
+  - KWiJisho.ConfigJson.ConfigJsonKWiJishoToken
+  - KWiJisho.ConfigJson.ConfigJsonNasaToken
+  - KWiJisho.ConfigJson.ConfigJsonPrefix
+  - KWiJisho.ConfigJson.ConfigJsonPurpleColor
+  - KWiJisho.ConfigJson.DefaultColor
+  - KWiJisho.ConfigJson.DeserializeConfigJsonFileAsync
+  - KWiJisho.ConfigJson.KWiJishoToken
+  - KWiJisho.ConfigJson.NasaToken
+  - KWiJisho.ConfigJson.Prefix
+  - KWiJisho.ConfigJson._configJsonActivity
+  - KWiJisho.ConfigJson._configJsonChatGptToken
+  - KWiJisho.ConfigJson._configJsonKWiJishoToken
+  - KWiJisho.ConfigJson._configJsonNasaToken
+  - KWiJisho.ConfigJson._configJsonPrefix
+  - KWiJisho.ConfigJson._configJsonPurpleColor
+  langs:
+  - csharp
+  - vb
+  name: ConfigJson
+  nameWithType: ConfigJson
+  fullName: KWiJisho.ConfigJson
+  type: Struct
+  source:
+    remote:
+      path: src/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ConfigJson
+    path: ../src/ConfigJson.cs
+    startLine: 12
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho
+  summary: Class that represents the ConfigJson file for configuring the discord bot.
+  example: []
+  syntax:
+    content: internal struct ConfigJson
+    content.vb: Friend Structure ConfigJson
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: KWiJisho.ConfigJson.KWiJishoToken
+  commentId: P:KWiJisho.ConfigJson.KWiJishoToken
+  id: KWiJishoToken
+  parent: KWiJisho.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: KWiJishoToken
+  nameWithType: ConfigJson.KWiJishoToken
+  fullName: KWiJisho.ConfigJson.KWiJishoToken
+  type: Property
+  source:
+    remote:
+      path: src/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: KWiJishoToken
+    path: ../src/ConfigJson.cs
+    startLine: 20
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho
+  summary: Gets or sets the API token for KWiJisho.
+  example: []
+  syntax:
+    content: internal static string KWiJishoToken { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Friend Shared Property KWiJishoToken As String
+  overload: KWiJisho.ConfigJson.KWiJishoToken*
+- uid: KWiJisho.ConfigJson.ChatGptToken
+  commentId: P:KWiJisho.ConfigJson.ChatGptToken
+  id: ChatGptToken
+  parent: KWiJisho.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: ChatGptToken
+  nameWithType: ConfigJson.ChatGptToken
+  fullName: KWiJisho.ConfigJson.ChatGptToken
+  type: Property
+  source:
+    remote:
+      path: src/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ChatGptToken
+    path: ../src/ConfigJson.cs
+    startLine: 25
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho
+  summary: Gets or sets the API token for ChatGPT.
+  example: []
+  syntax:
+    content: internal static string ChatGptToken { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Friend Shared Property ChatGptToken As String
+  overload: KWiJisho.ConfigJson.ChatGptToken*
+- uid: KWiJisho.ConfigJson.NasaToken
+  commentId: P:KWiJisho.ConfigJson.NasaToken
+  id: NasaToken
+  parent: KWiJisho.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: NasaToken
+  nameWithType: ConfigJson.NasaToken
+  fullName: KWiJisho.ConfigJson.NasaToken
+  type: Property
+  source:
+    remote:
+      path: src/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: NasaToken
+    path: ../src/ConfigJson.cs
+    startLine: 30
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho
+  summary: Gets or sets the API token for NASA.
+  example: []
+  syntax:
+    content: internal static string NasaToken { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Friend Shared Property NasaToken As String
+  overload: KWiJisho.ConfigJson.NasaToken*
+- uid: KWiJisho.ConfigJson.Prefix
+  commentId: P:KWiJisho.ConfigJson.Prefix
+  id: Prefix
+  parent: KWiJisho.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: Prefix
+  nameWithType: ConfigJson.Prefix
+  fullName: KWiJisho.ConfigJson.Prefix
+  type: Property
+  source:
+    remote:
+      path: src/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Prefix
+    path: ../src/ConfigJson.cs
+    startLine: 35
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho
+  summary: Gets or sets the command prefix for the bot.
+  example: []
+  syntax:
+    content: internal static string Prefix { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Friend Shared Property Prefix As String
+  overload: KWiJisho.ConfigJson.Prefix*
+- uid: KWiJisho.ConfigJson.Activity
+  commentId: P:KWiJisho.ConfigJson.Activity
+  id: Activity
+  parent: KWiJisho.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: Activity
+  nameWithType: ConfigJson.Activity
+  fullName: KWiJisho.ConfigJson.Activity
+  type: Property
+  source:
+    remote:
+      path: src/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Activity
+    path: ../src/ConfigJson.cs
+    startLine: 40
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho
+  summary: Gets or sets the default bot activity.
+  example: []
+  syntax:
+    content: internal static string Activity { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Friend Shared Property Activity As String
+  overload: KWiJisho.ConfigJson.Activity*
+- uid: KWiJisho.ConfigJson.DefaultColor
+  commentId: P:KWiJisho.ConfigJson.DefaultColor
+  id: DefaultColor
+  parent: KWiJisho.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: DefaultColor
+  nameWithType: ConfigJson.DefaultColor
+  fullName: KWiJisho.ConfigJson.DefaultColor
+  type: Property
+  source:
+    remote:
+      path: src/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: DefaultColor
+    path: ../src/ConfigJson.cs
+    startLine: 45
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho
+  summary: Gets or sets the default color for bot messages.
+  example: []
+  syntax:
+    content: internal static Color DefaultColor { get; set; }
+    parameters: []
+    return:
+      type: KWiJisho.Entities.Color
+    content.vb: Friend Shared Property DefaultColor As Color
+  overload: KWiJisho.ConfigJson.DefaultColor*
+- uid: KWiJisho.ConfigJson._configJsonKWiJishoToken
+  commentId: F:KWiJisho.ConfigJson._configJsonKWiJishoToken
+  id: _configJsonKWiJishoToken
+  parent: KWiJisho.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: _configJsonKWiJishoToken
+  nameWithType: ConfigJson._configJsonKWiJishoToken
+  fullName: KWiJisho.ConfigJson._configJsonKWiJishoToken
+  type: Field
+  source:
+    remote:
+      path: src/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: _configJsonKWiJishoToken
+    path: ../src/ConfigJson.cs
+    startLine: 51
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho
+  syntax:
+    content: private string _configJsonKWiJishoToken
+    return:
+      type: System.String
+    content.vb: Private _configJsonKWiJishoToken As String
+- uid: KWiJisho.ConfigJson.ConfigJsonKWiJishoToken
+  commentId: P:KWiJisho.ConfigJson.ConfigJsonKWiJishoToken
+  id: ConfigJsonKWiJishoToken
+  parent: KWiJisho.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: ConfigJsonKWiJishoToken
+  nameWithType: ConfigJson.ConfigJsonKWiJishoToken
+  fullName: KWiJisho.ConfigJson.ConfigJsonKWiJishoToken
+  type: Property
+  source:
+    remote:
+      path: src/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ConfigJsonKWiJishoToken
+    path: ../src/ConfigJson.cs
+    startLine: 52
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho
+  syntax:
+    content: >-
+      [JsonProperty("kwijishoToken")]
+
+      [SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization.")]
+
+      [SuppressMessage("Style", "IDE0251:Make member 'readonly'", Justification = "It's being set on Json file.")]
+
+      private string ConfigJsonKWiJishoToken { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("kwijishoToken")>
+
+      <SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification:="It's being used in Json deserialization.")>
+
+      <SuppressMessage("Style", "IDE0251:Make member 'readonly'", Justification:="It's being set on Json file.")>
+
+      Private Property ConfigJsonKWiJishoToken As String
+  overload: KWiJisho.ConfigJson.ConfigJsonKWiJishoToken*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: kwijishoToken
+  - type: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.#ctor(System.String,System.String)
+    arguments:
+    - type: System.String
+      value: CodeQuality
+    - type: System.String
+      value: IDE0051:Remove unused private members
+    namedArguments:
+    - name: Justification
+      type: System.String
+      value: It's being used in Json deserialization.
+  - type: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.#ctor(System.String,System.String)
+    arguments:
+    - type: System.String
+      value: Style
+    - type: System.String
+      value: IDE0251:Make member 'readonly'
+    namedArguments:
+    - name: Justification
+      type: System.String
+      value: It's being set on Json file.
+- uid: KWiJisho.ConfigJson._configJsonChatGptToken
+  commentId: F:KWiJisho.ConfigJson._configJsonChatGptToken
+  id: _configJsonChatGptToken
+  parent: KWiJisho.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: _configJsonChatGptToken
+  nameWithType: ConfigJson._configJsonChatGptToken
+  fullName: KWiJisho.ConfigJson._configJsonChatGptToken
+  type: Field
+  source:
+    remote:
+      path: src/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: _configJsonChatGptToken
+    path: ../src/ConfigJson.cs
+    startLine: 68
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho
+  syntax:
+    content: private string _configJsonChatGptToken
+    return:
+      type: System.String
+    content.vb: Private _configJsonChatGptToken As String
+- uid: KWiJisho.ConfigJson.ConfigJsonChatGptToken
+  commentId: P:KWiJisho.ConfigJson.ConfigJsonChatGptToken
+  id: ConfigJsonChatGptToken
+  parent: KWiJisho.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: ConfigJsonChatGptToken
+  nameWithType: ConfigJson.ConfigJsonChatGptToken
+  fullName: KWiJisho.ConfigJson.ConfigJsonChatGptToken
+  type: Property
+  source:
+    remote:
+      path: src/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ConfigJsonChatGptToken
+    path: ../src/ConfigJson.cs
+    startLine: 69
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho
+  syntax:
+    content: >-
+      [JsonProperty("chatgptToken")]
+
+      [SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization.")]
+
+      [SuppressMessage("Style", "IDE0251:Make member 'readonly'", Justification = "It's being set on Json file.")]
+
+      private string ConfigJsonChatGptToken { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("chatgptToken")>
+
+      <SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification:="It's being used in Json deserialization.")>
+
+      <SuppressMessage("Style", "IDE0251:Make member 'readonly'", Justification:="It's being set on Json file.")>
+
+      Private Property ConfigJsonChatGptToken As String
+  overload: KWiJisho.ConfigJson.ConfigJsonChatGptToken*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: chatgptToken
+  - type: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.#ctor(System.String,System.String)
+    arguments:
+    - type: System.String
+      value: CodeQuality
+    - type: System.String
+      value: IDE0051:Remove unused private members
+    namedArguments:
+    - name: Justification
+      type: System.String
+      value: It's being used in Json deserialization.
+  - type: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.#ctor(System.String,System.String)
+    arguments:
+    - type: System.String
+      value: Style
+    - type: System.String
+      value: IDE0251:Make member 'readonly'
+    namedArguments:
+    - name: Justification
+      type: System.String
+      value: It's being set on Json file.
+- uid: KWiJisho.ConfigJson._configJsonNasaToken
+  commentId: F:KWiJisho.ConfigJson._configJsonNasaToken
+  id: _configJsonNasaToken
+  parent: KWiJisho.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: _configJsonNasaToken
+  nameWithType: ConfigJson._configJsonNasaToken
+  fullName: KWiJisho.ConfigJson._configJsonNasaToken
+  type: Field
+  source:
+    remote:
+      path: src/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: _configJsonNasaToken
+    path: ../src/ConfigJson.cs
+    startLine: 85
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho
+  syntax:
+    content: private string _configJsonNasaToken
+    return:
+      type: System.String
+    content.vb: Private _configJsonNasaToken As String
+- uid: KWiJisho.ConfigJson.ConfigJsonNasaToken
+  commentId: P:KWiJisho.ConfigJson.ConfigJsonNasaToken
+  id: ConfigJsonNasaToken
+  parent: KWiJisho.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: ConfigJsonNasaToken
+  nameWithType: ConfigJson.ConfigJsonNasaToken
+  fullName: KWiJisho.ConfigJson.ConfigJsonNasaToken
+  type: Property
+  source:
+    remote:
+      path: src/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ConfigJsonNasaToken
+    path: ../src/ConfigJson.cs
+    startLine: 86
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho
+  syntax:
+    content: >-
+      [JsonProperty("nasaToken")]
+
+      [SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization.")]
+
+      [SuppressMessage("Style", "IDE0251:Make member 'readonly'", Justification = "It's being set on Json file.")]
+
+      private string ConfigJsonNasaToken { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("nasaToken")>
+
+      <SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification:="It's being used in Json deserialization.")>
+
+      <SuppressMessage("Style", "IDE0251:Make member 'readonly'", Justification:="It's being set on Json file.")>
+
+      Private Property ConfigJsonNasaToken As String
+  overload: KWiJisho.ConfigJson.ConfigJsonNasaToken*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: nasaToken
+  - type: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.#ctor(System.String,System.String)
+    arguments:
+    - type: System.String
+      value: CodeQuality
+    - type: System.String
+      value: IDE0051:Remove unused private members
+    namedArguments:
+    - name: Justification
+      type: System.String
+      value: It's being used in Json deserialization.
+  - type: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.#ctor(System.String,System.String)
+    arguments:
+    - type: System.String
+      value: Style
+    - type: System.String
+      value: IDE0251:Make member 'readonly'
+    namedArguments:
+    - name: Justification
+      type: System.String
+      value: It's being set on Json file.
+- uid: KWiJisho.ConfigJson._configJsonPrefix
+  commentId: F:KWiJisho.ConfigJson._configJsonPrefix
+  id: _configJsonPrefix
+  parent: KWiJisho.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: _configJsonPrefix
+  nameWithType: ConfigJson._configJsonPrefix
+  fullName: KWiJisho.ConfigJson._configJsonPrefix
+  type: Field
+  source:
+    remote:
+      path: src/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: _configJsonPrefix
+    path: ../src/ConfigJson.cs
+    startLine: 102
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho
+  syntax:
+    content: private string _configJsonPrefix
+    return:
+      type: System.String
+    content.vb: Private _configJsonPrefix As String
+- uid: KWiJisho.ConfigJson.ConfigJsonPrefix
+  commentId: P:KWiJisho.ConfigJson.ConfigJsonPrefix
+  id: ConfigJsonPrefix
+  parent: KWiJisho.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: ConfigJsonPrefix
+  nameWithType: ConfigJson.ConfigJsonPrefix
+  fullName: KWiJisho.ConfigJson.ConfigJsonPrefix
+  type: Property
+  source:
+    remote:
+      path: src/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ConfigJsonPrefix
+    path: ../src/ConfigJson.cs
+    startLine: 103
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho
+  syntax:
+    content: >-
+      [JsonProperty("prefix")]
+
+      [SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization.")]
+
+      [SuppressMessage("Style", "IDE0251:Make member 'readonly'", Justification = "It's being set on Json file.")]
+
+      private string ConfigJsonPrefix { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("prefix")>
+
+      <SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification:="It's being used in Json deserialization.")>
+
+      <SuppressMessage("Style", "IDE0251:Make member 'readonly'", Justification:="It's being set on Json file.")>
+
+      Private Property ConfigJsonPrefix As String
+  overload: KWiJisho.ConfigJson.ConfigJsonPrefix*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: prefix
+  - type: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.#ctor(System.String,System.String)
+    arguments:
+    - type: System.String
+      value: CodeQuality
+    - type: System.String
+      value: IDE0051:Remove unused private members
+    namedArguments:
+    - name: Justification
+      type: System.String
+      value: It's being used in Json deserialization.
+  - type: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.#ctor(System.String,System.String)
+    arguments:
+    - type: System.String
+      value: Style
+    - type: System.String
+      value: IDE0251:Make member 'readonly'
+    namedArguments:
+    - name: Justification
+      type: System.String
+      value: It's being set on Json file.
+- uid: KWiJisho.ConfigJson._configJsonActivity
+  commentId: F:KWiJisho.ConfigJson._configJsonActivity
+  id: _configJsonActivity
+  parent: KWiJisho.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: _configJsonActivity
+  nameWithType: ConfigJson._configJsonActivity
+  fullName: KWiJisho.ConfigJson._configJsonActivity
+  type: Field
+  source:
+    remote:
+      path: src/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: _configJsonActivity
+    path: ../src/ConfigJson.cs
+    startLine: 108
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho
+  syntax:
+    content: private string _configJsonActivity
+    return:
+      type: System.String
+    content.vb: Private _configJsonActivity As String
+- uid: KWiJisho.ConfigJson.ConfigJsonActivity
+  commentId: P:KWiJisho.ConfigJson.ConfigJsonActivity
+  id: ConfigJsonActivity
+  parent: KWiJisho.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: ConfigJsonActivity
+  nameWithType: ConfigJson.ConfigJsonActivity
+  fullName: KWiJisho.ConfigJson.ConfigJsonActivity
+  type: Property
+  source:
+    remote:
+      path: src/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ConfigJsonActivity
+    path: ../src/ConfigJson.cs
+    startLine: 109
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho
+  syntax:
+    content: >-
+      [JsonProperty("activity")]
+
+      [SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization.")]
+
+      [SuppressMessage("Style", "IDE0251:Make member 'readonly'", Justification = "It's being set on Json file.")]
+
+      private string ConfigJsonActivity { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("activity")>
+
+      <SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification:="It's being used in Json deserialization.")>
+
+      <SuppressMessage("Style", "IDE0251:Make member 'readonly'", Justification:="It's being set on Json file.")>
+
+      Private Property ConfigJsonActivity As String
+  overload: KWiJisho.ConfigJson.ConfigJsonActivity*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: activity
+  - type: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.#ctor(System.String,System.String)
+    arguments:
+    - type: System.String
+      value: CodeQuality
+    - type: System.String
+      value: IDE0051:Remove unused private members
+    namedArguments:
+    - name: Justification
+      type: System.String
+      value: It's being used in Json deserialization.
+  - type: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.#ctor(System.String,System.String)
+    arguments:
+    - type: System.String
+      value: Style
+    - type: System.String
+      value: IDE0251:Make member 'readonly'
+    namedArguments:
+    - name: Justification
+      type: System.String
+      value: It's being set on Json file.
+- uid: KWiJisho.ConfigJson._configJsonPurpleColor
+  commentId: F:KWiJisho.ConfigJson._configJsonPurpleColor
+  id: _configJsonPurpleColor
+  parent: KWiJisho.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: _configJsonPurpleColor
+  nameWithType: ConfigJson._configJsonPurpleColor
+  fullName: KWiJisho.ConfigJson._configJsonPurpleColor
+  type: Field
+  source:
+    remote:
+      path: src/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: _configJsonPurpleColor
+    path: ../src/ConfigJson.cs
+    startLine: 114
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho
+  syntax:
+    content: private Color _configJsonPurpleColor
+    return:
+      type: KWiJisho.Entities.Color
+    content.vb: Private _configJsonPurpleColor As Color
+- uid: KWiJisho.ConfigJson.ConfigJsonPurpleColor
+  commentId: P:KWiJisho.ConfigJson.ConfigJsonPurpleColor
+  id: ConfigJsonPurpleColor
+  parent: KWiJisho.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: ConfigJsonPurpleColor
+  nameWithType: ConfigJson.ConfigJsonPurpleColor
+  fullName: KWiJisho.ConfigJson.ConfigJsonPurpleColor
+  type: Property
+  source:
+    remote:
+      path: src/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ConfigJsonPurpleColor
+    path: ../src/ConfigJson.cs
+    startLine: 115
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho
+  syntax:
+    content: >-
+      [JsonProperty("purpleColor")]
+
+      [SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification = "It's being used in Json deserialization.")]
+
+      [SuppressMessage("Style", "IDE0251:Make member 'readonly'", Justification = "It's being set on Json file.")]
+
+      private Color ConfigJsonPurpleColor { get; set; }
+    parameters: []
+    return:
+      type: KWiJisho.Entities.Color
+    content.vb: >-
+      <JsonProperty("purpleColor")>
+
+      <SuppressMessage("CodeQuality", "IDE0051:Remove unused private members", Justification:="It's being used in Json deserialization.")>
+
+      <SuppressMessage("Style", "IDE0251:Make member 'readonly'", Justification:="It's being set on Json file.")>
+
+      Private Property ConfigJsonPurpleColor As Color
+  overload: KWiJisho.ConfigJson.ConfigJsonPurpleColor*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: purpleColor
+  - type: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.#ctor(System.String,System.String)
+    arguments:
+    - type: System.String
+      value: CodeQuality
+    - type: System.String
+      value: IDE0051:Remove unused private members
+    namedArguments:
+    - name: Justification
+      type: System.String
+      value: It's being used in Json deserialization.
+  - type: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute
+    ctor: System.Diagnostics.CodeAnalysis.SuppressMessageAttribute.#ctor(System.String,System.String)
+    arguments:
+    - type: System.String
+      value: Style
+    - type: System.String
+      value: IDE0251:Make member 'readonly'
+    namedArguments:
+    - name: Justification
+      type: System.String
+      value: It's being set on Json file.
+- uid: KWiJisho.ConfigJson.DeserializeConfigJsonFileAsync
+  commentId: M:KWiJisho.ConfigJson.DeserializeConfigJsonFileAsync
+  id: DeserializeConfigJsonFileAsync
+  parent: KWiJisho.ConfigJson
+  langs:
+  - csharp
+  - vb
+  name: DeserializeConfigJsonFileAsync()
+  nameWithType: ConfigJson.DeserializeConfigJsonFileAsync()
+  fullName: KWiJisho.ConfigJson.DeserializeConfigJsonFileAsync()
+  type: Method
+  source:
+    remote:
+      path: src/ConfigJson.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: DeserializeConfigJsonFileAsync
+    path: ../src/ConfigJson.cs
+    startLine: 125
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho
+  summary: >-
+    Asynchronously deserializes the content of the config.json file into a <xref href="KWiJisho.ConfigJson" data-throw-if-not-resolved="false"></xref> instance. The <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/static">static</a> properties
+
+    from <xref href="KWiJisho.ConfigJson" data-throw-if-not-resolved="false"></xref> will receive the values.
+  example: []
+  syntax:
+    content: internal static Task<ConfigJson> DeserializeConfigJsonFileAsync()
+    return:
+      type: System.Threading.Tasks.Task{KWiJisho.ConfigJson}
+      description: A <xref href="System.Threading.Tasks.Task%601" data-throw-if-not-resolved="false"></xref> representing the asynchronous operation, yielding a <xref href="KWiJisho.ConfigJson" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Friend Shared Function DeserializeConfigJsonFileAsync() As Task(Of ConfigJson)
+  overload: KWiJisho.ConfigJson.DeserializeConfigJsonFileAsync*
+references:
+- uid: KWiJisho
+  commentId: N:KWiJisho
+  href: KWiJisho.html
+  name: KWiJisho
+  nameWithType: KWiJisho
+  fullName: KWiJisho
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: KWiJisho.ConfigJson.KWiJishoToken*
+  commentId: Overload:KWiJisho.ConfigJson.KWiJishoToken
+  href: KWiJisho.ConfigJson.KWiJishoToken.html#KWiJisho_ConfigJson_KWiJishoToken
+  name: KWiJishoToken
+  nameWithType: ConfigJson.KWiJishoToken
+  fullName: KWiJisho.ConfigJson.KWiJishoToken
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: KWiJisho.ConfigJson.ChatGptToken*
+  commentId: Overload:KWiJisho.ConfigJson.ChatGptToken
+  href: KWiJisho.ConfigJson.ChatGptToken.html#KWiJisho_ConfigJson_ChatGptToken
+  name: ChatGptToken
+  nameWithType: ConfigJson.ChatGptToken
+  fullName: KWiJisho.ConfigJson.ChatGptToken
+- uid: KWiJisho.ConfigJson.NasaToken*
+  commentId: Overload:KWiJisho.ConfigJson.NasaToken
+  href: KWiJisho.ConfigJson.NasaToken.html#KWiJisho_ConfigJson_NasaToken
+  name: NasaToken
+  nameWithType: ConfigJson.NasaToken
+  fullName: KWiJisho.ConfigJson.NasaToken
+- uid: KWiJisho.ConfigJson.Prefix*
+  commentId: Overload:KWiJisho.ConfigJson.Prefix
+  href: KWiJisho.ConfigJson.Prefix.html#KWiJisho_ConfigJson_Prefix
+  name: Prefix
+  nameWithType: ConfigJson.Prefix
+  fullName: KWiJisho.ConfigJson.Prefix
+- uid: KWiJisho.ConfigJson.Activity*
+  commentId: Overload:KWiJisho.ConfigJson.Activity
+  href: KWiJisho.ConfigJson.Activity.html#KWiJisho_ConfigJson_Activity
+  name: Activity
+  nameWithType: ConfigJson.Activity
+  fullName: KWiJisho.ConfigJson.Activity
+- uid: KWiJisho.ConfigJson.DefaultColor*
+  commentId: Overload:KWiJisho.ConfigJson.DefaultColor
+  href: KWiJisho.ConfigJson.DefaultColor.html#KWiJisho_ConfigJson_DefaultColor
+  name: DefaultColor
+  nameWithType: ConfigJson.DefaultColor
+  fullName: KWiJisho.ConfigJson.DefaultColor
+- uid: KWiJisho.Entities.Color
+  commentId: T:KWiJisho.Entities.Color
+  parent: KWiJisho.Entities
+  href: KWiJisho.Entities.Color.html
+  name: Color
+  nameWithType: Color
+  fullName: KWiJisho.Entities.Color
+- uid: KWiJisho.Entities
+  commentId: N:KWiJisho.Entities
+  href: KWiJisho.html
+  name: KWiJisho.Entities
+  nameWithType: KWiJisho.Entities
+  fullName: KWiJisho.Entities
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Entities
+    name: Entities
+    href: KWiJisho.Entities.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Entities
+    name: Entities
+    href: KWiJisho.Entities.html
+- uid: KWiJisho.ConfigJson.ConfigJsonKWiJishoToken*
+  commentId: Overload:KWiJisho.ConfigJson.ConfigJsonKWiJishoToken
+  href: KWiJisho.ConfigJson.ConfigJsonKWiJishoToken.html#KWiJisho_ConfigJson_ConfigJsonKWiJishoToken
+  name: ConfigJsonKWiJishoToken
+  nameWithType: ConfigJson.ConfigJsonKWiJishoToken
+  fullName: KWiJisho.ConfigJson.ConfigJsonKWiJishoToken
+- uid: KWiJisho.ConfigJson.ConfigJsonChatGptToken*
+  commentId: Overload:KWiJisho.ConfigJson.ConfigJsonChatGptToken
+  href: KWiJisho.ConfigJson.ConfigJsonChatGptToken.html#KWiJisho_ConfigJson_ConfigJsonChatGptToken
+  name: ConfigJsonChatGptToken
+  nameWithType: ConfigJson.ConfigJsonChatGptToken
+  fullName: KWiJisho.ConfigJson.ConfigJsonChatGptToken
+- uid: KWiJisho.ConfigJson.ConfigJsonNasaToken*
+  commentId: Overload:KWiJisho.ConfigJson.ConfigJsonNasaToken
+  href: KWiJisho.ConfigJson.ConfigJsonNasaToken.html#KWiJisho_ConfigJson_ConfigJsonNasaToken
+  name: ConfigJsonNasaToken
+  nameWithType: ConfigJson.ConfigJsonNasaToken
+  fullName: KWiJisho.ConfigJson.ConfigJsonNasaToken
+- uid: KWiJisho.ConfigJson.ConfigJsonPrefix*
+  commentId: Overload:KWiJisho.ConfigJson.ConfigJsonPrefix
+  href: KWiJisho.ConfigJson.ConfigJsonPrefix.html#KWiJisho_ConfigJson_ConfigJsonPrefix
+  name: ConfigJsonPrefix
+  nameWithType: ConfigJson.ConfigJsonPrefix
+  fullName: KWiJisho.ConfigJson.ConfigJsonPrefix
+- uid: KWiJisho.ConfigJson.ConfigJsonActivity*
+  commentId: Overload:KWiJisho.ConfigJson.ConfigJsonActivity
+  href: KWiJisho.ConfigJson.ConfigJsonActivity.html#KWiJisho_ConfigJson_ConfigJsonActivity
+  name: ConfigJsonActivity
+  nameWithType: ConfigJson.ConfigJsonActivity
+  fullName: KWiJisho.ConfigJson.ConfigJsonActivity
+- uid: KWiJisho.ConfigJson.ConfigJsonPurpleColor*
+  commentId: Overload:KWiJisho.ConfigJson.ConfigJsonPurpleColor
+  href: KWiJisho.ConfigJson.ConfigJsonPurpleColor.html#KWiJisho_ConfigJson_ConfigJsonPurpleColor
+  name: ConfigJsonPurpleColor
+  nameWithType: ConfigJson.ConfigJsonPurpleColor
+  fullName: KWiJisho.ConfigJson.ConfigJsonPurpleColor
+- uid: KWiJisho.ConfigJson
+  commentId: T:KWiJisho.ConfigJson
+  href: KWiJisho.ConfigJson.html
+  name: ConfigJson
+  nameWithType: ConfigJson
+  fullName: KWiJisho.ConfigJson
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: KWiJisho.ConfigJson.DeserializeConfigJsonFileAsync*
+  commentId: Overload:KWiJisho.ConfigJson.DeserializeConfigJsonFileAsync
+  href: KWiJisho.ConfigJson.DeserializeConfigJsonFileAsync.html#KWiJisho_ConfigJson_DeserializeConfigJsonFileAsync
+  name: DeserializeConfigJsonFileAsync
+  nameWithType: ConfigJson.DeserializeConfigJsonFileAsync
+  fullName: KWiJisho.ConfigJson.DeserializeConfigJsonFileAsync
+- uid: System.Threading.Tasks.Task{KWiJisho.ConfigJson}
+  commentId: T:System.Threading.Tasks.Task{KWiJisho.ConfigJson}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ConfigJson>
+  nameWithType: Task<ConfigJson>
+  fullName: System.Threading.Tasks.Task<KWiJisho.ConfigJson>
+  nameWithType.vb: Task(Of ConfigJson)
+  fullName.vb: System.Threading.Tasks.Task(Of KWiJisho.ConfigJson)
+  name.vb: Task(Of ConfigJson)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: KWiJisho.ConfigJson
+    name: ConfigJson
+    href: KWiJisho.ConfigJson.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: KWiJisho.ConfigJson
+    name: ConfigJson
+    href: KWiJisho.ConfigJson.html
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+memberLayout: SeparatePages

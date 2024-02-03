@@ -1,0 +1,100 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Models
+  commentId: N:KWiJisho.Models
+  id: KWiJisho.Models
+  children:
+  - KWiJisho.Models.Birthday
+  - KWiJisho.Models.Birthday.BirthdayUpcomingDate
+  - KWiJisho.Models.Nasa
+  - KWiJisho.Models.Nasa.ApodBuilder
+  langs:
+  - csharp
+  - vb
+  name: KWiJisho.Models
+  nameWithType: KWiJisho.Models
+  fullName: KWiJisho.Models
+  type: Namespace
+  assemblies:
+  - KWiJisho
+references:
+- uid: KWiJisho.Models.Birthday
+  commentId: T:KWiJisho.Models.Birthday
+  href: KWiJisho.Models.Birthday.html
+  name: Birthday
+  nameWithType: Birthday
+  fullName: KWiJisho.Models.Birthday
+- uid: KWiJisho.Models.Birthday.BirthdayUpcomingDate
+  commentId: T:KWiJisho.Models.Birthday.BirthdayUpcomingDate
+  parent: KWiJisho.Models
+  href: KWiJisho.Models.Birthday.html
+  name: Birthday.BirthdayUpcomingDate
+  nameWithType: Birthday.BirthdayUpcomingDate
+  fullName: KWiJisho.Models.Birthday.BirthdayUpcomingDate
+  spec.csharp:
+  - uid: KWiJisho.Models.Birthday
+    name: Birthday
+    href: KWiJisho.Models.Birthday.html
+  - name: .
+  - uid: KWiJisho.Models.Birthday.BirthdayUpcomingDate
+    name: BirthdayUpcomingDate
+    href: KWiJisho.Models.Birthday.BirthdayUpcomingDate.html
+  spec.vb:
+  - uid: KWiJisho.Models.Birthday
+    name: Birthday
+    href: KWiJisho.Models.Birthday.html
+  - name: .
+  - uid: KWiJisho.Models.Birthday.BirthdayUpcomingDate
+    name: BirthdayUpcomingDate
+    href: KWiJisho.Models.Birthday.BirthdayUpcomingDate.html
+- uid: KWiJisho.Models.Nasa
+  commentId: T:KWiJisho.Models.Nasa
+  href: KWiJisho.Models.Nasa.html
+  name: Nasa
+  nameWithType: Nasa
+  fullName: KWiJisho.Models.Nasa
+- uid: KWiJisho.Models.Nasa.ApodBuilder
+  commentId: T:KWiJisho.Models.Nasa.ApodBuilder
+  href: KWiJisho.Models.Nasa.html
+  name: Nasa.ApodBuilder
+  nameWithType: Nasa.ApodBuilder
+  fullName: KWiJisho.Models.Nasa.ApodBuilder
+  spec.csharp:
+  - uid: KWiJisho.Models.Nasa
+    name: Nasa
+    href: KWiJisho.Models.Nasa.html
+  - name: .
+  - uid: KWiJisho.Models.Nasa.ApodBuilder
+    name: ApodBuilder
+    href: KWiJisho.Models.Nasa.ApodBuilder.html
+  spec.vb:
+  - uid: KWiJisho.Models.Nasa
+    name: Nasa
+    href: KWiJisho.Models.Nasa.html
+  - name: .
+  - uid: KWiJisho.Models.Nasa.ApodBuilder
+    name: ApodBuilder
+    href: KWiJisho.Models.Nasa.ApodBuilder.html
+- uid: KWiJisho.Models
+  commentId: N:KWiJisho.Models
+  href: KWiJisho.html
+  name: KWiJisho.Models
+  nameWithType: KWiJisho.Models
+  fullName: KWiJisho.Models
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Models
+    name: Models
+    href: KWiJisho.Models.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Models
+    name: Models
+    href: KWiJisho.Models.html
+memberLayout: SeparatePages

@@ -698,7 +698,7 @@
             Represents a set of notice slash commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Slash.SlashNotice.ExecuteSlashCommandNewsAsync(DSharpPlus.SlashCommands.InteractionContext,System.String,System.String,DSharpPlus.Entities.DiscordAttachment,System.Boolean)">
+        <member name="M:KWiJisho.Commands.Slash.SlashNotice.ExecuteSlashNewsAsync(DSharpPlus.SlashCommands.InteractionContext,System.String,System.String,DSharpPlus.Entities.DiscordAttachment,System.Boolean)">
             <summary>
             Slash send news command method to send news at the news' channel.
             </summary>

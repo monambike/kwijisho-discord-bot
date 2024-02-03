@@ -1,0 +1,616 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Utils.Emoji
+  commentId: T:KWiJisho.Utils.Emoji
+  id: Emoji
+  parent: KWiJisho.Utils
+  children:
+  - KWiJisho.Utils.Emoji.#ctor(System.String,System.UInt64)
+  - KWiJisho.Utils.Emoji.Code
+  - KWiJisho.Utils.Emoji.Id
+  - KWiJisho.Utils.Emoji.Name
+  - KWiJisho.Utils.Emoji.ToString
+  langs:
+  - csharp
+  - vb
+  name: Emoji
+  nameWithType: Emoji
+  fullName: KWiJisho.Utils.Emoji
+  type: Class
+  source:
+    remote:
+      path: src/Utils/DiscordEmojis.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Emoji
+    path: ../src/Utils/DiscordEmojis.cs
+    startLine: 60
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Class responsible for creating and handling custom Discord emojis.
+  example: []
+  syntax:
+    content: 'internal record Emoji : IEquatable<Emoji>'
+    content.vb: Friend Class Emoji Implements IEquatable(Of Emoji)
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - KWiJisho.Utils.DiscordEmojis.CatMemeEmoji
+  - KWiJisho.Utils.DiscordEmojis.CatPartyEmoji
+  implements:
+  - System.IEquatable{KWiJisho.Utils.Emoji}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: KWiJisho.Utils.Emoji.Name
+  commentId: P:KWiJisho.Utils.Emoji.Name
+  id: Name
+  parent: KWiJisho.Utils.Emoji
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Emoji.Name
+  fullName: KWiJisho.Utils.Emoji.Name
+  type: Property
+  source:
+    remote:
+      path: src/Utils/DiscordEmojis.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Name
+    path: ../src/Utils/DiscordEmojis.cs
+    startLine: 65
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: The discord emoji name.
+  example: []
+  syntax:
+    content: internal string Name { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Friend Property Name As String
+  overload: KWiJisho.Utils.Emoji.Name*
+- uid: KWiJisho.Utils.Emoji.Id
+  commentId: P:KWiJisho.Utils.Emoji.Id
+  id: Id
+  parent: KWiJisho.Utils.Emoji
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: Emoji.Id
+  fullName: KWiJisho.Utils.Emoji.Id
+  type: Property
+  source:
+    remote:
+      path: src/Utils/DiscordEmojis.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Id
+    path: ../src/Utils/DiscordEmojis.cs
+    startLine: 70
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: The discord emoji unique identifier.
+  example: []
+  syntax:
+    content: internal ulong Id { get; init; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Friend Property Id As ULong
+  overload: KWiJisho.Utils.Emoji.Id*
+- uid: KWiJisho.Utils.Emoji.Code
+  commentId: P:KWiJisho.Utils.Emoji.Code
+  id: Code
+  parent: KWiJisho.Utils.Emoji
+  langs:
+  - csharp
+  - vb
+  name: Code
+  nameWithType: Emoji.Code
+  fullName: KWiJisho.Utils.Emoji.Code
+  type: Property
+  source:
+    remote:
+      path: src/Utils/DiscordEmojis.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Code
+    path: ../src/Utils/DiscordEmojis.cs
+    startLine: 76
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: >-
+    The discord emoji code responsible for outputing it into the chat.
+
+    <code>&lt;a:{name}:{id}&gt;</code>
+  example: []
+  syntax:
+    content: internal string Code { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Friend ReadOnly Property Code As String
+  overload: KWiJisho.Utils.Emoji.Code*
+- uid: KWiJisho.Utils.Emoji.#ctor(System.String,System.UInt64)
+  commentId: M:KWiJisho.Utils.Emoji.#ctor(System.String,System.UInt64)
+  id: '#ctor(System.String,System.UInt64)'
+  parent: KWiJisho.Utils.Emoji
+  langs:
+  - csharp
+  - vb
+  name: Emoji(string, ulong)
+  nameWithType: Emoji.Emoji(string, ulong)
+  fullName: KWiJisho.Utils.Emoji.Emoji(string, ulong)
+  type: Constructor
+  source:
+    remote:
+      path: src/Utils/DiscordEmojis.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: .ctor
+    path: ../src/Utils/DiscordEmojis.cs
+    startLine: 85
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: >-
+    Initializes a new instance of <xref href="KWiJisho.Utils.Emoji" data-throw-if-not-resolved="false"></xref> class with the specified
+
+    name and identifier.
+  example: []
+  syntax:
+    content: internal Emoji(string name, ulong id)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the Discord emoji.
+    - id: id
+      type: System.UInt64
+      description: The unique identifier of the Discord emoji.
+    content.vb: Friend Sub New(name As String, id As ULong)
+  overload: KWiJisho.Utils.Emoji.#ctor*
+  nameWithType.vb: Emoji.New(String, ULong)
+  fullName.vb: KWiJisho.Utils.Emoji.New(String, ULong)
+  name.vb: New(String, ULong)
+- uid: KWiJisho.Utils.Emoji.ToString
+  commentId: M:KWiJisho.Utils.Emoji.ToString
+  id: ToString
+  parent: KWiJisho.Utils.Emoji
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Emoji.ToString()
+  fullName: KWiJisho.Utils.Emoji.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/Utils/DiscordEmojis.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ToString
+    path: ../src/Utils/DiscordEmojis.cs
+    startLine: 98
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Converts the Discord emoji to its string representation, which is the Discord emoji code.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: The Discord emoji code in the format "<code>&lt;a:{<xref href="KWiJisho.Utils.Emoji.Name" data-throw-if-not-resolved="false"></xref>}:{<xref href="KWiJisho.Utils.Emoji.Id" data-throw-if-not-resolved="false"></xref>}&gt;</code>".
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: KWiJisho.Utils.Emoji.ToString*
+references:
+- uid: KWiJisho.Utils
+  commentId: N:KWiJisho.Utils
+  href: KWiJisho.html
+  name: KWiJisho.Utils
+  nameWithType: KWiJisho.Utils
+  fullName: KWiJisho.Utils
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Utils
+    name: Utils
+    href: KWiJisho.Utils.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Utils
+    name: Utils
+    href: KWiJisho.Utils.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{KWiJisho.Utils.Emoji}
+  commentId: T:System.IEquatable{KWiJisho.Utils.Emoji}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<Emoji>
+  nameWithType: IEquatable<Emoji>
+  fullName: System.IEquatable<KWiJisho.Utils.Emoji>
+  nameWithType.vb: IEquatable(Of Emoji)
+  fullName.vb: System.IEquatable(Of KWiJisho.Utils.Emoji)
+  name.vb: IEquatable(Of Emoji)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: KWiJisho.Utils.Emoji
+    name: Emoji
+    href: KWiJisho.Utils.Emoji.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: KWiJisho.Utils.Emoji
+    name: Emoji
+    href: KWiJisho.Utils.Emoji.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: KWiJisho.Utils.Emoji.Name*
+  commentId: Overload:KWiJisho.Utils.Emoji.Name
+  href: KWiJisho.Utils.Emoji.Name.html#KWiJisho_Utils_Emoji_Name
+  name: Name
+  nameWithType: Emoji.Name
+  fullName: KWiJisho.Utils.Emoji.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: KWiJisho.Utils.Emoji.Id*
+  commentId: Overload:KWiJisho.Utils.Emoji.Id
+  href: KWiJisho.Utils.Emoji.Id.html#KWiJisho_Utils_Emoji_Id
+  name: Id
+  nameWithType: Emoji.Id
+  fullName: KWiJisho.Utils.Emoji.Id
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uint64
+  name: ulong
+  nameWithType: ulong
+  fullName: ulong
+  nameWithType.vb: ULong
+  fullName.vb: ULong
+  name.vb: ULong
+- uid: KWiJisho.Utils.Emoji.Code*
+  commentId: Overload:KWiJisho.Utils.Emoji.Code
+  href: KWiJisho.Utils.Emoji.Code.html#KWiJisho_Utils_Emoji_Code
+  name: Code
+  nameWithType: Emoji.Code
+  fullName: KWiJisho.Utils.Emoji.Code
+- uid: KWiJisho.Utils.Emoji
+  commentId: T:KWiJisho.Utils.Emoji
+  parent: KWiJisho.Utils
+  href: KWiJisho.Utils.Emoji.html
+  name: Emoji
+  nameWithType: Emoji
+  fullName: KWiJisho.Utils.Emoji
+- uid: KWiJisho.Utils.Emoji.#ctor*
+  commentId: Overload:KWiJisho.Utils.Emoji.#ctor
+  href: KWiJisho.Utils.Emoji.-ctor.html#KWiJisho_Utils_Emoji__ctor_System_String_System_UInt64_
+  name: Emoji
+  nameWithType: Emoji.Emoji
+  fullName: KWiJisho.Utils.Emoji.Emoji
+  nameWithType.vb: Emoji.New
+  fullName.vb: KWiJisho.Utils.Emoji.New
+  name.vb: New
+- uid: KWiJisho.Utils.Emoji.Name
+  commentId: P:KWiJisho.Utils.Emoji.Name
+  parent: KWiJisho.Utils.Emoji
+  href: KWiJisho.Utils.Emoji.Name.html#KWiJisho_Utils_Emoji_Name
+  name: Name
+  nameWithType: Emoji.Name
+  fullName: KWiJisho.Utils.Emoji.Name
+- uid: KWiJisho.Utils.Emoji.Id
+  commentId: P:KWiJisho.Utils.Emoji.Id
+  parent: KWiJisho.Utils.Emoji
+  href: KWiJisho.Utils.Emoji.Id.html#KWiJisho_Utils_Emoji_Id
+  name: Id
+  nameWithType: Emoji.Id
+  fullName: KWiJisho.Utils.Emoji.Id
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: KWiJisho.Utils.Emoji.ToString*
+  commentId: Overload:KWiJisho.Utils.Emoji.ToString
+  href: KWiJisho.Utils.Emoji.ToString.html#KWiJisho_Utils_Emoji_ToString
+  name: ToString
+  nameWithType: Emoji.ToString
+  fullName: KWiJisho.Utils.Emoji.ToString
+memberLayout: SeparatePages
