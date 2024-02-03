@@ -20,14 +20,14 @@ namespace KWiJisho.APIs
             /// <summary>
             /// Retrieves the Astronomy Picture of the Day (APOD) through a request to NASA's API.
             /// </summary>
-            /// <returns>An asynchronous <see cref="Task"/> that represents the operation. The task result contains an <see cref="ApodResponseJson"/> object.</returns>
-            internal static async Task<ApodResponseJson> GetAsync()
+            /// <returns>An asynchronous <see cref="Task"/> that represents the operation. The task result contains an <see cref="ApodResponse"/> object.</returns>
+            internal static async Task<ApodResponse> GetApodAsync()
             {
                 // Make an asynchronous request to NASA's API to get the APOD data.
                 var response = await GetUsingNasaApiAsync("planetary/apod");
 
                 // Deserialize the string JSON response into an ApodResponseJson object.
-                return JsonConvert.DeserializeObject<ApodResponseJson>(response);
+                return JsonConvert.DeserializeObject<ApodResponse>(response);
             }
 
             /// <summary>
@@ -40,7 +40,7 @@ namespace KWiJisho.APIs
             /// <summary>
             /// Represents the APOD Json response for a NASA's API HTTP request.
             /// </summary>
-            internal class ApodResponseJson
+            internal class ApodResponse
             {
                 /// <summary>
                 /// Title of the current Astronomy Picture of the Day.
