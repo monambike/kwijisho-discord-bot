@@ -34,7 +34,7 @@ namespace KWiJisho.Commands
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
                 Color = Yellow.DiscordColor,
-                Title = $"NOVO: {title}",
+                Title = $"NOVO: {title.ToUpper()}",
                 Description = description
             }
             .WithFooter($"Enviado por: {discordMember.Username} • Data: {DateTime.Now.ToString(new CultureInfo("pt-BR"))}");

@@ -121,7 +121,7 @@
         </member>
         <member name="T:KWiJisho.Commands.Basic">
             <summary>
-            Provides utilities for "prefix" and "slash" basic commands.
+            Provides methods for basic prefix and slash commands.
             </summary>
         </member>
         <member name="M:KWiJisho.Commands.Basic.ExecuteRandomAnimatedEmoji(DSharpPlus.Entities.DiscordChannel)">
@@ -147,7 +147,7 @@
         </member>
         <member name="T:KWiJisho.Commands.Birthday">
             <summary>
-            Provides utilities for "prefix" and "slash" birthday commands.
+            Provides methods for birthday prefix and slash commands.
             </summary>
         </member>
         <member name="P:KWiJisho.Commands.Birthday.Months">
@@ -171,7 +171,7 @@
         </member>
         <member name="T:KWiJisho.Commands.Info">
             <summary>
-            Provides utilities for "prefix" and "slash" informational and helpful commands.
+            Provides methods for info prefix and slash commands.
             </summary>
         </member>
         <member name="M:KWiJisho.Commands.Info.ExecuteHelpAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)">
@@ -190,7 +190,7 @@
         </member>
         <member name="T:KWiJisho.Commands.KwiGpt">
             <summary>
-            Provides utilities for "prefix" and "slash" KWiGPT commands.
+            Provides methods for KWiGPT prefix and slash commands.
             </summary>
         </member>
         <member name="M:KWiJisho.Commands.KwiGpt.ExecuteKWiJishoPromptAsync(DSharpPlus.Entities.DiscordChannel,System.String[])">
@@ -198,9 +198,28 @@
             Represents the command to get the chat gpt prompt in KWiJisho style.
             </summary>
         </member>
+        <member name="T:KWiJisho.Commands.Nasa">
+            <summary>
+            Provides methods for NASA prefix and slash commands.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Commands.Nasa.ApodAsync(DSharpPlus.Entities.DiscordChannel)">
+            <summary>
+            Retrieves and sends the Astronomy Picture of the Day (APOD) to the specified Discord channel.
+            </summary>
+            <param name="discordChannel">The Discord channel where the APOD message will be sent.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.Nasa.ApodResumeAsync(DSharpPlus.Entities.DiscordChannel)">
+            <summary>
+            Retrieves and sends the translated version of the Astronomy Picture of the Day (APOD) to the specified Discord channel.
+            </summary>
+            <param name="discordChannel">The Discord channel where the translated APOD message will be sent.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
         <member name="T:KWiJisho.Commands.Notice">
             <summary>
-            Provides utilities for "prefix" and "slash" notice commands.
+            Provides methods for notice prefix and slash commands.
             </summary>
         </member>
         <member name="F:KWiJisho.Commands.Notice.Yellow">
@@ -406,7 +425,7 @@
         </member>
         <member name="T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa">
             <summary>
-            Represents a set of prefix NASA commands.
+            Represents a set of NASA prefix commands.
             </summary>
         </member>
         <member name="F:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa.apod">
@@ -436,7 +455,7 @@
         </member>
         <member name="T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNotice">
             <summary>
-            Represents a set of prefix notice commands.
+            Represents a set of notice prefix commands.
             </summary>
         </member>
         <member name="F:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNotice.sendNews">
@@ -456,7 +475,7 @@
         </member>
         <member name="T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme">
             <summary>
-            Represents a set of prefix theme commands.
+            Represents a set of theme prefix commands.
             </summary>
         </member>
         <member name="T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme">
@@ -596,7 +615,7 @@
         </member>
         <member name="T:KWiJisho.Commands.Slash.SlashBasic.Emoji">
             <summary>
-            Represents a command group to senda random animated emoji.
+            Represents a set of emoji slash commands.
             </summary>
         </member>
         <member name="M:KWiJisho.Commands.Slash.SlashBasic.Emoji.ExecuteSlashRandomAnimatedEmoji(DSharpPlus.SlashCommands.InteractionContext)">
@@ -631,7 +650,7 @@
         </member>
         <member name="T:KWiJisho.Commands.Slash.SlashInfo">
             <summary>
-            Represents a set of informational and helpful slash commands.
+            Represents a set of info slash commands.
             </summary>
         </member>
         <member name="M:KWiJisho.Commands.Slash.SlashInfo.ExecuteSlashHelpAsync(DSharpPlus.SlashCommands.InteractionContext)">
@@ -654,6 +673,11 @@
             Represent the command to interact with the bot with ChatGpt in KWiJisho style.
             </summary>
         </member>
+        <member name="T:KWiJisho.Commands.Slash.SlashNasa">
+            <summary>
+            Represents a set of NASA slash commands.
+            </summary>
+        </member>
         <member name="T:KWiJisho.Commands.Slash.SlashNasa.Emoji">
             <summary>
             Represents a command group to senda random animated emoji.
@@ -674,7 +698,7 @@
             Represents a set of notice slash commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Slash.SlashNotice.ExecuteSlashNewsAsync(DSharpPlus.SlashCommands.InteractionContext,System.String,System.String,DSharpPlus.Entities.DiscordAttachment,System.Boolean)">
+        <member name="M:KWiJisho.Commands.Slash.SlashNotice.ExecuteSlashCommandNewsAsync(DSharpPlus.SlashCommands.InteractionContext,System.String,System.String,DSharpPlus.Entities.DiscordAttachment,System.Boolean)">
             <summary>
             Slash send news command method to send news at the news' channel.
             </summary>
@@ -682,7 +706,7 @@
             <param name="title">The news' title.s</param>
             <param name="description">The news' description.s</param>
             <param name="discordAttachment">The news's attachment. (if present)</param>
-            <param name="sendInTramontina">If the news should be send in <see cref="!:ServerTramontina"/>; otherwise, it will send it to <see cref="!:ServerPersonal"/>.</param>
+            <param name="sendInTramontina">If the news should be send in <see cref="T:KWiJisho.Data.ServerTramontina"/>; otherwise, it will send it to <see cref="T:KWiJisho.Data.ServerPersonal"/>.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> containing the result from the asynchronous method.</returns>
         </member>
         <member name="P:KWiJisho.Data.ConfigJson.KWiJishoToken">
@@ -1204,7 +1228,7 @@
             </summary>
         </member>
         <!-- Badly formed XML comment ignored for member "M:KWiJisho.Models.Nasa.BuildEnglishApodMessageAsync(KWiJisho.APIs.NasaApi.Apod.ApodResponse)" -->
-        <member name="M:KWiJisho.Models.Nasa.BuildPortgueseApodMessageAsync(KWiJisho.APIs.NasaApi.Apod.ApodResponse)">
+        <member name="M:KWiJisho.Models.Nasa.BuildPortugueseApodMessageAsync(KWiJisho.APIs.NasaApi.Apod.ApodResponse)">
             <summary>
             Asynchronously builds a portuguese apod message with the apod response.
             </summary>
