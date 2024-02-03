@@ -3,7 +3,7 @@
   "kwijishoToken": "insert-your-token",
   "chatgptToken": "insert-your-token",
   "nasaToken": "insert-your-token",
-  "purpleColor": {
+  "defaultColor": {
     "red": 77,
     "green": 18,
     "blue": 161

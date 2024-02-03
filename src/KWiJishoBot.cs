@@ -48,7 +48,8 @@ namespace KWiJisho
         internal async Task RunAsync()
         {
             // Getting info from Json file and setting into the ConfigJson class.
-            await ConfigJson.DeserializeConfigJsonFileAsync();
+            var configJson = await Entities.ConfigJson.DeserializeConfigJsonFileAsync();
+            ConfigJson.SetValuesFromConfigJson(configJson);
 
             // Settings Discord bot settings for DiscordClient.
             var discordConfiguration = new DiscordConfiguration

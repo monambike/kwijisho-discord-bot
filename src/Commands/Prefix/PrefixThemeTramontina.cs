@@ -142,7 +142,7 @@ namespace KWiJisho.Commands.Prefix
                     {
                         Title = title,
                         Description = $"{description}{Environment.NewLine}",
-                        Color = ConfigJson.DefaultColor.DiscordColor
+                        Color = Data.ConfigJson.DefaultColor.DiscordColor
                     }.AddField("HOOOOOOOOOORA DE ENTRAR NO CLIMA", $"Que tal aproveitar e tentar {"trocar o nome do servidor".ToDiscordBold()} pela minha sugestãozinha abaixo? ;D AHAHAHA");
 
                     // Sending the first message (presentation).
@@ -161,7 +161,7 @@ namespace KWiJisho.Commands.Prefix
                     var suggestionsDiscordEmbedBuilder = new DiscordEmbedBuilder
                     {
                         Description = fullServerNameWithSuggestion,
-                        Color = ConfigJson.DefaultColor.DiscordColor
+                        Color = Data.ConfigJson.DefaultColor.DiscordColor
                     }.WithImageUrl($"attachment://{imagePath}").Build();
 
                     // Sending the second message with the image and button.

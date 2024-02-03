@@ -24,7 +24,7 @@ namespace KWiJisho.Commands
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
                 Description = response,
-                Color = ConfigJson.DefaultColor.DiscordColor
+                Color = Data.ConfigJson.DefaultColor.DiscordColor
             };
 
             // Sending the response to the user.

@@ -56,7 +56,7 @@ namespace KWiJisho.Commands
             // Initinializing discord embed builder message
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
-                Color = ConfigJson.DefaultColor.DiscordColor,
+                Color = Data.ConfigJson.DefaultColor.DiscordColor,
                 Title = "PRÓXIMO ANIVERSARIANTE",
                 Description = $@"O próximo aniversariante é.. {discordMember.Username}!! {message}"
             }
@@ -87,7 +87,7 @@ namespace KWiJisho.Commands
             // Initializing discord embed builder
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
-                Color = ConfigJson.DefaultColor.DiscordColor,
+                Color = Data.ConfigJson.DefaultColor.DiscordColor,
                 Title = "LISTA DE ANIVERSARIANTES",
             };
 

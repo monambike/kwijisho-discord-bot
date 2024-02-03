@@ -52,7 +52,7 @@ namespace KWiJisho.APIs
         private static async Task<string> GetPromptAsync(string userInput, string promptStyle)
         {
             // Creating an instance of the OpenAIAPI class with the ChatGptToken.
-            var api = new OpenAIAPI(ConfigJson.ChatGptToken);
+            var api = new OpenAIAPI(Data.ConfigJson.ChatGptToken);
 
             // Creating a new conversation.
             var chat = api.Chat.CreateConversation();

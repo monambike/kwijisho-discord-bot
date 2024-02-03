@@ -81,7 +81,7 @@ namespace KWiJisho.Commands.Prefix
                 var discordEmbedBuilder = new DiscordEmbedBuilder
                 {
                     Title = $"(IMAGEM DO DIA) {translatedTitle.ToUpper()}",
-                    Color = ConfigJson.DefaultColor.DiscordColor,
+                    Color = Data.ConfigJson.DefaultColor.DiscordColor,
                     Footer = new DiscordEmbedBuilder.EmbedFooter
                     {
                         Text = $"Copyright: {copyright} • Data deste APOD: {response.Date.ToString("d", new System.Globalization.CultureInfo("pt-BR"))}",
@@ -111,7 +111,7 @@ namespace KWiJisho.Commands.Prefix
                 var discordEmbedBuilder = new DiscordEmbedBuilder
                 {
                     Title = $"(IMAGEM DO DIA) {titleContent.ToUpper()}",
-                    Color = ConfigJson.DefaultColor.DiscordColor,
+                    Color = Data.ConfigJson.DefaultColor.DiscordColor,
                     Footer = new DiscordEmbedBuilder.EmbedFooter
                     {
                         Text = $"Copyright: {copyright} • {thisApodDateText}: {dateContent.Date.ToString("d", cultureInfo)}",

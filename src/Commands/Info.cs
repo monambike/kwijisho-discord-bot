@@ -23,7 +23,7 @@ namespace KWiJisho.Commands
             // Initializing discord embed builder
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
-                Color = ConfigJson.DefaultColor.DiscordColor,
+                Color = Data.ConfigJson.DefaultColor.DiscordColor,
                 Title = "AJUDA COM COMANDOS",
                 Description = $@"Lembre-se que pra colocar um comando você precisa colocar o ""!"" na frente!",
                 Thumbnail = new DiscordEmbedBuilder.EmbedThumbnail
@@ -39,7 +39,7 @@ namespace KWiJisho.Commands
                 // For each command inside the current command group
                 foreach (var discordCommand in commandGroup.Commands)
                     // Append the string that will represent the command and its description to the content
-                    content += $"{ConfigJson.Prefix}{discordCommand.Name}: ".ToDiscordBold() + $"{discordCommand.Description}{Environment.NewLine}";
+                    content += $"{Data.ConfigJson.Prefix}{discordCommand.Name}: ".ToDiscordBold() + $"{discordCommand.Description}{Environment.NewLine}";
                 // Add a field with the command group name and the appended content
                 discordEmbedBuilder.AddField(commandGroup.Name, content);
             }
@@ -70,7 +70,7 @@ namespace KWiJisho.Commands
             // Initializing discord embed builder
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
-                Color = ConfigJson.DefaultColor.DiscordColor,
+                Color = Data.ConfigJson.DefaultColor.DiscordColor,
                 Title = "OLÁAAAAAAAA 🌟 🥳🎉",
                 Description = description,
                 Thumbnail = new DiscordEmbedBuilder.EmbedThumbnail

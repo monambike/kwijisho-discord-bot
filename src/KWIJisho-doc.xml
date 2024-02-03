@@ -670,47 +670,41 @@
             <param name="sendInTramontina">If the news should be send in <see cref="!:ServerTramontina"/>; otherwise, it will send it to <see cref="!:ServerPersonal"/>.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> containing the result from the asynchronous method.</returns>
         </member>
-        <member name="T:KWiJisho.ConfigJson">
-            <summary>
-            Class that represents the ConfigJson file for configuring the discord bot.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.ConfigJson.KWiJishoToken">
+        <member name="P:KWiJisho.Data.ConfigJson.KWiJishoToken">
             <summary>
             Gets or sets the API token for KWiJisho.
             </summary>
         </member>
-        <member name="P:KWiJisho.ConfigJson.ChatGptToken">
+        <member name="P:KWiJisho.Data.ConfigJson.ChatGptToken">
             <summary>
             Gets or sets the API token for ChatGPT.
             </summary>
         </member>
-        <member name="P:KWiJisho.ConfigJson.NasaToken">
+        <member name="P:KWiJisho.Data.ConfigJson.NasaToken">
             <summary>
             Gets or sets the API token for NASA.
             </summary>
         </member>
-        <member name="P:KWiJisho.ConfigJson.Prefix">
+        <member name="P:KWiJisho.Data.ConfigJson.Prefix">
             <summary>
             Gets or sets the command prefix for the bot.
             </summary>
         </member>
-        <member name="P:KWiJisho.ConfigJson.Activity">
+        <member name="P:KWiJisho.Data.ConfigJson.Activity">
             <summary>
             Gets or sets the default bot activity.
             </summary>
         </member>
-        <member name="P:KWiJisho.ConfigJson.DefaultColor">
+        <member name="P:KWiJisho.Data.ConfigJson.DefaultColor">
             <summary>
             Gets or sets the default color for bot messages.
             </summary>
         </member>
-        <member name="M:KWiJisho.ConfigJson.DeserializeConfigJsonFileAsync">
+        <member name="M:KWiJisho.Data.ConfigJson.SetValuesFromConfigJson(KWiJisho.Entities.ConfigJson)">
             <summary>
-            Asynchronously deserializes the content of the config.json file into a <see cref="T:KWiJisho.ConfigJson"/> instance. The <see langword="static"/> properties
-            from <see cref="T:KWiJisho.ConfigJson"/> will receive the values.
+            Set values from ConfigJson file.
             </summary>
-            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the asynchronous operation, yielding a <see cref="T:KWiJisho.ConfigJson"/> instance.</returns>
+            <param name="configJson">The instance of the ConfigJson file.</param>
         </member>
         <member name="T:KWiJisho.Data.DiscordEmojis">
             <summary>
@@ -851,6 +845,47 @@
             <summary>
             Gets a Hexadecimal color representation based on the RGB components.
             </summary>
+        </member>
+        <member name="T:KWiJisho.Entities.ConfigJson">
+            <summary>
+            Class that represents the ConfigJson file for configuring the discord bot.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.ConfigJson.KWiJishoToken">
+            <summary>
+            Gets or sets the Discord bot token for the KWiJisho module.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.ConfigJson.ChatGptToken">
+            <summary>
+            Gets or sets the API token for accessing ChatGPT's services.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.ConfigJson.NasaToken">
+            <summary>
+            Gets or sets the API token for accessing NASA's services.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.ConfigJson.Prefix">
+            <summary>
+            Gets or sets the prefix used for Discord bot commands.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.ConfigJson.Activity">
+            <summary>
+            Gets or sets the activity status message for the Discord bot.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.ConfigJson.DefaultColor">
+            <summary>
+            Gets or sets the default color used for Discord bot embeds.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Entities.ConfigJson.DeserializeConfigJsonFileAsync">
+            <summary>
+            Asynchronously deserializes the content of the config.json file into a <see cref="T:KWiJisho.Entities.ConfigJson"/> instance.
+            </summary>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> representing the asynchronous operation, yielding a <see cref="T:KWiJisho.Entities.ConfigJson"/> instance.</returns>
         </member>
         <member name="T:KWiJisho.Entities.Emoji">
             <summary>
@@ -1315,12 +1350,12 @@
             <param name="permission">The Discord permission.</param>
             <returns>The Portuguese name of the permission.</returns>
         </member>
-        <member name="T:KWiJisho.Utils.UtilList">
+        <member name="T:KWiJisho.Utils.UtilCollections">
             <summary>
             Provides utility methods for working with lists.
             </summary>
         </member>
-        <member name="M:KWiJisho.Utils.UtilList.GetRandomValueFromList``1(System.Collections.Generic.List{``0})">
+        <member name="M:KWiJisho.Utils.UtilCollections.GetRandomValueFromList``1(System.Collections.Generic.List{``0})">
             <summary>
             Returns a random value from a given list.
             </summary>

@@ -20,7 +20,7 @@ namespace KWiJisho.Utils
             // Creating the discord embed builder.
             var discordEmbedBuilder = new DiscordEmbedBuilder()
             {
-                Color = ConfigJson.DefaultColor.DiscordColor,
+                Color = Data.ConfigJson.DefaultColor.DiscordColor,
                 Title = title,
                 Description = description,
                 Thumbnail = thumbnail
