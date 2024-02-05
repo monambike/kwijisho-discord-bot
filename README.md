@@ -58,8 +58,8 @@ It will also contain the copyright and APOD image date information embedded.
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/52bd8259-da9b-4542-b63b-ee3b16971f00)
 
 ## Change Discord Server Theme
-![ezgif com-animated-gif-maker](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/54a5565d-96f2-4263-a06b-bc312ba38c34)
 
+![ezgif com-animated-gif-maker](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/54a5565d-96f2-4263-a06b-bc312ba38c34)
 ![ezgif com-animated-gif-maker (1)](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/60a0fded-bcc5-4bf6-b173-d56047e23920)
 
 ## Help and Info
@@ -72,3 +72,7 @@ It will also contain the copyright and APOD image date information embedded.
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/906b84ab-15a0-4c79-b0ea-7da2605956f8)
 
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/62a77e81-be65-47e0-8562-048851cdf9c6)
+
+## And Much More!
+
+Please take a look at the [monambike.github.io/kwijisho-discord-bot/articles/commands](https://monambike.github.io/kwijisho-discord-bot/articles/commands/apod.html) to check detailed information about all the features this Discord bot can provide you!
