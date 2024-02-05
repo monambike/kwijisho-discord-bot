@@ -1,6 +1,6 @@
-# Introduction
+# What She Can Do?
 
-Fun and friendly interactive Discord bot with a wide range of functions including talk to her in KWiJisho style (using ChatGPT), get APOD from NASA's website, mange birthday list, change Discord server theme and much more!
+She's a fun and friendly interactive Discord bot with a wide range of functions including talk to her in KWiJisho style (using ChatGPT), get APOD from NASA's website, mange birthday list, change Discord server theme and much more!
 
 ![512x512-transparent-pointingfront](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/35c120f1-6593-4483-98db-a37fab59a24a)
 
