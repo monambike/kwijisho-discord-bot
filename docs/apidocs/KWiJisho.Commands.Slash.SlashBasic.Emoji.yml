@@ -26,7 +26,7 @@ items:
   assemblies:
   - KWiJisho
   namespace: KWiJisho.Commands.Slash
-  summary: Represents a command group to senda random animated emoji.
+  summary: Represents a set of emoji slash commands.
   example: []
   syntax:
     content: >-

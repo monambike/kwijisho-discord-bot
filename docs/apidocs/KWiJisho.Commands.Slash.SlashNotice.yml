@@ -20,7 +20,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SlashNotice
     path: ../src/Commands/Slash/SlashNotice.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - KWiJisho
   namespace: KWiJisho.Commands.Slash
@@ -62,7 +62,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ExecuteSlashNewsAsync
     path: ../src/Commands/Slash/SlashNotice.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - KWiJisho
   namespace: KWiJisho.Commands.Slash
@@ -120,7 +120,7 @@ items:
           value: false
     - id: sendInTramontina
       type: System.Boolean
-      description: If the news should be send in ServerTramontina; otherwise, it will send it to ServerPersonal.
+      description: If the news should be send in <xref href="KWiJisho.Data.ServerTramontina" data-throw-if-not-resolved="false"></xref>; otherwise, it will send it to <xref href="KWiJisho.Data.ServerPersonal" data-throw-if-not-resolved="false"></xref>.
       attributes:
       - type: DSharpPlus.SlashCommands.OptionAttribute
         ctor: DSharpPlus.SlashCommands.OptionAttribute.#ctor(System.String,System.String,System.Boolean)
@@ -558,6 +558,18 @@ references:
   - uid: DSharpPlus.SlashCommands
     name: SlashCommands
     isExternal: true
+- uid: KWiJisho.Data.ServerTramontina
+  commentId: T:KWiJisho.Data.ServerTramontina
+  href: KWiJisho.Data.ServerTramontina.html
+  name: ServerTramontina
+  nameWithType: ServerTramontina
+  fullName: KWiJisho.Data.ServerTramontina
+- uid: KWiJisho.Data.ServerPersonal
+  commentId: T:KWiJisho.Data.ServerPersonal
+  href: KWiJisho.Data.ServerPersonal.html
+  name: ServerPersonal
+  nameWithType: ServerPersonal
+  fullName: KWiJisho.Data.ServerPersonal
 - uid: System.Threading.Tasks.Task
   commentId: T:System.Threading.Tasks.Task
   parent: System.Threading.Tasks

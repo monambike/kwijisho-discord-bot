@@ -1,12 +1,11 @@
 # Getting Started
 
-# Prefix Commands
+To set up the bot you need to provide some Token values in the config.json file or at the system Environment Variables.
 
-## Basic
+# Make the Documentation
 
-## Nasa
+The documentation is made with [DocFX](https://github.com/dotnet/docfx).
 
-# Slash Commands
+To create the website files and host them you can: `docfx docfx.json --serve`.
 
-## Basic
-
+If encountered any problems or issues, you may need first to go to the `docs` folders and then run the command: `docfx build` before.

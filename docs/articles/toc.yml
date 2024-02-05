@@ -1,8 +1,19 @@
+
 - name: Introduction
   href: introduction.md
 - name: Getting Started
   href: getting-started.md
-- name: Prefix Commands
-  href: prefix-commands.md
-- name: Slash Commands
-  href: slash-commands.md
+- name: Commands
+  items:
+  - name: APOD
+    href: commands/apod.md
+  - name: Theme
+    items:
+    - name: Default
+      href: commands/theme/default.md
+    - name: Easter
+      href: commands/theme/easter.md
+    - name: Halloween
+      href: commands/theme/halloween.md
+    - name: Christmas
+      href: commands/theme/christmas.md
