@@ -1,20 +1,48 @@
+<img alt="Static Badge" src="https://img.shields.io/badge/MONAMBIKE-%236c00fa?style=for-the-badge&label=MADE%20BY&labelColor=%23050505"> <img alt="Static Badge" src="https://img.shields.io/badge/CC--BY--4.0%20license-%236c00fa?style=for-the-badge&label=LICENSE&labelColor=%23050505"> <img alt="Static Badge" src="https://img.shields.io/badge/SPARKEDHOST-%23FFEC20?style=for-the-badge&label=HOSTED%20IN&labelColor=%23050505">
+
+![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)
+![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)
+![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
+![ChatGPT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)
+![Github Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)
+
 # KWiJisho
 
 Fun and friendly interactive Discord bot with a wide range of functions.
 
 KWiJisho stands for "Kawaii" and "Jisho" that means "Cute" and "Dictionary" in japanese respectively. I played with the words like this because the main objective for creating this bot was because it would have a custom dictionary feature.
 
-### Some of her Prefix Commands:
+![500x281-transparent-pontingup](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/9daa0256-5e72-4e37-94bc-0ba800327368)
+
+# Documentation
+
+You can check further documentation here [monambike.github.io/kwijisho-discord-bot](https://monambike.github.io/kwijisho-discord-bot/).
+
+# License
+
+The license for this repository is available [here](LICENSE). Please refer to the provided link for detailed information regarding the terms and conditions governing the use of this project.
+
+# Contact
+
+You can find me on likedin by here [linkedin.com/in/monambike/](https://www.linkedin.com/in/monambike/). If you want to see videos about my work you can check my YouTube channel [youtube.com/@monambike_portfolio](https://www.youtube.com/@monambike_portfolio) and if you want to see my artworks you can check at my instagram [instagram.com/monambike_portfolio](https://www.instagram.com/monambike_portfolio).
+
+# Commands
+
+## Some of her Prefix Commands:
 
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/a573854c-c93a-4f5e-98ac-997354c603f7)
 
-### Some of her Slash Commands:
+## Some of her Slash Commands:
 
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/207d27bf-6222-4c94-93c1-2388b68ab3da)
 
 You can check the old version of this project written with Node.js (Javascript) [here](https://github.com/monambike/kwijisho-discord-bot-legacy).
 
 # Features
+
+## Send Animated Emojis
+
+![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/cd3f103a-bd84-4f95-94ca-b91a51cd9622)
 
 ## ChatGPT
 
@@ -30,13 +58,17 @@ It will also contain the copyright and APOD image date information embedded.
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/52bd8259-da9b-4542-b63b-ee3b16971f00)
 
 ## Change Discord Server Theme
+![ezgif com-animated-gif-maker](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/54a5565d-96f2-4263-a06b-bc312ba38c34)
 
-![Captura de tela 2024-01-14 201128](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/2bc401bd-13a8-405e-bbcb-b1194d755cec)
-![Captura de tela 2024-01-14 201121](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/e955db72-3a40-4b99-bc14-cdd98a8a1a2b)
-![Captura de tela 2024-01-14 201116](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/bbe5be95-0688-439b-8ede-4d20fd7459fb)
-![Captura de tela 2024-01-14 201109](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/d5e1df56-8239-4e9a-8528-0d277891a043)
+![ezgif com-animated-gif-maker (1)](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/60a0fded-bcc5-4bf6-b173-d56047e23920)
 
-![Captura de tela 2024-01-14 202723](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/33097650-d069-4ac6-ba50-536015164a05)
-![Captura de tela 2024-01-14 212102](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/5413d4ff-fc71-4c9b-9469-d295ded6fc3b)
-![Captura de tela 2024-01-14 202803](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/de11ee50-01c4-44f0-838f-a53a50c67601)
-![Captura de tela 2024-01-14 202746](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/7fc01495-5230-4c09-9b6c-04c95af7297f)
+## Help and Info
+
+![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/6994663c-0485-4424-9c92-2bff7a66b143)
+![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/ab320aad-8fbc-46df-a819-7d464c621e11)
+
+## Send News
+
+![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/906b84ab-15a0-4c79-b0ea-7da2605956f8)
+
+![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/62a77e81-be65-47e0-8562-048851cdf9c6)
