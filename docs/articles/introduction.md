@@ -1,4 +1,4 @@
-# What She Can Do?
+## What She Can Do?
 
 She's a fun and friendly interactive Discord bot with a wide range of functions including talk to her in KWiJisho style (using ChatGPT), get APOD from NASA's website, mange birthday list, change Discord server theme and much more!
 
