@@ -58,6 +58,11 @@ It will also contain the copyright and APOD image date information embedded.
 
 ![ezgif com-animated-gif-maker (1)](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/60a0fded-bcc5-4bf6-b173-d56047e23920)
 
+## Help and Info
+
+![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/6994663c-0485-4424-9c92-2bff7a66b143)
+![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/ab320aad-8fbc-46df-a819-7d464c621e11)
+
 ## Send News
 
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/906b84ab-15a0-4c79-b0ea-7da2605956f8)
