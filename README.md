@@ -16,6 +16,10 @@ KWiJisho stands for "Kawaii" and "Jisho" that means "Cute" and "Dictionary" in j
 
 You can check further documentation here [monambike.github.io/kwijisho-discord-bot](https://monambike.github.io/kwijisho-discord-bot/).
 
+# Contact
+
+You can find me on likedin by here [linkedin.com/in/monambike/](https://www.linkedin.com/in/monambike/). And if you want to see videos about my work you can check my YouTube channel [youtube.com/@monambike_portfolio](https://www.youtube.com/@monambike_portfolio). You can also see my artworks at my instagram [instagram.com/monambike_portfolio](https://www.instagram.com/monambike_portfolio).
+
 # Commands
 
 ## Some of her Prefix Commands:
