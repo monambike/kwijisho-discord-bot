@@ -28,6 +28,8 @@ You can find me on likedin by here [linkedin.com/in/monambike/](https://www.link
 
 # Commands
 
+You can also check detailed information about all commands avaiable here: [monambike.github.io/kwijisho-discord-bot/articles/commands](https://monambike.github.io/kwijisho-discord-bot/articles/commands/apod.html).
+
 ## Some of her Prefix Commands:
 
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/a573854c-c93a-4f5e-98ac-997354c603f7)
