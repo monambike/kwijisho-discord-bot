@@ -12,6 +12,10 @@ Fun and friendly interactive Discord bot with a wide range of functions.
 
 KWiJisho stands for "Kawaii" and "Jisho" that means "Cute" and "Dictionary" in japanese respectively. I played with the words like this because the main objective for creating this bot was because it would have a custom dictionary feature.
 
+# Documentation
+
+You can check further documentation here [monambike.github.io/kwijisho-discord-bot](https://monambike.github.io/kwijisho-discord-bot/).
+
 # Commands
 
 ## Some of her Prefix Commands:
@@ -25,6 +29,10 @@ KWiJisho stands for "Kawaii" and "Jisho" that means "Cute" and "Dictionary" in j
 You can check the old version of this project written with Node.js (Javascript) [here](https://github.com/monambike/kwijisho-discord-bot-legacy).
 
 # Features
+
+## Send Animated Emojis
+
+![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/cd3f103a-bd84-4f95-94ca-b91a51cd9622)
 
 ## ChatGPT
 
@@ -54,7 +62,8 @@ It will also contain the copyright and APOD image date information embedded.
 ![Captura de tela 2024-01-14 201109](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/d5e1df56-8239-4e9a-8528-0d277891a043)
 ![Captura de tela 2024-01-14 202746](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/7fc01495-5230-4c09-9b6c-04c95af7297f)
 
+## Send News
 
-# Documentation
+![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/906b84ab-15a0-4c79-b0ea-7da2605956f8)
 
-You can check further documentation here [monambike.github.io/kwijisho-discord-bot](https://monambike.github.io/kwijisho-discord-bot/).
+![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/62a77e81-be65-47e0-8562-048851cdf9c6)
