@@ -1,12 +1,24 @@
 
 - name: Introduction
   href: introduction.md
-- name: Getting Started
-  href: getting-started.md
+- name: Setup
+  href: setup.md
 - name: Commands
   items:
   - name: APOD
     href: commands/apod.md
+  - name: Birthday
+    href: commands/birthday.md
+  - name: Chat GPT
+    href: commands/chatgpt.md
+  - name: Emoji
+    href: commands/emoji.md
+  - name: Help
+    href: commands/help.md
+  - name: Info
+    href: commands/info.md
+  - name: Notice
+    href: commands/notice.md
   - name: Theme
     items:
     - name: Default

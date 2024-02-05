@@ -2,5 +2,7 @@
   href: articles/
 - name: API Documentation
   href: apidocs/
-- name: My Website (monambike.com)↗
+- name: Commands
+  href: articles/commands/apod.md
+- name: My Website (monambike.com)
   href: https://monambike.com

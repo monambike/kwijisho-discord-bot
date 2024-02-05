@@ -1,7 +1,3 @@
----
-_layout: landing
----
-
 # KWiJisho Discord Bot
 
 Fun and friendly interactive Discord bot with a wide range of functions. KWiJisho stands for Kawaii and Jisho (Cute and Dictionary in japanese respectively).
