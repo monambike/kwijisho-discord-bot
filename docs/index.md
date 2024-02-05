@@ -2,6 +2,8 @@
 
 Fun and friendly interactive Discord bot with a wide range of functions. KWiJisho stands for Kawaii and Jisho (Cute and Dictionary in japanese respectively).
 
+![256x256-transparent-happy](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/48dc1dfd-fe42-4e1f-9718-f4f5b750e956)
+
 ## Getting Started
 
 You can take a look in the [articles][4] for quick start, tutorials, and examples of use of the bot commands.
