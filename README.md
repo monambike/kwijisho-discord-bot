@@ -63,7 +63,7 @@ It will also contain the copyright and APOD image date information embedded.
 
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/52bd8259-da9b-4542-b63b-ee3b16971f00)
 
-## And Much More!
+## And She Can do Much More!
 
 Please take a look at the [monambike.github.io/kwijisho-discord-bot/articles/commands](https://monambike.github.io/kwijisho-discord-bot/articles/commands/apod.html) to check detailed information about all the features this Discord bot can provide you!
 
