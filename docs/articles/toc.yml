@@ -29,3 +29,7 @@
       href: commands/theme/halloween.md
     - name: Christmas
       href: commands/theme/christmas.md
+- name: Contact
+  href: contact.md
+- name: License
+  href: license.md

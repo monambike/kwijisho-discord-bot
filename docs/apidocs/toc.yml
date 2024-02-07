@@ -8,6 +8,8 @@ items:
 - uid: KWiJisho.APIs
   name: KWiJisho.APIs
   items:
+  - uid: KWiJisho.APIs.ChatGPT
+    name: ChatGPT
   - uid: KWiJisho.APIs.HttpService
     name: HttpService
   - uid: KWiJisho.APIs.NasaApi
@@ -16,8 +18,6 @@ items:
     name: NasaApi.Apod
   - uid: KWiJisho.APIs.NasaApi.Apod.ApodResponse
     name: NasaApi.Apod.ApodResponse
-  - uid: KWiJisho.APIs.OpenAiApi
-    name: OpenAiApi
 - uid: KWiJisho.Commands
   name: KWiJisho.Commands
   items:

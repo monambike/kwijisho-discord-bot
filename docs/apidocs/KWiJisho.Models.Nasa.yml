@@ -60,13 +60,17 @@ items:
   assemblies:
   - KWiJisho
   namespace: KWiJisho.Models
+  summary: Asynchronously builds a english apod message with the apod response.
+  example: []
   syntax:
     content: internal static DiscordEmbedBuilder BuildEnglishApodMessageAsync(NasaApi.Apod.ApodResponse apodResponse)
     parameters:
     - id: apodResponse
       type: KWiJisho.APIs.NasaApi.Apod.ApodResponse
+      description: The APOD response content to build the embed.
     return:
       type: DSharpPlus.Entities.DiscordEmbedBuilder
+      description: The <xref href="DSharpPlus.Entities.DiscordEmbedBuilder" data-throw-if-not-resolved="false"></xref>.
     content.vb: Friend Shared Function BuildEnglishApodMessageAsync(apodResponse As NasaApi.Apod.ApodResponse) As DiscordEmbedBuilder
   overload: KWiJisho.Models.Nasa.BuildEnglishApodMessageAsync*
 - uid: KWiJisho.Models.Nasa.BuildPortugueseApodMessageAsync(KWiJisho.APIs.NasaApi.Apod.ApodResponse)
@@ -364,6 +368,13 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: DSharpPlus.Entities.DiscordEmbedBuilder
+  commentId: T:DSharpPlus.Entities.DiscordEmbedBuilder
+  parent: DSharpPlus.Entities
+  isExternal: true
+  name: DiscordEmbedBuilder
+  nameWithType: DiscordEmbedBuilder
+  fullName: DSharpPlus.Entities.DiscordEmbedBuilder
 - uid: KWiJisho.Models.Nasa.BuildEnglishApodMessageAsync*
   commentId: Overload:KWiJisho.Models.Nasa.BuildEnglishApodMessageAsync
   href: KWiJisho.Models.Nasa.BuildEnglishApodMessageAsync.html#KWiJisho_Models_Nasa_BuildEnglishApodMessageAsync_KWiJisho_APIs_NasaApi_Apod_ApodResponse_
@@ -401,35 +412,6 @@ references:
   - uid: KWiJisho.APIs.NasaApi.Apod.ApodResponse
     name: ApodResponse
     href: KWiJisho.APIs.NasaApi.Apod.ApodResponse.html
-- uid: DSharpPlus.Entities.DiscordEmbedBuilder
-  commentId: T:DSharpPlus.Entities.DiscordEmbedBuilder
-  parent: DSharpPlus.Entities
-  isExternal: true
-  name: DiscordEmbedBuilder
-  nameWithType: DiscordEmbedBuilder
-  fullName: DSharpPlus.Entities.DiscordEmbedBuilder
-- uid: KWiJisho.APIs
-  commentId: N:KWiJisho.APIs
-  href: KWiJisho.html
-  name: KWiJisho.APIs
-  nameWithType: KWiJisho.APIs
-  fullName: KWiJisho.APIs
-  spec.csharp:
-  - uid: KWiJisho
-    name: KWiJisho
-    href: KWiJisho.html
-  - name: .
-  - uid: KWiJisho.APIs
-    name: APIs
-    href: KWiJisho.APIs.html
-  spec.vb:
-  - uid: KWiJisho
-    name: KWiJisho
-    href: KWiJisho.html
-  - name: .
-  - uid: KWiJisho.APIs
-    name: APIs
-    href: KWiJisho.APIs.html
 - uid: DSharpPlus.Entities
   commentId: N:DSharpPlus.Entities
   isExternal: true
@@ -452,6 +434,28 @@ references:
   - uid: DSharpPlus.Entities
     name: Entities
     isExternal: true
+- uid: KWiJisho.APIs
+  commentId: N:KWiJisho.APIs
+  href: KWiJisho.html
+  name: KWiJisho.APIs
+  nameWithType: KWiJisho.APIs
+  fullName: KWiJisho.APIs
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.APIs
+    name: APIs
+    href: KWiJisho.APIs.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.APIs
+    name: APIs
+    href: KWiJisho.APIs.html
 - uid: System.Threading.Tasks.Task`1
   commentId: T:System.Threading.Tasks.Task`1
   isExternal: true

@@ -4,11 +4,11 @@ items:
   commentId: N:KWiJisho.APIs
   id: KWiJisho.APIs
   children:
+  - KWiJisho.APIs.ChatGPT
   - KWiJisho.APIs.HttpService
   - KWiJisho.APIs.NasaApi
   - KWiJisho.APIs.NasaApi.Apod
   - KWiJisho.APIs.NasaApi.Apod.ApodResponse
-  - KWiJisho.APIs.OpenAiApi
   langs:
   - csharp
   - vb
@@ -19,6 +19,12 @@ items:
   assemblies:
   - KWiJisho
 references:
+- uid: KWiJisho.APIs.ChatGPT
+  commentId: T:KWiJisho.APIs.ChatGPT
+  href: KWiJisho.APIs.ChatGPT.html
+  name: ChatGPT
+  nameWithType: ChatGPT
+  fullName: KWiJisho.APIs.ChatGPT
 - uid: KWiJisho.APIs.HttpService
   commentId: T:KWiJisho.APIs.HttpService
   href: KWiJisho.APIs.HttpService.html
@@ -84,12 +90,6 @@ references:
   - uid: KWiJisho.APIs.NasaApi.Apod.ApodResponse
     name: ApodResponse
     href: KWiJisho.APIs.NasaApi.Apod.ApodResponse.html
-- uid: KWiJisho.APIs.OpenAiApi
-  commentId: T:KWiJisho.APIs.OpenAiApi
-  href: KWiJisho.APIs.OpenAiApi.html
-  name: OpenAiApi
-  nameWithType: OpenAiApi
-  fullName: KWiJisho.APIs.OpenAiApi
 - uid: KWiJisho.APIs
   commentId: N:KWiJisho.APIs
   href: KWiJisho.html

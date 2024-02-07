@@ -57,7 +57,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ExecuteKWiJishoPromptAsync
     path: ../src/Commands/KwiGpt.cs
-    startLine: 14
+    startLine: 17
   assemblies:
   - KWiJisho
   namespace: KWiJisho.Commands
@@ -68,10 +68,13 @@ items:
     parameters:
     - id: discordChannel
       type: DSharpPlus.Entities.DiscordChannel
+      description: The Discord channel where the prompt will be sent.
     - id: input
       type: System.String[]
+      description: The content of user input.
     return:
       type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> with the current asynchronous method.
     content.vb: Friend Shared Function ExecuteKWiJishoPromptAsync(discordChannel As DiscordChannel, ParamArray input As String()) As Task
   overload: KWiJisho.Commands.KwiGpt.ExecuteKWiJishoPromptAsync*
   nameWithType.vb: KwiGpt.ExecuteKWiJishoPromptAsync(DiscordChannel, ParamArray String())
@@ -337,6 +340,14 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
 - uid: KWiJisho.Commands.KwiGpt.ExecuteKWiJishoPromptAsync*
   commentId: Overload:KWiJisho.Commands.KwiGpt.ExecuteKWiJishoPromptAsync
   href: KWiJisho.Commands.KwiGpt.ExecuteKWiJishoPromptAsync.html#KWiJisho_Commands_KwiGpt_ExecuteKWiJishoPromptAsync_DSharpPlus_Entities_DiscordChannel_System_String___
@@ -373,36 +384,6 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: (
   - name: )
-- uid: System.Threading.Tasks.Task
-  commentId: T:System.Threading.Tasks.Task
-  parent: System.Threading.Tasks
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
-  name: Task
-  nameWithType: Task
-  fullName: System.Threading.Tasks.Task
-- uid: DSharpPlus.Entities
-  commentId: N:DSharpPlus.Entities
-  isExternal: true
-  name: DSharpPlus.Entities
-  nameWithType: DSharpPlus.Entities
-  fullName: DSharpPlus.Entities
-  spec.csharp:
-  - uid: DSharpPlus
-    name: DSharpPlus
-    isExternal: true
-  - name: .
-  - uid: DSharpPlus.Entities
-    name: Entities
-    isExternal: true
-  spec.vb:
-  - uid: DSharpPlus
-    name: DSharpPlus
-    isExternal: true
-  - name: .
-  - uid: DSharpPlus.Entities
-    name: Entities
-    isExternal: true
 - uid: System.Threading.Tasks
   commentId: N:System.Threading.Tasks
   isExternal: true
@@ -440,4 +421,26 @@ references:
     name: Tasks
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: DSharpPlus.Entities
+  commentId: N:DSharpPlus.Entities
+  isExternal: true
+  name: DSharpPlus.Entities
+  nameWithType: DSharpPlus.Entities
+  fullName: DSharpPlus.Entities
+  spec.csharp:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.Entities
+    name: Entities
+    isExternal: true
+  spec.vb:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.Entities
+    name: Entities
+    isExternal: true
 memberLayout: SeparatePages

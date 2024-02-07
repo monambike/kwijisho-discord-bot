@@ -1,12 +1,10 @@
+- name: Home
+  href: index.md
 - name: Articles
   href: articles/
-- name: API Documentation
-  href: apidocs/
 - name: Commands
   href: articles/commands/apod.md
-- name: My Website (monambike.com)
+- name: API Documentation
+  href: apidocs/
+- name: My Website↗ (monambike.com)
   href: https://monambike.com
-- name: Contact
-  href: articles/contact.md
-- name: License
-  href: articles/license.md
