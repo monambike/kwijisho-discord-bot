@@ -12,13 +12,16 @@ namespace KWiJisho.Commands
         /// <summary>
         /// Represents the command to get the chat gpt prompt in KWiJisho style.
         /// </summary>
+        /// <param name="discordChannel">The Discord channel where the prompt will be sent.</param>
+        /// <param name="input">The content of user input.</param>
+        /// <returns>A <see cref="Task"/> with the current asynchronous method.</returns>
         internal static async Task ExecuteKWiJishoPromptAsync(DiscordChannel discordChannel, params string[] input)
         {
             // Getting all user inputs and combining into a string.
             string userInput = string.Join(" ", input);
 
             // Getting response from the prompt
-            var response = await OpenAiApi.GetKWiJishoPromptAsync(userInput);
+            var response = await ChatGPT.GetKWiJishoPromptAsync(userInput);
 
             // Adding the prompt into a embed builder.
             var discordEmbedBuilder = new DiscordEmbedBuilder

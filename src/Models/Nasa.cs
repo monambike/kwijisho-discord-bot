@@ -12,7 +12,7 @@ namespace KWiJisho.Models
         /// Asynchronously builds a english apod message with the apod response.
         /// </summary>
         /// <param name="apodResponse">The APOD response content to build the embed.</param>
-        /// <returns>The <see cref="DiscordEmbedBuilder"/>.returns>
+        /// <returns>The <see cref="DiscordEmbedBuilder"/>.</returns>
         internal static DiscordEmbedBuilder BuildEnglishApodMessageAsync(ApodResponse apodResponse)
             => new ApodBuilder
             {
@@ -42,14 +42,14 @@ namespace KWiJisho.Models
         internal static async Task<DiscordEmbedBuilder> BuildPortugueseApodMessageAsync(ApodResponse apodResponse)
         {
             // Translate the title from the APOD response.
-            var translatedTitle = await OpenAiApi.GetPromptTranslateToPortugueseAsync(apodResponse.Title);
+            var translatedTitle = await ChatGPT.GetPromptTranslateToPortugueseAsync(apodResponse.Title);
             // The final formatted title ready for use.
             var title = translatedTitle;
 
             // Summarize the detailed explanation from the APOD response.
-            var summarizedExplanation = await OpenAiApi.GetPromptSummarizeTextAsync(apodResponse.Explanation);
+            var summarizedExplanation = await ChatGPT.GetPromptSummarizeTextAsync(apodResponse.Explanation);
             // Translate the summarized explanation to Portuguese.
-            var translatedExplanation = await OpenAiApi.GetPromptTranslateToPortugueseAsync(summarizedExplanation);
+            var translatedExplanation = await ChatGPT.GetPromptTranslateToPortugueseAsync(summarizedExplanation);
             // Format the translated explanation by adding new lines after each sentence.
             var formattedExplanation = translatedExplanation.Replace(". ", "." + Environment.NewLine);
             // The final formatted explanation ready for use.

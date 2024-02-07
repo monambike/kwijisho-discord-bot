@@ -4,6 +4,52 @@
         <name>KWiJisho</name>
     </assembly>
     <members>
+        <member name="T:KWiJisho.APIs.ChatGPT">
+            <summary>
+            This class provides methods for interacting with the OpenAI GPT-3.5 model
+            using the OpenAI-API-dotnet library.
+            API Documentation: <a href="https://github.com/OkGoDoIt/OpenAI-API-dotnet"/>
+            </summary>
+        </member>
+        <member name="F:KWiJisho.APIs.ChatGPT.OpenAIAPI">
+            <summary>
+            Represents an instance of the OpenAIAPI configuration.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.APIs.ChatGPT.KWiJishoConversation">
+            <summary>
+            Represents a instance of KWiJisho conversation.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.APIs.ChatGPT.GetPromptSummarizeTextAsync(System.String)">
+            <summary>
+            Asynchronous method to generate a prompt for summarizing text.
+            </summary>
+            <param name="input">The text to be summarized.</param>
+            <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
+        </member>
+        <member name="M:KWiJisho.APIs.ChatGPT.GetPromptTranslateToPortugueseAsync(System.String)">
+            <summary>
+            Asynchronous method to generate a prompt for translating text to Brazilian Portuguese.
+            </summary>
+            <param name="input">The text to be translated.</param>
+            <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
+        </member>
+        <member name="M:KWiJisho.APIs.ChatGPT.GetKWiJishoPromptAsync(System.String)">
+            <summary>
+            Asynchronous method to generate a prompt in the style of "KWiJisho."
+            </summary>
+            <param name="input">The user input text.</param>
+            <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
+        </member>
+        <member name="M:KWiJisho.APIs.ChatGPT.GetPromptAsync(System.String,System.String)">
+            <summary>
+            Asynchronous method to generate a prompt for the OpenAI GPT-3.5 model.
+            </summary>
+            <param name="input">The user input text.</param>
+            <param name="promptStyle">The style of the prompt to be added.</param>
+            <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
+        </member>
         <member name="T:KWiJisho.APIs.HttpService">
             <summary>
             A simple HTTP service for making GET requests and retrieving the response content.
@@ -83,42 +129,6 @@
             Copyright of the current Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="T:KWiJisho.APIs.OpenAiApi">
-            <summary>
-            This class provides methods for interacting with the OpenAI GPT-3.5 model
-            using the OpenAI-API-dotnet library.
-            API Documentation: <a href="https://github.com/OkGoDoIt/OpenAI-API-dotnet"/>
-            </summary>
-        </member>
-        <member name="M:KWiJisho.APIs.OpenAiApi.GetKWiJishoPromptAsync(System.String)">
-            <summary>
-            Asynchronous method to generate a prompt in the style of "KWiJisho."
-            </summary>
-            <param name="input">The user input text.</param>
-            <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
-        </member>
-        <member name="M:KWiJisho.APIs.OpenAiApi.GetPromptSummarizeTextAsync(System.String)">
-            <summary>
-            Asynchronous method to generate a prompt for summarizing text.
-            </summary>
-            <param name="input">The text to be summarized.</param>
-            <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
-        </member>
-        <member name="M:KWiJisho.APIs.OpenAiApi.GetPromptTranslateToPortugueseAsync(System.String)">
-            <summary>
-            Asynchronous method to generate a prompt for translating text to Brazilian Portuguese.
-            </summary>
-            <param name="input">The text to be translated.</param>
-            <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
-        </member>
-        <member name="M:KWiJisho.APIs.OpenAiApi.GetPromptAsync(System.String,System.String)">
-            <summary>
-            Asynchronous method to generate a prompt for the OpenAI GPT-3.5 model.
-            </summary>
-            <param name="userInput">The user input text.</param>
-            <param name="promptStyle">The style of the prompt to be added.</param>
-            <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
-        </member>
         <member name="T:KWiJisho.Commands.Basic">
             <summary>
             Provides methods for basic prefix and slash commands.
@@ -197,6 +207,9 @@
             <summary>
             Represents the command to get the chat gpt prompt in KWiJisho style.
             </summary>
+            <param name="discordChannel">The Discord channel where the prompt will be sent.</param>
+            <param name="input">The content of user input.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> with the current asynchronous method.</returns>
         </member>
         <member name="T:KWiJisho.Commands.Nasa">
             <summary>
@@ -1227,7 +1240,13 @@
             Indicates an upcoming birthday in the future, beyond tomorrow.
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:KWiJisho.Models.Nasa.BuildEnglishApodMessageAsync(KWiJisho.APIs.NasaApi.Apod.ApodResponse)" -->
+        <member name="M:KWiJisho.Models.Nasa.BuildEnglishApodMessageAsync(KWiJisho.APIs.NasaApi.Apod.ApodResponse)">
+            <summary>
+            Asynchronously builds a english apod message with the apod response.
+            </summary>
+            <param name="apodResponse">The APOD response content to build the embed.</param>
+            <returns>The <see cref="T:DSharpPlus.Entities.DiscordEmbedBuilder"/>.</returns>
+        </member>
         <member name="M:KWiJisho.Models.Nasa.BuildPortugueseApodMessageAsync(KWiJisho.APIs.NasaApi.Apod.ApodResponse)">
             <summary>
             Asynchronously builds a portuguese apod message with the apod response.
