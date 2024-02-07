@@ -26,11 +26,15 @@ You can find me on likedin by here [linkedin.com/in/monambike/](https://www.link
 
 You can also check detailed information about all commands avaiable here: [monambike.github.io/kwijisho-discord-bot/articles/commands](https://monambike.github.io/kwijisho-discord-bot/articles/commands/apod.html).
 
-## Some of her Prefix Commands:
+## Prefix Commands:
+
+Check out some of her prefix commands!
 
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/a573854c-c93a-4f5e-98ac-997354c603f7)
 
-## Some of her Slash Commands:
+## Slash Commands:
+
+Check out some of her slash commands!
 
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/207d27bf-6222-4c94-93c1-2388b68ab3da)
 
@@ -38,7 +42,11 @@ You can check the old version of this project written with Node.js (Javascript) 
 
 # Features
 
+Some feature of KWiJisho Discord bot!
+
 ## Send Animated Emojis
+
+You don't have Discord Nitro? No problem :) she has a good taste about emojis!
 
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/cd3f103a-bd84-4f95-94ca-b91a51cd9622)
 
