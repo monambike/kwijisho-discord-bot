@@ -18,10 +18,6 @@ KWiJisho stands for "Kawaii" and "Jisho" that means "Cute" and "Dictionary" in j
 
 You can check further documentation here [monambike.github.io/kwijisho-discord-bot](https://monambike.github.io/kwijisho-discord-bot/).
 
-# License
-
-The license for this repository is available [here](LICENSE). Please refer to the provided link for detailed information regarding the terms and conditions governing the use of this project.
-
 # Contact
 
 You can find me on likedin by here [linkedin.com/in/monambike/](https://www.linkedin.com/in/monambike/). If you want to see videos about my work you can check my YouTube channel [youtube.com/@monambike_portfolio](https://www.youtube.com/@monambike_portfolio) and if you want to see my artworks you can check at my instagram [instagram.com/monambike_portfolio](https://www.instagram.com/monambike_portfolio).
@@ -30,11 +26,15 @@ You can find me on likedin by here [linkedin.com/in/monambike/](https://www.link
 
 You can also check detailed information about all commands avaiable here: [monambike.github.io/kwijisho-discord-bot/articles/commands](https://monambike.github.io/kwijisho-discord-bot/articles/commands/apod.html).
 
-## Some of her Prefix Commands:
+## Prefix Commands:
+
+Check out some of her prefix commands!
 
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/a573854c-c93a-4f5e-98ac-997354c603f7)
 
-## Some of her Slash Commands:
+## Slash Commands:
+
+Check out some of her slash commands!
 
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/207d27bf-6222-4c94-93c1-2388b68ab3da)
 
@@ -42,7 +42,11 @@ You can check the old version of this project written with Node.js (Javascript) 
 
 # Features
 
+Some feature of KWiJisho Discord bot!
+
 ## Send Animated Emojis
+
+You don't have Discord Nitro? No problem :) she has a good taste about emojis!
 
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/cd3f103a-bd84-4f95-94ca-b91a51cd9622)
 
@@ -59,22 +63,14 @@ It will also contain the copyright and APOD image date information embedded.
 
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/52bd8259-da9b-4542-b63b-ee3b16971f00)
 
-## Change Discord Server Theme
-
-![ezgif com-animated-gif-maker](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/54a5565d-96f2-4263-a06b-bc312ba38c34)
-![ezgif com-animated-gif-maker (1)](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/60a0fded-bcc5-4bf6-b173-d56047e23920)
-
-## Help and Info
-
-![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/6994663c-0485-4424-9c92-2bff7a66b143)
-![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/ab320aad-8fbc-46df-a819-7d464c621e11)
-
-## Send News
-
-![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/906b84ab-15a0-4c79-b0ea-7da2605956f8)
-
-![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/62a77e81-be65-47e0-8562-048851cdf9c6)
-
-## And Much More!
+## And She Can do Much More!
 
 Please take a look at the [monambike.github.io/kwijisho-discord-bot/articles/commands](https://monambike.github.io/kwijisho-discord-bot/articles/commands/apod.html) to check detailed information about all the features this Discord bot can provide you!
+
+# Repo Activity
+
+![Alt](https://repobeats.axiom.co/api/embed/2bfceebe2521125d710f60fd5a322890e0bb395e.svg "Repobeats analytics image")
+
+# License
+
+The license for this repository is available [here](LICENSE). Please refer to the provided link for detailed information regarding the terms and conditions governing the use of this project.
