@@ -25,7 +25,7 @@ namespace KWiJisho.Commands
             {
                 Color = Data.ConfigJson.DefaultColor.DiscordColor,
                 Title = "AJUDA COM COMANDOS",
-                Description = $@"Lembre-se que pra colocar um comando você precisa colocar o ""{Data.ConfigJson.Prefix}"" na frente!{Environment.NewLine}Você pode usar os comandos em barra ""{Convert.ToChar("\u002F")}"" também!",
+                Description = $@"Lembre-se que pra colocar um comando você precisa colocar o ""{Data.ConfigJson.Prefix}"" na frente!{Environment.NewLine}Você pode usar os comandos em barra ""/"" também!",
                 Thumbnail = new DiscordEmbedBuilder.EmbedThumbnail
                 {
                     Url = discordClient.CurrentUser.AvatarUrl
