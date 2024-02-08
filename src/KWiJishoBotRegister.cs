@@ -3,12 +3,12 @@ using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.CommandsNext.Exceptions;
 using DSharpPlus.SlashCommands;
 using DSharpPlus.SlashCommands.Attributes;
-using KWiJisho.Commands.Slash;
-using KWiJisho.Events;
 using KWiJisho.Commands.Prefix;
+using KWiJisho.Commands.Slash;
+using KWiJisho.Data;
+using KWiJisho.Events;
 using KWiJisho.Utils;
 using System.Collections.Generic;
-using KWiJisho.Data;
 
 namespace KWiJisho
 {
@@ -64,8 +64,8 @@ namespace KWiJisho
         /// <returns></returns>
         internal void RegisterBotEvents()
         {
-            // Registering discord bot events.
-            DiscordClient.Ready += KWiJishoBotStart.OnClientReady;
+            // Registering other Discord bot events.
+            DiscordClient.Ready += async (client, readyEventArgs) => await DiscordClient.UpdateStatusAsync(DiscordActivity);
             DiscordClient.ComponentInteractionCreated += ButtonInteraction.OnComponentInteractionCreatedAsync;
             DiscordClient.GuildMemberAdded += GoodbyeWelcome.OnGuildMemberAddedAsync;
             DiscordClient.GuildMemberRemoved += GoodbyeWelcome.OnGuildMemberRemovedAsync;

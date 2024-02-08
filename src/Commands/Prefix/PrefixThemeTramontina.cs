@@ -31,6 +31,26 @@ namespace KWiJisho.Commands.Prefix
             /// </summary>
             internal class PrefixThemeTramontina : BaseCommandModule
             {
+                /// <summary>
+                /// Represents the command to set the Default Theme.
+                /// </summary>
+                internal PrefixCommand themeReset = new(nameof(themeReset), @"Define o servidor para o tema padrão.", Manage, Permissions.Administrator);
+
+                /// <summary>
+                /// Represents the command to set the Christmas Theme.
+                /// </summary>
+                internal PrefixCommand themeChristmas = new(nameof(themeChristmas), @"Define o servidor para o tema de natal.", Manage, Permissions.Administrator);
+
+                /// <summary>
+                /// Represents the command to set the Easter Theme.
+                /// </summary>
+                internal PrefixCommand themeEaster = new(nameof(themeEaster), @"Define o servidor para o tema de páscoa.", Manage, Permissions.Administrator);
+
+                /// <summary>
+                /// Represents the command to set the Halloween Theme.
+                /// </summary>
+                internal PrefixCommand themeHalloween = new(nameof(themeHalloween), @"Define o servidor para o tema de halloween.", Manage, Permissions.Administrator);
+
                 // Tramontina's Text Channels.
                 internal static readonly TramontinaChannel Geral = new(692588978959941656, "geral", new Dictionary<EmojiTheme, string>
                     { { EmojiTheme.Default, "💬" }, { EmojiTheme.Christmas, "🍪" }, { EmojiTheme.Easter, "🐇" }, { EmojiTheme.Halloween, "🎃" }  });
@@ -70,9 +90,10 @@ namespace KWiJisho.Commands.Prefix
                 ];
 
                 /// <summary>
-                /// Resets the Tramontina server emojis.
+                /// Sets the Tramontina server to Default Theme.
                 /// </summary>
-                internal PrefixCommand themeReset = new(nameof(themeReset), @"Define o servidor para o tema padrão.", Manage, Permissions.Administrator);
+                /// <param name="commandContext">The context where the command is being executed.</param>
+                /// <returns>A <see cref="Task"/> from the method execution.</returns>
                 [Command(nameof(themeReset))]
                 internal async Task ResetThemeAsync(CommandContext commandContext)
                     => await SetThemeAsync(commandContext, EmojiTheme.Default,
@@ -82,7 +103,8 @@ namespace KWiJisho.Commands.Prefix
                 /// <summary>
                 /// Sets the Tramontina server to Christmas Theme.
                 /// </summary>
-                internal PrefixCommand themeChristmas = new(nameof(themeChristmas), @"Define o servidor para o tema de natal.", Manage, Permissions.Administrator);
+                /// <param name="commandContext">The context where the command is being executed.</param>
+                /// <returns>A <see cref="Task"/> from the method execution.</returns>
                 [Command(nameof(themeChristmas))]
                 [RequireUserPermissions(Permissions.Administrator)]
                 internal async Task SetChristmasThemeAsync(CommandContext commandContext)
@@ -100,7 +122,8 @@ namespace KWiJisho.Commands.Prefix
                 /// <summary>
                 /// Sets the Tramontina server to Easter Theme.
                 /// </summary>
-                internal PrefixCommand themeEaster = new(nameof(themeEaster), @"Define o servidor para o tema de páscoa.", Manage, Permissions.Administrator);
+                /// <param name="commandContext">The context where the command is being executed.</param>
+                /// <returns>A <see cref="Task"/> from the method execution.</returns>
                 [Command(nameof(themeEaster))]
                 [RequireUserPermissions(Permissions.Administrator)]
                 internal async Task SetEasterThemeAsync(CommandContext commandContext)
@@ -112,7 +135,8 @@ namespace KWiJisho.Commands.Prefix
                 /// <summary>
                 /// Sets the Tramontina server to Halloween Theme.
                 /// </summary>
-                internal PrefixCommand themeHalloween = new(nameof(themeHalloween), @"Define o servidor para o tema de halloween.", Manage, Permissions.Administrator);
+                /// <param name="commandContext">The context where the command is being executed.</param>
+                /// <returns>A <see cref="Task"/> from the method execution.</returns>
                 [Command(nameof(themeHalloween))]
                 [RequireUserPermissions(Permissions.Administrator)]
                 internal async Task SetHalloweenThemeAsync(CommandContext commandContext)
@@ -124,6 +148,12 @@ namespace KWiJisho.Commands.Prefix
                 /// <summary>
                 /// Sets the Tramontina server to a Theme according with parameterization.
                 /// </summary>
+                /// <param name="commandContext">The context where the command is being executed.</param>
+                /// <param name="emojiTheme">The chosen theme to set the Discord server.</param>
+                /// <param name="title">The title from the theme notice.</param>
+                /// <param name="description">The description from the theme notice</param>
+                /// <param name="serverNameSuggestion">The server name suggestion.</param>
+                /// <returns>A <see cref="Task"/> from the method execution.</returns>
                 [RequireUserPermissions(Permissions.Administrator)]
                 private static async Task SetThemeAsync(CommandContext commandContext, EmojiTheme emojiTheme, string title, string description, string serverNameSuggestion = null)
                 {

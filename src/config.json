@@ -4,8 +4,8 @@
   "chatgptToken": "insert-your-token",
   "nasaToken": "insert-your-token",
   "defaultColor": {
-    "red": 77,
-    "green": 18,
-    "blue": 161
+    "red": 255,
+    "green": 231,
+    "blue": 94
   }
 }

@@ -501,35 +501,69 @@
             Represents a set of prefix commands to change theme designed specifically for Tramontina Discord server.
             </summary>
         </member>
+        <member name="F:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeReset">
+            <summary>
+            Represents the command to set the Default Theme.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeChristmas">
+            <summary>
+            Represents the command to set the Christmas Theme.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeEaster">
+            <summary>
+            Represents the command to set the Easter Theme.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeHalloween">
+            <summary>
+            Represents the command to set the Halloween Theme.
+            </summary>
+        </member>
         <member name="F:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.TramontinaChannels">
             <summary>
             Channels from tramontina server that can receive theme changing.
             </summary>
         </member>
-        <member name="F:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeReset">
+        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.ResetThemeAsync(DSharpPlus.CommandsNext.CommandContext)">
             <summary>
-            Resets the Tramontina server emojis.
+            Sets the Tramontina server to Default Theme.
             </summary>
+            <param name="commandContext">The context where the command is being executed.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
         </member>
-        <member name="F:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeChristmas">
+        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetChristmasThemeAsync(DSharpPlus.CommandsNext.CommandContext)">
             <summary>
             Sets the Tramontina server to Christmas Theme.
             </summary>
+            <param name="commandContext">The context where the command is being executed.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
         </member>
-        <member name="F:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeEaster">
+        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetEasterThemeAsync(DSharpPlus.CommandsNext.CommandContext)">
             <summary>
             Sets the Tramontina server to Easter Theme.
             </summary>
+            <param name="commandContext">The context where the command is being executed.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
         </member>
-        <member name="F:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.themeHalloween">
+        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetHalloweenThemeAsync(DSharpPlus.CommandsNext.CommandContext)">
             <summary>
             Sets the Tramontina server to Halloween Theme.
             </summary>
+            <param name="commandContext">The context where the command is being executed.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
         </member>
         <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetThemeAsync(DSharpPlus.CommandsNext.CommandContext,KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme,System.String,System.String,System.String)">
             <summary>
             Sets the Tramontina server to a Theme according with parameterization.
             </summary>
+            <param name="commandContext">The context where the command is being executed.</param>
+            <param name="emojiTheme">The chosen theme to set the Discord server.</param>
+            <param name="title">The title from the theme notice.</param>
+            <param name="description">The description from the theme notice</param>
+            <param name="serverNameSuggestion">The server name suggestion.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
         </member>
         <member name="T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel">
             <summary>
@@ -1136,6 +1170,11 @@
         <member name="P:KWiJisho.KWiJishoBot.SlashCommands">
             <summary>
             Gets or sets the <see cref="T:DSharpPlus.SlashCommands.SlashCommandsExtension"/> instance for handling bot slash commands.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.KWiJishoBot.DiscordActivity">
+            <summary>
+            Initializing Discord bot activity class.
             </summary>
         </member>
         <member name="M:KWiJisho.KWiJishoBot.Main">
