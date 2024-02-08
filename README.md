@@ -6,7 +6,7 @@
 ![ChatGPT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)
 ![Github Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)
 
-# KWiJisho
+# 💛 KWiJisho
 
 Fun and friendly interactive Discord bot with a wide range of functions.
 
