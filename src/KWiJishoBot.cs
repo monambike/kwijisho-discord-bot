@@ -3,7 +3,6 @@ using DSharpPlus.CommandsNext;
 using DSharpPlus.Entities;
 using DSharpPlus.SlashCommands;
 using KWiJisho.Data;
-using System;
 using System.Threading.Tasks;
 using static KWiJisho.Commands.Prefix.PrefixCommandManager;
 
