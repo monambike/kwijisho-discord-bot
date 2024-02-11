@@ -1,4 +1,5 @@
-﻿using DSharpPlus.CommandsNext;
+﻿using DSharpPlus;
+using DSharpPlus.CommandsNext;
 
 namespace KWiJisho.Entities
 {
@@ -23,12 +24,12 @@ namespace KWiJisho.Entities
         /// <summary>
         /// Updates asynchronously the name of the Discord channel.
         /// </summary>
-        /// <param name="commandContext">The command context containing information about the command.</param>
+        /// <param name="discordClient">The Discord client instance.</param>
         /// <param name="newName">The new name for the Discord channel.</param>
-        internal async void UpdateChannelNameAsync(CommandContext commandContext, string newName)
+        internal async void UpdateChannelNameAsync(DiscordClient discordClient, string newName)
         {
             // Get the channel on current Discord server based their Id.
-            var channel = commandContext.Client.GetChannelAsync(Id).Result;
+            var channel = discordClient.GetChannelAsync(Id).Result;
 
             // Rename the channel with the new name.
             await channel.ModifyAsync(editChannel => editChannel.Name = $"{newName}");

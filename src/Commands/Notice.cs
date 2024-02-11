@@ -21,12 +21,12 @@ namespace KWiJisho.Commands
         /// <summary>
         /// Method responsible for sending and creating a "news" in the news channel.
         /// </summary>
-        /// <param name="discordClient"></param>
-        /// <param name="discordMember"></param>
-        /// <param name="title"></param>
-        /// <param name="description"></param>
-        /// <param name="sendInTramontina"></param>
-        /// <param name="discordAttachments"></param>
+        /// <param name="discordClient">The discord client instance.</param>
+        /// <param name="discordMember">The discord member who sent the message.</param>
+        /// <param name="title">The title of the news.</param>
+        /// <param name="description">The description of the news.</param>
+        /// <param name="sendInTramontina">If true the message will be sent in Tramontina; otherwise, it will be sent in my test server.</param>
+        /// <param name="discordAttachments">The Discord images for being attached on the embed. Only the first one will be sent</param>
         /// <returns></returns>
         internal static async Task ExecuteNewsAsync(DiscordClient discordClient, DiscordMember discordMember, string title, string description, bool sendInTramontina, DiscordAttachment discordAttachments = null)
         {

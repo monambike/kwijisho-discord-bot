@@ -244,12 +244,12 @@
             <summary>
             Method responsible for sending and creating a "news" in the news channel.
             </summary>
-            <param name="discordClient"></param>
-            <param name="discordMember"></param>
-            <param name="title"></param>
-            <param name="description"></param>
-            <param name="sendInTramontina"></param>
-            <param name="discordAttachments"></param>
+            <param name="discordClient">The discord client instance.</param>
+            <param name="discordMember">The discord member who sent the message.</param>
+            <param name="title">The title of the news.</param>
+            <param name="description">The description of the news.</param>
+            <param name="sendInTramontina">If true the message will be sent in Tramontina; otherwise, it will be sent in my test server.</param>
+            <param name="discordAttachments">The Discord images for being attached on the embed. Only the first one will be sent</param>
             <returns></returns>
         </member>
         <member name="T:KWiJisho.Commands.Prefix.PrefixCommandManager">
@@ -276,41 +276,6 @@
             </summary>
             <summary>
             Provides a set of commands and classes for managing commands in a Discord server.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.CommandGroups">
-            <summary>
-            Gets or sets the list of command groups.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.Astronomy">
-            <summary>
-            Gets the command group for Astronomy commands.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.ChatGpt">
-            <summary>
-            Gets the command group for ChatGPT commands.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.Info">
-            <summary>
-            Gets the command group for Information and Help commands.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.Manage">
-            <summary>
-            Gets the command group for Theme commands.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.Birthday">
-            <summary>
-            Gets the command group for Birthday commands.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.Basic">
-            <summary>
-            Gets the command group for Basic commands.
             </summary>
         </member>
         <member name="T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixBasic">
@@ -382,6 +347,41 @@
             </summary>
             <param name="commandContext">The command context from the current command call.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
+        </member>
+        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.CommandGroups">
+            <summary>
+            Gets or sets the list of command groups.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.Astronomy">
+            <summary>
+            Gets the command group for Astronomy commands.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.ChatGpt">
+            <summary>
+            Gets the command group for ChatGPT commands.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.Info">
+            <summary>
+            Gets the command group for Information and Help commands.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.Manage">
+            <summary>
+            Gets the command group for Theme commands.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.Birthday">
+            <summary>
+            Gets the command group for Birthday commands.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.Basic">
+            <summary>
+            Gets the command group for Basic commands.
+            </summary>
         </member>
         <member name="T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixInfo">
             <summary>
@@ -491,11 +491,6 @@
             Represents a set of theme prefix commands.
             </summary>
         </member>
-        <member name="T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme">
-            <summary>
-            Represents seasonal themes that you can set to the Discord server.
-            </summary>
-        </member>
         <member name="T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina">
             <summary>
             Represents a set of prefix commands to change theme designed specifically for Tramontina Discord server.
@@ -520,87 +515,6 @@
             <summary>
             Represents the command to set the Halloween Theme.
             </summary>
-        </member>
-        <member name="F:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.TramontinaChannels">
-            <summary>
-            Channels from tramontina server that can receive theme changing.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.ResetThemeAsync(DSharpPlus.CommandsNext.CommandContext)">
-            <summary>
-            Sets the Tramontina server to Default Theme.
-            </summary>
-            <param name="commandContext">The context where the command is being executed.</param>
-            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
-        </member>
-        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetChristmasThemeAsync(DSharpPlus.CommandsNext.CommandContext)">
-            <summary>
-            Sets the Tramontina server to Christmas Theme.
-            </summary>
-            <param name="commandContext">The context where the command is being executed.</param>
-            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
-        </member>
-        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetEasterThemeAsync(DSharpPlus.CommandsNext.CommandContext)">
-            <summary>
-            Sets the Tramontina server to Easter Theme.
-            </summary>
-            <param name="commandContext">The context where the command is being executed.</param>
-            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
-        </member>
-        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetHalloweenThemeAsync(DSharpPlus.CommandsNext.CommandContext)">
-            <summary>
-            Sets the Tramontina server to Halloween Theme.
-            </summary>
-            <param name="commandContext">The context where the command is being executed.</param>
-            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
-        </member>
-        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetThemeAsync(DSharpPlus.CommandsNext.CommandContext,KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme,System.String,System.String,System.String)">
-            <summary>
-            Sets the Tramontina server to a Theme according with parameterization.
-            </summary>
-            <param name="commandContext">The context where the command is being executed.</param>
-            <param name="emojiTheme">The chosen theme to set the Discord server.</param>
-            <param name="title">The title from the theme notice.</param>
-            <param name="description">The description from the theme notice</param>
-            <param name="serverNameSuggestion">The server name suggestion.</param>
-            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
-        </member>
-        <member name="T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel">
-            <summary>
-            Initializes a new instance of <see cref="T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel"/> class with the specified id, the default channel
-            text title and emoji theme.
-            </summary>
-            <param name="id">The Id from the Discord channel.</param>
-            <param name="defaultTextTitle">The default text title from the Discord channel.</param>
-            <param name="emojiTheme">The emoji theme dictionary avaiable for this channel.</param>
-        </member>
-        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.#ctor(System.UInt64,System.String,System.Collections.Generic.Dictionary{KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme,System.String})">
-            <summary>
-            Initializes a new instance of <see cref="T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel"/> class with the specified id, the default channel
-            text title and emoji theme.
-            </summary>
-            <param name="id">The Id from the Discord channel.</param>
-            <param name="defaultTextTitle">The default text title from the Discord channel.</param>
-            <param name="emojiTheme">The emoji theme dictionary avaiable for this channel.</param>
-        </member>
-        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.DefaultTextTitle">
-            <summary>
-            The default text title for the tramontina Discord channel.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.EmojiTheme">
-            <summary>
-            The dictionary containing the EmojiTheme that represents the seasonal theme associate to the emoji, and
-            the string that represents the emoji itself for the tramontina Discord channel.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.ChangeEmoji(DSharpPlus.CommandsNext.CommandContext,System.String)">
-            <summary>
-            Change the emoji for current channel. At the current moment, you can do this twice with the same channel
-            every 10 minutes.
-            </summary>
-            <param name="commandContext">The command context of the interaction.</param>
-            <param name="emoji">The emoji to be changed in the channel.</param>
         </member>
         <member name="T:KWiJisho.Commands.Prefix.PrefixCommand">
             <summary>
@@ -756,6 +670,90 @@
             <param name="sendInTramontina">If the news should be send in <see cref="T:KWiJisho.Data.ServerTramontina"/>; otherwise, it will send it to <see cref="T:KWiJisho.Data.ServerPersonal"/>.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> containing the result from the asynchronous method.</returns>
         </member>
+        <member name="T:KWiJisho.Commands.Slash.SlashThemeTramontina">
+            <summary>
+            Represents a set of notice slash commands.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Commands.ThemeTramontina">
+            <summary>
+            Provides methods for theme prefix and slash commands.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Commands.ThemeTramontina.TramontinaChannels">
+            <summary>
+            Channels from tramontina server that can receive theme changing.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Commands.ThemeTramontina.SetThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient,KWiJisho.Commands.ThemeTramontina.EmojiTheme,System.String,System.String,System.String)">
+            <summary>
+            Sets the Tramontina server to a Theme according with parameterization.
+            </summary>
+            <param name="discordChannel">The Discord channel where the command is being executed.</param>
+            <param name="discordClient">The Discord client instance.</param>
+            <param name="emojiTheme">The chosen theme to set the Discord server.</param>
+            <param name="title">The title from the theme notice.</param>
+            <param name="description">The description from the theme notice</param>
+            <param name="serverNameSuggestion">The server name suggestion.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.ThemeTramontina.ResetThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)">
+            <summary>
+            Sets the Tramontina server to Default Theme.
+            </summary>
+            <param name="discordChannel">The Discord channel where the command is being executed.</param>
+            <param name="discordClient">The Discord client instance.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.ThemeTramontina.SetChristmasThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)">
+            <summary>
+            Sets the Tramontina server to Christmas Theme.
+            </summary>
+            <param name="discordChannel">The Discord channel where the command is being executed.</param>
+            <param name="discordClient">The Discord client instance.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.ThemeTramontina.SetEasterThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)">
+            <summary>
+            Sets the Tramontina server to Easter Theme.
+            </summary>
+            <param name="discordChannel">The Discord channel where the command is being executed.</param>
+            <param name="discordClient">The Discord client instance.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.ThemeTramontina.SetHalloweenThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)">
+            <summary>
+            Sets the Tramontina server to Halloween Theme.
+            </summary>
+            <param name="discordChannel">The Discord channel where the command is being executed.</param>
+            <param name="discordClient">The Discord client instance.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
+        </member>
+        <member name="T:KWiJisho.Commands.ThemeTramontina.EmojiTheme">
+            <summary>
+            Represents seasonal themes that you can set to the Discord server.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Commands.ThemeTramontina.EmojiTheme.Default">
+            <summary>
+            Represents the Default theme for a server.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Commands.ThemeTramontina.EmojiTheme.Christmas">
+            <summary>
+            Represents the Christmas theme for a setver.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Commands.ThemeTramontina.EmojiTheme.Easter">
+            <summary>
+            Represents the Easter theme for a setver.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Commands.ThemeTramontina.EmojiTheme.Halloween">
+            <summary>
+            Represents the Halloween theme for a setver.
+            </summary>
+        </member>
         <member name="P:KWiJisho.Data.ConfigJson.KWiJishoToken">
             <summary>
             Gets or sets the API token for KWiJisho.
@@ -890,12 +888,49 @@
             The Discord channel default name.
             </summary>
         </member>
-        <member name="M:KWiJisho.Entities.Channel.UpdateChannelNameAsync(DSharpPlus.CommandsNext.CommandContext,System.String)">
+        <member name="M:KWiJisho.Entities.Channel.UpdateChannelNameAsync(DSharpPlus.DiscordClient,System.String)">
             <summary>
             Updates asynchronously the name of the Discord channel.
             </summary>
-            <param name="commandContext">The command context containing information about the command.</param>
+            <param name="discordClient">The Discord client instance.</param>
             <param name="newName">The new name for the Discord channel.</param>
+        </member>
+        <member name="T:KWiJisho.Entities.ChannelTramontina">
+            <summary>
+            Initializes a new instance of <see cref="T:KWiJisho.Entities.ChannelTramontina"/> class with the specified id, the default channel
+            text title and emoji theme.
+            </summary>
+            <param name="id">The Id from the Discord channel.</param>
+            <param name="defaultTextTitle">The default text title from the Discord channel.</param>
+            <param name="emojiTheme">The emoji theme dictionary avaiable for this channel.</param>
+        </member>
+        <member name="M:KWiJisho.Entities.ChannelTramontina.#ctor(System.UInt64,System.String,System.Collections.Generic.Dictionary{KWiJisho.Commands.ThemeTramontina.EmojiTheme,System.String})">
+            <summary>
+            Initializes a new instance of <see cref="T:KWiJisho.Entities.ChannelTramontina"/> class with the specified id, the default channel
+            text title and emoji theme.
+            </summary>
+            <param name="id">The Id from the Discord channel.</param>
+            <param name="defaultTextTitle">The default text title from the Discord channel.</param>
+            <param name="emojiTheme">The emoji theme dictionary avaiable for this channel.</param>
+        </member>
+        <member name="P:KWiJisho.Entities.ChannelTramontina.DefaultTextTitle">
+            <summary>
+            The default text title for the tramontina Discord channel.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.ChannelTramontina.EmojiTheme">
+            <summary>
+            The dictionary containing the EmojiTheme that represents the seasonal theme associate to the emoji, and
+            the string that represents the emoji itself for the tramontina Discord channel.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Entities.ChannelTramontina.ChangeEmoji(DSharpPlus.DiscordClient,System.String)">
+            <summary>
+            Change the emoji for current channel. At the current moment, you can do this twice with the same channel
+            every 10 minutes.
+            </summary>
+            <param name="discordClient">The Discord client instance.</param>
+            <param name="emoji">The emoji to be changed in the channel.</param>
         </member>
         <member name="T:KWiJisho.Entities.Color">
             <summary>

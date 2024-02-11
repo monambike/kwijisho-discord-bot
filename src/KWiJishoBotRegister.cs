@@ -55,6 +55,7 @@ namespace KWiJisho
                 SlashCommands.RegisterCommands<SlashKwiGpt>(guildId);
                 SlashCommands.RegisterCommands<SlashNasa>(guildId);
                 SlashCommands.RegisterCommands<SlashNotice>(guildId);
+                SlashCommands.RegisterCommands<SlashThemeTramontina>(guildId);
             }
         }
 
