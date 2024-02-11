@@ -23,7 +23,7 @@ namespace KWiJisho.Utils
         /// <param name="cooldown">The command cooldown.</param>
         /// <param name="cooldownPurpose">The purpose of the cooldown. (if present)</param>
         /// <returns></returns>
-        internal static string CooldownCustomErrorMessage(int maxExecute, int cooldown, string? cooldownPurpose)
+        internal static string CooldownCustomErrorMessage(int maxExecute, int cooldown, string cooldownPurpose)
             => $"Você só pode enviar {maxExecute} {(maxExecute == 1 ? "comando" : "comandos")}{(cooldownPurpose is not null ? $" para {cooldownPurpose}" : "")} a cada {cooldown} {(cooldown == 1 ? "minuto" : "minutos")}.";
         
         /// <summary>
