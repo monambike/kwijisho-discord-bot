@@ -14,6 +14,11 @@ namespace KWiJisho.Commands
     /// </summary>
     internal static class ThemeTramontina
     {
+        /// <summary>
+        /// Represents the cooldown for theme change.
+        /// </summary>
+        private static readonly Cooldown ThemeChangeCooldown = new(2, TimeSpan.FromMinutes(10), "mudar o tema do servidor");
+
         // Tramontina's Text Channels.
         internal static readonly ChannelTramontina Geral = new(692588978959941656, "geral", new Dictionary<EmojiTheme, string>
             { { EmojiTheme.Default, "💬" }, { EmojiTheme.Christmas, "🍪" }, { EmojiTheme.Easter, "🐇" }, { EmojiTheme.Halloween, "🎃" }  });
@@ -75,6 +80,9 @@ namespace KWiJisho.Commands
         /// <returns>A <see cref="Task"/> from the method execution.</returns>
         internal static async Task SetThemeAsync(DiscordChannel discordChannel, DiscordClient discordClient, EmojiTheme emojiTheme, string title, string description, string serverNameSuggestion = null)
         {
+            // Checking if can execute current command
+            if (!ThemeChangeCooldown.CanExecute(discordChannel)) return;
+
             // Initial message so user can know .
             await discordChannel.SendMessageAsync("Só um segundinho... Vou botar as decorações então pode tomar um tempinho! ;P");
 
@@ -109,11 +117,12 @@ namespace KWiJisho.Commands
                 Color = Data.ConfigJson.DefaultColor.DiscordColor
             }.WithImageUrl($"attachment://{imagePath}").Build();
 
+            using var fileStream = new FileStream(imagePath, FileMode.Open);
             // Sending the second message with the image and button.
             await discordChannel.SendMessageAsync(new DiscordMessageBuilder()
                 .AddEmbed(suggestionsDiscordEmbedBuilder)
                 // The image suggestion for the server.
-                .AddFile(fileName, new FileStream(imagePath, FileMode.Open))
+                .AddFile(fileName, fileStream)
                 // Button to copy server name suggestion.
                 .AddComponents(new DiscordButtonComponent(ButtonStyle.Primary, "copy_server_name_suggestion", "Copiar Sugestão de Nome")));
         }
@@ -174,7 +183,8 @@ namespace KWiJisho.Commands
         /// <summary>
         /// Represents seasonal themes that you can set to the Discord server.
         /// </summary>
-        internal enum EmojiTheme {
+        internal enum EmojiTheme
+        {
             /// <summary>
             /// Represents the Default theme for a server.
             /// </summary>

@@ -17,6 +17,16 @@ namespace KWiJisho.Utils
             => $@"Esse comando é só para pessoas que possuem a permissão ""{GetPermissionNameInPortuguese(permission)}"".. (ᴗ_ ᴗ。) Eu sinto muito..";
 
         /// <summary>
+        /// Generates a custom error message for cooldown check.
+        /// </summary>
+        /// <param name="maxExecute">The command max execution time.</param>
+        /// <param name="cooldown">The command cooldown.</param>
+        /// <param name="cooldownPurpose">The purpose of the cooldown. (if present)</param>
+        /// <returns></returns>
+        internal static string CooldownCustomErrorMessage(int maxExecute, int cooldown, string? cooldownPurpose)
+            => $"Você só pode enviar {maxExecute} {(maxExecute == 1 ? "comando" : "comandos")}{(cooldownPurpose is not null ? $" para {cooldownPurpose}" : "")} a cada {cooldown} {(cooldown == 1 ? "minuto" : "minutos")}.";
+        
+        /// <summary>
         /// Gets the Portuguese name of a Discord permission.
         /// </summary>
         /// <param name="permission">The Discord permission.</param>

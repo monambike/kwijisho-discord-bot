@@ -680,6 +680,11 @@
             Provides methods for theme prefix and slash commands.
             </summary>
         </member>
+        <member name="F:KWiJisho.Commands.ThemeTramontina.ThemeChangeCooldown">
+            <summary>
+            Represents the cooldown for theme change.
+            </summary>
+        </member>
         <member name="F:KWiJisho.Commands.ThemeTramontina.TramontinaChannels">
             <summary>
             Channels from tramontina server that can receive theme changing.
