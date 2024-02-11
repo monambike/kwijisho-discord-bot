@@ -10,7 +10,11 @@ namespace KWiJisho.Commands.Slash
     /// </summary>
     internal class SlashThemeTramontina : ApplicationCommandModule
     {
-
+        /// <summary>
+        /// Represents the asynchronous slash reset theme method called when user asks for the slash reset theme command.
+        /// </summary>
+        /// <param name="interactionContext">The interaction context from the current command call.</param>
+        /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
         [SlashCommand("theme-reset", "Volta o tema do servidor para o Padrão!!")]
         [SlashRequireUserPermissions(Permissions.Administrator)]
         internal static async Task ExecuteSlashResetAsync(InteractionContext interactionContext)
@@ -25,6 +29,11 @@ namespace KWiJisho.Commands.Slash
             await interactionContext.DeleteResponseAsync();
         }
 
+        /// <summary>
+        /// Represents the asynchronous slash christmas theme method called when user asks for the slash christmas theme command.
+        /// </summary>
+        /// <param name="interactionContext">The interaction context from the current command call.</param>
+        /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
         [SlashCommand("theme-christmas", "🎅🏻 Define o tema do servidor para o de Natal!!")]
         [SlashRequireUserPermissions(Permissions.Administrator)]
         internal static async Task ExecuteSlashChristmasAsync(InteractionContext interactionContext)
@@ -39,6 +48,11 @@ namespace KWiJisho.Commands.Slash
             await interactionContext.DeleteResponseAsync();
         }
 
+        /// <summary>
+        /// Represents the asynchronous slash easter theme method called when user asks for the slash easter theme command.
+        /// </summary>
+        /// <param name="interactionContext">The interaction context from the current command call.</param>
+        /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
         [SlashCommand("theme-easter", "🐇 Define o tema do servidor para o de Páscoa!!")]
         [SlashRequireUserPermissions(Permissions.Administrator)]
         internal static async Task ExecuteSlashEasterAsync(InteractionContext interactionContext)
@@ -53,6 +67,11 @@ namespace KWiJisho.Commands.Slash
             await interactionContext.DeleteResponseAsync();
         }
 
+        /// <summary>
+        /// Represents the asynchronous slash halloween theme method called when user asks for the slash halloween theme command.
+        /// </summary>
+        /// <param name="interactionContext">The interaction context from the current command call.</param>
+        /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
         [SlashCommand("theme-halloween", "🎃 Define o tema do servidor para o de Halloween!!")]
         [SlashRequireUserPermissions(Permissions.Administrator)]
         internal static async Task ExecuteSlashHalloweenAsync(InteractionContext interactionContext)

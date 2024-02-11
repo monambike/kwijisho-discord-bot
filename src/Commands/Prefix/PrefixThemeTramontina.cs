@@ -41,23 +41,43 @@ namespace KWiJisho.Commands.Prefix
                 /// Represents the command to set the Halloween Theme.
                 /// </summary>
                 internal PrefixCommand themeHalloween = new(nameof(themeHalloween), @"Define o servidor para o tema de halloween.", Manage, Permissions.Administrator);
-            
+
+                /// <summary>
+                /// Represents the asynchronous prefix reset theme method called when user asks for the prefix reset theme command.
+                /// </summary>
+                /// <param name="commandContext">The command context from the current command call.</param>
+                /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
                 [Command(nameof(themeReset))]
                 [RequireUserPermissions(Permissions.Administrator)]
                 internal async Task ResetThemeAsync(CommandContext commandContext)
                     => await ThemeTramontina.ResetThemeAsync(commandContext.Channel, commandContext.Client);
 
 
+                /// <summary>
+                /// Represents the asynchronous prefix christmas theme method called when user asks for the prefix christmas theme command.
+                /// </summary>
+                /// <param name="commandContext">The command context from the current command call.</param>
+                /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
                 [Command(nameof(themeChristmas))]
                 [RequireUserPermissions(Permissions.Administrator)]
                 internal async Task SetChristmasThemeAsync(CommandContext commandContext)
                     => await ThemeTramontina.SetChristmasThemeAsync(commandContext.Channel, commandContext.Client);
 
+                /// <summary>
+                /// Represents the asynchronous prefix easter theme method called when user asks for the prefix easter theme command.
+                /// </summary>
+                /// <param name="commandContext">The command context from the current command call.</param>
+                /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
                 [Command(nameof(themeEaster))]
                 [RequireUserPermissions(Permissions.Administrator)]
                 internal async Task SetEasterThemeAsync(CommandContext commandContext)
                     => await ThemeTramontina.SetEasterThemeAsync(commandContext.Channel, commandContext.Client);
 
+                /// <summary>
+                /// Represents the asynchronous prefix halloween theme method called when user asks for the prefix halloween theme command.
+                /// </summary>
+                /// <param name="commandContext">The command context from the current command call.</param>
+                /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
                 [Command(nameof(themeHalloween))]
                 [RequireUserPermissions(Permissions.Administrator)]
                 internal async Task SetHalloweenThemeAsync(CommandContext commandContext)

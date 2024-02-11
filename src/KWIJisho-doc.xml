@@ -516,6 +516,34 @@
             Represents the command to set the Halloween Theme.
             </summary>
         </member>
+        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.ResetThemeAsync(DSharpPlus.CommandsNext.CommandContext)">
+            <summary>
+            Represents the asynchronous prefix reset theme method called when user asks for the prefix reset theme command.
+            </summary>
+            <param name="commandContext">The command context from the current command call.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetChristmasThemeAsync(DSharpPlus.CommandsNext.CommandContext)">
+            <summary>
+            Represents the asynchronous prefix christmas theme method called when user asks for the prefix christmas theme command.
+            </summary>
+            <param name="commandContext">The command context from the current command call.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetEasterThemeAsync(DSharpPlus.CommandsNext.CommandContext)">
+            <summary>
+            Represents the asynchronous prefix easter theme method called when user asks for the prefix easter theme command.
+            </summary>
+            <param name="commandContext">The command context from the current command call.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.SetHalloweenThemeAsync(DSharpPlus.CommandsNext.CommandContext)">
+            <summary>
+            Represents the asynchronous prefix halloween theme method called when user asks for the prefix halloween theme command.
+            </summary>
+            <param name="commandContext">The command context from the current command call.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
+        </member>
         <member name="T:KWiJisho.Commands.Prefix.PrefixCommand">
             <summary>
             Represents a single Discord command.
@@ -674,6 +702,34 @@
             <summary>
             Represents a set of notice slash commands.
             </summary>
+        </member>
+        <member name="M:KWiJisho.Commands.Slash.SlashThemeTramontina.ExecuteSlashResetAsync(DSharpPlus.SlashCommands.InteractionContext)">
+            <summary>
+            Represents the asynchronous slash reset theme method called when user asks for the slash reset theme command.
+            </summary>
+            <param name="interactionContext">The interaction context from the current command call.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.Slash.SlashThemeTramontina.ExecuteSlashChristmasAsync(DSharpPlus.SlashCommands.InteractionContext)">
+            <summary>
+            Represents the asynchronous slash christmas theme method called when user asks for the slash christmas theme command.
+            </summary>
+            <param name="interactionContext">The interaction context from the current command call.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.Slash.SlashThemeTramontina.ExecuteSlashEasterAsync(DSharpPlus.SlashCommands.InteractionContext)">
+            <summary>
+            Represents the asynchronous slash easter theme method called when user asks for the slash easter theme command.
+            </summary>
+            <param name="interactionContext">The interaction context from the current command call.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.Slash.SlashThemeTramontina.ExecuteSlashHalloweenAsync(DSharpPlus.SlashCommands.InteractionContext)">
+            <summary>
+            Represents the asynchronous slash halloween theme method called when user asks for the slash halloween theme command.
+            </summary>
+            <param name="interactionContext">The interaction context from the current command call.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
         </member>
         <member name="T:KWiJisho.Commands.ThemeTramontina">
             <summary>
@@ -1423,6 +1479,64 @@
             </summary>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous creation of the birthday scheduler.</returns>
         </member>
+        <member name="T:KWiJisho.Utils.Cooldown">
+            <summary>
+            A utility class that manages cooldown for executing commands and methods.
+            </summary>
+            <param name="maxUses">The max uses allowed before the wait of time to cooldown reset.</param>
+            <param name="resetAfter">The time to reset, when it reached the end allow user to execute the command again.</param>
+            <param name="cooldownPurpose">The purpose of this cooldown for user explanation.</param>
+        </member>
+        <member name="M:KWiJisho.Utils.Cooldown.#ctor(System.Int32,System.TimeSpan,System.String)">
+            <summary>
+            A utility class that manages cooldown for executing commands and methods.
+            </summary>
+            <param name="maxUses">The max uses allowed before the wait of time to cooldown reset.</param>
+            <param name="resetAfter">The time to reset, when it reached the end allow user to execute the command again.</param>
+            <param name="cooldownPurpose">The purpose of this cooldown for user explanation.</param>
+        </member>
+        <member name="P:KWiJisho.Utils.Cooldown.MaxUses">
+            <summary>
+            Max uses allowed before the wait of time to cooldown reset.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Utils.Cooldown.TimeToReset">
+            <summary>
+            Time to reset and allow new command uses.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Utils.Cooldown.CooldownPurpose">
+            <summary>
+            A brief explanation of the purpose of the cooldown.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Utils.Cooldown.Requests">
+            <summary>
+            The requests made for this cooldown instance.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Utils.Cooldown.CanExecute(DSharpPlus.Entities.DiscordChannel)">
+            <summary>
+            Checks if user can execute the action or if is necessary to wait.
+            </summary>
+            <param name="discordChannel">The channel where the message will be sent.</param>
+            <returns>A <see cref="T:System.Boolean"/> saying if the requested action could be executed or not.</returns>
+        </member>
+        <member name="M:KWiJisho.Utils.Cooldown.GetTimeRemainingString(System.TimeSpan)">
+            <summary>
+            Gets a string representation of the provided time remaining.
+            </summary>
+            <param name="timeSpan">The time remaining to get the representation.</param>
+            <returns>The <see cref="T:System.String"/> representation of how much time is remaining.</returns>
+        </member>
+        <member name="M:KWiJisho.Utils.Cooldown.GetTimeRemainingStrings(System.TimeSpan)">
+            <summary>
+            Gets a list containing string representations of the provided time remaining.
+            </summary>
+            <param name="timeSpan">The time remaining to get the strings accordingly.</param>
+            <returns>The <see cref="T:System.Collections.Generic.IEnumerable`1"/> containing a list of <see cref="T:System.String"/> representing how
+            much time is remaining for each <see cref="T:System.TimeSpan"/> property.</returns>
+        </member>
         <member name="T:KWiJisho.Utils.DiscordCustomEmbed">
             <summary>
             Utility class providing default embeds for KWiJisho Discord bot.
@@ -1548,6 +1662,15 @@
             </summary>
             <param name="permission">The required permission.</param>
             <returns>A formatted error message indicating the required permission.</returns>
+        </member>
+        <member name="M:KWiJisho.Utils.KWiJishoPermission.CooldownCustomErrorMessage(System.Int32,System.Int32,System.String)">
+            <summary>
+            Generates a custom error message for cooldown check.
+            </summary>
+            <param name="maxExecute">The command max execution time.</param>
+            <param name="cooldown">The command cooldown.</param>
+            <param name="cooldownPurpose">The purpose of the cooldown. (if present)</param>
+            <returns></returns>
         </member>
         <member name="M:KWiJisho.Utils.KWiJishoPermission.GetPermissionNameInPortuguese(DSharpPlus.Permissions)">
             <summary>
