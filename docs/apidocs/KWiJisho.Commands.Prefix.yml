@@ -14,10 +14,7 @@ items:
   - KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa
   - KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNotice
   - KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme
-  - KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
   - KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
-  - KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
-  - KWiJisho.Commands.Prefix.PrefixPokemon
   langs:
   - csharp
   - vb
@@ -188,37 +185,6 @@ references:
   - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme
     name: PrefixTheme
     href: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
-- uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
-  commentId: T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
-  parent: KWiJisho.Commands.Prefix
-  href: KWiJisho.Commands.Prefix.PrefixCommandManager.html
-  name: PrefixCommandManager.PrefixTheme.EmojiTheme
-  nameWithType: PrefixCommandManager.PrefixTheme.EmojiTheme
-  fullName: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
-  spec.csharp:
-  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager
-    name: PrefixCommandManager
-    href: KWiJisho.Commands.Prefix.PrefixCommandManager.html
-  - name: .
-  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme
-    name: PrefixTheme
-    href: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
-  - name: .
-  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
-    name: EmojiTheme
-    href: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.html
-  spec.vb:
-  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager
-    name: PrefixCommandManager
-    href: KWiJisho.Commands.Prefix.PrefixCommandManager.html
-  - name: .
-  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme
-    name: PrefixTheme
-    href: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
-  - name: .
-  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
-    name: EmojiTheme
-    href: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme.html
 - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
   commentId: T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
   href: KWiJisho.Commands.Prefix.PrefixCommandManager.html
@@ -249,37 +215,6 @@ references:
   - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
     name: PrefixThemeTramontina
     href: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina.html
-- uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
-  commentId: T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
-  parent: KWiJisho.Commands.Prefix
-  href: KWiJisho.Commands.Prefix.PrefixCommandManager.html
-  name: PrefixCommandManager.PrefixTheme.TramontinaChannel
-  nameWithType: PrefixCommandManager.PrefixTheme.TramontinaChannel
-  fullName: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
-  spec.csharp:
-  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager
-    name: PrefixCommandManager
-    href: KWiJisho.Commands.Prefix.PrefixCommandManager.html
-  - name: .
-  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme
-    name: PrefixTheme
-    href: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
-  - name: .
-  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
-    name: TramontinaChannel
-    href: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.html
-  spec.vb:
-  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager
-    name: PrefixCommandManager
-    href: KWiJisho.Commands.Prefix.PrefixCommandManager.html
-  - name: .
-  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme
-    name: PrefixTheme
-    href: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.html
-  - name: .
-  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
-    name: TramontinaChannel
-    href: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel.html
 - uid: KWiJisho.Commands.Prefix.PrefixCommand
   commentId: T:KWiJisho.Commands.Prefix.PrefixCommand
   parent: KWiJisho.Commands.Prefix
@@ -294,12 +229,6 @@ references:
   name: PrefixCommandGroup
   nameWithType: PrefixCommandGroup
   fullName: KWiJisho.Commands.Prefix.PrefixCommandGroup
-- uid: KWiJisho.Commands.Prefix.PrefixPokemon
-  commentId: T:KWiJisho.Commands.Prefix.PrefixPokemon
-  href: KWiJisho.Commands.Prefix.PrefixPokemon.html
-  name: PrefixPokemon
-  nameWithType: PrefixPokemon
-  fullName: KWiJisho.Commands.Prefix.PrefixPokemon
 - uid: KWiJisho.Commands.Prefix
   commentId: N:KWiJisho.Commands.Prefix
   href: KWiJisho.html

@@ -33,6 +33,10 @@ items:
     name: Nasa
   - uid: KWiJisho.Commands.Notice
     name: Notice
+  - uid: KWiJisho.Commands.ThemeTramontina
+    name: ThemeTramontina
+  - uid: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+    name: ThemeTramontina.EmojiTheme
 - uid: KWiJisho.Commands.Prefix
   name: KWiJisho.Commands.Prefix
   items:
@@ -56,14 +60,8 @@ items:
     name: PrefixCommandManager.PrefixNotice
   - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme
     name: PrefixCommandManager.PrefixTheme
-  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.EmojiTheme
-    name: PrefixCommandManager.PrefixTheme.EmojiTheme
   - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
     name: PrefixCommandManager.PrefixTheme.PrefixThemeTramontina
-  - uid: KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
-    name: PrefixCommandManager.PrefixTheme.TramontinaChannel
-  - uid: KWiJisho.Commands.Prefix.PrefixPokemon
-    name: PrefixPokemon
 - uid: KWiJisho.Commands.Slash
   name: KWiJisho.Commands.Slash
   items:
@@ -83,6 +81,8 @@ items:
     name: SlashNasa.Emoji
   - uid: KWiJisho.Commands.Slash.SlashNotice
     name: SlashNotice
+  - uid: KWiJisho.Commands.Slash.SlashThemeTramontina
+    name: SlashThemeTramontina
 - uid: KWiJisho.Data
   name: KWiJisho.Data
   items:
@@ -103,6 +103,8 @@ items:
   items:
   - uid: KWiJisho.Entities.Channel
     name: Channel
+  - uid: KWiJisho.Entities.ChannelTramontina
+    name: ChannelTramontina
   - uid: KWiJisho.Entities.Color
     name: Color
   - uid: KWiJisho.Entities.ConfigJson
@@ -147,6 +149,8 @@ items:
 - uid: KWiJisho.Utils
   name: KWiJisho.Utils
   items:
+  - uid: KWiJisho.Utils.Cooldown
+    name: Cooldown
   - uid: KWiJisho.Utils.DiscordCustomEmbed
     name: DiscordCustomEmbed
   - uid: KWiJisho.Utils.DiscordFormat

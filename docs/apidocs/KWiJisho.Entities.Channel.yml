@@ -8,7 +8,7 @@ items:
   - KWiJisho.Entities.Channel.#ctor(System.UInt64,System.String)
   - KWiJisho.Entities.Channel.DefaultName
   - KWiJisho.Entities.Channel.Id
-  - KWiJisho.Entities.Channel.UpdateChannelNameAsync(DSharpPlus.CommandsNext.CommandContext,System.String)
+  - KWiJisho.Entities.Channel.UpdateChannelNameAsync(DSharpPlus.DiscordClient,System.String)
   langs:
   - csharp
   - vb
@@ -42,7 +42,7 @@ items:
   inheritance:
   - System.Object
   derivedClasses:
-  - KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme.TramontinaChannel
+  - KWiJisho.Entities.ChannelTramontina
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -152,16 +152,16 @@ items:
     return:
       type: System.String
     content.vb: Friend DefaultName As String
-- uid: KWiJisho.Entities.Channel.UpdateChannelNameAsync(DSharpPlus.CommandsNext.CommandContext,System.String)
-  commentId: M:KWiJisho.Entities.Channel.UpdateChannelNameAsync(DSharpPlus.CommandsNext.CommandContext,System.String)
-  id: UpdateChannelNameAsync(DSharpPlus.CommandsNext.CommandContext,System.String)
+- uid: KWiJisho.Entities.Channel.UpdateChannelNameAsync(DSharpPlus.DiscordClient,System.String)
+  commentId: M:KWiJisho.Entities.Channel.UpdateChannelNameAsync(DSharpPlus.DiscordClient,System.String)
+  id: UpdateChannelNameAsync(DSharpPlus.DiscordClient,System.String)
   parent: KWiJisho.Entities.Channel
   langs:
   - csharp
   - vb
-  name: UpdateChannelNameAsync(CommandContext, string)
-  nameWithType: Channel.UpdateChannelNameAsync(CommandContext, string)
-  fullName: KWiJisho.Entities.Channel.UpdateChannelNameAsync(DSharpPlus.CommandsNext.CommandContext, string)
+  name: UpdateChannelNameAsync(DiscordClient, string)
+  nameWithType: Channel.UpdateChannelNameAsync(DiscordClient, string)
+  fullName: KWiJisho.Entities.Channel.UpdateChannelNameAsync(DSharpPlus.DiscordClient, string)
   type: Method
   source:
     remote:
@@ -177,19 +177,19 @@ items:
   summary: Updates asynchronously the name of the Discord channel.
   example: []
   syntax:
-    content: internal void UpdateChannelNameAsync(CommandContext commandContext, string newName)
+    content: internal void UpdateChannelNameAsync(DiscordClient discordClient, string newName)
     parameters:
-    - id: commandContext
-      type: DSharpPlus.CommandsNext.CommandContext
-      description: The command context containing information about the command.
+    - id: discordClient
+      type: DSharpPlus.DiscordClient
+      description: The Discord client instance.
     - id: newName
       type: System.String
       description: The new name for the Discord channel.
-    content.vb: Friend Sub UpdateChannelNameAsync(commandContext As CommandContext, newName As String)
+    content.vb: Friend Sub UpdateChannelNameAsync(discordClient As DiscordClient, newName As String)
   overload: KWiJisho.Entities.Channel.UpdateChannelNameAsync*
-  nameWithType.vb: Channel.UpdateChannelNameAsync(CommandContext, String)
-  fullName.vb: KWiJisho.Entities.Channel.UpdateChannelNameAsync(DSharpPlus.CommandsNext.CommandContext, String)
-  name.vb: UpdateChannelNameAsync(CommandContext, String)
+  nameWithType.vb: Channel.UpdateChannelNameAsync(DiscordClient, String)
+  fullName.vb: KWiJisho.Entities.Channel.UpdateChannelNameAsync(DSharpPlus.DiscordClient, String)
+  name.vb: UpdateChannelNameAsync(DiscordClient, String)
 references:
 - uid: KWiJisho.Entities
   commentId: N:KWiJisho.Entities
@@ -483,37 +483,21 @@ references:
   name.vb: String
 - uid: KWiJisho.Entities.Channel.UpdateChannelNameAsync*
   commentId: Overload:KWiJisho.Entities.Channel.UpdateChannelNameAsync
-  href: KWiJisho.Entities.Channel.UpdateChannelNameAsync.html#KWiJisho_Entities_Channel_UpdateChannelNameAsync_DSharpPlus_CommandsNext_CommandContext_System_String_
+  href: KWiJisho.Entities.Channel.UpdateChannelNameAsync.html#KWiJisho_Entities_Channel_UpdateChannelNameAsync_DSharpPlus_DiscordClient_System_String_
   name: UpdateChannelNameAsync
   nameWithType: Channel.UpdateChannelNameAsync
   fullName: KWiJisho.Entities.Channel.UpdateChannelNameAsync
-- uid: DSharpPlus.CommandsNext.CommandContext
-  commentId: T:DSharpPlus.CommandsNext.CommandContext
-  parent: DSharpPlus.CommandsNext
+- uid: DSharpPlus.DiscordClient
+  commentId: T:DSharpPlus.DiscordClient
+  parent: DSharpPlus
   isExternal: true
-  name: CommandContext
-  nameWithType: CommandContext
-  fullName: DSharpPlus.CommandsNext.CommandContext
-- uid: DSharpPlus.CommandsNext
-  commentId: N:DSharpPlus.CommandsNext
+  name: DiscordClient
+  nameWithType: DiscordClient
+  fullName: DSharpPlus.DiscordClient
+- uid: DSharpPlus
+  commentId: N:DSharpPlus
   isExternal: true
-  name: DSharpPlus.CommandsNext
-  nameWithType: DSharpPlus.CommandsNext
-  fullName: DSharpPlus.CommandsNext
-  spec.csharp:
-  - uid: DSharpPlus
-    name: DSharpPlus
-    isExternal: true
-  - name: .
-  - uid: DSharpPlus.CommandsNext
-    name: CommandsNext
-    isExternal: true
-  spec.vb:
-  - uid: DSharpPlus
-    name: DSharpPlus
-    isExternal: true
-  - name: .
-  - uid: DSharpPlus.CommandsNext
-    name: CommandsNext
-    isExternal: true
+  name: DSharpPlus
+  nameWithType: DSharpPlus
+  fullName: DSharpPlus
 memberLayout: SeparatePages

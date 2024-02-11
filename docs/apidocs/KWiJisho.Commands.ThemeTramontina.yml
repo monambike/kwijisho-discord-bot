@@ -1,0 +1,1186 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Commands.ThemeTramontina
+  commentId: T:KWiJisho.Commands.ThemeTramontina
+  id: ThemeTramontina
+  parent: KWiJisho.Commands
+  children:
+  - KWiJisho.Commands.ThemeTramontina.CanalEscondidinho
+  - KWiJisho.Commands.ThemeTramontina.CantinhoDaFofoca
+  - KWiJisho.Commands.ThemeTramontina.CorpoDeBombeiros1
+  - KWiJisho.Commands.ThemeTramontina.CorpoDeBombeiros2
+  - KWiJisho.Commands.ThemeTramontina.Dicionario
+  - KWiJisho.Commands.ThemeTramontina.Geral
+  - KWiJisho.Commands.ThemeTramontina.OutrosBots
+  - KWiJisho.Commands.ThemeTramontina.PrintsEternizados
+  - KWiJisho.Commands.ThemeTramontina.Radio
+  - KWiJisho.Commands.ThemeTramontina.ResetThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)
+  - KWiJisho.Commands.ThemeTramontina.SetChristmasThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)
+  - KWiJisho.Commands.ThemeTramontina.SetEasterThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)
+  - KWiJisho.Commands.ThemeTramontina.SetHalloweenThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)
+  - KWiJisho.Commands.ThemeTramontina.SetThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient,KWiJisho.Commands.ThemeTramontina.EmojiTheme,System.String,System.String,System.String)
+  - KWiJisho.Commands.ThemeTramontina.ThemeChangeCooldown
+  - KWiJisho.Commands.ThemeTramontina.TramontinaChannels
+  - KWiJisho.Commands.ThemeTramontina.Waifu
+  - KWiJisho.Commands.ThemeTramontina.YouTube
+  langs:
+  - csharp
+  - vb
+  name: ThemeTramontina
+  nameWithType: ThemeTramontina
+  fullName: KWiJisho.Commands.ThemeTramontina
+  type: Class
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ThemeTramontina
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 14
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  summary: Provides methods for theme prefix and slash commands.
+  example: []
+  syntax:
+    content: internal static class ThemeTramontina
+    content.vb: Friend Module ThemeTramontina
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: KWiJisho.Commands.ThemeTramontina.ThemeChangeCooldown
+  commentId: F:KWiJisho.Commands.ThemeTramontina.ThemeChangeCooldown
+  id: ThemeChangeCooldown
+  parent: KWiJisho.Commands.ThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: ThemeChangeCooldown
+  nameWithType: ThemeTramontina.ThemeChangeCooldown
+  fullName: KWiJisho.Commands.ThemeTramontina.ThemeChangeCooldown
+  type: Field
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ThemeChangeCooldown
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 19
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  summary: Represents the cooldown for theme change.
+  example: []
+  syntax:
+    content: private static readonly Cooldown ThemeChangeCooldown
+    return:
+      type: KWiJisho.Utils.Cooldown
+    content.vb: Private Shared ReadOnly ThemeChangeCooldown As Cooldown
+- uid: KWiJisho.Commands.ThemeTramontina.Geral
+  commentId: F:KWiJisho.Commands.ThemeTramontina.Geral
+  id: Geral
+  parent: KWiJisho.Commands.ThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: Geral
+  nameWithType: ThemeTramontina.Geral
+  fullName: KWiJisho.Commands.ThemeTramontina.Geral
+  type: Field
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Geral
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 22
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  syntax:
+    content: internal static readonly ChannelTramontina Geral
+    return:
+      type: KWiJisho.Entities.ChannelTramontina
+    content.vb: Friend Shared ReadOnly Geral As ChannelTramontina
+- uid: KWiJisho.Commands.ThemeTramontina.PrintsEternizados
+  commentId: F:KWiJisho.Commands.ThemeTramontina.PrintsEternizados
+  id: PrintsEternizados
+  parent: KWiJisho.Commands.ThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: PrintsEternizados
+  nameWithType: ThemeTramontina.PrintsEternizados
+  fullName: KWiJisho.Commands.ThemeTramontina.PrintsEternizados
+  type: Field
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: PrintsEternizados
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 24
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  syntax:
+    content: internal static readonly ChannelTramontina PrintsEternizados
+    return:
+      type: KWiJisho.Entities.ChannelTramontina
+    content.vb: Friend Shared ReadOnly PrintsEternizados As ChannelTramontina
+- uid: KWiJisho.Commands.ThemeTramontina.YouTube
+  commentId: F:KWiJisho.Commands.ThemeTramontina.YouTube
+  id: YouTube
+  parent: KWiJisho.Commands.ThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: YouTube
+  nameWithType: ThemeTramontina.YouTube
+  fullName: KWiJisho.Commands.ThemeTramontina.YouTube
+  type: Field
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: YouTube
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 27
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  syntax:
+    content: internal static readonly ChannelTramontina YouTube
+    return:
+      type: KWiJisho.Entities.ChannelTramontina
+    content.vb: Friend Shared ReadOnly YouTube As ChannelTramontina
+- uid: KWiJisho.Commands.ThemeTramontina.Dicionario
+  commentId: F:KWiJisho.Commands.ThemeTramontina.Dicionario
+  id: Dicionario
+  parent: KWiJisho.Commands.ThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: Dicionario
+  nameWithType: ThemeTramontina.Dicionario
+  fullName: KWiJisho.Commands.ThemeTramontina.Dicionario
+  type: Field
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Dicionario
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 29
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  syntax:
+    content: internal static readonly ChannelTramontina Dicionario
+    return:
+      type: KWiJisho.Entities.ChannelTramontina
+    content.vb: Friend Shared ReadOnly Dicionario As ChannelTramontina
+- uid: KWiJisho.Commands.ThemeTramontina.Waifu
+  commentId: F:KWiJisho.Commands.ThemeTramontina.Waifu
+  id: Waifu
+  parent: KWiJisho.Commands.ThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: Waifu
+  nameWithType: ThemeTramontina.Waifu
+  fullName: KWiJisho.Commands.ThemeTramontina.Waifu
+  type: Field
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Waifu
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 32
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  syntax:
+    content: internal static readonly ChannelTramontina Waifu
+    return:
+      type: KWiJisho.Entities.ChannelTramontina
+    content.vb: Friend Shared ReadOnly Waifu As ChannelTramontina
+- uid: KWiJisho.Commands.ThemeTramontina.Radio
+  commentId: F:KWiJisho.Commands.ThemeTramontina.Radio
+  id: Radio
+  parent: KWiJisho.Commands.ThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: Radio
+  nameWithType: ThemeTramontina.Radio
+  fullName: KWiJisho.Commands.ThemeTramontina.Radio
+  type: Field
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Radio
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 34
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  syntax:
+    content: internal static readonly ChannelTramontina Radio
+    return:
+      type: KWiJisho.Entities.ChannelTramontina
+    content.vb: Friend Shared ReadOnly Radio As ChannelTramontina
+- uid: KWiJisho.Commands.ThemeTramontina.OutrosBots
+  commentId: F:KWiJisho.Commands.ThemeTramontina.OutrosBots
+  id: OutrosBots
+  parent: KWiJisho.Commands.ThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: OutrosBots
+  nameWithType: ThemeTramontina.OutrosBots
+  fullName: KWiJisho.Commands.ThemeTramontina.OutrosBots
+  type: Field
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: OutrosBots
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 36
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  syntax:
+    content: internal static readonly ChannelTramontina OutrosBots
+    return:
+      type: KWiJisho.Entities.ChannelTramontina
+    content.vb: Friend Shared ReadOnly OutrosBots As ChannelTramontina
+- uid: KWiJisho.Commands.ThemeTramontina.CanalEscondidinho
+  commentId: F:KWiJisho.Commands.ThemeTramontina.CanalEscondidinho
+  id: CanalEscondidinho
+  parent: KWiJisho.Commands.ThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: CanalEscondidinho
+  nameWithType: ThemeTramontina.CanalEscondidinho
+  fullName: KWiJisho.Commands.ThemeTramontina.CanalEscondidinho
+  type: Field
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: CanalEscondidinho
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 39
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  syntax:
+    content: internal static readonly ChannelTramontina CanalEscondidinho
+    return:
+      type: KWiJisho.Entities.ChannelTramontina
+    content.vb: Friend Shared ReadOnly CanalEscondidinho As ChannelTramontina
+- uid: KWiJisho.Commands.ThemeTramontina.CorpoDeBombeiros1
+  commentId: F:KWiJisho.Commands.ThemeTramontina.CorpoDeBombeiros1
+  id: CorpoDeBombeiros1
+  parent: KWiJisho.Commands.ThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: CorpoDeBombeiros1
+  nameWithType: ThemeTramontina.CorpoDeBombeiros1
+  fullName: KWiJisho.Commands.ThemeTramontina.CorpoDeBombeiros1
+  type: Field
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: CorpoDeBombeiros1
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 41
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  syntax:
+    content: internal static readonly ChannelTramontina CorpoDeBombeiros1
+    return:
+      type: KWiJisho.Entities.ChannelTramontina
+    content.vb: Friend Shared ReadOnly CorpoDeBombeiros1 As ChannelTramontina
+- uid: KWiJisho.Commands.ThemeTramontina.CorpoDeBombeiros2
+  commentId: F:KWiJisho.Commands.ThemeTramontina.CorpoDeBombeiros2
+  id: CorpoDeBombeiros2
+  parent: KWiJisho.Commands.ThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: CorpoDeBombeiros2
+  nameWithType: ThemeTramontina.CorpoDeBombeiros2
+  fullName: KWiJisho.Commands.ThemeTramontina.CorpoDeBombeiros2
+  type: Field
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: CorpoDeBombeiros2
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 43
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  syntax:
+    content: internal static readonly ChannelTramontina CorpoDeBombeiros2
+    return:
+      type: KWiJisho.Entities.ChannelTramontina
+    content.vb: Friend Shared ReadOnly CorpoDeBombeiros2 As ChannelTramontina
+- uid: KWiJisho.Commands.ThemeTramontina.CantinhoDaFofoca
+  commentId: F:KWiJisho.Commands.ThemeTramontina.CantinhoDaFofoca
+  id: CantinhoDaFofoca
+  parent: KWiJisho.Commands.ThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: CantinhoDaFofoca
+  nameWithType: ThemeTramontina.CantinhoDaFofoca
+  fullName: KWiJisho.Commands.ThemeTramontina.CantinhoDaFofoca
+  type: Field
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: CantinhoDaFofoca
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 45
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  syntax:
+    content: internal static readonly ChannelTramontina CantinhoDaFofoca
+    return:
+      type: KWiJisho.Entities.ChannelTramontina
+    content.vb: Friend Shared ReadOnly CantinhoDaFofoca As ChannelTramontina
+- uid: KWiJisho.Commands.ThemeTramontina.TramontinaChannels
+  commentId: F:KWiJisho.Commands.ThemeTramontina.TramontinaChannels
+  id: TramontinaChannels
+  parent: KWiJisho.Commands.ThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: TramontinaChannels
+  nameWithType: ThemeTramontina.TramontinaChannels
+  fullName: KWiJisho.Commands.ThemeTramontina.TramontinaChannels
+  type: Field
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: TramontinaChannels
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 51
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  summary: Channels from tramontina server that can receive theme changing.
+  example: []
+  syntax:
+    content: private static readonly List<ChannelTramontina> TramontinaChannels
+    return:
+      type: System.Collections.Generic.List{KWiJisho.Entities.ChannelTramontina}
+    content.vb: Private Shared ReadOnly TramontinaChannels As List(Of ChannelTramontina)
+- uid: KWiJisho.Commands.ThemeTramontina.SetThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient,KWiJisho.Commands.ThemeTramontina.EmojiTheme,System.String,System.String,System.String)
+  commentId: M:KWiJisho.Commands.ThemeTramontina.SetThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient,KWiJisho.Commands.ThemeTramontina.EmojiTheme,System.String,System.String,System.String)
+  id: SetThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient,KWiJisho.Commands.ThemeTramontina.EmojiTheme,System.String,System.String,System.String)
+  parent: KWiJisho.Commands.ThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: SetThemeAsync(DiscordChannel, DiscordClient, EmojiTheme, string, string, string)
+  nameWithType: ThemeTramontina.SetThemeAsync(DiscordChannel, DiscordClient, ThemeTramontina.EmojiTheme, string, string, string)
+  fullName: KWiJisho.Commands.ThemeTramontina.SetThemeAsync(DSharpPlus.Entities.DiscordChannel, DSharpPlus.DiscordClient, KWiJisho.Commands.ThemeTramontina.EmojiTheme, string, string, string)
+  type: Method
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: SetThemeAsync
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 80
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  summary: Sets the Tramontina server to a Theme according with parameterization.
+  example: []
+  syntax:
+    content: internal static Task SetThemeAsync(DiscordChannel discordChannel, DiscordClient discordClient, ThemeTramontina.EmojiTheme emojiTheme, string title, string description, string serverNameSuggestion = null)
+    parameters:
+    - id: discordChannel
+      type: DSharpPlus.Entities.DiscordChannel
+      description: The Discord channel where the command is being executed.
+    - id: discordClient
+      type: DSharpPlus.DiscordClient
+      description: The Discord client instance.
+    - id: emojiTheme
+      type: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+      description: The chosen theme to set the Discord server.
+    - id: title
+      type: System.String
+      description: The title from the theme notice.
+    - id: description
+      type: System.String
+      description: The description from the theme notice
+    - id: serverNameSuggestion
+      type: System.String
+      description: The server name suggestion.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> from the method execution.
+    content.vb: Friend Shared Function SetThemeAsync(discordChannel As DiscordChannel, discordClient As DiscordClient, emojiTheme As ThemeTramontina.EmojiTheme, title As String, description As String, serverNameSuggestion As String = Nothing) As Task
+  overload: KWiJisho.Commands.ThemeTramontina.SetThemeAsync*
+  nameWithType.vb: ThemeTramontina.SetThemeAsync(DiscordChannel, DiscordClient, ThemeTramontina.EmojiTheme, String, String, String)
+  fullName.vb: KWiJisho.Commands.ThemeTramontina.SetThemeAsync(DSharpPlus.Entities.DiscordChannel, DSharpPlus.DiscordClient, KWiJisho.Commands.ThemeTramontina.EmojiTheme, String, String, String)
+  name.vb: SetThemeAsync(DiscordChannel, DiscordClient, EmojiTheme, String, String, String)
+- uid: KWiJisho.Commands.ThemeTramontina.ResetThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)
+  commentId: M:KWiJisho.Commands.ThemeTramontina.ResetThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)
+  id: ResetThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)
+  parent: KWiJisho.Commands.ThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: ResetThemeAsync(DiscordChannel, DiscordClient)
+  nameWithType: ThemeTramontina.ResetThemeAsync(DiscordChannel, DiscordClient)
+  fullName: KWiJisho.Commands.ThemeTramontina.ResetThemeAsync(DSharpPlus.Entities.DiscordChannel, DSharpPlus.DiscordClient)
+  type: Method
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: ResetThemeAsync
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 135
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  summary: Sets the Tramontina server to Default Theme.
+  example: []
+  syntax:
+    content: internal static Task ResetThemeAsync(DiscordChannel discordChannel, DiscordClient discordClient)
+    parameters:
+    - id: discordChannel
+      type: DSharpPlus.Entities.DiscordChannel
+      description: The Discord channel where the command is being executed.
+    - id: discordClient
+      type: DSharpPlus.DiscordClient
+      description: The Discord client instance.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> from the method execution.
+    content.vb: Friend Shared Function ResetThemeAsync(discordChannel As DiscordChannel, discordClient As DiscordClient) As Task
+  overload: KWiJisho.Commands.ThemeTramontina.ResetThemeAsync*
+- uid: KWiJisho.Commands.ThemeTramontina.SetChristmasThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)
+  commentId: M:KWiJisho.Commands.ThemeTramontina.SetChristmasThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)
+  id: SetChristmasThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)
+  parent: KWiJisho.Commands.ThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: SetChristmasThemeAsync(DiscordChannel, DiscordClient)
+  nameWithType: ThemeTramontina.SetChristmasThemeAsync(DiscordChannel, DiscordClient)
+  fullName: KWiJisho.Commands.ThemeTramontina.SetChristmasThemeAsync(DSharpPlus.Entities.DiscordChannel, DSharpPlus.DiscordClient)
+  type: Method
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: SetChristmasThemeAsync
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 146
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  summary: Sets the Tramontina server to Christmas Theme.
+  example: []
+  syntax:
+    content: internal static Task SetChristmasThemeAsync(DiscordChannel discordChannel, DiscordClient discordClient)
+    parameters:
+    - id: discordChannel
+      type: DSharpPlus.Entities.DiscordChannel
+      description: The Discord channel where the command is being executed.
+    - id: discordClient
+      type: DSharpPlus.DiscordClient
+      description: The Discord client instance.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> from the method execution.
+    content.vb: Friend Shared Function SetChristmasThemeAsync(discordChannel As DiscordChannel, discordClient As DiscordClient) As Task
+  overload: KWiJisho.Commands.ThemeTramontina.SetChristmasThemeAsync*
+- uid: KWiJisho.Commands.ThemeTramontina.SetEasterThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)
+  commentId: M:KWiJisho.Commands.ThemeTramontina.SetEasterThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)
+  id: SetEasterThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)
+  parent: KWiJisho.Commands.ThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: SetEasterThemeAsync(DiscordChannel, DiscordClient)
+  nameWithType: ThemeTramontina.SetEasterThemeAsync(DiscordChannel, DiscordClient)
+  fullName: KWiJisho.Commands.ThemeTramontina.SetEasterThemeAsync(DSharpPlus.Entities.DiscordChannel, DSharpPlus.DiscordClient)
+  type: Method
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: SetEasterThemeAsync
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 164
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  summary: Sets the Tramontina server to Easter Theme.
+  example: []
+  syntax:
+    content: internal static Task SetEasterThemeAsync(DiscordChannel discordChannel, DiscordClient discordClient)
+    parameters:
+    - id: discordChannel
+      type: DSharpPlus.Entities.DiscordChannel
+      description: The Discord channel where the command is being executed.
+    - id: discordClient
+      type: DSharpPlus.DiscordClient
+      description: The Discord client instance.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> from the method execution.
+    content.vb: Friend Shared Function SetEasterThemeAsync(discordChannel As DiscordChannel, discordClient As DiscordClient) As Task
+  overload: KWiJisho.Commands.ThemeTramontina.SetEasterThemeAsync*
+- uid: KWiJisho.Commands.ThemeTramontina.SetHalloweenThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)
+  commentId: M:KWiJisho.Commands.ThemeTramontina.SetHalloweenThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)
+  id: SetHalloweenThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)
+  parent: KWiJisho.Commands.ThemeTramontina
+  langs:
+  - csharp
+  - vb
+  name: SetHalloweenThemeAsync(DiscordChannel, DiscordClient)
+  nameWithType: ThemeTramontina.SetHalloweenThemeAsync(DiscordChannel, DiscordClient)
+  fullName: KWiJisho.Commands.ThemeTramontina.SetHalloweenThemeAsync(DSharpPlus.Entities.DiscordChannel, DSharpPlus.DiscordClient)
+  type: Method
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: SetHalloweenThemeAsync
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 176
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  summary: Sets the Tramontina server to Halloween Theme.
+  example: []
+  syntax:
+    content: internal static Task SetHalloweenThemeAsync(DiscordChannel discordChannel, DiscordClient discordClient)
+    parameters:
+    - id: discordChannel
+      type: DSharpPlus.Entities.DiscordChannel
+      description: The Discord channel where the command is being executed.
+    - id: discordClient
+      type: DSharpPlus.DiscordClient
+      description: The Discord client instance.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A <xref href="System.Threading.Tasks.Task" data-throw-if-not-resolved="false"></xref> from the method execution.
+    content.vb: Friend Shared Function SetHalloweenThemeAsync(discordChannel As DiscordChannel, discordClient As DiscordClient) As Task
+  overload: KWiJisho.Commands.ThemeTramontina.SetHalloweenThemeAsync*
+references:
+- uid: KWiJisho.Commands
+  commentId: N:KWiJisho.Commands
+  href: KWiJisho.html
+  name: KWiJisho.Commands
+  nameWithType: KWiJisho.Commands
+  fullName: KWiJisho.Commands
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Commands
+    name: Commands
+    href: KWiJisho.Commands.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Commands
+    name: Commands
+    href: KWiJisho.Commands.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: KWiJisho.Utils.Cooldown
+  commentId: T:KWiJisho.Utils.Cooldown
+  parent: KWiJisho.Utils
+  href: KWiJisho.Utils.Cooldown.html
+  name: Cooldown
+  nameWithType: Cooldown
+  fullName: KWiJisho.Utils.Cooldown
+- uid: KWiJisho.Utils
+  commentId: N:KWiJisho.Utils
+  href: KWiJisho.html
+  name: KWiJisho.Utils
+  nameWithType: KWiJisho.Utils
+  fullName: KWiJisho.Utils
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Utils
+    name: Utils
+    href: KWiJisho.Utils.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Utils
+    name: Utils
+    href: KWiJisho.Utils.html
+- uid: KWiJisho.Entities.ChannelTramontina
+  commentId: T:KWiJisho.Entities.ChannelTramontina
+  parent: KWiJisho.Entities
+  href: KWiJisho.Entities.ChannelTramontina.html
+  name: ChannelTramontina
+  nameWithType: ChannelTramontina
+  fullName: KWiJisho.Entities.ChannelTramontina
+- uid: KWiJisho.Entities
+  commentId: N:KWiJisho.Entities
+  href: KWiJisho.html
+  name: KWiJisho.Entities
+  nameWithType: KWiJisho.Entities
+  fullName: KWiJisho.Entities
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Entities
+    name: Entities
+    href: KWiJisho.Entities.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Entities
+    name: Entities
+    href: KWiJisho.Entities.html
+- uid: System.Collections.Generic.List{KWiJisho.Entities.ChannelTramontina}
+  commentId: T:System.Collections.Generic.List{KWiJisho.Entities.ChannelTramontina}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<ChannelTramontina>
+  nameWithType: List<ChannelTramontina>
+  fullName: System.Collections.Generic.List<KWiJisho.Entities.ChannelTramontina>
+  nameWithType.vb: List(Of ChannelTramontina)
+  fullName.vb: System.Collections.Generic.List(Of KWiJisho.Entities.ChannelTramontina)
+  name.vb: List(Of ChannelTramontina)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: KWiJisho.Entities.ChannelTramontina
+    name: ChannelTramontina
+    href: KWiJisho.Entities.ChannelTramontina.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: KWiJisho.Entities.ChannelTramontina
+    name: ChannelTramontina
+    href: KWiJisho.Entities.ChannelTramontina.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: KWiJisho.Commands.ThemeTramontina.SetThemeAsync*
+  commentId: Overload:KWiJisho.Commands.ThemeTramontina.SetThemeAsync
+  href: KWiJisho.Commands.ThemeTramontina.SetThemeAsync.html#KWiJisho_Commands_ThemeTramontina_SetThemeAsync_DSharpPlus_Entities_DiscordChannel_DSharpPlus_DiscordClient_KWiJisho_Commands_ThemeTramontina_EmojiTheme_System_String_System_String_System_String_
+  name: SetThemeAsync
+  nameWithType: ThemeTramontina.SetThemeAsync
+  fullName: KWiJisho.Commands.ThemeTramontina.SetThemeAsync
+- uid: DSharpPlus.Entities.DiscordChannel
+  commentId: T:DSharpPlus.Entities.DiscordChannel
+  parent: DSharpPlus.Entities
+  isExternal: true
+  name: DiscordChannel
+  nameWithType: DiscordChannel
+  fullName: DSharpPlus.Entities.DiscordChannel
+- uid: DSharpPlus.DiscordClient
+  commentId: T:DSharpPlus.DiscordClient
+  parent: DSharpPlus
+  isExternal: true
+  name: DiscordClient
+  nameWithType: DiscordClient
+  fullName: DSharpPlus.DiscordClient
+- uid: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+  commentId: T:KWiJisho.Commands.ThemeTramontina.EmojiTheme
+  parent: KWiJisho.Commands
+  href: KWiJisho.Commands.ThemeTramontina.html
+  name: ThemeTramontina.EmojiTheme
+  nameWithType: ThemeTramontina.EmojiTheme
+  fullName: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+  spec.csharp:
+  - uid: KWiJisho.Commands.ThemeTramontina
+    name: ThemeTramontina
+    href: KWiJisho.Commands.ThemeTramontina.html
+  - name: .
+  - uid: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+    name: EmojiTheme
+    href: KWiJisho.Commands.ThemeTramontina.EmojiTheme.html
+  spec.vb:
+  - uid: KWiJisho.Commands.ThemeTramontina
+    name: ThemeTramontina
+    href: KWiJisho.Commands.ThemeTramontina.html
+  - name: .
+  - uid: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+    name: EmojiTheme
+    href: KWiJisho.Commands.ThemeTramontina.EmojiTheme.html
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: DSharpPlus.Entities
+  commentId: N:DSharpPlus.Entities
+  isExternal: true
+  name: DSharpPlus.Entities
+  nameWithType: DSharpPlus.Entities
+  fullName: DSharpPlus.Entities
+  spec.csharp:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.Entities
+    name: Entities
+    isExternal: true
+  spec.vb:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.Entities
+    name: Entities
+    isExternal: true
+- uid: DSharpPlus
+  commentId: N:DSharpPlus
+  isExternal: true
+  name: DSharpPlus
+  nameWithType: DSharpPlus
+  fullName: DSharpPlus
+- uid: KWiJisho.Commands.ThemeTramontina.ResetThemeAsync*
+  commentId: Overload:KWiJisho.Commands.ThemeTramontina.ResetThemeAsync
+  href: KWiJisho.Commands.ThemeTramontina.ResetThemeAsync.html#KWiJisho_Commands_ThemeTramontina_ResetThemeAsync_DSharpPlus_Entities_DiscordChannel_DSharpPlus_DiscordClient_
+  name: ResetThemeAsync
+  nameWithType: ThemeTramontina.ResetThemeAsync
+  fullName: KWiJisho.Commands.ThemeTramontina.ResetThemeAsync
+- uid: KWiJisho.Commands.ThemeTramontina.SetChristmasThemeAsync*
+  commentId: Overload:KWiJisho.Commands.ThemeTramontina.SetChristmasThemeAsync
+  href: KWiJisho.Commands.ThemeTramontina.SetChristmasThemeAsync.html#KWiJisho_Commands_ThemeTramontina_SetChristmasThemeAsync_DSharpPlus_Entities_DiscordChannel_DSharpPlus_DiscordClient_
+  name: SetChristmasThemeAsync
+  nameWithType: ThemeTramontina.SetChristmasThemeAsync
+  fullName: KWiJisho.Commands.ThemeTramontina.SetChristmasThemeAsync
+- uid: KWiJisho.Commands.ThemeTramontina.SetEasterThemeAsync*
+  commentId: Overload:KWiJisho.Commands.ThemeTramontina.SetEasterThemeAsync
+  href: KWiJisho.Commands.ThemeTramontina.SetEasterThemeAsync.html#KWiJisho_Commands_ThemeTramontina_SetEasterThemeAsync_DSharpPlus_Entities_DiscordChannel_DSharpPlus_DiscordClient_
+  name: SetEasterThemeAsync
+  nameWithType: ThemeTramontina.SetEasterThemeAsync
+  fullName: KWiJisho.Commands.ThemeTramontina.SetEasterThemeAsync
+- uid: KWiJisho.Commands.ThemeTramontina.SetHalloweenThemeAsync*
+  commentId: Overload:KWiJisho.Commands.ThemeTramontina.SetHalloweenThemeAsync
+  href: KWiJisho.Commands.ThemeTramontina.SetHalloweenThemeAsync.html#KWiJisho_Commands_ThemeTramontina_SetHalloweenThemeAsync_DSharpPlus_Entities_DiscordChannel_DSharpPlus_DiscordClient_
+  name: SetHalloweenThemeAsync
+  nameWithType: ThemeTramontina.SetHalloweenThemeAsync
+  fullName: KWiJisho.Commands.ThemeTramontina.SetHalloweenThemeAsync
+memberLayout: SeparatePages

@@ -5,6 +5,7 @@ items:
   id: KWiJisho.Entities
   children:
   - KWiJisho.Entities.Channel
+  - KWiJisho.Entities.ChannelTramontina
   - KWiJisho.Entities.Color
   - KWiJisho.Entities.ConfigJson
   - KWiJisho.Entities.Emoji
@@ -28,6 +29,13 @@ references:
   name: Channel
   nameWithType: Channel
   fullName: KWiJisho.Entities.Channel
+- uid: KWiJisho.Entities.ChannelTramontina
+  commentId: T:KWiJisho.Entities.ChannelTramontina
+  parent: KWiJisho.Entities
+  href: KWiJisho.Entities.ChannelTramontina.html
+  name: ChannelTramontina
+  nameWithType: ChannelTramontina
+  fullName: KWiJisho.Entities.ChannelTramontina
 - uid: KWiJisho.Entities.Color
   commentId: T:KWiJisho.Entities.Color
   parent: KWiJisho.Entities

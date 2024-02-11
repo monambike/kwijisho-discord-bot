@@ -4,6 +4,7 @@ items:
   commentId: N:KWiJisho.Utils
   id: KWiJisho.Utils
   children:
+  - KWiJisho.Utils.Cooldown
   - KWiJisho.Utils.DiscordCustomEmbed
   - KWiJisho.Utils.DiscordFormat
   - KWiJisho.Utils.KWiJishoLog
@@ -20,6 +21,13 @@ items:
   assemblies:
   - KWiJisho
 references:
+- uid: KWiJisho.Utils.Cooldown
+  commentId: T:KWiJisho.Utils.Cooldown
+  parent: KWiJisho.Utils
+  href: KWiJisho.Utils.Cooldown.html
+  name: Cooldown
+  nameWithType: Cooldown
+  fullName: KWiJisho.Utils.Cooldown
 - uid: KWiJisho.Utils.DiscordCustomEmbed
   commentId: T:KWiJisho.Utils.DiscordCustomEmbed
   href: KWiJisho.Utils.DiscordCustomEmbed.html

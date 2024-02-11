@@ -18,11 +18,11 @@ items:
   type: Class
   source:
     remote:
-      path: src/Commands/Prefix/CommandManager.cs
+      path: src/Commands/Prefix/PrefixCommandManager.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrefixCommandGroup
-    path: ../src/Commands/Prefix/CommandManager.cs
+    path: ../src/Commands/Prefix/PrefixCommandManager.cs
     startLine: 91
   assemblies:
   - KWiJisho
@@ -54,11 +54,11 @@ items:
   type: Property
   source:
     remote:
-      path: src/Commands/Prefix/CommandManager.cs
+      path: src/Commands/Prefix/PrefixCommandManager.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Name
-    path: ../src/Commands/Prefix/CommandManager.cs
+    path: ../src/Commands/Prefix/PrefixCommandManager.cs
     startLine: 96
   assemblies:
   - KWiJisho
@@ -85,11 +85,11 @@ items:
   type: Property
   source:
     remote:
-      path: src/Commands/Prefix/CommandManager.cs
+      path: src/Commands/Prefix/PrefixCommandManager.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Commands
-    path: ../src/Commands/Prefix/CommandManager.cs
+    path: ../src/Commands/Prefix/PrefixCommandManager.cs
     startLine: 101
   assemblies:
   - KWiJisho
@@ -116,11 +116,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: src/Commands/Prefix/CommandManager.cs
+      path: src/Commands/Prefix/PrefixCommandManager.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: .ctor
-    path: ../src/Commands/Prefix/CommandManager.cs
+    path: ../src/Commands/Prefix/PrefixCommandManager.cs
     startLine: 107
   assemblies:
   - KWiJisho
@@ -151,11 +151,11 @@ items:
   type: Method
   source:
     remote:
-      path: src/Commands/Prefix/CommandManager.cs
+      path: src/Commands/Prefix/PrefixCommandManager.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ToString
-    path: ../src/Commands/Prefix/CommandManager.cs
+    path: ../src/Commands/Prefix/PrefixCommandManager.cs
     startLine: 118
   assemblies:
   - KWiJisho

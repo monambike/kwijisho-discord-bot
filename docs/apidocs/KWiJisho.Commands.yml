@@ -10,6 +10,8 @@ items:
   - KWiJisho.Commands.KwiGpt
   - KWiJisho.Commands.Nasa
   - KWiJisho.Commands.Notice
+  - KWiJisho.Commands.ThemeTramontina
+  - KWiJisho.Commands.ThemeTramontina.EmojiTheme
   langs:
   - csharp
   - vb
@@ -56,4 +58,55 @@ references:
   name: Notice
   nameWithType: Notice
   fullName: KWiJisho.Commands.Notice
+- uid: KWiJisho.Commands.ThemeTramontina
+  commentId: T:KWiJisho.Commands.ThemeTramontina
+  href: KWiJisho.Commands.ThemeTramontina.html
+  name: ThemeTramontina
+  nameWithType: ThemeTramontina
+  fullName: KWiJisho.Commands.ThemeTramontina
+- uid: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+  commentId: T:KWiJisho.Commands.ThemeTramontina.EmojiTheme
+  parent: KWiJisho.Commands
+  href: KWiJisho.Commands.ThemeTramontina.html
+  name: ThemeTramontina.EmojiTheme
+  nameWithType: ThemeTramontina.EmojiTheme
+  fullName: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+  spec.csharp:
+  - uid: KWiJisho.Commands.ThemeTramontina
+    name: ThemeTramontina
+    href: KWiJisho.Commands.ThemeTramontina.html
+  - name: .
+  - uid: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+    name: EmojiTheme
+    href: KWiJisho.Commands.ThemeTramontina.EmojiTheme.html
+  spec.vb:
+  - uid: KWiJisho.Commands.ThemeTramontina
+    name: ThemeTramontina
+    href: KWiJisho.Commands.ThemeTramontina.html
+  - name: .
+  - uid: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+    name: EmojiTheme
+    href: KWiJisho.Commands.ThemeTramontina.EmojiTheme.html
+- uid: KWiJisho.Commands
+  commentId: N:KWiJisho.Commands
+  href: KWiJisho.html
+  name: KWiJisho.Commands
+  nameWithType: KWiJisho.Commands
+  fullName: KWiJisho.Commands
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Commands
+    name: Commands
+    href: KWiJisho.Commands.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Commands
+    name: Commands
+    href: KWiJisho.Commands.html
 memberLayout: SeparatePages

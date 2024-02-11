@@ -98,22 +98,22 @@ items:
     parameters:
     - id: discordClient
       type: DSharpPlus.DiscordClient
-      description: ''
+      description: The discord client instance.
     - id: discordMember
       type: DSharpPlus.Entities.DiscordMember
-      description: ''
+      description: The discord member who sent the message.
     - id: title
       type: System.String
-      description: ''
+      description: The title of the news.
     - id: description
       type: System.String
-      description: ''
+      description: The description of the news.
     - id: sendInTramontina
       type: System.Boolean
-      description: ''
+      description: If true the message will be sent in Tramontina; otherwise, it will be sent in my test server.
     - id: discordAttachments
       type: DSharpPlus.Entities.DiscordAttachment
-      description: ''
+      description: The Discord images for being attached on the embed. Only the first one will be sent
     return:
       type: System.Threading.Tasks.Task
       description: ''

@@ -19,7 +19,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrefixTheme
     path: ../src/Commands/Prefix/PrefixThemeTramontina.cs
-    startLine: 21
+    startLine: 17
   assemblies:
   - KWiJisho
   namespace: KWiJisho.Commands.Prefix

@@ -5,6 +5,7 @@ items:
   id: KWiJishoBot
   parent: KWiJisho
   children:
+  - KWiJisho.KWiJishoBot.DiscordActivity
   - KWiJisho.KWiJishoBot.DiscordClient
   - KWiJisho.KWiJishoBot.Main
   - KWiJisho.KWiJishoBot.PrefixCommands
@@ -69,7 +70,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: DiscordClient
     path: ../src/KWiJishoBot.cs
-    startLine: 17
+    startLine: 19
   assemblies:
   - KWiJisho
   namespace: KWiJisho
@@ -100,7 +101,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrefixCommands
     path: ../src/KWiJishoBot.cs
-    startLine: 22
+    startLine: 24
   assemblies:
   - KWiJisho
   namespace: KWiJisho
@@ -131,7 +132,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: SlashCommands
     path: ../src/KWiJishoBot.cs
-    startLine: 27
+    startLine: 29
   assemblies:
   - KWiJisho
   namespace: KWiJisho
@@ -144,6 +145,37 @@ items:
       type: DSharpPlus.SlashCommands.SlashCommandsExtension
     content.vb: Friend Property SlashCommands As SlashCommandsExtension
   overload: KWiJisho.KWiJishoBot.SlashCommands*
+- uid: KWiJisho.KWiJishoBot.DiscordActivity
+  commentId: P:KWiJisho.KWiJishoBot.DiscordActivity
+  id: DiscordActivity
+  parent: KWiJisho.KWiJishoBot
+  langs:
+  - csharp
+  - vb
+  name: DiscordActivity
+  nameWithType: KWiJishoBot.DiscordActivity
+  fullName: KWiJisho.KWiJishoBot.DiscordActivity
+  type: Property
+  source:
+    remote:
+      path: src/KWiJishoBot.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: DiscordActivity
+    path: ../src/KWiJishoBot.cs
+    startLine: 34
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho
+  summary: Initializing Discord bot activity class.
+  example: []
+  syntax:
+    content: internal static DiscordActivity DiscordActivity { get; }
+    parameters: []
+    return:
+      type: DSharpPlus.Entities.DiscordActivity
+    content.vb: Friend Shared ReadOnly Property DiscordActivity As DiscordActivity
+  overload: KWiJisho.KWiJishoBot.DiscordActivity*
 - uid: KWiJisho.KWiJishoBot.Main
   commentId: M:KWiJisho.KWiJishoBot.Main
   id: Main
@@ -162,7 +194,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Main
     path: ../src/KWiJishoBot.cs
-    startLine: 32
+    startLine: 39
   assemblies:
   - KWiJisho
   namespace: KWiJisho
@@ -190,7 +222,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: RunAsync
     path: ../src/KWiJishoBot.cs
-    startLine: 47
+    startLine: 54
   assemblies:
   - KWiJisho
   namespace: KWiJisho
@@ -280,7 +312,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: RegisterBotEvents
     path: ../src/KWiJishoBotRegister.cs
-    startLine: 64
+    startLine: 65
   assemblies:
   - KWiJisho
   namespace: KWiJisho
@@ -308,7 +340,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: RegisterPrefixCommandsPermissions
     path: ../src/KWiJishoBotRegister.cs
-    startLine: 76
+    startLine: 77
   assemblies:
   - KWiJisho
   namespace: KWiJisho
@@ -336,7 +368,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: RegisterSlashCommandsPermissions
     path: ../src/KWiJishoBotRegister.cs
-    startLine: 100
+    startLine: 101
   assemblies:
   - KWiJisho
   namespace: KWiJisho
@@ -678,6 +710,41 @@ references:
   - name: .
   - uid: DSharpPlus.SlashCommands
     name: SlashCommands
+    isExternal: true
+- uid: KWiJisho.KWiJishoBot.DiscordActivity*
+  commentId: Overload:KWiJisho.KWiJishoBot.DiscordActivity
+  href: KWiJisho.KWiJishoBot.DiscordActivity.html#KWiJisho_KWiJishoBot_DiscordActivity
+  name: DiscordActivity
+  nameWithType: KWiJishoBot.DiscordActivity
+  fullName: KWiJisho.KWiJishoBot.DiscordActivity
+- uid: DSharpPlus.Entities.DiscordActivity
+  commentId: T:DSharpPlus.Entities.DiscordActivity
+  parent: DSharpPlus.Entities
+  isExternal: true
+  name: DiscordActivity
+  nameWithType: DiscordActivity
+  fullName: DSharpPlus.Entities.DiscordActivity
+- uid: DSharpPlus.Entities
+  commentId: N:DSharpPlus.Entities
+  isExternal: true
+  name: DSharpPlus.Entities
+  nameWithType: DSharpPlus.Entities
+  fullName: DSharpPlus.Entities
+  spec.csharp:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.Entities
+    name: Entities
+    isExternal: true
+  spec.vb:
+  - uid: DSharpPlus
+    name: DSharpPlus
+    isExternal: true
+  - name: .
+  - uid: DSharpPlus.Entities
+    name: Entities
     isExternal: true
 - uid: KWiJisho.KWiJishoBot.Main*
   commentId: Overload:KWiJisho.KWiJishoBot.Main

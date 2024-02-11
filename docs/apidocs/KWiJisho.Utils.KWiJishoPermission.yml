@@ -5,6 +5,7 @@ items:
   id: KWiJishoPermission
   parent: KWiJisho.Utils
   children:
+  - KWiJisho.Utils.KWiJishoPermission.CooldownCustomErrorMessage(System.Int32,System.Int32,System.String)
   - KWiJisho.Utils.KWiJishoPermission.GetPermissionNameInPortuguese(DSharpPlus.Permissions)
   - KWiJisho.Utils.KWiJishoPermission.PermissionCustomErrorMessage(DSharpPlus.Permissions)
   langs:
@@ -75,6 +76,50 @@ items:
       description: A formatted error message indicating the required permission.
     content.vb: Friend Shared Function PermissionCustomErrorMessage(permission As Permissions) As String
   overload: KWiJisho.Utils.KWiJishoPermission.PermissionCustomErrorMessage*
+- uid: KWiJisho.Utils.KWiJishoPermission.CooldownCustomErrorMessage(System.Int32,System.Int32,System.String)
+  commentId: M:KWiJisho.Utils.KWiJishoPermission.CooldownCustomErrorMessage(System.Int32,System.Int32,System.String)
+  id: CooldownCustomErrorMessage(System.Int32,System.Int32,System.String)
+  parent: KWiJisho.Utils.KWiJishoPermission
+  langs:
+  - csharp
+  - vb
+  name: CooldownCustomErrorMessage(int, int, string)
+  nameWithType: KWiJishoPermission.CooldownCustomErrorMessage(int, int, string)
+  fullName: KWiJisho.Utils.KWiJishoPermission.CooldownCustomErrorMessage(int, int, string)
+  type: Method
+  source:
+    remote:
+      path: src/Utils/KWiJishoPermission.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: CooldownCustomErrorMessage
+    path: ../src/Utils/KWiJishoPermission.cs
+    startLine: 25
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Utils
+  summary: Generates a custom error message for cooldown check.
+  example: []
+  syntax:
+    content: internal static string CooldownCustomErrorMessage(int maxExecute, int cooldown, string cooldownPurpose)
+    parameters:
+    - id: maxExecute
+      type: System.Int32
+      description: The command max execution time.
+    - id: cooldown
+      type: System.Int32
+      description: The command cooldown.
+    - id: cooldownPurpose
+      type: System.String
+      description: The purpose of the cooldown. (if present)
+    return:
+      type: System.String
+      description: ''
+    content.vb: Friend Shared Function CooldownCustomErrorMessage(maxExecute As Integer, cooldown As Integer, cooldownPurpose As String) As String
+  overload: KWiJisho.Utils.KWiJishoPermission.CooldownCustomErrorMessage*
+  nameWithType.vb: KWiJishoPermission.CooldownCustomErrorMessage(Integer, Integer, String)
+  fullName.vb: KWiJisho.Utils.KWiJishoPermission.CooldownCustomErrorMessage(Integer, Integer, String)
+  name.vb: CooldownCustomErrorMessage(Integer, Integer, String)
 - uid: KWiJisho.Utils.KWiJishoPermission.GetPermissionNameInPortuguese(DSharpPlus.Permissions)
   commentId: M:KWiJisho.Utils.KWiJishoPermission.GetPermissionNameInPortuguese(DSharpPlus.Permissions)
   id: GetPermissionNameInPortuguese(DSharpPlus.Permissions)
@@ -93,7 +138,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: GetPermissionNameInPortuguese
     path: ../src/Utils/KWiJishoPermission.cs
-    startLine: 23
+    startLine: 33
   assemblies:
   - KWiJisho
   namespace: KWiJisho.Utils
@@ -400,6 +445,23 @@ references:
   name: DSharpPlus
   nameWithType: DSharpPlus
   fullName: DSharpPlus
+- uid: KWiJisho.Utils.KWiJishoPermission.CooldownCustomErrorMessage*
+  commentId: Overload:KWiJisho.Utils.KWiJishoPermission.CooldownCustomErrorMessage
+  href: KWiJisho.Utils.KWiJishoPermission.CooldownCustomErrorMessage.html#KWiJisho_Utils_KWiJishoPermission_CooldownCustomErrorMessage_System_Int32_System_Int32_System_String_
+  name: CooldownCustomErrorMessage
+  nameWithType: KWiJishoPermission.CooldownCustomErrorMessage
+  fullName: KWiJisho.Utils.KWiJishoPermission.CooldownCustomErrorMessage
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
 - uid: KWiJisho.Utils.KWiJishoPermission.GetPermissionNameInPortuguese*
   commentId: Overload:KWiJisho.Utils.KWiJishoPermission.GetPermissionNameInPortuguese
   href: KWiJisho.Utils.KWiJishoPermission.GetPermissionNameInPortuguese.html#KWiJisho_Utils_KWiJishoPermission_GetPermissionNameInPortuguese_DSharpPlus_Permissions_

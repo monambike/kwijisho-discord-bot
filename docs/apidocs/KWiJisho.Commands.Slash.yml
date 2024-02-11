@@ -12,6 +12,7 @@ items:
   - KWiJisho.Commands.Slash.SlashNasa
   - KWiJisho.Commands.Slash.SlashNasa.Emoji
   - KWiJisho.Commands.Slash.SlashNotice
+  - KWiJisho.Commands.Slash.SlashThemeTramontina
   langs:
   - csharp
   - vb
@@ -102,4 +103,10 @@ references:
   name: SlashNotice
   nameWithType: SlashNotice
   fullName: KWiJisho.Commands.Slash.SlashNotice
+- uid: KWiJisho.Commands.Slash.SlashThemeTramontina
+  commentId: T:KWiJisho.Commands.Slash.SlashThemeTramontina
+  href: KWiJisho.Commands.Slash.SlashThemeTramontina.html
+  name: SlashThemeTramontina
+  nameWithType: SlashThemeTramontina
+  fullName: KWiJisho.Commands.Slash.SlashThemeTramontina
 memberLayout: SeparatePages

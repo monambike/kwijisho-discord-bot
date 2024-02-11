@@ -1,0 +1,193 @@
+### YamlMime:ManagedReference
+items:
+- uid: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+  commentId: T:KWiJisho.Commands.ThemeTramontina.EmojiTheme
+  id: ThemeTramontina.EmojiTheme
+  parent: KWiJisho.Commands
+  children:
+  - KWiJisho.Commands.ThemeTramontina.EmojiTheme.Christmas
+  - KWiJisho.Commands.ThemeTramontina.EmojiTheme.Default
+  - KWiJisho.Commands.ThemeTramontina.EmojiTheme.Easter
+  - KWiJisho.Commands.ThemeTramontina.EmojiTheme.Halloween
+  langs:
+  - csharp
+  - vb
+  name: ThemeTramontina.EmojiTheme
+  nameWithType: ThemeTramontina.EmojiTheme
+  fullName: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+  type: Enum
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: EmojiTheme
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 185
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  summary: Represents seasonal themes that you can set to the Discord server.
+  example: []
+  syntax:
+    content: internal enum ThemeTramontina.EmojiTheme
+    content.vb: Friend Enum ThemeTramontina.EmojiTheme
+- uid: KWiJisho.Commands.ThemeTramontina.EmojiTheme.Default
+  commentId: F:KWiJisho.Commands.ThemeTramontina.EmojiTheme.Default
+  id: Default
+  parent: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+  langs:
+  - csharp
+  - vb
+  name: Default
+  nameWithType: ThemeTramontina.EmojiTheme.Default
+  fullName: KWiJisho.Commands.ThemeTramontina.EmojiTheme.Default
+  type: Field
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Default
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 190
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  summary: Represents the Default theme for a server.
+  example: []
+  syntax:
+    content: Default = 0
+    return:
+      type: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+- uid: KWiJisho.Commands.ThemeTramontina.EmojiTheme.Christmas
+  commentId: F:KWiJisho.Commands.ThemeTramontina.EmojiTheme.Christmas
+  id: Christmas
+  parent: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+  langs:
+  - csharp
+  - vb
+  name: Christmas
+  nameWithType: ThemeTramontina.EmojiTheme.Christmas
+  fullName: KWiJisho.Commands.ThemeTramontina.EmojiTheme.Christmas
+  type: Field
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Christmas
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 195
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  summary: Represents the Christmas theme for a setver.
+  example: []
+  syntax:
+    content: Christmas = 1
+    return:
+      type: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+- uid: KWiJisho.Commands.ThemeTramontina.EmojiTheme.Easter
+  commentId: F:KWiJisho.Commands.ThemeTramontina.EmojiTheme.Easter
+  id: Easter
+  parent: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+  langs:
+  - csharp
+  - vb
+  name: Easter
+  nameWithType: ThemeTramontina.EmojiTheme.Easter
+  fullName: KWiJisho.Commands.ThemeTramontina.EmojiTheme.Easter
+  type: Field
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Easter
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 200
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  summary: Represents the Easter theme for a setver.
+  example: []
+  syntax:
+    content: Easter = 2
+    return:
+      type: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+- uid: KWiJisho.Commands.ThemeTramontina.EmojiTheme.Halloween
+  commentId: F:KWiJisho.Commands.ThemeTramontina.EmojiTheme.Halloween
+  id: Halloween
+  parent: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+  langs:
+  - csharp
+  - vb
+  name: Halloween
+  nameWithType: ThemeTramontina.EmojiTheme.Halloween
+  fullName: KWiJisho.Commands.ThemeTramontina.EmojiTheme.Halloween
+  type: Field
+  source:
+    remote:
+      path: src/Commands/ThemeTramontina.cs
+      branch: main
+      repo: https://github.com/monambike/kwijisho-discord-bot.git
+    id: Halloween
+    path: ../src/Commands/ThemeTramontina.cs
+    startLine: 205
+  assemblies:
+  - KWiJisho
+  namespace: KWiJisho.Commands
+  summary: Represents the Halloween theme for a setver.
+  example: []
+  syntax:
+    content: Halloween = 3
+    return:
+      type: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+references:
+- uid: KWiJisho.Commands
+  commentId: N:KWiJisho.Commands
+  href: KWiJisho.html
+  name: KWiJisho.Commands
+  nameWithType: KWiJisho.Commands
+  fullName: KWiJisho.Commands
+  spec.csharp:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Commands
+    name: Commands
+    href: KWiJisho.Commands.html
+  spec.vb:
+  - uid: KWiJisho
+    name: KWiJisho
+    href: KWiJisho.html
+  - name: .
+  - uid: KWiJisho.Commands
+    name: Commands
+    href: KWiJisho.Commands.html
+- uid: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+  commentId: T:KWiJisho.Commands.ThemeTramontina.EmojiTheme
+  parent: KWiJisho.Commands
+  href: KWiJisho.Commands.ThemeTramontina.html
+  name: ThemeTramontina.EmojiTheme
+  nameWithType: ThemeTramontina.EmojiTheme
+  fullName: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+  spec.csharp:
+  - uid: KWiJisho.Commands.ThemeTramontina
+    name: ThemeTramontina
+    href: KWiJisho.Commands.ThemeTramontina.html
+  - name: .
+  - uid: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+    name: EmojiTheme
+    href: KWiJisho.Commands.ThemeTramontina.EmojiTheme.html
+  spec.vb:
+  - uid: KWiJisho.Commands.ThemeTramontina
+    name: ThemeTramontina
+    href: KWiJisho.Commands.ThemeTramontina.html
+  - name: .
+  - uid: KWiJisho.Commands.ThemeTramontina.EmojiTheme
+    name: EmojiTheme
+    href: KWiJisho.Commands.ThemeTramontina.EmojiTheme.html
+memberLayout: SeparatePages

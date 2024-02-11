@@ -26,7 +26,7 @@ items:
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: PrefixCommandManager
     path: ../src/Commands/Prefix/PrefixThemeTramontina.cs
-    startLine: 16
+    startLine: 12
   assemblies:
   - KWiJisho
   namespace: KWiJisho.Commands.Prefix
@@ -58,11 +58,11 @@ items:
   type: Property
   source:
     remote:
-      path: src/Commands/Prefix/CommandManager.cs
+      path: src/Commands/Prefix/PrefixCommandManager.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: CommandGroups
-    path: ../src/Commands/Prefix/CommandManager.cs
+    path: ../src/Commands/Prefix/PrefixCommandManager.cs
     startLine: 16
   assemblies:
   - KWiJisho
@@ -89,11 +89,11 @@ items:
   type: Property
   source:
     remote:
-      path: src/Commands/Prefix/CommandManager.cs
+      path: src/Commands/Prefix/PrefixCommandManager.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Astronomy
-    path: ../src/Commands/Prefix/CommandManager.cs
+    path: ../src/Commands/Prefix/PrefixCommandManager.cs
     startLine: 21
   assemblies:
   - KWiJisho
@@ -120,11 +120,11 @@ items:
   type: Property
   source:
     remote:
-      path: src/Commands/Prefix/CommandManager.cs
+      path: src/Commands/Prefix/PrefixCommandManager.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: ChatGpt
-    path: ../src/Commands/Prefix/CommandManager.cs
+    path: ../src/Commands/Prefix/PrefixCommandManager.cs
     startLine: 26
   assemblies:
   - KWiJisho
@@ -151,11 +151,11 @@ items:
   type: Property
   source:
     remote:
-      path: src/Commands/Prefix/CommandManager.cs
+      path: src/Commands/Prefix/PrefixCommandManager.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Info
-    path: ../src/Commands/Prefix/CommandManager.cs
+    path: ../src/Commands/Prefix/PrefixCommandManager.cs
     startLine: 31
   assemblies:
   - KWiJisho
@@ -182,11 +182,11 @@ items:
   type: Property
   source:
     remote:
-      path: src/Commands/Prefix/CommandManager.cs
+      path: src/Commands/Prefix/PrefixCommandManager.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Manage
-    path: ../src/Commands/Prefix/CommandManager.cs
+    path: ../src/Commands/Prefix/PrefixCommandManager.cs
     startLine: 36
   assemblies:
   - KWiJisho
@@ -213,11 +213,11 @@ items:
   type: Property
   source:
     remote:
-      path: src/Commands/Prefix/CommandManager.cs
+      path: src/Commands/Prefix/PrefixCommandManager.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Birthday
-    path: ../src/Commands/Prefix/CommandManager.cs
+    path: ../src/Commands/Prefix/PrefixCommandManager.cs
     startLine: 41
   assemblies:
   - KWiJisho
@@ -244,11 +244,11 @@ items:
   type: Property
   source:
     remote:
-      path: src/Commands/Prefix/CommandManager.cs
+      path: src/Commands/Prefix/PrefixCommandManager.cs
       branch: main
       repo: https://github.com/monambike/kwijisho-discord-bot.git
     id: Basic
-    path: ../src/Commands/Prefix/CommandManager.cs
+    path: ../src/Commands/Prefix/PrefixCommandManager.cs
     startLine: 46
   assemblies:
   - KWiJisho
