@@ -1,6 +1,6 @@
 # Default
 
-This command will change all channels' emojis to Default theme. It will also give you a suggestion for changing the server name and image. You can execute this command by typing `!themeReset`:
+This command will change all channels' emojis to Default theme. It will also give you a suggestion for changing the server name and image. You can execute this command by typing the prefix command `!themeReset` or the slash command `/theme-reset`:
 
 ![296623010-2bc401bd-13a8-405e-bbcb-b1194d755cec](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/e2df17fa-0475-4a29-85c2-653bd16be418)
 
