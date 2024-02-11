@@ -1,5 +1,4 @@
 ﻿using DSharpPlus;
-using DSharpPlus.CommandsNext;
 
 namespace KWiJisho.Entities
 {
