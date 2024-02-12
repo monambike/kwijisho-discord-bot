@@ -153,7 +153,7 @@ namespace KWiJisho.Models
                     Color = Data.ConfigJson.DefaultColor.DiscordColor,
                     Footer = new DiscordEmbedBuilder.EmbedFooter
                     {
-                        Text = $"Copyright: {copyright} • {DateField}: {DateContent.Date.ToString(DateFormat)}",
+                        Text = $"Copyright: {copyright.Replace("\n", "")} • {DateField}: {DateContent.Date.ToString(DateFormat)}",
                     }
                 }.WithImageUrl(ImageUrlContent).AddField($"👇🏻 {ExplanationField}", $"{Environment.NewLine}{ExplanationContent}");
 
