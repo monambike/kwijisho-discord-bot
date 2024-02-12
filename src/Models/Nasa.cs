@@ -151,25 +151,17 @@ namespace KWiJisho.Models
                 // Formatting explanation content, where's a full stop makes a new paragraph
                 var explanationContent = ExplanationContent.Replace(". ", "." + Environment.NewLine + Environment.NewLine);
 
-                DiscordEmbedBuilder discordEmbedBuilder = new();
                 // Creating embed builder.
-                try
+                var discordEmbedBuilder = new DiscordEmbedBuilder
                 {
-                    discordEmbedBuilder = new DiscordEmbedBuilder
+                    Title = $"({TitleField}) {TitleContent.ToUpper()}",
+                    Description = $"👇🏻 {ExplanationField.ToDiscordBold().ToUpper()}{Environment.NewLine + Environment.NewLine}{explanationContent}",
+                    Color = Data.ConfigJson.DefaultColor.DiscordColor,
+                    Footer = new DiscordEmbedBuilder.EmbedFooter
                     {
-                        Title = $"({TitleField}) {TitleContent.ToUpper()}",
-                        Description = $"👇🏻 {ExplanationField.ToDiscordBold().ToUpper()}{Environment.NewLine + Environment.NewLine}{explanationContent}",
-                        Color = Data.ConfigJson.DefaultColor.DiscordColor,
-                        Footer = new DiscordEmbedBuilder.EmbedFooter
-                        {
-                            Text = $"Copyright: {copyright} • {DateField}: {DateContent.Date.ToString(DateFormat)}",
-                        }
-                    }.WithImageUrl(ImageUrlContent);
-                }
-                catch (Exception  ex)
-                {
-
-                }
+                        Text = $"Copyright: {copyright} • {DateField}: {DateContent.Date.ToString(DateFormat)}",
+                    }
+                }.WithImageUrl(ImageUrlContent);
 
                 // Returning the formatted discord embed builder
                 return discordEmbedBuilder;
