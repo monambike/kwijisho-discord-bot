@@ -61,7 +61,7 @@ The bot also have implemented the ChatGPT API. You can talk with her in her chee
 You can get the APOD (Astronomy Picture of the Day) directly from Nasa website with their api, it will give you the attached text rewriten and summarized in portuguese!
 It will also contain the copyright and APOD image date information embedded.
 
-![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/52bd8259-da9b-4542-b63b-ee3b16971f00)
+![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/a5343a81-9e62-42fe-9fc1-79095f8edb31)
 
 ## And She Can do Much More!
 
