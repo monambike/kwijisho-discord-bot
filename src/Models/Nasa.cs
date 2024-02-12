@@ -1,5 +1,6 @@
 ﻿using DSharpPlus.Entities;
 using KWiJisho.APIs;
+using KWiJisho.Utils;
 using System;
 using System.Threading.Tasks;
 using static KWiJisho.APIs.NasaApi.Apod;
@@ -20,7 +21,7 @@ namespace KWiJisho.Models
                 TitleField = "IMAGE OF THE DAY",
                 TitleContent = apodResponse.Title,
                 // Explanation
-                ExplanationField = "Read the following history according to the image",
+                ExplanationField = "Read the following history related to the image",
                 ExplanationContent = apodResponse.Explanation,
                 // Image
                 ImageUrlContent = apodResponse.Url,
@@ -51,9 +52,10 @@ namespace KWiJisho.Models
             // Translate the summarized explanation to Portuguese.
             var translatedExplanation = await ChatGPT.GetPromptTranslateToPortugueseAsync(summarizedExplanation);
             // Format the translated explanation by adding new lines after each sentence.
-            var formattedExplanation = translatedExplanation.Replace(". ", "." + Environment.NewLine);
+            var formattedExplanation = translatedExplanation;
             // The final formatted explanation ready for use.
             var explanation = formattedExplanation;
+
 
             // Building the portuguese APOD message
             var portugueseApodBuilder = new ApodBuilder
@@ -144,18 +146,30 @@ namespace KWiJisho.Models
             internal DiscordEmbedBuilder GetDiscordEmbedBuilder()
             {
                 // Creating copyright message.
-                var copyright = string.IsNullOrEmpty(CopyrightContent) ? NullCopyrightField : CopyrightContent;
+                var copyright = string.IsNullOrEmpty(CopyrightContent) ? NullCopyrightField : CopyrightContent.Replace("\n", "");
 
+                // Formatting explanation content, where's a full stop makes a new paragraph
+                var explanationContent = ExplanationContent.Replace(". ", "." + Environment.NewLine + Environment.NewLine);
+
+                DiscordEmbedBuilder discordEmbedBuilder = new();
                 // Creating embed builder.
-                var discordEmbedBuilder = new DiscordEmbedBuilder
+                try
                 {
-                    Title = $"({TitleField}) {TitleContent.ToUpper()}",
-                    Color = Data.ConfigJson.DefaultColor.DiscordColor,
-                    Footer = new DiscordEmbedBuilder.EmbedFooter
+                    discordEmbedBuilder = new DiscordEmbedBuilder
                     {
-                        Text = $"Copyright: {copyright.Replace("\n", "")} • {DateField}: {DateContent.Date.ToString(DateFormat)}",
-                    }
-                }.WithImageUrl(ImageUrlContent).AddField($"👇🏻 {ExplanationField}", $"{Environment.NewLine}{ExplanationContent}");
+                        Title = $"({TitleField}) {TitleContent.ToUpper()}",
+                        Description = $"👇🏻 {ExplanationField.ToDiscordBold().ToUpper()}{Environment.NewLine + Environment.NewLine}{explanationContent}",
+                        Color = Data.ConfigJson.DefaultColor.DiscordColor,
+                        Footer = new DiscordEmbedBuilder.EmbedFooter
+                        {
+                            Text = $"Copyright: {copyright} • {DateField}: {DateContent.Date.ToString(DateFormat)}",
+                        }
+                    }.WithImageUrl(ImageUrlContent);
+                }
+                catch (Exception  ex)
+                {
+
+                }
 
                 // Returning the formatted discord embed builder
                 return discordEmbedBuilder;
