@@ -12,7 +12,7 @@
 
 Fun and friendly interactive Discord bot with a wide range of functions.
 
-[**See Docs** →](https://monambike.github.io/kwijisho-discord-bot/)
+[**See Docs** →][docs]
 
 ![500x281-transparent-pontingup](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/9daa0256-5e72-4e37-94bc-0ba800327368)
 
@@ -33,7 +33,7 @@ KWiJisho stands for "Kawaii" (Cute) and "Jisho" (Dictionary) in japanese. The wo
 
 # Documentation
 
-You can check further documentation here [monambike.github.io/kwijisho-discord-bot](docs).
+You can check further documentation here [monambike.github.io/kwijisho-discord-bot][docs].
 
 # Contact
 
@@ -53,7 +53,7 @@ Check out some of her slash commands!
 
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/207d27bf-6222-4c94-93c1-2388b68ab3da)
 
-You can also check detailed information about all commands avaiable here: [monambike.github.io/kwijisho-discord-bot/articles/commands](https://monambike.github.io/kwijisho-discord-bot/articles/commands/apod.html).
+You can also check detailed information about all commands avaiable here: [monambike.github.io/kwijisho-discord-bot/articles/commands](docs-commands).
 
 # Features
 
@@ -80,7 +80,7 @@ It will also contain the copyright and APOD image date information embedded.
 
 ## And She Can do Much More!
 
-Please take a look at the [monambike.github.io/kwijisho-discord-bot/articles/commands](https://monambike.github.io/kwijisho-discord-bot/articles/commands/apod.html) to check detailed information about all the features this Discord bot can provide you!
+Please take a look at the [monambike.github.io/kwijisho-discord-bot/articles/commands][docs-commands] to check detailed information about all the features this Discord bot can provide you!
 
 # Repo Activity
 
@@ -90,4 +90,5 @@ Please take a look at the [monambike.github.io/kwijisho-discord-bot/articles/com
 
 The license for this repository is available [here](LICENSE). Please refer to the provided link for detailed information regarding the terms and conditions governing the use of this project.
 
-[docs](https://monambike.github.io/kwijisho-discord-bot/)
+[docs]: https://monambike.github.io/kwijisho-discord-bot/
+[docs-commands]: https://monambike.github.io/kwijisho-discord-bot/articles/commands/apod.html
