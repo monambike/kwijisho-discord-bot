@@ -6,13 +6,19 @@
 ![ChatGPT](https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)
 ![Github Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)
 
+<div align="center">
+  
 # 💛 KWiJisho
 
 Fun and friendly interactive Discord bot with a wide range of functions.
 
-KWiJisho stands for "Kawaii" and "Jisho" that means "Cute" and "Dictionary" in japanese respectively. I played with the words like this because the main objective for creating this bot was because it would have a custom dictionary feature.
+[**See Docs** →](https://monambike.github.io/kwijisho-discord-bot/)
 
 ![500x281-transparent-pontingup](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/9daa0256-5e72-4e37-94bc-0ba800327368)
+
+*KWiJisho stands for "Kawaii" and "Jisho" that means "Cute" and "Dictionary" in japanese respectively. The word play is because the main objective for creating this bot initially was because it would have a custom dictionary feature. :)*
+
+</div>
 
 # Documentation
 
