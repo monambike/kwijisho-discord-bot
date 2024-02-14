@@ -45,7 +45,7 @@ You can find me on likedin by here [linkedin.com/in/monambike/](https://www.link
 
 Check out some of her prefix commands!
 
-![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/a573854c-c93a-4f5e-98ac-997354c603f7)
+![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/3567ee42-ff11-4181-b977-31ec7f447be7)
 
 ## Slash Commands:
 
@@ -73,10 +73,13 @@ The bot also have implemented the ChatGPT API. You can talk with her in her chee
 
 ## Nasa APOD API
 
-You can get the APOD (Astronomy Picture of the Day) directly from Nasa website with their api, it will give you the attached text rewriten and summarized in portuguese!
-It will also contain the copyright and APOD image date information embedded.
+You can get the APOD (Astronomy Picture of the Day) directly from Nasa website with their api. You can get the original version in english.
 
-![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/a5343a81-9e62-42fe-9fc1-79095f8edb31)
+![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/b6ef90ef-edd2-4f21-bbb4-760bf3bde5f7)
+
+It will also contain the copyright and APOD image date information embedded and if you can it can also  give you the attached text rewriten and summarized in portuguese! :)
+
+![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/06b68707-8c8c-4c31-8ef5-ab6aefc8b050)
 
 ## And She Can do Much More!
 
