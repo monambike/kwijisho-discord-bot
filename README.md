@@ -53,7 +53,7 @@ Check out some of her slash commands!
 
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/207d27bf-6222-4c94-93c1-2388b68ab3da)
 
-You can also check detailed information about all commands avaiable here: [monambike.github.io/kwijisho-discord-bot/articles/commands](docs-commands).
+You can also check detailed information about all commands avaiable here: [monambike.github.io/kwijisho-discord-bot/articles/commands][docs-commands].
 
 # Features
 
