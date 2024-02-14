@@ -29,7 +29,7 @@ KWiJisho stands for "Kawaii" (Cute) and "Jisho" (Dictionary) in japanese. The wo
 - Some utilities like birthday scheduling, animated emojis, 
 - She can give you the astronomic picture of the day (APOD) currently having avaiable the translation and summarizing to portuguese with ChatGPT and NASA API!!
 - You can talk with her in the KWiGpt style. ;P (cute talk with emojis using ChatGPT)
-- Much more!! :)
+- [Much more!!][docs-commands] :)
 
 # Documentation
 
