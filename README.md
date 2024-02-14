@@ -16,21 +16,30 @@ Fun and friendly interactive Discord bot with a wide range of functions.
 
 ![500x281-transparent-pontingup](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/9daa0256-5e72-4e37-94bc-0ba800327368)
 
-*KWiJisho stands for "Kawaii" and "Jisho" that means "Cute" and "Dictionary" in japanese respectively. The word play is because the main objective for creating this bot initially was because it would have a custom dictionary feature. :)*
+*You can check the old version of this project written with Node.js (Javascript) [here](https://github.com/monambike/kwijisho-discord-bot-legacy).*
 
 </div>
 
+# Why KWiJisho?
+
+KWiJisho stands for "Kawaii" (Cute) and "Jisho" (Dictionary) in japanese. The word play is because the main objective for creating this bot initially was because it would have a custom dictionary feature. :)
+
+# Brief Information (What She Can Do? 🧐)
+
+- Some utilities like birthday scheduling, animated emojis, 
+- She can give you the astronomic picture of the day (APOD) currently having avaiable the translation and summarizing to portuguese with ChatGPT and NASA API!!
+- You can talk with her in the KWiGpt style. ;P (cute talk with emojis using ChatGPT)
+- Much more!! :)
+
 # Documentation
 
-You can check further documentation here [monambike.github.io/kwijisho-discord-bot](https://monambike.github.io/kwijisho-discord-bot/).
+You can check further documentation here [monambike.github.io/kwijisho-discord-bot](docs).
 
 # Contact
 
 You can find me on likedin by here [linkedin.com/in/monambike/](https://www.linkedin.com/in/monambike/). If you want to see videos about my work you can check my YouTube channel [youtube.com/@monambike_portfolio](https://www.youtube.com/@monambike_portfolio) and if you want to see my artworks you can check at my instagram [instagram.com/monambike_portfolio](https://www.instagram.com/monambike_portfolio).
 
 # Commands
-
-You can also check detailed information about all commands avaiable here: [monambike.github.io/kwijisho-discord-bot/articles/commands](https://monambike.github.io/kwijisho-discord-bot/articles/commands/apod.html).
 
 ## Prefix Commands:
 
@@ -44,7 +53,7 @@ Check out some of her slash commands!
 
 ![image](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/207d27bf-6222-4c94-93c1-2388b68ab3da)
 
-You can check the old version of this project written with Node.js (Javascript) [here](https://github.com/monambike/kwijisho-discord-bot-legacy).
+You can also check detailed information about all commands avaiable here: [monambike.github.io/kwijisho-discord-bot/articles/commands](https://monambike.github.io/kwijisho-discord-bot/articles/commands/apod.html).
 
 # Features
 
@@ -80,3 +89,5 @@ Please take a look at the [monambike.github.io/kwijisho-discord-bot/articles/com
 # License
 
 The license for this repository is available [here](LICENSE). Please refer to the provided link for detailed information regarding the terms and conditions governing the use of this project.
+
+[docs](https://monambike.github.io/kwijisho-discord-bot/)
