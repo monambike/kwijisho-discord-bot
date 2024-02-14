@@ -93,5 +93,11 @@ Please take a look at the [monambike.github.io/kwijisho-discord-bot/articles/com
 
 The license for this repository is available [here](LICENSE). Please refer to the provided link for detailed information regarding the terms and conditions governing the use of this project.
 
+<div align="center">
+  
+**Made With (💜) By: [@monambike](https://github.com/monambike)**
+
+</div>
+
 [docs]: https://monambike.github.io/kwijisho-discord-bot/
 [docs-commands]: https://monambike.github.io/kwijisho-discord-bot/articles/commands/apod.html
