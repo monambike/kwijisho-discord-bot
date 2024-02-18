@@ -26,7 +26,7 @@ namespace KWiJisho.Commands.Slash
         internal static async Task ExecuteSlashNewsAsync(InteractionContext interactionContext,
             [Option("title", "O título da sua mensagem!!")] string title,
             [Option("description", "A descrição da sua mensagem!!")] string description,
-            [Option("image", "Quer anexar alguma imagem ao seu textinho?")] DiscordAttachment discordAttachment = null,
+            [Option("image", "Quer anexar alguma imagem ao seu textinho?")] DiscordAttachment? discordAttachment = null,
             [Option("send-in-tramontina", "Eu envio pro canal de notícias do Tramontina ao invés do servidor de teste?")] bool sendInTramontina = false)
         {
             // Acknowledge the interaction by deferring the response with a loading state.

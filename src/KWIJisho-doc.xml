@@ -62,19 +62,6 @@
             <param name="promptStyle">The style of the prompt to be added.</param>
             <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
         </member>
-        <member name="T:KWiJisho.APIs.HttpService">
-            <summary>
-            A simple HTTP service for making GET requests and retrieving the response content.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.APIs.HttpService.GetAsync(System.Net.Http.HttpClient,System.String)">
-            <summary>
-            Sends an asynchronous GET request to the specified URI and returns the response content as a string.
-            </summary>
-            <param name="httpClient">The HttpClient instance to use for the request.</param>
-            <param name="strRequest">The URI of the resource to request.</param>
-            <returns>A Task representing the asynchronous operation. The result contains the response content as a string.</returns>
-        </member>
         <member name="T:KWiJisho.APIs.NasaApi">
             <summary>
             This class provides methods for interacting with the NASA's API using
@@ -87,9 +74,9 @@
             API Documentation: <a href="https://api.nasa.gov/"/>
             </summary>
         </member>
-        <member name="F:KWiJisho.APIs.NasaApi.HttpClient">
+        <member name="P:KWiJisho.APIs.NasaApi.HttpService">
             <summary>
-            HttpClient responsible for making api requests.
+            Gets the HTTP service instance for making API requests.
             </summary>
         </member>
         <member name="M:KWiJisho.APIs.NasaApi.GetHttpCatByStringAsync(System.String)">
@@ -1706,6 +1693,33 @@
             <typeparam name="T">The type of elements in the list.</typeparam>
             <param name="list">The list from which to retrieve a random value.</param>
             <returns>A random value from the list.</returns>
+        </member>
+        <member name="T:Monambike.Core.Services.HttpService">
+            <summary>
+            A simple HTTP service for making GET requests and retrieving the response content.
+            </summary>
+        </member>
+        <member name="M:Monambike.Core.Services.HttpService.#ctor(System.String)">
+            <summary>
+            A simple HTTP service for making GET requests and retrieving the response content.
+            </summary>
+        </member>
+        <member name="P:Monambike.Core.Services.HttpService.Address">
+            <summary>
+            Base address for making api requests.
+            </summary>
+        </member>
+        <member name="P:Monambike.Core.Services.HttpService.HttpClient">
+            <summary>
+            HttpClient for making api requests.
+            </summary>
+        </member>
+        <member name="M:Monambike.Core.Services.HttpService.GetAsync``1(System.String)">
+            <summary>
+            Sends an asynchronous GET request to the specified URI and returns the response content as a string.
+            </summary>
+            <param name="strRequest">The URI of the resource to request.</param>
+            <returns>A Task representing the asynchronous operation. The result contains the response content as a string.</returns>
         </member>
     </members>
 </doc>

@@ -33,7 +33,7 @@
     <Copyright>Copyright ©  2022-2024</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
-    <Nullable>warnings</Nullable>
+    <Nullable>enable</Nullable>
     <Title>KWiJisho</Title>
     <PackageProjectUrl>https://github.com/monambike/kwijisho-discord-bot</PackageProjectUrl>
     <NeutralLanguage>pt-BR</NeutralLanguage>

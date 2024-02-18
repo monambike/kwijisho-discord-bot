@@ -22,21 +22,14 @@ namespace KWiJisho.APIs
             /// Retrieves the Astronomy Picture of the Day (APOD) through a request to NASA's API.
             /// </summary>
             /// <returns>An asynchronous <see cref="Task"/> that represents the operation. The task result contains an <see cref="ApodResponse"/> object.</returns>
-            internal static async Task<ApodResponse> GetApodAsync()
-            {
-                // Make an asynchronous request to NASA's API to get the APOD data.
-                var response = await GetUsingNasaApiAsync("planetary/apod");
-
-                // Deserialize the string JSON response into an ApodResponseJson object.
-                return JsonConvert.DeserializeObject<ApodResponse>(response);
-            }
+            internal static async Task<ApodResponse> GetApodAsync() => await GetUsingNasaApiAsync("planetary/apod");
 
             /// <summary>
             /// Makes a generic request to NASA's API with the specified endpoint.
             /// </summary>
             /// <param name="request">The endpoint for the API request.</param>
             /// <returns>An asynchronous task that represents the operation. The task result contains the API response as a string.</returns>
-            private static async Task<string> GetUsingNasaApiAsync(string request) => await HttpService.GetAsync(HttpClient, $"{request}?api_key={ConfigJson.NasaToken}");
+            private static async Task<ApodResponse> GetUsingNasaApiAsync(string request) => await HttpService.GetAsync<ApodResponse>($"{request}?api_key={ConfigJson.NasaToken}");
 
             /// <summary>
             /// Represents the APOD Json response for a NASA's API HTTP request.
@@ -47,31 +40,31 @@ namespace KWiJisho.APIs
                 /// Title of the current Astronomy Picture of the Day.
                 /// </summary>
                 [JsonProperty("title")]
-                internal string Title { get; set; }
+                internal required string Title { get; set; }
 
                 /// <summary>
                 /// Explanation of the current Astronomy Picture of the Day.
                 /// </summary>
                 [JsonProperty("explanation")]
-                internal string Explanation { get; set; }
+                internal required string Explanation { get; set; }
 
                 /// <summary>
                 /// Date of the current Astronomy Picture of the Day.
                 /// </summary>
                 [JsonProperty("date")]
-                internal DateTime Date { get; set; }
+                internal required DateTime Date { get; set; }
 
                 /// <summary>
                 /// Image URL of the current Astronomy Picture of the Day.
                 /// </summary>
                 [JsonProperty("url")]
-                internal string Url { get; set; }
+                internal required string Url { get; set; }
 
                 /// <summary>
                 /// Copyright of the current Astronomy Picture of the Day.
                 /// </summary>
                 [JsonProperty("copyright")]
-                internal string Copyright { get; set; }
+                internal required string Copyright { get; set; }
             }
         }
     }

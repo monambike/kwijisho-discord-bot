@@ -34,7 +34,7 @@ namespace KWiJisho.Entities
         /// </summary>
         /// <param name="discordGuild">The Discord guild where the user is expected to be a member.</param>
         /// <returns>Returns <see cref="DiscordMember"/> if found; otherwise, returns <see langword="null"/>.</returns>
-        internal DiscordMember GetUserDiscordMember(DiscordGuild discordGuild)
+        internal DiscordMember? GetUserDiscordMember(DiscordGuild discordGuild)
         {
             // Tries to return a user.
             try { return discordGuild.GetMemberAsync(Id).Result; }

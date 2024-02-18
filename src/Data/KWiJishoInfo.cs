@@ -11,7 +11,7 @@ namespace KWiJisho.Data
         /// <summary>
         /// KWiJisho project name gotten directly from <see cref="Assembly"/>.
         /// </summary>
-        internal static string Name = Assembly.GetCallingAssembly().GetName().Name;
+        internal static string? Name = Assembly.GetCallingAssembly().GetName().Name;
 
         /// <summary>
         /// The date Karen Kujo project was first commit on <a href="https://github.com/monambike/kwijisho-discord-bot">GitHub repository</a>.

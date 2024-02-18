@@ -24,17 +24,17 @@ namespace KWiJisho.Config
         /// <summary>
         /// Gets or sets the API token for KWiJisho.
         /// </summary>
-        internal static string KWiJishoToken { get; set; }
+        internal static string KWiJishoToken { get; set; } = null!;
 
         /// <summary>
         /// Gets or sets the API token for ChatGPT.
         /// </summary>
-        internal static string ChatGptToken { get; set; }
+        internal static string ChatGptToken { get; set; } = null!;
 
         /// <summary>
         /// Gets or sets the API token for NASA.
         /// </summary>
-        internal static string NasaToken { get; set; }
+        internal static string NasaToken { get; set; } = null!;
 
         /// <summary>
         /// Set values from ConfigJson file.

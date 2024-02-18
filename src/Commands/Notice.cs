@@ -28,7 +28,7 @@ namespace KWiJisho.Commands
         /// <param name="sendInTramontina">If true the message will be sent in Tramontina; otherwise, it will be sent in my test server.</param>
         /// <param name="discordAttachments">The Discord images for being attached on the embed. Only the first one will be sent</param>
         /// <returns></returns>
-        internal static async Task ExecuteNewsAsync(DiscordClient discordClient, DiscordMember discordMember, string title, string description, bool sendInTramontina, DiscordAttachment discordAttachments = null)
+        internal static async Task ExecuteNewsAsync(DiscordClient discordClient, DiscordMember? discordMember, string title, string description, bool sendInTramontina, DiscordAttachment? discordAttachments = null)
         {
             // Making the DiscordEmbedBuilder with the news content.
             var discordEmbedBuilder = new DiscordEmbedBuilder
@@ -37,7 +37,7 @@ namespace KWiJisho.Commands
                 Title = $"NOVO: {title.ToUpper()}",
                 Description = description
             }
-            .WithFooter($"Enviado por: {discordMember.Username} • Data: {DateTime.Now.ToString(new CultureInfo("pt-BR"))}");
+            .WithFooter($"Enviado por: {discordMember?.Username ?? "(usuário não encontrado)"} • Data: {DateTime.Now.ToString(new CultureInfo("pt-BR"))}");
 
             // If there's an attachment.
             if (discordAttachments is not null)

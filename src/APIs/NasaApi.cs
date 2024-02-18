@@ -5,6 +5,7 @@ using static KWiJisho.APIs.NasaApi.Apod;
 using System.Threading.Tasks;
 using System.Net;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Monambike.Core.Services;
 
 namespace KWiJisho.APIs
 {
@@ -15,10 +16,11 @@ namespace KWiJisho.APIs
     /// </summary>
     internal static partial class NasaApi
     {
+
         /// <summary>
-        /// HttpClient responsible for making api requests.
+        /// Gets the HTTP service instance for making API requests.
         /// </summary>
-        readonly static HttpClient HttpClient = new() { BaseAddress = new Uri("https://api.nasa.gov") };
+        private static HttpService HttpService => new("https://api.nasa.gov");
 
         /// <summary>
         /// 
@@ -30,10 +32,7 @@ namespace KWiJisho.APIs
             var myEnum = (HttpStatusCode)Enum.Parse(typeof(HttpStatusCode), myString);
 
             // Make an asynchronous request to Cat's API to get the HTTP Cat data.
-            var response = await GetHttpCatAsync(myEnum);
-
-            // Deserialize the string JSON response into an ApodResponseJson object.
-            return JsonConvert.DeserializeObject<ApodResponse>(response);
+            return await GetHttpCatAsync(myEnum);
         }
 
         /// <summary>
@@ -41,7 +40,7 @@ namespace KWiJisho.APIs
         /// </summary>
         /// <param name="httpStatusCode">The endpoint for the API request.</param>
         /// <returns>An asynchronous task that represents the operation. The task result contains the API response as a string.</returns>
-        private static async Task<string> GetHttpCatAsync(HttpStatusCode httpStatusCode) => await HttpService.GetAsync(HttpClient, $"{httpStatusCode}");
+        private static async Task<ApodResponse> GetHttpCatAsync(HttpStatusCode httpStatusCode) => await HttpService.GetAsync<ApodResponse>(httpStatusCode.ToString());
 
     }
 }

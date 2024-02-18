@@ -87,7 +87,7 @@ namespace KWiJisho.Models
         /// </summary>
         internal class ApodBuilder
         {
-            private string _nullCopyrightField;
+            private string _nullCopyrightField = null!;
 
             /// <summary>
             /// Gets or initializes the title field for the APOD embed.

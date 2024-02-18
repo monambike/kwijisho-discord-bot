@@ -78,7 +78,7 @@ namespace KWiJisho.Commands
         /// <param name="description">The description from the theme notice</param>
         /// <param name="serverNameSuggestion">The server name suggestion.</param>
         /// <returns>A <see cref="Task"/> from the method execution.</returns>
-        internal static async Task SetThemeAsync(DiscordChannel discordChannel, DiscordClient discordClient, EmojiTheme emojiTheme, string title, string description, string serverNameSuggestion = null)
+        internal static async Task SetThemeAsync(DiscordChannel discordChannel, DiscordClient discordClient, EmojiTheme emojiTheme, string title, string description, string? serverNameSuggestion = null)
         {
             // Checking if can execute current command
             if (!ThemeChangeCooldown.CanExecute(discordChannel)) return;

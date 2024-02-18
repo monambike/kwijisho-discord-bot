@@ -52,7 +52,7 @@ namespace KWiJisho.Models
         /// </summary>
         /// <param name="discordGuild"></param>
         /// <returns>Returns the <see cref="User"/> if avaiable in current Discord server; otherwise, returns <see langword="null"/>.</returns>
-        internal static User GetNextUserToMakeBirthday(DiscordGuild discordGuild)
+        internal static User? GetNextUserToMakeBirthday(DiscordGuild discordGuild)
         {
             // Retrieving users by their closest birthday.
             var users = GetBirthdayList();

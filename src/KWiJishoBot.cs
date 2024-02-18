@@ -4,9 +4,7 @@ using DSharpPlus.Entities;
 using DSharpPlus.SlashCommands;
 using KWiJisho.Config;
 using KWiJisho.Data;
-using System.Diagnostics;
 using System.Threading.Tasks;
-using static KWiJisho.Commands.Prefix.PrefixCommandManager;
 
 namespace KWiJisho
 {
@@ -19,17 +17,17 @@ namespace KWiJisho
         /// <summary>
         /// Gets or sets the Discord client instance used by the bot.
         /// </summary>
-        internal DiscordClient DiscordClient { get; private set; }
+        internal DiscordClient DiscordClient { get; private set; } = null!;
 
         /// <summary>
         /// Gets or sets the <see cref="CommandsNextExtension"/> instance for handling bot prefix commands.
         /// </summary>
-        internal CommandsNextExtension PrefixCommands { get; private set; }
+        internal CommandsNextExtension PrefixCommands { get; private set; } = null!;
 
         /// <summary>
         /// Gets or sets the <see cref="SlashCommandsExtension"/> instance for handling bot slash commands.
         /// </summary>
-        internal SlashCommandsExtension SlashCommands { get; private set; }
+        internal SlashCommandsExtension SlashCommands { get; private set; } = null!;
 
         /// <summary>
         /// Initializing Discord bot activity class.
