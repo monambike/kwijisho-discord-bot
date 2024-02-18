@@ -1,7 +1,5 @@
 ﻿using KWiJisho.Data;
-using KWiJisho.Entities;
 using System;
-using System.Drawing;
 using static KWiJisho.Commands.Prefix.PrefixCommandManager;
 
 namespace KWiJisho.Config
