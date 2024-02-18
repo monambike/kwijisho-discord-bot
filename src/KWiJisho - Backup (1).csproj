@@ -26,8 +26,7 @@
   <PropertyGroup>
     <ApplicationIcon>Resources\Images\256x256-ayaya.ico</ApplicationIcon>
     <AssemblyTitle>KWiJisho</AssemblyTitle>
-    <Description>KWiJisho discord bot made by monambike.
-Social: @monambike | Webiste: https://monambike.com</Description>
+    <Description>Discord bot made by monambike. https://monambike.com/</Description>
     <Company>Monambike</Company>
     <Product>KWiJisho</Product>
     <Copyright>Copyright ©  2022-2024</Copyright>
@@ -43,6 +42,7 @@ Social: @monambike | Webiste: https://monambike.com</Description>
     <PackageIcon>128x128-ayaya.png</PackageIcon>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>KWiJisho-doc.xml</DocumentationFile>
+    <SignAssembly>False</SignAssembly>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <WarningLevel>9999</WarningLevel>
