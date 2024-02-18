@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
     <OutputType>Exe</OutputType>
     <PublishUrl>publish\</PublishUrl>
@@ -19,6 +19,7 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>KWiJisho.KWiJishoBot</StartupObject>
