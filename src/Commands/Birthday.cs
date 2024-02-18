@@ -39,22 +39,44 @@ namespace KWiJisho.Commands
         /// <param name="discordGuild">The Discord guild containing the users.</param>
         internal static async Task ExecuteNextBirthdayAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
         {
+            string notFoundBirthdayUser = "Eu sinto muito.. :( eu não consegui encontrar nesse servidor o próximo usuário da lista a fazer aniversário.";
+
             // Getting closest birthday from user present in the server and its member info
             var user = Models.Birthday.GetNextUserToMakeBirthday(discordGuild);
+            
+            // If the user is null, send a message to the Discord channel indicating inability to find the next user in the birthday list.
+            if (user is null)
+            {
+                // Sends the message.
+                await discordChannel.SendMessageAsync(notFoundBirthdayUser);
+                // Return to the method.
+                return;
+            }
+
+            // Tries to get detailed discord info about the user found.
             var discordMember = user.GetUserDiscordMember(discordGuild);
 
-            // Getting how many days are maining for the user's birthday
+            // If the user is null, send a message to the Discord channel indicating inability to find the next user in the birthday list.
+            if (discordMember is null)
+            {
+                // Sends the message.
+                await discordChannel.SendMessageAsync(notFoundBirthdayUser);
+                // Return to the method.
+                return;
+            }
+
+            // Gets how many days are maining for the user's birthday.
             var daysRemaining = Models.Birthday.GetBirthdayDaysRemaining(user);
             var upcomingDate = Models.Birthday.GetBirthdayUpcomingDate(daysRemaining);
 
-            // Generating birthday message according how many days are remaining for its birthday
+            // Generates birthday message according how many days are remaining for its birthday.
             var message = Models.Birthday.GenerateBirthdayMessage(user);
 
-            // Getting image name and image's full path.
+            // Gets the image name and image's full path.
             var fileName = $"500x500-happybirthday-{upcomingDate.ToString().ToLower()}.png";
             var imagePath = Path.GetFullPath($"Resources/Images/Birthday/{fileName}");
 
-            // Initinializing discord embed builder message
+            // Initializes discord embed builder message
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
                 Color = ConfigJson.DefaultColor.DiscordColor,
@@ -64,10 +86,10 @@ namespace KWiJisho.Commands
             .WithImageUrl($"attachment://{imagePath}").Build();
 
             using var fileStream = new FileStream(imagePath, FileMode.Open);
-            // Attaching file and embed to the message and sending it to the discord channel
+            // Attachs file and embed to the message and sending it to the discord channel.
             await discordChannel.SendMessageAsync(new DiscordMessageBuilder()
                 .AddEmbed(discordEmbedBuilder)
-                // The image gif of karen kujou happy talking.
+                // Adds the image gif of karen kujou happy talking.
                 .AddFile(fileName, fileStream));
         }
 
