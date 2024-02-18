@@ -1,5 +1,4 @@
-## Ignoring _site folder because it's generated on GitHub workflow and
-## can be generated manually locally
+## Ignoring _site folder because it's generated on GitHub workflow and can be generated manually locally
 docs/_site
 
 ## Ignore Visual Studio temporary files, build results, and
