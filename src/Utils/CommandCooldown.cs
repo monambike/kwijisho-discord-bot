@@ -11,7 +11,7 @@ namespace KWiJisho.Utils
     /// <param name="maxUses">The max uses allowed before the wait of time to cooldown reset.</param>
     /// <param name="resetAfter">The time to reset, when it reached the end allow user to execute the command again.</param>
     /// <param name="cooldownPurpose">The purpose of this cooldown for user explanation.</param>
-    internal class Cooldown(int maxUses, TimeSpan resetAfter, string cooldownPurpose)
+    internal class CommandCooldown(int maxUses, TimeSpan resetAfter, string cooldownPurpose)
     {
         /// <summary>
         /// Max uses allowed before the wait of time to cooldown reset.

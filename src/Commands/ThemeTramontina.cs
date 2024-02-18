@@ -17,7 +17,7 @@ namespace KWiJisho.Commands
         /// <summary>
         /// Represents the cooldown for theme change.
         /// </summary>
-        private static readonly Cooldown ThemeChangeCooldown = new(2, TimeSpan.FromMinutes(10), "mudar o tema do servidor");
+        private static readonly CommandCooldown ThemeChangeCooldown = new(2, TimeSpan.FromMinutes(10), "mudar o tema do servidor");
 
         // Tramontina's Text Channels.
         internal static readonly ChannelTramontina Geral = new(692588978959941656, "geral", new Dictionary<EmojiTheme, string>
@@ -95,7 +95,7 @@ namespace KWiJisho.Commands
             {
                 Title = title,
                 Description = $"{description}{Environment.NewLine}",
-                Color = Data.ConfigJson.DefaultColor.DiscordColor
+                Color = Config.ConfigJson.DefaultColor.DiscordColor
             }.AddField("HOOOOOOOOOORA DE ENTRAR NO CLIMA", $"Que tal aproveitar e tentar {"trocar o nome do servidor".ToDiscordBold()} pela minha sugestãozinha abaixo? ;D AHAHAHA");
 
             // Sending the first message (presentation).
@@ -114,7 +114,7 @@ namespace KWiJisho.Commands
             var suggestionsDiscordEmbedBuilder = new DiscordEmbedBuilder
             {
                 Description = fullServerNameWithSuggestion,
-                Color = Data.ConfigJson.DefaultColor.DiscordColor
+                Color = Config.ConfigJson.DefaultColor.DiscordColor
             }.WithImageUrl($"attachment://{imagePath}").Build();
 
             using var fileStream = new FileStream(imagePath, FileMode.Open);

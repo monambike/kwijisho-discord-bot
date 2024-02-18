@@ -53,19 +53,19 @@ namespace KWiJisho.Commands.Prefix
     internal class PrefixCommand
     {
         /// <summary>
-        /// Gets or sets the name of the command.
+        /// Gets or initializes the name of the command.
         /// </summary>
-        internal string Name { get; set; }
+        internal string Name { get; init; }
 
         /// <summary>
-        /// Gets or sets the description of the commands.
+        /// Gets or initializes the description of the commands.
         /// </summary>
-        internal string Description { get; set; }
+        internal string Description { get; init; }
 
         /// <summary>
-        /// Gets or sets the required permissions for the command.
+        /// Gets or initializes the required permissions for the command.
         /// </summary>
-        internal Permissions Permissions { get; set; }
+        internal Permissions Permissions { get; init; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PrefixCommand"/> class.

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using KWiJisho.Config;
+using Newtonsoft.Json;
 using System;
 using System.Threading.Tasks;
 
@@ -35,7 +36,7 @@ namespace KWiJisho.APIs
             /// </summary>
             /// <param name="request">The endpoint for the API request.</param>
             /// <returns>An asynchronous task that represents the operation. The task result contains the API response as a string.</returns>
-            private static async Task<string> GetUsingNasaApiAsync(string request) => await HttpService.GetAsync(HttpClient, $"{request}?api_key={Data.ConfigJson.NasaToken}");
+            private static async Task<string> GetUsingNasaApiAsync(string request) => await HttpService.GetAsync(HttpClient, $"{request}?api_key={ConfigJson.NasaToken}");
 
             /// <summary>
             /// Represents the APOD Json response for a NASA's API HTTP request.

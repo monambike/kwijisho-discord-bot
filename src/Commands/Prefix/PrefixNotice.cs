@@ -1,6 +1,7 @@
 ﻿using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
+using KWiJisho.Config;
 using KWiJisho.Data;
 using KWiJisho.Utils;
 using System.Threading.Tasks;

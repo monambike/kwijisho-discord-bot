@@ -1,6 +1,7 @@
 ﻿using DSharpPlus;
 using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
+using KWiJisho.Config;
 using KWiJisho.Data;
 using KWiJisho.Utils;
 using System;

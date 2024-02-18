@@ -1,11 +1,5 @@
 {
-  "prefix": "!",
   "kwijishoToken": "insert-your-token",
   "chatgptToken": "insert-your-token",
-  "nasaToken": "insert-your-token",
-  "defaultColor": {
-    "red": 255,
-    "green": 231,
-    "blue": 94
-  }
+  "nasaToken": "insert-your-token"
 }

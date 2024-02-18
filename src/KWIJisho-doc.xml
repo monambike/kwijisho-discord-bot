@@ -4,6 +4,18 @@
         <name>KWiJisho</name>
     </assembly>
     <members>
+        <member name="T:KWiJisho.APIs.CatApi">
+            <summary>
+            This class provides methods for interacting with the Cat's API using
+            HTTP requests.
+            API GitHub Repository: <a href="https://github.com/httpcats/http.cat"/>
+            </summary>
+        </member>
+        <member name="F:KWiJisho.APIs.CatApi.HttpClient">
+            <summary>
+            HttpClient responsible for making api requests.
+            </summary>
+        </member>
         <member name="T:KWiJisho.APIs.ChatGPT">
             <summary>
             This class provides methods for interacting with the OpenAI GPT-3.5 model
@@ -79,6 +91,19 @@
             <summary>
             HttpClient responsible for making api requests.
             </summary>
+        </member>
+        <member name="M:KWiJisho.APIs.NasaApi.GetHttpCatByStringAsync(System.String)">
+            <summary>
+            
+            </summary>
+            <returns>An asynchronous <see cref="T:System.Threading.Tasks.Task"/> that represents the operation. The task result contains an <see cref="T:KWiJisho.APIs.NasaApi.Apod.ApodResponse"/> object.</returns>
+        </member>
+        <member name="M:KWiJisho.APIs.NasaApi.GetHttpCatAsync(System.Net.HttpStatusCode)">
+            <summary>
+            Makes a generic request to Cat's API with the specified endpoint.
+            </summary>
+            <param name="httpStatusCode">The endpoint for the API request.</param>
+            <returns>An asynchronous task that represents the operation. The task result contains the API response as a string.</returns>
         </member>
         <member name="T:KWiJisho.APIs.NasaApi.Apod">
             <summary>
@@ -551,17 +576,17 @@
         </member>
         <member name="P:KWiJisho.Commands.Prefix.PrefixCommand.Name">
             <summary>
-            Gets or sets the name of the command.
+            Gets or initializes the name of the command.
             </summary>
         </member>
         <member name="P:KWiJisho.Commands.Prefix.PrefixCommand.Description">
             <summary>
-            Gets or sets the description of the commands.
+            Gets or initializes the description of the commands.
             </summary>
         </member>
         <member name="P:KWiJisho.Commands.Prefix.PrefixCommand.Permissions">
             <summary>
-            Gets or sets the required permissions for the command.
+            Gets or initializes the required permissions for the command.
             </summary>
         </member>
         <member name="M:KWiJisho.Commands.Prefix.PrefixCommand.#ctor(System.String,System.String,KWiJisho.Commands.Prefix.PrefixCommandGroup,DSharpPlus.Permissions)">
@@ -815,41 +840,46 @@
             Represents the Halloween theme for a setver.
             </summary>
         </member>
-        <member name="P:KWiJisho.Data.ConfigJson.KWiJishoToken">
-            <summary>
-            Gets or sets the API token for KWiJisho.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Data.ConfigJson.ChatGptToken">
-            <summary>
-            Gets or sets the API token for ChatGPT.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Data.ConfigJson.NasaToken">
-            <summary>
-            Gets or sets the API token for NASA.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Data.ConfigJson.Prefix">
+        <member name="P:KWiJisho.Config.ConfigJson.Prefix">
             <summary>
             Gets or sets the command prefix for the bot.
             </summary>
         </member>
-        <member name="P:KWiJisho.Data.ConfigJson.Activity">
+        <member name="P:KWiJisho.Config.ConfigJson.Activity">
             <summary>
             Gets or sets the default bot activity.
             </summary>
         </member>
-        <member name="P:KWiJisho.Data.ConfigJson.DefaultColor">
+        <member name="P:KWiJisho.Config.ConfigJson.DefaultColor">
             <summary>
             Gets or sets the default color for bot messages.
             </summary>
         </member>
-        <member name="M:KWiJisho.Data.ConfigJson.SetValuesFromConfigJson(KWiJisho.Entities.ConfigJson)">
+        <member name="P:KWiJisho.Config.ConfigJson.KWiJishoToken">
+            <summary>
+            Gets or sets the API token for KWiJisho.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Config.ConfigJson.ChatGptToken">
+            <summary>
+            Gets or sets the API token for ChatGPT.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Config.ConfigJson.NasaToken">
+            <summary>
+            Gets or sets the API token for NASA.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Config.ConfigJson.SetValuesFromConfigJson(KWiJisho.Entities.ConfigJson)">
             <summary>
             Set values from ConfigJson file.
             </summary>
             <param name="configJson">The instance of the ConfigJson file.</param>
+        </member>
+        <member name="T:KWiJisho.Data.Colors">
+            <summary>
+            Class responsible for managing colors in the application.
+            </summary>
         </member>
         <member name="T:KWiJisho.Data.DiscordEmojis">
             <summary>
@@ -1035,32 +1065,17 @@
         </member>
         <member name="P:KWiJisho.Entities.ConfigJson.KWiJishoToken">
             <summary>
-            Gets or sets the Discord bot token for the KWiJisho module.
+            Gets or initializes the Discord bot token for the KWiJisho module.
             </summary>
         </member>
         <member name="P:KWiJisho.Entities.ConfigJson.ChatGptToken">
             <summary>
-            Gets or sets the API token for accessing ChatGPT's services.
+            Gets or initializes the API token for accessing ChatGPT's services.
             </summary>
         </member>
         <member name="P:KWiJisho.Entities.ConfigJson.NasaToken">
             <summary>
-            Gets or sets the API token for accessing NASA's services.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Entities.ConfigJson.Prefix">
-            <summary>
-            Gets or sets the prefix used for Discord bot commands.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Entities.ConfigJson.Activity">
-            <summary>
-            Gets or sets the activity status message for the Discord bot.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Entities.ConfigJson.DefaultColor">
-            <summary>
-            Gets or sets the default color used for Discord bot embeds.
+            Gets or initializes the API token for accessing NASA's services.
             </summary>
         </member>
         <member name="M:KWiJisho.Entities.ConfigJson.DeserializeConfigJsonFileAsync">
@@ -1479,7 +1494,7 @@
             </summary>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous creation of the birthday scheduler.</returns>
         </member>
-        <member name="T:KWiJisho.Utils.Cooldown">
+        <member name="T:KWiJisho.Utils.CommandCooldown">
             <summary>
             A utility class that manages cooldown for executing commands and methods.
             </summary>
@@ -1487,7 +1502,7 @@
             <param name="resetAfter">The time to reset, when it reached the end allow user to execute the command again.</param>
             <param name="cooldownPurpose">The purpose of this cooldown for user explanation.</param>
         </member>
-        <member name="M:KWiJisho.Utils.Cooldown.#ctor(System.Int32,System.TimeSpan,System.String)">
+        <member name="M:KWiJisho.Utils.CommandCooldown.#ctor(System.Int32,System.TimeSpan,System.String)">
             <summary>
             A utility class that manages cooldown for executing commands and methods.
             </summary>
@@ -1495,41 +1510,41 @@
             <param name="resetAfter">The time to reset, when it reached the end allow user to execute the command again.</param>
             <param name="cooldownPurpose">The purpose of this cooldown for user explanation.</param>
         </member>
-        <member name="P:KWiJisho.Utils.Cooldown.MaxUses">
+        <member name="P:KWiJisho.Utils.CommandCooldown.MaxUses">
             <summary>
             Max uses allowed before the wait of time to cooldown reset.
             </summary>
         </member>
-        <member name="P:KWiJisho.Utils.Cooldown.TimeToReset">
+        <member name="P:KWiJisho.Utils.CommandCooldown.TimeToReset">
             <summary>
             Time to reset and allow new command uses.
             </summary>
         </member>
-        <member name="P:KWiJisho.Utils.Cooldown.CooldownPurpose">
+        <member name="P:KWiJisho.Utils.CommandCooldown.CooldownPurpose">
             <summary>
             A brief explanation of the purpose of the cooldown.
             </summary>
         </member>
-        <member name="P:KWiJisho.Utils.Cooldown.Requests">
+        <member name="P:KWiJisho.Utils.CommandCooldown.Requests">
             <summary>
             The requests made for this cooldown instance.
             </summary>
         </member>
-        <member name="M:KWiJisho.Utils.Cooldown.CanExecute(DSharpPlus.Entities.DiscordChannel)">
+        <member name="M:KWiJisho.Utils.CommandCooldown.CanExecute(DSharpPlus.Entities.DiscordChannel)">
             <summary>
             Checks if user can execute the action or if is necessary to wait.
             </summary>
             <param name="discordChannel">The channel where the message will be sent.</param>
             <returns>A <see cref="T:System.Boolean"/> saying if the requested action could be executed or not.</returns>
         </member>
-        <member name="M:KWiJisho.Utils.Cooldown.GetTimeRemainingString(System.TimeSpan)">
+        <member name="M:KWiJisho.Utils.CommandCooldown.GetTimeRemainingString(System.TimeSpan)">
             <summary>
             Gets a string representation of the provided time remaining.
             </summary>
             <param name="timeSpan">The time remaining to get the representation.</param>
             <returns>The <see cref="T:System.String"/> representation of how much time is remaining.</returns>
         </member>
-        <member name="M:KWiJisho.Utils.Cooldown.GetTimeRemainingStrings(System.TimeSpan)">
+        <member name="M:KWiJisho.Utils.CommandCooldown.GetTimeRemainingStrings(System.TimeSpan)">
             <summary>
             Gets a list containing string representations of the provided time remaining.
             </summary>

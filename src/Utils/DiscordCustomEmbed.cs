@@ -1,4 +1,5 @@
 ﻿using DSharpPlus.Entities;
+using KWiJisho.Config;
 using System.IO;
 
 namespace KWiJisho.Utils
@@ -20,7 +21,7 @@ namespace KWiJisho.Utils
             // Creating the discord embed builder.
             var discordEmbedBuilder = new DiscordEmbedBuilder()
             {
-                Color = Data.ConfigJson.DefaultColor.DiscordColor,
+                Color = ConfigJson.DefaultColor.DiscordColor,
                 Title = title,
                 Description = description,
                 Thumbnail = thumbnail

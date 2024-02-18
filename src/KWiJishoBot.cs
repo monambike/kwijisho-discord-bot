@@ -2,7 +2,9 @@
 using DSharpPlus.CommandsNext;
 using DSharpPlus.Entities;
 using DSharpPlus.SlashCommands;
+using KWiJisho.Config;
 using KWiJisho.Data;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using static KWiJisho.Commands.Prefix.PrefixCommandManager;
 
@@ -32,7 +34,7 @@ namespace KWiJisho
         /// <summary>
         /// Initializing Discord bot activity class.
         /// </summary>
-        internal static DiscordActivity DiscordActivity => new($"{ConfigJson.Prefix}{nameof(PrefixInfo.help)} | Sou a Kawaii Jisho! 💫");
+        internal static DiscordActivity DiscordActivity => new(ConfigJson.Activity);
 
         /// <summary>
         /// The main entry point method of the application.

@@ -12,19 +12,19 @@ namespace KWiJisho.Entities
         /// Gets or sets the red component of the RGB color.
         /// </summary>
         [JsonProperty("red")]
-        internal byte Red { get; set; } = red;
+        internal byte Red { get; init; } = red;
 
         /// <summary>
         /// Gets or sets the green component of the RGB color.
         /// </summary>
         [JsonProperty("green")]
-        internal byte Green { get; set; } = green;
+        internal byte Green { get; init; } = green;
 
         /// <summary>
         /// Gets or sets the blue component of the RGB color.
         /// </summary>
         [JsonProperty("blue")]
-        internal byte Blue { get; set; } = blue;
+        internal byte Blue { get; init; } = blue;
 
         /// <summary>
         /// Gets a Discord color representation based on the RGB components.

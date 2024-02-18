@@ -1,4 +1,5 @@
 ﻿using DSharpPlus.Entities;
+using KWiJisho.Config;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -56,7 +57,7 @@ namespace KWiJisho.Commands
             // Initinializing discord embed builder message
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
-                Color = Data.ConfigJson.DefaultColor.DiscordColor,
+                Color = ConfigJson.DefaultColor.DiscordColor,
                 Title = "PRÓXIMO ANIVERSARIANTE",
                 Description = $@"O próximo aniversariante é.. {discordMember.Username}!! {message}"
             }
@@ -87,7 +88,7 @@ namespace KWiJisho.Commands
             // Initializing discord embed builder
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
-                Color = Data.ConfigJson.DefaultColor.DiscordColor,
+                Color = ConfigJson.DefaultColor.DiscordColor,
                 Title = "LISTA DE ANIVERSARIANTES",
             };
 

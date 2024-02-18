@@ -1,5 +1,6 @@
 ﻿using DSharpPlus.Entities;
 using KWiJisho.APIs;
+using KWiJisho.Config;
 using KWiJisho.Utils;
 using System;
 using System.Threading.Tasks;
@@ -55,7 +56,6 @@ namespace KWiJisho.Models
             var formattedExplanation = translatedExplanation;
             // The final formatted explanation ready for use.
             var explanation = formattedExplanation;
-
 
             // Building the portuguese APOD message
             var portugueseApodBuilder = new ApodBuilder
@@ -156,7 +156,7 @@ namespace KWiJisho.Models
                 {
                     Title = $"({TitleField}) {TitleContent.ToUpper()}",
                     Description = $"👇🏻 {ExplanationField.ToDiscordBold().ToUpper()}{Environment.NewLine + Environment.NewLine}{explanationContent}",
-                    Color = Data.ConfigJson.DefaultColor.DiscordColor,
+                    Color = ConfigJson.DefaultColor.DiscordColor,
                     Footer = new DiscordEmbedBuilder.EmbedFooter
                     {
                         Text = $"Copyright: {copyright} • {DateField}: {DateContent.Date.ToString(DateFormat)}",

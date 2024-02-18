@@ -1,4 +1,5 @@
-﻿using OpenAI_API;
+﻿using KWiJisho.Config;
+using OpenAI_API;
 using OpenAI_API.Chat;
 using System.Threading.Tasks;
 
@@ -14,7 +15,7 @@ namespace KWiJisho.APIs
         /// <summary>
         /// Represents an instance of the OpenAIAPI configuration.
         /// </summary>
-        private static readonly OpenAIAPI OpenAIAPI = new(Data.ConfigJson.ChatGptToken);
+        private static readonly OpenAIAPI OpenAIAPI = new(ConfigJson.ChatGptToken);
 
         /// <summary>
         /// Represents a instance of KWiJisho conversation.
@@ -71,7 +72,7 @@ namespace KWiJisho.APIs
         private static async Task<string> GetPromptAsync(string input, string promptStyle)
         {
             // Creating an instance of the OpenAIAPI class with the ChatGptToken.
-            var api = new OpenAIAPI(Data.ConfigJson.ChatGptToken);
+            var api = new OpenAIAPI(ConfigJson.ChatGptToken);
 
             // Creating a new conversation.
             var chat = api.Chat.CreateConversation();

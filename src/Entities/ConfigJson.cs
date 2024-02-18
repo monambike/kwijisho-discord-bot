@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,40 +11,22 @@ namespace KWiJisho.Entities
     internal struct ConfigJson
     {
         /// <summary>
-        /// Gets or sets the Discord bot token for the KWiJisho module.
+        /// Gets or initializes the Discord bot token for the KWiJisho module.
         /// </summary>
         [JsonProperty("kwijishoToken")]
-        internal string KWiJishoToken { get; set; }
+        internal string KWiJishoToken { get; init; }
 
         /// <summary>
-        /// Gets or sets the API token for accessing ChatGPT's services.
+        /// Gets or initializes the API token for accessing ChatGPT's services.
         /// </summary>
         [JsonProperty("chatgptToken")]
-        internal string ChatGptToken { get; set; }
+        internal string ChatGptToken { get; init; }
 
         /// <summary>
-        /// Gets or sets the API token for accessing NASA's services.
+        /// Gets or initializes the API token for accessing NASA's services.
         /// </summary>
         [JsonProperty("nasaToken")]
-        internal string NasaToken { get; set; }
-
-        /// <summary>
-        /// Gets or sets the prefix used for Discord bot commands.
-        /// </summary>
-        [JsonProperty("prefix")]
-        internal string Prefix { get; set; }
-
-        /// <summary>
-        /// Gets or sets the activity status message for the Discord bot.
-        /// </summary>
-        [JsonProperty("activity")]
-        internal string Activity { get;set; }
-
-        /// <summary>
-        /// Gets or sets the default color used for Discord bot embeds.
-        /// </summary>
-        [JsonProperty("defaultColor")]
-        internal Color DefaultColor { get; set; }
+        internal string NasaToken { get; init; }
 
         /// <summary>
         /// Asynchronously deserializes the content of the config.json file into a <see cref="ConfigJson"/> instance.

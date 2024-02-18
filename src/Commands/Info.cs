@@ -1,6 +1,7 @@
 ﻿using DSharpPlus;
 using DSharpPlus.Entities;
 using KWiJisho.Commands.Prefix;
+using KWiJisho.Config;
 using KWiJisho.Utils;
 using System;
 using System.IO;
@@ -23,9 +24,9 @@ namespace KWiJisho.Commands
             // Initializing discord embed builder
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
-                Color = Data.ConfigJson.DefaultColor.DiscordColor,
+                Color = ConfigJson.DefaultColor.DiscordColor,
                 Title = "AJUDA COM COMANDOS",
-                Description = $@"Lembre-se que pra colocar um comando você precisa colocar o ""{Data.ConfigJson.Prefix}"" na frente!{Environment.NewLine}Você pode usar os comandos em barra ""/"" também!",
+                Description = $@"Lembre-se que pra colocar um comando você precisa colocar o ""{ConfigJson.Prefix}"" na frente!{Environment.NewLine}Você pode usar os comandos em barra ""/"" também!",
                 Thumbnail = new DiscordEmbedBuilder.EmbedThumbnail
                 {
                     Url = discordClient.CurrentUser.AvatarUrl
@@ -39,7 +40,7 @@ namespace KWiJisho.Commands
                 // For each command inside the current command group
                 foreach (var discordCommand in commandGroup.Commands)
                     // Append the string that will represent the command and its description to the content
-                    content += $"{Data.ConfigJson.Prefix}{discordCommand.Name}: ".ToDiscordBold() + $"{discordCommand.Description}{Environment.NewLine}";
+                    content += $"{ConfigJson.Prefix}{discordCommand.Name}: ".ToDiscordBold() + $"{discordCommand.Description}{Environment.NewLine}";
                 // Add a field with the command group name and the appended content
                 discordEmbedBuilder.AddField(commandGroup.Name, content);
             }
@@ -71,7 +72,7 @@ namespace KWiJisho.Commands
             // Initializing discord embed builder
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
-                Color = Data.ConfigJson.DefaultColor.DiscordColor,
+                Color = ConfigJson.DefaultColor.DiscordColor,
                 Title = "OLÁAAAAAAAA 🌟 🥳🎉",
                 Description = description,
                 Thumbnail = new DiscordEmbedBuilder.EmbedThumbnail

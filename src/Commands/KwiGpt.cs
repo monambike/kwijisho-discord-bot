@@ -1,5 +1,6 @@
 ﻿using DSharpPlus.Entities;
 using KWiJisho.APIs;
+using KWiJisho.Config;
 using System.Threading.Tasks;
 
 namespace KWiJisho.Commands
@@ -27,7 +28,7 @@ namespace KWiJisho.Commands
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
                 Description = response,
-                Color = Data.ConfigJson.DefaultColor.DiscordColor
+                Color = ConfigJson.DefaultColor.DiscordColor
             };
 
             // Sending the response to the user.

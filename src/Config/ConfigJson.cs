@@ -1,10 +1,28 @@
-﻿using KWiJisho.Entities;
+﻿using KWiJisho.Data;
+using KWiJisho.Entities;
 using System;
+using System.Drawing;
+using static KWiJisho.Commands.Prefix.PrefixCommandManager;
 
-namespace KWiJisho.Data
+namespace KWiJisho.Config
 {
     internal class ConfigJson
     {
+        /// <summary>
+        /// Gets or sets the command prefix for the bot.
+        /// </summary>
+        internal static string Prefix => "!";
+
+        /// <summary>
+        /// Gets or sets the default bot activity.
+        /// </summary>
+        internal static string Activity => $"{Prefix}{nameof(PrefixInfo.help)} | Sou a Kawaii Jisho! 💫";
+
+        /// <summary>
+        /// Gets or sets the default color for bot messages.
+        /// </summary>
+        internal static Entities.Color DefaultColor => Colors.KWiJishoColor;
+
         /// <summary>
         /// Gets or sets the API token for KWiJisho.
         /// </summary>
@@ -21,21 +39,6 @@ namespace KWiJisho.Data
         internal static string NasaToken { get; set; }
 
         /// <summary>
-        /// Gets or sets the command prefix for the bot.
-        /// </summary>
-        internal static string Prefix { get; set; }
-
-        /// <summary>
-        /// Gets or sets the default bot activity.
-        /// </summary>
-        internal static string Activity { get; set; }
-
-        /// <summary>
-        /// Gets or sets the default color for bot messages.
-        /// </summary>
-        internal static Color DefaultColor { get; set; }
-
-        /// <summary>
         /// Set values from ConfigJson file.
         /// </summary>
         /// <param name="configJson">The instance of the ConfigJson file.</param>
@@ -49,9 +52,6 @@ namespace KWiJisho.Data
 
             // Getting NASA's Token
             NasaToken = Environment.GetEnvironmentVariable("KWIJISHO_NASA_TOKEN") ?? configJson.NasaToken;
-
-            // Getting other values from config json file like prefix, activity and default bot main theme color
-            (Prefix, Activity, DefaultColor) = (configJson.Prefix, configJson.Activity, configJson.DefaultColor);
         }
     }
 }
