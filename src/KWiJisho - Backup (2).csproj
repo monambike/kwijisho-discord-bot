@@ -31,9 +31,10 @@ Social: @monambike | Webiste: https://monambike.com</Description>
     <Company>Monambike</Company>
     <Product>KWiJisho</Product>
     <Copyright>Copyright ©  2022-2024</Copyright>
-    <AssemblyVersion>3.7.0.0</AssemblyVersion>
-    <FileVersion>$(AssemblyVersion)</FileVersion>
+    <AssemblyVersion>{FileVersion)</AssemblyVersion>
+    <FileVersion>3.0.0.0</FileVersion>
     <Nullable>enable</Nullable>
+    <Title>KWiJisho</Title>
     <PackageProjectUrl>https://github.com/monambike/kwijisho-discord-bot</PackageProjectUrl>
     <NeutralLanguage>pt-BR</NeutralLanguage>
     <RepositoryType>git</RepositoryType>
@@ -42,11 +43,6 @@ Social: @monambike | Webiste: https://monambike.com</Description>
     <PackageIcon>128x128-ayaya.png</PackageIcon>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>KWiJisho-doc.xml</DocumentationFile>
-    <Version />
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <Title>$(AssemblyName)</Title>
-    <PackageTags>discord bot;kwijisho;discord;nasa;apod;birthday;cat;emoji;slash commands;prefix commands;ChatGPT</PackageTags>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <WarningLevel>9999</WarningLevel>
@@ -210,10 +206,6 @@ Social: @monambike | Webiste: https://monambike.com</Description>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\LICENSE">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
     <None Include="..\README.md" Link="README.md" />
   </ItemGroup>
   <ItemGroup>
