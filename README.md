@@ -1,4 +1,4 @@
-<img alt="Static Badge" src="https://img.shields.io/badge/MONAMBIKE-%236c00fa?style=for-the-badge&label=MADE%20BY&labelColor=%23050505"> <img alt="Static Badge" src="https://img.shields.io/badge/CC--BY--4.0%20license-%236c00fa?style=for-the-badge&label=LICENSE&labelColor=%23050505"> <img alt="Static Badge" src="https://img.shields.io/badge/SPARKEDHOST-%23FFEC20?style=for-the-badge&label=HOSTED%20IN&labelColor=%23050505">
+<img alt="Static Badge" src="https://img.shields.io/badge/MONAMBIKE-%236c00fa?style=for-the-badge&label=MADE%20BY&labelColor=%23050505"> <img alt="Static Badge" src="https://img.shields.io/badge/AGPL--3.00%20license-%236c00fa?style=for-the-badge&label=LICENSE&labelColor=%23050505"> <img alt="Static Badge" src="https://img.shields.io/badge/SPARKEDHOST-%23FFEC20?style=for-the-badge&label=HOSTED%20IN&labelColor=%23050505">
 
 ![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)
 ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)
