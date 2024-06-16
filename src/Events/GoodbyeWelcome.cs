@@ -44,7 +44,7 @@ namespace KWiJisho.Events
                 .AddEmbed(discordEmbedBuilder).AddFile(fileName, fileStream);
 
             // Sending the message on welcome channel.
-            await e.Guild.GetChannel(ServerTramontina.WelcomeChannelId).SendMessageAsync(discordMessageBuilder);
+            await e.Guild.GetChannel(Servers.Tramontina.WelcomeChannelId).SendMessageAsync(discordMessageBuilder);
         }
 
         /// <summary>
@@ -77,7 +77,7 @@ namespace KWiJisho.Events
                 .AddEmbed(discordEmbedBuilder).AddFile(fileName, fileStream);
 
             // Sending the message on welcome channel
-            await e.Guild.GetChannel(ServerTramontina.WelcomeChannelId).SendMessageAsync(discordMessageBuilder);
+            await e.Guild.GetChannel(Servers.Tramontina.WelcomeChannelId).SendMessageAsync(discordMessageBuilder);
         }
 
         /// <summary>

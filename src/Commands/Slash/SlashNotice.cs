@@ -19,7 +19,7 @@ namespace KWiJisho.Commands.Slash
         /// <param name="title">The news' title.s</param>
         /// <param name="description">The news' description.s</param>
         /// <param name="discordAttachment">The news's attachment. (if present)</param>
-        /// <param name="sendInTramontina">If the news should be send in <see cref="ServerTramontina"/>; otherwise, it will send it to <see cref="ServerPersonal"/>.</param>
+        /// <param name="sendInTramontina">If the news should be send in <see cref="Servers.Tramontina"/>; otherwise, it will send it to <see cref="Servers.Personal"/>.</param>
         /// <returns>A <see cref="Task"/> containing the result from the asynchronous method.</returns>
         [SlashCommand("send-news", "Manda uma notícia no canal de notícias!!")]
         [SlashRequireUserPermissions(Permissions.Administrator)]

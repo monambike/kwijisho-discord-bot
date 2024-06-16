@@ -4,6 +4,8 @@ using DSharpPlus.Entities;
 using DSharpPlus.SlashCommands;
 using KWiJisho.Config;
 using KWiJisho.Data;
+using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace KWiJisho
@@ -96,7 +98,7 @@ namespace KWiJisho
 
             // This code that will be executed when the bot is ready and connected to Discord sending.
             // a message into my personal server
-            var channel = await DiscordClient.GetChannelAsync(ServerPersonal.KWiJishoChannelId);
+            var channel = await DiscordClient.GetChannelAsync(Servers.Personal.WelcomeChannelId);
             if (channel != null) await channel.SendMessageAsync("Olá!! Agora eu tô online e prontíssima pra ajudar! 🥳🎉🎉");
 
             // Keeps the task alive that effectively never completes, preventing the bot from

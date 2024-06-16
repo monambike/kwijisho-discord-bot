@@ -8,7 +8,6 @@ using KWiJisho.Commands.Slash;
 using KWiJisho.Data;
 using KWiJisho.Events;
 using KWiJisho.Utils;
-using System.Collections.Generic;
 
 namespace KWiJisho
 {
@@ -31,32 +30,34 @@ namespace KWiJisho
             PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixNotice>();
             PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixTheme.PrefixThemeTramontina>();
         }
-
+        
         /// <summary>
         /// Register all the Discord bot slash commands.
         /// </summary>
         internal void RegisterSlashCommands()
         {
-            // Discord Server ID. If set to null, slash commmands will register to all servers that the bot is in (changes
-            // take up to an hour to apply).
-            List<ulong> guildIds =
-            [
-                ServerPersonal.GuildId, // Personal Discord server.
-                ServerTramontina.GuildId // Tramontina Discord server.
-            ];
+            // Registering discord bot slash commands for every server.
+            RegisterSlashCommandsToServer();
 
-            // For each guild id from servers in the server list.
-            foreach (var guildId in guildIds)
-            {
-                // Registering discord bot slash commands.
-                SlashCommands.RegisterCommands<SlashBasic>(guildId);
-                SlashCommands.RegisterCommands<SlashBirthday>(guildId);
-                SlashCommands.RegisterCommands<SlashInfo>(guildId);
-                SlashCommands.RegisterCommands<SlashKwiGpt>(guildId);
-                SlashCommands.RegisterCommands<SlashNasa>(guildId);
-                SlashCommands.RegisterCommands<SlashNotice>(guildId);
-                SlashCommands.RegisterCommands<SlashThemeTramontina>(guildId);
-            }
+#if DEBUG
+            // Registering discord bot slash commands for test server.
+            RegisterSlashCommandsToServer(Servers.Personal.GuildId);
+#endif
+        }
+
+        /// <summary>
+        /// Register all the Discord bot slash commands to a server.
+        /// </summary>
+        private void RegisterSlashCommandsToServer(ulong? guildId = null)
+        {
+            // Registering discord bot slash commands.
+            SlashCommands.RegisterCommands<SlashBasic>(guildId);
+            SlashCommands.RegisterCommands<SlashBirthday>(guildId);
+            SlashCommands.RegisterCommands<SlashInfo>(guildId);
+            SlashCommands.RegisterCommands<SlashKwiGpt>(guildId);
+            SlashCommands.RegisterCommands<SlashNasa>(guildId);
+            SlashCommands.RegisterCommands<SlashNotice>(guildId);
+            SlashCommands.RegisterCommands<SlashThemeTramontina>(guildId);
         }
 
         /// <summary>

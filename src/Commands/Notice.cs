@@ -45,7 +45,7 @@ namespace KWiJisho.Commands
                 discordEmbedBuilder.WithImageUrl(discordAttachments.Url);
 
             // Getting the guildId according to wich server should be sent the message
-            var guildId = sendInTramontina ? ServerTramontina.NewsChannelId : ServerPersonal.KWiJishoChannelId;
+            var guildId = sendInTramontina ? Servers.Tramontina.NewsChannelId : Servers.Personal.NewsChannelId;
 
             // Getting channel based on chosen guild Id.
             var discordChannel = await discordClient.GetChannelAsync(guildId);

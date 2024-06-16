@@ -1292,7 +1292,7 @@
             Register all the Discord bot prefix commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.KWiJishoBot.RegisterSlashCommands">
+        <member name="M:KWiJisho.KWiJishoBot.RegisterSlashCommands(System.Nullable{System.UInt64})">
             <summary>
             Register all the Discord bot slash commands.
             </summary>
