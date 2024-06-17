@@ -4,6 +4,7 @@ using DSharpPlus.Entities;
 using DSharpPlus.SlashCommands;
 using KWiJisho.Config;
 using KWiJisho.Data;
+using KWiJisho.Scheduling;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -77,7 +78,7 @@ namespace KWiJisho
             // Defining bot prefix commands settings.
             var commandsNextConfiguration = new CommandsNextConfiguration
             {
-                StringPrefixes = new string[] { ConfigJson.Prefix },
+                StringPrefixes = [ConfigJson.Prefix],
                 EnableDms = false,
                 EnableMentionPrefix = true,
                 EnableDefaultHelp = false
@@ -92,6 +93,9 @@ namespace KWiJisho
             SlashCommands = DiscordClient.UseSlashCommands();
             RegisterSlashCommands();
             RegisterSlashCommandsPermissions();
+
+            // Creating all schedulers for application jobs.
+            await Scheduler.CreateAllSchedulers(DiscordClient);
 
             // Connecting the bot into the Discord.
             await DiscordClient.ConnectAsync();

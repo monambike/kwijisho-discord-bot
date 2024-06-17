@@ -1,10 +1,13 @@
 ﻿using DSharpPlus.Entities;
+using KWiJisho.APIs;
 using KWiJisho.Data;
 using KWiJisho.Entities;
 using KWiJisho.Utils;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace KWiJisho.Models
 {
@@ -62,14 +65,14 @@ namespace KWiJisho.Models
         /// <returns>A <see cref="string"/> containing the generated birthday message.</returns>
         /// <exception cref="NotImplementedException">Thrown if the upcoming birthday date is not yet implemented on this
         /// current method.</exception>
-        internal static string GenerateBirthdayMessage(User discordUser)
+        internal static async Task<string> GenerateBirthdayMessage(User discordUser)
         {
             // Getting days remaining for registered user birthday.
             var daysRemaning = GetBirthdayDaysRemaining(discordUser);
             var upcomingBirthdayDate = GetBirthdayUpcomingDate(daysRemaning);
             return upcomingBirthdayDate switch
             {
-                BirthdayUpcomingDate.Today => $"Hoje é seu aniversário!! 🥳🎉 {"PARABÉNSS!!!!".ToDiscordBold()} Feliz Aniversário 🎂",
+                BirthdayUpcomingDate.Today => $"Hoje é seu aniversário!! 🥳🎉 {"PARABÉNSS!!!!".ToDiscordBold()} Feliz Aniversário 🎂❤️ {Environment.NewLine + Environment.NewLine} { await ChatGPT.GetKWiJishoPromptAsync($"dê uma mensagem de aniversário especial")} {Environment.NewLine + Environment.NewLine} Gente vem cá! <@&{Servers.Tramontina.BirthdayRoleId}>, {discordUser.Identifier} fez aniversário!",
                 BirthdayUpcomingDate.Tomorrow => $"{"Amanhá".ToDiscordBold()} já é o aniversário. 🥳🎉",
                 BirthdayUpcomingDate.InSomeDays => $"Faltam apenas {(daysRemaning + " dias").ToDiscordBold()} para o aniversário!! 👀 Tô ansiosa!!",
                 _ => throw new NotImplementedException()

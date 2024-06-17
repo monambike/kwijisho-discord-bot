@@ -39,11 +39,16 @@ namespace KWiJisho.Commands
         /// <param name="discordGuild">The Discord guild containing the users.</param>
         internal static async Task ExecuteNextBirthdayAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
         {
+            await SendBirthdayMessage(discordChannel, discordGuild);
+        }
+
+        internal static async Task SendBirthdayMessage(DiscordChannel discordChannel, DiscordGuild discordGuild, bool sendOnlyIfTodayBirthday = false)
+        {
             string notFoundBirthdayUser = "Eu sinto muito.. :( eu não consegui encontrar nesse servidor o próximo usuário da lista a fazer aniversário.";
 
             // Getting closest birthday from user present in the server and its member info
             var user = Models.Birthday.GetNextUserToMakeBirthday(discordGuild);
-            
+
             // If the user is null, send a message to the Discord channel indicating inability to find the next user in the birthday list.
             if (user is null)
             {
@@ -69,8 +74,11 @@ namespace KWiJisho.Commands
             var daysRemaining = Models.Birthday.GetBirthdayDaysRemaining(user);
             var upcomingDate = Models.Birthday.GetBirthdayUpcomingDate(daysRemaining);
 
+            // Return method if flagged to show only if user's birthday is today, and the birthday is not today.
+            if (sendOnlyIfTodayBirthday && upcomingDate is not Models.Birthday.BirthdayUpcomingDate.Today) return;
+
             // Generates birthday message according how many days are remaining for its birthday.
-            var message = Models.Birthday.GenerateBirthdayMessage(user);
+            var message = await Models.Birthday.GenerateBirthdayMessage(user);
 
             // Gets the image name and image's full path.
             var fileName = $"500x500-happybirthday-{upcomingDate.ToString().ToLower()}.png";
@@ -80,10 +88,15 @@ namespace KWiJisho.Commands
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
                 Color = ConfigJson.DefaultColor.DiscordColor,
-                Title = "PRÓXIMO ANIVERSARIANTE",
-                Description = $@"O próximo aniversariante é.. {discordMember.Username}!! {message}"
+                Title = "ANIVERSARIANTE",
+                Description = $@"O próximo aniversariante é.. {discordMember.Username}!! {message}",
+                Footer = new DiscordEmbedBuilder.EmbedFooter
+                {
+                    Text = $"Aniversariante: {discordMember.Username} • Aniversário: {user.Birthday:dd/MM/yyyy}"
+                }
             }
-            .WithImageUrl($"attachment://{imagePath}").Build();
+            .WithThumbnail($"attachment://{fileName}")
+            .WithImageUrl(discordMember.AvatarUrl).Build();
 
             using var fileStream = new FileStream(imagePath, FileMode.Open);
             // Attachs file and embed to the message and sending it to the discord channel.

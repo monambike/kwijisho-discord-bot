@@ -1125,6 +1125,11 @@
             Server guild Id.
             </summary>
         </member>
+        <member name="P:KWiJisho.Entities.Server.GeneralChannelId">
+            <summary>
+            Server general channeld Id.
+            </summary>
+        </member>
         <member name="P:KWiJisho.Entities.Server.WelcomeChannelId">
             <summary>
             Server welcome channeld Id.
@@ -1133,6 +1138,11 @@
         <member name="P:KWiJisho.Entities.Server.NewsChannelId">
             <summary>
             Server news channel Id.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.Server.BirthdayRoleId">
+            <summary>
+            Server birthday role Id.
             </summary>
         </member>
         <member name="T:KWiJisho.Entities.User">
@@ -1472,18 +1482,7 @@
             </summary>
             <returns>A <see cref="T:DSharpPlus.Entities.DiscordEmbedBuilder"/> representing the APOD information in embed format.</returns>
         </member>
-        <member name="T:KWiJisho.Scheduling.BirthdayJob">
-            <summary>
-            Represents a Quartz.NET job that executes a birthday message task.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Scheduling.BirthdayJob.Execute(Quartz.IJobExecutionContext)">
-            <summary>
-            Executes the birthday message task as part of the Quartz.NET job.
-            </summary>
-            <param name="context">The execution context provided by Quartz.NET.</param>
-            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous execution of the job.</returns>
-        </member>
+        <!-- Badly formed XML comment ignored for member "M:KWiJisho.Scheduling.BirthdayJob.Execute(Quartz.IJobExecutionContext)" -->
         <member name="M:KWiJisho.Scheduling.BirthdayJob.GiveBirthdayMessage">
             <summary>
             Sends a birthday message as an asynchronous task.
@@ -1495,7 +1494,7 @@
             Provides methods for scheduling tasks.
             </summary>
         </member>
-        <member name="M:KWiJisho.Scheduling.Scheduler.CreateBirthdayScheduler">
+        <member name="M:KWiJisho.Scheduling.Scheduler.CreateBirthdayScheduler(DSharpPlus.DiscordClient)">
             <summary>
             Creates a birthday scheduler as part of the Quartz.NET library.
             </summary>
