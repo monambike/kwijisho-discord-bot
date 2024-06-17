@@ -25,5 +25,13 @@
         /// <param name="str">The string to be formatted.</param>
         /// <returns>The escaped string.</returns>
         internal static string ToDiscordEscape(this string str) => $@"\{str}";
+
+        /// <summary>
+        /// Formats the specified string in a link using Discord markdown.
+        /// </summary>
+        /// <param name="str">The string to be formatted.</param>
+        /// <param name="url">The link url.</param>
+        /// <returns>The string as a link.</returns>
+        internal static string ToDiscordLink(this string str, string url) => $"[{str}]({url})";
     }
 }

@@ -141,6 +141,31 @@
             Copyright of the current Astronomy Picture of the Day.
             </summary>
         </member>
+        <member name="P:KWiJisho.APIs.NasaApi.Apod.ApodResponse.MediaType">
+            <summary>
+            Media type of the current Astronomy Picture of the Day.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.APIs.NasaApi.Apod.ApodResponse.Error">
+            <summary>
+            Represents errors ocurred on Json response for a NASA's API HTTP request.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.APIs.NasaApi.Apod.ApodResponse.Error.Code">
+            <summary>
+            Error code for the current Astronomy Picture of the Day.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.APIs.NasaApi.Apod.ApodResponse.Error.Message">
+            <summary>
+            Error message for the current Astronomy Picture of the Day.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.APIs.NasaApi.Apod.ApodResponse.Error.ServiceVersion">
+            <summary>
+            Error application service version for the current Astronomy Picture of the Day.
+            </summary>
+        </member>
         <member name="T:KWiJisho.Commands.Basic">
             <summary>
             Provides methods for basic prefix and slash commands.
@@ -495,7 +520,7 @@
             <param name="commandContext">The command context.</param>
             <param name="title">The news' title.s</param>
             <param name="description">The news' description.s</param>
-            <param name="sendInTramontina">If the news should be send in <see cref="T:KWiJisho.Data.ServerTramontina"/>; otherwise, it will send it to <see cref="T:KWiJisho.Data.ServerPersonal"/>.</param>
+            <param name="sendInTramontina">If the news should be send in <see cref="F:KWiJisho.Data.Servers.Tramontina"/>; otherwise, it will send it to <see cref="F:KWiJisho.Data.Servers.Personal"/>.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> containing the result from the asynchronous method.</returns>
         </member>
         <member name="T:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixTheme">
@@ -707,7 +732,7 @@
             <param name="title">The news' title.s</param>
             <param name="description">The news' description.s</param>
             <param name="discordAttachment">The news's attachment. (if present)</param>
-            <param name="sendInTramontina">If the news should be send in <see cref="T:KWiJisho.Data.ServerTramontina"/>; otherwise, it will send it to <see cref="T:KWiJisho.Data.ServerPersonal"/>.</param>
+            <param name="sendInTramontina">If the news should be send in <see cref="F:KWiJisho.Data.Servers.Tramontina"/>; otherwise, it will send it to <see cref="F:KWiJisho.Data.Servers.Personal"/>.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> containing the result from the asynchronous method.</returns>
         </member>
         <member name="T:KWiJisho.Commands.Slash.SlashThemeTramontina">
@@ -893,41 +918,6 @@
             Gets the calculated birthday for Karen Kujo. Karen Kujo was born on December 1st,
             and the age is fixed at 15 years.
             The property provides the current date with the year adjusted to maintain the age of 15.
-            </summary>
-        </member>
-        <member name="T:KWiJisho.Data.ServerPersonal">
-            <summary>
-            Static class responsible for holding information about my personal testing Discord server.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Data.ServerPersonal.GuildId">
-            <summary>
-            Personal Discord server guild Id.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Data.ServerPersonal.KWiJishoChannelId">
-            <summary>
-            Personal KWiJisho Discord server channel Id.
-            </summary>
-        </member>
-        <member name="T:KWiJisho.Data.ServerTramontina">
-            <summary>
-            Static class responsible for holding information about Tramontina Discord server.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Data.ServerTramontina.GuildId">
-            <summary>
-            Tramontina Discord server guild Id.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Data.ServerTramontina.WelcomeChannelId">
-            <summary>
-            Tramontina welcome Discord server channeld Id.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Data.ServerTramontina.NewsChannelId">
-            <summary>
-            Tramontina news Discord server channel Id.
             </summary>
         </member>
         <member name="T:KWiJisho.Data.DiscordUsers">
@@ -1130,6 +1120,21 @@
             <param name="name">The <see cref="T:KWiJisho.Entities.EmojiCatParty"/> emoji name.</param>
             <param name="id">The <see cref="T:KWiJisho.Entities.EmojiCatParty"/> emoji Id.</param>
         </member>
+        <member name="P:KWiJisho.Entities.Server.GuildId">
+            <summary>
+            Server guild Id.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.Server.WelcomeChannelId">
+            <summary>
+            Server welcome channeld Id.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.Server.NewsChannelId">
+            <summary>
+            Server news channel Id.
+            </summary>
+        </member>
         <member name="T:KWiJisho.Entities.User">
             <summary>
             Represents a Discord user along with their identifier and additional information.
@@ -1292,9 +1297,14 @@
             Register all the Discord bot prefix commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.KWiJishoBot.RegisterSlashCommands(System.Nullable{System.UInt64})">
+        <member name="M:KWiJisho.KWiJishoBot.RegisterSlashCommands">
             <summary>
             Register all the Discord bot slash commands.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.KWiJishoBot.RegisterSlashCommandsToServer(System.Nullable{System.UInt64})">
+            <summary>
+            Register all the Discord bot slash commands to a server.
             </summary>
         </member>
         <member name="M:KWiJisho.KWiJishoBot.RegisterBotEvents">
@@ -1569,6 +1579,14 @@
             </summary>
             <param name="str">The string to be formatted.</param>
             <returns>The escaped string.</returns>
+        </member>
+        <member name="M:KWiJisho.Utils.DiscordFormat.ToDiscordLink(System.String,System.String)">
+            <summary>
+            Formats the specified string in a link using Discord markdown.
+            </summary>
+            <param name="str">The string to be formatted.</param>
+            <param name="url">The link url.</param>
+            <returns>The string as a link.</returns>
         </member>
         <member name="T:KWiJisho.Utils.KWiJishoLog">
             <summary>

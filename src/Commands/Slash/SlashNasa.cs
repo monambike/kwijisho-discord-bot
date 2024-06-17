@@ -29,6 +29,7 @@ namespace KWiJisho.Commands.Slash
                 // Delete the initial acknowledgment message after processing the command.
                 await interactionContext.DeleteResponseAsync();
             }
+
             /// <summary>
             /// Represents the command to get the portuguese APOD.
             /// </summary>

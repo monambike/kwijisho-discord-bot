@@ -1,5 +1,7 @@
 ﻿using DSharpPlus.Entities;
 using KWiJisho.APIs;
+using KWiJisho.Utils;
+using System;
 using System.Threading.Tasks;
 
 namespace KWiJisho.Commands
@@ -20,11 +22,22 @@ namespace KWiJisho.Commands
             // Getting the Astronomy Picture of the Day.
             var response = await NasaApi.Apod.GetApodAsync();
 
-            // Creating a Discord embed builder for the APOD message.
-            var discordEmbedBuilder = Models.Nasa.BuildEnglishApodMessageAsync(response);
+            // Creating the apod builder.
+            var apodBuilder = Models.Nasa.BuildEnglishApodMessageAsync(response);
 
-            // Sending the generated Discord embed builder to the specified channel.
+            // Creating the discord embed builder from the apod builder.
+            var discordEmbedBuilder = apodBuilder.GetDiscordEmbedBuilder();
+
+            // If it's an image, attaching the image to the embbed.
+            if (apodBuilder.MediaType == "image")
+                discordEmbedBuilder.ImageUrl = apodBuilder.MediaUrl;
+
+            //Sending the generated Discord embed builder to the specified channel.
             await discordChannel.SendMessageAsync(discordEmbedBuilder);
+
+            // If it's a video, sending the video link as separated message after sending the embbed.
+            if (apodBuilder.MediaType == "video")
+                await discordChannel.SendMessageAsync(apodBuilder.VideoField);
         }
         
         /// <summary>
@@ -38,10 +51,21 @@ namespace KWiJisho.Commands
             var response = await NasaApi.Apod.GetApodAsync();
 
             // Creating a Discord embed builder for the translated APOD message.
-            var discordEmbedBuilder = await Models.Nasa.BuildPortugueseApodMessageAsync(response);
+            var apodBuilder = await Models.Nasa.BuildPortugueseApodMessageAsync(response);
 
-            // Sending the generated Discord embed builder to the specified channel.
+            // Creating the discord embed builder from the apod builder.
+            var discordEmbedBuilder = apodBuilder.GetDiscordEmbedBuilder();
+
+            // If it's an image, attaching the image to the embbed.
+            if (apodBuilder.MediaType == "image")
+                discordEmbedBuilder.ImageUrl = apodBuilder.MediaUrl;
+
+            //Sending the generated Discord embed builder to the specified channel.
             await discordChannel.SendMessageAsync(discordEmbedBuilder);
+
+            // If it's a video, sending the video link as separated message after sending the embbed.
+            if (apodBuilder.MediaType == "video")
+                await discordChannel.SendMessageAsync(apodBuilder.VideoField);
         }
     }
 }

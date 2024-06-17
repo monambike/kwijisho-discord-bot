@@ -5,6 +5,7 @@ using KWiJisho.Utils;
 using System;
 using System.Threading.Tasks;
 using static KWiJisho.APIs.NasaApi.Apod;
+using static KWiJisho.Models.Nasa;
 
 namespace KWiJisho.Models
 {
@@ -15,8 +16,8 @@ namespace KWiJisho.Models
         /// </summary>
         /// <param name="apodResponse">The APOD response content to build the embed.</param>
         /// <returns>The <see cref="DiscordEmbedBuilder"/>.</returns>
-        internal static DiscordEmbedBuilder BuildEnglishApodMessageAsync(ApodResponse apodResponse)
-            => new ApodBuilder
+        internal static ApodBuilder BuildEnglishApodMessageAsync(ApodResponse apodResponse)
+            => new()
             {
                 // Title
                 TitleField = "IMAGE OF THE DAY",
@@ -24,8 +25,10 @@ namespace KWiJisho.Models
                 // Explanation
                 ExplanationField = "Read the following history related to the image",
                 ExplanationContent = apodResponse.Explanation,
-                // Image
-                ImageUrlContent = apodResponse.Url,
+                // Media
+                VideoField = $"{"APOD Video (YouTube)".ToDiscordBold() + Environment.NewLine}Check out this {"YouTube video".ToDiscordLink(apodResponse.Url)} from today's APOD!",
+                MediaUrl = apodResponse.Url,
+                MediaType = apodResponse.MediaType,
                 // Copyright
                 CopyrightContent = apodResponse.Copyright,
                 NullCopyrightField = "no copyright",
@@ -34,14 +37,14 @@ namespace KWiJisho.Models
                 DateContent = apodResponse.Date,
                 // Culture info
                 DateFormat = "MM/dd/yyyy"
-            }.GetDiscordEmbedBuilder();
+            };
 
         /// <summary>
         /// Asynchronously builds a portuguese apod message with the apod response.
         /// </summary>
         /// <param name="apodResponse">The APOD response content to build the embed.</param>
         /// <returns>A <see cref="Task{TResult}"/> containing the <see cref="DiscordEmbedBuilder"/>.</returns>
-        internal static async Task<DiscordEmbedBuilder> BuildPortugueseApodMessageAsync(ApodResponse apodResponse)
+        internal static async Task<ApodBuilder> BuildPortugueseApodMessageAsync(ApodResponse apodResponse)
         {
             // Translate the title from the APOD response.
             var translatedTitle = await ChatGPT.GetPromptTranslateToPortugueseAsync(apodResponse.Title);
@@ -57,8 +60,8 @@ namespace KWiJisho.Models
             // The final formatted explanation ready for use.
             var explanation = formattedExplanation;
 
-            // Building the portuguese APOD message
-            var portugueseApodBuilder = new ApodBuilder
+            // Building and returning the portuguese APOD message
+            return new()
             {
                 // Title
                 TitleField = "IMAGEM DO DIA",
@@ -66,8 +69,10 @@ namespace KWiJisho.Models
                 // Explanation
                 ExplanationField = "Leia essa histórinha que tem a ver com a imagem",
                 ExplanationContent = explanation,
-                // Image
-                ImageUrlContent = apodResponse.Url,
+                // Media
+                VideoField = $"{"Vídeo da APOD (YouTube)".ToDiscordBold() + Environment.NewLine}Confira esse {"vídeo do YouTube".ToDiscordLink(apodResponse.Url)} da APOD de hoje!",
+                MediaUrl = apodResponse.Url,
+                MediaType = apodResponse.MediaType,
                 // Copyright
                 CopyrightContent = apodResponse.Copyright,
                 NullCopyrightField = "sem copyright",
@@ -76,10 +81,7 @@ namespace KWiJisho.Models
                 DateContent = apodResponse.Date,
                 // Culture info
                 DateFormat = "dd/MM/yyyy"
-            }.GetDiscordEmbedBuilder();
-
-            // Returning the portuguese APOD message
-            return portugueseApodBuilder;
+            };
         }
 
         /// <summary>
@@ -110,9 +112,19 @@ namespace KWiJisho.Models
             internal required string ExplanationContent { get; init; }
 
             /// <summary>
-            /// Gets or initializes the image URL content for the APOD embed.
+            /// Gets or initializes the video URL field for the APOD embed.
             /// </summary>
-            internal required string ImageUrlContent { get; init; }
+            internal required string VideoField { get; init; }
+
+            /// <summary>
+            /// Gets or initializes the content URL for the APOD embed.
+            /// </summary>
+            internal required string MediaUrl { get; init; }
+
+            /// <summary>
+            /// Gets or initializes the media type for the APOD embed.
+            /// </summary>
+            internal required string MediaType { get; init; }
 
             /// <summary>
             /// Gets or initializes the copyright content for the APOD embed.
@@ -161,7 +173,7 @@ namespace KWiJisho.Models
                     {
                         Text = $"Copyright: {copyright} • {DateField}: {DateContent.Date.ToString(DateFormat)}",
                     }
-                }.WithImageUrl(ImageUrlContent);
+                };
 
                 // Returning the formatted discord embed builder
                 return discordEmbedBuilder;
