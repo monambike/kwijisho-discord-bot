@@ -33,7 +33,7 @@ namespace KWiJisho.Scheduling
         /// <returns>A <see cref="Task"/> representing the asynchronous execution of the birthday message task.</returns>
         private async Task GiveBirthdayMessage()
         {
-            var server = Servers.Personal;
+            var server = Servers.Tramontina;
 
             // Getting guild by id.
             var serverGuild = await _client.GetGuildAsync(server.GuildId);
