@@ -1,6 +1,6 @@
 ﻿using DSharpPlus;
 using System.Collections.Generic;
-using static KWiJisho.Commands.ThemeTramontina;
+using static KWiJisho.Commands.CommandThemeTramontina;
 
 namespace KWiJisho.Entities
 {

@@ -12,7 +12,7 @@ namespace KWiJisho.Commands
     /// <summary>
     /// Provides methods for theme prefix and slash commands.
     /// </summary>
-    internal static class ThemeTramontina
+    internal static class CommandThemeTramontina
     {
         /// <summary>
         /// Represents the cooldown for theme change.

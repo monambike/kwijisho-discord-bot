@@ -15,7 +15,7 @@ namespace KWiJisho.Commands.Slash
         [SlashCommand("help", "Mostra a ajuda.")]
         internal static async Task ExecuteSlashHelpAsync(InteractionContext interactionContext)
         {
-            await Info.ExecuteHelpAsync(interactionContext.Channel, interactionContext.Client);
+            await CommandInfo.ExecuteHelpAsync(interactionContext.Channel, interactionContext.Client);
             await interactionContext.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource);
         }
 
@@ -25,7 +25,7 @@ namespace KWiJisho.Commands.Slash
         [SlashCommand("info", "Mostra informações básicas sobre mim e o meu criador. (@monambike)")]
         internal static async Task ExecuteSlashInfoAsync(InteractionContext interactionContext)
         {
-            await Info.ExecuteInfoAsync(interactionContext.Channel, interactionContext.Client);
+            await CommandInfo.ExecuteInfoAsync(interactionContext.Channel, interactionContext.Client);
             await interactionContext.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource);
         }
     }

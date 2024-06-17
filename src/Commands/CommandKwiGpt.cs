@@ -8,7 +8,7 @@ namespace KWiJisho.Commands
     /// <summary>
     /// Provides methods for KWiGPT prefix and slash commands.
     /// </summary>
-    internal static class KwiGpt
+    internal static class CommandKwiGpt
     {
         /// <summary>
         /// Represents the command to get the chat gpt prompt in KWiJisho style.

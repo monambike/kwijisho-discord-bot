@@ -37,7 +37,7 @@ namespace KWiJisho.Commands.Prefix
                 await commandContext.TriggerTypingAsync();
 
                 // Sending the original APOD
-                await Nasa.ApodAsync(commandContext.Channel);
+                await CommandNasa.ApodAsync(commandContext.Channel);
             }
 
             /// <summary>
@@ -53,7 +53,7 @@ namespace KWiJisho.Commands.Prefix
                 await commandContext.TriggerTypingAsync();
 
                 // Sending the APOD resume
-                await Nasa.ApodResumeAsync(commandContext.Channel);
+                await CommandNasa.ApodResumeAsync(commandContext.Channel);
             }
         }
     }

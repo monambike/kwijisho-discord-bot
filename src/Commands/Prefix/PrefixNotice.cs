@@ -49,7 +49,7 @@ Considerações:
                 var attachment = commandContext.Message.Attachments.Count > 0 ? commandContext.Message.Attachments[0] : null;
 
                 // Send the message
-                await Notice.ExecuteNewsAsync(commandContext.Client, commandContext.Member, title, description, sendInTramontina, attachment);
+                await CommandNotice.ExecuteNewsAsync(commandContext.Client, commandContext.Member, title, description, sendInTramontina, attachment);
             }
         }
     }

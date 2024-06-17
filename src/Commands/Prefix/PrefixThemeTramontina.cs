@@ -50,7 +50,7 @@ namespace KWiJisho.Commands.Prefix
                 [Command(nameof(themeReset))]
                 [RequireUserPermissions(Permissions.Administrator)]
                 internal async Task ResetThemeAsync(CommandContext commandContext)
-                    => await ThemeTramontina.ResetThemeAsync(commandContext.Channel, commandContext.Client);
+                    => await CommandThemeTramontina.ResetThemeAsync(commandContext.Channel, commandContext.Client);
 
 
                 /// <summary>
@@ -61,7 +61,7 @@ namespace KWiJisho.Commands.Prefix
                 [Command(nameof(themeChristmas))]
                 [RequireUserPermissions(Permissions.Administrator)]
                 internal async Task SetChristmasThemeAsync(CommandContext commandContext)
-                    => await ThemeTramontina.SetChristmasThemeAsync(commandContext.Channel, commandContext.Client);
+                    => await CommandThemeTramontina.SetChristmasThemeAsync(commandContext.Channel, commandContext.Client);
 
                 /// <summary>
                 /// Represents the asynchronous prefix easter theme method called when user asks for the prefix easter theme command.
@@ -71,7 +71,7 @@ namespace KWiJisho.Commands.Prefix
                 [Command(nameof(themeEaster))]
                 [RequireUserPermissions(Permissions.Administrator)]
                 internal async Task SetEasterThemeAsync(CommandContext commandContext)
-                    => await ThemeTramontina.SetEasterThemeAsync(commandContext.Channel, commandContext.Client);
+                    => await CommandThemeTramontina.SetEasterThemeAsync(commandContext.Channel, commandContext.Client);
 
                 /// <summary>
                 /// Represents the asynchronous prefix halloween theme method called when user asks for the prefix halloween theme command.
@@ -81,7 +81,7 @@ namespace KWiJisho.Commands.Prefix
                 [Command(nameof(themeHalloween))]
                 [RequireUserPermissions(Permissions.Administrator)]
                 internal async Task SetHalloweenThemeAsync(CommandContext commandContext)
-                    => await ThemeTramontina.SetHalloweenThemeAsync(commandContext.Channel, commandContext.Client);
+                    => await CommandThemeTramontina.SetHalloweenThemeAsync(commandContext.Channel, commandContext.Client);
             }
         }
     }

@@ -11,7 +11,7 @@ namespace KWiJisho.Commands
     /// <summary>
     /// Provides methods for birthday prefix and slash commands.
     /// </summary>
-    internal static class Birthday
+    internal static class CommandBirthday
     {
         /// <summary>
         /// Represents the year months in Portuguese.

@@ -6,7 +6,7 @@ namespace KWiJisho.Data
     /// <summary>
     /// Class that provides static basic information about KWiJisho bot.
     /// </summary>
-    internal class KWiJishoInfo
+    internal class KWiJisho
     {
         /// <summary>
         /// KWiJisho project name gotten directly from <see cref="Assembly"/>.

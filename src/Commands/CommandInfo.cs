@@ -12,7 +12,7 @@ namespace KWiJisho.Commands
     /// <summary>
     /// Provides methods for info prefix and slash commands.
     /// </summary>
-    internal static class Info
+    internal static class CommandInfo
     {
         /// <summary>
         /// Sends a help message containing a list of available commands and their descriptions to the specified Discord channel.

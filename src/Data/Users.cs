@@ -22,7 +22,7 @@ namespace KWiJisho.Data
             new(331920695359569922, new DateTime(2000, 11, 08), "Posca"), // p0sc4t
             new(207556639719555072, new DateTime(2002, 11, 24), "Vini"), // monambike
             new(737573340851470348, new DateTime(2003, 03, 21), "Betty"), // darksidevision
-            new(737535848102363259, KWiJishoInfo.Created.Date, "KWiJisho") // KWiJisho Bot
+            new(737535848102363259, KWiJisho.Created.Date, "KWiJisho") // KWiJisho Bot
         ];
     }
 }

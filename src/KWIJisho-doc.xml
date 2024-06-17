@@ -166,81 +166,81 @@
             Error application service version for the current Astronomy Picture of the Day.
             </summary>
         </member>
-        <member name="T:KWiJisho.Commands.Basic">
+        <member name="T:KWiJisho.Commands.CommandBasic">
             <summary>
             Provides methods for basic prefix and slash commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Basic.ExecuteRandomAnimatedEmoji(DSharpPlus.Entities.DiscordChannel)">
+        <member name="M:KWiJisho.Commands.CommandBasic.ExecuteRandomAnimatedEmoji(DSharpPlus.Entities.DiscordChannel)">
             <summary>
             Sends a random animated emoji from <see cref="F:KWiJisho.Data.DiscordEmojis.AnimatedEmojis"/>.
             </summary>
             <param name="discordChannel">The discord channel where the command will be executed.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
         </member>
-        <member name="M:KWiJisho.Commands.Basic.ExecuteRandomAnimatedMemeEmoji(DSharpPlus.Entities.DiscordChannel)">
+        <member name="M:KWiJisho.Commands.CommandBasic.ExecuteRandomAnimatedMemeEmoji(DSharpPlus.Entities.DiscordChannel)">
             <summary>
             Sends a random animated emoji from <see cref="F:KWiJisho.Data.DiscordEmojis.AnimatedMemeEmojis"/>.
             </summary>
             <param name="discordChannel">The discord channel where the command will be executed.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
         </member>
-        <member name="M:KWiJisho.Commands.Basic.ExecuteRandomAnimatedPartyEmoji(DSharpPlus.Entities.DiscordChannel)">
+        <member name="M:KWiJisho.Commands.CommandBasic.ExecuteRandomAnimatedPartyEmoji(DSharpPlus.Entities.DiscordChannel)">
             <summary>
             Sends a random animated emoji from <see cref="F:KWiJisho.Data.DiscordEmojis.AnimatedPartyEmojis"/>.
             </summary>
             <param name="discordChannel">The discord channel where the command will be executed.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
         </member>
-        <member name="T:KWiJisho.Commands.Birthday">
+        <member name="T:KWiJisho.Commands.CommandBirthday">
             <summary>
             Provides methods for birthday prefix and slash commands.
             </summary>
         </member>
-        <member name="P:KWiJisho.Commands.Birthday.Months">
+        <member name="P:KWiJisho.Commands.CommandBirthday.Months">
             <summary>
             Represents the year months in Portuguese.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Birthday.ExecuteNextBirthdayAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild)">
+        <member name="M:KWiJisho.Commands.CommandBirthday.ExecuteNextBirthdayAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild)">
             <summary>
             Sends a birthday message for the next upcoming birthday in the specified Discord channel.
             </summary>
             <param name="discordChannel">The Discord channel where the message will be sent.</param>
             <param name="discordGuild">The Discord guild containing the users.</param>
         </member>
-        <member name="M:KWiJisho.Commands.Birthday.ExecuteBirthdayListAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild)">
+        <member name="M:KWiJisho.Commands.CommandBirthday.ExecuteBirthdayListAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild)">
             <summary>
             Sends a list of upcoming birthdays in the specified Discord channel.
             </summary>
             <param name="discordChannel">The Discord channel where the message will be sent.</param>
             <param name="discordGuild">The Discord guild containing the users.</param>
         </member>
-        <member name="T:KWiJisho.Commands.Info">
+        <member name="T:KWiJisho.Commands.CommandInfo">
             <summary>
             Provides methods for info prefix and slash commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Info.ExecuteHelpAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)">
+        <member name="M:KWiJisho.Commands.CommandInfo.ExecuteHelpAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)">
             <summary>
             Sends a help message containing a list of available commands and their descriptions to the specified Discord channel.
             </summary>
             <param name="discordChannel">The Discord channel where the message will be sent.</param>
             <param name="discordClient">The Discord client instance.</param>
         </member>
-        <member name="M:KWiJisho.Commands.Info.ExecuteInfoAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)">
+        <member name="M:KWiJisho.Commands.CommandInfo.ExecuteInfoAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)">
             <summary>
             Sends an information message about the bot, its creator, and contact details to the specified Discord channel.
             </summary>
             <param name="discordChannel">The Discord channel where the message will be sent.</param>
             <param name="discordClient">The Discord client instance.</param>
         </member>
-        <member name="T:KWiJisho.Commands.KwiGpt">
+        <member name="T:KWiJisho.Commands.CommandKwiGpt">
             <summary>
             Provides methods for KWiGPT prefix and slash commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.KwiGpt.ExecuteKWiJishoPromptAsync(DSharpPlus.Entities.DiscordChannel,System.String[])">
+        <member name="M:KWiJisho.Commands.CommandKwiGpt.ExecuteKWiJishoPromptAsync(DSharpPlus.Entities.DiscordChannel,System.String[])">
             <summary>
             Represents the command to get the chat gpt prompt in KWiJisho style.
             </summary>
@@ -248,36 +248,36 @@
             <param name="input">The content of user input.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> with the current asynchronous method.</returns>
         </member>
-        <member name="T:KWiJisho.Commands.Nasa">
+        <member name="T:KWiJisho.Commands.CommandNasa">
             <summary>
             Provides methods for NASA prefix and slash commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Nasa.ApodAsync(DSharpPlus.Entities.DiscordChannel)">
+        <member name="M:KWiJisho.Commands.CommandNasa.ApodAsync(DSharpPlus.Entities.DiscordChannel)">
             <summary>
             Retrieves and sends the Astronomy Picture of the Day (APOD) to the specified Discord channel.
             </summary>
             <param name="discordChannel">The Discord channel where the APOD message will be sent.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
         </member>
-        <member name="M:KWiJisho.Commands.Nasa.ApodResumeAsync(DSharpPlus.Entities.DiscordChannel)">
+        <member name="M:KWiJisho.Commands.CommandNasa.ApodResumeAsync(DSharpPlus.Entities.DiscordChannel)">
             <summary>
             Retrieves and sends the translated version of the Astronomy Picture of the Day (APOD) to the specified Discord channel.
             </summary>
             <param name="discordChannel">The Discord channel where the translated APOD message will be sent.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
         </member>
-        <member name="T:KWiJisho.Commands.Notice">
+        <member name="T:KWiJisho.Commands.CommandNotice">
             <summary>
             Provides methods for notice prefix and slash commands.
             </summary>
         </member>
-        <member name="F:KWiJisho.Commands.Notice.Yellow">
+        <member name="F:KWiJisho.Commands.CommandNotice.Yellow">
             <summary>
             Represents the Yellow color.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Notice.ExecuteNewsAsync(DSharpPlus.DiscordClient,DSharpPlus.Entities.DiscordMember,System.String,System.String,System.Boolean,DSharpPlus.Entities.DiscordAttachment)">
+        <member name="M:KWiJisho.Commands.CommandNotice.ExecuteNewsAsync(DSharpPlus.DiscordClient,DSharpPlus.Entities.DiscordMember,System.String,System.String,System.Boolean,DSharpPlus.Entities.DiscordAttachment)">
             <summary>
             Method responsible for sending and creating a "news" in the news channel.
             </summary>
@@ -288,6 +288,90 @@
             <param name="sendInTramontina">If true the message will be sent in Tramontina; otherwise, it will be sent in my test server.</param>
             <param name="discordAttachments">The Discord images for being attached on the embed. Only the first one will be sent</param>
             <returns></returns>
+        </member>
+        <member name="T:KWiJisho.Commands.CommandThemeTramontina">
+            <summary>
+            Provides methods for theme prefix and slash commands.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Commands.CommandThemeTramontina.ThemeChangeCooldown">
+            <summary>
+            Represents the cooldown for theme change.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Commands.CommandThemeTramontina.TramontinaChannels">
+            <summary>
+            Channels from tramontina server that can receive theme changing.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Commands.CommandThemeTramontina.SetThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient,KWiJisho.Commands.CommandThemeTramontina.EmojiTheme,System.String,System.String,System.String)">
+            <summary>
+            Sets the Tramontina server to a Theme according with parameterization.
+            </summary>
+            <param name="discordChannel">The Discord channel where the command is being executed.</param>
+            <param name="discordClient">The Discord client instance.</param>
+            <param name="emojiTheme">The chosen theme to set the Discord server.</param>
+            <param name="title">The title from the theme notice.</param>
+            <param name="description">The description from the theme notice</param>
+            <param name="serverNameSuggestion">The server name suggestion.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.CommandThemeTramontina.ResetThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)">
+            <summary>
+            Sets the Tramontina server to Default Theme.
+            </summary>
+            <param name="discordChannel">The Discord channel where the command is being executed.</param>
+            <param name="discordClient">The Discord client instance.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.CommandThemeTramontina.SetChristmasThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)">
+            <summary>
+            Sets the Tramontina server to Christmas Theme.
+            </summary>
+            <param name="discordChannel">The Discord channel where the command is being executed.</param>
+            <param name="discordClient">The Discord client instance.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.CommandThemeTramontina.SetEasterThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)">
+            <summary>
+            Sets the Tramontina server to Easter Theme.
+            </summary>
+            <param name="discordChannel">The Discord channel where the command is being executed.</param>
+            <param name="discordClient">The Discord client instance.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.CommandThemeTramontina.SetHalloweenThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)">
+            <summary>
+            Sets the Tramontina server to Halloween Theme.
+            </summary>
+            <param name="discordChannel">The Discord channel where the command is being executed.</param>
+            <param name="discordClient">The Discord client instance.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
+        </member>
+        <member name="T:KWiJisho.Commands.CommandThemeTramontina.EmojiTheme">
+            <summary>
+            Represents seasonal themes that you can set to the Discord server.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Commands.CommandThemeTramontina.EmojiTheme.Default">
+            <summary>
+            Represents the Default theme for a server.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Commands.CommandThemeTramontina.EmojiTheme.Christmas">
+            <summary>
+            Represents the Christmas theme for a setver.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Commands.CommandThemeTramontina.EmojiTheme.Easter">
+            <summary>
+            Represents the Easter theme for a setver.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Commands.CommandThemeTramontina.EmojiTheme.Halloween">
+            <summary>
+            Represents the Halloween theme for a setver.
+            </summary>
         </member>
         <member name="T:KWiJisho.Commands.Prefix.PrefixCommandManager">
             <summary>
@@ -768,90 +852,6 @@
             <param name="interactionContext">The interaction context from the current command call.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
         </member>
-        <member name="T:KWiJisho.Commands.ThemeTramontina">
-            <summary>
-            Provides methods for theme prefix and slash commands.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Commands.ThemeTramontina.ThemeChangeCooldown">
-            <summary>
-            Represents the cooldown for theme change.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Commands.ThemeTramontina.TramontinaChannels">
-            <summary>
-            Channels from tramontina server that can receive theme changing.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Commands.ThemeTramontina.SetThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient,KWiJisho.Commands.ThemeTramontina.EmojiTheme,System.String,System.String,System.String)">
-            <summary>
-            Sets the Tramontina server to a Theme according with parameterization.
-            </summary>
-            <param name="discordChannel">The Discord channel where the command is being executed.</param>
-            <param name="discordClient">The Discord client instance.</param>
-            <param name="emojiTheme">The chosen theme to set the Discord server.</param>
-            <param name="title">The title from the theme notice.</param>
-            <param name="description">The description from the theme notice</param>
-            <param name="serverNameSuggestion">The server name suggestion.</param>
-            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
-        </member>
-        <member name="M:KWiJisho.Commands.ThemeTramontina.ResetThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)">
-            <summary>
-            Sets the Tramontina server to Default Theme.
-            </summary>
-            <param name="discordChannel">The Discord channel where the command is being executed.</param>
-            <param name="discordClient">The Discord client instance.</param>
-            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
-        </member>
-        <member name="M:KWiJisho.Commands.ThemeTramontina.SetChristmasThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)">
-            <summary>
-            Sets the Tramontina server to Christmas Theme.
-            </summary>
-            <param name="discordChannel">The Discord channel where the command is being executed.</param>
-            <param name="discordClient">The Discord client instance.</param>
-            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
-        </member>
-        <member name="M:KWiJisho.Commands.ThemeTramontina.SetEasterThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)">
-            <summary>
-            Sets the Tramontina server to Easter Theme.
-            </summary>
-            <param name="discordChannel">The Discord channel where the command is being executed.</param>
-            <param name="discordClient">The Discord client instance.</param>
-            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
-        </member>
-        <member name="M:KWiJisho.Commands.ThemeTramontina.SetHalloweenThemeAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.DiscordClient)">
-            <summary>
-            Sets the Tramontina server to Halloween Theme.
-            </summary>
-            <param name="discordChannel">The Discord channel where the command is being executed.</param>
-            <param name="discordClient">The Discord client instance.</param>
-            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
-        </member>
-        <member name="T:KWiJisho.Commands.ThemeTramontina.EmojiTheme">
-            <summary>
-            Represents seasonal themes that you can set to the Discord server.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Commands.ThemeTramontina.EmojiTheme.Default">
-            <summary>
-            Represents the Default theme for a server.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Commands.ThemeTramontina.EmojiTheme.Christmas">
-            <summary>
-            Represents the Christmas theme for a setver.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Commands.ThemeTramontina.EmojiTheme.Easter">
-            <summary>
-            Represents the Easter theme for a setver.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Commands.ThemeTramontina.EmojiTheme.Halloween">
-            <summary>
-            Represents the Halloween theme for a setver.
-            </summary>
-        </member>
         <member name="P:KWiJisho.Config.ConfigJson.Prefix">
             <summary>
             Gets or sets the command prefix for the bot.
@@ -898,22 +898,22 @@
             Static class that provides class, properties and methods for handling Discord emojis.
             </summary>
         </member>
-        <member name="T:KWiJisho.Data.KWiJishoInfo">
+        <member name="T:KWiJisho.Data.KWiJisho">
             <summary>
             Class that provides static basic information about KWiJisho bot.
             </summary>
         </member>
-        <member name="F:KWiJisho.Data.KWiJishoInfo.Name">
+        <member name="F:KWiJisho.Data.KWiJisho.Name">
             <summary>
             KWiJisho project name gotten directly from <see cref="T:System.Reflection.Assembly"/>.
             </summary>
         </member>
-        <member name="P:KWiJisho.Data.KWiJishoInfo.Created">
+        <member name="P:KWiJisho.Data.KWiJisho.Created">
             <summary>
             The date Karen Kujo project was first commit on <a href="https://github.com/monambike/kwijisho-discord-bot">GitHub repository</a>.
             </summary>
         </member>
-        <member name="P:KWiJisho.Data.KWiJishoInfo.KarenKujoBirthday">
+        <member name="P:KWiJisho.Data.KWiJisho.KarenKujoBirthday">
             <summary>
             Gets the calculated birthday for Karen Kujo. Karen Kujo was born on December 1st,
             and the age is fixed at 15 years.
@@ -972,7 +972,7 @@
             <param name="defaultTextTitle">The default text title from the Discord channel.</param>
             <param name="emojiTheme">The emoji theme dictionary avaiable for this channel.</param>
         </member>
-        <member name="M:KWiJisho.Entities.ChannelTramontina.#ctor(System.UInt64,System.String,System.Collections.Generic.Dictionary{KWiJisho.Commands.ThemeTramontina.EmojiTheme,System.String})">
+        <member name="M:KWiJisho.Entities.ChannelTramontina.#ctor(System.UInt64,System.String,System.Collections.Generic.Dictionary{KWiJisho.Commands.CommandThemeTramontina.EmojiTheme,System.String})">
             <summary>
             Initializes a new instance of <see cref="T:KWiJisho.Entities.ChannelTramontina"/> class with the specified id, the default channel
             text title and emoji theme.
@@ -1426,9 +1426,19 @@
             Gets or initializes the explanation content for the APOD embed.
             </summary>
         </member>
-        <member name="P:KWiJisho.Models.Nasa.ApodBuilder.ImageUrlContent">
+        <member name="P:KWiJisho.Models.Nasa.ApodBuilder.VideoField">
             <summary>
-            Gets or initializes the image URL content for the APOD embed.
+            Gets or initializes the video URL field for the APOD embed.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Models.Nasa.ApodBuilder.MediaUrl">
+            <summary>
+            Gets or initializes the content URL for the APOD embed.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Models.Nasa.ApodBuilder.MediaType">
+            <summary>
+            Gets or initializes the media type for the APOD embed.
             </summary>
         </member>
         <member name="P:KWiJisho.Models.Nasa.ApodBuilder.CopyrightContent">

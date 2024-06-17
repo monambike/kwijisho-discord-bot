@@ -23,7 +23,7 @@ namespace KWiJisho.Commands.Slash
             await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);
 
             // Call the SendNewsAsync method from the Notice class to send the news with provided parameters.
-            await ThemeTramontina.ResetThemeAsync(interactionContext.Channel, interactionContext.Client);
+            await CommandThemeTramontina.ResetThemeAsync(interactionContext.Channel, interactionContext.Client);
 
             // Delete the initial acknowledgment message after processing the command.
             await interactionContext.DeleteResponseAsync();
@@ -42,7 +42,7 @@ namespace KWiJisho.Commands.Slash
             await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);
 
             // Call the SendNewsAsync method from the Notice class to send the news with provided parameters.
-            await ThemeTramontina.SetChristmasThemeAsync(interactionContext.Channel, interactionContext.Client);
+            await CommandThemeTramontina.SetChristmasThemeAsync(interactionContext.Channel, interactionContext.Client);
 
             // Delete the initial acknowledgment message after processing the command.
             await interactionContext.DeleteResponseAsync();
@@ -61,7 +61,7 @@ namespace KWiJisho.Commands.Slash
             await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);
 
             // Call the SendNewsAsync method from the Notice class to send the news with provided parameters.
-            await ThemeTramontina.SetEasterThemeAsync(interactionContext.Channel, interactionContext.Client);
+            await CommandThemeTramontina.SetEasterThemeAsync(interactionContext.Channel, interactionContext.Client);
 
             // Delete the initial acknowledgment message after processing the command.
             await interactionContext.DeleteResponseAsync();
@@ -80,7 +80,7 @@ namespace KWiJisho.Commands.Slash
             await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);
 
             // Call the SendNewsAsync method from the Notice class to send the news with provided parameters.
-            await ThemeTramontina.SetHalloweenThemeAsync(interactionContext.Channel, interactionContext.Client);
+            await CommandThemeTramontina.SetHalloweenThemeAsync(interactionContext.Channel, interactionContext.Client);
 
             // Delete the initial acknowledgment message after processing the command.
             await interactionContext.DeleteResponseAsync();

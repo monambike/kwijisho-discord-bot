@@ -34,7 +34,7 @@ namespace KWiJisho.Commands.Prefix
                 await commandContext.TriggerTypingAsync();
 
                 // Calling the method that will execute the prompt.
-                await KwiGpt.ExecuteKWiJishoPromptAsync(commandContext.Channel, inputs);
+                await CommandKwiGpt.ExecuteKWiJishoPromptAsync(commandContext.Channel, inputs);
             }
         }
     }

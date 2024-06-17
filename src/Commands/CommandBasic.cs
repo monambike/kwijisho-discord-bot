@@ -8,7 +8,7 @@ namespace KWiJisho.Commands
     /// <summary>
     /// Provides methods for basic prefix and slash commands.
     /// </summary>
-    internal static class Basic
+    internal static class CommandBasic
     {
         /// <summary>
         /// Sends a random animated emoji from <see cref="DiscordEmojis.AnimatedEmojis"/>.

@@ -24,7 +24,7 @@ namespace KWiJisho.Commands.Slash
                 // Acknowledge the interaction by deferring the response with a loading state.
                 await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);
 
-                await Nasa.ApodAsync(interactionContext.Channel);
+                await CommandNasa.ApodAsync(interactionContext.Channel);
 
                 // Delete the initial acknowledgment message after processing the command.
                 await interactionContext.DeleteResponseAsync();
@@ -39,7 +39,7 @@ namespace KWiJisho.Commands.Slash
                 // Acknowledge the interaction by deferring the response with a loading state.
                 await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);
 
-                await Nasa.ApodResumeAsync(interactionContext.Channel);
+                await CommandNasa.ApodResumeAsync(interactionContext.Channel);
 
                 // Delete the initial acknowledgment message after processing the command.
                 await interactionContext.DeleteResponseAsync();

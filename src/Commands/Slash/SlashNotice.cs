@@ -33,7 +33,7 @@ namespace KWiJisho.Commands.Slash
             await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);
 
             // Call the SendNewsAsync method from the Notice class to send the news with provided parameters.
-            await Notice.ExecuteNewsAsync(interactionContext.Client, interactionContext.Member, title, description, sendInTramontina, discordAttachment);
+            await CommandNotice.ExecuteNewsAsync(interactionContext.Client, interactionContext.Member, title, description, sendInTramontina, discordAttachment);
 
             // Delete the initial acknowledgment message after processing the command.
             await interactionContext.DeleteResponseAsync();

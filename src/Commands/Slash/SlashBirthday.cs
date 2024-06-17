@@ -16,7 +16,7 @@ namespace KWiJisho.Commands.Slash
         internal static async Task ExecuteSlashNextBirthdayAsync(InteractionContext interactionContext)
         {
             await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);
-            await Birthday.ExecuteNextBirthdayAsync(interactionContext.Channel, interactionContext.Guild);
+            await CommandBirthday.ExecuteNextBirthdayAsync(interactionContext.Channel, interactionContext.Guild);
             await interactionContext.DeleteResponseAsync();
         }
 
@@ -28,7 +28,7 @@ namespace KWiJisho.Commands.Slash
         internal static async Task ExecuteSlashBirthdayListAsync(InteractionContext interactionContext)
         {
             await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);
-            await Birthday.ExecuteBirthdayListAsync(interactionContext.Channel, interactionContext.Guild);
+            await CommandBirthday.ExecuteBirthdayListAsync(interactionContext.Channel, interactionContext.Guild);
             await interactionContext.DeleteResponseAsync();
         }
     }

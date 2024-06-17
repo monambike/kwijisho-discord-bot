@@ -1,7 +1,5 @@
 ﻿using DSharpPlus.Entities;
 using KWiJisho.APIs;
-using KWiJisho.Utils;
-using System;
 using System.Threading.Tasks;
 
 namespace KWiJisho.Commands
@@ -9,7 +7,7 @@ namespace KWiJisho.Commands
     /// <summary>
     /// Provides methods for NASA prefix and slash commands.
     /// </summary>
-    internal static class Nasa
+    internal static class CommandNasa
     {
         /// <summary>
         /// Retrieves and sends the Astronomy Picture of the Day (APOD) to the specified Discord channel.

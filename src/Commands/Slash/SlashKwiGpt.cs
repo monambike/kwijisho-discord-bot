@@ -19,7 +19,7 @@ namespace KWiJisho.Commands.Slash
             await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);
 
             // Get's the prompt and delete the "processing" message.
-            await KwiGpt.ExecuteKWiJishoPromptAsync(interactionContext.Channel, input);
+            await CommandKwiGpt.ExecuteKWiJishoPromptAsync(interactionContext.Channel, input);
             await interactionContext.DeleteResponseAsync();
         }
     }

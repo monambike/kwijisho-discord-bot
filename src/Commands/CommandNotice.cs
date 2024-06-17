@@ -11,7 +11,7 @@ namespace KWiJisho.Commands
     /// <summary>
     /// Provides methods for notice prefix and slash commands.
     /// </summary>
-    internal class Notice
+    internal class CommandNotice
     {
         /// <summary>
         /// Represents the Yellow color.
