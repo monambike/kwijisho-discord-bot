@@ -26,7 +26,28 @@ namespace KWiJisho.Entities
         /// <summary>
         /// Gets or sets the user's birthday (if applicable).
         /// </summary>
-        internal DateTime Birthday { get; set; }
+        internal DateTime Birthday
+        {
+            get
+            {
+                // Get today's date.
+                var dateTimeNow = DateTime.Now.Date;
+
+                // Check if its the current month and day already passed.
+                var currentMonthDayPassed = Born.Date.Month == dateTimeNow.Date.Month && Born.Date.Day < dateTimeNow.Date.Day;
+
+                // Check if birthday month already passed.
+                var monthPassed = Born.Date.Month < dateTimeNow.Date.Month;
+
+                // If user birthday occurs to be before today's day, and it's before or in the current month,
+                // it means it already passed and will happen next year.
+                var yearToHappenBirthday = currentMonthDayPassed || monthPassed
+                    ? dateTimeNow.Year + 1 : dateTimeNow.Year;
+
+                // Setting birthday date.
+                return new DateTime(yearToHappenBirthday, Born.Date.Month, Born.Date.Day);
+            }
+        }
 
         /// <summary>
         /// Tries to return a <see cref="DiscordMember"/> representing the user in the specified server.

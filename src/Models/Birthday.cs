@@ -19,27 +19,6 @@ namespace KWiJisho.Models
         /// <returns>A <see cref="List{T}"/> containing a group of <see cref="User"/> and their <see cref="User.Birthday"/> ordered by their birthday date.</returns>
         internal static List<User> GetBirthdayList()
         {
-            // Get today's date.
-            var dateTimeNow = DateTime.Now.Date;
-
-            // For each registered user in the list of users
-            foreach (var user in DiscordUsers.Users)
-            {
-                // Check if its the current month and day already passed.
-                var currentMonthDayPassed = user.Born.Date.Month == dateTimeNow.Date.Month && user.Born.Date.Day < dateTimeNow.Date.Day;
-
-                // Check if birthday month already passed.
-                var monthPassed = user.Born.Date.Month < dateTimeNow.Date.Month;
-
-                // If user birthday occurs to be before today's day, and it's before or in the current month,
-                // it means it already passed and will happen next year.
-                var yearToHappenBirthday = currentMonthDayPassed || monthPassed
-                    ? dateTimeNow.Year + 1 : dateTimeNow.Year;
-
-                // Setting birthday date.
-                user.Birthday = new DateTime(yearToHappenBirthday, user.Born.Date.Month, user.Born.Date.Day);
-            }
-
             // Orders the list by users birthday date.
             var result = DiscordUsers.Users.OrderBy(user => user.Birthday.Date).ToList();
 
