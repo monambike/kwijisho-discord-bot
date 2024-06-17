@@ -32,7 +32,7 @@ namespace KWiJisho.Scheduling
             var trigger = TriggerBuilder.Create()
                 .UsingJobData(new JobDataMap { { "DiscordClient", discordClient } })
                 .WithIdentity("BirthdayCheck", "KWiJisho")
-                .WithDailyTimeIntervalSchedule(period => period.StartingDailyAt(TimeOfDay.HourAndMinuteOfDay(2, 52)).WithIntervalInHours(24))
+                .WithDailyTimeIntervalSchedule(period => period.StartingDailyAt(TimeOfDay.HourAndMinuteOfDay(0, 0)).WithIntervalInHours(24))
                 .Build();
 
             // Scheduling the job with the trigger.
