@@ -1,5 +1,6 @@
 ﻿using DSharpPlus.Entities;
 using KWiJisho.Config;
+using KWiJisho.Utils;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -44,8 +45,6 @@ namespace KWiJisho.Commands
 
         internal static async Task SendBirthdayMessage(DiscordChannel discordChannel, DiscordGuild discordGuild, bool sendOnlyIfTodayBirthday = false)
         {
-            string notFoundBirthdayUser = "Eu sinto muito.. :( eu não consegui encontrar nesse servidor o próximo usuário da lista a fazer aniversário.";
-
             // Getting closest birthday from user present in the server and its member info
             var user = Models.Birthday.GetNextUserToMakeBirthday(discordGuild);
 
@@ -53,7 +52,7 @@ namespace KWiJisho.Commands
             if (user is null)
             {
                 // Sends the message.
-                await discordChannel.SendMessageAsync(notFoundBirthdayUser);
+                await SendMessageBirthdayUserNotFound(discordChannel);
                 // Return to the method.
                 return;
             }
@@ -64,8 +63,8 @@ namespace KWiJisho.Commands
             // If the user is null, send a message to the Discord channel indicating inability to find the next user in the birthday list.
             if (discordMember is null)
             {
-                // Sends the message.
-                await discordChannel.SendMessageAsync(notFoundBirthdayUser);
+                // Sends the message that birthday user wasn't found.
+                await SendMessageBirthdayUserNotFound(discordChannel);
                 // Return to the method.
                 return;
             }
@@ -75,7 +74,11 @@ namespace KWiJisho.Commands
             var upcomingDate = Models.Birthday.GetBirthdayUpcomingDate(daysRemaining);
 
             // Return method if flagged to show only if user's birthday is today, and the birthday is not today.
-            if (sendOnlyIfTodayBirthday && upcomingDate is not Models.Birthday.BirthdayUpcomingDate.Today) return;
+            if (sendOnlyIfTodayBirthday && upcomingDate is not Models.Birthday.BirthdayUpcomingDate.Today)
+            {
+                await KWiJishoLogs.DefaultLog.AddInfoAsync(KWiJishoLog.Module.Birthday, $@"Birthday message wasn't sent because today is not birthday of ""{discordMember.Username}"".");
+                return;
+            }
 
             // Generates birthday message according how many days are remaining for its birthday.
             var message = await Models.Birthday.GenerateBirthdayMessage(user);
@@ -89,10 +92,10 @@ namespace KWiJisho.Commands
             {
                 Color = ConfigJson.DefaultColor.DiscordColor,
                 Title = "ANIVERSARIANTE",
-                Description = $@"O próximo aniversariante é.. {discordMember.Username}!! {message}",
+                Description = $@"O próximo aniversariante é.. {user.Nickname}!! {message}",
                 Footer = new DiscordEmbedBuilder.EmbedFooter
                 {
-                    Text = $"Aniversariante: {discordMember.Username} • Aniversário: {user.Birthday:dd/MM/yyyy}"
+                    Text = $"Aniversariante: {user.FirstName} • Aniversário: {user.Birthday:dd/MM/yyyy}"
                 }
             }
             .WithThumbnail($"attachment://{fileName}")
@@ -115,10 +118,6 @@ namespace KWiJisho.Commands
         {
             // Getting list of users and their birthday
             var users = Models.Birthday.GetBirthdayList();
-
-            // Getting image name and image's full path.
-            var fileName = $"500x281-talking.gif";
-            var imagePath = Path.GetFullPath($"Resources/Images/{fileName}");
 
             // Initializing discord embed builder
             var discordEmbedBuilder = new DiscordEmbedBuilder
@@ -159,5 +158,8 @@ namespace KWiJisho.Commands
             // Sending the builded embed message
             await discordChannel.SendMessageAsync(discordEmbedBuilder);
         }
+
+        private static async Task SendMessageBirthdayUserNotFound(DiscordChannel discordChannel) =>
+            await discordChannel.SendMessageAsync("Eu sinto muito.. :( eu não consegui encontrar nesse servidor o próximo usuário da lista a fazer aniversário.");
     }
 }

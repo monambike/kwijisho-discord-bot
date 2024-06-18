@@ -6,7 +6,7 @@ namespace KWiJisho.Entities
     /// <summary>
     /// Represents a Discord user along with their identifier and additional information.
     /// </summary>
-    internal class User(ulong id, DateTime born, string identifier)
+    internal class User(ulong id, DateTime born, string firstName, string nickname, string nicknameVariation)
     {
         /// <summary>
         /// The unique identifier of the user.
@@ -19,9 +19,18 @@ namespace KWiJisho.Entities
         internal DateTime Born => born;
 
         /// <summary>
+        /// The user real first name.
+        /// </summary>
+        internal string FirstName => firstName;
+
+        /// <summary>
         /// The custom identifier or nickname associated with the user.
         /// </summary>
-        internal string Identifier => identifier;
+        internal string Nickname => nickname;
+        /// <summary>
+        /// The custom identifier or nickname associated with the user.
+        /// </summary>
+        internal string NicknameVariation => nicknameVariation;
 
         /// <summary>
         /// Gets or sets the user's birthday (if applicable).

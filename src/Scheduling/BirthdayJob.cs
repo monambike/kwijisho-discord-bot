@@ -2,6 +2,7 @@
 using KWiJisho.Commands;
 using KWiJisho.Data;
 using KWiJisho.Models;
+using KWiJisho.Utils;
 using Quartz;
 using System.Threading.Tasks;
 
@@ -21,10 +22,11 @@ namespace KWiJisho.Scheduling
         /// <returns>A <see cref="Task"/> representing the asynchronous execution of the job.</returns>
         public async Task Execute(IJobExecutionContext context)
         {
+            await KWiJishoLogs.DefaultLog.AddInfoAsync(KWiJishoLog.Module.Birthday, "Executing birthday job.");
             var dataMap = context.MergedJobDataMap;
-            _client = (DiscordClient)dataMap.Get("DiscordClient");
-
+            _client = (DiscordClient) dataMap.Get("DiscordClient");
             await GiveBirthdayMessage();
+            await KWiJishoLogs.DefaultLog.AddInfoAsync(KWiJishoLog.Module.Birthday, "Finished birthday job.");
         }
 
         /// <summary>

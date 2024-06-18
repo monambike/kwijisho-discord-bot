@@ -26,5 +26,10 @@
         /// Server birthday role Id.
         /// </summary>
         internal ulong BirthdayRoleId { get; init; }
+
+        /// <summary>
+        /// Server log channel Id.
+        /// </summary>
+        internal ulong LogChannelId { get; init; }
     }
 }

@@ -1,17 +1,26 @@
-﻿using System;
+﻿using DSharpPlus;
+using KWiJisho.Data;
+using System;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace KWiJisho.Utils
 {
     /// <summary>
     /// Provides methods for handling the application log for important tasks.
     /// </summary>
-    internal static class KWiJishoLog
+    internal class KWiJishoLog(DiscordClient? client)
     {
+        public required bool WriteFile { get; init; }
+
+        public required bool SendToDiscord { get; init; }
+
+        private readonly DiscordClient? _client = client;
+
         /// <summary>
-        /// The log file path.
+        /// The log file name.
         /// </summary>
-        private static string Path => "KWiJishoLog.txt";
+        private const string FileName = "KWiJishoLog.txt";
 
         /// <summary>
         /// Represents options for the application log type.
@@ -44,55 +53,95 @@ namespace KWiJisho.Utils
             Fatal
         }
 
+        internal enum Module
+        {
+            Basic,
+            Birthday,
+            Info,
+            KWiGpt,
+            Nasa,
+            Notice,
+            ThemeTramontina
+        }
+
         /// <summary>
         /// Adds a debug log entry with the specified message.
         /// </summary>
         /// <param name="message">The debug log message.</param>
-        internal static void AddDebug(string message) => Add(LogType.Debug, message);
+        internal async Task AddDebugAsync(Module module, string message) => await AddCustomLogAsync(LogType.Debug, module, message);
 
         /// <summary>
         /// Adds a info log entry with the specified message.
         /// </summary>
         /// <param name="message">The info log message.</param>
-        internal static void AddInfo(string message) => Add(LogType.Info, message);
+        internal async Task AddInfoAsync(Module module, string message) => await AddCustomLogAsync(LogType.Info, module, message);
 
         /// <summary>
         /// Adds a warning log entry with the specified message.
         /// </summary>
         /// <param name="message">The warning log message.</param>
-        internal static void AddWarning(string message) => Add(LogType.Warning, message);
+        internal async Task AddWarningAsync(Module module, string message) => await AddCustomLogAsync(LogType.Warning, module, message);
 
         /// <summary>
         /// Adds a error log entry with the specified message.
         /// </summary>
         /// <param name="message">The error log message.</param>
-        internal static void AddError(string message) => Add(LogType.Error, message);
+        internal async Task AddErrorAsync(Module module, string message) => await AddCustomLogAsync(LogType.Error, module, message);
 
         /// <summary>
         /// Adds a fatal log entry with the specified message.
         /// </summary>
         /// <param name="message">The fatal log message.</param>
-        internal static void AddFatal(string message) => Add(LogType.Fatal, message);
+        internal async Task AddFatalAsync(Module module, string message) => await AddCustomLogAsync(LogType.Fatal, module, message);
 
         /// <summary>
         /// Adds a formatted log entry to the log file.
         /// </summary>
         /// <param name="logType">The type of log entry.</param>
         /// <param name="message">The log message to be added.</param>
-        private static void Add(LogType logType, string message)
-            => AddLineToFile($"[{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff}] {logType.ToString().ToUpper()} {message}");
+        private async Task AddCustomLogAsync(LogType logType, Module module, string message)
+            => await AddEntryAsync($"[{DateTime.UtcNow:yyyy-MM-dd HH:mm:ss.fff}] [{module}] {logType.ToString().ToUpper()} {message}");
 
         /// <summary>
-        /// Adds a line to the log file with the specified content.
+        /// Adds a line to the log file or send to discord log channel with the specified content.
         /// </summary>
-        /// <param name="line">The line to be added to the log file.</param>
-        internal static void AddLineToFile(string line)
+        /// <param name="entry">The entry to be added to the log.</param>
+        internal async Task AddEntryAsync(string entry)
         {
+            // Writing entry to log file.
+            var taskWriteToFile = WriteEntryToFileAsync(entry);
+
+            // Sending entry to discord log channel.
+            var taskSendToDiscord = SendEntryToDiscordAsync(entry);
+
+            // Running all tasks assynchronously.
+            await Task.WhenAll(taskWriteToFile, taskSendToDiscord);
+        }
+
+        internal async Task WriteEntryToFileAsync(string entry)
+        {
+            if (!WriteFile) return;
+
             // Opens the log file at the specified path for appending a new text.
-            using StreamWriter writer = File.AppendText(Path);
+            using StreamWriter writer = File.AppendText(FileName);
 
             // Writing the line on the log file.
-            writer.WriteLine(line);
+            await writer.WriteLineAsync(entry);
+        }
+
+        internal async Task SendEntryToDiscordAsync(string entry)
+        {
+            if (!SendToDiscord) return;
+
+            var server = Servers.Personal;
+
+            var serverGuild = await _client.GetGuildAsync(server.GuildId);
+
+            // Getting channel by id.
+            var discordChannel = serverGuild.GetChannel(server.LogChannelId);
+
+            // Sending the birthday message.
+            await discordChannel.SendMessageAsync(entry);
         }
     }
 }

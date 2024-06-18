@@ -61,20 +61,20 @@ namespace KWiJisho.Models
         /// <summary>
         /// Method responsible for generating a birthday message.
         /// </summary>
-        /// <param name="discordUser">The user that to get the generated birthday message.</param>
+        /// <param name="user">The user that to get the generated birthday message.</param>
         /// <returns>A <see cref="string"/> containing the generated birthday message.</returns>
         /// <exception cref="NotImplementedException">Thrown if the upcoming birthday date is not yet implemented on this
         /// current method.</exception>
-        internal static async Task<string> GenerateBirthdayMessage(User discordUser)
+        internal static async Task<string> GenerateBirthdayMessage(User user)
         {
             // Getting days remaining for registered user birthday.
-            var daysRemaning = GetBirthdayDaysRemaining(discordUser);
+            var daysRemaning = GetBirthdayDaysRemaining(user);
             var upcomingBirthdayDate = GetBirthdayUpcomingDate(daysRemaning);
             return upcomingBirthdayDate switch
             {
-                BirthdayUpcomingDate.Today => $"Hoje é seu aniversário!! 🥳🎉 {"PARABÉNSS!!!!".ToDiscordBold()} Feliz Aniversário 🎂❤️ {Environment.NewLine + Environment.NewLine} { await ChatGPT.GetKWiJishoPromptAsync($"dê uma mensagem de aniversário especial")} {Environment.NewLine + Environment.NewLine} Gente vem cá! <@&{Servers.Tramontina.BirthdayRoleId}>, {discordUser.Identifier} fez aniversário!",
-                BirthdayUpcomingDate.Tomorrow => $"{"Amanhá".ToDiscordBold()} já é o aniversário. 🥳🎉",
-                BirthdayUpcomingDate.InSomeDays => $"Faltam apenas {(daysRemaning + " dias").ToDiscordBold()} para o aniversário!! 👀 Tô ansiosa!!",
+                BirthdayUpcomingDate.Today => $"Hoje é seu aniversário!! 🥳🎉 {"PARABÉNSS!!!!".ToDiscordBold()} Feliz Aniversário {user.NicknameVariation} 🎂❤️ {Environment.NewLine + Environment.NewLine} { await ChatGPT.GetKWiJishoPromptAsync($"dê uma mensagem de aniversário especial para {user.Nickname}")} {Environment.NewLine + Environment.NewLine} Gente vem cá! <@&{Servers.Tramontina.BirthdayRoleId}>, {user.FirstName} fez aniversário hoje!",
+                BirthdayUpcomingDate.Tomorrow => $"{"Amanhã".ToDiscordBold()} já é o seu aniversário {user.Nickname}! 🥳🎉 Mal posso esperar!!",
+                BirthdayUpcomingDate.InSomeDays => $"Faltam apenas {(daysRemaning + " dias").ToDiscordBold()} pra {user.Nickname} fazer aniversário!! 👀 Tô ansiosa!!",
                 _ => throw new NotImplementedException()
             };
         }

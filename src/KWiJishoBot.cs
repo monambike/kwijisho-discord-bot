@@ -5,8 +5,7 @@ using DSharpPlus.SlashCommands;
 using KWiJisho.Config;
 using KWiJisho.Data;
 using KWiJisho.Scheduling;
-using System;
-using System.Collections.Generic;
+using KWiJisho.Utils;
 using System.Threading.Tasks;
 
 namespace KWiJisho
@@ -96,6 +95,9 @@ namespace KWiJisho
 
             // Creating all schedulers for application jobs.
             await Scheduler.CreateAllSchedulers(DiscordClient);
+
+            // Instantiating all application logs.
+            KWiJishoLogs.InstantiateAllLogs(DiscordClient);
 
             // Connecting the bot into the Discord.
             await DiscordClient.ConnectAsync();

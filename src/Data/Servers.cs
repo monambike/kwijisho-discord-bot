@@ -17,7 +17,8 @@ namespace KWiJisho.Data
         {
             GuildId = 737541664318554143,
             GeneralChannelId = 737541664775602269,
-            WelcomeChannelId = 737541664775602269
+            WelcomeChannelId = 737541664775602269,
+            LogChannelId = 1252137920995790919
         };
     }
 }
