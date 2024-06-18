@@ -1,4 +1,8 @@
-﻿using KWiJisho.Config;
+﻿// Copyright(c) 2024 Vinicius Gabriel Marques de Melo. All rights reserved.
+// Contact: @monambike for more information.
+// For license information, please see the LICENSE file in the root directory.
+
+using KWiJisho.Config;
 using OpenAI_API;
 using OpenAI_API.Chat;
 using System.Threading.Tasks;

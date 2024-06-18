@@ -1,11 +1,14 @@
-﻿using DSharpPlus.Entities;
+﻿// Copyright(c) 2024 Vinicius Gabriel Marques de Melo. All rights reserved.
+// Contact: @monambike for more information.
+// For license information, please see the LICENSE file in the root directory.
+
+using DSharpPlus.Entities;
 using KWiJisho.APIs;
 using KWiJisho.Config;
 using KWiJisho.Utils;
 using System;
 using System.Threading.Tasks;
 using static KWiJisho.APIs.NasaApi.Apod;
-using static KWiJisho.Models.Nasa;
 
 namespace KWiJisho.Models
 {

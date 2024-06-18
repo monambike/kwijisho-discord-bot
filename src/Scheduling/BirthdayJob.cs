@@ -1,7 +1,10 @@
-﻿using DSharpPlus;
+﻿// Copyright(c) 2024 Vinicius Gabriel Marques de Melo. All rights reserved.
+// Contact: @monambike for more information.
+// For license information, please see the LICENSE file in the root directory.
+
+using DSharpPlus;
 using KWiJisho.Commands;
 using KWiJisho.Data;
-using KWiJisho.Models;
 using KWiJisho.Utils;
 using Quartz;
 using System.Threading.Tasks;

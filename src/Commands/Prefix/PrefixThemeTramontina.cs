@@ -1,8 +1,10 @@
-﻿using DSharpPlus;
+﻿// Copyright(c) 2024 Vinicius Gabriel Marques de Melo. All rights reserved.
+// Contact: @monambike for more information.
+// For license information, please see the LICENSE file in the root directory.
+
+using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
-using DSharpPlus.Entities;
-using KWiJisho.Entities;
 using System.Threading.Tasks;
 
 namespace KWiJisho.Commands.Prefix

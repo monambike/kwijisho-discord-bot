@@ -1,4 +1,8 @@
-﻿namespace KWiJisho.Utils
+﻿// Copyright(c) 2024 Vinicius Gabriel Marques de Melo. All rights reserved.
+// Contact: @monambike for more information.
+// For license information, please see the LICENSE file in the root directory.
+
+namespace KWiJisho.Utils
 {
     /// <summary>
     /// Provides utility extension methods for formatting text with Discord markdown.

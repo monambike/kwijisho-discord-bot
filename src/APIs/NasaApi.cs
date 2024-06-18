@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Net.Http;
-using static KWiJisho.APIs.NasaApi.Apod;
-using System.Threading.Tasks;
-using System.Net;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿// Copyright(c) 2024 Vinicius Gabriel Marques de Melo. All rights reserved.
+// Contact: @monambike for more information.
+// For license information, please see the LICENSE file in the root directory.
+
 using Monambike.Core.Services;
+using System;
+using System.Net;
+using System.Threading.Tasks;
+using static KWiJisho.APIs.NasaApi.Apod;
 
 namespace KWiJisho.APIs
 {
