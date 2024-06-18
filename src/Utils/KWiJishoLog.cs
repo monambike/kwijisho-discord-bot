@@ -100,7 +100,13 @@ namespace KWiJisho.Utils
         /// <param name="logType">The type of log entry.</param>
         /// <param name="message">The log message to be added.</param>
         private async Task AddCustomLogAsync(LogType logType, Module module, string message)
-            => await AddEntryAsync($"[{DateTime.UtcNow:yyyy-MM-dd HH:mm:ss.fff}] [{module}] {logType.ToString().ToUpper()} {message}");
+        {
+            TimeZoneInfo brazilTimeZone = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
+
+            DateTime brazilTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, brazilTimeZone);
+
+            await AddEntryAsync($"[{brazilTime:yyyy-MM-dd HH:mm:ss.fff zzz}] [{module}] {logType.ToString().ToUpper()} {message}");
+        }
 
         /// <summary>
         /// Adds a line to the log file or send to discord log channel with the specified content.
