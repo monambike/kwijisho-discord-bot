@@ -11,10 +11,10 @@ using System.Threading.Tasks;
 
 namespace KWiJisho.Scheduling
 {
-    [DisallowConcurrentExecution]
     /// <summary>
     /// Represents a Quartz.NET job that executes a birthday message task.
     /// </summary>
+    [DisallowConcurrentExecution]
     public class BirthdayJob : IJob
     {
         private DiscordClient? _client;
@@ -38,15 +38,19 @@ namespace KWiJisho.Scheduling
         /// <returns>A <see cref="Task"/> representing the asynchronous execution of the birthday message task.</returns>
         private async Task GiveBirthdayMessage()
         {
+            // Retrieve the server details for Tramontina
             var server = Servers.Tramontina;
 
-            // Getting guild by id.
+            // Check if the _client is null and return if it is
+            if (_client is null) return;
+
+            // Get the server guild asynchronously using the client and the server's GuildId
             var serverGuild = await _client.GetGuildAsync(server.GuildId);
 
-            // Getting channel by id.
+            // Get the general channel in the server guild using the server's GeneralChannelId
             var discordChannel = serverGuild.GetChannel(server.GeneralChannelId);
 
-            // Sending the birthday message.
+            // Send the birthday message to the retrieved discord channel and server guild
             await CommandBirthday.SendBirthdayMessage(discordChannel, serverGuild, true);
         }
     }
