@@ -145,7 +145,7 @@ namespace KWiJisho.Commands
                     if (member is not null)
                     {
                         // Formatting member name
-                        var nickname = member.DisplayName == member.Username ? member.DisplayName : $"({member.DisplayName}, {member.Username})";
+                        var nickname = member.DisplayName == member.Username ? member.DisplayName : $"{member.DisplayName}, {member.Username}";
 
                         // Formatting user field with name and birthday month and day.
                         usersBirthdayThisMonthString += $"{userBirthdayThisMonth.Birthday:dd/MM} - {userBirthdayThisMonth.FirstName} ({nickname}){Environment.NewLine}";
