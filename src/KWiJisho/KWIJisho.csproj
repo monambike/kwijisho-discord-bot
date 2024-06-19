@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
     <OutputType>Exe</OutputType>
     <PublishUrl>publish\</PublishUrl>
@@ -19,7 +19,6 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>KWiJisho.KWiJishoBot</StartupObject>
@@ -27,14 +26,14 @@
   <PropertyGroup>
     <ApplicationIcon>Resources\Images\256x256-ayaya.ico</ApplicationIcon>
     <AssemblyTitle>KWiJisho</AssemblyTitle>
-    <Description>Discord bot made by monambike. https://monambike.com/</Description>
+    <Description>KWiJisho discord bot made by monambike.
+Social: @monambike | Webiste: https://monambike.com</Description>
     <Company>Monambike</Company>
     <Product>KWiJisho</Product>
     <Copyright>Copyright ©  2022-2024</Copyright>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyVersion>3.7.0.0</AssemblyVersion>
+    <FileVersion>$(AssemblyVersion)</FileVersion>
     <Nullable>enable</Nullable>
-    <Title>KWiJisho</Title>
     <PackageProjectUrl>https://github.com/monambike/kwijisho-discord-bot</PackageProjectUrl>
     <NeutralLanguage>pt-BR</NeutralLanguage>
     <RepositoryType>git</RepositoryType>
@@ -43,6 +42,11 @@
     <PackageIcon>128x128-ayaya.png</PackageIcon>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <DocumentationFile>KWiJisho-doc.xml</DocumentationFile>
+    <Version />
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Title>$(AssemblyName)</Title>
+    <PackageTags>discord bot;kwijisho;discord;nasa;apod;birthday;cat;emoji;slash commands;prefix commands;ChatGPT</PackageTags>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <WarningLevel>9999</WarningLevel>
@@ -204,9 +208,6 @@
     <Content Include="Resources\Images\Tramontina\500x500-welcome.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\README.md" Link="README.md" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ConcurrentHashSet" Version="1.3.0" />
