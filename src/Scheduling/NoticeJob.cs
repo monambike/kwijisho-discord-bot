@@ -4,7 +4,7 @@
 
 namespace KWiJisho.Scheduling
 {
-    internal class NoticeJob
+    public class NoticeJob
     {
     }
 }

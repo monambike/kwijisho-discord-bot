@@ -15,12 +15,12 @@ namespace KWiJisho.Commands
     /// <summary>
     /// Provides methods for notice prefix and slash commands.
     /// </summary>
-    internal class CommandNotice
+    public class CommandNotice
     {
         /// <summary>
         /// Represents the Yellow color.
         /// </summary>
-        internal static Color Yellow = new(255, 231, 94);
+        public static Color Yellow = new(255, 231, 94);
 
         /// <summary>
         /// Method responsible for sending and creating a "news" in the news channel.
@@ -32,7 +32,7 @@ namespace KWiJisho.Commands
         /// <param name="sendInTramontina">If true the message will be sent in Tramontina; otherwise, it will be sent in my test server.</param>
         /// <param name="discordAttachments">The Discord images for being attached on the embed. Only the first one will be sent</param>
         /// <returns></returns>
-        internal static async Task ExecuteNewsAsync(DiscordClient discordClient, DiscordMember? discordMember, string title, string description, bool sendInTramontina, DiscordAttachment? discordAttachments = null)
+        public static async Task ExecuteNewsAsync(DiscordClient discordClient, DiscordMember? discordMember, string title, string description, bool sendInTramontina, DiscordAttachment? discordAttachments = null)
         {
             // Making the DiscordEmbedBuilder with the news content.
             var discordEmbedBuilder = new DiscordEmbedBuilder

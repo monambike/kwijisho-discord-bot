@@ -14,7 +14,7 @@ namespace KWiJisho.Commands.Slash
     /// <summary>
     /// Represents a set of notice slash commands.
     /// </summary>
-    internal class SlashNotice : ApplicationCommandModule
+    public class SlashNotice : ApplicationCommandModule
     {
         /// <summary>
         /// Slash send news command method to send news at the news' channel.
@@ -27,7 +27,7 @@ namespace KWiJisho.Commands.Slash
         /// <returns>A <see cref="Task"/> containing the result from the asynchronous method.</returns>
         [SlashCommand("send-news", "Manda uma notícia no canal de notícias!!")]
         [SlashRequireUserPermissions(Permissions.Administrator)]
-        internal static async Task ExecuteSlashNewsAsync(InteractionContext interactionContext,
+        public static async Task ExecuteSlashNewsAsync(InteractionContext interactionContext,
             [Option("title", "O título da sua mensagem!!")] string title,
             [Option("description", "A descrição da sua mensagem!!")] string description,
             [Option("image", "Quer anexar alguma imagem ao seu textinho?")] DiscordAttachment? discordAttachment = null,

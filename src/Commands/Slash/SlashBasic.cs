@@ -11,7 +11,7 @@ namespace KWiJisho.Commands.Slash
     /// <summary>
     /// Represents a set of basic slash commands.
     /// </summary>
-    internal class SlashBasic : ApplicationCommandModule
+    public class SlashBasic : ApplicationCommandModule
     {
         /// <summary>
         /// Represents a set of emoji slash commands.
@@ -23,7 +23,7 @@ namespace KWiJisho.Commands.Slash
             /// Represents the command to send a random animated emoji.
             /// </summary>
             [SlashCommand("any", "Envia qualquer emoji animado.")]
-            internal static async Task ExecuteSlashRandomAnimatedEmoji(InteractionContext interactionContext)
+            public static async Task ExecuteSlashRandomAnimatedEmoji(InteractionContext interactionContext)
             {
                 await CommandBasic.ExecuteRandomAnimatedEmoji(interactionContext.Channel);
                 await interactionContext.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource);
@@ -33,7 +33,7 @@ namespace KWiJisho.Commands.Slash
             /// Represents the command to send a random animated meme emoji.
             /// </summary>
             [SlashCommand("meme", "Envia um emoji de meme animado.")]
-            internal static async Task ExecuteSlashRandomAnimatedMemeEmoji(InteractionContext interactionContext)
+            public static async Task ExecuteSlashRandomAnimatedMemeEmoji(InteractionContext interactionContext)
             {
                 await CommandBasic.ExecuteRandomAnimatedMemeEmoji(interactionContext.Channel);
                 await interactionContext.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource);
@@ -43,7 +43,7 @@ namespace KWiJisho.Commands.Slash
             /// Represents the command to send a random animated party emoji.
             /// </summary>
             [SlashCommand("party", "Envia um emoji de festa animado.")]
-            internal static async Task ExecuteSlashRandomAnimatedPartyEmoji(InteractionContext interactionContext)
+            public static async Task ExecuteSlashRandomAnimatedPartyEmoji(InteractionContext interactionContext)
             {
                 await CommandBasic.ExecuteRandomAnimatedPartyEmoji(interactionContext.Channel);
                 await interactionContext.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource);

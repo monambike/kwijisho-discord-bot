@@ -12,9 +12,9 @@ namespace KWiJisho.Scheduling
     /// <summary>
     /// Provides methods for scheduling tasks.
     /// </summary>
-    internal class Scheduler
+    public class Scheduler
     {
-        internal static async Task CreateAllSchedulers(DiscordClient discordClient)
+        public static async Task CreateAllSchedulers(DiscordClient discordClient)
         {
             await CreateBirthdayScheduler(discordClient);
         }
@@ -23,7 +23,7 @@ namespace KWiJisho.Scheduling
         /// Creates a birthday scheduler as part of the Quartz.NET library.
         /// </summary>
         /// <returns>A <see cref="Task"/> representing the asynchronous creation of the birthday scheduler.</returns>
-        internal static async Task CreateBirthdayScheduler(DiscordClient discordClient)
+        public static async Task CreateBirthdayScheduler(DiscordClient discordClient)
         {
             // Creating and starting a scheduler.
             var scheduler = await StdSchedulerFactory.GetDefaultScheduler();

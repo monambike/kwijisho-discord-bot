@@ -10,14 +10,14 @@ namespace KWiJisho.Utils
     /// <summary>
     /// Provides utility methods for handling permissions in the KWiJisho application.
     /// </summary>
-    internal static class KWiJishoPermission
+    public static class KWiJishoPermission
     {
         /// <summary>
         /// Generates a custom error message for a permission check failure.
         /// </summary>
         /// <param name="permission">The required permission.</param>
         /// <returns>A formatted error message indicating the required permission.</returns>
-        internal static string PermissionCustomErrorMessage(Permissions permission)
+        public static string PermissionCustomErrorMessage(Permissions permission)
             => $@"Esse comando é só para pessoas que possuem a permissão ""{GetPermissionNameInPortuguese(permission)}"".. (ᴗ_ ᴗ。) Eu sinto muito..";
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace KWiJisho.Utils
         /// <param name="cooldown">The command cooldown.</param>
         /// <param name="cooldownPurpose">The purpose of the cooldown. (if present)</param>
         /// <returns></returns>
-        internal static string CooldownCustomErrorMessage(int maxExecute, int cooldown, string cooldownPurpose)
+        public static string CooldownCustomErrorMessage(int maxExecute, int cooldown, string cooldownPurpose)
             => $"Você só pode enviar {maxExecute} {(maxExecute == 1 ? "comando" : "comandos")}{(cooldownPurpose is not null ? $" para {cooldownPurpose}" : "")} a cada {cooldown} {(cooldown == 1 ? "minuto" : "minutos")}.";
         
         /// <summary>
@@ -35,7 +35,7 @@ namespace KWiJisho.Utils
         /// </summary>
         /// <param name="permission">The Discord permission.</param>
         /// <returns>The Portuguese name of the permission.</returns>
-        internal static string GetPermissionNameInPortuguese(Permissions permission)
+        public static string GetPermissionNameInPortuguese(Permissions permission)
         {
             return permission switch
             {

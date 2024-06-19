@@ -11,7 +11,7 @@ namespace KWiJisho.Commands.Slash
     /// <summary>
     /// Represents a set of NASA slash commands.
     /// </summary>
-    internal class SlashNasa : ApplicationCommandModule
+    public class SlashNasa : ApplicationCommandModule
     {
         /// <summary>
         /// Represents a command group to senda random animated emoji.
@@ -23,7 +23,7 @@ namespace KWiJisho.Commands.Slash
             /// Represents the command to get the english APOD.
             /// </summary>
             [SlashCommand("english", "The mostro o APOD igualzinho ao site da NASA!")]
-            internal static async Task ExecuteEnglishApodAsync(InteractionContext interactionContext)
+            public static async Task ExecuteEnglishApodAsync(InteractionContext interactionContext)
             {
                 // Acknowledge the interaction by deferring the response with a loading state.
                 await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);
@@ -38,7 +38,7 @@ namespace KWiJisho.Commands.Slash
             /// Represents the command to get the portuguese APOD.
             /// </summary>
             [SlashCommand("portuguese", "The mostro o APOD em português resumidinho e fácil de ler!")]
-            internal static async Task ExecutePortugueseApodHelpAsync(InteractionContext interactionContext)
+            public static async Task ExecutePortugueseApodHelpAsync(InteractionContext interactionContext)
             {
                 // Acknowledge the interaction by deferring the response with a loading state.
                 await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);

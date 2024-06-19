@@ -9,7 +9,7 @@ namespace KWiJisho.Entities
     /// <summary>
     /// Represents a custom Discord emoji for cat party emojis, inheriting from the base <see cref="Emoji"/> class.
     /// </summary>
-    internal record EmojiCatParty : Emoji
+    public record EmojiCatParty : Emoji
     {
         /// <summary>
         /// Initializes a new instance of <see cref="EmojiCatParty"/> with its emoji name and Id.

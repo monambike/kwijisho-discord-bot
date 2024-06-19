@@ -11,7 +11,7 @@ namespace KWiJisho.Commands
     /// <summary>
     /// Provides methods for NASA prefix and slash commands.
     /// </summary>
-    internal static class CommandNasa
+    public static class CommandNasa
     {
         /// <summary>
         /// Retrieves and sends the Astronomy Picture of the Day (APOD) to the specified Discord channel.
@@ -19,7 +19,7 @@ namespace KWiJisho.Commands
         /// <param name="discordChannel">The Discord channel where the APOD message will be sent.</param>
         /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
 
-        internal static async Task ApodAsync(DiscordChannel discordChannel)
+        public static async Task ApodAsync(DiscordChannel discordChannel)
         {
             // Getting the Astronomy Picture of the Day.
             var response = await NasaApi.Apod.GetApodAsync();
@@ -47,7 +47,7 @@ namespace KWiJisho.Commands
         /// </summary>
         /// <param name="discordChannel">The Discord channel where the translated APOD message will be sent.</param>
         /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-        internal static async Task ApodResumeAsync(DiscordChannel discordChannel)
+        public static async Task ApodResumeAsync(DiscordChannel discordChannel)
         {
             // Getting the Astronomy Picture of the Day.
             var response = await NasaApi.Apod.GetApodAsync();

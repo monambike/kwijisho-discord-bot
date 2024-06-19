@@ -13,63 +13,63 @@ namespace KWiJisho.Commands.Prefix
     /// <summary>
     /// Provides a set of commands and classes for managing commands in a Discord server.
     /// </summary>
-    internal static partial class PrefixCommandManager
+    public static partial class PrefixCommandManager
     {
         /// <summary>
         /// Gets or sets the list of command groups.
         /// </summary>
-        internal static List<PrefixCommandGroup> CommandGroups { get; set; } = [];
+        public static List<PrefixCommandGroup> CommandGroups { get; set; } = [];
 
         /// <summary>
         /// Gets the command group for Astronomy commands.
         /// </summary>
-        internal static PrefixCommandGroup Astronomy => new("Nasa e Astronomia");
+        public static PrefixCommandGroup Astronomy => new("Nasa e Astronomia");
 
         /// <summary>
         /// Gets the command group for ChatGPT commands.
         /// </summary>
-        internal static PrefixCommandGroup ChatGpt => new("ChatGpt (Estilo KWiJisho 🌟)");
+        public static PrefixCommandGroup ChatGpt => new("ChatGpt (Estilo KWiJisho 🌟)");
 
         /// <summary>
         /// Gets the command group for Information and Help commands.
         /// </summary>
-        internal static PrefixCommandGroup Info => new("Informações Adicionais");
+        public static PrefixCommandGroup Info => new("Informações Adicionais");
 
         /// <summary>
         /// Gets the command group for Theme commands.
         /// </summary>
-        internal static PrefixCommandGroup Manage => new("Gerência do Servidor");
+        public static PrefixCommandGroup Manage => new("Gerência do Servidor");
 
         /// <summary>
         /// Gets the command group for Birthday commands.
         /// </summary>
-        internal static PrefixCommandGroup Birthday => new("Aniversário");
+        public static PrefixCommandGroup Birthday => new("Aniversário");
 
         /// <summary>
         /// Gets the command group for Basic commands.
         /// </summary>
-        internal static PrefixCommandGroup Basic => new("Comandos Básicos");
+        public static PrefixCommandGroup Basic => new("Comandos Básicos");
     }
 
     /// <summary>
     /// Represents a single Discord command.
     /// </summary>
-    internal class PrefixCommand
+    public class PrefixCommand
     {
         /// <summary>
         /// Gets or initializes the name of the command.
         /// </summary>
-        internal string Name { get; init; }
+        public string Name { get; init; }
 
         /// <summary>
         /// Gets or initializes the description of the commands.
         /// </summary>
-        internal string Description { get; init; }
+        public string Description { get; init; }
 
         /// <summary>
         /// Gets or initializes the required permissions for the command.
         /// </summary>
-        internal Permissions Permissions { get; init; }
+        public Permissions Permissions { get; init; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PrefixCommand"/> class.
@@ -78,7 +78,7 @@ namespace KWiJisho.Commands.Prefix
         /// <param name="description">The description of the command.</param>
         /// <param name="group">The command group to which this command belongs.</param>
         /// <param name="permission">The required permissions for the command.</param>
-        internal PrefixCommand(string name, string description, PrefixCommandGroup group, Permissions permission = Permissions.None)
+        public PrefixCommand(string name, string description, PrefixCommandGroup group, Permissions permission = Permissions.None)
         {
             // Setting values from parameters into the properties.
             (Name, Description, Permissions) = (name, description, permission);
@@ -93,23 +93,23 @@ namespace KWiJisho.Commands.Prefix
     /// <summary>
     /// Represents a group and holds a list with a set of Discord commands.
     /// </summary>
-    internal partial class PrefixCommandGroup
+    public partial class PrefixCommandGroup
     {
         /// <summary>
         /// Gets or sets the name of the prefix command group.
         /// </summary>
-        internal string Name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// Gets or sets the list of commands in the prefix command group.
         /// </summary>
-        internal List<PrefixCommand> Commands { get; set; } = [];
+        public List<PrefixCommand> Commands { get; set; } = [];
 
         /// <summary>
         /// Initializes a new instance of the <see cref="PrefixCommandGroup"/> class.
         /// </summary>
         /// <param name="name">The name of the command group.</param>
-        internal PrefixCommandGroup(string name)
+        public PrefixCommandGroup(string name)
         {
             // Setting the property values.
             Name = name;

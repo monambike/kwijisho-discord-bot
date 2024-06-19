@@ -12,14 +12,14 @@ namespace KWiJisho.Commands
     /// <summary>
     /// Provides methods for basic prefix and slash commands.
     /// </summary>
-    internal static class CommandBasic
+    public static class CommandBasic
     {
         /// <summary>
         /// Sends a random animated emoji from <see cref="DiscordEmojis.AnimatedEmojis"/>.
         /// </summary>
         /// <param name="discordChannel">The discord channel where the command will be executed.</param>
         /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
-        internal static async Task ExecuteRandomAnimatedEmoji(DiscordChannel discordChannel)
+        public static async Task ExecuteRandomAnimatedEmoji(DiscordChannel discordChannel)
             => await discordChannel.SendMessageAsync(UtilCollections.GetRandomValueFromList(DiscordEmojis.AnimatedEmojis).Code);
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace KWiJisho.Commands
         /// </summary>
         /// <param name="discordChannel">The discord channel where the command will be executed.</param>
         /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
-        internal static async Task ExecuteRandomAnimatedMemeEmoji(DiscordChannel discordChannel)
+        public static async Task ExecuteRandomAnimatedMemeEmoji(DiscordChannel discordChannel)
             => await discordChannel.SendMessageAsync(UtilCollections.GetRandomValueFromList(DiscordEmojis.AnimatedMemeEmojis).Code);
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace KWiJisho.Commands
         /// </summary>
         /// <param name="discordChannel">The discord channel where the command will be executed.</param>
         /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
-        internal static async Task ExecuteRandomAnimatedPartyEmoji(DiscordChannel discordChannel)
+        public static async Task ExecuteRandomAnimatedPartyEmoji(DiscordChannel discordChannel)
             => await discordChannel.SendMessageAsync(UtilCollections.GetRandomValueFromList(DiscordEmojis.AnimatedPartyEmojis).Code);
     }
 }

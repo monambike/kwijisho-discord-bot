@@ -12,7 +12,7 @@ namespace KWiJisho.APIs
     /// HTTP requests.
     /// API GitHub Repository: <a href="https://github.com/httpcats/http.cat"/>
     /// </summary>
-    internal static class CatApi
+    public static class CatApi
     {
         /// <summary>
         /// HttpClient responsible for making api requests.

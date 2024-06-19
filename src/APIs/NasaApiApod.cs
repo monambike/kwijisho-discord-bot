@@ -12,19 +12,19 @@ namespace KWiJisho.APIs
     /// HTTP requests.
     /// API Documentation: <a href="https://api.nasa.gov/"/>
     /// </summary>
-    internal static partial class NasaApi
+    public static partial class NasaApi
     {
         /// <summary>
         /// This class provides methods for interacting with the APOD (Astronomy Picture of
         /// the Day) API using HTTP requests.
         /// </summary>
-        internal static partial class Apod
+        public static partial class Apod
         {
             /// <summary>
             /// Retrieves the Astronomy Picture of the Day (APOD) through a request to NASA's API.
             /// </summary>
             /// <returns>An asynchronous <see cref="Task"/> that represents the operation. The task result contains an <see cref="ApodResponse"/> object.</returns>
-            internal static async Task<ApodResponse> GetApodAsync() => await GetUsingNasaApiAsync("planetary/apod");
+            public static async Task<ApodResponse> GetApodAsync() => await GetUsingNasaApiAsync("planetary/apod");
 
             /// <summary>
             /// Makes a generic request to NASA's API with the specified endpoint.

@@ -11,9 +11,9 @@ namespace KWiJisho.Utils
     /// <summary>
     /// Utility class providing default embeds for KWiJisho Discord bot.
     /// </summary>
-    internal class DiscordCustomEmbed
+    public class DiscordCustomEmbed
     {
-        internal static DiscordEmbed GetDiscordEmbed(string title, string description, bool useKWiJishoThumbnail = false)
+        public static DiscordEmbed GetDiscordEmbed(string title, string description, bool useKWiJishoThumbnail = false)
         {
             // Getting image name and image's full path.
             var fileName = $"256x256-ayaya.ico";

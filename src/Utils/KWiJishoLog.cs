@@ -13,7 +13,7 @@ namespace KWiJisho.Utils
     /// <summary>
     /// Provides methods for handling the application log for important tasks.
     /// </summary>
-    internal class KWiJishoLog(DiscordClient? client)
+    public class KWiJishoLog(DiscordClient? client)
     {
         public required bool WriteFile { get; init; }
 
@@ -29,7 +29,7 @@ namespace KWiJisho.Utils
         /// <summary>
         /// Represents options for the application log type.
         /// </summary>
-        internal enum LogType
+        public enum LogType
         {
             /// <summary>
             /// Indicated a debug level log.
@@ -57,7 +57,7 @@ namespace KWiJisho.Utils
             Fatal
         }
 
-        internal enum Module
+        public enum Module
         {
             Basic,
             Birthday,
@@ -72,31 +72,31 @@ namespace KWiJisho.Utils
         /// Adds a debug log entry with the specified message.
         /// </summary>
         /// <param name="message">The debug log message.</param>
-        internal async Task AddDebugAsync(Module module, string message) => await AddCustomLogAsync(LogType.Debug, module, message);
+        public async Task AddDebugAsync(Module module, string message) => await AddCustomLogAsync(LogType.Debug, module, message);
 
         /// <summary>
         /// Adds a info log entry with the specified message.
         /// </summary>
         /// <param name="message">The info log message.</param>
-        internal async Task AddInfoAsync(Module module, string message) => await AddCustomLogAsync(LogType.Info, module, message);
+        public async Task AddInfoAsync(Module module, string message) => await AddCustomLogAsync(LogType.Info, module, message);
 
         /// <summary>
         /// Adds a warning log entry with the specified message.
         /// </summary>
         /// <param name="message">The warning log message.</param>
-        internal async Task AddWarningAsync(Module module, string message) => await AddCustomLogAsync(LogType.Warning, module, message);
+        public async Task AddWarningAsync(Module module, string message) => await AddCustomLogAsync(LogType.Warning, module, message);
 
         /// <summary>
         /// Adds a error log entry with the specified message.
         /// </summary>
         /// <param name="message">The error log message.</param>
-        internal async Task AddErrorAsync(Module module, string message) => await AddCustomLogAsync(LogType.Error, module, message);
+        public async Task AddErrorAsync(Module module, string message) => await AddCustomLogAsync(LogType.Error, module, message);
 
         /// <summary>
         /// Adds a fatal log entry with the specified message.
         /// </summary>
         /// <param name="message">The fatal log message.</param>
-        internal async Task AddFatalAsync(Module module, string message) => await AddCustomLogAsync(LogType.Fatal, module, message);
+        public async Task AddFatalAsync(Module module, string message) => await AddCustomLogAsync(LogType.Fatal, module, message);
 
         /// <summary>
         /// Adds a formatted log entry to the log file.
@@ -116,7 +116,7 @@ namespace KWiJisho.Utils
         /// Adds a line to the log file or send to discord log channel with the specified content.
         /// </summary>
         /// <param name="entry">The entry to be added to the log.</param>
-        internal async Task AddEntryAsync(string entry)
+        public async Task AddEntryAsync(string entry)
         {
             // Writing entry to log file.
             var taskWriteToFile = WriteEntryToFileAsync(entry);
@@ -128,7 +128,7 @@ namespace KWiJisho.Utils
             await Task.WhenAll(taskWriteToFile, taskSendToDiscord);
         }
 
-        internal async Task WriteEntryToFileAsync(string entry)
+        public async Task WriteEntryToFileAsync(string entry)
         {
             if (!WriteFile) return;
 
@@ -139,7 +139,7 @@ namespace KWiJisho.Utils
             await writer.WriteLineAsync(entry);
         }
 
-        internal async Task SendEntryToDiscordAsync(string entry)
+        public async Task SendEntryToDiscordAsync(string entry)
         {
             if (!SendToDiscord) return;
 

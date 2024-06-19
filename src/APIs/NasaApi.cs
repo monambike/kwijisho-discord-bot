@@ -15,7 +15,7 @@ namespace KWiJisho.APIs
     /// HTTP requests.
     /// API Documentation: <a href="https://api.nasa.gov/"/>
     /// </summary>
-    internal static partial class NasaApi
+    public static partial class NasaApi
     {
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace KWiJisho.APIs
         /// 
         /// </summary>
         /// <returns>An asynchronous <see cref="Task"/> that represents the operation. The task result contains an <see cref="ApodResponse"/> object.</returns>
-        internal static async Task<ApodResponse> GetHttpCatByStringAsync(string myString)
+        public static async Task<ApodResponse> GetHttpCatByStringAsync(string myString)
         {
             // Tries to find a enum with the provided string.
             var myEnum = (HttpStatusCode)Enum.Parse(typeof(HttpStatusCode), myString);

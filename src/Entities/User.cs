@@ -10,36 +10,36 @@ namespace KWiJisho.Entities
     /// <summary>
     /// Represents a Discord user along with their identifier and additional information.
     /// </summary>
-    internal class User(ulong id, DateTime born, string firstName, string nickname, string nicknameVariation)
+    public class User(ulong id, DateTime born, string firstName, string nickname, string nicknameVariation)
     {
         /// <summary>
         /// The unique identifier of the user.
         /// </summary>
-        internal ulong Id => id;
+        public ulong Id => id;
 
         /// <summary>
         /// The date when the user was born.
         /// </summary>
-        internal DateTime Born => born;
+        public DateTime Born => born;
 
         /// <summary>
         /// The user real first name.
         /// </summary>
-        internal string FirstName => firstName;
+        public string FirstName => firstName;
 
         /// <summary>
         /// The custom identifier or nickname associated with the user.
         /// </summary>
-        internal string Nickname => nickname;
+        public string Nickname => nickname;
         /// <summary>
         /// The custom identifier or nickname associated with the user.
         /// </summary>
-        internal string NicknameVariation => nicknameVariation;
+        public string NicknameVariation => nicknameVariation;
 
         /// <summary>
         /// Gets or sets the user's birthday (if applicable).
         /// </summary>
-        internal DateTime Birthday
+        public DateTime Birthday
         {
             get
             {
@@ -68,7 +68,7 @@ namespace KWiJisho.Entities
         /// </summary>
         /// <param name="discordGuild">The Discord guild where the user is expected to be a member.</param>
         /// <returns>Returns <see cref="DiscordMember"/> if found; otherwise, returns <see langword="null"/>.</returns>
-        internal DiscordMember? GetUserDiscordMember(DiscordGuild discordGuild)
+        public DiscordMember? GetUserDiscordMember(DiscordGuild discordGuild)
         {
             // Tries to return a user.
             try { return discordGuild.GetMemberAsync(Id).Result; }

@@ -15,34 +15,34 @@ namespace KWiJisho.Utils
     /// <param name="maxUses">The max uses allowed before the wait of time to cooldown reset.</param>
     /// <param name="resetAfter">The time to reset, when it reached the end allow user to execute the command again.</param>
     /// <param name="cooldownPurpose">The purpose of this cooldown for user explanation.</param>
-    internal class CommandCooldown(int maxUses, TimeSpan resetAfter, string cooldownPurpose)
+    public class CommandCooldown(int maxUses, TimeSpan resetAfter, string cooldownPurpose)
     {
         /// <summary>
         /// Max uses allowed before the wait of time to cooldown reset.
         /// </summary>
-        internal int MaxUses { get; init; } = maxUses;
+        public int MaxUses { get; init; } = maxUses;
 
         /// <summary>
         /// Time to reset and allow new command uses.
         /// </summary>
-        internal TimeSpan TimeToReset { get; init; } = resetAfter;
+        public TimeSpan TimeToReset { get; init; } = resetAfter;
 
         /// <summary>
         /// A brief explanation of the purpose of the cooldown.
         /// </summary>
-        internal string CooldownPurpose { get; init; } = cooldownPurpose;
+        public string CooldownPurpose { get; init; } = cooldownPurpose;
 
         /// <summary>
         /// The requests made for this cooldown instance.
         /// </summary>
-        internal List<DateTime> Requests { get; set; } = [];
+        public List<DateTime> Requests { get; set; } = [];
 
         /// <summary>
         /// Checks if user can execute the action or if is necessary to wait.
         /// </summary>
         /// <param name="discordChannel">The channel where the message will be sent.</param>
         /// <returns>A <see cref="bool"/> saying if the requested action could be executed or not.</returns>
-        internal bool CanExecute(DiscordChannel discordChannel)
+        public bool CanExecute(DiscordChannel discordChannel)
         {
             // Getting the difference time from the first request and current time.
             var waitFromFirstRequest = DateTime.UtcNow - Requests.FirstOrDefault();
@@ -81,7 +81,7 @@ namespace KWiJisho.Utils
         /// </summary>
         /// <param name="timeSpan">The time remaining to get the representation.</param>
         /// <returns>The <see cref="string"/> representation of how much time is remaining.</returns>
-        internal static string GetTimeRemainingString(TimeSpan timeSpan)
+        public static string GetTimeRemainingString(TimeSpan timeSpan)
         {
             // Getting the time remaining strings
             var timeRemainingStrings = GetTimeRemainingStrings(timeSpan);
@@ -110,7 +110,7 @@ namespace KWiJisho.Utils
         /// <param name="timeSpan">The time remaining to get the strings accordingly.</param>
         /// <returns>The <see cref="IEnumerable{T}"/> containing a list of <see cref="string"/> representing how
         /// much time is remaining for each <see cref="TimeSpan"/> property.</returns>
-        internal static IEnumerable<string> GetTimeRemainingStrings(TimeSpan timeSpan)
+        public static IEnumerable<string> GetTimeRemainingStrings(TimeSpan timeSpan)
         {
             // Getting string for minutes (if avaiable).
             if (timeSpan.Minutes != 0) yield return $"{timeSpan.Minutes} {(timeSpan.Minutes == 1 ? "minutinho" : "minutinhos")}";

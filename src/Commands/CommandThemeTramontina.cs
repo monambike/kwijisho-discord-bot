@@ -16,7 +16,7 @@ namespace KWiJisho.Commands
     /// <summary>
     /// Provides methods for theme prefix and slash commands.
     /// </summary>
-    internal static class CommandThemeTramontina
+    public static class CommandThemeTramontina
     {
         /// <summary>
         /// Represents the cooldown for theme change.
@@ -24,30 +24,30 @@ namespace KWiJisho.Commands
         private static readonly CommandCooldown ThemeChangeCooldown = new(2, TimeSpan.FromMinutes(10), "mudar o tema do servidor");
 
         // Tramontina's Text Channels.
-        internal static readonly ChannelTramontina Geral = new(692588978959941656, "geral", new Dictionary<EmojiTheme, string>
+        public static readonly ChannelTramontina Geral = new(692588978959941656, "geral", new Dictionary<EmojiTheme, string>
             { { EmojiTheme.Default, "💬" }, { EmojiTheme.Christmas, "🍪" }, { EmojiTheme.Easter, "🐇" }, { EmojiTheme.Halloween, "🎃" }  });
-        internal static readonly ChannelTramontina PrintsEternizados = new(841452121983418418, "prints-eternizados", new Dictionary<EmojiTheme, string>
+        public static readonly ChannelTramontina PrintsEternizados = new(841452121983418418, "prints-eternizados", new Dictionary<EmojiTheme, string>
             { { EmojiTheme.Default, "💾" }, { EmojiTheme.Christmas, "🥛" }, { EmojiTheme.Easter, "🐰" }, { EmojiTheme.Halloween, "👺" }  });
         // Tramontina's Organized Text Channels.
-        internal static readonly ChannelTramontina YouTube = new(1142723035447705600, "youtube", new Dictionary<EmojiTheme, string>
+        public static readonly ChannelTramontina YouTube = new(1142723035447705600, "youtube", new Dictionary<EmojiTheme, string>
             { { EmojiTheme.Default, "📹" }, { EmojiTheme.Christmas, "🌟" }, { EmojiTheme.Easter, "🍫" }, { EmojiTheme.Halloween, "🍭" } });
-        internal static readonly ChannelTramontina Dicionario = new(1143020466190172220, "dicionario", new Dictionary<EmojiTheme, string>
+        public static readonly ChannelTramontina Dicionario = new(1143020466190172220, "dicionario", new Dictionary<EmojiTheme, string>
             { { EmojiTheme.Default, "📖" }, { EmojiTheme.Christmas, "⛄" }, { EmojiTheme.Easter, "🥕" }, { EmojiTheme.Halloween, "🔮" } });
         // Tramontina's Bot Channels.
-        internal static readonly ChannelTramontina Waifu = new(692591710466998272, "waifu", new Dictionary<EmojiTheme, string>
+        public static readonly ChannelTramontina Waifu = new(692591710466998272, "waifu", new Dictionary<EmojiTheme, string>
             { { EmojiTheme.Default, "💘" }, { EmojiTheme.Christmas, "💝" }, { EmojiTheme.Easter, "🌷" }, { EmojiTheme.Halloween, "🍬" } });
-        internal static readonly ChannelTramontina Radio = new(841136093813538827, "radio", new Dictionary<EmojiTheme, string>
+        public static readonly ChannelTramontina Radio = new(841136093813538827, "radio", new Dictionary<EmojiTheme, string>
             { { EmojiTheme.Default, "📻" }, { EmojiTheme.Christmas, "🎶" }, { EmojiTheme.Easter, "🙏🏻" }, { EmojiTheme.Halloween, "💀" } });
-        internal static readonly ChannelTramontina OutrosBots = new(693742473155182663, "outros-bots", new Dictionary<EmojiTheme, string>
+        public static readonly ChannelTramontina OutrosBots = new(693742473155182663, "outros-bots", new Dictionary<EmojiTheme, string>
             { { EmojiTheme.Default, "🤖" }, { EmojiTheme.Christmas, "⛄" }, { EmojiTheme.Easter, "🧺" }, { EmojiTheme.Halloween, "🧟" } });
         // Tramontina's Voice Channels.
-        internal static readonly ChannelTramontina CanalEscondidinho = new(1010349376922722436, "Canal Escondidinho", new Dictionary<EmojiTheme, string>
+        public static readonly ChannelTramontina CanalEscondidinho = new(1010349376922722436, "Canal Escondidinho", new Dictionary<EmojiTheme, string>
             { { EmojiTheme.Default, "🏃🏻💨" }, { EmojiTheme.Christmas, "🎁🧦" }, { EmojiTheme.Easter, "🐣🌱" }, { EmojiTheme.Halloween, "🏰👻" } });
-        internal static readonly ChannelTramontina CorpoDeBombeiros1 = new(929778181458767932, "Corpo de Bombeiros 1", new Dictionary<EmojiTheme, string>
+        public static readonly ChannelTramontina CorpoDeBombeiros1 = new(929778181458767932, "Corpo de Bombeiros 1", new Dictionary<EmojiTheme, string>
             { { EmojiTheme.Default, "👨🏻🚒" }, { EmojiTheme.Christmas, "🎅🏻🛷" }, { EmojiTheme.Easter, "🐥🥚" }, { EmojiTheme.Halloween, "🧛🏻🩸" } });
-        internal static readonly ChannelTramontina CorpoDeBombeiros2 = new(826257065303474186, "Corpo de Bombeiros 2", new Dictionary<EmojiTheme, string>
+        public static readonly ChannelTramontina CorpoDeBombeiros2 = new(826257065303474186, "Corpo de Bombeiros 2", new Dictionary<EmojiTheme, string>
             { { EmojiTheme.Default, "👩🏻🚒" }, { EmojiTheme.Christmas, "🤶🏻🛷" }, { EmojiTheme.Easter, "🐤🥚" }, { EmojiTheme.Halloween, "🧛🏻🩸" } });
-        internal static readonly ChannelTramontina CantinhoDaFofoca = new(692588979404669018, "Cantinho da Fofoca", new Dictionary<EmojiTheme, string>
+        public static readonly ChannelTramontina CantinhoDaFofoca = new(692588979404669018, "Cantinho da Fofoca", new Dictionary<EmojiTheme, string>
             { { EmojiTheme.Default, "👥💅🏻" }, { EmojiTheme.Christmas, "🍷🍴" }, { EmojiTheme.Easter, "🌸🐝" }, { EmojiTheme.Halloween, "🤡🎈" } });
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace KWiJisho.Commands
         /// <param name="description">The description from the theme notice</param>
         /// <param name="serverNameSuggestion">The server name suggestion.</param>
         /// <returns>A <see cref="Task"/> from the method execution.</returns>
-        internal static async Task SetThemeAsync(DiscordChannel discordChannel, DiscordClient discordClient, EmojiTheme emojiTheme, string title, string description, string? serverNameSuggestion = null)
+        public static async Task SetThemeAsync(DiscordChannel discordChannel, DiscordClient discordClient, EmojiTheme emojiTheme, string title, string description, string? serverNameSuggestion = null)
         {
             // Checking if can execute current command
             if (!ThemeChangeCooldown.CanExecute(discordChannel)) return;
@@ -137,7 +137,7 @@ namespace KWiJisho.Commands
         /// <param name="discordChannel">The Discord channel where the command is being executed.</param>
         /// <param name="discordClient">The Discord client instance.</param>
         /// <returns>A <see cref="Task"/> from the method execution.</returns>
-        internal static async Task ResetThemeAsync(DiscordChannel discordChannel, DiscordClient discordClient)
+        public static async Task ResetThemeAsync(DiscordChannel discordChannel, DiscordClient discordClient)
             => await SetThemeAsync(discordChannel, discordClient, EmojiTheme.Default,
                 "Voltando ao normal!!",
                 "Voltei o servidor pro seu tema original :D");
@@ -148,7 +148,7 @@ namespace KWiJisho.Commands
         /// <param name="discordChannel">The Discord channel where the command is being executed.</param>
         /// <param name="discordClient">The Discord client instance.</param>
         /// <returns>A <see cref="Task"/> from the method execution.</returns>
-        internal static async Task SetChristmasThemeAsync(DiscordChannel discordChannel, DiscordClient discordClient)
+        public static async Task SetChristmasThemeAsync(DiscordChannel discordChannel, DiscordClient discordClient)
             => await SetThemeAsync(discordChannel, discordClient, EmojiTheme.Christmas,
                 "🎅🏻🎁 FELIZ NATAL!! ☃️❄️",
                 $"O servidor acabou de entrar NO {"CLIMA NATALINO".ToDiscordBold()} 🥳🎄✨. {"BOAS FESTAS À TODOS".ToDiscordBold()}." +
@@ -166,7 +166,7 @@ namespace KWiJisho.Commands
         /// <param name="discordChannel">The Discord channel where the command is being executed.</param>
         /// <param name="discordClient">The Discord client instance.</param>
         /// <returns>A <see cref="Task"/> from the method execution.</returns>
-        internal static async Task SetEasterThemeAsync(DiscordChannel discordChannel, DiscordClient discordClient)
+        public static async Task SetEasterThemeAsync(DiscordChannel discordChannel, DiscordClient discordClient)
             => await SetThemeAsync(discordChannel, discordClient, EmojiTheme.Easter,
                 "🐇🥕 FELIZ PÁSCOA!! 🐣🥚",
                 @"O coelhinho da páscoa deu um ""pulo"" no servidor! HAHAHA, PULO.. ESSA FOI BOA 🤭.",
@@ -178,7 +178,7 @@ namespace KWiJisho.Commands
         /// <param name="discordChannel">The Discord channel where the command is being executed.</param>
         /// <param name="discordClient">The Discord client instance.</param>
         /// <returns>A <see cref="Task"/> from the method execution.</returns>
-        internal static async Task SetHalloweenThemeAsync(DiscordChannel discordChannel, DiscordClient discordClient)
+        public static async Task SetHalloweenThemeAsync(DiscordChannel discordChannel, DiscordClient discordClient)
             => await SetThemeAsync(discordChannel, discordClient, EmojiTheme.Halloween,
                 "🕷️🕸️ FELIZ HALLOWEEN!! 🧟👻",
                 $"MUAHAHAHAWHWHA. O SERVIDOR ACABA DE ENTRAR EM CLIMA DE TERROR 🕷️🎃. SE PREPAREM PARA O PIOR DO {"MEDO".ToDiscordBold()}.",
@@ -187,7 +187,7 @@ namespace KWiJisho.Commands
         /// <summary>
         /// Represents seasonal themes that you can set to the Discord server.
         /// </summary>
-        internal enum EmojiTheme
+        public enum EmojiTheme
         {
             /// <summary>
             /// Represents the Default theme for a server.

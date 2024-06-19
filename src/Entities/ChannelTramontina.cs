@@ -15,18 +15,18 @@ namespace KWiJisho.Entities
     /// <param name="id">The Id from the Discord channel.</param>
     /// <param name="defaultTextTitle">The default text title from the Discord channel.</param>
     /// <param name="emojiTheme">The emoji theme dictionary avaiable for this channel.</param>
-    internal class ChannelTramontina(ulong id, string defaultTextTitle, Dictionary<EmojiTheme, string> emojiTheme) : Channel(id, $"{defaultTextTitle}")
+    public class ChannelTramontina(ulong id, string defaultTextTitle, Dictionary<EmojiTheme, string> emojiTheme) : Channel(id, $"{defaultTextTitle}")
     {
         /// <summary>
         /// The default text title for the tramontina Discord channel.
         /// </summary>
-        internal string DefaultTextTitle { get; set; } = defaultTextTitle;
+        public string DefaultTextTitle { get; set; } = defaultTextTitle;
 
         /// <summary>
         /// The dictionary containing the EmojiTheme that represents the seasonal theme associate to the emoji, and
         /// the string that represents the emoji itself for the tramontina Discord channel.
         /// </summary>
-        internal Dictionary<EmojiTheme, string> EmojiTheme { get; set; } = emojiTheme;
+        public Dictionary<EmojiTheme, string> EmojiTheme { get; set; } = emojiTheme;
 
         /// <summary>
         /// Change the emoji for current channel. At the current moment, you can do this twice with the same channel
@@ -34,7 +34,7 @@ namespace KWiJisho.Entities
         /// </summary>
         /// <param name="discordClient">The Discord client instance.</param>
         /// <param name="emoji">The emoji to be changed in the channel.</param>
-        internal void ChangeEmoji(DiscordClient discordClient, string emoji) => UpdateChannelNameAsync(discordClient, $"{emoji}│{DefaultTextTitle}");
+        public void ChangeEmoji(DiscordClient discordClient, string emoji) => UpdateChannelNameAsync(discordClient, $"{emoji}│{DefaultTextTitle}");
 
     }
 }

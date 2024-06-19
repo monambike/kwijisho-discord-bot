@@ -12,7 +12,7 @@ namespace KWiJisho.Commands
     /// <summary>
     /// Provides methods for KWiGPT prefix and slash commands.
     /// </summary>
-    internal static class CommandKwiGpt
+    public static class CommandKwiGpt
     {
         /// <summary>
         /// Represents the command to get the chat gpt prompt in KWiJisho style.
@@ -20,7 +20,7 @@ namespace KWiJisho.Commands
         /// <param name="discordChannel">The Discord channel where the prompt will be sent.</param>
         /// <param name="input">The content of user input.</param>
         /// <returns>A <see cref="Task"/> with the current asynchronous method.</returns>
-        internal static async Task ExecuteKWiJishoPromptAsync(DiscordChannel discordChannel, params string[] input)
+        public static async Task ExecuteKWiJishoPromptAsync(DiscordChannel discordChannel, params string[] input)
         {
             // Getting all user inputs and combining into a string.
             string userInput = string.Join(" ", input);

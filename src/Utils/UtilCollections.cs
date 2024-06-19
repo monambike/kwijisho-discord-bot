@@ -10,7 +10,7 @@ namespace KWiJisho.Utils
     /// <summary>
     /// Provides utility methods for working with lists.
     /// </summary>
-    internal static class UtilCollections
+    public static class UtilCollections
     {
         /// <summary>
         /// Returns a random value from a given list.

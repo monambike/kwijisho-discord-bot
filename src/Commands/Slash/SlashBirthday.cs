@@ -11,13 +11,13 @@ namespace KWiJisho.Commands.Slash
     /// <summary>
     /// Represents a set of birthday slash commands.
     /// </summary>
-    internal class SlashBirthday : ApplicationCommandModule
+    public class SlashBirthday : ApplicationCommandModule
     {
         /// <summary>
         /// Represents the command to show the next person to have birthday.
         /// </summary>
         [SlashCommand("next-birthday", "Mostra o aniversário mais próximo!")]
-        internal static async Task ExecuteSlashNextBirthdayAsync(InteractionContext interactionContext)
+        public static async Task ExecuteSlashNextBirthdayAsync(InteractionContext interactionContext)
         {
             await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);
             await CommandBirthday.ExecuteNextBirthdayAsync(interactionContext.Channel, interactionContext.Guild);
@@ -29,7 +29,7 @@ namespace KWiJisho.Commands.Slash
         /// </summary>
 
         [SlashCommand("birthday-list", "Mostra a lista de aniversariantes!")]
-        internal static async Task ExecuteSlashBirthdayListAsync(InteractionContext interactionContext)
+        public static async Task ExecuteSlashBirthdayListAsync(InteractionContext interactionContext)
         {
             await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);
             await CommandBirthday.ExecuteBirthdayListAsync(interactionContext.Channel, interactionContext.Guild);

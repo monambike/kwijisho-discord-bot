@@ -12,31 +12,31 @@ namespace KWiJisho.Entities
     /// <summary>
     /// Class that represents the ConfigJson file for configuring the discord bot.
     /// </summary>
-    internal struct ConfigJson
+    public struct ConfigJson
     {
         /// <summary>
         /// Gets or initializes the Discord bot token for the KWiJisho module.
         /// </summary>
         [JsonProperty("kwijishoToken")]
-        internal string KWiJishoToken { get; init; }
+        public string KWiJishoToken { get; init; }
 
         /// <summary>
         /// Gets or initializes the API token for accessing ChatGPT's services.
         /// </summary>
         [JsonProperty("chatgptToken")]
-        internal string ChatGptToken { get; init; }
+        public string ChatGptToken { get; init; }
 
         /// <summary>
         /// Gets or initializes the API token for accessing NASA's services.
         /// </summary>
         [JsonProperty("nasaToken")]
-        internal string NasaToken { get; init; }
+        public string NasaToken { get; init; }
 
         /// <summary>
         /// Asynchronously deserializes the content of the config.json file into a <see cref="ConfigJson"/> instance.
         /// </summary>
         /// <returns>A <see cref="Task{TResult}"/> representing the asynchronous operation, yielding a <see cref="ConfigJson"/> instance.</returns>
-        internal static async Task<ConfigJson> DeserializeConfigJsonFileAsync()
+        public static async Task<ConfigJson> DeserializeConfigJsonFileAsync()
         {
             // The variable to hold the JSON content.
             var json = string.Empty;

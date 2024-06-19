@@ -18,12 +18,12 @@ namespace KWiJisho
     /// <summary>
     /// Main class responsible for managing and instantiate the KWiJisho Discord bot.
     /// </summary>
-    internal partial class KWiJishoBot
+    public partial class KWiJishoBot
     {
         /// <summary>
         /// Register all the Discord bot prefix commands.
         /// </summary>
-        internal void RegisterPrefixCommands()
+        public void RegisterPrefixCommands()
         {
             // Registering discord bot prefix commands.
             PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixBasic>();
@@ -38,7 +38,7 @@ namespace KWiJisho
         /// <summary>
         /// Register all the Discord bot slash commands.
         /// </summary>
-        internal void RegisterSlashCommands()
+        public void RegisterSlashCommands()
         {
             // Registering discord bot slash commands for every server.
             RegisterSlashCommandsToServer();
@@ -68,7 +68,7 @@ namespace KWiJisho
         /// Register all the Discord bot events.
         /// </summary>
         /// <returns></returns>
-        internal void RegisterBotEvents()
+        public void RegisterBotEvents()
         {
             // Registering other Discord bot events.
             DiscordClient.Ready += async (client, readyEventArgs) => await DiscordClient.UpdateStatusAsync(DiscordActivity);
@@ -80,7 +80,7 @@ namespace KWiJisho
         /// <summary>
         /// Register all the Discord bot prefix commands permissions.
         /// </summary>
-        internal void RegisterPrefixCommandsPermissions()
+        public void RegisterPrefixCommandsPermissions()
         {
             PrefixCommands.CommandErrored += async (sender, exception) =>
             {
@@ -104,7 +104,7 @@ namespace KWiJisho
         /// <summary>
         /// Register all the Discord bot slash commands permissions.
         /// </summary>
-        internal void RegisterSlashCommandsPermissions()
+        public void RegisterSlashCommandsPermissions()
         {
             SlashCommandsExtension slash = SlashCommands;
             slash.SlashCommandErrored += async (s, e) =>

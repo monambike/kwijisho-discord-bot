@@ -6,7 +6,7 @@ using KWiJisho.Entities;
 
 namespace KWiJisho.Data
 {
-    internal class Servers
+    public class Servers
     {
         public static Server Tramontina = new()
         {

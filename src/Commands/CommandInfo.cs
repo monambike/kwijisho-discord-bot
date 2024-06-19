@@ -16,14 +16,14 @@ namespace KWiJisho.Commands
     /// <summary>
     /// Provides methods for info prefix and slash commands.
     /// </summary>
-    internal static class CommandInfo
+    public static class CommandInfo
     {
         /// <summary>
         /// Sends a help message containing a list of available commands and their descriptions to the specified Discord channel.
         /// </summary>
         /// <param name="discordChannel">The Discord channel where the message will be sent.</param>
         /// <param name="discordClient">The Discord client instance.</param>
-        internal static async Task ExecuteHelpAsync(DiscordChannel discordChannel, DiscordClient discordClient)
+        public static async Task ExecuteHelpAsync(DiscordChannel discordChannel, DiscordClient discordClient)
         {
             // Initializing discord embed builder
             var discordEmbedBuilder = new DiscordEmbedBuilder
@@ -58,7 +58,7 @@ namespace KWiJisho.Commands
         /// </summary>
         /// <param name="discordChannel">The Discord channel where the message will be sent.</param>
         /// <param name="discordClient">The Discord client instance.</param>
-        internal static async Task ExecuteInfoAsync(DiscordChannel discordChannel, DiscordClient discordClient)
+        public static async Task ExecuteInfoAsync(DiscordChannel discordChannel, DiscordClient discordClient)
         {
             // Description for discord embed builder
             var description = $@"Que legal que você quer saber mais sobre mim AHAHAHAHA eu sou a KWiJisho 🌟 😎 o bot {"MAIS LEGAL DE TODOS!!!!!".ToDiscordBold()} criado " +

@@ -12,7 +12,7 @@ namespace KWiJisho.Commands.Slash
     /// <summary>
     /// Represents a set of notice slash commands.
     /// </summary>
-    internal class SlashThemeTramontina : ApplicationCommandModule
+    public class SlashThemeTramontina : ApplicationCommandModule
     {
         /// <summary>
         /// Represents the asynchronous slash reset theme method called when user asks for the slash reset theme command.
@@ -21,7 +21,7 @@ namespace KWiJisho.Commands.Slash
         /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
         [SlashCommand("theme-reset", "Volta o tema do servidor para o Padrão!!")]
         [SlashRequireUserPermissions(Permissions.Administrator)]
-        internal static async Task ExecuteSlashResetAsync(InteractionContext interactionContext)
+        public static async Task ExecuteSlashResetAsync(InteractionContext interactionContext)
         {
             // Acknowledge the interaction by deferring the response with a loading state.
             await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);
@@ -40,7 +40,7 @@ namespace KWiJisho.Commands.Slash
         /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
         [SlashCommand("theme-christmas", "🎅🏻 Define o tema do servidor para o de Natal!!")]
         [SlashRequireUserPermissions(Permissions.Administrator)]
-        internal static async Task ExecuteSlashChristmasAsync(InteractionContext interactionContext)
+        public static async Task ExecuteSlashChristmasAsync(InteractionContext interactionContext)
         {
             // Acknowledge the interaction by deferring the response with a loading state.
             await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);
@@ -59,7 +59,7 @@ namespace KWiJisho.Commands.Slash
         /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
         [SlashCommand("theme-easter", "🐇 Define o tema do servidor para o de Páscoa!!")]
         [SlashRequireUserPermissions(Permissions.Administrator)]
-        internal static async Task ExecuteSlashEasterAsync(InteractionContext interactionContext)
+        public static async Task ExecuteSlashEasterAsync(InteractionContext interactionContext)
         {
             // Acknowledge the interaction by deferring the response with a loading state.
             await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);
@@ -78,7 +78,7 @@ namespace KWiJisho.Commands.Slash
         /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
         [SlashCommand("theme-halloween", "🎃 Define o tema do servidor para o de Halloween!!")]
         [SlashRequireUserPermissions(Permissions.Administrator)]
-        internal static async Task ExecuteSlashHalloweenAsync(InteractionContext interactionContext)
+        public static async Task ExecuteSlashHalloweenAsync(InteractionContext interactionContext)
         {
             // Acknowledge the interaction by deferring the response with a loading state.
             await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);

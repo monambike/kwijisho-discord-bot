@@ -11,12 +11,12 @@ namespace KWiJisho.Data
     /// <summary>
     /// Provides a static class for managing Discord users along with their identifiers.
     /// </summary>
-    internal static class DiscordUsers
+    public static class DiscordUsers
     {
         /// <summary>
         /// The list of users along with their identifiers.
         /// </summary>
-        internal static List<User> Users =>
+        public static List<User> Users =>
         [
             new(748963722088677376, new DateTime(2002, 06, 14), "Felipe", "Dark", "tamizinho"), // eita_tami
             new(256137979335016448, new DateTime(2001, 08, 15), "Fellippe", "Orlando", "orlandinho"), // fellippeo
@@ -27,8 +27,8 @@ namespace KWiJisho.Data
             new(207556639719555072, new DateTime(2002, 11, 24), "Vinícius", "Vini", "vinicin"), // monambike
             new(737573340851470348, new DateTime(2003, 03, 21), "Elizabeth", "Betty", "bettyzinha"), // darksidevision
             new(352948739029336074, new DateTime(2002, 10, 29), "Matheus", "Mello", "mellinho"), // mello4906
-            new(352948739029336074, new DateTime(2002, 10, 29), "Maria", "Mari", "freirezika"), // freirezoka
-            new(737535848102363259, KWiJisho.Created.Date, "KWiJisho", "KWiJisho", "KWiJisho") // KWiJisho Bot
+            new(352948739029336074, new DateTime(2004, 07, 19), "Maria", "Mari", "freirezika"), // freirezoka
+            new(737535848102363259, KWiJisho.Created.Date, "KWiJisho", "KWiJisho", "esquizobot") // KWiJisho Bot
         ];
     }
 }

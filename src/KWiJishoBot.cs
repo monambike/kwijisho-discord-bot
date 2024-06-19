@@ -18,32 +18,32 @@ namespace KWiJisho
     /// Main class responsible for managing and instantiate the KWiJisho Discord bot. The main entry
     /// point class of the application.
     /// </summary>
-    internal partial class KWiJishoBot
+    public partial class KWiJishoBot
     {
         /// <summary>
         /// Gets or sets the Discord client instance used by the bot.
         /// </summary>
-        internal DiscordClient DiscordClient { get; private set; } = null!;
+        public DiscordClient DiscordClient { get; private set; } = null!;
 
         /// <summary>
         /// Gets or sets the <see cref="CommandsNextExtension"/> instance for handling bot prefix commands.
         /// </summary>
-        internal CommandsNextExtension PrefixCommands { get; private set; } = null!;
+        public CommandsNextExtension PrefixCommands { get; private set; } = null!;
 
         /// <summary>
         /// Gets or sets the <see cref="SlashCommandsExtension"/> instance for handling bot slash commands.
         /// </summary>
-        internal SlashCommandsExtension SlashCommands { get; private set; } = null!;
+        public SlashCommandsExtension SlashCommands { get; private set; } = null!;
 
         /// <summary>
         /// Initializing Discord bot activity class.
         /// </summary>
-        internal static DiscordActivity DiscordActivity => new(ConfigJson.Activity);
+        public static DiscordActivity DiscordActivity => new(ConfigJson.Activity);
 
         /// <summary>
         /// The main entry point method of the application.
         /// </summary>
-        internal static void Main()
+        public static void Main()
         {
             // Creating a new instance of the Discord bot class.
             var bot = new KWiJishoBot();
@@ -58,7 +58,7 @@ namespace KWiJisho
         /// the necessary configurations.
         /// </summary>
         /// <returns>A task representing the asynchronous operation.</returns>
-        internal async Task RunAsync()
+        public async Task RunAsync()
         {
             // Getting info from Json file and setting into the ConfigJson class.
             var configJson = await Entities.ConfigJson.DeserializeConfigJsonFileAsync();

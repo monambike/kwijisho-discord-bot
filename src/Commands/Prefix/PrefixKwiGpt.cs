@@ -12,17 +12,17 @@ namespace KWiJisho.Commands.Prefix
     /// <summary>
     /// Provides a set of commands and classes for managing commands in a Discord server.
     /// </summary>
-    internal partial class PrefixCommandManager
+    public partial class PrefixCommandManager
     {
         /// <summary>
         /// Represents a set of KWiGPT prefix commands.
         /// </summary>
-        internal class PrefixKwiGpt : BaseCommandModule
+        public class PrefixKwiGpt : BaseCommandModule
         {
             /// <summary>
             /// Represents the command to get the chat gpt prompt in KWiJisho style.
             /// </summary>
-            internal PrefixCommand k = new(nameof(k), "Manda qualquer coisinha na frente que eu respondo alá ChatGPT! Conversa comigo!!", ChatGpt);
+            public PrefixCommand k = new(nameof(k), "Manda qualquer coisinha na frente que eu respondo alá ChatGPT! Conversa comigo!!", ChatGpt);
 
             /// <summary>
             /// Represent the asynchronous prefix get chat gpt prompt async method called when user uses the
@@ -32,7 +32,7 @@ namespace KWiJisho.Commands.Prefix
             /// <param name="inputs">The user input for getting the chat prompt</param>
             /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
             [Command(nameof(k))]
-            internal async Task GetChatGptPromptAsync(CommandContext commandContext, params string[] inputs)
+            public async Task GetChatGptPromptAsync(CommandContext commandContext, params string[] inputs)
             {
                 // Show's that the bot is "typing" while it process everything.
                 await commandContext.TriggerTypingAsync();

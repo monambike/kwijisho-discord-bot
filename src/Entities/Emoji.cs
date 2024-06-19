@@ -9,23 +9,23 @@ namespace KWiJisho.Entities
     /// <summary>
     /// Class responsible for creating and handling custom Discord emojis.
     /// </summary>
-    internal record Emoji
+    public record Emoji
     {
         /// <summary>
         /// The discord emoji name.
         /// </summary>
-        internal string Name { get; init; }
+        public string Name { get; init; }
 
         /// <summary>
         /// The discord emoji unique identifier.
         /// </summary>
-        internal ulong Id { get; init; }
+        public ulong Id { get; init; }
 
         /// <summary>
         /// The discord emoji code responsible for outputing it into the chat.
         /// <c>&lt;a:{name}:{id}&gt;</c>
         /// </summary>
-        internal string Code => $"<a:{Name}:{Id}>";
+        public string Code => $"<a:{Name}:{Id}>";
 
 
         /// <summary>
@@ -34,7 +34,7 @@ namespace KWiJisho.Entities
         /// </summary>
         /// <param name="name">The name of the Discord emoji.</param>
         /// <param name="id">The unique identifier of the Discord emoji.</param>
-        internal Emoji(string name, ulong id)
+        public Emoji(string name, ulong id)
         {
             // Setting values to the properties.
             (Name, Id) = (name, id);

@@ -13,7 +13,7 @@ namespace KWiJisho.Events
     /// <summary>
     /// Provides a set of events and methods fired when a interaction is made.
     /// </summary>
-    internal class ButtonInteraction
+    public class ButtonInteraction
     {
         /// <summary>
         /// Handles the event when a component interaction is created, like button clicks.
@@ -22,7 +22,7 @@ namespace KWiJisho.Events
         /// <param name="e">Event arguments containing information about the component interaction.</param>
         /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         /// <exception cref="ArgumentNullException">Thrown if the <paramref name="sender"/> is <see langword="null"/>.</exception>
-        internal static async Task OnComponentInteractionCreatedAsync(DiscordClient sender, ComponentInteractionCreateEventArgs e)
+        public static async Task OnComponentInteractionCreatedAsync(DiscordClient sender, ComponentInteractionCreateEventArgs e)
         {
             // Throws a argument null exception if the sender is null.
             ArgumentNullException.ThrowIfNull(sender);
@@ -41,7 +41,7 @@ namespace KWiJisho.Events
         /// </summary>
         /// <param name="e">Event arguments containing information about the component interaction.</param>
         /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-        internal static async Task CopyServerNameAsync(ComponentInteractionCreateEventArgs e)
+        public static async Task CopyServerNameAsync(ComponentInteractionCreateEventArgs e)
         {
             // Getting the message content, in other words, the discord server name to be copied.
             var message = e.Message.Embeds[0].Description;

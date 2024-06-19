@@ -15,12 +15,12 @@ namespace KWiJisho.Commands.Prefix
     /// <summary>
     /// Provides a set of commands and classes for managing commands in a Discord server.
     /// </summary>
-    internal partial class PrefixCommandManager
+    public partial class PrefixCommandManager
     {
         /// <summary>
         /// Represents a set of notice prefix commands.
         /// </summary>
-        internal class PrefixNotice : BaseCommandModule
+        public class PrefixNotice : BaseCommandModule
         {
             // The send news command syntax
             private static readonly string sendNewsCommandSyntax = $@"{ConfigJson.Prefix}{nameof(sendNews)} ""{{title}}"" ""{{description}}"" true".ToDiscordBold();
@@ -35,7 +35,7 @@ Considerações:
             /// <summary>
             /// Represents the send news prefix command.
             /// </summary>
-            internal PrefixCommand sendNews = new(nameof(sendNews), sendNewsDescription, Manage, Permissions.Administrator);
+            public PrefixCommand sendNews = new(nameof(sendNews), sendNewsDescription, Manage, Permissions.Administrator);
 
             /// <summary>
             /// Prefix send news command method to send news at the news' channel.
@@ -47,7 +47,7 @@ Considerações:
             /// <returns>A <see cref="Task"/> containing the result from the asynchronous method.</returns>
             [Command(nameof(sendNews))]
             [RequireUserPermissions(Permissions.Administrator)]
-            internal async Task SendNewsAsync(CommandContext commandContext, string title, string description, bool sendInTramontina = false)
+            public async Task SendNewsAsync(CommandContext commandContext, string title, string description, bool sendInTramontina = false)
             {
                 // If there's an attachment in the list, get the first one
                 var attachment = commandContext.Message.Attachments.Count > 0 ? commandContext.Message.Attachments[0] : null;

@@ -12,14 +12,14 @@ using static KWiJisho.APIs.NasaApi.Apod;
 
 namespace KWiJisho.Models
 {
-    internal class Nasa
+    public class Nasa
     {
         /// <summary>
         /// Asynchronously builds a english apod message with the apod response.
         /// </summary>
         /// <param name="apodResponse">The APOD response content to build the embed.</param>
         /// <returns>The <see cref="DiscordEmbedBuilder"/>.</returns>
-        internal static ApodBuilder BuildEnglishApodMessageAsync(ApodResponse apodResponse)
+        public static ApodBuilder BuildEnglishApodMessageAsync(ApodResponse apodResponse)
             => new()
             {
                 // Title
@@ -47,7 +47,7 @@ namespace KWiJisho.Models
         /// </summary>
         /// <param name="apodResponse">The APOD response content to build the embed.</param>
         /// <returns>A <see cref="Task{TResult}"/> containing the <see cref="DiscordEmbedBuilder"/>.</returns>
-        internal static async Task<ApodBuilder> BuildPortugueseApodMessageAsync(ApodResponse apodResponse)
+        public static async Task<ApodBuilder> BuildPortugueseApodMessageAsync(ApodResponse apodResponse)
         {
             // Translate the title from the APOD response.
             var translatedTitle = await ChatGPT.GetPromptTranslateToPortugueseAsync(apodResponse.Title);
@@ -90,75 +90,75 @@ namespace KWiJisho.Models
         /// <summary>
         /// Builder class for creating a Discord embed for Astronomy Picture of the Day (APOD) information.
         /// </summary>
-        internal class ApodBuilder
+        public class ApodBuilder
         {
             private string _nullCopyrightField = null!;
 
             /// <summary>
             /// Gets or initializes the title field for the APOD embed.
             /// </summary>
-            internal required string TitleField { get; init; }
+            public required string TitleField { get; init; }
 
             /// <summary>
             /// Gets or initializes the title content for the APOD embed.
             /// </summary>
-            internal required string TitleContent { get; init; }
+            public required string TitleContent { get; init; }
 
             /// <summary>
             /// Gets or initializes the explanation field for the APOD embed.
             /// </summary>
-            internal required string ExplanationField { get; init; }
+            public required string ExplanationField { get; init; }
 
             /// <summary>
             /// Gets or initializes the explanation content for the APOD embed.
             /// </summary>
-            internal required string ExplanationContent { get; init; }
+            public required string ExplanationContent { get; init; }
 
             /// <summary>
             /// Gets or initializes the video URL field for the APOD embed.
             /// </summary>
-            internal required string VideoField { get; init; }
+            public required string VideoField { get; init; }
 
             /// <summary>
             /// Gets or initializes the content URL for the APOD embed.
             /// </summary>
-            internal required string MediaUrl { get; init; }
+            public required string MediaUrl { get; init; }
 
             /// <summary>
             /// Gets or initializes the media type for the APOD embed.
             /// </summary>
-            internal required string MediaType { get; init; }
+            public required string MediaType { get; init; }
 
             /// <summary>
             /// Gets or initializes the copyright content for the APOD embed.
             /// </summary>
-            internal required string CopyrightContent { get; init; }
+            public required string CopyrightContent { get; init; }
 
             /// <summary>
             /// Gets or initializes the placeholder for null copyright field in the APOD embed.
             /// </summary>
-            internal required string NullCopyrightField { get => $"({_nullCopyrightField})"; init { _nullCopyrightField = value; } }
+            public required string NullCopyrightField { get => $"({_nullCopyrightField})"; init { _nullCopyrightField = value; } }
 
             /// <summary>
             /// Gets or initializes the date field for the APOD embed.
             /// </summary>
-            internal required string DateField { get; init; }
+            public required string DateField { get; init; }
 
             /// <summary>
             /// Gets or initializes the date content for the APOD embed.
             /// </summary>
-            internal DateTime DateContent { get; init; }
+            public DateTime DateContent { get; init; }
 
             /// <summary>
             /// Gets or initializes the date format for the date in the APOD embed.
             /// </summary>
-            internal required string DateFormat { get; init; }
+            public required string DateFormat { get; init; }
 
             /// <summary>
             /// Builds and returns a Discord embed builder based on the provided APOD information.
             /// </summary>
             /// <returns>A <see cref="DiscordEmbedBuilder"/> representing the APOD information in embed format.</returns>
-            internal DiscordEmbedBuilder GetDiscordEmbedBuilder()
+            public DiscordEmbedBuilder GetDiscordEmbedBuilder()
             {
                 // Creating copyright message.
                 var copyright = string.IsNullOrEmpty(CopyrightContent) ? NullCopyrightField : CopyrightContent.Replace("\n", "");

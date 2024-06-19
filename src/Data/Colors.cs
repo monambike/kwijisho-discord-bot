@@ -9,8 +9,8 @@ namespace KWiJisho.Data
     /// <summary>
     /// Class responsible for managing colors in the application.
     /// </summary>
-    internal static class Colors
+    public static class Colors
     {
-        internal static Color KWiJishoColor = new(255, 231, 94);
+        public static Color KWiJishoColor = new(255, 231, 94);
     }
 }

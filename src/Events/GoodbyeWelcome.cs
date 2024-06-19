@@ -18,7 +18,7 @@ namespace KWiJisho.Events
     /// Provides a set of events and methods fired when a user enters and leaves a discord
     /// server.
     /// </summary>
-    internal class GoodbyeWelcome
+    public class GoodbyeWelcome
     {
         /// <summary>
         /// Handles the event when a new member joins the Discord server. Sends a welcome message
@@ -27,7 +27,7 @@ namespace KWiJisho.Events
         /// <param name="sender">The discord client instance.</param>
         /// <param name="e">Event arguments containing information about the guild member.</param>
         /// <returns>A <see cref="Task"/> representing the assynchronous operation.</returns>
-        internal static async Task OnGuildMemberAddedAsync(DiscordClient sender, GuildMemberAddEventArgs e)
+        public static async Task OnGuildMemberAddedAsync(DiscordClient sender, GuildMemberAddEventArgs e)
         {
             ArgumentNullException.ThrowIfNull(sender);
             // Getting welcome image info.
@@ -58,7 +58,7 @@ namespace KWiJisho.Events
         /// <param name="sender">The discord client instance.</param>
         /// <param name="e">Events arguments containing information about the guild member.</param>
         /// <returns>A <see cref="Task"/> representing the assynchronous operation.</returns>
-        internal static async Task OnGuildMemberRemovedAsync(DiscordClient sender, GuildMemberRemoveEventArgs e)
+        public static async Task OnGuildMemberRemovedAsync(DiscordClient sender, GuildMemberRemoveEventArgs e)
         {
             // If senders is null throws an exception.
             ArgumentNullException.ThrowIfNull(sender);
@@ -89,7 +89,7 @@ namespace KWiJisho.Events
         /// </summary>
         /// <param name="user">The user that will receive the welcome message.</param>
         /// <returns>The string containing the welcome message .</returns>
-        internal static string GetRandomWelcomeMessage(string user) => UtilCollections.GetRandomValueFromList([
+        public static string GetRandomWelcomeMessage(string user) => UtilCollections.GetRandomValueFromList([
             $"EAEEEEEE, Bem-vindo ao servidor {user} meu consagrado! ;D",
             $"SEJA BEM V-V-V-VIIIIIIIIIIIINDO AO TRA-MON-TINAAAA 🎉 {user}",
             $"Como vai {user} meu parceiro? 😎 Aproveite a sua estadia por aqui e se precisar de alguma titia KAWAI JISHO TÁ NA ÁAAAREA",
@@ -101,7 +101,7 @@ namespace KWiJisho.Events
         /// </summary>
         /// <param name="user">The user that will receive the welcome message.</param>
         /// <returns>The string containing the goodbye message .</returns>
-        internal static string GetRandomGoodbyeMessage(string user) => UtilCollections.GetRandomValueFromList([
+        public static string GetRandomGoodbyeMessage(string user) => UtilCollections.GetRandomValueFromList([
             $"Até logo amigo.. Foi bom te conhecer {user} :(",
             $"Já vai tarde.. BRINCADEIRINHA HAHAHA... Ai mas não.. falando sério, vai fazer falta 🙁 {user}",
             $"NÃAAO, partiu ainda tão tão joveeeeeeeeem 😭😭😭😭 Sentiremos sua falta {user}..",

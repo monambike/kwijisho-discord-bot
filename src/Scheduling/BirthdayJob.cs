@@ -15,7 +15,7 @@ namespace KWiJisho.Scheduling
     /// <summary>
     /// Represents a Quartz.NET job that executes a birthday message task.
     /// </summary>
-    internal class BirthdayJob : IJob
+    public class BirthdayJob : IJob
     {
         private DiscordClient? _client;
 

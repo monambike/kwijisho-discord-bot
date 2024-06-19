@@ -14,7 +14,7 @@ namespace KWiJisho.APIs
     /// using the OpenAI-API-dotnet library.
     /// API Documentation: <a href="https://github.com/OkGoDoIt/OpenAI-API-dotnet"/>
     /// </summary>
-    internal static class ChatGPT
+    public static class ChatGPT
     {
         /// <summary>
         /// Represents an instance of the OpenAIAPI configuration.
@@ -31,7 +31,7 @@ namespace KWiJisho.APIs
         /// </summary>
         /// <param name="input">The text to be summarized.</param>
         /// <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
-        internal static async Task<string> GetPromptSummarizeTextAsync(string input)
+        public static async Task<string> GetPromptSummarizeTextAsync(string input)
             => await GetPromptAsync(input, "Summarize the following text to a maximum of 5 or 6 lines.");
 
         /// <summary>
@@ -40,7 +40,7 @@ namespace KWiJisho.APIs
         /// <param name="input">The text to be translated.</param>
         /// <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
 
-        internal static async Task<string> GetPromptTranslateToPortugueseAsync(string input)
+        public static async Task<string> GetPromptTranslateToPortugueseAsync(string input)
             => await GetPromptAsync(input, "Translate the following text into Brazilian Portuguese.");
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace KWiJisho.APIs
         /// </summary>
         /// <param name="input">The user input text.</param>
         /// <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
-        internal static async Task<string> GetKWiJishoPromptAsync(string input)
+        public static async Task<string> GetKWiJishoPromptAsync(string input)
         {
             // The default style for the ChatGPT prompts executed by this method.
             var personality = "Aja alegre e animada, falando de um jeito descontraído e se possível com emojis. Nada de formalidade, pontos finais e capitalizar o início das palavras."

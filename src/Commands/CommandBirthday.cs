@@ -16,7 +16,7 @@ namespace KWiJisho.Commands
     /// <summary>
     /// Provides methods for birthday prefix and slash commands.
     /// </summary>
-    internal static class CommandBirthday
+    public static class CommandBirthday
     {
         /// <summary>
         /// Represents the year months in Portuguese.
@@ -42,12 +42,12 @@ namespace KWiJisho.Commands
         /// </summary>
         /// <param name="discordChannel">The Discord channel where the message will be sent.</param>
         /// <param name="discordGuild">The Discord guild containing the users.</param>
-        internal static async Task ExecuteNextBirthdayAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
+        public static async Task ExecuteNextBirthdayAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
         {
             await SendBirthdayMessage(discordChannel, discordGuild);
         }
 
-        internal static async Task SendBirthdayMessage(DiscordChannel discordChannel, DiscordGuild discordGuild, bool sendOnlyIfTodayBirthday = false)
+        public static async Task SendBirthdayMessage(DiscordChannel discordChannel, DiscordGuild discordGuild, bool sendOnlyIfTodayBirthday = false)
         {
             // Getting closest birthday from user present in the server and its member info
             var user = Models.Birthday.GetNextUserToMakeBirthday(discordGuild);
@@ -118,7 +118,7 @@ namespace KWiJisho.Commands
         /// </summary>
         /// <param name="discordChannel">The Discord channel where the message will be sent.</param>
         /// <param name="discordGuild">The Discord guild containing the users.</param>
-        internal static async Task ExecuteBirthdayListAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
+        public static async Task ExecuteBirthdayListAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
         {
             // Getting list of users and their birthday
             var users = Models.Birthday.GetBirthdayList();
