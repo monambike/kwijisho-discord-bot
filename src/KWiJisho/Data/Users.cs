@@ -28,7 +28,7 @@ namespace KWiJisho.Data
             new(737573340851470348, new DateTime(2003, 03, 21), "Elizabeth", "Betty", "bettyzinha"), // darksidevision
             new(352948739029336074, new DateTime(2002, 10, 29), "Matheus", "Mello", "mellinho"), // mello4906
             new(352948739029336074, new DateTime(2004, 07, 19), "Maria", "Mari", "freirezika"), // freirezoka
-            new(737535848102363259, KWiJisho.Created.Date, "KWiJisho", "KWiJisho", "esquizobot") // KWiJisho Bot
+            new(484119743339560971, KWiJisho.Created.Date, "KWiJisho", "KWiJisho", "esquizobot") // KWiJisho Bot
         ];
     }
 }
