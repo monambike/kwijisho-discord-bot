@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>KWIJisho</name>
+        <name>KWiJisho</name>
     </assembly>
     <members>
         <member name="T:KWiJisho.APIs.CatApi">
@@ -1497,6 +1497,11 @@
             </summary>
             <returns>A <see cref="T:DSharpPlus.Entities.DiscordEmbedBuilder"/> representing the APOD information in embed format.</returns>
         </member>
+        <member name="T:KWiJisho.Scheduling.BirthdayJob">
+            <summary>
+            Represents a Quartz.NET job that executes a birthday message task.
+            </summary>
+        </member>
         <!-- Badly formed XML comment ignored for member "M:KWiJisho.Scheduling.BirthdayJob.Execute(Quartz.IJobExecutionContext)" -->
         <member name="M:KWiJisho.Scheduling.BirthdayJob.GiveBirthdayMessage">
             <summary>
@@ -1509,9 +1514,16 @@
             Provides methods for scheduling tasks.
             </summary>
         </member>
+        <member name="M:KWiJisho.Scheduling.Scheduler.CreateAllSchedulers(DSharpPlus.DiscordClient)">
+            <summary>
+            Creates all schedulers using Quartz.NET library.
+            </summary>
+            <param name="discordClient">The discord client.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous creation of the birthday scheduler.</returns>
+        </member>
         <member name="M:KWiJisho.Scheduling.Scheduler.CreateBirthdayScheduler(DSharpPlus.DiscordClient)">
             <summary>
-            Creates a birthday scheduler as part of the Quartz.NET library.
+            Creates a birthday scheduler using Quartz.NET library.
             </summary>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous creation of the birthday scheduler.</returns>
         </member>
