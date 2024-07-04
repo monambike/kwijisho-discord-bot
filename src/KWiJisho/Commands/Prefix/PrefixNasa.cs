@@ -20,14 +20,14 @@ namespace KWiJisho.Commands.Prefix
         public class PrefixNasa : BaseCommandModule
         {
             /// <summary>
-            /// Represent the command to get the APOD at its current default state.
+            /// Represent the command to get the APOD in english.
             /// </summary>
-            public PrefixCommand apod = new(nameof(apod), $"(APOD - Astronomy Picture of the Day) Te trago a imagem do dia fresquinha diretamente do site da Nasa!", Astronomy);
+            public PrefixCommand apod = new(nameof(apod), $"(APOD - Astronomy Picture of the Day) Te trago a imagem do dia fresquinha e resumida diretamente do site da Nasa!", Astronomy);
 
             /// <summary>
-            /// Represent the command to get the APOD resumed and translated to portuguese.
+            /// Represent the command to get the APOD in portuguese.
             /// </summary>
-            public PrefixCommand apodResume = new(nameof(apodResume), $"Te trago o mesmo conteúdo do comando {"!apod".ToDiscordBold()} mas resumido e traduzido pra português. Muito mais fácil e divertido de ler!", Astronomy);
+            public PrefixCommand apodPortuguese = new(nameof(apodPortuguese), $"Te trago o mesmo conteúdo do comando {"!apod".ToDiscordBold()} mas resumido e traduzido pra português!!", Astronomy);
 
             /// <summary>
             /// Represents the asynchronous prefix APOD method callend when user asks for the APOD command.
@@ -35,29 +35,29 @@ namespace KWiJisho.Commands.Prefix
             /// <param name="commandContext">The command context from the current command call.</param>
             /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
             [Command(nameof(apod))]
-            public async Task ApodAsync(CommandContext commandContext)
+            public async Task ApodEnglishAsync(CommandContext commandContext)
             {
                 // Triggering typing async so user understand that the bot is processing.
                 await commandContext.TriggerTypingAsync();
 
-                // Sending the original APOD
-                await CommandNasa.ApodAsync(commandContext.Channel);
+                // Sending the APOD in english.
+                await CommandNasa.ApodEnglishAsync(commandContext.Channel);
             }
 
             /// <summary>
-            /// Represents the asynchronous prefix APOD resume method callend when user asks for the APOD resume command.
+            /// Represents the asynchronous prefix APOD in portuguese method called when user asks for the APOD in portuguese command.
             /// </summary>
             /// <param name="commandContext">The command context from the current command call.</param>
             /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
             /// <returns></returns>
-            [Command(nameof(apodResume))]
-            public async Task ApodResumeAsync(CommandContext commandContext)
+            [Command(nameof(apodPortuguese))]
+            public async Task ApodPortugueseAsync(CommandContext commandContext)
             {
                 // Triggering typing async so user understand that the bot is processing.
                 await commandContext.TriggerTypingAsync();
 
-                // Sending the APOD resume
-                await CommandNasa.ApodResumeAsync(commandContext.Channel);
+                // Sending the APOD in portuguese.
+                await CommandNasa.ApodPortugueseAsync(commandContext.Channel);
             }
         }
     }

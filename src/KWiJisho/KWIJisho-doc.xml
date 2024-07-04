@@ -253,16 +253,16 @@
             Provides methods for NASA prefix and slash commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.CommandNasa.ApodAsync(DSharpPlus.Entities.DiscordChannel)">
+        <member name="M:KWiJisho.Commands.CommandNasa.ApodEnglishAsync(DSharpPlus.Entities.DiscordChannel)">
             <summary>
-            Retrieves and sends the Astronomy Picture of the Day (APOD) to the specified Discord channel.
+            Retrieves and sends the english version of the Astronomy Picture of the Day (APOD) to the specified Discord channel.
             </summary>
             <param name="discordChannel">The Discord channel where the APOD message will be sent.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
         </member>
-        <member name="M:KWiJisho.Commands.CommandNasa.ApodResumeAsync(DSharpPlus.Entities.DiscordChannel)">
+        <member name="M:KWiJisho.Commands.CommandNasa.ApodPortugueseAsync(DSharpPlus.Entities.DiscordChannel)">
             <summary>
-            Retrieves and sends the translated version of the Astronomy Picture of the Day (APOD) to the specified Discord channel.
+            Retrieves and sends the portuguese version of the Astronomy Picture of the Day (APOD) to the specified Discord channel.
             </summary>
             <param name="discordChannel">The Discord channel where the translated APOD message will be sent.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
@@ -564,24 +564,24 @@
         </member>
         <member name="F:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa.apod">
             <summary>
-            Represent the command to get the APOD at its current default state.
+            Represent the command to get the APOD in english.
             </summary>
         </member>
-        <member name="F:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa.apodResume">
+        <member name="F:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa.apodPortuguese">
             <summary>
-            Represent the command to get the APOD resumed and translated to portuguese.
+            Represent the command to get the APOD in portuguese.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodAsync(DSharpPlus.CommandsNext.CommandContext)">
+        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodEnglishAsync(DSharpPlus.CommandsNext.CommandContext)">
             <summary>
             Represents the asynchronous prefix APOD method callend when user asks for the APOD command.
             </summary>
             <param name="commandContext">The command context from the current command call.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
         </member>
-        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodResumeAsync(DSharpPlus.CommandsNext.CommandContext)">
+        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixNasa.ApodPortugueseAsync(DSharpPlus.CommandsNext.CommandContext)">
             <summary>
-            Represents the asynchronous prefix APOD resume method callend when user asks for the APOD resume command.
+            Represents the asynchronous prefix APOD in portuguese method called when user asks for the APOD in portuguese command.
             </summary>
             <param name="commandContext">The command context from the current command call.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
@@ -1417,14 +1417,37 @@
             Asynchronously builds a english apod message with the apod response.
             </summary>
             <param name="apodResponse">The APOD response content to build the embed.</param>
-            <returns>The <see cref="T:DSharpPlus.Entities.DiscordEmbedBuilder"/>.</returns>
+            <returns>The <see cref="T:KWiJisho.Models.Nasa.ApodBuilder"/>.</returns>
         </member>
         <member name="M:KWiJisho.Models.Nasa.BuildPortugueseApodMessageAsync(KWiJisho.APIs.NasaApi.Apod.ApodResponse)">
             <summary>
             Asynchronously builds a portuguese apod message with the apod response.
             </summary>
             <param name="apodResponse">The APOD response content to build the embed.</param>
-            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> containing the <see cref="T:DSharpPlus.Entities.DiscordEmbedBuilder"/>.</returns>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> containing the <see cref="T:KWiJisho.Models.Nasa.ApodBuilder"/>.</returns>
+        </member>
+        <member name="M:KWiJisho.Models.Nasa.BuildApodMessageAsync(KWiJisho.Models.Nasa.ApodLanguage,KWiJisho.APIs.NasaApi.Apod.ApodResponse)">
+            <summary>
+            Asynchronously builds a apod message with the apod response in the specified language.
+            </summary>
+            <param name="apodResponse">The APOD response content to build the embed.</param>
+            <param name="apodLanguage">The language retrieved by the APOD.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task`1"/> containing the <see cref="T:KWiJisho.Models.Nasa.ApodBuilder"/>.</returns>
+        </member>
+        <member name="T:KWiJisho.Models.Nasa.ApodLanguage">
+            <summary>
+            The languages avaiable for translating the APOD.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Models.Nasa.ApodLanguage.Portuguese">
+            <summary>
+            The portuguese language.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Models.Nasa.ApodLanguage.English">
+            <summary>
+            The english language.
+            </summary>
         </member>
         <member name="T:KWiJisho.Models.Nasa.ApodBuilder">
             <summary>
