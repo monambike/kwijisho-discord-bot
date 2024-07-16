@@ -44,10 +44,10 @@ namespace KWiJisho.Commands
         /// <param name="discordGuild">The Discord guild containing the users.</param>
         public static async Task ExecuteNextBirthdayAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
         {
-            await SendBirthdayMessage(discordChannel, discordGuild);
+            await SendBirthdayMessageAsync(discordChannel, discordGuild);
         }
 
-        public static async Task SendBirthdayMessage(DiscordChannel discordChannel, DiscordGuild discordGuild, bool sendOnlyIfTodayBirthday = false)
+        public static async Task SendBirthdayMessageAsync(DiscordChannel discordChannel, DiscordGuild discordGuild, bool sendOnlyIfTodayBirthday = false)
         {
             // Getting closest birthday from user present in the server and its member info
             var user = Models.Birthday.GetNextUserToMakeBirthday(discordGuild);
@@ -56,7 +56,7 @@ namespace KWiJisho.Commands
             if (user is null)
             {
                 // Sends the message.
-                await SendMessageBirthdayUserNotFound(discordChannel);
+                await SendMessageBirthdayUserNotFoundAsync(discordChannel);
                 // Return to the method.
                 return;
             }
@@ -68,7 +68,7 @@ namespace KWiJisho.Commands
             if (discordMember is null)
             {
                 // Sends the message that birthday user wasn't found.
-                await SendMessageBirthdayUserNotFound(discordChannel);
+                await SendMessageBirthdayUserNotFoundAsync(discordChannel);
                 // Return to the method.
                 return;
             }
@@ -85,7 +85,7 @@ namespace KWiJisho.Commands
             }
 
             // Generates birthday message according how many days are remaining for its birthday.
-            var message = await Models.Birthday.GenerateBirthdayMessage(user);
+            var message = await Models.Birthday.GenerateBirthdayMessageAsync(user);
 
             // Gets the image name and image's full path.
             var fileName = $"500x500-happybirthday-{upcomingDate.ToString().ToLower()}.png";
@@ -163,7 +163,7 @@ namespace KWiJisho.Commands
             await discordChannel.SendMessageAsync(discordEmbedBuilder);
         }
 
-        private static async Task SendMessageBirthdayUserNotFound(DiscordChannel discordChannel) =>
+        private static async Task SendMessageBirthdayUserNotFoundAsync(DiscordChannel discordChannel) =>
             await discordChannel.SendMessageAsync("Eu sinto muito.. :( eu não consegui encontrar nesse servidor o próximo usuário da lista a fazer aniversário.");
     }
 }

@@ -22,7 +22,7 @@ namespace KWiJisho.Commands
 
         public static async Task ApodEnglishAsync(DiscordChannel discordChannel)
         {
-            await Apod(discordChannel, ApodLanguage.English);
+            await ApodAsync(discordChannel, ApodLanguage.English);
         }
         
         /// <summary>
@@ -32,10 +32,10 @@ namespace KWiJisho.Commands
         /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         public static async Task ApodPortugueseAsync(DiscordChannel discordChannel)
         {
-            await Apod(discordChannel, ApodLanguage.Portuguese);
+            await ApodAsync(discordChannel, ApodLanguage.Portuguese);
         }
 
-        private static async Task Apod(DiscordChannel discordChannel, ApodLanguage apodLanguage)
+        private static async Task ApodAsync(DiscordChannel discordChannel, ApodLanguage apodLanguage)
         {
             // Getting the Astronomy Picture of the Day.
             var response = await GetApodAsync();

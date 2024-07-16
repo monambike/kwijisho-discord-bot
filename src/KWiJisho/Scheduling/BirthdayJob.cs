@@ -28,7 +28,7 @@ namespace KWiJisho.Scheduling
             await KWiJishoLogs.DefaultLog.AddInfoAsync(KWiJishoLog.Module.Birthday, "Executing birthday job.");
             var dataMap = context.MergedJobDataMap;
             _client = (DiscordClient) dataMap.Get("DiscordClient");
-            await GiveBirthdayMessage();
+            await GiveBirthdayMessageAsync();
             await KWiJishoLogs.DefaultLog.AddInfoAsync(KWiJishoLog.Module.Birthday, "Finished birthday job.");
         }
 
@@ -36,7 +36,7 @@ namespace KWiJisho.Scheduling
         /// Sends a birthday message as an asynchronous task.
         /// </summary>
         /// <returns>A <see cref="Task"/> representing the asynchronous execution of the birthday message task.</returns>
-        private async Task GiveBirthdayMessage()
+        private async Task GiveBirthdayMessageAsync()
         {
             // Retrieve the server details for Tramontina
             var server = Servers.Tramontina;
@@ -51,7 +51,7 @@ namespace KWiJisho.Scheduling
             var discordChannel = serverGuild.GetChannel(server.GeneralChannelId);
 
             // Send the birthday message to the retrieved discord channel and server guild
-            await CommandBirthday.SendBirthdayMessage(discordChannel, serverGuild, true);
+            await CommandBirthday.SendBirthdayMessageAsync(discordChannel, serverGuild, true);
         }
     }
 }

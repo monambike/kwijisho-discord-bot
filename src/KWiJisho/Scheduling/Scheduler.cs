@@ -19,17 +19,17 @@ namespace KWiJisho.Scheduling
         /// </summary>
         /// <param name="discordClient">The discord client.</param>
         /// <returns>A <see cref="Task"/> representing the asynchronous creation of the birthday scheduler.</returns>
-        public static async Task CreateAllSchedulers(DiscordClient discordClient)
+        public static async Task CreateAllSchedulersAsync(DiscordClient discordClient)
         {
             // Creating birthday scheduler.
-            await CreateBirthdayScheduler(discordClient);
+            await CreateBirthdaySchedulerAsync(discordClient);
         }
 
         /// <summary>
         /// Creates a birthday scheduler using Quartz.NET library.
         /// </summary>
         /// <returns>A <see cref="Task"/> representing the asynchronous creation of the birthday scheduler.</returns>
-        public static async Task CreateBirthdayScheduler(DiscordClient discordClient)
+        public static async Task CreateBirthdaySchedulerAsync(DiscordClient discordClient)
         {
             // Creating and starting a scheduler.
             var scheduler = await StdSchedulerFactory.GetDefaultScheduler();

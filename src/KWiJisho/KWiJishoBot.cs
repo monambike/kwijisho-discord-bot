@@ -98,7 +98,7 @@ namespace KWiJisho
             RegisterSlashCommandsPermissions();
 
             // Creating all schedulers for application jobs.
-            await Scheduler.CreateAllSchedulers(DiscordClient);
+            await Scheduler.CreateAllSchedulersAsync(DiscordClient);
 
             // Instantiating all application logs.
             KWiJishoLogs.InstantiateAllLogs(DiscordClient);
