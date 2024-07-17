@@ -2,15 +2,14 @@
 // Contact: @monambike for more information.
 // For license information, please see the LICENSE file in the root directory.
 
-using SQLite;
-
-namespace KWiJisho.Database.Data
+namespace KWiJisho.Database.DTO
 {
-    [Table("Log")]
-    public class Log
+    public class ServerDTO
     {
-        public int LogId { get; set; }
+        public int ServerId { get; set; }
 
-        public string Content { get; set; }
+        public ulong ServerGuid { get; set; }
+
+        public string Name { get; set; }
     }
 }

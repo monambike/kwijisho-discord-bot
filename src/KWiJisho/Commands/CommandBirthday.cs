@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace KWiJisho.Commands
@@ -137,7 +138,7 @@ namespace KWiJisho.Commands
                 var usersBirthdayThisMonth = users.Where(user => user.Birthday.Month == month.Key);
 
                 // Building a string that will hold all users that will make birthday at current month.
-                var usersBirthdayThisMonthString = string.Empty;
+                var usersBirthdayThisMonthBuilder = new StringBuilder();
                 foreach (var userBirthdayThisMonth in usersBirthdayThisMonth)
                 {
                     // Getting discord member information
@@ -148,15 +149,15 @@ namespace KWiJisho.Commands
                         var nickname = member.DisplayName == member.Username ? member.DisplayName : $"{member.DisplayName}, {member.Username}";
 
                         // Formatting user field with name and birthday month and day.
-                        usersBirthdayThisMonthString += $"{userBirthdayThisMonth.Birthday:dd/MM} - {userBirthdayThisMonth.FirstName} ({nickname}){Environment.NewLine}";
+                        usersBirthdayThisMonthBuilder.AppendLine($"{userBirthdayThisMonth.Birthday:dd/MM} - {userBirthdayThisMonth.FirstName} ({nickname})");
                     }
                 }
 
                 // If wasn't found no users or there's no birthday users this month, go to the next month.
-                if (string.IsNullOrEmpty(usersBirthdayThisMonthString)) continue;
+                if (string.IsNullOrEmpty(usersBirthdayThisMonthBuilder.ToString())) continue;
 
                 // Adding field with all birthday users of this month.
-                discordEmbedBuilder.AddField($"Aniversariantes de {month.Value.ToUpper()}", usersBirthdayThisMonthString);
+                discordEmbedBuilder.AddField($"Aniversariantes de {month.Value.ToUpper()}", usersBirthdayThisMonthBuilder.ToString());
             }
 
             // Sending the builded embed message

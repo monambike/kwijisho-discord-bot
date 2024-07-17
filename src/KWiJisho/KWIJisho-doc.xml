@@ -171,21 +171,21 @@
             Provides methods for basic prefix and slash commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.CommandBasic.ExecuteRandomAnimatedEmoji(DSharpPlus.Entities.DiscordChannel)">
+        <member name="M:KWiJisho.Commands.CommandBasic.ExecuteRandomAnimatedEmojiAsync(DSharpPlus.Entities.DiscordChannel)">
             <summary>
             Sends a random animated emoji from <see cref="F:KWiJisho.Data.DiscordEmojis.AnimatedEmojis"/>.
             </summary>
             <param name="discordChannel">The discord channel where the command will be executed.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
         </member>
-        <member name="M:KWiJisho.Commands.CommandBasic.ExecuteRandomAnimatedMemeEmoji(DSharpPlus.Entities.DiscordChannel)">
+        <member name="M:KWiJisho.Commands.CommandBasic.ExecuteRandomAnimatedMemeEmojiAsync(DSharpPlus.Entities.DiscordChannel)">
             <summary>
             Sends a random animated emoji from <see cref="F:KWiJisho.Data.DiscordEmojis.AnimatedMemeEmojis"/>.
             </summary>
             <param name="discordChannel">The discord channel where the command will be executed.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
         </member>
-        <member name="M:KWiJisho.Commands.CommandBasic.ExecuteRandomAnimatedPartyEmoji(DSharpPlus.Entities.DiscordChannel)">
+        <member name="M:KWiJisho.Commands.CommandBasic.ExecuteRandomAnimatedPartyEmojiAsync(DSharpPlus.Entities.DiscordChannel)">
             <summary>
             Sends a random animated emoji from <see cref="F:KWiJisho.Data.DiscordEmojis.AnimatedPartyEmojis"/>.
             </summary>
@@ -419,21 +419,21 @@
             Represents the command to send a random animated party emoji.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomAnimatedEmoji(DSharpPlus.CommandsNext.CommandContext)">
+        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomAnimatedEmojiAsync(DSharpPlus.CommandsNext.CommandContext)">
             <summary>
             Represents the asynchronous prefix send random animated emoji method called when sending a random animated emoji.
             </summary>
             <param name="commandContext">The command context from the current command call.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
         </member>
-        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomMemeEmoji(DSharpPlus.CommandsNext.CommandContext)">
+        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomMemeEmojiAsync(DSharpPlus.CommandsNext.CommandContext)">
             <summary>
             Represents the asynchronous prefix send random animated meme emoji method called when sending a random meme animated emoji.
             </summary>
             <param name="commandContext">The command context from the current command call.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
         </member>
-        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomPartyEmoji(DSharpPlus.CommandsNext.CommandContext)">
+        <member name="M:KWiJisho.Commands.Prefix.PrefixCommandManager.PrefixBasic.SendRandomPartyEmojiAsync(DSharpPlus.CommandsNext.CommandContext)">
             <summary>
             Represents the asynchronous prefix send random animated party emoji method called when sending a random party animated emoji.
             </summary>
@@ -728,17 +728,17 @@
             Represents a set of emoji slash commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Slash.SlashBasic.Emoji.ExecuteSlashRandomAnimatedEmoji(DSharpPlus.SlashCommands.InteractionContext)">
+        <member name="M:KWiJisho.Commands.Slash.SlashBasic.Emoji.ExecuteSlashRandomAnimatedEmojiAsync(DSharpPlus.SlashCommands.InteractionContext)">
             <summary>
             Represents the command to send a random animated emoji.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Slash.SlashBasic.Emoji.ExecuteSlashRandomAnimatedMemeEmoji(DSharpPlus.SlashCommands.InteractionContext)">
+        <member name="M:KWiJisho.Commands.Slash.SlashBasic.Emoji.ExecuteSlashRandomAnimatedMemeEmojiAsync(DSharpPlus.SlashCommands.InteractionContext)">
             <summary>
             Represents the command to send a random animated meme emoji.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.Slash.SlashBasic.Emoji.ExecuteSlashRandomAnimatedPartyEmoji(DSharpPlus.SlashCommands.InteractionContext)">
+        <member name="M:KWiJisho.Commands.Slash.SlashBasic.Emoji.ExecuteSlashRandomAnimatedPartyEmojiAsync(DSharpPlus.SlashCommands.InteractionContext)">
             <summary>
             Represents the command to send a random animated party emoji.
             </summary>
@@ -918,6 +918,21 @@
             Gets the calculated birthday for Karen Kujo. Karen Kujo was born on December 1st,
             and the age is fixed at 15 years.
             The property provides the current date with the year adjusted to maintain the age of 15.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Data.NotificationMessages">
+            <summary>
+            Notification service messages for welcome, goodbye and boost.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Data.NotificationMessages.WelcomeMessages">
+            <summary>
+            Welcome messages for notification service.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Data.NotificationMessages.GoodbyeMessages">
+            <summary>
+            Goodbye messages for notification service.
             </summary>
         </member>
         <member name="T:KWiJisho.Data.DiscordUsers">
@@ -1220,13 +1235,13 @@
             <param name="e">Event arguments containing information about the component interaction.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
         </member>
-        <member name="T:KWiJisho.Events.GoodbyeWelcome">
+        <member name="T:KWiJisho.Events.EventNotificationService">
             <summary>
             Provides a set of events and methods fired when a user enters and leaves a discord
             server.
             </summary>
         </member>
-        <member name="M:KWiJisho.Events.GoodbyeWelcome.OnGuildMemberAddedAsync(DSharpPlus.DiscordClient,DSharpPlus.EventArgs.GuildMemberAddEventArgs)">
+        <member name="M:KWiJisho.Events.EventNotificationService.OnGuildMemberAddedAsync(DSharpPlus.DiscordClient,DSharpPlus.EventArgs.GuildMemberAddEventArgs)">
             <summary>
             Handles the event when a new member joins the Discord server. Sends a welcome message
             with a image and a random string.
@@ -1235,7 +1250,7 @@
             <param name="e">Event arguments containing information about the guild member.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the assynchronous operation.</returns>
         </member>
-        <member name="M:KWiJisho.Events.GoodbyeWelcome.OnGuildMemberRemovedAsync(DSharpPlus.DiscordClient,DSharpPlus.EventArgs.GuildMemberRemoveEventArgs)">
+        <member name="M:KWiJisho.Events.EventNotificationService.OnGuildMemberRemovedAsync(DSharpPlus.DiscordClient,DSharpPlus.EventArgs.GuildMemberRemoveEventArgs)">
             <summary>
             Handles the event when a member leaves the Discord server. Sends a goodbye message
             with a image and a random string.
@@ -1244,19 +1259,27 @@
             <param name="e">Events arguments containing information about the guild member.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the assynchronous operation.</returns>
         </member>
-        <member name="M:KWiJisho.Events.GoodbyeWelcome.GetRandomWelcomeMessage(System.String)">
+        <member name="M:KWiJisho.Events.EventNotificationService.GetRandomWelcomeMessage(System.String)">
             <summary>
             Gets a random string welcome message.
             </summary>
             <param name="user">The user that will receive the welcome message.</param>
             <returns>The string containing the welcome message .</returns>
         </member>
-        <member name="M:KWiJisho.Events.GoodbyeWelcome.GetRandomGoodbyeMessage(System.String)">
+        <member name="M:KWiJisho.Events.EventNotificationService.GetRandomGoodbyeMessage(System.String)">
             <summary>
             Gets a random string goodbye message.
             </summary>
             <param name="user">The user that will receive the welcome message.</param>
             <returns>The string containing the goodbye message .</returns>
+        </member>
+        <member name="M:KWiJisho.Events.EventNotificationService.GetRandomMessage(System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            Gets a random string for any provided message type.
+            </summary>
+            <param name="messages">The message list.</param>
+            <param name="user">The user that will be part of the provided message type</param>
+            <returns>The string containing the message.</returns>
         </member>
         <member name="T:KWiJisho.Events.KWiJishoBotStart">
             <summary>
@@ -1366,7 +1389,7 @@
             <param name="discordGuild"></param>
             <returns>Returns the <see cref="T:KWiJisho.Entities.User"/> if avaiable in current Discord server; otherwise, returns <see langword="null"/>.</returns>
         </member>
-        <member name="M:KWiJisho.Models.Birthday.GenerateBirthdayMessage(KWiJisho.Entities.User)">
+        <member name="M:KWiJisho.Models.Birthday.GenerateBirthdayMessageAsync(KWiJisho.Entities.User)">
             <summary>
             Method responsible for generating a birthday message.
             </summary>
@@ -1526,7 +1549,7 @@
             </summary>
         </member>
         <!-- Badly formed XML comment ignored for member "M:KWiJisho.Scheduling.BirthdayJob.Execute(Quartz.IJobExecutionContext)" -->
-        <member name="M:KWiJisho.Scheduling.BirthdayJob.GiveBirthdayMessage">
+        <member name="M:KWiJisho.Scheduling.BirthdayJob.GiveBirthdayMessageAsync">
             <summary>
             Sends a birthday message as an asynchronous task.
             </summary>
@@ -1537,14 +1560,14 @@
             Provides methods for scheduling tasks.
             </summary>
         </member>
-        <member name="M:KWiJisho.Scheduling.Scheduler.CreateAllSchedulers(DSharpPlus.DiscordClient)">
+        <member name="M:KWiJisho.Scheduling.Scheduler.CreateAllSchedulersAsync(DSharpPlus.DiscordClient)">
             <summary>
             Creates all schedulers using Quartz.NET library.
             </summary>
             <param name="discordClient">The discord client.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous creation of the birthday scheduler.</returns>
         </member>
-        <member name="M:KWiJisho.Scheduling.Scheduler.CreateBirthdayScheduler(DSharpPlus.DiscordClient)">
+        <member name="M:KWiJisho.Scheduling.Scheduler.CreateBirthdaySchedulerAsync(DSharpPlus.DiscordClient)">
             <summary>
             Creates a birthday scheduler using Quartz.NET library.
             </summary>

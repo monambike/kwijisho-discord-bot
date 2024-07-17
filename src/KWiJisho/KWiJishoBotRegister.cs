@@ -57,6 +57,7 @@ namespace KWiJisho
             // Registering discord bot slash commands.
             SlashCommands.RegisterCommands<SlashBasic>(guildId);
             SlashCommands.RegisterCommands<SlashBirthday>(guildId);
+            SlashCommands.RegisterCommands<SlashConfig>(guildId);
             SlashCommands.RegisterCommands<SlashInfo>(guildId);
             SlashCommands.RegisterCommands<SlashKwiGpt>(guildId);
             SlashCommands.RegisterCommands<SlashNasa>(guildId);
@@ -73,8 +74,8 @@ namespace KWiJisho
             // Registering other Discord bot events.
             DiscordClient.Ready += async (client, readyEventArgs) => await DiscordClient.UpdateStatusAsync(DiscordActivity);
             DiscordClient.ComponentInteractionCreated += ButtonInteraction.OnComponentInteractionCreatedAsync;
-            DiscordClient.GuildMemberAdded += GoodbyeWelcome.OnGuildMemberAddedAsync;
-            DiscordClient.GuildMemberRemoved += GoodbyeWelcome.OnGuildMemberRemovedAsync;
+            DiscordClient.GuildMemberAdded += EventNotificationService.OnGuildMemberAddedAsync;
+            DiscordClient.GuildMemberRemoved += EventNotificationService.OnGuildMemberRemovedAsync;
         }
 
         /// <summary>

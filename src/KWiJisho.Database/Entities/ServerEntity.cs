@@ -4,15 +4,15 @@
 
 using SQLite;
 
-namespace KWiJisho.Database.Data
+namespace KWiJisho.Database.Entities
 {
-    [Table("ServerRole")]
-    public class ServerRole
+    [Table("Server")]
+    public class ServerEntity
     {
-        public int ServerRoleId { get; set; }
-
-        public ulong BirthdayRoleGuid { get; set; }
-
         public int ServerId { get; set; }
+
+        public ulong ServerGuid { get; set; }
+
+        public string Name { get; set; }
     }
 }

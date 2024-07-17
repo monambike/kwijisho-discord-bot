@@ -2,14 +2,12 @@
 // Contact: @monambike for more information.
 // For license information, please see the LICENSE file in the root directory.
 
-namespace KWiJisho.Database.Models
+namespace KWiJisho.Database.DTO
 {
-    public class ServerRole
+    public class LogDTO
     {
-        public int ServerRoleId { get; set; }
+        public int LogId { get; set; }
 
-        public ulong BirthdayRoleGuid { get; set; }
-
-        public Server ServerId { get; set; }
+        public string Content { get; set; }
     }
 }

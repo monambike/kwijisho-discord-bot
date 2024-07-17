@@ -2,12 +2,9 @@
 // Contact: @monambike for more information.
 // For license information, please see the LICENSE file in the root directory.
 
-using SQLite;
-
-namespace KWiJisho.Database.Data
+namespace KWiJisho.Database.DTO
 {
-    [Table("ServerChannel")]
-    public class ServerChannel
+    public class ServerChannelDTO
     {
         public int ServerChannelId { get; set; }
 
@@ -19,6 +16,6 @@ namespace KWiJisho.Database.Data
 
         public ulong LogChannelGuid { get; set; }
 
-        public int ServerId { get; set; }
+        public ServerDTO Server { get; set; }
     }
 }

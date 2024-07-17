@@ -2,7 +2,9 @@
 // Contact: @monambike for more information.
 // For license information, please see the LICENSE file in the root directory.
 
-using KWiJisho.Database.Data;
+using KWiJisho.Database.Config;
+using KWiJisho.Database.Entities;
+using SQLite;
 
 namespace KWiJisho.Database.Services
 {
@@ -19,14 +21,14 @@ namespace KWiJisho.Database.Services
         /// A Task that represents the asynchronous operation. The task result contains 
         /// the first matching ServerRole, or null if no match is found.
         /// </returns>
-        public static async Task<ServerRole?> GetServerRolesByServerId(int serverId)
+        public static async Task<ServerRoleEntity?> GetServerRolesByServerId(int serverId)
         {
             // Establish a connection to the SQLite database asynchronously.
-            var db = new Connection().SQLiteAsyncConnection;
+            var connection = new SQLiteAsyncConnection(ConnectionConfig.DatabasePath);
 
             // Query the ServerRole table for entries matching the specified serverId,
             // and retrieve the results as a list asynchronously.
-            var result = await db.Table<ServerRole>()
+            var result = await connection.Table<ServerRoleEntity>()
                 .Where(serverRole => serverRole.ServerId == serverId)
                 .ToListAsync();
 

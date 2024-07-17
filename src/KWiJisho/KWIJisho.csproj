@@ -225,4 +225,10 @@ Social: @monambike | Webiste: https://monambike.com</Description>
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KWiJisho.Database\KWiJisho.Database.csproj" />
+  </ItemGroup>
 </Project>

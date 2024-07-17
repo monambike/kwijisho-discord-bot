@@ -4,15 +4,13 @@
 
 using SQLite;
 
-namespace KWiJisho.Database.Data
+namespace KWiJisho.Database.Entities
 {
-    [Table("Server")]
-    public class Server
+    [Table("Log")]
+    public class LogEntity
     {
-        public int ServerId { get; set; }
+        public int LogId { get; set; }
 
-        public ulong ServerGuid { get; set; }
-
-        public string Name { get; set; }
+        public string Content { get; set; }
     }
 }

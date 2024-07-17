@@ -115,5 +115,13 @@ namespace KWiJisho
             // disconnecting when method ends.
             await Task.Delay(-1);
         }
+
+        private void UpdateGuildsOnDatabase()
+        {
+            foreach (var guild in DiscordClient.Guilds)
+            {
+
+            }
+        }
     }
 }

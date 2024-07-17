@@ -2,9 +2,12 @@
 // Contact: @monambike for more information.
 // For license information, please see the LICENSE file in the root directory.
 
-namespace KWiJisho.Database.Models
+using SQLite;
+
+namespace KWiJisho.Database.Entities
 {
-    public class User
+    [Table("User")]
+    public class UserEntity
     {
         public int UserId { get; set; }
 
@@ -12,6 +15,6 @@ namespace KWiJisho.Database.Models
 
         public string Username { get; set; }
 
-        public DateTime Birthday { get; set; }
+        public string? Birthday { get; set; }
     }
 }
