@@ -13,7 +13,7 @@ namespace KWiJisho.Events
     /// <summary>
     /// Provides a set of events and methods fired when a interaction is made.
     /// </summary>
-    public class ButtonInteraction
+    public class DiscordInteractionHandler
     {
         /// <summary>
         /// Handles the event when a component interaction is created, like button clicks.

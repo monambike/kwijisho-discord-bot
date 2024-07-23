@@ -10,7 +10,7 @@ namespace KWiJisho.Events
     /// <summary>
     /// Provides a set of events and methods fired when bot starts.
     /// </summary>
-    public class KWiJishoBotStart
+    public class DiscordBotStart
     {
         /// <summary>
         /// Handles the events when the bot's client is ready.

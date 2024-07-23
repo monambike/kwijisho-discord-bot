@@ -19,7 +19,7 @@ namespace KWiJisho.Events
     /// Provides a set of events and methods fired when a user enters and leaves a discord
     /// server.
     /// </summary>
-    public class EventNotificationService
+    public class DiscordTriggerHandler
     {
         /// <summary>
         /// Handles the event when a new member joins the Discord server. Sends a welcome message
