@@ -5,13 +5,15 @@
 using DSharpPlus;
 using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
-using KWiJisho.Config;
 using KWiJisho.Data;
+using KWiJisho.Entities;
 using KWiJisho.Utils;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
+using ConfigJson = KWiJisho.Config.ConfigJson;
 
 namespace KWiJisho.Events
 {
@@ -19,7 +21,7 @@ namespace KWiJisho.Events
     /// Provides a set of events and methods fired when a user enters and leaves a discord
     /// server.
     /// </summary>
-    public class DiscordTriggerHandler
+    public class DiscordGuildHandler
     {
         /// <summary>
         /// Handles the event when a new member joins the Discord server. Sends a welcome message
@@ -31,25 +33,14 @@ namespace KWiJisho.Events
         public static async Task OnGuildMemberAddedAsync(DiscordClient sender, GuildMemberAddEventArgs e)
         {
             ArgumentNullException.ThrowIfNull(sender);
-            // Getting welcome image info.
-            var fileName = $"500x500-welcome.gif";
-            var imagePath = Path.GetFullPath($"Resources/Images/Tramontina/{fileName}");
 
-            // Making the Discord Embed Builder with the message body.
-            var discordEmbedBuilder = new DiscordEmbedBuilder
-            {
-                Title = $"BEM-VINDO",
-                Description = GetRandomWelcomeMessage(e.Member.Mention),
-                Color = ConfigJson.DefaultColor.DiscordColor
-            }.WithImageUrl($"attachment://{imagePath}").Build();
+            var welcomeBuilder = new GuildEvents().WelcomeBuilder;
+            welcomeBuilder.UpdateDescription(e.Member);
 
-            using var fileStream = new FileStream(imagePath, FileMode.Open);
-            // Creating message builder and attaching the message embed builder and image file.
-            var discordMessageBuilder = new DiscordMessageBuilder()
-                .AddEmbed(discordEmbedBuilder).AddFile(fileName, fileStream);
+            var discordMessageBuilder = CreateDiscordMessageBuilder(welcomeBuilder);
 
             // Sending the message on welcome channel.
-            await e.Guild.GetChannel(Servers.Tramontina.WelcomeChannelId).SendMessageAsync(discordMessageBuilder);
+            await e.Guild.GetChannel(Servers.Personal.WelcomeChannelId).SendMessageAsync(discordMessageBuilder);
         }
 
         /// <summary>
@@ -64,25 +55,60 @@ namespace KWiJisho.Events
             // If senders is null throws an exception.
             ArgumentNullException.ThrowIfNull(sender);
 
-            // Getting welcome image info.
-            var fileName = $"1173x315-goodbye.png";
-            var imagePath = Path.GetFullPath($"Resources/Images/Tramontina/{fileName}");
+            var goodbyeBuilder = new GuildEvents().GoodbyeBuilder;
+            goodbyeBuilder.UpdateDescription(e.Member);
 
+            var discordMessageBuilder = CreateDiscordMessageBuilder(goodbyeBuilder);
+
+            // Sending the message on welcome channel
+            await e.Guild.GetChannel(Servers.Personal.WelcomeChannelId).SendMessageAsync(discordMessageBuilder);
+        }
+
+        public static DiscordMessageBuilder CreateDiscordMessageBuilder(GuildEventEmbedBuilder builderGuildAction)
+        {
             // Making the discord embed builder with the message body content and image file.
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
-                Title = @$"""ACHO QUE ISSO É UM ADEUS""",
-                Description = GetRandomGoodbyeMessage(e.Member.Mention),
-                Color = ConfigJson.DefaultColor.DiscordColor
-            }.WithImageUrl($"attachment://{imagePath}").Build();
+                Title = builderGuildAction.Title,
+                Description = builderGuildAction.Description,
+                Color = ConfigJson.DefaultColor.DiscordColor,
+                Footer = new DiscordEmbedBuilder.EmbedFooter
+                {
+                    Text = $"Username: {builderGuildAction.DiscordUser.Username} • Id: {builderGuildAction.DiscordUser.Id} • Date: {DateTime.Now:dd/MM/yyyy HH:mm:ss}",
+                }
+            }
+            .WithThumbnail(builderGuildAction.DiscordUser.AvatarUrl)
+            .WithImageUrl(builderGuildAction.ImageUrl).Build();
 
-            using var fileStream = new FileStream(imagePath, FileMode.Open);
             // Creating message builder and attaching the message embed builder and image file.
             var discordMessageBuilder = new DiscordMessageBuilder()
-                .AddEmbed(discordEmbedBuilder).AddFile(fileName, fileStream);
+                .AddEmbed(discordEmbedBuilder);
 
-            // Sending the message on welcome channel
-            await e.Guild.GetChannel(Servers.Tramontina.WelcomeChannelId).SendMessageAsync(discordMessageBuilder);
+            return discordMessageBuilder;
+
+        }
+
+        public enum EventType
+        {
+            /// <summary>
+            /// Welcome event.
+            /// </summary>
+            Welcome,
+
+            /// <summary>
+            /// Goodbye event.
+            /// </summary>
+            Goodbye
+        }
+
+        public static string GetRandomMessageByType(EventType updateType, string user)
+        {
+            return updateType switch
+            {
+                EventType.Welcome => GetRandomWelcomeMessage(user),
+                EventType.Goodbye => GetRandomGoodbyeMessage(user),
+                _ => throw new NotImplementedException()
+            };
         }
 
         /// <summary>
