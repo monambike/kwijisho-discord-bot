@@ -28,15 +28,8 @@ namespace KWiJisho.Commands
             // Getting response from the prompt
             var response = await ChatGPT.GetKWiJishoPromptAsync(userInput);
 
-            // Adding the prompt into a embed builder.
-            var discordEmbedBuilder = new DiscordEmbedBuilder
-            {
-                Description = response,
-                Color = ConfigJson.DefaultColor.DiscordColor
-            };
-
             // Sending the response to the user.
-            await discordChannel.SendMessageAsync(discordEmbedBuilder);
+            await discordChannel.SendMessageAsync(response);
         }
     }
 }
