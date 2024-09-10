@@ -10,7 +10,7 @@ namespace KWiJisho.Events
     /// <summary>
     /// Provides a set of events and methods for when a message is received.
     /// </summary>
-    public class KWiJishoMessageReceived
+    public class DiscordMessageHandler
     {
         //    public static async Task OnMessageReceivedAsync(DiscordClient sender, MessageCreateEventArgs e)
         //    {
