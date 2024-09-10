@@ -157,7 +157,8 @@ namespace KWiJisho.Commands
                 }
             }
             .WithThumbnail($"attachment://{fileName}")
-            .WithImageUrl(discordMember.AvatarUrl).Build();
+            .WithImageUrl(discordMember.AvatarUrl)
+            .Build();
 
             using var fileStream = new FileStream(imagePath, FileMode.Open);
             // Attachs file and embed to the message and sending it to the discord channel.
