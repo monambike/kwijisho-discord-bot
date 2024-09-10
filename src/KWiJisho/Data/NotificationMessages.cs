@@ -14,7 +14,7 @@ namespace KWiJisho.Data
         /// <summary>
         /// Welcome messages for notification service.
         /// </summary>
-        public static List<string> WelcomeMessages =
+        public static List<string> WelcomeMessages =>
         [
             "EAEEEEEE, Bem-vindo ao servidor {user} meu consagrado! ;D",
             "SEJA BEM V-V-V-VIIIIIIIIIIIINDO AO TRA-MON-TINAAAA 🎉 {user}",
@@ -25,7 +25,7 @@ namespace KWiJisho.Data
         /// <summary>
         /// Goodbye messages for notification service.
         /// </summary>
-        public static List<string> GoodbyeMessages =
+        public static List<string> GoodbyeMessages =>
         [
             "Até logo amigo.. Foi bom te conhecer {user} :(",
             "Já vai tarde.. BRINCADEIRINHA HAHAHA... Ai mas não.. falando sério, vai fazer falta 🙁 {user}",
