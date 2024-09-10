@@ -6,6 +6,8 @@ using DSharpPlus;
 using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
 using KWiJisho.Data;
+using KWiJisho.Database.Repositories;
+using KWiJisho.Database.Services;
 using KWiJisho.Entities;
 using KWiJisho.Utils;
 using Microsoft.VisualBasic;
@@ -39,8 +41,11 @@ namespace KWiJisho.Events
 
             var discordMessageBuilder = CreateDiscordMessageBuilder(welcomeBuilder);
 
+            var server = await ServerChannelService.GetServerChannelByServerGuidAsync(e.Guild.Id);
+            if (server is null) return;
+
             // Sending the message on welcome channel.
-            await e.Guild.GetChannel(Servers.Tramontina.WelcomeChannelId).SendMessageAsync(discordMessageBuilder);
+            await e.Guild.GetChannel(server.WelcomeChannelGuid.GetValueOrDefault()).SendMessageAsync(discordMessageBuilder);
         }
 
         /// <summary>
@@ -60,8 +65,11 @@ namespace KWiJisho.Events
 
             var discordMessageBuilder = CreateDiscordMessageBuilder(goodbyeBuilder);
 
+            var server = await ServerChannelService.GetServerChannelByServerGuidAsync(e.Guild.Id);
+            if (server is null) return;
+
             // Sending the message on welcome channel
-            await e.Guild.GetChannel(Servers.Tramontina.WelcomeChannelId).SendMessageAsync(discordMessageBuilder);
+            await e.Guild.GetChannel(server.GoodbyeChannelGuid.GetValueOrDefault()).SendMessageAsync(discordMessageBuilder);
         }
 
         public static DiscordMessageBuilder CreateDiscordMessageBuilder(GuildEventEmbedBuilder builderGuildAction)
