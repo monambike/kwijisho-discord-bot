@@ -8,9 +8,13 @@ using DSharpPlus.Entities;
 using DSharpPlus.SlashCommands;
 using KWiJisho.Config;
 using KWiJisho.Data;
+using KWiJisho.Database.Repositories;
 using KWiJisho.Scheduling;
 using KWiJisho.Utils;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using static KWiJisho.Database.Services.ServerService;
 
 namespace KWiJisho
 {
@@ -114,14 +118,6 @@ namespace KWiJisho
             // Keeps the task alive that effectively never completes, preventing the bot from
             // disconnecting when method ends.
             await Task.Delay(-1);
-        }
-
-        private void UpdateGuildsOnDatabase()
-        {
-            foreach (var guild in DiscordClient.Guilds)
-            {
-
-            }
         }
     }
 }
