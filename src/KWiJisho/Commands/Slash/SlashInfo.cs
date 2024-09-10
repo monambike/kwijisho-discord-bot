@@ -2,7 +2,6 @@
 // Contact: @monambike for more information.
 // For license information, please see the LICENSE file in the root directory.
 
-using DSharpPlus;
 using DSharpPlus.SlashCommands;
 using System.Threading.Tasks;
 
@@ -20,7 +19,8 @@ namespace KWiJisho.Commands.Slash
         public static async Task ExecuteSlashHelpAsync(InteractionContext interactionContext)
         {
             await CommandInfo.ExecuteHelpAsync(interactionContext.Channel, interactionContext.Client);
-            await interactionContext.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource);
+            await interactionContext.DeferAsync();
+            await interactionContext.DeleteResponseAsync();
         }
 
         /// <summary>
@@ -30,7 +30,8 @@ namespace KWiJisho.Commands.Slash
         public static async Task ExecuteSlashInfoAsync(InteractionContext interactionContext)
         {
             await CommandInfo.ExecuteInfoAsync(interactionContext.Channel, interactionContext.Client);
-            await interactionContext.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource);
+            await interactionContext.DeferAsync();
+            await interactionContext.DeleteResponseAsync();
         }
     }
 }

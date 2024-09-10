@@ -22,15 +22,18 @@ namespace KWiJisho.Commands.Slash
                     [Option("channel", "O canal do servidor a ser vinculado.")] DiscordChannel discordChannel,
                     [Option("link", "O vínculo que será realizado.")] ServerService.ChannelLink channelLink)
                 {
-                    await ServerService.UpdateServerChannelByEnumAsync(interactionContext.Guild.Id, channelLink, discordChannel.Id);
+                    await CommandConfig.CommandLinkChannelAsync(interactionContext.Channel, discordChannel, channelLink);
+                    await interactionContext.DeferAsync();
+                    await interactionContext.DeleteResponseAsync();
                 }
 
                 [SlashCommand("unlink", "Tira o link para um canal!")]
                 public static async Task ExecuteSlashUnlinkChannelAsync(InteractionContext interactionContext,
                     [Option("unlink", "O vínculo que será desfeito.")] ServerService.ChannelLink channelLink)
                 {
-
-                    await ServerService.UpdateServerChannelByEnumAsync(interactionContext.Guild.Id, channelLink, null);
+                    await CommandConfig.CommandUnlinkChannelAsync(interactionContext.Channel, channelLink);
+                    await interactionContext.DeferAsync();
+                    await interactionContext.DeleteResponseAsync();
                 }
 
 
