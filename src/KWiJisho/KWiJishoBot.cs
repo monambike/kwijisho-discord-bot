@@ -8,13 +8,9 @@ using DSharpPlus.Entities;
 using DSharpPlus.SlashCommands;
 using KWiJisho.Config;
 using KWiJisho.Data;
-using KWiJisho.Database.Repositories;
 using KWiJisho.Scheduling;
 using KWiJisho.Utils;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using static KWiJisho.Database.Services.ServerService;
 
 namespace KWiJisho
 {
