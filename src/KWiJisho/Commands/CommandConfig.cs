@@ -48,18 +48,13 @@ namespace KWiJisho.Commands
         public static async Task CommandSlashViewChannelsAsync(DiscordChannel interactionContext)
         {
             var serverChannel = await ServerChannelService.GetServerChannelByServerGuidAsync(interactionContext.Guild.Id);
-            if (serverChannel is null)
-            {
-                await interactionContext.SendMessageAsync("Não foi possível obter configurações pois o servidor não possui registro!");
-                return;
-            }
 
             Dictionary<ChannelLink, ulong?> channels = new()
             {
-                { ChannelLink.WelcomeChannel, serverChannel.WelcomeChannelGuid},
-                { ChannelLink.GoodbyeChannel, serverChannel.GoodbyeChannelGuid},
-                { ChannelLink.NewsChannel, serverChannel.NewsChannelGuid},
-                { ChannelLink.LogChannel, serverChannel.LogChannelGuid}
+                { ChannelLink.WelcomeChannel, serverChannel?.WelcomeChannelGuid},
+                { ChannelLink.GoodbyeChannel, serverChannel?.GoodbyeChannelGuid},
+                { ChannelLink.NewsChannel, serverChannel?.NewsChannelGuid},
+                { ChannelLink.LogChannel, serverChannel?.LogChannelGuid}
             };
 
             string description = string.Empty;
