@@ -73,9 +73,10 @@ namespace KWiJisho
         {
             // Registering other Discord bot events.
             DiscordClient.Ready += async (client, readyEventArgs) => await DiscordClient.UpdateStatusAsync(DiscordActivity);
-            DiscordClient.ComponentInteractionCreated += ButtonInteraction.OnComponentInteractionCreatedAsync;
-            DiscordClient.GuildMemberAdded += EventNotificationService.OnGuildMemberAddedAsync;
-            DiscordClient.GuildMemberRemoved += EventNotificationService.OnGuildMemberRemovedAsync;
+            DiscordClient.ComponentInteractionCreated += DiscordComponentHandler.OnComponentInteractionCreatedAsync;
+            DiscordClient.GuildMemberAdded += DiscordGuildHandler.OnGuildMemberAddedAsync;
+            DiscordClient.GuildMemberRemoved += DiscordGuildHandler.OnGuildMemberRemovedAsync;
+            //DiscordClient.GuildMemberUpdated += DiscordGuildHandler.OnGuildMemberUpdatedAsync;
         }
 
         /// <summary>
