@@ -34,7 +34,7 @@ namespace KWiJisho.Commands.Prefix
             /// <param name="commandContext">The command context from the current command call.</param>
             /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
             [Command(nameof(nextBirthday))]
-            public async Task GetNextBirthdayAsync(CommandContext commandContext) => await CommandBirthday.ExecuteNextBirthdayAsync(commandContext.Channel, commandContext.Guild);
+            public async Task GetNextBirthdayAsync(CommandContext commandContext) => await CommandBirthday.CommandNextBirthdayAsync(commandContext.Channel, commandContext.Guild);
 
             /// <summary>
             /// Represents the asynchronous prefix get birthday list called when requesting to show the list of people to have a birthday.
@@ -42,7 +42,7 @@ namespace KWiJisho.Commands.Prefix
             /// <param name="commandContext">The command context from the current command call.</param>
             /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
             [Command(nameof(listBirthday))]
-            public async Task GetListBirthdayAsync(CommandContext commandContext) => await CommandBirthday.ExecuteBirthdayListAsync(commandContext.Channel, commandContext.Guild);
+            public async Task GetListBirthdayAsync(CommandContext commandContext) => await CommandBirthday.CommandBirthdayListAsync(commandContext.Channel, commandContext.Guild);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace KWiJisho.Commands.Slash
             [SlashCommand("any", "Envia qualquer emoji animado.")]
             public static async Task ExecuteSlashRandomAnimatedEmojiAsync(InteractionContext interactionContext)
             {
-                await CommandBasic.ExecuteRandomAnimatedEmojiAsync(interactionContext.Channel);
+                await CommandBasic.CommandRandomAnimatedEmojiAsync(interactionContext.Channel);
                 await interactionContext.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource);
             }
 
@@ -35,7 +35,7 @@ namespace KWiJisho.Commands.Slash
             [SlashCommand("meme", "Envia um emoji de meme animado.")]
             public static async Task ExecuteSlashRandomAnimatedMemeEmojiAsync(InteractionContext interactionContext)
             {
-                await CommandBasic.ExecuteRandomAnimatedMemeEmojiAsync(interactionContext.Channel);
+                await CommandBasic.CommandRandomAnimatedMemeEmojiAsync(interactionContext.Channel);
                 await interactionContext.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource);
             }
 
@@ -45,7 +45,7 @@ namespace KWiJisho.Commands.Slash
             [SlashCommand("party", "Envia um emoji de festa animado.")]
             public static async Task ExecuteSlashRandomAnimatedPartyEmojiAsync(InteractionContext interactionContext)
             {
-                await CommandBasic.ExecuteRandomAnimatedPartyEmojiAsync(interactionContext.Channel);
+                await CommandBasic.CommandRandomAnimatedPartyEmojiAsync(interactionContext.Channel);
                 await interactionContext.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource);
             }
         }

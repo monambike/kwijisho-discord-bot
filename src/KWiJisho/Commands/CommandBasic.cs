@@ -19,7 +19,7 @@ namespace KWiJisho.Commands
         /// </summary>
         /// <param name="discordChannel">The discord channel where the command will be executed.</param>
         /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
-        public static async Task ExecuteRandomAnimatedEmojiAsync(DiscordChannel discordChannel)
+        public static async Task CommandRandomAnimatedEmojiAsync(DiscordChannel discordChannel)
             => await discordChannel.SendMessageAsync(UtilCollections.GetRandomValueFromList(DiscordEmojis.AnimatedEmojis).Code);
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace KWiJisho.Commands
         /// </summary>
         /// <param name="discordChannel">The discord channel where the command will be executed.</param>
         /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
-        public static async Task ExecuteRandomAnimatedMemeEmojiAsync(DiscordChannel discordChannel)
+        public static async Task CommandRandomAnimatedMemeEmojiAsync(DiscordChannel discordChannel)
             => await discordChannel.SendMessageAsync(UtilCollections.GetRandomValueFromList(DiscordEmojis.AnimatedMemeEmojis).Code);
 
         /// <summary>
@@ -35,7 +35,7 @@ namespace KWiJisho.Commands
         /// </summary>
         /// <param name="discordChannel">The discord channel where the command will be executed.</param>
         /// <returns>A <see cref="Task"/> from the current asynchronous task.</returns>
-        public static async Task ExecuteRandomAnimatedPartyEmojiAsync(DiscordChannel discordChannel)
+        public static async Task CommandRandomAnimatedPartyEmojiAsync(DiscordChannel discordChannel)
             => await discordChannel.SendMessageAsync(UtilCollections.GetRandomValueFromList(DiscordEmojis.AnimatedPartyEmojis).Code);
     }
 }

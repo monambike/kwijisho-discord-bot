@@ -20,7 +20,7 @@ namespace KWiJisho.Commands.Slash
         public static async Task ExecuteSlashNextBirthdayAsync(InteractionContext interactionContext)
         {
             await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);
-            await CommandBirthday.ExecuteNextBirthdayAsync(interactionContext.Channel, interactionContext.Guild);
+            await CommandBirthday.CommandNextBirthdayAsync(interactionContext.Channel, interactionContext.Guild);
             await interactionContext.DeleteResponseAsync();
         }
 
@@ -32,7 +32,7 @@ namespace KWiJisho.Commands.Slash
         public static async Task ExecuteSlashBirthdayListAsync(InteractionContext interactionContext)
         {
             await interactionContext.CreateResponseAsync(InteractionResponseType.DeferredChannelMessageWithSource);
-            await CommandBirthday.ExecuteBirthdayListAsync(interactionContext.Channel, interactionContext.Guild);
+            await CommandBirthday.CommandBirthdayListAsync(interactionContext.Channel, interactionContext.Guild);
             await interactionContext.DeleteResponseAsync();
         }
     }
