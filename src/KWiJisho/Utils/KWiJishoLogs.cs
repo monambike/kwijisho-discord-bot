@@ -19,6 +19,7 @@ namespace KWiJisho.Utils
             DefaultLog = new KWiJishoLog(discordClient)
             {
                 SendToDiscord = true,
+
                 WriteFile = true
             };
         }
