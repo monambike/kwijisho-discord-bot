@@ -40,7 +40,7 @@ namespace KWiJisho.Events
             var discordMessageBuilder = CreateDiscordMessageBuilder(welcomeBuilder);
 
             // Sending the message on welcome channel.
-            await e.Guild.GetChannel(Servers.Personal.WelcomeChannelId).SendMessageAsync(discordMessageBuilder);
+            await e.Guild.GetChannel(Servers.Tramontina.WelcomeChannelId).SendMessageAsync(discordMessageBuilder);
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace KWiJisho.Events
             var discordMessageBuilder = CreateDiscordMessageBuilder(goodbyeBuilder);
 
             // Sending the message on welcome channel
-            await e.Guild.GetChannel(Servers.Personal.WelcomeChannelId).SendMessageAsync(discordMessageBuilder);
+            await e.Guild.GetChannel(Servers.Tramontina.WelcomeChannelId).SendMessageAsync(discordMessageBuilder);
         }
 
         public static DiscordMessageBuilder CreateDiscordMessageBuilder(GuildEventEmbedBuilder builderGuildAction)
