@@ -4,6 +4,9 @@
 
 namespace KWiJisho.Database.Config
 {
+    /// <summary>
+    /// Static class that provides properties to configure connection with database.
+    /// </summary>
     public static class ConnectionConfig
     {
         /// <summary>
