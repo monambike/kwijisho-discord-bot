@@ -23,7 +23,8 @@ namespace KWiJisho.Commands
             // Adding the prompt into a embed builder.
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
-                Description = $@"Foi vinculado o canal ""{discordChannel.Name}"" em ""{channelLink}"" com sucesso!", Color = ConfigJson.DefaultColor.DiscordColor
+                Description = $@"Foi vinculado o canal ""{discordChannel.Name}"" em ""{channelLink}"" com sucesso!",
+                Color = Config.ConfigJson.DefaultColor.DiscordColor
             };
 
             await interactionContext.SendMessageAsync(discordEmbedBuilder);
@@ -37,7 +38,7 @@ namespace KWiJisho.Commands
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
                 Description = $@"Foi removido o vínculo do canal ""{channelLink}"" com sucesso!",
-                Color = ConfigJson.DefaultColor.DiscordColor
+                Color = Config.ConfigJson.DefaultColor.DiscordColor
             };
 
             await interactionContext.SendMessageAsync(discordEmbedBuilder);
