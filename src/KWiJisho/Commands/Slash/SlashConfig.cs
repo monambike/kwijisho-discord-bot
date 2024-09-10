@@ -6,6 +6,7 @@ using DSharpPlus.Entities;
 using DSharpPlus.SlashCommands;
 using KWiJisho.Database.Services;
 using System.Threading.Tasks;
+using static KWiJisho.Database.Services.ServerService;
 
 namespace KWiJisho.Commands.Slash
 {
@@ -20,7 +21,7 @@ namespace KWiJisho.Commands.Slash
                 [SlashCommand("link", "Define um link para um canal!")]
                 public async Task ExecuteSlashLinkChannelAsync(InteractionContext interactionContext,
                     [Option("channel", "O canal do servidor a ser vinculado.")] DiscordChannel discordChannel,
-                    [Option("link", "O vínculo que será realizado.")] ServerService.ChannelLink channelLink)
+                    [Option("link", "O vínculo que será realizado.")] ChannelLink channelLink)
                 {
                     await CommandConfig.CommandLinkChannelAsync(interactionContext.Channel, discordChannel, channelLink);
                     await interactionContext.DeferAsync();
@@ -29,7 +30,7 @@ namespace KWiJisho.Commands.Slash
 
                 [SlashCommand("unlink", "Tira o link para um canal!")]
                 public static async Task ExecuteSlashUnlinkChannelAsync(InteractionContext interactionContext,
-                    [Option("unlink", "O vínculo que será desfeito.")] ServerService.ChannelLink channelLink)
+                    [Option("unlink", "O vínculo que será desfeito.")] ChannelLink channelLink)
                 {
                     await CommandConfig.CommandUnlinkChannelAsync(interactionContext.Channel, channelLink);
                     await interactionContext.DeferAsync();
@@ -40,7 +41,9 @@ namespace KWiJisho.Commands.Slash
                 [SlashCommand("view", "Vê os links para os canais!")]
                 public static async Task ExecuteSlashViewChannelsAsync(InteractionContext interactionContext)
                 {
-
+                    await CommandConfig.CommandSlashViewChannelsAsync(interactionContext.Channel);
+                    await interactionContext.DeferAsync();
+                    await interactionContext.DeleteResponseAsync();
                 }
             }
 
