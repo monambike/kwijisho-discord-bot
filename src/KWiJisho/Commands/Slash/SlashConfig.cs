@@ -18,19 +18,19 @@ namespace KWiJisho.Commands.Slash
             public class Channel : ApplicationCommandModule
             {
                 [SlashCommand("link", "Define um link para um canal!")]
-                public static async Task ExecuteSlashLinkChannelAsync(InteractionContext interactionContext,
+                public async Task ExecuteSlashLinkChannelAsync(InteractionContext interactionContext,
                     [Option("channel", "O canal do servidor a ser vinculado.")] DiscordChannel discordChannel,
-                    [Option("link", "O vínculo que será realizado.")] ServerChannelService.ChannelLink channelLink)
+                    [Option("link", "O vínculo que será realizado.")] ServerService.ChannelLink channelLink)
                 {
-                    await ServerChannelService.UpdateServerChannelByEnumAsync(interactionContext.Guild.Id, channelLink, discordChannel.Id);
+                    await ServerService.UpdateServerChannelByEnumAsync(interactionContext.Guild.Id, channelLink, discordChannel.Id);
                 }
 
                 [SlashCommand("unlink", "Tira o link para um canal!")]
                 public static async Task ExecuteSlashUnlinkChannelAsync(InteractionContext interactionContext,
-                    [Option("unlink", "O vínculo que será desfeito.")] ServerChannelService.ChannelLink channelLink)
+                    [Option("unlink", "O vínculo que será desfeito.")] ServerService.ChannelLink channelLink)
                 {
 
-                    await ServerChannelService.UpdateServerChannelByEnumAsync(interactionContext.Guild.Id, channelLink, null);
+                    await ServerService.UpdateServerChannelByEnumAsync(interactionContext.Guild.Id, channelLink, null);
                 }
 
 
