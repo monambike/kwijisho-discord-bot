@@ -132,11 +132,18 @@ namespace KWiJisho.Utils
         {
             if (!WriteFile) return;
 
-            // Opens the log file at the specified path for appending a new text.
-            using StreamWriter writer = File.AppendText(FileName);
+            try
+            {
+                // Opens the log file at the specified path for appending a new text.
+                using StreamWriter writer = File.AppendText(FileName);
 
-            // Writing the line on the log file.
-            await writer.WriteLineAsync(entry);
+                // Writing the line on the log file.
+                await writer.WriteLineAsync(entry);
+            }
+            catch (Exception ex)
+            {
+                await SendEntryToDiscordAsync($"An exception ocurred: {ex} while logging the entry: {entry}");
+            }
         }
 
         public async Task SendEntryToDiscordAsync(string entry)
