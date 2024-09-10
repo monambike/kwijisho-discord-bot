@@ -12,7 +12,5 @@ namespace KWiJisho.Database.Entities
         public int ServerId { get; set; }
 
         public ulong ServerGuid { get; set; }
-
-        public string Name { get; set; }
     }
 }

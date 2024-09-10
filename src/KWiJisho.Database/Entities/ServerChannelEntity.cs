@@ -9,6 +9,7 @@ namespace KWiJisho.Database.Entities
     [Table("ServerChannel")]
     public class ServerChannelEntity
     {
+        [PrimaryKey, AutoIncrement]
         public int ServerChannelId { get; set; }
 
         public ulong? WelcomeChannelGuid { get; set; }

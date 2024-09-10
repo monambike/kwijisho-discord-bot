@@ -9,7 +9,5 @@ namespace KWiJisho.Database.DTO
         public int ServerId { get; set; }
 
         public ulong ServerGuid { get; set; }
-
-        public string Name { get; set; }
     }
 }

@@ -226,9 +226,6 @@ Social: @monambike | Webiste: https://monambike.com</Description>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Database\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\KWiJisho.Database\KWiJisho.Database.csproj" />
   </ItemGroup>
 </Project>

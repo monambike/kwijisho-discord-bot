@@ -2,83 +2,100 @@
 // Contact: @monambike for more information.
 // For license information, please see the LICENSE file in the root directory.
 
-using KWiJisho.Database.Config;
 using KWiJisho.Database.Entities;
-using SQLite;
+using KWiJisho.Database.Repositories;
 
 namespace KWiJisho.Database.Services
 {
-    /// <summary>
-    /// Service class for managing operations related to Server.
-    /// </summary>
-    public class ServerService
+    public static class ServerService
     {
-        public static async Task<ServerEntity?> GetServerById(int serverId)
+        public static ServerRepository ServerRepository => new();
+
+        public static ServerChannelRepository ServerChannelRepository => new();
+
+        public static async Task<int> UpdateServerChannelByEnumAsync(ulong serverGuid, ChannelLink channel, ulong? newValue)
         {
-            // Establish a connection to the SQLite database asynchronously.
-            var connection = new SQLiteAsyncConnection(ConnectionConfig.DatabasePath);
+            // Retrieving informations from the server.
+            var server = await ServerRepository.GetServerByGuid(serverGuid);
 
-            // Query the Server table for entries matching the specified serverGuid,
-            // and retrieve the results as a list asynchronously.
-            var result = await connection.Table<ServerEntity>()
-                .Where(tableServer => tableServer.ServerId == serverId)
-                .ToListAsync();
+            if (server == null)
+            {
+                server = new ServerEntity() { ServerGuid = serverGuid };
+                await ServerRepository.CreateServerAsync(server);
+                server = await ServerRepository.GetServerByGuid(serverGuid);
+            }
 
-            // Return the first matching Server or null if no results are found.
-            return result.FirstOrDefault();
+            // Retrieving channel informations from the server.
+            ServerChannelEntity? serverChannel = await ServerChannelRepository.GetServerChannelByServerIdAsync(server.ServerId);
+            if (serverChannel == null)
+            {
+                await ServerChannelRepository.GetServerChannelByServerIdAsync(server.ServerId);
+                serverChannel = await ServerChannelRepository.GetServerChannelByServerIdAsync(server.ServerId);
+            }
+
+            try
+            {
+                int rowsAffected = 0;
+
+                var newServerChannel = ChangeServerChannelPropertyByEnum(serverChannel, channel, newValue);
+
+                // Updating server channel record.
+                rowsAffected += await ServerChannelRepository.UpdateServerChannelAsync(newServerChannel);
+
+                return rowsAffected;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An exception occurred: {ex.Message} while trying to update server channel data.");
+                return 0;
+            }
+        }
+
+        public static ServerChannelEntity ChangeServerChannelPropertyByEnum(ServerChannelEntity serverChannel, ChannelLink serverChannelOptions, ulong? newValue)
+        {
+            switch (serverChannelOptions)
+            {
+                case ChannelLink.WelcomeChannel: serverChannel.WelcomeChannelGuid = newValue; break;
+                case ChannelLink.GoodbyeChannel: serverChannel.GoodbyeChannelGuid = newValue; break;
+                case ChannelLink.NewsChannel: serverChannel.NewsChannelGuid = newValue; break;
+                case ChannelLink.LogChannel: serverChannel.LogChannelGuid = newValue; break;
+                default: throw new NotImplementedException();
+            };
+
+            return serverChannel;
         }
 
         /// <summary>
-        /// Asynchronously retrieves a Server information associated with the specified server GUID.
+        /// Enum that represents channel links.
         /// </summary>
-        /// <param name="serverGuid">The GUID of the server for which to retrieve the Server information.</param>
-        /// <returns>
-        /// A Task that represents the asynchronous operation. The task result contains 
-        /// the first matching Server, or null if no match is found.
-        /// </returns>
-        public static async Task<ServerEntity?> GetServerByGuid(ulong serverGuid)
+        public enum ChannelLink
         {
-            // Establish a connection to the SQLite database asynchronously.
-            var connection = new SQLiteAsyncConnection(ConnectionConfig.DatabasePath);
+            /// <summary>
+            /// The link for the welcome channel.
+            /// </summary>
+            WelcomeChannel,
 
-            // Query the Server table for entries matching the specified serverGuid,
-            // and retrieve the results as a list asynchronously.
-            var result = await connection.Table<ServerEntity>()
-                .Where(tableServer => tableServer.ServerGuid == serverGuid)
-                .ToListAsync();
+            /// <summary>
+            /// The link for the goodbye channel.
+            /// </summary>
+            GoodbyeChannel,
 
-            // Return the first matching Server or null if no results are found.
-            return result.FirstOrDefault();
+            /// <summary>
+            /// The link for the news channel.
+            /// </summary>
+            NewsChannel,
+
+            /// <summary>
+            /// The link for the log channel.
+            /// </summary>
+            LogChannel
         }
 
-        public static async Task<int> CreateServerAsync(ServerEntity server)
+        public enum GuildAction
         {
-            // Establish a connection to the SQLite database asynchronously.
-            var connection = new SQLiteAsyncConnection(ConnectionConfig.DatabasePath);
+            Unlink = 0,
 
-            var rowsAffected = await UpdateServerAsync(server);
-            // Check if there's no rows affected by the update.
-            if (rowsAffected == 0)
-                // Inserting into the database.
-                rowsAffected = await connection.InsertAsync(server);
-
-            return rowsAffected;
-        }
-
-        public static async Task CreateServerIfNotExistsAsync(ServerEntity server)
-        {
-            var existingServer = GetServerByGuid(server.ServerGuid);
-            if (existingServer == null) await CreateServerAsync(server);
-        }
-
-        public static async Task<int> UpdateServerAsync(ServerEntity server)
-        {
-            // Establish a connection to the SQLite database asynchronously.
-            var connection = new SQLiteAsyncConnection(ConnectionConfig.DatabasePath);
-
-            var rowsAffected = await connection.UpdateAsync(server);
-
-            return rowsAffected;
+            Link = 1
         }
     }
 }
