@@ -171,21 +171,21 @@
             Provides methods for basic prefix and slash commands.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.CommandBasic.ExecuteRandomAnimatedEmojiAsync(DSharpPlus.Entities.DiscordChannel)">
+        <member name="M:KWiJisho.Commands.CommandBasic.CommandRandomAnimatedEmojiAsync(DSharpPlus.Entities.DiscordChannel)">
             <summary>
             Sends a random animated emoji from <see cref="F:KWiJisho.Data.DiscordEmojis.AnimatedEmojis"/>.
             </summary>
             <param name="discordChannel">The discord channel where the command will be executed.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
         </member>
-        <member name="M:KWiJisho.Commands.CommandBasic.ExecuteRandomAnimatedMemeEmojiAsync(DSharpPlus.Entities.DiscordChannel)">
+        <member name="M:KWiJisho.Commands.CommandBasic.CommandRandomAnimatedMemeEmojiAsync(DSharpPlus.Entities.DiscordChannel)">
             <summary>
             Sends a random animated emoji from <see cref="F:KWiJisho.Data.DiscordEmojis.AnimatedMemeEmojis"/>.
             </summary>
             <param name="discordChannel">The discord channel where the command will be executed.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
         </member>
-        <member name="M:KWiJisho.Commands.CommandBasic.ExecuteRandomAnimatedPartyEmojiAsync(DSharpPlus.Entities.DiscordChannel)">
+        <member name="M:KWiJisho.Commands.CommandBasic.CommandRandomAnimatedPartyEmojiAsync(DSharpPlus.Entities.DiscordChannel)">
             <summary>
             Sends a random animated emoji from <see cref="F:KWiJisho.Data.DiscordEmojis.AnimatedPartyEmojis"/>.
             </summary>
@@ -202,14 +202,14 @@
             Represents the year months in Portuguese.
             </summary>
         </member>
-        <member name="M:KWiJisho.Commands.CommandBirthday.ExecuteNextBirthdayAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild)">
+        <member name="M:KWiJisho.Commands.CommandBirthday.CommandNextBirthdayAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild)">
             <summary>
             Sends a birthday message for the next upcoming birthday in the specified Discord channel.
             </summary>
             <param name="discordChannel">The Discord channel where the message will be sent.</param>
             <param name="discordGuild">The Discord guild containing the users.</param>
         </member>
-        <member name="M:KWiJisho.Commands.CommandBirthday.ExecuteBirthdayListAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild)">
+        <member name="M:KWiJisho.Commands.CommandBirthday.CommandBirthdayListAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild)">
             <summary>
             Sends a list of upcoming birthdays in the specified Discord channel.
             </summary>
@@ -925,12 +925,12 @@
             Notification service messages for welcome, goodbye and boost.
             </summary>
         </member>
-        <member name="F:KWiJisho.Data.NotificationMessages.WelcomeMessages">
+        <member name="P:KWiJisho.Data.NotificationMessages.WelcomeMessages">
             <summary>
             Welcome messages for notification service.
             </summary>
         </member>
-        <member name="F:KWiJisho.Data.NotificationMessages.GoodbyeMessages">
+        <member name="P:KWiJisho.Data.NotificationMessages.GoodbyeMessages">
             <summary>
             Goodbye messages for notification service.
             </summary>
@@ -1135,6 +1135,41 @@
             <param name="name">The <see cref="T:KWiJisho.Entities.EmojiCatParty"/> emoji name.</param>
             <param name="id">The <see cref="T:KWiJisho.Entities.EmojiCatParty"/> emoji Id.</param>
         </member>
+        <member name="T:KWiJisho.Entities.GuildEventEmbedBuilder">
+            <summary>
+            Represents a Discord Guild Event along with their identifier information.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.GuildEventEmbedBuilder.Title">
+            <summary>
+            Title for guild event.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.GuildEventEmbedBuilder.Description">
+            <summary>
+            Generated description for guild event.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.GuildEventEmbedBuilder.ImageUrl">
+            <summary>
+            Image for guild event.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.GuildEventEmbedBuilder.UpdateType">
+            <summary>
+            UpdateType for guild event.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.GuildEventEmbedBuilder.DiscordUser">
+            <summary>
+            DiscordUser for guild event. Required to generate the description.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Entities.GuildEventEmbedBuilder.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:KWiJisho.Entities.GuildEventEmbedBuilder"/> class.
+            </summary>
+        </member>
         <member name="P:KWiJisho.Entities.Server.GuildId">
             <summary>
             Server guild Id.
@@ -1213,12 +1248,25 @@
             <param name="discordGuild">The Discord guild where the user is expected to be a member.</param>
             <returns>Returns <see cref="T:DSharpPlus.Entities.DiscordMember"/> if found; otherwise, returns <see langword="null"/>.</returns>
         </member>
-        <member name="T:KWiJisho.Events.ButtonInteraction">
+        <member name="T:KWiJisho.Events.DiscordBotStart">
+            <summary>
+            Provides a set of events and methods fired when bot starts.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Events.DiscordBotStart.OnClientReady(System.Object,DSharpPlus.EventArgs.ReadyEventArgs)">
+            <summary>
+            Handles the events when the bot's client is ready.
+            </summary>
+            <param name="sender">The object that triggered the events.</param>
+            <param name="e">The event arguments containing information about the ready event.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous execution of the event handler.</returns>
+        </member>
+        <member name="T:KWiJisho.Events.DiscordComponentHandler">
             <summary>
             Provides a set of events and methods fired when a interaction is made.
             </summary>
         </member>
-        <member name="M:KWiJisho.Events.ButtonInteraction.OnComponentInteractionCreatedAsync(DSharpPlus.DiscordClient,DSharpPlus.EventArgs.ComponentInteractionCreateEventArgs)">
+        <member name="M:KWiJisho.Events.DiscordComponentHandler.OnComponentInteractionCreatedAsync(DSharpPlus.DiscordClient,DSharpPlus.EventArgs.ComponentInteractionCreateEventArgs)">
             <summary>
             Handles the event when a component interaction is created, like button clicks.
             </summary>
@@ -1227,7 +1275,7 @@
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
             <exception cref="T:System.ArgumentNullException">Thrown if the <paramref name="sender"/> is <see langword="null"/>.</exception>
         </member>
-        <member name="M:KWiJisho.Events.ButtonInteraction.CopyServerNameAsync(DSharpPlus.EventArgs.ComponentInteractionCreateEventArgs)">
+        <member name="M:KWiJisho.Events.DiscordComponentHandler.CopyServerNameAsync(DSharpPlus.EventArgs.ComponentInteractionCreateEventArgs)">
             <summary>
             Copies the server name from the interaction's message and puts it into the clipboard.
             Sends a feedback message to the user.
@@ -1235,13 +1283,13 @@
             <param name="e">Event arguments containing information about the component interaction.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
         </member>
-        <member name="T:KWiJisho.Events.EventNotificationService">
+        <member name="T:KWiJisho.Events.DiscordGuildHandler">
             <summary>
             Provides a set of events and methods fired when a user enters and leaves a discord
             server.
             </summary>
         </member>
-        <member name="M:KWiJisho.Events.EventNotificationService.OnGuildMemberAddedAsync(DSharpPlus.DiscordClient,DSharpPlus.EventArgs.GuildMemberAddEventArgs)">
+        <member name="M:KWiJisho.Events.DiscordGuildHandler.OnGuildMemberAddedAsync(DSharpPlus.DiscordClient,DSharpPlus.EventArgs.GuildMemberAddEventArgs)">
             <summary>
             Handles the event when a new member joins the Discord server. Sends a welcome message
             with a image and a random string.
@@ -1250,7 +1298,7 @@
             <param name="e">Event arguments containing information about the guild member.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the assynchronous operation.</returns>
         </member>
-        <member name="M:KWiJisho.Events.EventNotificationService.OnGuildMemberRemovedAsync(DSharpPlus.DiscordClient,DSharpPlus.EventArgs.GuildMemberRemoveEventArgs)">
+        <member name="M:KWiJisho.Events.DiscordGuildHandler.OnGuildMemberRemovedAsync(DSharpPlus.DiscordClient,DSharpPlus.EventArgs.GuildMemberRemoveEventArgs)">
             <summary>
             Handles the event when a member leaves the Discord server. Sends a goodbye message
             with a image and a random string.
@@ -1259,21 +1307,31 @@
             <param name="e">Events arguments containing information about the guild member.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the assynchronous operation.</returns>
         </member>
-        <member name="M:KWiJisho.Events.EventNotificationService.GetRandomWelcomeMessage(System.String)">
+        <member name="F:KWiJisho.Events.DiscordGuildHandler.EventType.Welcome">
+            <summary>
+            Welcome event.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Events.DiscordGuildHandler.EventType.Goodbye">
+            <summary>
+            Goodbye event.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Events.DiscordGuildHandler.GetRandomWelcomeMessage(System.String)">
             <summary>
             Gets a random string welcome message.
             </summary>
             <param name="user">The user that will receive the welcome message.</param>
             <returns>The string containing the welcome message .</returns>
         </member>
-        <member name="M:KWiJisho.Events.EventNotificationService.GetRandomGoodbyeMessage(System.String)">
+        <member name="M:KWiJisho.Events.DiscordGuildHandler.GetRandomGoodbyeMessage(System.String)">
             <summary>
             Gets a random string goodbye message.
             </summary>
             <param name="user">The user that will receive the welcome message.</param>
             <returns>The string containing the goodbye message .</returns>
         </member>
-        <member name="M:KWiJisho.Events.EventNotificationService.GetRandomMessage(System.Collections.Generic.List{System.String},System.String)">
+        <member name="M:KWiJisho.Events.DiscordGuildHandler.GetRandomMessage(System.Collections.Generic.List{System.String},System.String)">
             <summary>
             Gets a random string for any provided message type.
             </summary>
@@ -1281,20 +1339,7 @@
             <param name="user">The user that will be part of the provided message type</param>
             <returns>The string containing the message.</returns>
         </member>
-        <member name="T:KWiJisho.Events.KWiJishoBotStart">
-            <summary>
-            Provides a set of events and methods fired when bot starts.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Events.KWiJishoBotStart.OnClientReady(System.Object,DSharpPlus.EventArgs.ReadyEventArgs)">
-            <summary>
-            Handles the events when the bot's client is ready.
-            </summary>
-            <param name="sender">The object that triggered the events.</param>
-            <param name="e">The event arguments containing information about the ready event.</param>
-            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous execution of the event handler.</returns>
-        </member>
-        <member name="T:KWiJisho.Events.MessageReceived">
+        <member name="T:KWiJisho.Events.DiscordMessageHandler">
             <summary>
             Provides a set of events and methods for when a message is received.
             </summary>
@@ -1670,6 +1715,75 @@
             <param name="url">The link url.</param>
             <returns>The string as a link.</returns>
         </member>
+        <member name="T:KWiJisho.Utils.DiscordFormat.DiscordDateTimeFormat">
+            <summary>
+            Represents a date in Discord date format.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Utils.DiscordFormat.DiscordDateTimeFormat.Default">
+            <summary>
+            Represents a long date and time format.
+            </summary>
+            <remarks>
+            Example: <code>&lt;t:1038146764&gt;</code> results in November 24, 2002 12:06 PM.
+            </remarks>
+        </member>
+        <member name="F:KWiJisho.Utils.DiscordFormat.DiscordDateTimeFormat.Long">
+            <summary>
+            Represents a long date and time format.
+            </summary>
+            <remarks>
+            Example: <code>&lt;t:1038146764:f&gt;</code> results in November 24, 2002 12:06 PM.
+            </remarks>
+        </member>
+        <member name="F:KWiJisho.Utils.DiscordFormat.DiscordDateTimeFormat.Full">
+            <summary>
+            Represents a full date and time format with the day of the week.
+            </summary>
+            <remarks>
+            Example: <code>&lt;t:1038146764:F&gt;</code> results in Sunday, November 24, 2002 12:06 PM.
+            </remarks>
+        </member>
+        <member name="F:KWiJisho.Utils.DiscordFormat.DiscordDateTimeFormat.DateOnly">
+            <summary>
+            Represents a short date format.
+            </summary>
+            <remarks>
+            Example: <code>&lt;t:1038146764:d&gt;</code> results in 11/24/2002.
+            </remarks>
+        </member>
+        <member name="F:KWiJisho.Utils.DiscordFormat.DiscordDateTimeFormat.DateMonthName">
+            <summary>
+            Represents a long date format.
+            </summary>
+            <remarks>
+            Example: <code>&lt;t:1038146764:D&gt;</code> results in November 24, 2002.
+            </remarks>
+        </member>
+        <member name="F:KWiJisho.Utils.DiscordFormat.DiscordDateTimeFormat.HourMinute">
+            <summary>
+            Represents a short time format.
+            </summary>
+            <remarks>
+            Example: <code>&lt;t:1038146764:t&gt;</code> results in 12:06 PM.
+            </remarks>
+        </member>
+        <member name="F:KWiJisho.Utils.DiscordFormat.DiscordDateTimeFormat.HourMinuteSeconds">
+            <summary>
+            Represents a long time format including seconds.
+            </summary>
+            <remarks>
+            Example: <code>&lt;t:1038146764:T&gt;</code> results in 12:06:04 PM.
+            </remarks>
+        </member>
+        <member name="F:KWiJisho.Utils.DiscordFormat.DiscordDateTimeFormat.RelativeTime">
+            <summary>
+            Represents relative time (e.g., "22 years ago" or "6 hours ago").
+            </summary>
+            <remarks>
+            Example: <code>&lt;t:1038146764:R&gt;</code> results in 22 years ago".
+            </remarks>
+        </member>
         <member name="T:KWiJisho.Utils.KWiJishoLog">
             <summary>
             Provides methods for handling the application log for important tasks.
@@ -1803,6 +1917,25 @@
             <typeparam name="T">The type of elements in the list.</typeparam>
             <param name="list">The list from which to retrieve a random value.</param>
             <returns>A random value from the list.</returns>
+        </member>
+        <member name="T:KWiJisho.Utils.UtilDate">
+            <summary>
+            Provides utility methods for working with dates.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Utils.UtilDate.ConvertDateTimeToISO8601AsString(System.DateTime)">
+            <summary>
+            Returns the date in ISO 8601 date format.
+            </summary>
+            <param name="dateTime">The DateTime to be converted.</param>
+            <returns>A string containing a date in the ISO 8601 format.</returns>
+        </member>
+        <member name="M:KWiJisho.Utils.UtilDate.ConvertDateTimeToUnixTimestamp(System.DateTime)">
+            <summary>
+            Returns the date in UNIX date format.
+            </summary>
+            <param name="dateTime">The DateTime to be converted.</param>
+            <returns>A long containing a date in the UNIX format.</returns>
         </member>
         <member name="T:Monambike.Core.Services.HttpService">
             <summary>
