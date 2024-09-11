@@ -6,14 +6,11 @@ using DSharpPlus;
 using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
 using KWiJisho.Data;
-using KWiJisho.Database.Repositories;
 using KWiJisho.Database.Services;
 using KWiJisho.Entities;
 using KWiJisho.Utils;
-using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Threading.Tasks;
 using ConfigJson = KWiJisho.Config.ConfigJson;
 
