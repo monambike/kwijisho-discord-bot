@@ -3,9 +3,7 @@
 // For license information, please see the LICENSE file in the root directory.
 
 using DSharpPlus.Entities;
-using KWiJisho.Config;
 using KWiJisho.Database.Services;
-using KWiJisho.Entities;
 using KWiJisho.Utils;
 using System;
 using System.Collections.Generic;
