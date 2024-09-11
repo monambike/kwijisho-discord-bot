@@ -76,7 +76,6 @@ namespace KWiJisho
             DiscordClient.GuildMemberAdded += DiscordGuildHandler.OnGuildMemberAddedAsync;
             DiscordClient.GuildMemberRemoved += DiscordGuildHandler.OnGuildMemberRemovedAsync;
             DiscordClient.Ready += (sender, e) => DiscordReadyHandler.OnReadyAsync(sender, e, DiscordClient);
-            DiscordClient.UserUpdated += DiscordUserUpdateHandler.OnUserUpdatedAsync;
         }
 
         /// <summary>

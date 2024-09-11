@@ -1248,24 +1248,6 @@
             <param name="discordGuild">The Discord guild where the user is expected to be a member.</param>
             <returns>Returns <see cref="T:DSharpPlus.Entities.DiscordMember"/> if found; otherwise, returns <see langword="null"/>.</returns>
         </member>
-        <member name="T:KWiJisho.Events.DiscordBotStart">
-            <summary>
-            Provides a set of events and methods fired when bot starts.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Events.DiscordBotStart.DiscordActivity">
-            <summary>
-            Initializing Discord bot activity class.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Events.DiscordBotStart.OnClientReady(System.Object,DSharpPlus.EventArgs.ReadyEventArgs,DSharpPlus.DiscordClient)">
-            <summary>
-            Handles the events when the bot's client is ready.
-            </summary>
-            <param name="sender">The object that triggered the events.</param>
-            <param name="e">The event arguments containing information about the ready event.</param>
-            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous execution of the event handler.</returns>
-        </member>
         <member name="T:KWiJisho.Events.DiscordComponentHandler">
             <summary>
             Provides a set of events and methods fired when a interaction is made.
@@ -1348,6 +1330,25 @@
             <summary>
             Provides a set of events and methods for when a message is received.
             </summary>
+        </member>
+        <member name="T:KWiJisho.Events.DiscordReadyHandler">
+            <summary>
+            Provides a set of events and methods fired when bot starts.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Events.DiscordReadyHandler.DiscordActivity">
+            <summary>
+            Initializing Discord bot activity class.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Events.DiscordReadyHandler.OnReadyAsync(System.Object,DSharpPlus.EventArgs.ReadyEventArgs,DSharpPlus.DiscordClient)">
+            <summary>
+            Handles the events when the bot's client is ready.
+            </summary>
+            <param name="sender">The object that triggered the events.</param>
+            <param name="e">The event arguments containing information about the ready event.</param>
+            <param name="discordClient">The Discord client instance.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous execution of the event handler.</returns>
         </member>
         <member name="T:KWiJisho.Events.DiscordUserUpdateHandler">
             <summary>
