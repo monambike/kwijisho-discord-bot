@@ -1350,11 +1350,6 @@
             <param name="discordClient">The Discord client instance.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous execution of the event handler.</returns>
         </member>
-        <member name="T:KWiJisho.Events.DiscordUserUpdateHandler">
-            <summary>
-            Provides a set of events and methods for when user is updated.
-            </summary>
-        </member>
         <member name="T:KWiJisho.KWiJishoBot">
             <summary>
             Main class responsible for managing and instantiate the KWiJisho Discord bot. The main entry
