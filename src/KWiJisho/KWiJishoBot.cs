@@ -36,11 +36,6 @@ namespace KWiJisho
         public SlashCommandsExtension SlashCommands { get; private set; } = null!;
 
         /// <summary>
-        /// Initializing Discord bot activity class.
-        /// </summary>
-        public static DiscordActivity DiscordActivity => new(ConfigJson.Activity);
-
-        /// <summary>
         /// The main entry point method of the application.
         /// </summary>
         public static void Main()
