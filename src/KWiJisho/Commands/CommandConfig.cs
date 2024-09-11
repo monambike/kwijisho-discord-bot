@@ -42,7 +42,6 @@ namespace KWiJisho.Commands
             await interactionContext.SendMessageAsync(discordEmbedBuilder);
         }
 
-
         public static async Task CommandSlashViewChannelsAsync(DiscordChannel interactionContext)
         {
             var serverChannel = await ServerChannelService.GetServerChannelByServerGuidAsync(interactionContext.Guild.Id);
