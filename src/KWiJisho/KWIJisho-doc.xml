@@ -1240,13 +1240,24 @@
             Gets or sets the user's birthday (if applicable).
             </summary>
         </member>
-        <member name="M:KWiJisho.Entities.User.GetUserDiscordMember(DSharpPlus.Entities.DiscordGuild)">
+        <member name="M:KWiJisho.Entities.User.TryGetDiscordMemberAsync(DSharpPlus.Entities.DiscordGuild)">
             <summary>
-            Tries to return a <see cref="T:DSharpPlus.Entities.DiscordMember"/> representing the user in the specified server.
+            Tries to return a <see cref="P:KWiJisho.Entities.User.DiscordMember"/> representing the user in the specified server.
             If the user is not found, returns <see langword="null"/>. 
             </summary>
             <param name="discordGuild">The Discord guild where the user is expected to be a member.</param>
-            <returns>Returns <see cref="T:DSharpPlus.Entities.DiscordMember"/> if found; otherwise, returns <see langword="null"/>.</returns>
+            <returns>Returns <see cref="P:KWiJisho.Entities.User.DiscordMember"/> if found; otherwise, returns <see langword="null"/>.</returns>
+        </member>
+        <member name="M:KWiJisho.Entities.User.AssignGuildToUserAsync(DSharpPlus.Entities.DiscordGuild)">
+            <summary>
+            Sets the user's associated Discord guild and Discord member.
+            </summary>
+            <param name="discordGuild">The Discord guild.</param>
+        </member>
+        <member name="M:KWiJisho.Entities.User.UnassignDiscordGuild">
+            <summary>
+            Clears the user's associated Discord guild and member information.
+            </summary>
         </member>
         <member name="T:KWiJisho.Events.DiscordComponentHandler">
             <summary>

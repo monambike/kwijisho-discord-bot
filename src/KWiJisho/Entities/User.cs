@@ -4,6 +4,7 @@
 
 using DSharpPlus.Entities;
 using System;
+using System.Threading.Tasks;
 
 namespace KWiJisho.Entities
 {
@@ -35,6 +36,10 @@ namespace KWiJisho.Entities
         /// The custom identifier or nickname associated with the user.
         /// </summary>
         public string NicknameVariation => nicknameVariation;
+
+        public DiscordGuild? DiscordGuild { get; private set; }
+
+        public DiscordMember? DiscordMember { get; private set; }
 
         /// <summary>
         /// Gets or sets the user's birthday (if applicable).
@@ -68,12 +73,39 @@ namespace KWiJisho.Entities
         /// </summary>
         /// <param name="discordGuild">The Discord guild where the user is expected to be a member.</param>
         /// <returns>Returns <see cref="DiscordMember"/> if found; otherwise, returns <see langword="null"/>.</returns>
-        public DiscordMember? GetUserDiscordMember(DiscordGuild discordGuild)
+        public async Task<DiscordMember?> TryGetDiscordMemberAsync(DiscordGuild discordGuild)
         {
-            // Tries to return a user.
-            try { return discordGuild.GetMemberAsync(Id).Result; }
-            // If not possible because the user wasn't found, return null.
-            catch { return null; }
+            try
+            {
+                // Tries to return a user.
+                return await discordGuild.GetMemberAsync(Id);
+            }
+            catch (DSharpPlus.Exceptions.NotFoundException)
+            {
+                // If not possible because the user wasn't found, return null.
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Sets the user's associated Discord guild and Discord member.
+        /// </summary>
+        /// <param name="discordGuild">The Discord guild.</param>
+        public async Task AssignGuildToUserAsync(DiscordGuild discordGuild)
+        {
+            DiscordMember = await TryGetDiscordMemberAsync(discordGuild);
+            
+            if (DiscordMember is not null)
+                DiscordGuild = discordGuild;
+        }
+
+        /// <summary>
+        /// Clears the user's associated Discord guild and member information.
+        /// </summary>
+        public void UnassignDiscordGuild()
+        {
+            DiscordGuild = null;
+            DiscordMember = null;
         }
     }
 }

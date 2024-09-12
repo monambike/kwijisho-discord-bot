@@ -3,13 +3,14 @@
 // For license information, please see the LICENSE file in the root directory.
 
 using DSharpPlus.Entities;
-using KWiJisho.Config;
+using KWiJisho.Entities;
 using KWiJisho.Utils;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static KWiJisho.Models.Birthday;
 
 namespace KWiJisho.Commands
 {
@@ -55,12 +56,12 @@ namespace KWiJisho.Commands
         public static async Task CommandBirthdayListAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
         {
             // Getting list of users and their birthday
-            var users = Models.Birthday.GetBirthdayList();
+            var birthdayList = GetBirthdayList();
 
             // Initializing discord embed builder
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
-                Color = ConfigJson.DefaultColor.DiscordColor,
+                Color = Config.ConfigJson.DefaultColor.DiscordColor,
                 Title = "LISTA DE ANIVERSARIANTES",
             };
 
@@ -68,21 +69,22 @@ namespace KWiJisho.Commands
             foreach (var month in Months)
             {
                 // Getting users that make birthday at the current month
-                var usersBirthdayThisMonth = users.Where(user => user.Birthday.Month == month.Key);
+                var birthdayListThisMonth = birthdayList.Where(user => user.Birthday.Month == month.Key);
 
                 // Building a string that will hold all users that will make birthday at current month.
                 var usersBirthdayThisMonthBuilder = new StringBuilder();
-                foreach (var userBirthdayThisMonth in usersBirthdayThisMonth)
+                foreach (var user in birthdayListThisMonth)
                 {
-                    // Getting discord member information
-                    var member = userBirthdayThisMonth.GetUserDiscordMember(discordGuild);
-                    if (member is not null)
+                    // Assigning discord member information
+                    await user.AssignGuildToUserAsync(discordGuild);
+
+                    if (user.DiscordMember is not null)
                     {
                         // Formatting member name
-                        var nickname = member.DisplayName == member.Username ? member.DisplayName : $"{member.DisplayName}, {member.Username}";
+                        var nickname = user.DiscordMember.DisplayName == user.DiscordMember.Username ? user.DiscordMember.DisplayName : $"{user.DiscordMember.DisplayName}, {user.DiscordMember.Username}";
 
                         // Formatting user field with name and birthday month and day.
-                        usersBirthdayThisMonthBuilder.AppendLine($"{userBirthdayThisMonth.Birthday:dd/MM} - {userBirthdayThisMonth.FirstName} ({nickname})");
+                        usersBirthdayThisMonthBuilder.AppendLine($"{user.Birthday:dd/MM} - {user.FirstName} ({nickname})");
                     }
                 }
 
@@ -97,48 +99,50 @@ namespace KWiJisho.Commands
             await discordChannel.SendMessageAsync(discordEmbedBuilder);
         }
 
-        private static async Task ErrorMessageBirthdayUserNotFoundAsync(DiscordChannel discordChannel) =>
-            await discordChannel.SendMessageAsync("Eu sinto muito.. :( eu não consegui encontrar nesse servidor o próximo usuário da lista a fazer aniversário.");
-
         public static async Task SendBirthdayMessageAsync(DiscordChannel discordChannel, DiscordGuild discordGuild, bool sendOnlyIfTodayBirthday = false)
         {
             // Getting closest birthday from user present in the server and its member info
-            var user = Models.Birthday.GetNextUserToMakeBirthday(discordGuild);
+            var user = GetNextUserToMakeBirthday(discordGuild);
 
             // If the user is null, send a message to the Discord channel indicating inability to find the next user in the birthday list.
             if (user is null)
             {
                 // Sends the message.
-                await ErrorMessageBirthdayUserNotFoundAsync(discordChannel);
+                await discordChannel.SendMessageAsync($"O usuário não está na lista de aniversariantes!");
                 // Return to the method.
                 return;
             }
 
             // Tries to get detailed discord info about the user found.
-            var discordMember = user.GetUserDiscordMember(discordGuild);
+            await user.AssignGuildToUserAsync(discordGuild);
 
             // If the user is null, send a message to the Discord channel indicating inability to find the next user in the birthday list.
-            if (discordMember is null)
+            if (user.DiscordMember is null)
             {
                 // Sends the message that birthday user wasn't found.
-                await ErrorMessageBirthdayUserNotFoundAsync(discordChannel);
+                await discordChannel.SendMessageAsync($"O usuário não está nesse servidor!");
                 // Return to the method.
                 return;
             }
 
             // Gets how many days are maining for the user's birthday.
-            var daysRemaining = Models.Birthday.GetBirthdayDaysRemaining(user);
-            var upcomingDate = Models.Birthday.GetBirthdayUpcomingDate(daysRemaining);
+            var daysRemaining = GetBirthdayDaysRemaining(user);
+            var upcomingDate = GetBirthdayUpcomingDate(daysRemaining);
 
-            // Return method if flagged to show only if user's birthday is today, and the birthday is not today.
-            if (sendOnlyIfTodayBirthday && upcomingDate is not Models.Birthday.BirthdayUpcomingDate.Today)
+            // If sending only if today is the birthday and it's not today, log and return.
+            if (sendOnlyIfTodayBirthday && upcomingDate is not BirthdayUpcomingDate.Today)
             {
-                await KWiJishoLogs.DefaultLog.AddInfoAsync(KWiJishoLog.Module.Birthday, $@"Birthday message wasn't sent because today is not birthday of ""{discordMember.Username}"".");
+                await KWiJishoLogs.DefaultLog.AddInfoAsync(KWiJishoLog.Module.Birthday, $@"Birthday message wasn't sent. There's not birthday today.");
                 return;
             }
 
+            await GenerateBirthdayMessage(discordChannel, user, upcomingDate);
+        }
+
+        public static async Task GenerateBirthdayMessage(DiscordChannel discordChannel, User user, BirthdayUpcomingDate upcomingDate)
+        {
             // Generates birthday message according how many days are remaining for its birthday.
-            var message = await Models.Birthday.GenerateBirthdayMessageAsync(user);
+            var message = await GenerateBirthdayMessageAsync(user);
 
             // Gets the image name and image's full path.
             var fileName = $"500x500-happybirthday-{upcomingDate.ToString().ToLower()}.png";
@@ -147,7 +151,7 @@ namespace KWiJisho.Commands
             // Initializes discord embed builder message
             var discordEmbedBuilder = new DiscordEmbedBuilder
             {
-                Color = ConfigJson.DefaultColor.DiscordColor,
+                Color = Config.ConfigJson.DefaultColor.DiscordColor,
                 Title = "ANIVERSARIANTE",
                 Description = $@"O próximo aniversariante é.. {user.Nickname}!! {message}",
                 Footer = new DiscordEmbedBuilder.EmbedFooter
@@ -156,7 +160,7 @@ namespace KWiJisho.Commands
                 }
             }
             .WithThumbnail($"attachment://{fileName}")
-            .WithImageUrl(discordMember.AvatarUrl)
+            .WithImageUrl(user.DiscordMember?.AvatarUrl)
             .Build();
 
             using var fileStream = new FileStream(imagePath, FileMode.Open);

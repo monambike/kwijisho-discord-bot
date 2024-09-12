@@ -25,10 +25,14 @@ namespace KWiJisho.Scheduling
         /// <returns>A <see cref="Task"/> representing the asynchronous execution of the job.</returns>
         public async Task Execute(IJobExecutionContext context)
         {
-            await KWiJishoLogs.DefaultLog.AddInfoAsync(KWiJishoLog.Module.Birthday, "Executing birthday job.");
+            await KWiJishoLogs.DefaultLog.AddInfoAsync(KWiJishoLog.Module.Birthday, "Executing birthday job...");
+            
+            // Setting discord client on initialize.
             var dataMap = context.MergedJobDataMap;
             _client = (DiscordClient) dataMap.Get("DiscordClient");
+            
             await GiveBirthdayMessageAsync();
+
             await KWiJishoLogs.DefaultLog.AddInfoAsync(KWiJishoLog.Module.Birthday, "Finished birthday job.");
         }
 
