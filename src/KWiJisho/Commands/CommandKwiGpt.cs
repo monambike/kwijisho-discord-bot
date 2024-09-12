@@ -4,7 +4,6 @@
 
 using DSharpPlus.Entities;
 using KWiJisho.APIs;
-using KWiJisho.Config;
 using System.Threading.Tasks;
 
 namespace KWiJisho.Commands

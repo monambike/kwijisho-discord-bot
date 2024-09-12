@@ -4,7 +4,6 @@
 
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
-using KWiJisho.Commands;
 using System.Threading.Tasks;
 
 namespace KWiJisho.Commands.Prefix

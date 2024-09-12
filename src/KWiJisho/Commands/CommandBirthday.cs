@@ -44,9 +44,7 @@ namespace KWiJisho.Commands
         /// <param name="discordChannel">The Discord channel where the message will be sent.</param>
         /// <param name="discordGuild">The Discord guild containing the users.</param>
         public static async Task CommandNextBirthdayAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
-        {
-            await SendBirthdayMessageAsync(discordChannel, discordGuild);
-        }
+            => await SendBirthdayMessageAsync(discordChannel, discordGuild);
 
         /// <summary>
         /// Sends a list of upcoming birthdays in the specified Discord channel.
