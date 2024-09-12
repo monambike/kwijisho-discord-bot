@@ -758,6 +758,36 @@
             Represents the command to list people will have birthday.
             </summary>
         </member>
+        <member name="T:KWiJisho.Commands.Slash.SlashConfig">
+            <summary>
+            Represents a set of config slash commands.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Commands.Slash.SlashConfig.Config">
+            <summary>
+            Represents a set of config slash commands.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Commands.Slash.SlashConfig.Config.Channel">
+            <summary>
+            Represents a set of channel slash commands.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Commands.Slash.SlashConfig.Config.Channel.ExecuteSlashLinkChannelAsync(DSharpPlus.SlashCommands.InteractionContext,DSharpPlus.Entities.DiscordChannel,KWiJisho.Database.Services.ServerService.ChannelLink)">
+            <summary>
+            Represents the command to configure a link to a channel.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Commands.Slash.SlashConfig.Config.Channel.ExecuteSlashUnlinkChannelAsync(DSharpPlus.SlashCommands.InteractionContext,KWiJisho.Database.Services.ServerService.ChannelLink)">
+            <summary>
+            Represents the command to configure an unlink to a channel.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Commands.Slash.SlashConfig.Config.Channel.ExecuteSlashViewChannelsAsync(DSharpPlus.SlashCommands.InteractionContext)">
+            <summary>
+            Represents the command to see channel link settings.
+            </summary>
+        </member>
         <member name="T:KWiJisho.Commands.Slash.SlashInfo">
             <summary>
             Represents a set of info slash commands.
