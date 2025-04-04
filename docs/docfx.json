@@ -13,7 +13,10 @@
       "dest": "apidocs",
       "disableDefaultFilter": true,
       "includePrivateMembers": true,
-      "memberLayout": "separatePages"
+      "memberLayout": "separatePages",
+      "properties": {
+        "TargetFramework": "net8.0"
+      }
     }
   ],
   "build": {
