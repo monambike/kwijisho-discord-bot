@@ -3,12 +3,7 @@
     {
       "src": [
         {
-          "src": "../src",
-          "files": [
-            "**/KWiJisho/*.csproj",
-            "!**/KWiJisho.Database/*.csproj",
-            "!**/KWiJisho.Test/*.csproj"
-          ]
+          "src": "../src"
         }
       ],
       "dest": "apidocs",
