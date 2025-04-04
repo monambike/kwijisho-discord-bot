@@ -31,7 +31,11 @@ jobs:
       with:
         dotnet-version: 8.x
 
+    # Restoring dependencies
+    - run: dotnet restore
+    # Installing docfx
     - run: dotnet tool install -g docfx
+    # Updating/Generating documentation
     - run: docfx docs/docfx.json
 
     - name: Upload artifact
