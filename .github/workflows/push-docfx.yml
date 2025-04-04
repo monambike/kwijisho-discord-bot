@@ -30,10 +30,11 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 8.x
-    
-    - run: cd src/KWiJisho
+        
+    - name: Debug - Listar arquivos
+    - run: ls -R ${{ github.workspace }}
     # Restoring dependencies
-    - run: dotnet restore KWiJisho.csproj
+    - run: dotnet restore ${{github.workspace}}/src/KWiJisho/KWiJisho.csproj
     # Installing docfx
     - run: dotnet tool install -g docfx
     # Updating/Generating documentation
