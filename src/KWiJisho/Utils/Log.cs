@@ -4,6 +4,7 @@
 
 using DSharpPlus;
 using KWiJisho.Data;
+using Quartz.Logging;
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace KWiJisho.Utils
     /// <summary>
     /// Provides methods for handling the application log for important tasks.
     /// </summary>
-    public class KWiJishoLog(DiscordClient? client)
+    public class Log(DiscordClient? client)
     {
         public required bool WriteFile { get; init; }
 
@@ -57,14 +58,49 @@ namespace KWiJisho.Utils
             Fatal
         }
 
+        /// <summary>
+        /// Represents the command modules for the application.
+        /// </summary>
         public enum Module
         {
+            /// <summary>
+            /// Represents the general KWiJisho module.
+            /// </summary>
+            KWiJisho,
+
+            /// <summary>
+            /// Represents the module for "Basic" commands.
+            /// </summary>
             Basic,
+
+            /// <summary>
+            /// Represents the module for "Birthday" commands.
+            /// </summary>
             Birthday,
+
+            /// <summary>
+            /// Represents the module for "Info" commands.
+            /// </summary>
             Info,
+
+            /// <summary>
+            /// Represents the module for "KWiGpt" commands.
+            /// </summary>
             KWiGpt,
+
+            /// <summary>
+            /// Represents the module for "Nasa" commands.
+            /// </summary>
             Nasa,
+
+            /// <summary>
+            /// Represents the module for "Notice" commands.
+            /// </summary>
             Notice,
+
+            /// <summary>
+            /// Represents the module for "ThemeTramontina" commands.
+            /// </summary>
             ThemeTramontina
         }
 
@@ -72,44 +108,50 @@ namespace KWiJisho.Utils
         /// Adds a debug log entry with the specified message.
         /// </summary>
         /// <param name="message">The debug log message.</param>
-        public async Task AddDebugAsync(Module module, string message) => await AddCustomLogAsync(LogType.Debug, module, message);
+        public async Task AddDebugAsync(Module module, LogContext logContext, string message) => await AddCustomLogAsync(LogType.Debug, module, logContext, message);
 
         /// <summary>
         /// Adds a info log entry with the specified message.
         /// </summary>
         /// <param name="message">The info log message.</param>
-        public async Task AddInfoAsync(Module module, string message) => await AddCustomLogAsync(LogType.Info, module, message);
+        public async Task AddInfoAsync(Module module, LogContext logContext, string message) => await AddCustomLogAsync(LogType.Info, module, logContext, message);
 
         /// <summary>
         /// Adds a warning log entry with the specified message.
         /// </summary>
         /// <param name="message">The warning log message.</param>
-        public async Task AddWarningAsync(Module module, string message) => await AddCustomLogAsync(LogType.Warning, module, message);
+        public async Task AddWarningAsync(Module module, LogContext logContext, string message) => await AddCustomLogAsync(LogType.Warning, module, logContext, message);
 
         /// <summary>
         /// Adds a error log entry with the specified message.
         /// </summary>
         /// <param name="message">The error log message.</param>
-        public async Task AddErrorAsync(Module module, string message) => await AddCustomLogAsync(LogType.Error, module, message);
+        public async Task AddErrorAsync(Module module, LogContext logContext, string message) => await AddCustomLogAsync(LogType.Error, module, logContext, message);
 
         /// <summary>
         /// Adds a fatal log entry with the specified message.
         /// </summary>
         /// <param name="message">The fatal log message.</param>
-        public async Task AddFatalAsync(Module module, string message) => await AddCustomLogAsync(LogType.Fatal, module, message);
+        public async Task AddFatalAsync(Module module, LogContext logContext, string message) => await AddCustomLogAsync(LogType.Fatal, module, logContext, message);
 
         /// <summary>
         /// Adds a formatted log entry to the log file.
         /// </summary>
         /// <param name="logType">The type of log entry.</param>
         /// <param name="message">The log message to be added.</param>
-        private async Task AddCustomLogAsync(LogType logType, Module module, string message)
+        private async Task AddCustomLogAsync(LogType logType, Module module, LogContext logContext, string message)
         {
             TimeZoneInfo brazilTimeZone = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
 
             DateTime brazilTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, brazilTimeZone);
 
-            await AddEntryAsync($"[{brazilTime:yyyy-MM-dd HH:mm:ss.fff zzz}] [{module}] {logType.ToString().ToUpper()} {message}");
+            string guildInfo = string.IsNullOrEmpty(logContext.GuildId)
+            ? "" : $"[Guild: {logContext.GuildId}] ";
+
+            string contextInfo = string.IsNullOrEmpty(logContext.ContextType) || string.IsNullOrEmpty(logContext.Action)
+            ? "" : $"[{logContext.ContextType}: {logContext.Action}] ";
+
+            await AddEntryAsync($"[{brazilTime:yyyy-MM-dd HH:mm:ss.fff UTC-zzz}] [{module}] {guildInfo}[Issuer ID: {logContext.IssuerId}] {contextInfo}{logType.ToString().ToUpper()} - {message}");
         }
 
         /// <summary>

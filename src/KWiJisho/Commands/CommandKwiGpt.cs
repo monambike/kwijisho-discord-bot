@@ -26,6 +26,7 @@ namespace KWiJisho.Commands
 
             // Getting response from the prompt
             var response = await ChatGPT.GetKWiJishoPromptAsync(userInput);
+            response ??= "Não consigo te responder agora :( eu não consegui ligar meus fiozinhos com a OpenAI (ChatGPT), eu sinto muito...";
 
             // Sending the response to the user.
             await discordChannel.SendMessageAsync(response);

@@ -3,6 +3,7 @@
 // For license information, please see the LICENSE file in the root directory.
 
 using DSharpPlus.Entities;
+using KWiJisho.Models;
 using System;
 using System.Threading.Tasks;
 
@@ -22,6 +23,26 @@ namespace KWiJisho.Entities
         /// The date when the user was born.
         /// </summary>
         public DateTime Born => born;
+
+        /// <summary>
+        /// The user age.
+        /// </summary>
+        public int Age 
+        {
+            get
+            {
+                // Save today's date.
+                var dateTimeNow = DateTime.Today;
+
+                // Calculate the age.
+                var age = dateTimeNow.Year - born.Year;
+
+                // Go back to the year in which the person was born in case of a leap year
+                if (born.Date > dateTimeNow.AddYears(-age)) age--;
+
+                return age;
+            }
+        }
 
         /// <summary>
         /// The user real first name.

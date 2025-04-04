@@ -49,10 +49,17 @@
         </member>
         <member name="M:KWiJisho.APIs.ChatGPT.GetKWiJishoPromptAsync(System.String)">
             <summary>
-            Asynchronous method to generate a prompt in the style of "KWiJisho."
+            Asynchronous method to generate a prompt in the style of "KWiJisho".
             </summary>
             <param name="input">The user input text.</param>
             <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
+        </member>
+        <member name="M:KWiJisho.APIs.ChatGPT.GetResponseFromChatBotWithTimeoutAsync(System.Int32)">
+            <summary>
+            Asynchronously retrieves a response from ChatGPT, returning null if the request times out.
+            </summary>
+            <param name="timeoutMilliseconds">The maximum time, in milliseconds, to wait for a response.</param>
+            <returns>The chatbot response as a string, or null if the operation timed out.</returns>
         </member>
         <member name="M:KWiJisho.APIs.ChatGPT.GetPromptAsync(System.String,System.String)">
             <summary>
@@ -758,6 +765,11 @@
             Represents the command to list people will have birthday.
             </summary>
         </member>
+        <member name="M:KWiJisho.Commands.Slash.SlashBirthday.ExecuteSlashHappyBirthdayAsync(DSharpPlus.SlashCommands.InteractionContext,DSharpPlus.Entities.DiscordUser)">
+            <summary>
+            Represents the command to say happy birthday to someone.
+            </summary>
+        </member>
         <member name="T:KWiJisho.Commands.Slash.SlashConfig">
             <summary>
             Represents a set of config slash commands.
@@ -923,6 +935,16 @@
             Class responsible for managing colors in the application.
             </summary>
         </member>
+        <member name="T:KWiJisho.Data.DiscordUsers">
+            <summary>
+            Provides a static class for managing Discord users along with their identifiers.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Data.DiscordUsers.Users">
+            <summary>
+            The list of users along with their identifiers.
+            </summary>
+        </member>
         <member name="T:KWiJisho.Data.DiscordEmojis">
             <summary>
             Static class that provides class, properties and methods for handling Discord emojis.
@@ -963,16 +985,6 @@
         <member name="P:KWiJisho.Data.NotificationMessages.GoodbyeMessages">
             <summary>
             Goodbye messages for notification service.
-            </summary>
-        </member>
-        <member name="T:KWiJisho.Data.DiscordUsers">
-            <summary>
-            Provides a static class for managing Discord users along with their identifiers.
-            </summary>
-        </member>
-        <member name="P:KWiJisho.Data.DiscordUsers.Users">
-            <summary>
-            The list of users along with their identifiers.
             </summary>
         </member>
         <member name="T:KWiJisho.Entities.Channel">
@@ -1250,6 +1262,11 @@
             The date when the user was born.
             </summary>
         </member>
+        <member name="P:KWiJisho.Entities.User.Age">
+            <summary>
+            The user age.
+            </summary>
+        </member>
         <member name="P:KWiJisho.Entities.User.FirstName">
             <summary>
             The user real first name.
@@ -1520,6 +1537,11 @@
         <member name="F:KWiJisho.Models.Birthday.BirthdayUpcomingDate.InSomeDays">
             <summary>
             Indicates an upcoming birthday in the future, beyond tomorrow.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Models.Birthday.BirthdayUpcomingDate.Unspecified">
+            <summary>
+            Indicates a birthday with an unknown or unspecified date, but that stills deserves a happy birthday.
             </summary>
         </member>
         <member name="M:KWiJisho.Models.Nasa.BuildEnglishApodMessageAsync(KWiJisho.APIs.NasaApi.Apod.ApodResponse)">
@@ -1826,99 +1848,6 @@
             Example: <code>&lt;t:1038146764:R&gt;</code> results in 22 years ago".
             </remarks>
         </member>
-        <member name="T:KWiJisho.Utils.KWiJishoLog">
-            <summary>
-            Provides methods for handling the application log for important tasks.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Utils.KWiJishoLog.#ctor(DSharpPlus.DiscordClient)">
-            <summary>
-            Provides methods for handling the application log for important tasks.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Utils.KWiJishoLog.FileName">
-            <summary>
-            The log file name.
-            </summary>
-        </member>
-        <member name="T:KWiJisho.Utils.KWiJishoLog.LogType">
-            <summary>
-            Represents options for the application log type.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Utils.KWiJishoLog.LogType.Debug">
-            <summary>
-            Indicated a debug level log.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Utils.KWiJishoLog.LogType.Info">
-            <summary>
-            Indicated a info level log.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Utils.KWiJishoLog.LogType.Warning">
-            <summary>
-            Indicated a warning level log.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Utils.KWiJishoLog.LogType.Error">
-            <summary>
-            Indicated a error level log.
-            </summary>
-        </member>
-        <member name="F:KWiJisho.Utils.KWiJishoLog.LogType.Fatal">
-            <summary>
-            Indicated a fatal level log.
-            </summary>
-        </member>
-        <member name="M:KWiJisho.Utils.KWiJishoLog.AddDebugAsync(KWiJisho.Utils.KWiJishoLog.Module,System.String)">
-            <summary>
-            Adds a debug log entry with the specified message.
-            </summary>
-            <param name="message">The debug log message.</param>
-        </member>
-        <member name="M:KWiJisho.Utils.KWiJishoLog.AddInfoAsync(KWiJisho.Utils.KWiJishoLog.Module,System.String)">
-            <summary>
-            Adds a info log entry with the specified message.
-            </summary>
-            <param name="message">The info log message.</param>
-        </member>
-        <member name="M:KWiJisho.Utils.KWiJishoLog.AddWarningAsync(KWiJisho.Utils.KWiJishoLog.Module,System.String)">
-            <summary>
-            Adds a warning log entry with the specified message.
-            </summary>
-            <param name="message">The warning log message.</param>
-        </member>
-        <member name="M:KWiJisho.Utils.KWiJishoLog.AddErrorAsync(KWiJisho.Utils.KWiJishoLog.Module,System.String)">
-            <summary>
-            Adds a error log entry with the specified message.
-            </summary>
-            <param name="message">The error log message.</param>
-        </member>
-        <member name="M:KWiJisho.Utils.KWiJishoLog.AddFatalAsync(KWiJisho.Utils.KWiJishoLog.Module,System.String)">
-            <summary>
-            Adds a fatal log entry with the specified message.
-            </summary>
-            <param name="message">The fatal log message.</param>
-        </member>
-        <member name="M:KWiJisho.Utils.KWiJishoLog.AddCustomLogAsync(KWiJisho.Utils.KWiJishoLog.LogType,KWiJisho.Utils.KWiJishoLog.Module,System.String)">
-            <summary>
-            Adds a formatted log entry to the log file.
-            </summary>
-            <param name="logType">The type of log entry.</param>
-            <param name="message">The log message to be added.</param>
-        </member>
-        <member name="M:KWiJisho.Utils.KWiJishoLog.AddEntryAsync(System.String)">
-            <summary>
-            Adds a line to the log file or send to discord log channel with the specified content.
-            </summary>
-            <param name="entry">The entry to be added to the log.</param>
-        </member>
-        <member name="P:KWiJisho.Utils.KWiJishoLogs.DefaultLog">
-            <summary>
-            Gets or sets the <see cref="T:KWiJisho.KWiJishoBot"/> instance for handling bot log.
-            </summary>
-        </member>
         <member name="T:KWiJisho.Utils.KWiJishoPermission">
             <summary>
             Provides utility methods for handling permissions in the KWiJisho application.
@@ -1946,6 +1875,168 @@
             </summary>
             <param name="permission">The Discord permission.</param>
             <returns>The Portuguese name of the permission.</returns>
+        </member>
+        <member name="T:KWiJisho.Utils.Log">
+            <summary>
+            Provides methods for handling the application log for important tasks.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Utils.Log.#ctor(DSharpPlus.DiscordClient)">
+            <summary>
+            Provides methods for handling the application log for important tasks.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Utils.Log.FileName">
+            <summary>
+            The log file name.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Utils.Log.LogType">
+            <summary>
+            Represents options for the application log type.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Utils.Log.LogType.Debug">
+            <summary>
+            Indicated a debug level log.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Utils.Log.LogType.Info">
+            <summary>
+            Indicated a info level log.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Utils.Log.LogType.Warning">
+            <summary>
+            Indicated a warning level log.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Utils.Log.LogType.Error">
+            <summary>
+            Indicated a error level log.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Utils.Log.LogType.Fatal">
+            <summary>
+            Indicated a fatal level log.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Utils.Log.Module">
+            <summary>
+            Represents the command modules for the application.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Utils.Log.Module.KWiJisho">
+            <summary>
+            Represents the general KWiJisho module.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Utils.Log.Module.Basic">
+            <summary>
+            Represents the module for "Basic" commands.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Utils.Log.Module.Birthday">
+            <summary>
+            Represents the module for "Birthday" commands.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Utils.Log.Module.Info">
+            <summary>
+            Represents the module for "Info" commands.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Utils.Log.Module.KWiGpt">
+            <summary>
+            Represents the module for "KWiGpt" commands.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Utils.Log.Module.Nasa">
+            <summary>
+            Represents the module for "Nasa" commands.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Utils.Log.Module.Notice">
+            <summary>
+            Represents the module for "Notice" commands.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Utils.Log.Module.ThemeTramontina">
+            <summary>
+            Represents the module for "ThemeTramontina" commands.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Utils.Log.AddDebugAsync(KWiJisho.Utils.Log.Module,KWiJisho.Utils.LogContext,System.String)">
+            <summary>
+            Adds a debug log entry with the specified message.
+            </summary>
+            <param name="message">The debug log message.</param>
+        </member>
+        <member name="M:KWiJisho.Utils.Log.AddInfoAsync(KWiJisho.Utils.Log.Module,KWiJisho.Utils.LogContext,System.String)">
+            <summary>
+            Adds a info log entry with the specified message.
+            </summary>
+            <param name="message">The info log message.</param>
+        </member>
+        <member name="M:KWiJisho.Utils.Log.AddWarningAsync(KWiJisho.Utils.Log.Module,KWiJisho.Utils.LogContext,System.String)">
+            <summary>
+            Adds a warning log entry with the specified message.
+            </summary>
+            <param name="message">The warning log message.</param>
+        </member>
+        <member name="M:KWiJisho.Utils.Log.AddErrorAsync(KWiJisho.Utils.Log.Module,KWiJisho.Utils.LogContext,System.String)">
+            <summary>
+            Adds a error log entry with the specified message.
+            </summary>
+            <param name="message">The error log message.</param>
+        </member>
+        <member name="M:KWiJisho.Utils.Log.AddFatalAsync(KWiJisho.Utils.Log.Module,KWiJisho.Utils.LogContext,System.String)">
+            <summary>
+            Adds a fatal log entry with the specified message.
+            </summary>
+            <param name="message">The fatal log message.</param>
+        </member>
+        <member name="M:KWiJisho.Utils.Log.AddCustomLogAsync(KWiJisho.Utils.Log.LogType,KWiJisho.Utils.Log.Module,KWiJisho.Utils.LogContext,System.String)">
+            <summary>
+            Adds a formatted log entry to the log file.
+            </summary>
+            <param name="logType">The type of log entry.</param>
+            <param name="message">The log message to be added.</param>
+        </member>
+        <member name="M:KWiJisho.Utils.Log.AddEntryAsync(System.String)">
+            <summary>
+            Adds a line to the log file or send to discord log channel with the specified content.
+            </summary>
+            <param name="entry">The entry to be added to the log.</param>
+        </member>
+        <member name="P:KWiJisho.Utils.LogContext.ContextType">
+            <summary>
+            The context type of the log context.
+            Examples: "Command" for user commands, "Job" for automated tasks.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Utils.LogContext.Action">
+            <summary>
+            The action from the log context.
+            Examples: "!help", "/happy-birthday", "BirthdayCheck" (in case of birthday check triggered by the job)
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Utils.LogContext.IssuerId">
+            <summary>
+            The issuer of the log context.
+            If the action was performed by a user, this should contain their user ID.
+            If it was triggered by a KWiJisho bot job, use a descriptive label like "Scheduler Job".
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Utils.LogContext.GuildId">
+            <summary>
+            The guild id of the log context.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Utils.Logs.DefaultLog">
+            <summary>
+            Gets or sets the <see cref="T:KWiJisho.KWiJishoBot"/> instance for handling bot log.
+            </summary>
         </member>
         <member name="T:KWiJisho.Utils.UtilCollections">
             <summary>

@@ -96,7 +96,7 @@ namespace KWiJisho
             await Scheduler.CreateAllSchedulersAsync(DiscordClient);
 
             // Instantiating all application logs.
-            KWiJishoLogs.InstantiateAllLogs(DiscordClient);
+            Logs.InstantiateAllLogs(DiscordClient);
 
             // Connecting the bot into the Discord.
             await DiscordClient.ConnectAsync();

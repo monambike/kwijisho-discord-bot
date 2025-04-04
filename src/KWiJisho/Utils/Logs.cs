@@ -6,17 +6,17 @@ using DSharpPlus;
 
 namespace KWiJisho.Utils
 {
-    public static class KWiJishoLogs
+    public static class Logs
     {
         /// <summary>
         /// Gets or sets the <see cref="KWiJishoBot"/> instance for handling bot log.
         /// </summary>
-        public static KWiJishoLog DefaultLog { get; set; } = null!;
+        public static Log DefaultLog { get; set; } = null!;
 
         public static void InstantiateAllLogs(DiscordClient discordClient)
         {
             // Defining default discord log instance.
-            DefaultLog = new KWiJishoLog(discordClient)
+            DefaultLog = new Log(discordClient)
             {
                 SendToDiscord = true,
 

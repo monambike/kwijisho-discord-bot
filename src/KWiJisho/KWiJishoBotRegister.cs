@@ -7,8 +7,10 @@ using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.CommandsNext.Exceptions;
 using DSharpPlus.SlashCommands;
 using DSharpPlus.SlashCommands.Attributes;
+using KWiJisho.Commands;
 using KWiJisho.Commands.Prefix;
 using KWiJisho.Commands.Slash;
+using KWiJisho.Config;
 using KWiJisho.Data;
 using KWiJisho.Events;
 using KWiJisho.Utils;
@@ -83,10 +85,10 @@ namespace KWiJisho
         /// </summary>
         public void RegisterPrefixCommandsPermissions()
         {
-            PrefixCommands.CommandErrored += async (sender, exception) =>
+            PrefixCommands.CommandErrored += async (sender, e) =>
             {
                 // Checking if the exception is a checks failed exception.
-                if (exception.Exception is ChecksFailedException checkFailedException)
+                if (e.Exception is ChecksFailedException checkFailedException)
                 {
                     // Iterate over the failed checks.
                     foreach (var check in checkFailedException.FailedChecks)
@@ -95,10 +97,23 @@ namespace KWiJisho
                         if (check is RequireUserPermissionsAttribute requireUserPermissionAttribute)
                         {
                             // Send a custom error message to the user.
-                            await exception.Context.RespondAsync(KWiJishoPermission.PermissionCustomErrorMessage(requireUserPermissionAttribute.Permissions));
+                            await e.Context.RespondAsync(KWiJishoPermission.PermissionCustomErrorMessage(requireUserPermissionAttribute.Permissions));
                         }
                     }
                 }
+            };
+
+            PrefixCommands.CommandExecuted += async (sender, e) =>
+            {
+                var logContext = new LogContext
+                {
+                    IssuerId = e.Context.Member.Id.ToString(),
+                    GuildId = e.Context.Guild.Id.ToString(),
+                    Action = ConfigJson.Prefix + e.Context.Command.Name,
+                    ContextType = "Prefix Command"
+                };
+
+                await Logs.DefaultLog.AddInfoAsync(Log.Module.KWiJisho, logContext, "Executed prefix command.");
             };
         }
 
@@ -108,7 +123,7 @@ namespace KWiJisho
         public void RegisterSlashCommandsPermissions()
         {
             SlashCommandsExtension slash = SlashCommands;
-            slash.SlashCommandErrored += async (s, e) =>
+            slash.SlashCommandErrored += async (sender, e) =>
             {
                 // Checking if the exception is a slash execution checks failed exception.
                 if (e.Exception is SlashExecutionChecksFailedException slashExecutionChecksFailedException)
@@ -124,6 +139,19 @@ namespace KWiJisho
                         }
                     }
                 }
+            };
+
+            slash.SlashCommandExecuted += async (sender, e) =>
+            {
+                var logContext = new LogContext
+                {
+                    IssuerId = e.Context.Member.Id.ToString(),
+                    GuildId = e.Context.Guild.Id.ToString(),
+                    Action = e.Context.CommandName,
+                    ContextType = "Slash Command"
+                };
+
+                await Logs.DefaultLog.AddInfoAsync(Log.Module.KWiJisho, logContext, "Executed slash command.");
             };
         }
     }

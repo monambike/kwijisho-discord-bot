@@ -3,8 +3,11 @@
 // For license information, please see the LICENSE file in the root directory.
 
 using DSharpPlus.Entities;
+using KWiJisho.Data;
 using KWiJisho.Entities;
+using KWiJisho.Scheduling;
 using KWiJisho.Utils;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -44,7 +47,10 @@ namespace KWiJisho.Commands
         /// <param name="discordChannel">The Discord channel where the message will be sent.</param>
         /// <param name="discordGuild">The Discord guild containing the users.</param>
         public static async Task CommandNextBirthdayAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
-            => await SendBirthdayMessageAsync(discordChannel, discordGuild);
+            => await NextBirthdayMessageAsync(discordChannel, discordGuild);
+
+        public static async Task CommandHappyBirthdayAsync(DiscordChannel discordChannel, DiscordGuild discordGuild, DiscordUser discordUser)
+            => await HappyBirthdayMessageAsync(discordChannel, discordGuild, discordUser);
 
         /// <summary>
         /// Sends a list of upcoming birthdays in the specified Discord channel.
@@ -97,18 +103,31 @@ namespace KWiJisho.Commands
             await discordChannel.SendMessageAsync(discordEmbedBuilder);
         }
 
-        public static async Task SendBirthdayMessageAsync(DiscordChannel discordChannel, DiscordGuild discordGuild, bool sendOnlyIfTodayBirthday = false)
+        public static async Task HappyBirthdayMessageAsync(DiscordChannel discordChannel, DiscordGuild discordGuild, DiscordUser discordUser)
         {
-            // Getting closest birthday from user present in the server and its member info
-            var user = GetNextUserToMakeBirthday(discordGuild);
+            var user = DiscordUsers.Users.FirstOrDefault(user => user.Id == discordUser.Id);
+            if (!await IsValidBirthdayUserAsync(user, discordGuild, discordChannel)) return;
 
+            // Gets how many days are maining for the user's birthday.
+            var daysRemaining = GetBirthdayDaysRemaining(user);
+            var upcomingDate = GetBirthdayUpcomingDate(daysRemaining);
+
+            var message = string.Empty;
+
+            message = upcomingDate is BirthdayUpcomingDate.Today
+                ? await GenerateTodayHappyBirthdayMessageAsync(user)
+                : await GenerateUnspecifiedHappyBirthdayMessageAsync(user);
+
+            await BuildBirthdayMessage(discordChannel, user, upcomingDate, message);
+        }
+
+        public static async Task<bool>IsValidBirthdayUserAsync(User? user, DiscordGuild discordGuild, DiscordChannel discordChannel)
+        {
             // If the user is null, send a message to the Discord channel indicating inability to find the next user in the birthday list.
             if (user is null)
             {
-                // Sends the message.
                 await discordChannel.SendMessageAsync($"O usuário não está na lista de aniversariantes!");
-                // Return to the method.
-                return;
+                return false;
             }
 
             // Tries to get detailed discord info about the user found.
@@ -117,11 +136,18 @@ namespace KWiJisho.Commands
             // If the user is null, send a message to the Discord channel indicating inability to find the next user in the birthday list.
             if (user.DiscordMember is null)
             {
-                // Sends the message that birthday user wasn't found.
                 await discordChannel.SendMessageAsync($"O usuário não está nesse servidor!");
-                // Return to the method.
-                return;
+                return false;
             }
+
+            return true;
+        }
+
+        public static async Task NextBirthdayMessageAsync(DiscordChannel discordChannel, DiscordGuild discordGuild, bool sendOnlyIfTodayBirthday = false)
+        {
+            // Getting closest birthday from user present in the server and its member info
+            var user = GetNextUserToMakeBirthday(discordGuild);
+            if (!await IsValidBirthdayUserAsync(user, discordGuild, discordChannel)) return;
 
             // Gets how many days are maining for the user's birthday.
             var daysRemaining = GetBirthdayDaysRemaining(user);
@@ -130,7 +156,7 @@ namespace KWiJisho.Commands
             // If sending only if today is the birthday and it's not today, log and return.
             if (sendOnlyIfTodayBirthday && upcomingDate is not BirthdayUpcomingDate.Today)
             {
-                await KWiJishoLogs.DefaultLog.AddInfoAsync(KWiJishoLog.Module.Birthday, $@"Birthday message wasn't sent. There's not birthday today.");
+                await Logs.DefaultLog.AddInfoAsync(Log.Module.Birthday, BirthdayJob.LogContext, $@"Birthday message wasn't sent. There's not birthday today.");
                 return;
             }
 
@@ -141,7 +167,11 @@ namespace KWiJisho.Commands
         {
             // Generates birthday message according how many days are remaining for its birthday.
             var message = await GenerateBirthdayMessageAsync(user);
+            await BuildBirthdayMessage(discordChannel, user, upcomingDate, message);
+        }
 
+        public static async Task BuildBirthdayMessage(DiscordChannel discordChannel, User user, BirthdayUpcomingDate upcomingDate, string message)
+        {
             // Gets the image name and image's full path.
             var fileName = $"500x500-happybirthday-{upcomingDate.ToString().ToLower()}.png";
             var imagePath = Path.GetFullPath($"Resources/Images/Birthday/{fileName}");
@@ -154,7 +184,7 @@ namespace KWiJisho.Commands
                 Description = $@"O próximo aniversariante é.. {user.Nickname}!! {message}",
                 Footer = new DiscordEmbedBuilder.EmbedFooter
                 {
-                    Text = $"Aniversariante: {user.FirstName} • Aniversário: {user.Birthday:dd/MM/yyyy}"
+                    Text = $"Aniversariante: {user.FirstName} • Aniversário: {user.Birthday:dd/MM/yyyy} • Idade: {user.Age} anos"
                 }
             }
             .WithThumbnail($"attachment://{fileName}")

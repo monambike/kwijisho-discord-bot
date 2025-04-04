@@ -14,7 +14,7 @@ namespace KWiJisho.Test
         [Fact]
         public async Task Test1()
         {
-            var mockLogs = new Mock<KWiJishoLog>(); // Mocka o KWiJishoLogs para simular seu comportamento
+            var mockLogs = new Mock<Log>(); // Mocka o KWiJishoLogs para simular seu comportamento
             var mockDiscordClient = new Mock<DiscordClient>(); // Mocka o DiscordClient para simular seu comportamento
             var mockContext = new Mock<IJobExecutionContext>(); // Mocka o IJobExecutionContext para simular seu comportamento
             var dataMap = new JobDataMap

@@ -76,30 +76,49 @@ namespace KWiJisho.Models
             var upcomingBirthdayDate = GetBirthdayUpcomingDate(daysRemaining);
             return upcomingBirthdayDate switch
             {
-                BirthdayUpcomingDate.Today => await GenerateTodayBirthdayMessageAsync(user),
-                BirthdayUpcomingDate.Tomorrow => GenerateTomorrowBirthdayMessage(user),
-                BirthdayUpcomingDate.InSomeDays => GenerateInSomeDaysBirthdayMessage(user, daysRemaining),
+                BirthdayUpcomingDate.Today => await GenerateTodayHappyBirthdayMessageAsync(user),
+                BirthdayUpcomingDate.Tomorrow => GenerateTomorrowBirthdayReminder(user),
+                BirthdayUpcomingDate.InSomeDays => GenerateInSomeDaysBirthdayReminder(user, daysRemaining),
+                BirthdayUpcomingDate.Unspecified  => await GenerateUnspecifiedHappyBirthdayMessageAsync(user),
                 _ => throw new NotImplementedException()
             };
         }
 
-        private static async Task<string> GenerateTodayBirthdayMessageAsync(User user)
+        internal static async Task<string> GenerateUnspecifiedHappyBirthdayMessageAsync(User user)
         {
+            var chatGptMessage = await ChatGPT.GetKWiJishoPromptAsync($"dê uma mensagem de aniversário especial para {user.Nickname} sem assumir que é hoje");
+            var bodyBirthdayMessage = (chatGptMessage is null) ? "" : Environment.NewLine + Environment.NewLine + chatGptMessage;
+
+            var birthdayMessage =
+                $"Não sei dizer se o seu aniversário é hoje por alguns problemas nos meus fioszinhos 😵‍💫 mas... QUEREMOS DESEJAR MESMO ASSIM!! " +
+                $"Feliz aniversário!! 🥳🎉 {"PARABÉNSS!!!!".ToDiscordBold()} " +
+                $"{bodyBirthdayMessage}" +
+                $"Feliz Aniversário {user.NicknameVariation} 🎂❤️" +
+                $"{Environment.NewLine + Environment.NewLine}" +
+                $"Gente vem cá! <@&{Servers.Tramontina.BirthdayRoleId}>, lembraram de desejar feliz aniversário para {user.FirstName}?";
+
+            return birthdayMessage;
+        }
+
+        internal static async Task<string> GenerateTodayHappyBirthdayMessageAsync(User user)
+        {
+            var chatGptMessage = await ChatGPT.GetKWiJishoPromptAsync($"dê uma mensagem de aniversário especial para {user.Nickname}");
+            var bodyBirthdayMessage = (chatGptMessage is null) ? "" : Environment.NewLine + Environment.NewLine + chatGptMessage;
+
             var birthdayMessage =
                 $"Hoje é seu aniversário!! 🥳🎉 {"PARABÉNSS!!!!".ToDiscordBold()} " +
                 $"Feliz Aniversário {user.NicknameVariation} 🎂❤️" +
-                $"{Environment.NewLine + Environment.NewLine} " +
-                $"{await ChatGPT.GetKWiJishoPromptAsync($"dê uma mensagem de aniversário especial para {user.Nickname}")}" +
+                $"{bodyBirthdayMessage}" +
                 $"{Environment.NewLine + Environment.NewLine}" +
                 $"Gente vem cá! <@&{Servers.Tramontina.BirthdayRoleId}>, {user.FirstName} fez aniversário hoje!";
 
             return birthdayMessage;
         }
 
-        private static string GenerateTomorrowBirthdayMessage(User user)
+        private static string GenerateTomorrowBirthdayReminder(User user)
             => $"{"Amanhã".ToDiscordBold()} já é o seu aniversário {user.Nickname}! 🥳🎉 Mal posso esperar!!";
 
-        private static string GenerateInSomeDaysBirthdayMessage(User user, int daysRemaining)
+        private static string GenerateInSomeDaysBirthdayReminder(User user, int daysRemaining)
             => $"Faltam apenas {(daysRemaining + " dias").ToDiscordBold()} pra {user.Nickname} fazer aniversário!! 👀 Tô ansiosa!!";
 
 
@@ -148,7 +167,12 @@ namespace KWiJisho.Models
             /// <summary>
             /// Indicates an upcoming birthday in the future, beyond tomorrow.
             /// </summary>
-            InSomeDays
+            InSomeDays,
+
+            /// <summary>
+            /// Indicates a birthday with an unknown or unspecified date, but that stills deserves a happy birthday.
+            /// </summary>
+            Unspecified
         }
     }
 }
