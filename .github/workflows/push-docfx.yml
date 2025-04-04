@@ -22,22 +22,16 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v3
     - name: Dotnet Setup
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 8.0.x
-        
-    # Restoring dependencies
-    - run: dotnet restore ${{github.workspace}}/src/KWiJisho/KWiJisho.csproj
-    # Building project
-    - run: dotnet build ${{github.workspace}}/src/KWiJisho/KWiJisho.csproj --configuration Release --framework net8.0
-    # Installing docfx
-    - run: dotnet tool install -g docfx
-    # Updating/Generating documentation
+        dotnet-version: 8.x
+
+    - run: dotnet tool update -g docfx
     - run: docfx docs/docfx.json
 
     - name: Upload artifact
