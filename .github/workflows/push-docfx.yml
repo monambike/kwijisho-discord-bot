@@ -31,7 +31,7 @@ jobs:
       with:
         dotnet-version: 8.x
         
-    - name: Debug - Listar arquivo
+    - name: Debug - Listar arquivos
     - run: ls -R ${{ github.workspace }}
     # Restoring dependencies
     - run: dotnet restore ${{github.workspace}}/src/KWiJisho/KWiJisho.csproj
