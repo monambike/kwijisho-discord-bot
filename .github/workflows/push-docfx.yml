@@ -22,7 +22,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -30,13 +30,8 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 8.x
-        
-    - run: ls -R ${{ github.workspace }}
-    # Restoring dependencies
-    - run: dotnet restore ${{github.workspace}}/src/KWiJisho/KWiJisho.csproj
-    # Installing docfx
-    - run: dotnet tool install -g docfx
-    # Updating/Generating documentation
+
+    - run: dotnet tool update -g docfx
     - run: docfx docs/docfx.json
 
     - name: Upload artifact
