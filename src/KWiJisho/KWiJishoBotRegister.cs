@@ -7,7 +7,6 @@ using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.CommandsNext.Exceptions;
 using DSharpPlus.SlashCommands;
 using DSharpPlus.SlashCommands.Attributes;
-using KWiJisho.Commands;
 using KWiJisho.Commands.Prefix;
 using KWiJisho.Commands.Slash;
 using KWiJisho.Config;
