@@ -31,9 +31,10 @@ jobs:
       with:
         dotnet-version: 8.x
         
-    - run: ls -R ${{ github.workspace }}
     # Restoring dependencies
     - run: dotnet restore ${{github.workspace}}/src/KWiJisho/KWiJisho.csproj
+    # Building project
+    - run: dotnet build ${{github.workspace}}/src/KWiJisho/KWiJisho.csproj --configuration Release
     # Installing docfx
     - run: dotnet tool install -g docfx
     # Updating/Generating documentation
