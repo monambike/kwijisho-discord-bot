@@ -82,8 +82,9 @@ namespace KWiJisho
         /// <summary>
         /// Register all the Discord bot prefix commands permissions.
         /// </summary>
-        public void RegisterPrefixCommandsPermissions()
+        public void RegisterPrefixCommandEvents()
         {
+            // Permissions
             PrefixCommands.CommandErrored += async (sender, e) =>
             {
                 // Checking if the exception is a checks failed exception.
@@ -102,6 +103,7 @@ namespace KWiJisho
                 }
             };
 
+            // Logs
             PrefixCommands.CommandExecuted += async (sender, e) =>
             {
                 var logContext = new LogContext
@@ -119,8 +121,9 @@ namespace KWiJisho
         /// <summary>
         /// Register all the Discord bot slash commands permissions.
         /// </summary>
-        public void RegisterSlashCommandsPermissions()
+        public void RegisterSlashCommandEvents()
         {
+            // Permissions
             SlashCommandsExtension slash = SlashCommands;
             slash.SlashCommandErrored += async (sender, e) =>
             {
@@ -140,6 +143,7 @@ namespace KWiJisho
                 }
             };
 
+            // Log
             slash.SlashCommandExecuted += async (sender, e) =>
             {
                 var logContext = new LogContext

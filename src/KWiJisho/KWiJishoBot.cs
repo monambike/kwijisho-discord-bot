@@ -36,6 +36,17 @@ namespace KWiJisho
         public SlashCommandsExtension SlashCommands { get; private set; } = null!;
 
         /// <summary>
+        /// The log context.
+        /// </summary>
+        public LogContext LogContext { get; private set; } = new LogContext
+        {
+            Action = "Startup",
+            ContextType = "System",
+            GuildId = Servers.Personal.GuildId.ToString(),
+            IssuerId = Data.KWiJisho.Name
+        };
+
+        /// <summary>
         /// The main entry point method of the application.
         /// </summary>
         public static void Main()
@@ -85,12 +96,12 @@ namespace KWiJisho
             // Defining and registering the Discord bot prefix commands.
             PrefixCommands = DiscordClient.UseCommandsNext(commandsNextConfiguration);
             RegisterPrefixCommands();
-            RegisterPrefixCommandsPermissions();
+            RegisterPrefixCommandEvents();
 
             // Defining and registering the Discord bot slash commands.
             SlashCommands = DiscordClient.UseSlashCommands();
             RegisterSlashCommands();
-            RegisterSlashCommandsPermissions();
+            RegisterSlashCommandEvents();
 
             // Creating all schedulers for application jobs.
             await Scheduler.CreateAllSchedulersAsync(DiscordClient);
@@ -103,6 +114,7 @@ namespace KWiJisho
 
             // This code that will be executed when the bot is ready and connected to Discord sending.
             // a message into my personal server
+            await Logs.DefaultLog.AddInfoAsync(Log.Module.KWiJisho, LogContext, "Initializing the Discord bot application...");
             var channel = await DiscordClient.GetChannelAsync(Servers.Personal.WelcomeChannelId);
             if (channel != null) await channel.SendMessageAsync("Olá!! Agora eu tô online e prontíssima pra ajudar! 🥳🎉🎉");
 

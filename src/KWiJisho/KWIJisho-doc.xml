@@ -1432,6 +1432,11 @@
             Gets or sets the <see cref="T:DSharpPlus.SlashCommands.SlashCommandsExtension"/> instance for handling bot slash commands.
             </summary>
         </member>
+        <member name="P:KWiJisho.KWiJishoBot.LogContext">
+            <summary>
+            The log context.
+            </summary>
+        </member>
         <member name="M:KWiJisho.KWiJishoBot.Main">
             <summary>
             The main entry point method of the application.
@@ -1465,12 +1470,12 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:KWiJisho.KWiJishoBot.RegisterPrefixCommandsPermissions">
+        <member name="M:KWiJisho.KWiJishoBot.RegisterPrefixCommandEvents">
             <summary>
             Register all the Discord bot prefix commands permissions.
             </summary>
         </member>
-        <member name="M:KWiJisho.KWiJishoBot.RegisterSlashCommandsPermissions">
+        <member name="M:KWiJisho.KWiJishoBot.RegisterSlashCommandEvents">
             <summary>
             Register all the Discord bot slash commands permissions.
             </summary>

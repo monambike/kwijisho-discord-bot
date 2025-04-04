@@ -39,7 +39,7 @@ namespace KWiJisho.APIs
         /// </summary>
         /// <param name="input">The text to be summarized.</param>
         /// <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
-        public static async Task<string> GetPromptSummarizeTextAsync(string input)
+        public static async Task<string?> GetPromptSummarizeTextAsync(string input)
             => await GetPromptAsync(input, "Summarize the following text to a maximum of 5 or 6 lines.");
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace KWiJisho.APIs
         /// <param name="input">The text to be translated.</param>
         /// <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
 
-        public static async Task<string> GetPromptTranslateToPortugueseAsync(string input)
+        public static async Task<string?> GetPromptTranslateToPortugueseAsync(string input)
             => await GetPromptAsync(input, "Translate the following text into Brazilian Portuguese.");
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace KWiJisho.APIs
         /// <param name="input">The user input text.</param>
         /// <param name="promptStyle">The style of the prompt to be added.</param>
         /// <returns>A Task representing the asynchronous operation, yielding the generated prompt.</returns>
-        private static async Task<string> GetPromptAsync(string input, string promptStyle)
+        private static async Task<string?> GetPromptAsync(string input, string promptStyle)
         {
             // Creating an instance of the OpenAIAPI class with the ChatGptToken.
             var api = new OpenAIAPI(ConfigJson.ChatGptToken);
@@ -126,7 +126,7 @@ namespace KWiJisho.APIs
             chat.AppendUserInput(input);
 
             // Getting a response from the chatbot asynchronously.
-            var response = await chat.GetResponseFromChatbotAsync();
+            var response = await GetResponseFromChatBotWithTimeoutAsync(10000);
 
             // Returning the response.
             return response;

@@ -56,6 +56,7 @@ namespace KWiJisho.Models
 
             // Summarize the detailed explanation from the APOD response.
             var summarizedExplanation = await ChatGPT.GetPromptSummarizeTextAsync(apodResponse.Explanation);
+
             // Translate the summarized explanation to Portuguese.
             var translatedExplanation = await ChatGPT.GetPromptTranslateToPortugueseAsync(summarizedExplanation);
             // The final formatted explanation ready for use.
@@ -92,10 +93,21 @@ namespace KWiJisho.Models
         /// <param name="apodResponse">The APOD response content to build the embed.</param>
         /// <param name="apodLanguage">The language retrieved by the APOD.</param>
         /// <returns>A <see cref="Task{TResult}"/> containing the <see cref="ApodBuilder"/>.</returns>
-        public static async Task<ApodBuilder> BuildApodMessageAsync(ApodLanguage apodLanguage, ApodResponse apodResponse)
+        public static async Task<ApodBuilder?> BuildApodMessageAsync(ApodLanguage apodLanguage, ApodResponse apodResponse)
         {
             // Summarize the detailed explanation from the APOD response.
-            apodResponse.Explanation = await ChatGPT.GetPromptSummarizeTextAsync(apodResponse.Explanation);
+            var summarizedExplanation = await ChatGPT.GetPromptSummarizeTextAsync(apodResponse.Explanation);
+
+            // In case of ChatGPT not be working.
+            if (summarizedExplanation is null)
+            {
+                // Setting as English because does not use ChatGPT yet.
+                apodLanguage = ApodLanguage.English;
+            }
+            else
+            {
+                apodResponse.Explanation = summarizedExplanation;
+            }
 
             return apodLanguage switch
             {
