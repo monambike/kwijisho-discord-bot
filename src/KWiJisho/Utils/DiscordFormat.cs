@@ -2,6 +2,7 @@
 // Contact: @monambike for more information.
 // For license information, please see the LICENSE file in the root directory.
 
+using DSharpPlus;
 using System;
 using System.Collections.Generic;
 
@@ -40,6 +41,8 @@ namespace KWiJisho.Utils
         /// <param name="url">The link url.</param>
         /// <returns>The string as a link.</returns>
         public static string ToDiscordLink(this string str, string url) => $"[{str}]({url})";
+
+        public static string RemoveDiscordMention(this string str, DiscordClient sender) => str.Replace(sender.CurrentUser.Mention, "").Trim();
 
         public static string ToDiscordDate(this DateTime dateTime, DiscordDateTimeFormat discordDateTimeFormat)
         {

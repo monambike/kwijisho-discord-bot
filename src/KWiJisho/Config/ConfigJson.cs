@@ -17,6 +17,11 @@ namespace KWiJisho.Config
         public static string Activity => $"{Prefix}{nameof(PrefixInfo.help)} | Sou a Kawaii Jisho! 💫";
 
         /// <summary>
+        /// Gets or sets the enable of ChatGPT.
+        /// </summary>
+        public static bool EnableChatGpt => true;
+
+        /// <summary>
         /// Gets or sets the default color for bot messages.
         /// </summary>
         public static Entities.Color DefaultColor => Colors.KWiJishoColor;

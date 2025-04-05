@@ -76,36 +76,6 @@ namespace KWiJisho.APIs
         }
 
         /// <summary>
-        /// Asynchronously retrieves a response from ChatGPT, returning null if the request times out.
-        /// </summary>
-        /// <param name="timeoutMilliseconds">The maximum time, in milliseconds, to wait for a response.</param>
-        /// <returns>The chatbot response as a string, or null if the operation timed out.</returns>
-        public static async Task<string?> GetResponseFromChatBotWithTimeoutAsync(int timeoutMilliseconds)
-        {
-            var task = KWiJishoConversation.GetResponseFromChatbotAsync();
-            var timeoutTask = Task.Delay(timeoutMilliseconds);
-
-            var completedTask = await Task.WhenAny(task, timeoutTask);
-
-            if (completedTask == task)
-            {
-                try
-                {
-                    return await task;
-                }
-                catch (Exception ex)
-                {
-                    var match = Regex.Match(ex.Message, @"""message"":\s*""(.*?)""");
-                    string errorMessage = match.Success ? match.Groups[1].Value : ex.Message;
-
-                    await Logs.DefaultLog.AddErrorAsync(Log.Module.KWiGpt, LogContext ,$"Error while obtaining response from ChatGPT: {errorMessage}");
-                    return null;
-                }
-            }
-            return null;
-        }
-
-        /// <summary>
         /// Asynchronous method to generate a prompt for the OpenAI GPT-3.5 model.
         /// </summary>
         /// <param name="input">The user input text.</param>
@@ -130,6 +100,39 @@ namespace KWiJisho.APIs
 
             // Returning the response.
             return response;
+        }
+
+        /// <summary>
+        /// Asynchronously retrieves a response from ChatGPT, returning null if the request times out.
+        /// </summary>
+        /// <param name="timeoutMilliseconds">The maximum time, in milliseconds, to wait for a response.</param>
+        /// <returns>The chatbot response as a string, or null if the operation timed out.</returns>
+        public static async Task<string?> GetResponseFromChatBotWithTimeoutAsync(int timeoutMilliseconds)
+        {
+            if (!ConfigJson.EnableChatGpt) return null;
+
+            var task = KWiJishoConversation.GetResponseFromChatbotAsync();
+            var timeoutTask = Task.Delay(timeoutMilliseconds);
+
+            var completedTask = await Task.WhenAny(task, timeoutTask);
+
+            if (completedTask == task)
+            {
+                try
+                {
+                    await Logs.DefaultLog.AddInfoAsync(Log.Module.KWiGpt, LogContext, $"A token was successfully consumed by a request to ChatGPT.");
+                    return await task;
+                }
+                catch (Exception ex)
+                {
+                    var match = Regex.Match(ex.Message, @"""message"":\s*""(.*?)""");
+                    string errorMessage = match.Success ? match.Groups[1].Value : ex.Message;
+
+                    await Logs.DefaultLog.AddErrorAsync(Log.Module.KWiGpt, LogContext, $"Error while obtaining response from ChatGPT: {errorMessage}");
+                    return null;
+                }
+            }
+            return null;
         }
     }
 }

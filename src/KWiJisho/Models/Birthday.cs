@@ -90,7 +90,7 @@ namespace KWiJisho.Models
             var bodyBirthdayMessage = (chatGptMessage is null) ? "" : Environment.NewLine + Environment.NewLine + chatGptMessage;
 
             var birthdayMessage =
-                $"Não sei dizer se o seu aniversário é hoje por alguns problemas nos meus fioszinhos 😵‍💫 mas... QUEREMOS DESEJAR MESMO ASSIM!! " +
+                $"Não sei dizer se o seu aniversário é hoje por alguns problemas nos meus fiozinhos 😵‍💫 mas... QUEREMOS DESEJAR MESMO ASSIM!! " +
                 $"Feliz aniversário!! 🥳🎉 {"PARABÉNSS!!!!".ToDiscordBold()} " +
                 $"{bodyBirthdayMessage}" +
                 $"Feliz Aniversário {user.NicknameVariation} 🎂❤️" +

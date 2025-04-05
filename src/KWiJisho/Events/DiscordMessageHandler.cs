@@ -2,7 +2,11 @@
 // Contact: @monambike for more information.
 // For license information, please see the LICENSE file in the root directory.
 
+using DSharpPlus;
 using DSharpPlus.EventArgs;
+using KWiJisho.APIs;
+using KWiJisho.Utils;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace KWiJisho.Events
@@ -12,14 +16,14 @@ namespace KWiJisho.Events
     /// </summary>
     public class DiscordMessageHandler
     {
-        //    public static async Task OnMessageReceivedAsync(DiscordClient sender, MessageCreateEventArgs e)
-        //    {
-        //        ArgumentNullException.ThrowIfNull(sender);
+        public static async Task OnMessageCreatedAsync(DiscordClient sender, MessageCreateEventArgs e)
+        {
+            if (e.Author.IsBot) return;
 
-        //        if (e.Author.IsBot) return; // Ignore messages from other bots
-
-        //        await ValidateMentionedUsers(e);
-        //    }
+            var contentWithoutMentions = e.Message.Content.RemoveDiscordMention(sender);
+            var response = await ChatGPT.GetKWiJishoPromptAsync(contentWithoutMentions) ?? BotResponses.ChatGptError;
+            if (e.Message.MentionedUsers.Any(u => u.Id == sender.CurrentUser.Id)) await e.Message.RespondAsync(response);
+        }
 
         public static async Task ValidateMentionedUsersAsync(MessageCreateEventArgs e)
         {
