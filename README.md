@@ -12,7 +12,7 @@
 
 Fun and friendly interactive Discord bot with a wide range of functions.
 
-[**See Docs** →][docs]
+[**See Website Commands and Documentation** →][docs]
 
 ![500x281-transparent-pontingup](https://github.com/monambike/kwijisho-discord-bot/assets/35270174/9daa0256-5e72-4e37-94bc-0ba800327368)
 
