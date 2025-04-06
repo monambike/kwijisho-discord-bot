@@ -4,7 +4,6 @@
 
 using DSharpPlus;
 using KWiJisho.Data;
-using Quartz.Logging;
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -64,9 +63,19 @@ namespace KWiJisho.Utils
         public enum Module
         {
             /// <summary>
-            /// Represents the general KWiJisho module.
+            /// Represents the slash and prefix commands module.
             /// </summary>
-            KWiJisho,
+            CommandExecution,
+
+            /// <summary>
+            /// Represents the ChatGpt module.
+            /// </summary>
+            ChatGpt,
+
+            /// <summary>
+            /// Represents the general system KWiJisho module.
+            /// </summary>
+            System,
 
             /// <summary>
             /// Represents the module for "Basic" commands.
@@ -151,7 +160,10 @@ namespace KWiJisho.Utils
             string contextInfo = string.IsNullOrEmpty(logContext.ContextType) || string.IsNullOrEmpty(logContext.Action)
             ? "" : $"[{logContext.ContextType}: {logContext.Action}] ";
 
-            await AddEntryAsync($"[{brazilTime:yyyy-MM-dd HH:mm:ss.fff UTC-zzz}] [{module}] {guildInfo}[Issuer ID: {logContext.IssuerId}] {contextInfo}{logType.ToString().ToUpper()} - {message}");
+            string issuerInfo = string.IsNullOrEmpty(logContext.IssuerId)
+            ? "" : $"[Issuer ID: {logContext.IssuerId}] ";
+
+            await AddEntryAsync($"[{brazilTime:yyyy-MM-dd HH:mm:ss.fff UTC: zzz}] [{module}] {guildInfo}{issuerInfo}{contextInfo}{logType.ToString().ToUpper()}: {message}".ToDiscordMonospace());
         }
 
         /// <summary>

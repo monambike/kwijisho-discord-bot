@@ -50,7 +50,7 @@ namespace KWiJisho.Models
         private static async Task<ApodBuilder> BuildPortugueseApodMessageAsync(ApodResponse apodResponse)
         {
             // Translate the title from the APOD response.
-            var translatedTitle = await ChatGPT.GetPromptTranslateToPortugueseAsync(apodResponse.Title);
+            var translatedTitle = await ChatGPT.GetPromptTranslateToBrazilianPortugueseAsync(apodResponse.Title);
             // The final formatted title ready for use.
             var title = translatedTitle;
 
@@ -58,7 +58,7 @@ namespace KWiJisho.Models
             var summarizedExplanation = await ChatGPT.GetPromptSummarizeTextAsync(apodResponse.Explanation);
 
             // Translate the summarized explanation to Portuguese.
-            var translatedExplanation = await ChatGPT.GetPromptTranslateToPortugueseAsync(summarizedExplanation);
+            var translatedExplanation = await ChatGPT.GetPromptTranslateToBrazilianPortugueseAsync(summarizedExplanation);
             // The final formatted explanation ready for use.
             var explanation = translatedExplanation;
 

@@ -5,6 +5,7 @@
 using DSharpPlus;
 using DSharpPlus.EventArgs;
 using KWiJisho.APIs;
+using KWiJisho.Config;
 using KWiJisho.Utils;
 using System.Linq;
 using System.Threading.Tasks;
@@ -20,9 +21,35 @@ namespace KWiJisho.Events
         {
             if (e.Author.IsBot) return;
 
+            if (e.Message.Content.StartsWith(ConfigJson.Prefix))
+            {
+                var commandName = e.Message.Content.Split(' ')[0];
+
+                var logContexts = new LogContext
+                {
+                    IssuerId = sender.CurrentUser.Id.ToString(),
+                    GuildId = e.Guild.Id.ToString(),
+                    Action = commandName,
+                    ContextType = "Prefix Command"
+                };
+
+                await Logs.DefaultLog.AddInfoAsync(Log.Module.CommandExecution, logContexts, $@"Executing ""{commandName}"" prefix command...");
+                return;
+            }
+
+            if (!e.Message.MentionedUsers.Any(user => user.Id == sender.CurrentUser.Id)) return;
+
+            var logContext = new LogContext
+            {
+                GuildId = e.Guild.Id.ToString(),
+                IssuerId = sender.CurrentUser.Id.ToString()
+            };
+
+            await Logs.DefaultLog.AddInfoAsync(Log.Module.ChatGpt, logContext, $"A user has mentioned KWiJisho and now it will make a request to ChatGpt from OpenAI.");
+
             var contentWithoutMentions = e.Message.Content.RemoveDiscordMention(sender);
             var response = await ChatGPT.GetKWiJishoPromptAsync(contentWithoutMentions) ?? BotResponses.ChatGptError;
-            if (e.Message.MentionedUsers.Any(u => u.Id == sender.CurrentUser.Id)) await e.Message.RespondAsync(response);
+            await e.Message.RespondAsync(response);
         }
 
         public static async Task ValidateMentionedUsersAsync(MessageCreateEventArgs e)

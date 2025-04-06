@@ -88,7 +88,7 @@ Social: @monambike | Webiste: https://monambike.com</Description>
     <PackageReference Include="DSharpPlus.Lavalink" Version="4.4.6" />
     <PackageReference Include="DSharpPlus.SlashCommands" Version="4.4.6" />
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="OpenAI" Version="1.10.0" />
+    <PackageReference Include="OpenAI" Version="2.1.0" />
     <PackageReference Include="Quartz" Version="3.8.0" />
     <PackageReference Include="System.ComponentModel.Composition" Version="8.0.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />

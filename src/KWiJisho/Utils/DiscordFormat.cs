@@ -35,6 +35,13 @@ namespace KWiJisho.Utils
         public static string ToDiscordEscape(this string str) => $@"\{str}";
 
         /// <summary>
+        /// Formats the specified string in monospaced using Discord markdown.
+        /// </summary>
+        /// <param name="str"></param>
+        /// <returns>The string in monospaced</returns>
+        public static string ToDiscordMonospace(this string str) => $"`{str}`";
+
+        /// <summary>
         /// Formats the specified string in a link using Discord markdown.
         /// </summary>
         /// <param name="str">The string to be formatted.</param>

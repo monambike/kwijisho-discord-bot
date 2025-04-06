@@ -22,6 +22,11 @@ namespace KWiJisho.Config
         public static bool EnableChatGpt => true;
 
         /// <summary>
+        /// Gets or sets the model of ChatGPT.
+        /// </summary>
+        public static string ChatGptModel = "gpt-4-0125-preview";
+
+        /// <summary>
         /// Gets or sets the default color for bot messages.
         /// </summary>
         public static Entities.Color DefaultColor => Colors.KWiJishoColor;

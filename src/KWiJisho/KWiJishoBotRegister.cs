@@ -104,18 +104,20 @@ namespace KWiJisho
                 }
             };
 
-            // Logs
+            // Log
             PrefixCommands.CommandExecuted += async (sender, e) =>
             {
+                var commandName = ConfigJson.Prefix + e.Context.Command.Name;
+
                 var logContext = new LogContext
                 {
                     IssuerId = e.Context.Member.Id.ToString(),
                     GuildId = e.Context.Guild.Id.ToString(),
-                    Action = ConfigJson.Prefix + e.Context.Command.Name,
+                    Action = commandName,
                     ContextType = "Prefix Command"
                 };
 
-                await Logs.DefaultLog.AddInfoAsync(Log.Module.KWiJisho, logContext, "Executed prefix command.");
+                await Logs.DefaultLog.AddInfoAsync(Log.Module.CommandExecution, logContext, $@"Executed ""{commandName}"" prefix command.");
             };
         }
 
@@ -145,17 +147,34 @@ namespace KWiJisho
             };
 
             // Log
-            slash.SlashCommandExecuted += async (sender, e) =>
+            slash.SlashCommandInvoked += async (sender, e) =>
             {
+                var commandName = $"/{e.Context.CommandName}";
+
                 var logContext = new LogContext
                 {
                     IssuerId = e.Context.Member.Id.ToString(),
                     GuildId = e.Context.Guild.Id.ToString(),
-                    Action = e.Context.CommandName,
+                    Action = commandName,
                     ContextType = "Slash Command"
                 };
 
-                await Logs.DefaultLog.AddInfoAsync(Log.Module.KWiJisho, logContext, "Executed slash command.");
+                await Logs.DefaultLog.AddInfoAsync(Log.Module.CommandExecution, logContext, $@"Executing ""{commandName}"" slash command...");
+            };
+
+            slash.SlashCommandExecuted += async (sender, e) =>
+            {
+                var commandName = $"/{e.Context.CommandName}";
+
+                var logContext = new LogContext
+                {
+                    IssuerId = e.Context.Member.Id.ToString(),
+                    GuildId = e.Context.Guild.Id.ToString(),
+                    Action = commandName,
+                    ContextType = "Slash Command"
+                };
+
+                await Logs.DefaultLog.AddInfoAsync(Log.Module.CommandExecution, logContext, $@"Executed ""{commandName}"" slash command.");
             };
         }
     }

@@ -4,7 +4,6 @@
 
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
-using DSharpPlus.Entities;
 using DSharpPlus.SlashCommands;
 using KWiJisho.Config;
 using KWiJisho.Data;
@@ -114,7 +113,7 @@ namespace KWiJisho
 
             // This code that will be executed when the bot is ready and connected to Discord sending.
             // a message into my personal server
-            await Logs.DefaultLog.AddInfoAsync(Log.Module.KWiJisho, LogContext, $"Initializing the {Data.KWiJisho.Name} Discord bot application...");
+            await Logs.DefaultLog.AddInfoAsync(Log.Module.System, LogContext, $"Initializing the {Data.KWiJisho.Name} Discord bot application...");
             var channel = await DiscordClient.GetChannelAsync(Servers.Personal.WelcomeChannelId);
             if (channel != null) await channel.SendMessageAsync("Olá!! Agora eu tô online e prontíssima pra ajudar! 🥳🎉🎉");
 
