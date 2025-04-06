@@ -31,6 +31,12 @@ KWiJisho stands for "Kawaii" (Cute) and "Jisho" (Dictionary) in japanese. The wo
 - You can talk with her in the KWiGpt style. ;P (cute talk with emojis using ChatGPT)
 - [Much more!!][docs-commands] :)
 
+## YouTube Video Showcase
+
+Click here to see my [YouTube video](https://www.youtube.com/watch?v=diJtp_k--Ys) showcasing the KWiJisho Discord bot with my implementations.
+
+![kwijisho](https://github.com/user-attachments/assets/293feb17-0513-4bd6-af04-bb08d7a8dd02)
+
 # Documentation
 
 You can check further documentation here [monambike.github.io/kwijisho-discord-bot][docs].
