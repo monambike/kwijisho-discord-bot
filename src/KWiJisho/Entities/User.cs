@@ -3,7 +3,6 @@
 // For license information, please see the LICENSE file in the root directory.
 
 using DSharpPlus.Entities;
-using KWiJisho.Models;
 using System;
 using System.Threading.Tasks;
 
@@ -58,8 +57,14 @@ namespace KWiJisho.Entities
         /// </summary>
         public string NicknameVariation => nicknameVariation;
 
+        /// <summary>
+        /// The Discord guild.
+        /// </summary>
         public DiscordGuild? DiscordGuild { get; private set; }
 
+        /// <summary>
+        /// The Discord member.
+        /// </summary>
         public DiscordMember? DiscordMember { get; private set; }
 
         /// <summary>
