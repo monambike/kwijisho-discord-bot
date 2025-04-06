@@ -160,13 +160,34 @@ namespace KWiJisho
                 await Logs.DefaultLog.AddInfoAsync(Log.Module.CommandExecution, logContext, $@"Executed ""{commandName}"" slash command.");
             };
         }
+
+        /// <summary>
+        /// Creates a <see cref="LogContext"/> for a prefix command execution.
+        /// </summary>
+        /// <param name="commandContext">The context of the prefix command.</param>
+        /// <param name="commandName">The name of the executed command.</param>
+        /// <returns>A configured <see cref="LogContext"/> for logging.</returns>
         internal static LogContext CreatePrefixCommandLogContext(CommandContext commandContext, string commandName) =>
-            CreateContextContext(commandContext.Guild.Id, commandContext.User.Id, commandName, "Prefix Commands");
+            CreateLogContext(commandContext.Guild.Id, commandContext.User.Id, commandName, "Prefix Commands");
 
+        /// <summary>
+        /// Creates a <see cref="LogContext"/> for a slash command execution.
+        /// </summary>
+        /// <param name="interactionContext">The context of the slash command interaction.</param>
+        /// <param name="commandName">The name of the executed command.</param>
+        /// <returns>A configured <see cref="LogContext"/> for logging.</returns>
         internal static LogContext CreateSlashCommandLogContext(InteractionContext interactionContext, string commandName) =>
-            CreateContextContext(interactionContext.Guild.Id, interactionContext.User.Id, commandName, "Slash Commands");
+            CreateLogContext(interactionContext.Guild.Id, interactionContext.User.Id, commandName, "Slash Commands");
 
-        internal static LogContext CreateContextContext(ulong guildId, ulong userId, string commandName, string action) =>
+        /// <summary>
+        /// Create log context for prefix and slash commands.
+        /// </summary>
+        /// <param name="guildId">The ID of the guild where the command was executed.</param>
+        /// <param name="userId">The ID of the user who executed the command.</param>
+        /// <param name="commandName">The name of the executed command.</param>
+        /// <param name="action">The type or context of the command (e.g., "Prefix Commands", "Slash Commands").</param>
+        /// <returns>A configured <see cref="LogContext"/> instance.</returns>
+        internal static LogContext CreateLogContext(ulong guildId, ulong userId, string commandName, string action) =>
             new()
             {
                 IssuerId = userId.ToString(),
