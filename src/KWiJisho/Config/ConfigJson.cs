@@ -1,9 +1,16 @@
-﻿using KWiJisho.Data;
+﻿// Copyright(c) 2024 Vinicius Gabriel Marques de Melo. All rights reserved.
+// Contact: @monambike for more information.
+// For license information, please see the LICENSE file in the root directory.
+
+using KWiJisho.Data;
 using System;
 using static KWiJisho.Commands.Prefix.PrefixCommandManager;
 
 namespace KWiJisho.Config
 {
+    /// <summary>
+    /// Represents sets of configurations for the Discord bot that can also be retrieved by the JSON file.
+    /// </summary>
     public class ConfigJson
     {
         /// <summary>

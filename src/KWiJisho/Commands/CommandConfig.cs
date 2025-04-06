@@ -12,8 +12,18 @@ using static KWiJisho.Database.Services.ServerService;
 
 namespace KWiJisho.Commands
 {
+    /// <summary>
+    /// Provides configuration commands for linking, unlinking, and viewing channels in a Discord server.
+    /// </summary>
     internal class CommandConfig
     {
+        /// <summary>
+        /// Links a specific Discord channel to a predefined server function (e.g., welcome, logs).
+        /// </summary>
+        /// <param name="interactionContext">The channel where the interaction response will be sent.</param>
+        /// <param name="discordChannel">The Discord channel to be linked.</param>
+        /// <param name="channelLink">The enum representing the type of link to be created.</param>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         public static async Task CommandLinkChannelAsync(DiscordChannel interactionContext, DiscordChannel discordChannel, ChannelLink channelLink)
         {
             await UpdateServerChannelByEnumAsync(interactionContext.Guild.Id, channelLink, discordChannel.Id);
@@ -28,6 +38,12 @@ namespace KWiJisho.Commands
             await interactionContext.SendMessageAsync(discordEmbedBuilder);
         }
 
+        /// <summary>
+        /// Unlinks a Discord channel from a predefined server function.
+        /// </summary>
+        /// <param name="interactionContext">The channel where the interaction response will be sent.</param>
+        /// <param name="channelLink">The enum representing the type of link to be removed.</param>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         public static async Task CommandUnlinkChannelAsync(DiscordChannel interactionContext, ChannelLink channelLink)
         {
             await UpdateServerChannelByEnumAsync(interactionContext.Guild.Id, channelLink, null);
@@ -42,6 +58,11 @@ namespace KWiJisho.Commands
             await interactionContext.SendMessageAsync(discordEmbedBuilder);
         }
 
+        /// <summary>
+        /// Displays the list of all currently linked channels and their respective functions.
+        /// </summary>
+        /// <param name="interactionContext">The channel where the interaction response will be sent.</param>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         public static async Task CommandSlashViewChannelsAsync(DiscordChannel interactionContext)
         {
             var serverChannel = await ServerChannelService.GetServerChannelByServerGuidAsync(interactionContext.Guild.Id);

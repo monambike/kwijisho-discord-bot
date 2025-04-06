@@ -3,6 +3,7 @@
 // For license information, please see the LICENSE file in the root directory.
 
 using DSharpPlus;
+using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.CommandsNext.Exceptions;
 using DSharpPlus.SlashCommands;
@@ -35,7 +36,7 @@ namespace KWiJisho
             PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixNotice>();
             PrefixCommands.RegisterCommands<PrefixCommandManager.PrefixTheme.PrefixThemeTramontina>();
         }
-        
+
         /// <summary>
         /// Register all the Discord bot slash commands.
         /// </summary>
@@ -109,13 +110,7 @@ namespace KWiJisho
             {
                 var commandName = ConfigJson.Prefix + e.Context.Command.Name;
 
-                var logContext = new LogContext
-                {
-                    IssuerId = e.Context.Member.Id.ToString(),
-                    GuildId = e.Context.Guild.Id.ToString(),
-                    Action = commandName,
-                    ContextType = "Prefix Command"
-                };
+                var logContext = CreatePrefixCommandLogContext(e.Context, commandName);
 
                 await Logs.DefaultLog.AddInfoAsync(Log.Module.CommandExecution, logContext, $@"Executed ""{commandName}"" prefix command.");
             };
@@ -151,13 +146,7 @@ namespace KWiJisho
             {
                 var commandName = $"/{e.Context.CommandName}";
 
-                var logContext = new LogContext
-                {
-                    IssuerId = e.Context.Member.Id.ToString(),
-                    GuildId = e.Context.Guild.Id.ToString(),
-                    Action = commandName,
-                    ContextType = "Slash Command"
-                };
+                var logContext = CreateSlashCommandLogContext(e.Context, commandName);
 
                 await Logs.DefaultLog.AddInfoAsync(Log.Module.CommandExecution, logContext, $@"Executing ""{commandName}"" slash command...");
             };
@@ -166,16 +155,24 @@ namespace KWiJisho
             {
                 var commandName = $"/{e.Context.CommandName}";
 
-                var logContext = new LogContext
-                {
-                    IssuerId = e.Context.Member.Id.ToString(),
-                    GuildId = e.Context.Guild.Id.ToString(),
-                    Action = commandName,
-                    ContextType = "Slash Command"
-                };
+                var logContext = CreateSlashCommandLogContext(e.Context, commandName);
 
                 await Logs.DefaultLog.AddInfoAsync(Log.Module.CommandExecution, logContext, $@"Executed ""{commandName}"" slash command.");
             };
         }
+        internal static LogContext CreatePrefixCommandLogContext(CommandContext commandContext, string commandName) =>
+            CreateContextContext(commandContext.Guild.Id, commandContext.User.Id, commandName, "Prefix Commands");
+
+        internal static LogContext CreateSlashCommandLogContext(InteractionContext interactionContext, string commandName) =>
+            CreateContextContext(interactionContext.Guild.Id, interactionContext.User.Id, commandName, "Slash Commands");
+
+        internal static LogContext CreateContextContext(ulong guildId, ulong userId, string commandName, string action) =>
+            new()
+            {
+                IssuerId = userId.ToString(),
+                GuildId = guildId.ToString(),
+                Action = commandName,
+                ContextType = action
+            };
     }
 }

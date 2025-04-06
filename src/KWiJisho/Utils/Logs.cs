@@ -6,6 +6,9 @@ using DSharpPlus;
 
 namespace KWiJisho.Utils
 {
+    /// <summary>
+    /// Provides centralized access to logging utilities used by the bot.
+    /// </summary>
     public static class Logs
     {
         /// <summary>
@@ -13,9 +16,13 @@ namespace KWiJisho.Utils
         /// </summary>
         public static Log DefaultLog { get; set; } = null!;
 
+        /// <summary>
+        /// Instantiates and configures all log instances used by the application.
+        /// </summary>
+        /// <param name="discordClient">The <see cref="DiscordClient"/> instance used to initialize the logging system.</param>
         public static void InstantiateAllLogs(DiscordClient discordClient)
         {
-            // Defining default discord log instance.
+            // The default discord log instance.
             DefaultLog = new Log(discordClient)
             {
                 SendToDiscord = true,

@@ -4,7 +4,10 @@
 
 namespace KWiJisho.Entities
 {
-    public class Server()
+    /// <summary>
+    /// Represents a Discord server.
+    /// </summary>
+    public class Server
     {
         /// <summary>
         /// Server guild Id.

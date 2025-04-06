@@ -17,6 +17,13 @@ namespace KWiJisho.Events
     /// </summary>
     public class DiscordMessageHandler
     {
+
+        /// <summary>
+        /// Handles incoming messages and determines whether to process a command or trigger a ChatGPT response.
+        /// </summary>
+        /// <param name="sender">The Discord client that received the message.</param>
+        /// <param name="e">The event arguments containing message data.</param>
+        /// <returns>A <see cref="Task"/> from the method execution.</returns>
         public static async Task OnMessageCreatedAsync(DiscordClient sender, MessageCreateEventArgs e)
         {
             if (e.Author.IsBot) return;
@@ -27,7 +34,7 @@ namespace KWiJisho.Events
 
                 var logContexts = new LogContext
                 {
-                    IssuerId = sender.CurrentUser.Id.ToString(),
+                    IssuerId = e.Author.Id.ToString(),
                     GuildId = e.Guild.Id.ToString(),
                     Action = commandName,
                     ContextType = "Prefix Command"
@@ -52,6 +59,12 @@ namespace KWiJisho.Events
             await e.Message.RespondAsync(response);
         }
 
+        /// <summary>
+        /// Sends playful responses when a user is mentioned in a message.
+        /// </summary>
+        /// <param name="sender">The Discord client that received the message.</param>
+        /// <param name="e">The event arguments containing message data.</param>
+        /// <returns>A <see cref="Task"/> from the method execution.</returns>
         public static async Task ValidateMentionedUsersAsync(MessageCreateEventArgs e)
         {
             // Get the username of the message author.

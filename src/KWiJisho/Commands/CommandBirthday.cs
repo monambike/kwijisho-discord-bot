@@ -7,7 +7,6 @@ using KWiJisho.Data;
 using KWiJisho.Entities;
 using KWiJisho.Scheduling;
 using KWiJisho.Utils;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -46,9 +45,17 @@ namespace KWiJisho.Commands
         /// </summary>
         /// <param name="discordChannel">The Discord channel where the message will be sent.</param>
         /// <param name="discordGuild">The Discord guild containing the users.</param>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         public static async Task CommandNextBirthdayAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
             => await NextBirthdayMessageAsync(discordChannel, discordGuild);
 
+        /// <summary>
+        /// Sends a birthday message a specified Discord user no matter if it is their birthday today.
+        /// </summary>
+        /// <param name="discordChannel">The Discord channel where the message will be sent.</param>
+        /// <param name="discordGuild">The Discord guild containing the users.</param>
+        /// <param name="discordGuild">The Discord user to receive the birthday message.</param>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         public static async Task CommandHappyBirthdayAsync(DiscordChannel discordChannel, DiscordGuild discordGuild, DiscordUser discordUser)
             => await HappyBirthdayMessageAsync(discordChannel, discordGuild, discordUser);
 
@@ -57,6 +64,7 @@ namespace KWiJisho.Commands
         /// </summary>
         /// <param name="discordChannel">The Discord channel where the message will be sent.</param>
         /// <param name="discordGuild">The Discord guild containing the users.</param>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         public static async Task CommandBirthdayListAsync(DiscordChannel discordChannel, DiscordGuild discordGuild)
         {
             // Getting list of users and their birthday
@@ -103,6 +111,13 @@ namespace KWiJisho.Commands
             await discordChannel.SendMessageAsync(discordEmbedBuilder);
         }
 
+        /// <summary>
+        /// Sends a birthday message for a specific user if today is their birthday or it's upcoming.
+        /// </summary>
+        /// <param name="discordChannel">The channel where the message will be sent.</param>
+        /// <param name="discordGuild">The guild where the user is located.</param>
+        /// <param name="discordUser">The Discord user to check and celebrate.</param>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         public static async Task HappyBirthdayMessageAsync(DiscordChannel discordChannel, DiscordGuild discordGuild, DiscordUser discordUser)
         {
             var user = DiscordUsers.Users.FirstOrDefault(user => user.Id == discordUser.Id);
@@ -121,6 +136,13 @@ namespace KWiJisho.Commands
             await BuildBirthdayMessage(discordChannel, user, upcomingDate, message);
         }
 
+        /// <summary>
+        /// Checks if a user is valid and exists within the current server context.
+        /// </summary>
+        /// <param name="user">The user object to validate.</param>
+        /// <param name="discordGuild">The guild where the user should be a member.</param>
+        /// <param name="discordChannel">The channel to send error messages, if needed.</param>
+        /// <returns>True if the user is valid and in the server; false otherwise.</returns>
         public static async Task<bool>IsValidBirthdayUserAsync(User? user, DiscordGuild discordGuild, DiscordChannel discordChannel)
         {
             // If the user is null, send a message to the Discord channel indicating inability to find the next user in the birthday list.
@@ -143,6 +165,13 @@ namespace KWiJisho.Commands
             return true;
         }
 
+        /// <summary>
+        /// Sends a message about the next upcoming birthday in the server.
+        /// </summary>
+        /// <param name="discordChannel">The channel where the message will be sent.</param>
+        /// <param name="discordGuild">The guild to search users from.</param>
+        /// <param name="sendOnlyIfTodayBirthday">If true, sends the message only if the birthday is today.</param>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         public static async Task NextBirthdayMessageAsync(DiscordChannel discordChannel, DiscordGuild discordGuild, bool sendOnlyIfTodayBirthday = false)
         {
             // Getting closest birthday from user present in the server and its member info
@@ -163,6 +192,13 @@ namespace KWiJisho.Commands
             await GenerateBirthdayMessage(discordChannel, user, upcomingDate);
         }
 
+        /// <summary>
+        /// Generates and sends a birthday message to a Discord channel.
+        /// </summary>
+        /// <param name="discordChannel">The channel where the message will be sent.</param>
+        /// <param name="user">The user to celebrate.</param>
+        /// <param name="upcomingDate">How close the birthday is (e.g., today, tomorrow).</param>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         public static async Task GenerateBirthdayMessage(DiscordChannel discordChannel, User user, BirthdayUpcomingDate upcomingDate)
         {
             // Generates birthday message according how many days are remaining for its birthday.
@@ -170,6 +206,14 @@ namespace KWiJisho.Commands
             await BuildBirthdayMessage(discordChannel, user, upcomingDate, message);
         }
 
+        /// <summary>
+        /// Builds and sends the final birthday embed message, including image and details.
+        /// </summary>
+        /// <param name="discordChannel">The channel where the message will be sent.</param>
+        /// <param name="user">The birthday user.</param>
+        /// <param name="upcomingDate">The upcoming date type for the birthday.</param>
+        /// <param name="message">The birthday message to display.</param>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         public static async Task BuildBirthdayMessage(DiscordChannel discordChannel, User user, BirthdayUpcomingDate upcomingDate, string message)
         {
             // Gets the image name and image's full path.

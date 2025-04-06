@@ -18,10 +18,19 @@ namespace KWiJisho.Scheduling
     [DisallowConcurrentExecution]
     public class BirthdayJob : IJob
     {
+        /// <summary>
+        /// The discord client.
+        /// </summary>
         private DiscordClient? _client;
 
+        /// <summary>
+        /// Represents the Discord server "Tramontina".
+        /// </summary>
         private readonly static Server ServerTramontina = Servers.Tramontina;
 
+        /// <summary>
+        /// The log context.
+        /// </summary>
         public static readonly LogContext LogContext = new()
         {
             Action = "BirthdayReminder",

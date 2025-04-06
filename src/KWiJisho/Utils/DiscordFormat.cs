@@ -49,8 +49,20 @@ namespace KWiJisho.Utils
         /// <returns>The string as a link.</returns>
         public static string ToDiscordLink(this string str, string url) => $"[{str}]({url})";
 
+        /// <summary>
+        /// Formats the specified string to remove the Discord mention.
+        /// </summary>
+        /// <param name="str">The string to be formatted.</param>
+        /// <param name="sender">The sender to remove the current user mention.</param>
+        /// <returns>The string without the mention.</returns>
         public static string RemoveDiscordMention(this string str, DiscordClient sender) => str.Replace(sender.CurrentUser.Mention, "").Trim();
 
+        /// <summary>
+        /// Formats the specified DateTime to a specific Discord DateTime format.
+        /// </summary>
+        /// <param name="dateTime">The DateTime to be formatted.</param>
+        /// <param name="discordDateTimeFormat">The desired Discord DateTime format.</param>
+        /// <returns>The formatted Discord DateTime string.</returns>
         public static string ToDiscordDate(this DateTime dateTime, DiscordDateTimeFormat discordDateTimeFormat)
         {
             var unixTimestamp = UtilDate.ConvertDateTimeToUnixTimestamp(dateTime).ToString();
@@ -60,6 +72,12 @@ namespace KWiJisho.Utils
             return result;
         }
 
+        /// <summary>
+        /// Formats the specified unix DateTime to a specific Discord DateTime format.
+        /// </summary>
+        /// <param name="unixDateTime">The unix DateTime to be formatted.</param>
+        /// <param name="discordDateTimeFormat">The desired Discord DateTime format.</param>
+        /// <returns>The formatted Discord DateTime string.</returns>
         public static string ToDiscordDate(this string unixDateTime, DiscordDateTimeFormat discordDateTimeFormat)
         {
             var suffixDateTimeFormat = GetDiscordDateTimeFormat(discordDateTimeFormat);
@@ -69,6 +87,11 @@ namespace KWiJisho.Utils
             return result;
         }
 
+        /// <summary>
+        /// Retrieves the Discord timestamp format string for the given format type.
+        /// </summary>
+        /// <param name="discordDateTimeFormat">The selected format type.</param>
+        /// <returns>A string representing the format like ":f", ":R", or an empty string if Default is used.</returns>
         public static string GetDiscordDateTimeFormat(DiscordDateTimeFormat discordDateTimeFormat)
         {
             // Returns a empty string.

@@ -7,8 +7,10 @@ using System;
 
 namespace KWiJisho.APIs
 {
+    // Partial implementation of NasaApi
     public static partial class NasaApi
     {
+        // Partial implementation of NasaApi.Apod
         public static partial class Apod
         {
 

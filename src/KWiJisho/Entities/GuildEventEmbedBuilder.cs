@@ -30,7 +30,7 @@ namespace KWiJisho.Entities
         /// <summary>
         /// UpdateType for guild event.
         /// </summary>
-        public required EventType UpdateType { get; set; }
+        public required GuildEventType UpdateType { get; set; }
 
         /// <summary>
         /// DiscordUser for guild event. Required to generate the description.
@@ -46,8 +46,15 @@ namespace KWiJisho.Entities
                 UpdateDescription();
         }
 
+        /// <summary>
+        /// Updates the description for the guild event.
+        /// </summary>
         public void UpdateDescription() => UpdateDescription(DiscordUser);
 
+        /// <summary>
+        /// Updates the description for the guild event for a specific user.
+        /// </summary>
+        /// <param name="discordUser">The Discord user that will have the guild event description updated.</param>
         public void UpdateDescription(DiscordUser discordUser) => (DiscordUser, Description) = (discordUser, GetRandomMessageByType(UpdateType, discordUser.Mention));
     }
 }

@@ -7,11 +7,7 @@ using System.Threading.Tasks;
 
 namespace KWiJisho.APIs
 {
-    /// <summary>
-    /// This class provides methods for interacting with the NASA's API using
-    /// HTTP requests.
-    /// API Documentation: <a href="https://api.nasa.gov/"/>
-    /// </summary>
+    // Partial implementation of NasaApi
     public static partial class NasaApi
     {
         /// <summary>

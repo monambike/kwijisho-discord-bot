@@ -6,8 +6,14 @@ using KWiJisho.Entities;
 
 namespace KWiJisho.Data
 {
+    /// <summary>
+    /// Provides default settings for some Discord servers.
+    /// </summary>
     public class Servers
     {
+        /// <summary>
+        /// Represents the Tramontina Discord server settings.
+        /// </summary>
         public static Server Tramontina = new()
         {
             GuildId = 692588978959941653,
@@ -17,6 +23,9 @@ namespace KWiJisho.Data
             BirthdayRoleId = 1252121891284582521
         };
 
+        /// <summary>
+        /// Represents the Personal Discord server settings.
+        /// </summary>
         public static Server Personal = new()
         {
             GuildId = 737541664318554143,

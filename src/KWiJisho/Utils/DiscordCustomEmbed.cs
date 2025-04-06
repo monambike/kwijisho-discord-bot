@@ -13,6 +13,13 @@ namespace KWiJisho.Utils
     /// </summary>
     public class DiscordCustomEmbed
     {
+        /// <summary>
+        /// Generates a pre-configured <see cref="DiscordEmbed"/> with optional KWiJisho thumbnail.
+        /// </summary>
+        /// <param name="title">The title of the embed.</param>
+        /// <param name="description">The description/body text of the embed.</param>
+        /// <param name="useKWiJishoThumbnail">Whether to include the default KWiJisho thumbnail image in the embed.</param>
+        /// <returns>A <see cref="DiscordEmbed"/> with the specified content and optional thumbnail.</returns>
         public static DiscordEmbed GetDiscordEmbed(string title, string description, bool useKWiJishoThumbnail = false)
         {
             // Getting image name and image's full path.

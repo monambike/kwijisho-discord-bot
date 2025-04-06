@@ -15,10 +15,19 @@ namespace KWiJisho.Utils
     /// </summary>
     public class Log(DiscordClient? client)
     {
+        /// <summary>
+        /// Check if the log should be written in a text file.
+        /// </summary>
         public required bool WriteFile { get; init; }
 
+        /// <summary>
+        /// Check if the log should be send to the Discord channel.
+        /// </summary>
         public required bool SendToDiscord { get; init; }
 
+        /// <summary>
+        /// The Discord client.
+        /// </summary>
         private readonly DiscordClient? _client = client;
 
         /// <summary>
@@ -116,38 +125,56 @@ namespace KWiJisho.Utils
         /// <summary>
         /// Adds a debug log entry with the specified message.
         /// </summary>
+        /// <param name="module">The module of the log entry.</param>
+        /// <param name="logContext">The log context of the log entry</param>
         /// <param name="message">The debug log message.</param>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         public async Task AddDebugAsync(Module module, LogContext logContext, string message) => await AddCustomLogAsync(LogType.Debug, module, logContext, message);
 
         /// <summary>
         /// Adds a info log entry with the specified message.
         /// </summary>
+        /// <param name="module">The module of the log entry.</param>
+        /// <param name="logContext">The log context of the log entry</param>
         /// <param name="message">The info log message.</param>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         public async Task AddInfoAsync(Module module, LogContext logContext, string message) => await AddCustomLogAsync(LogType.Info, module, logContext, message);
 
         /// <summary>
         /// Adds a warning log entry with the specified message.
         /// </summary>
+        /// <param name="module">The module of the log entry.</param>
+        /// <param name="logContext">The log context of the log entry</param>
         /// <param name="message">The warning log message.</param>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         public async Task AddWarningAsync(Module module, LogContext logContext, string message) => await AddCustomLogAsync(LogType.Warning, module, logContext, message);
 
         /// <summary>
         /// Adds a error log entry with the specified message.
         /// </summary>
+        /// <param name="module">The module of the log entry.</param>
+        /// <param name="logContext">The log context of the log entry</param>
         /// <param name="message">The error log message.</param>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         public async Task AddErrorAsync(Module module, LogContext logContext, string message) => await AddCustomLogAsync(LogType.Error, module, logContext, message);
 
         /// <summary>
         /// Adds a fatal log entry with the specified message.
         /// </summary>
+        /// <param name="module">The module of the log entry.</param>
+        /// <param name="logContext">The log context of the log entry</param>
         /// <param name="message">The fatal log message.</param>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         public async Task AddFatalAsync(Module module, LogContext logContext, string message) => await AddCustomLogAsync(LogType.Fatal, module, logContext, message);
 
         /// <summary>
         /// Adds a formatted log entry to the log file.
         /// </summary>
         /// <param name="logType">The type of log entry.</param>
+        /// <param name="module">The module of the log entry.</param>
+        /// <param name="logContext">The log context of the log entry</param>
         /// <param name="message">The log message to be added.</param>
+        /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
         private async Task AddCustomLogAsync(LogType logType, Module module, LogContext logContext, string message)
         {
             TimeZoneInfo brazilTimeZone = TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time");
@@ -182,6 +209,11 @@ namespace KWiJisho.Utils
             await Task.WhenAll(taskWriteToFile, taskSendToDiscord);
         }
 
+        /// <summary>
+        /// Writes a log entry to a file asynchronously, if file logging is enabled.
+        /// </summary>
+        /// <param name="entry">The log message to be written to the file.</param>
+        /// <returns>A <see cref="Task"/> from the method execution.</returns>
         public async Task WriteEntryToFileAsync(string entry)
         {
             if (!WriteFile) return;
@@ -200,6 +232,11 @@ namespace KWiJisho.Utils
             }
         }
 
+        /// <summary>
+        /// Send a log entry to a Discord channel asynchronously, if Discord logging is enabled.
+        /// </summary>
+        /// <param name="entry">The log message to be written to the Discord channel.</param>
+        /// <returns>A <see cref="Task"/> from the method execution.</returns>
         public async Task SendEntryToDiscordAsync(string entry)
         {
             if (!SendToDiscord) return;

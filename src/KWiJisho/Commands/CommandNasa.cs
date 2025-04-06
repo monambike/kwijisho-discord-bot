@@ -19,7 +19,6 @@ namespace KWiJisho.Commands
         /// </summary>
         /// <param name="discordChannel">The Discord channel where the APOD message will be sent.</param>
         /// <returns>A <see cref="Task"/> representing the asynchronous operation.</returns>
-
         public static async Task ApodEnglishAsync(DiscordChannel discordChannel)
         {
             await ApodAsync(discordChannel, ApodLanguage.English);

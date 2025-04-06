@@ -67,11 +67,6 @@
             HTTP requests.
             API Documentation: <a href="https://api.nasa.gov/"/>
             </summary>
-            <summary>
-            This class provides methods for interacting with the NASA's API using
-            HTTP requests.
-            API Documentation: <a href="https://api.nasa.gov/"/>
-            </summary>
         </member>
         <member name="P:KWiJisho.APIs.NasaApi.HttpService">
             <summary>
@@ -207,6 +202,16 @@
             </summary>
             <param name="discordChannel">The Discord channel where the message will be sent.</param>
             <param name="discordGuild">The Discord guild containing the users.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.CommandBirthday.CommandHappyBirthdayAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild,DSharpPlus.Entities.DiscordUser)">
+            <summary>
+            Sends a birthday message a specified Discord user no matter if it is their birthday today.
+            </summary>
+            <param name="discordChannel">The Discord channel where the message will be sent.</param>
+            <param name="discordGuild">The Discord guild containing the users.</param>
+            <param name="discordGuild">The Discord user to receive the birthday message.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
         </member>
         <member name="M:KWiJisho.Commands.CommandBirthday.CommandBirthdayListAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild)">
             <summary>
@@ -214,6 +219,82 @@
             </summary>
             <param name="discordChannel">The Discord channel where the message will be sent.</param>
             <param name="discordGuild">The Discord guild containing the users.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.CommandBirthday.HappyBirthdayMessageAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild,DSharpPlus.Entities.DiscordUser)">
+            <summary>
+            Sends a birthday message for a specific user if today is their birthday or it's upcoming.
+            </summary>
+            <param name="discordChannel">The channel where the message will be sent.</param>
+            <param name="discordGuild">The guild where the user is located.</param>
+            <param name="discordUser">The Discord user to check and celebrate.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.CommandBirthday.IsValidBirthdayUserAsync(KWiJisho.Entities.User,DSharpPlus.Entities.DiscordGuild,DSharpPlus.Entities.DiscordChannel)">
+            <summary>
+            Checks if a user is valid and exists within the current server context.
+            </summary>
+            <param name="user">The user object to validate.</param>
+            <param name="discordGuild">The guild where the user should be a member.</param>
+            <param name="discordChannel">The channel to send error messages, if needed.</param>
+            <returns>True if the user is valid and in the server; false otherwise.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.CommandBirthday.NextBirthdayMessageAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordGuild,System.Boolean)">
+            <summary>
+            Sends a message about the next upcoming birthday in the server.
+            </summary>
+            <param name="discordChannel">The channel where the message will be sent.</param>
+            <param name="discordGuild">The guild to search users from.</param>
+            <param name="sendOnlyIfTodayBirthday">If true, sends the message only if the birthday is today.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.CommandBirthday.GenerateBirthdayMessage(DSharpPlus.Entities.DiscordChannel,KWiJisho.Entities.User,KWiJisho.Models.Birthday.BirthdayUpcomingDate)">
+            <summary>
+            Generates and sends a birthday message to a Discord channel.
+            </summary>
+            <param name="discordChannel">The channel where the message will be sent.</param>
+            <param name="user">The user to celebrate.</param>
+            <param name="upcomingDate">How close the birthday is (e.g., today, tomorrow).</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.CommandBirthday.BuildBirthdayMessage(DSharpPlus.Entities.DiscordChannel,KWiJisho.Entities.User,KWiJisho.Models.Birthday.BirthdayUpcomingDate,System.String)">
+            <summary>
+            Builds and sends the final birthday embed message, including image and details.
+            </summary>
+            <param name="discordChannel">The channel where the message will be sent.</param>
+            <param name="user">The birthday user.</param>
+            <param name="upcomingDate">The upcoming date type for the birthday.</param>
+            <param name="message">The birthday message to display.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="T:KWiJisho.Commands.CommandConfig">
+            <summary>
+            Provides configuration commands for linking, unlinking, and viewing channels in a Discord server.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Commands.CommandConfig.CommandLinkChannelAsync(DSharpPlus.Entities.DiscordChannel,DSharpPlus.Entities.DiscordChannel,KWiJisho.Database.Services.ServerService.ChannelLink)">
+            <summary>
+            Links a specific Discord channel to a predefined server function (e.g., welcome, logs).
+            </summary>
+            <param name="interactionContext">The channel where the interaction response will be sent.</param>
+            <param name="discordChannel">The Discord channel to be linked.</param>
+            <param name="channelLink">The enum representing the type of link to be created.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.CommandConfig.CommandUnlinkChannelAsync(DSharpPlus.Entities.DiscordChannel,KWiJisho.Database.Services.ServerService.ChannelLink)">
+            <summary>
+            Unlinks a Discord channel from a predefined server function.
+            </summary>
+            <param name="interactionContext">The channel where the interaction response will be sent.</param>
+            <param name="channelLink">The enum representing the type of link to be removed.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.CommandConfig.CommandSlashViewChannelsAsync(DSharpPlus.Entities.DiscordChannel)">
+            <summary>
+            Displays the list of all currently linked channels and their respective functions.
+            </summary>
+            <param name="interactionContext">The channel where the interaction response will be sent.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
         </member>
         <member name="T:KWiJisho.Commands.CommandInfo">
             <summary>
@@ -886,6 +967,11 @@
             <param name="interactionContext">The interaction context from the current command call.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the current asynchronous task.</returns>
         </member>
+        <member name="T:KWiJisho.Config.ConfigJson">
+            <summary>
+            Represents sets of configurations for the Discord bot that can also be retrieved by the JSON file.
+            </summary>
+        </member>
         <member name="P:KWiJisho.Config.ConfigJson.Prefix">
             <summary>
             Gets or sets the command prefix for the bot.
@@ -987,6 +1073,21 @@
         <member name="P:KWiJisho.Data.NotificationMessages.GoodbyeMessages">
             <summary>
             Goodbye messages for notification service.
+            </summary>
+        </member>
+        <member name="T:KWiJisho.Data.Servers">
+            <summary>
+            Provides default settings for some Discord servers.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Data.Servers.Tramontina">
+            <summary>
+            Represents the Tramontina Discord server settings.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Data.Servers.Personal">
+            <summary>
+            Represents the Personal Discord server settings.
             </summary>
         </member>
         <member name="T:KWiJisho.Entities.Channel">
@@ -1214,6 +1315,22 @@
             Initializes a new instance of <see cref="T:KWiJisho.Entities.GuildEventEmbedBuilder"/> class.
             </summary>
         </member>
+        <member name="M:KWiJisho.Entities.GuildEventEmbedBuilder.UpdateDescription">
+            <summary>
+            Updates the description for the guild event.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Entities.GuildEventEmbedBuilder.UpdateDescription(DSharpPlus.Entities.DiscordUser)">
+            <summary>
+            Updates the description for the guild event for a specific user.
+            </summary>
+            <param name="discordUser">The Discord user that will have the guild event description updated.</param>
+        </member>
+        <member name="T:KWiJisho.Entities.Server">
+            <summary>
+            Represents a Discord server.
+            </summary>
+        </member>
         <member name="P:KWiJisho.Entities.Server.GuildId">
             <summary>
             Server guild Id.
@@ -1354,14 +1471,32 @@
             <param name="e">Events arguments containing information about the guild member.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the assynchronous operation.</returns>
         </member>
-        <member name="F:KWiJisho.Events.DiscordGuildHandler.EventType.Welcome">
+        <member name="M:KWiJisho.Events.DiscordGuildHandler.CreateDiscordMessageBuilder(KWiJisho.Entities.GuildEventEmbedBuilder)">
             <summary>
-            Welcome event.
+            Creates a <see cref="T:DSharpPlus.Entities.DiscordMessageBuilder"/> with a customized embed based on the provided <see cref="T:KWiJisho.Entities.GuildEventEmbedBuilder"/>.
+            Includes user avatar as thumbnail, an optional image, and footer with username, ID, and timestamp.
+            </summary>
+            <param name="builderGuildAction">The embed builder object containing message data like title, description, user, and image URL.</param>
+            <returns>A ready-to-send <see cref="T:DSharpPlus.Entities.DiscordMessageBuilder"/> with embed and optional image.</returns>
+        </member>
+        <member name="T:KWiJisho.Events.DiscordGuildHandler.GuildEventType">
+            <summary>
+            Represents types of guild-related events such as when a user joins, leaves, or boosts the server.
             </summary>
         </member>
-        <member name="F:KWiJisho.Events.DiscordGuildHandler.EventType.Goodbye">
+        <member name="F:KWiJisho.Events.DiscordGuildHandler.GuildEventType.Welcome">
             <summary>
-            Goodbye event.
+            Represents when a user leaves the server.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Events.DiscordGuildHandler.GuildEventType.Goodbye">
+            <summary>
+            Represents when a user leaves the server.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Events.DiscordGuildHandler.GuildEventType.Boost">
+            <summary>
+            Represents when a user boosts the server.
             </summary>
         </member>
         <member name="M:KWiJisho.Events.DiscordGuildHandler.GetRandomWelcomeMessage(System.String)">
@@ -1390,6 +1525,22 @@
             <summary>
             Provides a set of events and methods for when a message is received.
             </summary>
+        </member>
+        <member name="M:KWiJisho.Events.DiscordMessageHandler.OnMessageCreatedAsync(DSharpPlus.DiscordClient,DSharpPlus.EventArgs.MessageCreateEventArgs)">
+            <summary>
+            Handles incoming messages and determines whether to process a command or trigger a ChatGPT response.
+            </summary>
+            <param name="sender">The Discord client that received the message.</param>
+            <param name="e">The event arguments containing message data.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
+        </member>
+        <member name="M:KWiJisho.Events.DiscordMessageHandler.ValidateMentionedUsersAsync(DSharpPlus.EventArgs.MessageCreateEventArgs)">
+            <summary>
+            Sends playful responses when a user is mentioned in a message.
+            </summary>
+            <param name="sender">The Discord client that received the message.</param>
+            <param name="e">The event arguments containing message data.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
         </member>
         <member name="T:KWiJisho.Events.DiscordReadyHandler">
             <summary>
@@ -1551,6 +1702,11 @@
             Indicates a birthday with an unknown or unspecified date, but that stills deserves a happy birthday.
             </summary>
         </member>
+        <member name="T:KWiJisho.Models.Nasa">
+            <summary>
+            Class that provides a set of utilities for NASA tasks.
+            </summary>
+        </member>
         <member name="M:KWiJisho.Models.Nasa.BuildEnglishApodMessageAsync(KWiJisho.APIs.NasaApi.Apod.ApodResponse)">
             <summary>
             Asynchronously builds a english apod message with the apod response.
@@ -1664,6 +1820,21 @@
             Represents a Quartz.NET job that executes a birthday message task.
             </summary>
         </member>
+        <member name="F:KWiJisho.Scheduling.BirthdayJob._client">
+            <summary>
+            The discord client.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Scheduling.BirthdayJob.ServerTramontina">
+            <summary>
+            Represents the Discord server "Tramontina".
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Scheduling.BirthdayJob.LogContext">
+            <summary>
+            The log context.
+            </summary>
+        </member>
         <!-- Badly formed XML comment ignored for member "M:KWiJisho.Scheduling.BirthdayJob.Execute(Quartz.IJobExecutionContext)" -->
         <member name="M:KWiJisho.Scheduling.BirthdayJob.GiveBirthdayMessageAsync">
             <summary>
@@ -1688,6 +1859,16 @@
             Creates a birthday scheduler using Quartz.NET library.
             </summary>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous creation of the birthday scheduler.</returns>
+        </member>
+        <member name="T:KWiJisho.Utils.BotResponses">
+            <summary>
+            Contains default fallback responses used by the bot in some specific cases.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Utils.BotResponses.ChatGptError">
+            <summary>
+            Response shown when the bot fails to communicate with the ChatGPT API.
+            </summary>
         </member>
         <member name="T:KWiJisho.Utils.CommandCooldown">
             <summary>
@@ -1752,6 +1933,15 @@
             Utility class providing default embeds for KWiJisho Discord bot.
             </summary>
         </member>
+        <member name="M:KWiJisho.Utils.DiscordCustomEmbed.GetDiscordEmbed(System.String,System.String,System.Boolean)">
+            <summary>
+            Generates a pre-configured <see cref="T:DSharpPlus.Entities.DiscordEmbed"/> with optional KWiJisho thumbnail.
+            </summary>
+            <param name="title">The title of the embed.</param>
+            <param name="description">The description/body text of the embed.</param>
+            <param name="useKWiJishoThumbnail">Whether to include the default KWiJisho thumbnail image in the embed.</param>
+            <returns>A <see cref="T:DSharpPlus.Entities.DiscordEmbed"/> with the specified content and optional thumbnail.</returns>
+        </member>
         <member name="T:KWiJisho.Utils.DiscordFormat">
             <summary>
             Provides utility extension methods for formatting text with Discord markdown.
@@ -1792,6 +1982,37 @@
             <param name="str">The string to be formatted.</param>
             <param name="url">The link url.</param>
             <returns>The string as a link.</returns>
+        </member>
+        <member name="M:KWiJisho.Utils.DiscordFormat.RemoveDiscordMention(System.String,DSharpPlus.DiscordClient)">
+            <summary>
+            Formats the specified string to remove the Discord mention.
+            </summary>
+            <param name="str">The string to be formatted.</param>
+            <param name="sender">The sender to remove the current user mention.</param>
+            <returns>The string without the mention.</returns>
+        </member>
+        <member name="M:KWiJisho.Utils.DiscordFormat.ToDiscordDate(System.DateTime,KWiJisho.Utils.DiscordFormat.DiscordDateTimeFormat)">
+            <summary>
+            Formats the specified DateTime to a specific Discord DateTime format.
+            </summary>
+            <param name="dateTime">The DateTime to be formatted.</param>
+            <param name="discordDateTimeFormat">The desired Discord DateTime format.</param>
+            <returns>The formatted Discord DateTime string.</returns>
+        </member>
+        <member name="M:KWiJisho.Utils.DiscordFormat.ToDiscordDate(System.String,KWiJisho.Utils.DiscordFormat.DiscordDateTimeFormat)">
+            <summary>
+            Formats the specified unix DateTime to a specific Discord DateTime format.
+            </summary>
+            <param name="unixDateTime">The unix DateTime to be formatted.</param>
+            <param name="discordDateTimeFormat">The desired Discord DateTime format.</param>
+            <returns>The formatted Discord DateTime string.</returns>
+        </member>
+        <member name="M:KWiJisho.Utils.DiscordFormat.GetDiscordDateTimeFormat(KWiJisho.Utils.DiscordFormat.DiscordDateTimeFormat)">
+            <summary>
+            Retrieves the Discord timestamp format string for the given format type.
+            </summary>
+            <param name="discordDateTimeFormat">The selected format type.</param>
+            <returns>A string representing the format like ":f", ":R", or an empty string if Default is used.</returns>
         </member>
         <member name="T:KWiJisho.Utils.DiscordFormat.DiscordDateTimeFormat">
             <summary>
@@ -1900,6 +2121,21 @@
             Provides methods for handling the application log for important tasks.
             </summary>
         </member>
+        <member name="P:KWiJisho.Utils.Log.WriteFile">
+            <summary>
+            Check if the log should be written in a text file.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Utils.Log.SendToDiscord">
+            <summary>
+            Check if the log should be send to the Discord channel.
+            </summary>
+        </member>
+        <member name="F:KWiJisho.Utils.Log._client">
+            <summary>
+            The Discord client.
+            </summary>
+        </member>
         <member name="F:KWiJisho.Utils.Log.FileName">
             <summary>
             The log file name.
@@ -1994,44 +2230,81 @@
             <summary>
             Adds a debug log entry with the specified message.
             </summary>
+            <param name="module">The module of the log entry.</param>
+            <param name="logContext">The log context of the log entry</param>
             <param name="message">The debug log message.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
         </member>
         <member name="M:KWiJisho.Utils.Log.AddInfoAsync(KWiJisho.Utils.Log.Module,KWiJisho.Utils.LogContext,System.String)">
             <summary>
             Adds a info log entry with the specified message.
             </summary>
+            <param name="module">The module of the log entry.</param>
+            <param name="logContext">The log context of the log entry</param>
             <param name="message">The info log message.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
         </member>
         <member name="M:KWiJisho.Utils.Log.AddWarningAsync(KWiJisho.Utils.Log.Module,KWiJisho.Utils.LogContext,System.String)">
             <summary>
             Adds a warning log entry with the specified message.
             </summary>
+            <param name="module">The module of the log entry.</param>
+            <param name="logContext">The log context of the log entry</param>
             <param name="message">The warning log message.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
         </member>
         <member name="M:KWiJisho.Utils.Log.AddErrorAsync(KWiJisho.Utils.Log.Module,KWiJisho.Utils.LogContext,System.String)">
             <summary>
             Adds a error log entry with the specified message.
             </summary>
+            <param name="module">The module of the log entry.</param>
+            <param name="logContext">The log context of the log entry</param>
             <param name="message">The error log message.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
         </member>
         <member name="M:KWiJisho.Utils.Log.AddFatalAsync(KWiJisho.Utils.Log.Module,KWiJisho.Utils.LogContext,System.String)">
             <summary>
             Adds a fatal log entry with the specified message.
             </summary>
+            <param name="module">The module of the log entry.</param>
+            <param name="logContext">The log context of the log entry</param>
             <param name="message">The fatal log message.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
         </member>
         <member name="M:KWiJisho.Utils.Log.AddCustomLogAsync(KWiJisho.Utils.Log.LogType,KWiJisho.Utils.Log.Module,KWiJisho.Utils.LogContext,System.String)">
             <summary>
             Adds a formatted log entry to the log file.
             </summary>
             <param name="logType">The type of log entry.</param>
+            <param name="module">The module of the log entry.</param>
+            <param name="logContext">The log context of the log entry</param>
             <param name="message">The log message to be added.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
         </member>
         <member name="M:KWiJisho.Utils.Log.AddEntryAsync(System.String)">
             <summary>
             Adds a line to the log file or send to discord log channel with the specified content.
             </summary>
             <param name="entry">The entry to be added to the log.</param>
+        </member>
+        <member name="M:KWiJisho.Utils.Log.WriteEntryToFileAsync(System.String)">
+            <summary>
+            Writes a log entry to a file asynchronously, if file logging is enabled.
+            </summary>
+            <param name="entry">The log message to be written to the file.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
+        </member>
+        <member name="M:KWiJisho.Utils.Log.SendEntryToDiscordAsync(System.String)">
+            <summary>
+            Send a log entry to a Discord channel asynchronously, if Discord logging is enabled.
+            </summary>
+            <param name="entry">The log message to be written to the Discord channel.</param>
+            <returns>A <see cref="T:System.Threading.Tasks.Task"/> from the method execution.</returns>
+        </member>
+        <member name="T:KWiJisho.Utils.LogContext">
+            <summary>
+            Represents metadata for logging actions performed by users or background processes.
+            </summary>
         </member>
         <member name="P:KWiJisho.Utils.LogContext.ContextType">
             <summary>
@@ -2057,10 +2330,21 @@
             The guild id of the log context.
             </summary>
         </member>
+        <member name="T:KWiJisho.Utils.Logs">
+            <summary>
+            Provides centralized access to logging utilities used by the bot.
+            </summary>
+        </member>
         <member name="P:KWiJisho.Utils.Logs.DefaultLog">
             <summary>
             Gets or sets the <see cref="T:KWiJisho.KWiJishoBot"/> instance for handling bot log.
             </summary>
+        </member>
+        <member name="M:KWiJisho.Utils.Logs.InstantiateAllLogs(DSharpPlus.DiscordClient)">
+            <summary>
+            Instantiates and configures all log instances used by the application.
+            </summary>
+            <param name="discordClient">The <see cref="T:DSharpPlus.DiscordClient"/> instance used to initialize the logging system.</param>
         </member>
         <member name="T:KWiJisho.Utils.UtilCollections">
             <summary>

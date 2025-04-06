@@ -12,6 +12,9 @@ using static KWiJisho.APIs.NasaApi.Apod;
 
 namespace KWiJisho.Models
 {
+    /// <summary>
+    /// Class that provides a set of utilities for NASA tasks.
+    /// </summary>
     public class Nasa
     {
         /// <summary>

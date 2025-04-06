@@ -69,6 +69,12 @@ namespace KWiJisho.Events
             await e.Guild.GetChannel(server.GoodbyeChannelGuid.GetValueOrDefault()).SendMessageAsync(discordMessageBuilder);
         }
 
+        /// <summary>
+        /// Creates a <see cref="DiscordMessageBuilder"/> with a customized embed based on the provided <see cref="GuildEventEmbedBuilder"/>.
+        /// Includes user avatar as thumbnail, an optional image, and footer with username, ID, and timestamp.
+        /// </summary>
+        /// <param name="builderGuildAction">The embed builder object containing message data like title, description, user, and image URL.</param>
+        /// <returns>A ready-to-send <see cref="DiscordMessageBuilder"/> with embed and optional image.</returns>
         public static DiscordMessageBuilder CreateDiscordMessageBuilder(GuildEventEmbedBuilder builderGuildAction)
         {
             // Making the discord embed builder with the message body content and image file.
@@ -93,25 +99,33 @@ namespace KWiJisho.Events
 
         }
 
-        public enum EventType
+        /// <summary>
+        /// Represents types of guild-related events such as when a user joins, leaves, or boosts the server.
+        /// </summary>
+        public enum GuildEventType
         {
             /// <summary>
-            /// Welcome event.
+            /// Represents when a user leaves the server.
             /// </summary>
             Welcome,
 
             /// <summary>
-            /// Goodbye event.
+            /// Represents when a user leaves the server.
             /// </summary>
-            Goodbye
+            Goodbye,
+
+            /// <summary>
+            /// Represents when a user boosts the server.
+            /// </summary>
+            Boost
         }
 
-        public static string GetRandomMessageByType(EventType updateType, string user)
+        public static string GetRandomMessageByType(GuildEventType updateType, string user)
         {
             return updateType switch
             {
-                EventType.Welcome => GetRandomWelcomeMessage(user),
-                EventType.Goodbye => GetRandomGoodbyeMessage(user),
+                GuildEventType.Welcome => GetRandomWelcomeMessage(user),
+                GuildEventType.Goodbye => GetRandomGoodbyeMessage(user),
                 _ => throw new NotImplementedException()
             };
         }

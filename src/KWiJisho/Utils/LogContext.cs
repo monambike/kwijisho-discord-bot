@@ -4,6 +4,9 @@
 
 namespace KWiJisho.Utils
 {
+    /// <summary>
+    /// Represents metadata for logging actions performed by users or background processes.
+    /// </summary>
     public class LogContext
     {
         /// <summary>
