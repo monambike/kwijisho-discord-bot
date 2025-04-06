@@ -190,8 +190,8 @@ namespace KWiJisho
         internal static LogContext CreateLogContext(ulong guildId, ulong userId, string commandName, string action) =>
             new()
             {
-                IssuerId = userId.ToString(),
-                GuildId = guildId.ToString(),
+                IssuerId = userId,
+                GuildId = guildId,
                 Action = commandName,
                 ContextType = action
             };

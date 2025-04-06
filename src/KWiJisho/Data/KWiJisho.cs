@@ -3,6 +3,7 @@
 // For license information, please see the LICENSE file in the root directory.
 
 using System;
+using System.Diagnostics;
 using System.Reflection;
 
 namespace KWiJisho.Data
@@ -13,7 +14,12 @@ namespace KWiJisho.Data
     public class KWiJisho
     {
         /// <summary>
-        /// KWiJisho project name gotten directly from <see cref="Assembly"/>.
+        /// KWiJisho user id retrieved from Discord.
+        /// </summary>
+        public static ulong Id = 737535848102363259;
+
+        /// <summary>
+        /// KWiJisho project name retrieved directly from <see cref="Assembly"/>.
         /// </summary>
         public static string? Name = Assembly.GetCallingAssembly().GetName().Name;
 

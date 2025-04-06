@@ -1038,14 +1038,34 @@
             Static class that provides class, properties and methods for handling Discord emojis.
             </summary>
         </member>
+        <member name="T:KWiJisho.Data.GuildEvents">
+            <summary>
+            Provides predefined embed builders for common guild events like welcoming and saying goodbye to users.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Data.GuildEvents.WelcomeBuilder">
+            <summary>
+            Gets a builder used to create a welcome message embed.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Data.GuildEvents.GoodbyeBuilder">
+            <summary>
+            Gets a builder used to create a goodbye message embed.
+            </summary>
+        </member>
         <member name="T:KWiJisho.Data.KWiJisho">
             <summary>
             Class that provides static basic information about KWiJisho bot.
             </summary>
         </member>
+        <member name="F:KWiJisho.Data.KWiJisho.Id">
+            <summary>
+            KWiJisho user id retrieved from Discord.
+            </summary>
+        </member>
         <member name="F:KWiJisho.Data.KWiJisho.Name">
             <summary>
-            KWiJisho project name gotten directly from <see cref="T:System.Reflection.Assembly"/>.
+            KWiJisho project name retrieved directly from <see cref="T:System.Reflection.Assembly"/>.
             </summary>
         </member>
         <member name="P:KWiJisho.Data.KWiJisho.Created">
@@ -1092,16 +1112,14 @@
         </member>
         <member name="T:KWiJisho.Entities.Channel">
             <summary>
-            The class that represents a new instance of a Discord channel with a
-            unique identifier and a default name.
+            The class that represents a new instance of a Discord channel with a unique identifier and a default name.
             <param name="id">The Discord channel unique identifier.</param>
             <param name="defaultName">The Discord channel default name.</param>
             </summary>
         </member>
         <member name="M:KWiJisho.Entities.Channel.#ctor(System.UInt64,System.String)">
             <summary>
-            The class that represents a new instance of a Discord channel with a
-            unique identifier and a default name.
+            The class that represents a new instance of a Discord channel with a unique identifier and a default name.
             <param name="id">The Discord channel unique identifier.</param>
             <param name="defaultName">The Discord channel default name.</param>
             </summary>
@@ -1401,6 +1419,16 @@
             The custom identifier or nickname associated with the user.
             </summary>
         </member>
+        <member name="P:KWiJisho.Entities.User.DiscordGuild">
+            <summary>
+            The Discord guild.
+            </summary>
+        </member>
+        <member name="P:KWiJisho.Entities.User.DiscordMember">
+            <summary>
+            The Discord member.
+            </summary>
+        </member>
         <member name="P:KWiJisho.Entities.User.Birthday">
             <summary>
             Gets or sets the user's birthday (if applicable).
@@ -1561,6 +1589,28 @@
             <param name="discordClient">The Discord client instance.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous execution of the event handler.</returns>
         </member>
+        <member name="T:KWiJisho.Exceptions.UserNotFoundException">
+            <summary>
+            Exception thrown when a user with a specified ID cannot be found.
+            </summary>
+            <remarks>
+            This exception should be used when a user lookup fails, typically when accessing user related data by ID.
+            </remarks>
+        </member>
+        <member name="F:KWiJisho.Exceptions.UserNotFoundException.NotFoundUserId">
+            <summary>
+            The ID of the user that could not be found.
+            </summary>
+        </member>
+        <member name="M:KWiJisho.Exceptions.UserNotFoundException.#ctor(System.String)">
+            <summary>
+            Exception thrown when a user with a specified ID cannot be found.
+            </summary>
+            <remarks>
+            This exception should be used when a user lookup fails, typically when accessing user related data by ID.
+            </remarks>
+            <param name="userId">The ID of the user that was not found.</param>
+        </member>
         <member name="T:KWiJisho.KWiJishoBot">
             <summary>
             Main class responsible for managing and instantiate the KWiJisho Discord bot. The main entry
@@ -1632,6 +1682,32 @@
             <summary>
             Register all the Discord bot slash commands permissions.
             </summary>
+        </member>
+        <member name="M:KWiJisho.KWiJishoBot.CreatePrefixCommandLogContext(DSharpPlus.CommandsNext.CommandContext,System.String)">
+            <summary>
+            Creates a <see cref="P:KWiJisho.KWiJishoBot.LogContext"/> for a prefix command execution.
+            </summary>
+            <param name="commandContext">The context of the prefix command.</param>
+            <param name="commandName">The name of the executed command.</param>
+            <returns>A configured <see cref="P:KWiJisho.KWiJishoBot.LogContext"/> for logging.</returns>
+        </member>
+        <member name="M:KWiJisho.KWiJishoBot.CreateSlashCommandLogContext(DSharpPlus.SlashCommands.InteractionContext,System.String)">
+            <summary>
+            Creates a <see cref="P:KWiJisho.KWiJishoBot.LogContext"/> for a slash command execution.
+            </summary>
+            <param name="interactionContext">The context of the slash command interaction.</param>
+            <param name="commandName">The name of the executed command.</param>
+            <returns>A configured <see cref="P:KWiJisho.KWiJishoBot.LogContext"/> for logging.</returns>
+        </member>
+        <member name="M:KWiJisho.KWiJishoBot.CreateLogContext(System.UInt64,System.UInt64,System.String,System.String)">
+            <summary>
+            Create log context for prefix and slash commands.
+            </summary>
+            <param name="guildId">The ID of the guild where the command was executed.</param>
+            <param name="userId">The ID of the user who executed the command.</param>
+            <param name="commandName">The name of the executed command.</param>
+            <param name="action">The type or context of the command (e.g., "Prefix Commands", "Slash Commands").</param>
+            <returns>A configured <see cref="P:KWiJisho.KWiJishoBot.LogContext"/> instance.</returns>
         </member>
         <member name="T:KWiJisho.Models.Birthday">
             <summary>
@@ -2320,14 +2396,13 @@
         </member>
         <member name="P:KWiJisho.Utils.LogContext.IssuerId">
             <summary>
-            The issuer of the log context.
+            The issuer ID of the log context.
             If the action was performed by a user, this should contain their user ID.
-            If it was triggered by a KWiJisho bot job, use a descriptive label like "Scheduler Job".
             </summary>
         </member>
         <member name="P:KWiJisho.Utils.LogContext.GuildId">
             <summary>
-            The guild id of the log context.
+            The guild ID of the log context.
             </summary>
         </member>
         <member name="T:KWiJisho.Utils.Logs">

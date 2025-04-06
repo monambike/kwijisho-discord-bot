@@ -29,7 +29,7 @@ namespace KWiJisho.APIs
         /// </summary>
         public static readonly LogContext LogContext = new()
         {
-            IssuerId = Data.KWiJisho.Name
+            IssuerId = Data.KWiJisho.Id
         };
 
         /// <summary>

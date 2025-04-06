@@ -181,13 +181,13 @@ namespace KWiJisho.Utils
 
             DateTime brazilTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, brazilTimeZone);
 
-            string guildInfo = string.IsNullOrEmpty(logContext.GuildId)
+            string guildInfo = string.IsNullOrEmpty($"{logContext.GuildId}")
             ? "" : $"[Guild: {logContext.GuildId}] ";
 
             string contextInfo = string.IsNullOrEmpty(logContext.ContextType) || string.IsNullOrEmpty(logContext.Action)
             ? "" : $"[{logContext.ContextType}: {logContext.Action}] ";
 
-            string issuerInfo = string.IsNullOrEmpty(logContext.IssuerId)
+            string issuerInfo = string.IsNullOrEmpty($"{logContext.IssuerId}")
             ? "" : $"[Issuer ID: {logContext.IssuerId}] ";
 
             await AddEntryAsync($"[{brazilTime:yyyy-MM-dd HH:mm:ss.fff UTC: zzz}] [{module}] {guildInfo}{issuerInfo}{contextInfo}{logType.ToString().ToUpper()}: {message}".ToDiscordMonospace());

@@ -34,8 +34,8 @@ namespace KWiJisho.Events
 
                 var logContexts = new LogContext
                 {
-                    IssuerId = e.Author.Id.ToString(),
-                    GuildId = e.Guild.Id.ToString(),
+                    IssuerId = e.Author.Id,
+                    GuildId = e.Guild.Id,
                     Action = commandName,
                     ContextType = "Prefix Command"
                 };
@@ -48,8 +48,8 @@ namespace KWiJisho.Events
 
             var logContext = new LogContext
             {
-                GuildId = e.Guild.Id.ToString(),
-                IssuerId = sender.CurrentUser.Id.ToString()
+                GuildId = e.Guild.Id,
+                IssuerId = sender.CurrentUser.Id
             };
 
             await Logs.DefaultLog.AddInfoAsync(Log.Module.ChatGpt, logContext, $"A user has mentioned KWiJisho and now it will make a request to ChatGpt from OpenAI.");

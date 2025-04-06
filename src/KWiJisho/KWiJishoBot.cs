@@ -41,8 +41,8 @@ namespace KWiJisho
         {
             Action = "Startup",
             ContextType = "System",
-            GuildId = Servers.Personal.GuildId.ToString(),
-            IssuerId = Data.KWiJisho.Name
+            GuildId = Servers.Personal.GuildId,
+            IssuerId = Data.KWiJisho.Id
         };
 
         /// <summary>
@@ -65,11 +65,11 @@ namespace KWiJisho
         /// <returns>A task representing the asynchronous operation.</returns>
         public async Task RunAsync()
         {
-            // Getting info from Json file and setting into the ConfigJson class.
+            // Gets info from Json file and setting into the ConfigJson class.
             var configJson = await Entities.ConfigJson.DeserializeConfigJsonFileAsync();
             ConfigJson.SetValuesFromConfigJson(configJson);
 
-            // Settings Discord bot settings for DiscordClient.
+            // Sets Discord bot settings for DiscordClient.
             var discordConfiguration = new DiscordConfiguration
             {
                 Token = ConfigJson.KWiJishoToken,
@@ -79,11 +79,11 @@ namespace KWiJisho
                 Intents = DiscordIntents.All
             };
 
-            // Defining and registering the Discord bot configuration and events.
+            // Defines and registering the Discord bot configuration and events.
             DiscordClient = new DiscordClient(discordConfiguration);
             RegisterBotEvents();
 
-            // Defining bot prefix commands settings.
+            // Defines bot prefix commands settings.
             var commandsNextConfiguration = new CommandsNextConfiguration
             {
                 StringPrefixes = [ConfigJson.Prefix],
@@ -92,23 +92,23 @@ namespace KWiJisho
                 EnableDefaultHelp = false
             };
 
-            // Defining and registering the Discord bot prefix commands.
+            // Defines and registering the Discord bot prefix commands.
             PrefixCommands = DiscordClient.UseCommandsNext(commandsNextConfiguration);
             RegisterPrefixCommands();
             RegisterPrefixCommandEvents();
 
-            // Defining and registering the Discord bot slash commands.
+            // Defines and registering the Discord bot slash commands.
             SlashCommands = DiscordClient.UseSlashCommands();
             RegisterSlashCommands();
             RegisterSlashCommandEvents();
 
-            // Creating all schedulers for application jobs.
+            // Creates all schedulers for application jobs.
             await Scheduler.CreateAllSchedulersAsync(DiscordClient);
 
-            // Instantiating all application logs.
+            // Instantiates all application logs.
             Logs.InstantiateAllLogs(DiscordClient);
 
-            // Connecting the bot into the Discord.
+            // Connects the bot into the Discord.
             await DiscordClient.ConnectAsync();
 
             // This code that will be executed when the bot is ready and connected to Discord sending.

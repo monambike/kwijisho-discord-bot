@@ -35,8 +35,8 @@ namespace KWiJisho.Scheduling
         {
             Action = "BirthdayReminder",
             ContextType = "Job",
-            GuildId = ServerTramontina.GuildId.ToString(),
-            IssuerId = Data.KWiJisho.Name
+            GuildId = ServerTramontina.GuildId,
+            IssuerId = Data.KWiJisho.Id
         };
 
         /// Executes the birthday message task as part of the Quartz.NET job.

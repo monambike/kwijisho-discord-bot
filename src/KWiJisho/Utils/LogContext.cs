@@ -22,15 +22,14 @@ namespace KWiJisho.Utils
         public string? Action { get; set; }
 
         /// <summary>
-        /// The issuer of the log context.
+        /// The issuer ID of the log context.
         /// If the action was performed by a user, this should contain their user ID.
-        /// If it was triggered by a KWiJisho bot job, use a descriptive label like "Scheduler Job".
         /// </summary>
-        public string? IssuerId { get; set; }
+        public ulong IssuerId { get; set; }
 
         /// <summary>
-        /// The guild id of the log context.
+        /// The guild ID of the log context.
         /// </summary>
-        public string? GuildId { get; set; }
+        public ulong GuildId { get; set; }
     }
 }
