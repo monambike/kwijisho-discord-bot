@@ -6,8 +6,14 @@ using KWiJisho.Entities;
 
 namespace KWiJisho.Data
 {
+    /// <summary>
+    /// Provides predefined embed builders for common guild events like welcoming and saying goodbye to users.
+    /// </summary>
     internal class GuildEvents
     {
+        /// <summary>
+        /// Gets a builder used to create a welcome message embed.
+        /// </summary>
         public GuildEventEmbedBuilder WelcomeBuilder => new()
         {
             Title = "BEM-VINDO",
@@ -17,6 +23,9 @@ namespace KWiJisho.Data
             UpdateType = Events.DiscordGuildHandler.GuildEventType.Welcome
         };
 
+        /// <summary>
+        /// Gets a builder used to create a goodbye message embed.
+        /// </summary>
         public GuildEventEmbedBuilder GoodbyeBuilder => new()
         {
             Title = "ACHO QUE ISSO É UM ADEUS",

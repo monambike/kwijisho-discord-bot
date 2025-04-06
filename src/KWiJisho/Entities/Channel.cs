@@ -7,8 +7,7 @@ using DSharpPlus;
 namespace KWiJisho.Entities
 {
     /// <summary>
-    /// The class that represents a new instance of a Discord channel with a
-    /// unique identifier and a default name.
+    /// The class that represents a new instance of a Discord channel with a unique identifier and a default name.
     /// <param name="id">The Discord channel unique identifier.</param>
     /// <param name="defaultName">The Discord channel default name.</param>
     /// </summary>
