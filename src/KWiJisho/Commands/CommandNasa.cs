@@ -3,6 +3,7 @@
 // For license information, please see the LICENSE file in the root directory.
 
 using DSharpPlus.Entities;
+using System.Net.Http;
 using System.Threading.Tasks;
 using static KWiJisho.APIs.NasaApi.Apod;
 using static KWiJisho.Models.Nasa;
@@ -14,6 +15,11 @@ namespace KWiJisho.Commands
     /// </summary>
     public static class CommandNasa
     {
+        /// <summary>
+        /// Property to manage HTTP requests, using a singleton pattern for efficiency and performance.
+        /// </summary>
+        private static HttpClient HttpClient => new();
+
         /// <summary>
         /// Retrieves and sends the english version of the Astronomy Picture of the Day (APOD) to the specified Discord channel.
         /// </summary>
@@ -36,25 +42,51 @@ namespace KWiJisho.Commands
 
         private static async Task ApodAsync(DiscordChannel discordChannel, ApodLanguage apodLanguage)
         {
-            // Getting the Astronomy Picture of the Day.
+            // Gets the Astronomy Picture of the Day.
             var response = await GetApodAsync();
 
-            // Creating a Discord embed builder for the translated APOD message.
+            // Creates a Discord embed builder for the translated APOD message.
             var apodBuilder = await BuildApodMessageAsync(apodLanguage, response);
 
-            // Creating the discord embed builder from the apod builder.
+            // Creates the discord embed builder from the apod builder.
             var discordEmbedBuilder = apodBuilder.GetDiscordEmbedBuilder();
 
-            // If it's an image, attaching the image to the embbed.
+            var messageBuilder = new DiscordMessageBuilder().AddEmbed(discordEmbedBuilder);
+
+            // If it's an image, attachs the image to the embed.
             if (apodBuilder.MediaType == "image")
-                discordEmbedBuilder.ImageUrl = apodBuilder.MediaUrl;
+                messageBuilder = await BuildDiscordMessageWithImageAsync(discordEmbedBuilder, apodBuilder.MediaUrl);
 
             //Sending the generated Discord embed builder to the specified channel.
-            await discordChannel.SendMessageAsync(discordEmbedBuilder);
+            await discordChannel.SendMessageAsync(messageBuilder);
 
             // If it's a video, sending the video link as separated message after sending the embbed.
             if (apodBuilder.MediaType == "video")
                 await discordChannel.SendMessageAsync(apodBuilder.VideoField);
+        }
+
+        /// <summary>
+        /// Builds a Discord message with an embed and an attached image file.
+        /// </summary>
+        /// <param name="discordEmbedBuilder">The embed builder containing the message content.</param>
+        /// <param name="imageUrl">The URL of the image to download and attach.</param>
+        /// <returns>A <see cref="DiscordMessageBuilder"/> with the embed and the image file attached.</returns>
+        private async static Task<DiscordMessageBuilder> BuildDiscordMessageWithImageAsync(DiscordEmbedBuilder discordEmbedBuilder, string imageUrl)
+        {
+            // The name used to attach the image file to the message.
+            string imageName = "apod_image.png";
+            discordEmbedBuilder.ImageUrl = $"attachment://{imageName}";
+
+            // Using HTTP Client instance to download the image as a stream from the given URL.
+            var imageStream = await HttpClient.GetStreamAsync(imageUrl);
+
+            // Build the Discord message with the embed and the attached image file.
+            var messageBuilder = new DiscordMessageBuilder()
+                .AddEmbed(discordEmbedBuilder)
+                .AddFile(imageName, imageStream);
+
+            // Returns the built message.
+            return messageBuilder;
         }
     }
 }

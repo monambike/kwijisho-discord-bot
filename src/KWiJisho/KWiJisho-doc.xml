@@ -333,6 +333,11 @@
             Provides methods for NASA prefix and slash commands.
             </summary>
         </member>
+        <member name="P:KWiJisho.Commands.CommandNasa.HttpClient">
+            <summary>
+            Property to manage HTTP requests, using a singleton pattern for efficiency and performance.
+            </summary>
+        </member>
         <member name="M:KWiJisho.Commands.CommandNasa.ApodEnglishAsync(DSharpPlus.Entities.DiscordChannel)">
             <summary>
             Retrieves and sends the english version of the Astronomy Picture of the Day (APOD) to the specified Discord channel.
@@ -346,6 +351,14 @@
             </summary>
             <param name="discordChannel">The Discord channel where the translated APOD message will be sent.</param>
             <returns>A <see cref="T:System.Threading.Tasks.Task"/> representing the asynchronous operation.</returns>
+        </member>
+        <member name="M:KWiJisho.Commands.CommandNasa.BuildDiscordMessageWithImageAsync(DSharpPlus.Entities.DiscordEmbedBuilder,System.String)">
+            <summary>
+            Builds a Discord message with an embed and an attached image file.
+            </summary>
+            <param name="discordEmbedBuilder">The embed builder containing the message content.</param>
+            <param name="imageUrl">The URL of the image to download and attach.</param>
+            <returns>A <see cref="T:DSharpPlus.Entities.DiscordMessageBuilder"/> with the embed and the image file attached.</returns>
         </member>
         <member name="T:KWiJisho.Commands.CommandNotice">
             <summary>
