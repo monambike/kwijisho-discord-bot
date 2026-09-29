@@ -37,14 +37,6 @@ Click here to see my [YouTube video](https://www.youtube.com/watch?v=diJtp_k--Ys
 
 ![kwijisho](https://github.com/user-attachments/assets/293feb17-0513-4bd6-af04-bb08d7a8dd02)
 
-# Documentation
-
-You can check further documentation here [monambike.github.io/kwijisho-discord-bot][docs].
-
-# Contact
-
-You can find me on likedin by here [linkedin.com/in/monambike/](https://www.linkedin.com/in/monambike/). If you want to see videos about my work you can check my YouTube channel [youtube.com/@monambike_portfolio](https://www.youtube.com/@monambike_portfolio) and if you want to see my artworks you can check at my instagram [instagram.com/monambike_portfolio](https://www.instagram.com/monambike_portfolio).
-
 # Commands
 
 ## Prefix Commands:
@@ -94,6 +86,14 @@ Please take a look at the [monambike.github.io/kwijisho-discord-bot/articles/com
 # Repo Activity
 
 ![Alt](https://repobeats.axiom.co/api/embed/2bfceebe2521125d710f60fd5a322890e0bb395e.svg "Repobeats analytics image")
+
+# Documentation
+
+You can check further documentation here [monambike.github.io/kwijisho-discord-bot][docs].
+
+# Contact
+
+You can find me on likedin by here [linkedin.com/in/monambike/](https://www.linkedin.com/in/monambike/). If you want to see videos about my work you can check my YouTube channel [youtube.com/@monambike_portfolio](https://www.youtube.com/@monambike_portfolio) and if you want to see my artworks you can check at my instagram [instagram.com/monambike_portfolio](https://www.instagram.com/monambike_portfolio).
 
 # License
 
